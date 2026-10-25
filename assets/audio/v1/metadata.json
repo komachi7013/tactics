@@ -1,0 +1,802 @@
+{
+  "schemaVersion": 1,
+  "version": "audio-v1",
+  "created": "2026-10-18",
+  "project": "澪を継ぐ者",
+  "renderer": "FluidSynth 2.6.1 / skill bgm.py",
+  "soundfont": {
+    "name": "GeneralUser GS 2.0.3 BETA",
+    "sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+    "source": ".codex/skills/rpg-music/assets/GeneralUser-GS.sf2",
+    "license": "soundfont-license.txt (ICMT embedded License v2.0)",
+    "audioUse": "Private/commercial music creation permitted by embedded license; sample provenance caveat retained",
+    "redistributeSoundfont": false
+  },
+  "ownership": "Original score and synthetic SE generated for this project; font/sample conditions remain separate",
+  "numericalVerified": true,
+  "listeningVerified": false,
+  "gameVerified": false,
+  "truePeakLUFS": "not measured; ffmpeg/ffprobe unavailable",
+  "reproduction": ".venv/bin/python scripts/build-game-audio.py (requires both v1 output directories empty; refuses overwrite)",
+  "cues": [
+    {
+      "id": "bgm-briefing",
+      "kind": "bgm",
+      "source": "assets/audio/v1/bgm-briefing.json",
+      "midi": "assets/audio/v1/bgm-briefing.mid",
+      "master": {
+        "path": "assets/audio/v1/bgm-briefing-master.wav",
+        "sha256": "7797be37a66e0b8cc6f39c184020ef0ba613339cdee0a486d5fddd7c041e82da",
+        "bytes": 5644844,
+        "sampleRate": 44100,
+        "channels": 2,
+        "sampleWidthBytes": 2,
+        "frames": 1411200,
+        "durationSeconds": 32.0,
+        "samplePeak": 0.319976806640625,
+        "samplePeakDbFS": -9.897630003167105,
+        "rms": 0.0560658286398315,
+        "rmsDbFS": -25.02603509386532,
+        "dc": [
+          -0.0001410185020256475,
+          -0.00013770492709412867
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          1411200
+        ],
+        "loopEndExclusive": true
+      },
+      "render": {
+        "cycles": 4,
+        "extractedCycle": 3,
+        "sourceFrames": 5789184,
+        "extractStartFrame": 2833425,
+        "phaseRotationSeconds": 0.25,
+        "scale": "sample peak normalized to 0.32",
+        "seed": null
+      },
+      "motif": {
+        "id": "river-record",
+        "version": 1,
+        "pitches": [
+          74,
+          77,
+          76
+        ],
+        "beatPositions": [
+          0,
+          1.5,
+          2.5
+        ],
+        "durations": [
+          1.3,
+          0.7,
+          0.8
+        ],
+        "rests": "1.3–1.5, 2.2–2.5, 3.3–4 beat",
+        "variation": "原形"
+      },
+      "bpm": 60,
+      "meter": [
+        4,
+        4
+      ],
+      "bars": 8,
+      "path": "/audio/v1/bgm-briefing.wav",
+      "delivery": {
+        "path": "public/audio/v1/bgm-briefing.wav",
+        "sha256": "1b1cd724c0ffeb5b5eb550cfdfa69c71c933454429777bc44fceae1c04ebeff4",
+        "bytes": 2826496,
+        "sampleRate": 22050,
+        "channels": 2,
+        "sampleWidthBytes": 2,
+        "frames": 705600,
+        "durationSeconds": 32.0,
+        "samplePeak": 0.318359375,
+        "samplePeakDbFS": -9.94164713143746,
+        "rms": 0.056065711572643985,
+        "rmsDbFS": -25.026053230290973,
+        "dc": [
+          -0.0001410068676314927,
+          -0.00013769616886061064
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          705600
+        ],
+        "loopEndExclusive": true
+      },
+      "loopQA": {
+        "path": "public/audio/v1/bgm-briefing.wav",
+        "sha256": "1b1cd724c0ffeb5b5eb550cfdfa69c71c933454429777bc44fceae1c04ebeff4",
+        "sample_rate": 22050,
+        "channels": 2,
+        "loop_start_sample": 0,
+        "loop_end_sample": 705600,
+        "loop_seconds": 32.0,
+        "sample_peak": 0.318359375,
+        "rail_samples": 0,
+        "channel_metrics": [
+          {
+            "channel": 0,
+            "boundary_jump": -0.01171875,
+            "boundary_slope_error": 0.024261474609375,
+            "dc": -0.0001410068676314927,
+            "head_rms": 0.05902224997921423,
+            "tail_rms": 0.05507736953602145,
+            "rms_delta_db": 0.6008514147818453
+          },
+          {
+            "channel": 1,
+            "boundary_jump": -0.0101318359375,
+            "boundary_slope_error": 0.02520751953125,
+            "dc": -0.00013769616886061064,
+            "head_rms": 0.06113164564260514,
+            "tail_rms": 0.057118866456348096,
+            "rms_delta_db": 0.5897301374761226
+          }
+        ],
+        "review_flags": [],
+        "automatic_result": "no-numerical-flags",
+        "listening_verified": false,
+        "game_verified": false,
+        "true_peak_lufs": "not measured",
+        "seamless_verified": false
+      }
+    },
+    {
+      "id": "bgm-tactics",
+      "kind": "bgm",
+      "source": "assets/audio/v1/bgm-tactics.json",
+      "midi": "assets/audio/v1/bgm-tactics.mid",
+      "master": {
+        "path": "assets/audio/v1/bgm-tactics-master.wav",
+        "sha256": "31656c3d566da940dcd3f6db9ba6e6d8b47f0a2ee322b6ed8130d7fa2a328b63",
+        "bytes": 5292044,
+        "sampleRate": 44100,
+        "channels": 2,
+        "sampleWidthBytes": 2,
+        "frames": 1323000,
+        "durationSeconds": 30.0,
+        "samplePeak": 0.319976806640625,
+        "samplePeakDbFS": -9.897630003167105,
+        "rms": 0.05039762546831801,
+        "rmsDbFS": -25.951798505335635,
+        "dc": [
+          -9.770070001742016e-05,
+          -9.573724102271117e-05
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          1323000
+        ],
+        "loopEndExclusive": true
+      },
+      "render": {
+        "cycles": 4,
+        "extractedCycle": 3,
+        "sourceFrames": 5447808,
+        "extractStartFrame": 2657934,
+        "phaseRotationSeconds": 0.2706122448979592,
+        "scale": "sample peak normalized to 0.32",
+        "seed": null
+      },
+      "motif": {
+        "id": "river-record",
+        "version": 1,
+        "pitches": [
+          74,
+          77,
+          76
+        ],
+        "beatPositions": [
+          0,
+          1.5,
+          2.5
+        ],
+        "durations": [
+          1.3,
+          0.7,
+          0.8
+        ],
+        "rests": "1.3–1.5, 2.2–2.5, 3.3–4 beat",
+        "variation": "短縮と1オクターブ下置、刻み弦"
+      },
+      "bpm": 64,
+      "meter": [
+        4,
+        4
+      ],
+      "bars": 8,
+      "path": "/audio/v1/bgm-tactics.wav",
+      "delivery": {
+        "path": "public/audio/v1/bgm-tactics.wav",
+        "sha256": "f82db363a11b3c0e92ffda62874abd3d07fb4d2e5afd8767ca91183c7e5934f4",
+        "bytes": 2650096,
+        "sampleRate": 22050,
+        "channels": 2,
+        "sampleWidthBytes": 2,
+        "frames": 661500,
+        "durationSeconds": 30.0,
+        "samplePeak": 0.3199462890625,
+        "samplePeakDbFS": -9.898458453703102,
+        "rms": 0.05039754933491375,
+        "rmsDbFS": -25.951811626724602,
+        "dc": [
+          -9.76934339273904e-05,
+          -9.571876439377834e-05
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          661500
+        ],
+        "loopEndExclusive": true
+      },
+      "loopQA": {
+        "path": "public/audio/v1/bgm-tactics.wav",
+        "sha256": "f82db363a11b3c0e92ffda62874abd3d07fb4d2e5afd8767ca91183c7e5934f4",
+        "sample_rate": 22050,
+        "channels": 2,
+        "loop_start_sample": 0,
+        "loop_end_sample": 661500,
+        "loop_seconds": 30.0,
+        "sample_peak": 0.3199462890625,
+        "rail_samples": 0,
+        "channel_metrics": [
+          {
+            "channel": 0,
+            "boundary_jump": 0.015655517578125,
+            "boundary_slope_error": 0.045806884765625,
+            "dc": -9.76934339273904e-05,
+            "head_rms": 0.07516383495403328,
+            "tail_rms": 0.07292079547473182,
+            "rms_delta_db": 0.2631506525884662
+          },
+          {
+            "channel": 1,
+            "boundary_jump": 0.010162353515625,
+            "boundary_slope_error": 0.03466796875,
+            "dc": -9.571876439377834e-05,
+            "head_rms": 0.07858178726186624,
+            "tail_rms": 0.07373933640973053,
+            "rms_delta_db": 0.5524535431245607
+          }
+        ],
+        "review_flags": [],
+        "automatic_result": "no-numerical-flags",
+        "listening_verified": false,
+        "game_verified": false,
+        "true_peak_lufs": "not measured",
+        "seamless_verified": false
+      }
+    },
+    {
+      "id": "bgm-ending",
+      "kind": "bgm",
+      "source": "assets/audio/v1/bgm-ending.json",
+      "midi": "assets/audio/v1/bgm-ending.mid",
+      "master": {
+        "path": "assets/audio/v1/bgm-ending-master.wav",
+        "sha256": "88d3bd19dd72e81fd67f2a9e0f35428e72a7c033f4266f5d815db4d8e9098df0",
+        "bytes": 5644844,
+        "sampleRate": 44100,
+        "channels": 2,
+        "sampleWidthBytes": 2,
+        "frames": 1411200,
+        "durationSeconds": 32.0,
+        "samplePeak": 0.319976806640625,
+        "samplePeakDbFS": -9.897630003167105,
+        "rms": 0.07525069292449607,
+        "rmsDbFS": -22.469789932782188,
+        "dc": [
+          7.168666035139641e-05,
+          7.439384114444932e-05
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          1411200
+        ],
+        "loopEndExclusive": true
+      },
+      "render": {
+        "cycles": 4,
+        "extractedCycle": 3,
+        "sourceFrames": 5788160,
+        "extractStartFrame": 2833425,
+        "phaseRotationSeconds": 0.25,
+        "scale": "sample peak normalized to 0.32",
+        "seed": null
+      },
+      "motif": {
+        "id": "river-record",
+        "version": 1,
+        "pitches": [
+          74,
+          77,
+          76
+        ],
+        "beatPositions": [
+          0,
+          1.5,
+          2.5
+        ],
+        "durations": [
+          1.3,
+          0.7,
+          0.8
+        ],
+        "rests": "1.3–1.5, 2.2–2.5, 3.3–4 beat",
+        "variation": "短3度を長3度へ再和声化"
+      },
+      "bpm": 60,
+      "meter": [
+        4,
+        4
+      ],
+      "bars": 8,
+      "path": "/audio/v1/bgm-ending.wav",
+      "delivery": {
+        "path": "public/audio/v1/bgm-ending.wav",
+        "sha256": "886efd4d2c4f95d21889bda20c6dc2a20cb18abdf8b6966c93b5e837c0ca0347",
+        "bytes": 2826496,
+        "sampleRate": 22050,
+        "channels": 2,
+        "sampleWidthBytes": 2,
+        "frames": 705600,
+        "durationSeconds": 32.0,
+        "samplePeak": 0.3201904296875,
+        "samplePeakDbFS": -9.89183306082804,
+        "rms": 0.07525059327941085,
+        "rmsDbFS": -22.469801434427588,
+        "dc": [
+          7.168568721433886e-05,
+          7.437072373301534e-05
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          705600
+        ],
+        "loopEndExclusive": true
+      },
+      "loopQA": {
+        "path": "public/audio/v1/bgm-ending.wav",
+        "sha256": "886efd4d2c4f95d21889bda20c6dc2a20cb18abdf8b6966c93b5e837c0ca0347",
+        "sample_rate": 22050,
+        "channels": 2,
+        "loop_start_sample": 0,
+        "loop_end_sample": 705600,
+        "loop_seconds": 32.0,
+        "sample_peak": 0.3201904296875,
+        "rail_samples": 0,
+        "channel_metrics": [
+          {
+            "channel": 0,
+            "boundary_jump": -0.012542724609375,
+            "boundary_slope_error": 0.04595947265625,
+            "dc": 7.168568721433886e-05,
+            "head_rms": 0.08428446542964592,
+            "tail_rms": 0.08381597319670432,
+            "rms_delta_db": 0.048414892912860275
+          },
+          {
+            "channel": 1,
+            "boundary_jump": -0.0130615234375,
+            "boundary_slope_error": 0.04534912109375,
+            "dc": 7.437072373301534e-05,
+            "head_rms": 0.08320410636308569,
+            "tail_rms": 0.0826060422911512,
+            "rms_delta_db": 0.0626589035134841
+          }
+        ],
+        "review_flags": [],
+        "automatic_result": "no-numerical-flags",
+        "listening_verified": false,
+        "game_verified": false,
+        "true_peak_lufs": "not measured",
+        "seamless_verified": false
+      }
+    },
+    {
+      "id": "se-ui",
+      "kind": "se",
+      "master": {
+        "path": "assets/audio/v1/se-ui-master.wav",
+        "sha256": "082f6dabbac4914c89bd8693e64399e34cbe4241f1c0a10d950746d2d955b3fc",
+        "bytes": 15920,
+        "sampleRate": 44100,
+        "channels": 2,
+        "sampleWidthBytes": 2,
+        "frames": 3969,
+        "durationSeconds": 0.09,
+        "samplePeak": 0.361114501953125,
+        "samplePeakDbFS": -8.847101408879439,
+        "rms": 0.08128748651664107,
+        "rmsDbFS": -21.799526100431045,
+        "dc": [
+          2.537364772297808e-07,
+          2.537364772297808e-07
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": null
+      },
+      "seed": 2026101800,
+      "synthesis": "stdlib deterministic sine/noise/envelopes; see script",
+      "path": "/audio/v1/se-ui.wav",
+      "delivery": {
+        "path": "public/audio/v1/se-ui.wav",
+        "sha256": "ae19eb4073808d3ba83a9cf95fb26d7273be6b40bb53113e9a3486be4e2866b7",
+        "bytes": 12036,
+        "sampleRate": 22050,
+        "channels": 2,
+        "sampleWidthBytes": 2,
+        "frames": 1985,
+        "durationSeconds": 0.09002267573696145,
+        "samplePeak": 0.361114501953125,
+        "samplePeakDbFS": -8.847101408879439,
+        "rms": 0.08127732234388386,
+        "rmsDbFS": -21.80061225042335,
+        "dc": [
+          2.6135961114609574e-07,
+          2.6135961114609574e-07
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": null
+      }
+    },
+    {
+      "id": "se-move",
+      "kind": "se",
+      "master": {
+        "path": "assets/audio/v1/se-move-master.wav",
+        "sha256": "eb4652f937c92c9ff8e4c0d425c12937c28a080b57d2936f70cd7ff7d4586f19",
+        "bytes": 26504,
+        "sampleRate": 44100,
+        "channels": 2,
+        "sampleWidthBytes": 2,
+        "frames": 6615,
+        "durationSeconds": 0.15,
+        "samplePeak": 0.496429443359375,
+        "samplePeakDbFS": -6.082849365815269,
+        "rms": 0.06852217916544298,
+        "rmsDbFS": -23.283376678147466,
+        "dc": [
+          -6.920085742630386e-08,
+          -6.920085742630386e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": null
+      },
+      "seed": 2026101801,
+      "synthesis": "stdlib deterministic sine/noise/envelopes; see script",
+      "path": "/audio/v1/se-move.wav",
+      "delivery": {
+        "path": "public/audio/v1/se-move.wav",
+        "sha256": "2cb6d39842a785c9eca1a8594b419e072a3ce428aa0723bb058a03528859eb36",
+        "bytes": 17328,
+        "sampleRate": 22050,
+        "channels": 2,
+        "sampleWidthBytes": 2,
+        "frames": 3308,
+        "durationSeconds": 0.15002267573696146,
+        "samplePeak": 0.468658447265625,
+        "samplePeakDbFS": -6.5828710137962005,
+        "rms": 0.06461834766730143,
+        "rmsDbFS": -23.792883027310832,
+        "dc": [
+          -2.0295850022672308e-07,
+          -2.0295850022672308e-07
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": null
+      }
+    },
+    {
+      "id": "se-impact",
+      "kind": "se",
+      "master": {
+        "path": "assets/audio/v1/se-impact-master.wav",
+        "sha256": "85c6b9ce102c406214e2e49dd981953c9b7eeb36b9c34b669022b15b6e69c732",
+        "bytes": 42380,
+        "sampleRate": 44100,
+        "channels": 2,
+        "sampleWidthBytes": 2,
+        "frames": 10584,
+        "durationSeconds": 0.24,
+        "samplePeak": 0.5,
+        "samplePeakDbFS": -6.020599913279624,
+        "rms": 0.08104319755692187,
+        "rmsDbFS": -21.8256686446803,
+        "dc": [
+          6.055075024801587e-08,
+          6.055075024801587e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": null
+      },
+      "seed": 2026101802,
+      "synthesis": "stdlib deterministic sine/noise/envelopes; see script",
+      "path": "/audio/v1/se-impact.wav",
+      "delivery": {
+        "path": "public/audio/v1/se-impact.wav",
+        "sha256": "1a7e78396d154c53eb3802baee7228554b05ad9004e8ec615e1255c52ed4ef05",
+        "bytes": 25264,
+        "sampleRate": 22050,
+        "channels": 2,
+        "sampleWidthBytes": 2,
+        "frames": 5292,
+        "durationSeconds": 0.24,
+        "samplePeak": 0.45050048828125,
+        "samplePeakDbFS": -6.926094679370393,
+        "rms": 0.0794368104701005,
+        "rmsDbFS": -21.999564037243402,
+        "dc": [
+          -1.153347623771731e-08,
+          -1.153347623771731e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": null
+      }
+    },
+    {
+      "id": "se-heal",
+      "kind": "se",
+      "master": {
+        "path": "assets/audio/v1/se-heal-master.wav",
+        "sha256": "c3e607b11ce02742559001d59183682551be771207280d96296e0d671ba80796",
+        "bytes": 114704,
+        "sampleRate": 44100,
+        "channels": 2,
+        "sampleWidthBytes": 2,
+        "frames": 28665,
+        "durationSeconds": 0.65,
+        "samplePeak": 0.328155517578125,
+        "samplePeakDbFS": -9.678405783125903,
+        "rms": 0.08575031151526287,
+        "rmsDbFS": -21.335285871391548,
+        "dc": [
+          -2.12925715157858e-08,
+          -2.12925715157858e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": null
+      },
+      "seed": 2026101803,
+      "synthesis": "stdlib deterministic sine/noise/envelopes; see script",
+      "path": "/audio/v1/se-heal.wav",
+      "delivery": {
+        "path": "public/audio/v1/se-heal.wav",
+        "sha256": "232874679ddb057b69902ca08ceac4236ea4253bcc4bcf2e7a79780d7c998207",
+        "bytes": 61428,
+        "sampleRate": 22050,
+        "channels": 2,
+        "sampleWidthBytes": 2,
+        "frames": 14333,
+        "durationSeconds": 0.6500226757369615,
+        "samplePeak": 0.328155517578125,
+        "samplePeakDbFS": -9.678405783125903,
+        "rms": 0.08574879806271238,
+        "rmsDbFS": -21.33543917459946,
+        "dc": [
+          -6.387548620316752e-08,
+          -6.387548620316752e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": null
+      }
+    },
+    {
+      "id": "se-record",
+      "kind": "se",
+      "master": {
+        "path": "assets/audio/v1/se-record-master.wav",
+        "sha256": "ff5503bece60c358e1715790f370a38281e8b65cf995de09ee9b8807cbddc34f",
+        "bytes": 63548,
+        "sampleRate": 44100,
+        "channels": 2,
+        "sampleWidthBytes": 2,
+        "frames": 15876,
+        "durationSeconds": 0.36,
+        "samplePeak": 0.264251708984375,
+        "samplePeakDbFS": -11.559643906326809,
+        "rms": 0.06072971360583704,
+        "rmsDbFS": -24.331975339082703,
+        "dc": [
+          -4.036716683201058e-08,
+          -4.036716683201058e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": null
+      },
+      "seed": 2026101804,
+      "synthesis": "stdlib deterministic sine/noise/envelopes; see script",
+      "path": "/audio/v1/se-record.wav",
+      "delivery": {
+        "path": "public/audio/v1/se-record.wav",
+        "sha256": "1fb18463a7ffb26f3730e3bc9416cce6808c0a2af2a79f6a047be43053f75866",
+        "bytes": 35848,
+        "sampleRate": 22050,
+        "channels": 2,
+        "sampleWidthBytes": 2,
+        "frames": 7938,
+        "durationSeconds": 0.36,
+        "samplePeak": 0.26788330078125,
+        "samplePeakDbFS": -11.441087169015269,
+        "rms": 0.060318296757090197,
+        "rmsDbFS": -24.391018607832216,
+        "dc": [
+          -2.691144455467372e-08,
+          -2.691144455467372e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": null
+      }
+    },
+    {
+      "id": "se-mechanism",
+      "kind": "se",
+      "master": {
+        "path": "assets/audio/v1/se-mechanism-master.wav",
+        "sha256": "7cf07feaaab5db26b54e12e38ccfabb23dda4daf5bfa1fa1862d2463b553cd61",
+        "bytes": 97064,
+        "sampleRate": 44100,
+        "channels": 2,
+        "sampleWidthBytes": 2,
+        "frames": 24255,
+        "durationSeconds": 0.55,
+        "samplePeak": 0.325531005859375,
+        "samplePeakDbFS": -9.748152797379367,
+        "rms": 0.05575573547336068,
+        "rmsDbFS": -25.074209020731004,
+        "dc": [
+          7.297544964955679e-08,
+          7.297544964955679e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": null
+      },
+      "seed": 2026101805,
+      "synthesis": "stdlib deterministic sine/noise/envelopes; see script",
+      "path": "/audio/v1/se-mechanism.wav",
+      "delivery": {
+        "path": "public/audio/v1/se-mechanism.wav",
+        "sha256": "cd4e40a31088fc971aa6ea0b31206540fe0f26810ecbbc6fe436dd2610b641e2",
+        "bytes": 52608,
+        "sampleRate": 22050,
+        "channels": 2,
+        "sampleWidthBytes": 2,
+        "frames": 12128,
+        "durationSeconds": 0.5500226757369614,
+        "samplePeak": 0.31854248046875,
+        "samplePeakDbFS": -9.936652848805526,
+        "rms": 0.05543301208435474,
+        "rmsDbFS": -25.124630446886684,
+        "dc": [
+          4.026065715699208e-08,
+          4.026065715699208e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": null
+      }
+    },
+    {
+      "id": "se-victory",
+      "kind": "se",
+      "master": {
+        "path": "assets/audio/v1/se-victory-master.wav",
+        "sha256": "54ac90ad9af3cbb6b1099d87f1def49369589fc0d4ac4062932b3ba6bff893ed",
+        "bytes": 194084,
+        "sampleRate": 44100,
+        "channels": 2,
+        "sampleWidthBytes": 2,
+        "frames": 48510,
+        "durationSeconds": 1.1,
+        "samplePeak": 0.303497314453125,
+        "samplePeakDbFS": -10.356902949985272,
+        "rms": 0.08550887591123897,
+        "rmsDbFS": -21.359776054161227,
+        "dc": [
+          -1.6356566300762728e-08,
+          -1.6356566300762728e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": null
+      },
+      "seed": 2026101806,
+      "synthesis": "stdlib deterministic sine/noise/envelopes; see script",
+      "path": "/audio/v1/se-victory.wav",
+      "delivery": {
+        "path": "public/audio/v1/se-victory.wav",
+        "sha256": "60697c294bad02e59043185f1dcfbf1c899f1295b65a35bc5012fcddeec4eef5",
+        "bytes": 101116,
+        "sampleRate": 22050,
+        "channels": 2,
+        "sampleWidthBytes": 2,
+        "frames": 24255,
+        "durationSeconds": 1.1,
+        "samplePeak": 0.303497314453125,
+        "samplePeakDbFS": -10.356902949985272,
+        "rms": 0.08550886207937515,
+        "rmsDbFS": -21.359777459185572,
+        "dc": [
+          -7.549184446505875e-09,
+          -7.549184446505875e-09
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": null
+      }
+    },
+    {
+      "id": "se-defeat",
+      "kind": "se",
+      "master": {
+        "path": "assets/audio/v1/se-defeat-master.wav",
+        "sha256": "3ac2cc2da8f2724e8710bd4718b19eb5a1ea9a3b750e7ded42bf8643727d4c20",
+        "bytes": 202904,
+        "sampleRate": 44100,
+        "channels": 2,
+        "sampleWidthBytes": 2,
+        "frames": 50715,
+        "durationSeconds": 1.15,
+        "samplePeak": 0.29132080078125,
+        "samplePeakDbFS": -10.712570098589856,
+        "rms": 0.08098574558368156,
+        "rmsDbFS": -21.83182830369301,
+        "dc": [
+          -1.5043664657892142e-08,
+          -1.5043664657892142e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": null
+      },
+      "seed": 2026101807,
+      "synthesis": "stdlib deterministic sine/noise/envelopes; see script",
+      "path": "/audio/v1/se-defeat.wav",
+      "delivery": {
+        "path": "public/audio/v1/se-defeat.wav",
+        "sha256": "d3283172c9da7b74d0d8280a122e71b7c649adce42a708ba2ac534cb08ae7fab",
+        "bytes": 105528,
+        "sampleRate": 22050,
+        "channels": 2,
+        "sampleWidthBytes": 2,
+        "frames": 25358,
+        "durationSeconds": 1.1500226757369614,
+        "samplePeak": 0.291259765625,
+        "samplePeakDbFS": -10.714390085948649,
+        "rms": 0.08098491785926461,
+        "rmsDbFS": -21.831917079311797,
+        "dc": [
+          -7.220816655493336e-08,
+          -7.220816655493336e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": null
+      }
+    }
+  ],
+  "sourceScriptSha256": "36681b4256022ba97cd44fb30f5ec096fc39886ce31cc7a1b882af76a5cdfc22",
+  "repairPasses": 3,
+  "verificationArtifacts": "Rejected attempts and listening renders are omitted; adopted score/MIDI/master/delivery and their hashes are retained."
+}

@@ -1,0 +1,18 @@
+node_modules/
+dist/
+.venv/
+__pycache__/
+*.py[cod]
+*.log
+.DS_Store
+/test-results/
+/playwright-report/
+/coverage/
+/qa/
+.env
+.env.*
+!.env.example
+# Generated visual checks are not game materials.
+/public/assets/qa-contact-sheet.png
+/public/assets/*/*-contact-sheet.png
+/public/assets/*/contact-sheet.png

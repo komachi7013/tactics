@@ -1,0 +1,126 @@
+{
+  "source": "rise-melee-r0",
+  "offlineAttackMs": 400,
+  "phases": 4,
+  "frameMs": 100,
+  "boundarySelection": {
+    "-1": -1,
+    "0": 0,
+    "99": 0,
+    "100": 1,
+    "199": 1,
+    "200": 2,
+    "299": 2,
+    "300": 3,
+    "399": 3,
+    "400": -1,
+    "401": -1,
+    "1000": -1
+  },
+  "idleBeforeMs": 200,
+  "idleAfterMs": 400,
+  "gifTotalMs": 1000,
+  "paddedCell": 288,
+  "paddingPx": 16,
+  "paddedOriginPx": [
+    144,
+    252.0
+  ],
+  "idlePaddedOriginPx": [
+    144,
+    253
+  ],
+  "originDerivation": {
+    "runtimeIdleFeet98": 237.0,
+    "actionMedianFeet98": 236.0,
+    "formula": "237+(actionMedian-runtimeIdleFeet)+16 padding; one origin for all four action frames"
+  },
+  "logicalCell": 256,
+  "currentBodyDisplayPx": 80,
+  "paddedDisplayPxForSameBodyScale": 90,
+  "paddedMinimumMarginsPx": [
+    24,
+    24,
+    20,
+    24
+  ],
+  "pixelsUnchangedByPadding": true,
+  "sourceFrameStats": [
+    {
+      "feetY98": 236.0,
+      "height": 197,
+      "bbox": [
+        95,
+        50,
+        201,
+        248
+      ]
+    },
+    {
+      "feetY98": 236.0,
+      "height": 195,
+      "bbox": [
+        94,
+        51,
+        196,
+        248
+      ]
+    },
+    {
+      "feetY98": 236.9400000000005,
+      "height": 194,
+      "bbox": [
+        94,
+        51,
+        252,
+        246
+      ]
+    },
+    {
+      "feetY98": 236.0,
+      "height": 197,
+      "bbox": [
+        94,
+        50,
+        199,
+        248
+      ]
+    }
+  ],
+  "idleStats": {
+    "feetY98": 237.0,
+    "height": 198,
+    "bbox": [
+      87,
+      52,
+      169,
+      250
+    ]
+  },
+  "uncorrectedIdleReturnFeetDeltaPx": 1.0,
+  "idleReturnFeetDeltaPx": 0.0,
+  "idleReturnFeetDeltaAt80px": 0.0,
+  "idleReturnRGBAMAD": 17.561676025390625,
+  "actionInternalRGBAMAD": [
+    9.663139343261719,
+    24.759479522705078,
+    23.13538360595703
+  ],
+  "idleReturn": {
+    "atMs": 400,
+    "frame": "exact preexisting E idle",
+    "crossfade": false,
+    "stanceSnapNeedsHumanJudgement": true
+  },
+  "existingTween": {
+    "runtimeMs": 220,
+    "amplitudePx": 10,
+    "previewControl": "original idle + 220ms pulse",
+    "duplicateComparison": "400ms body + same pulse shape stretched to400ms; hypothetical not current runtime",
+    "bodyOnlyMaxRootShiftPx": 0,
+    "duplicateMaxRootShiftPx": 10,
+    "recommendation": "disable positional pulse only when dedicated body400 plays; preserve temporary pulse for fallback"
+  },
+  "actualBrowserPlaybackObserved": false,
+  "integrationDecision": "conditional candidate; live integration not accepted"
+}

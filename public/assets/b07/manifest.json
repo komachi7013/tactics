@@ -1,0 +1,46 @@
+{
+  "source": "built-in image_gen",
+  "generationCalls": 1,
+  "originalPath": "generated_images/exec-8958e700-15b0-41c7-8fe1-d32b7d270086.png",
+  "originalCopy": "raw-original.png",
+  "originalSHA256": "6cba839642bca6af56cf41fcc6b3f835abc9560b41fd4cdd07c0df159632253b",
+  "originalMode": "RGB",
+  "originalSize": [
+    1254,
+    1254
+  ],
+  "prompt": "prompt-used.txt",
+  "promptSHA256": "547aeea12bee93d01ecedf2aa340714eed674688ae82f3aa6b1de98139e4ed31",
+  "referencePolicy": "Sena and Iva viewed for style; described in prompt, no reference file passed to imagegen",
+  "processor": ".codex/skills/generate2dsprite/scripts/generate2dsprite.py process --target asset --mode single --single-size 256 --prompt-file public/assets/b07/prompt-used.txt",
+  "normalization": "Processed alpha bbox uniformly scaled to height190, centered horizontally, bottom238. No creative pixels drawn.",
+  "output": "evacuees.png",
+  "outputSHA256": "44ee26bb93aff09e3d125e4ef75ede7ff7faf19751a36d9d89408138f0fe9b69",
+  "size": [
+    256,
+    256
+  ],
+  "origin": [
+    0.5,
+    0.93
+  ],
+  "displaySize": 84,
+  "bbox": [
+    63,
+    48,
+    192,
+    238
+  ],
+  "alphaRange": [
+    0,
+    255
+  ],
+  "transparentPixels": 48083,
+  "opaquePixels": 13915,
+  "visibleMagentaPixels": 0,
+  "edgeTouch": false,
+  "empty": false,
+  "animation": false,
+  "usage": "Shared static icon at V1/V2, disappears after guidance; not an HP/attack/movable NPC",
+  "contactSHA256": "229e3daee3a268771e371bb3c6cd15a7913bedee57e8f0def8a7032520b51bc4"
+}

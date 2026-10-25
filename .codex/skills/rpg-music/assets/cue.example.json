@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "cue_id": "hope-sketch",
+  "version": 1,
+  "status": "composition-sketch",
+  "scene_source": null,
+  "emotion": "静かな希望",
+  "motif_versions": {"hope": 1},
+  "tempo_bpm": 96,
+  "meter": [4, 4],
+  "bars": 2,
+  "sections": [{"id": "loop", "start_bar": 0, "bars": 2}],
+  "loop": {"mode": "whole", "start_beat": 0, "end_beat": 8},
+  "forbidden_sounds": ["鐘（物語条件を別途確認）"],
+  "audio": {"renderer": "unselected", "master": "wav", "delivery": "runtime-dependent", "sample_rate": 44100, "channels": 2},
+  "tracks": [
+    {"name": "Hope / horn placeholder", "channel": 0, "program": 60, "notes": [
+      {"beat": 0, "duration": 1, "pitch": 62, "velocity": 68},
+      {"beat": 1, "duration": 0.5, "pitch": 67, "velocity": 74},
+      {"beat": 1.5, "duration": 0.5, "pitch": 65, "velocity": 66},
+      {"beat": 2, "duration": 2, "pitch": 69, "velocity": 78},
+      {"beat": 4, "duration": 1, "pitch": 62, "velocity": 65},
+      {"beat": 5, "duration": 0.5, "pitch": 67, "velocity": 70},
+      {"beat": 5.5, "duration": 0.5, "pitch": 65, "velocity": 63},
+      {"beat": 6, "duration": 2, "pitch": 69, "velocity": 74}
+    ]},
+    {"name": "Strings / harmonic sketch", "channel": 1, "program": 48, "notes": [
+      {"beat": 0, "duration": 4, "pitch": 50, "velocity": 46},
+      {"beat": 0, "duration": 4, "pitch": 57, "velocity": 42},
+      {"beat": 4, "duration": 4, "pitch": 48, "velocity": 44},
+      {"beat": 4, "duration": 4, "pitch": 55, "velocity": 40}
+    ]}
+  ]
+}

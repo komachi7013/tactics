@@ -1,0 +1,2657 @@
+{
+  "noGate": {
+    "commands": [
+      {
+        "type": "start",
+        "unitId": "ally-garan"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 1,
+          "y": 2
+        }
+      },
+      {
+        "type": "collect",
+        "recordId": "A"
+      },
+      {
+        "type": "end",
+        "facing": "E"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-lise"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "type": "defend"
+      },
+      {
+        "type": "end",
+        "facing": "E"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-neia"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      {
+        "type": "attack",
+        "targetId": "enemy-melee-01"
+      },
+      {
+        "type": "end",
+        "facing": "E"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-lise"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 6,
+          "y": 5
+        }
+      },
+      {
+        "type": "collect",
+        "recordId": "B"
+      },
+      {
+        "type": "end",
+        "facing": "E"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-neia"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 2,
+          "y": 5
+        }
+      },
+      {
+        "type": "attack",
+        "targetId": "enemy-melee-01"
+      },
+      {
+        "type": "end",
+        "facing": "E"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-garan"
+      },
+      {
+        "type": "defend"
+      },
+      {
+        "type": "end",
+        "facing": "E"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-lise"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 9,
+          "y": 6
+        }
+      }
+    ],
+    "phase": "won",
+    "round": 3,
+    "hp": [
+      [
+        "ally-lise",
+        6
+      ],
+      [
+        "ally-garan",
+        21
+      ],
+      [
+        "ally-neia",
+        4
+      ]
+    ],
+    "moveCost": 19,
+    "activations": 7,
+    "actions": 6,
+    "commandsCount": 25,
+    "expanded": 2202,
+    "width": 10,
+    "maxDepth": 24,
+    "events": [
+      {
+        "round": 1,
+        "actor": "ally-garan",
+        "command": {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-garan",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 1,
+            "y": 2
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 1,
+            "y": 6
+          },
+          "to": {
+            "x": 1,
+            "y": 2
+          },
+          "cost": 4,
+          "wetCounterfactualCost": 4
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-garan",
+        "command": {
+          "type": "collect",
+          "recordId": "A"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-garan",
+        "command": {
+          "type": "end",
+          "facing": "E"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-lise",
+        "command": {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-lise",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 3,
+            "y": 5
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 0,
+            "y": 5
+          },
+          "to": {
+            "x": 3,
+            "y": 5
+          },
+          "cost": 4,
+          "wetCounterfactualCost": 4
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-lise",
+        "command": {
+          "type": "defend"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-lise",
+        "command": {
+          "type": "end",
+          "facing": "E"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-neia",
+        "command": {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-neia",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 2,
+            "y": 6
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 0,
+            "y": 6
+          },
+          "to": {
+            "x": 2,
+            "y": 6
+          },
+          "cost": 2,
+          "wetCounterfactualCost": 2
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-neia",
+        "command": {
+          "type": "attack",
+          "targetId": "enemy-melee-01"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-neia",
+        "command": {
+          "type": "end",
+          "facing": "E"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "enemy": true,
+        "round": 1,
+        "hp": [
+          18,
+          24,
+          11
+        ]
+      },
+      {
+        "enemy": true,
+        "round": 1,
+        "hp": [
+          18,
+          21,
+          11
+        ]
+      },
+      {
+        "enemy": true,
+        "round": 2,
+        "hp": [
+          18,
+          21,
+          11
+        ]
+      },
+      {
+        "round": 2,
+        "actor": "ally-lise",
+        "command": {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-lise",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 6,
+            "y": 5
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 3,
+            "y": 5
+          },
+          "to": {
+            "x": 6,
+            "y": 5
+          },
+          "cost": 4,
+          "wetCounterfactualCost": 4
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-lise",
+        "command": {
+          "type": "collect",
+          "recordId": "B"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-lise",
+        "command": {
+          "type": "end",
+          "facing": "E"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-neia",
+        "command": {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-neia",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 2,
+            "y": 5
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 2,
+            "y": 6
+          },
+          "to": {
+            "x": 2,
+            "y": 5
+          },
+          "cost": 1,
+          "wetCounterfactualCost": 1
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-neia",
+        "command": {
+          "type": "attack",
+          "targetId": "enemy-melee-01"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-neia",
+        "command": {
+          "type": "end",
+          "facing": "E"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-garan",
+        "command": {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-garan",
+        "command": {
+          "type": "defend"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-garan",
+        "command": {
+          "type": "end",
+          "facing": "E"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "enemy": true,
+        "round": 2,
+        "hp": [
+          18,
+          21,
+          4
+        ]
+      },
+      {
+        "enemy": true,
+        "round": 2,
+        "hp": [
+          11,
+          21,
+          4
+        ]
+      },
+      {
+        "enemy": true,
+        "round": 3,
+        "hp": [
+          6,
+          21,
+          4
+        ]
+      },
+      {
+        "round": 3,
+        "actor": "ally-lise",
+        "command": {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 3,
+        "actor": "ally-lise",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 9,
+            "y": 6
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 6,
+            "y": 5
+          },
+          "to": {
+            "x": 9,
+            "y": 6
+          },
+          "cost": 4,
+          "wetCounterfactualCost": 4
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      }
+    ]
+  },
+  "earlyGate": {
+    "commands": [
+      {
+        "type": "start",
+        "unitId": "ally-garan"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 2,
+          "y": 5
+        }
+      },
+      {
+        "type": "gate"
+      },
+      {
+        "type": "end",
+        "facing": "E"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-lise"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 2,
+          "y": 3
+        }
+      },
+      {
+        "type": "collect",
+        "recordId": "A"
+      },
+      {
+        "type": "end",
+        "facing": "E"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-neia"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      {
+        "type": "attack",
+        "targetId": "enemy-melee-01"
+      },
+      {
+        "type": "end",
+        "facing": "E"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-garan"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 6,
+          "y": 5
+        }
+      },
+      {
+        "type": "collect",
+        "recordId": "B"
+      },
+      {
+        "type": "end",
+        "facing": "E"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-lise"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 6,
+          "y": 3
+        }
+      },
+      {
+        "type": "attack",
+        "targetId": "enemy-bow-01"
+      },
+      {
+        "type": "end",
+        "facing": "N"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-neia"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 1,
+          "y": 6
+        }
+      },
+      {
+        "type": "attack",
+        "targetId": "enemy-melee-01"
+      },
+      {
+        "type": "end",
+        "facing": "E"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-lise"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 9,
+          "y": 4
+        }
+      },
+      {
+        "type": "defend"
+      },
+      {
+        "type": "end",
+        "facing": "W"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-garan"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 6,
+          "y": 3
+        }
+      },
+      {
+        "type": "attack",
+        "targetId": "enemy-melee-02"
+      },
+      {
+        "type": "end",
+        "facing": "S"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-neia"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 3,
+          "y": 4
+        }
+      },
+      {
+        "type": "attack",
+        "targetId": "enemy-melee-02"
+      },
+      {
+        "type": "end",
+        "facing": "S"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-lise"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 9,
+          "y": 6
+        }
+      }
+    ],
+    "phase": "won",
+    "round": 4,
+    "hp": [
+      [
+        "ally-lise",
+        1
+      ],
+      [
+        "ally-garan",
+        21
+      ],
+      [
+        "ally-neia",
+        0
+      ]
+    ],
+    "moveCost": 31,
+    "activations": 10,
+    "actions": 9,
+    "commandsCount": 38,
+    "expanded": 4497,
+    "width": 10,
+    "maxDepth": 24,
+    "events": [
+      {
+        "round": 1,
+        "actor": "ally-garan",
+        "command": {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-garan",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 2,
+            "y": 5
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 1,
+            "y": 6
+          },
+          "to": {
+            "x": 2,
+            "y": 5
+          },
+          "cost": 2,
+          "wetCounterfactualCost": 2
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-garan",
+        "command": {
+          "type": "gate"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": 2
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-garan",
+        "command": {
+          "type": "end",
+          "facing": "E"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": 2
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-lise",
+        "command": {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": 2
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-lise",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 2,
+            "y": 3
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 0,
+            "y": 5
+          },
+          "to": {
+            "x": 2,
+            "y": 3
+          },
+          "cost": 4,
+          "wetCounterfactualCost": 4
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": 2
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-lise",
+        "command": {
+          "type": "collect",
+          "recordId": "A"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": 2
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-lise",
+        "command": {
+          "type": "end",
+          "facing": "E"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": 2
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-neia",
+        "command": {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": 2
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-neia",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 2,
+            "y": 6
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 0,
+            "y": 6
+          },
+          "to": {
+            "x": 2,
+            "y": 6
+          },
+          "cost": 2,
+          "wetCounterfactualCost": 2
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": 2
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-neia",
+        "command": {
+          "type": "attack",
+          "targetId": "enemy-melee-01"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": 2
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-neia",
+        "command": {
+          "type": "end",
+          "facing": "E"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": 2
+        }
+      },
+      {
+        "enemy": true,
+        "round": 1,
+        "hp": [
+          13,
+          24,
+          16
+        ]
+      },
+      {
+        "enemy": true,
+        "round": 1,
+        "hp": [
+          13,
+          24,
+          11
+        ]
+      },
+      {
+        "enemy": true,
+        "round": 2,
+        "hp": [
+          13,
+          24,
+          11
+        ]
+      },
+      {
+        "round": 2,
+        "actor": "ally-garan",
+        "command": {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-garan",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 6,
+            "y": 5
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 2,
+            "y": 5
+          },
+          "to": {
+            "x": 6,
+            "y": 5
+          },
+          "cost": 4,
+          "wetCounterfactualCost": 6
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-garan",
+        "command": {
+          "type": "collect",
+          "recordId": "B"
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-garan",
+        "command": {
+          "type": "end",
+          "facing": "E"
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-lise",
+        "command": {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-lise",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 6,
+            "y": 3
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 2,
+            "y": 3
+          },
+          "to": {
+            "x": 6,
+            "y": 3
+          },
+          "cost": 4,
+          "wetCounterfactualCost": 6
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-lise",
+        "command": {
+          "type": "attack",
+          "targetId": "enemy-bow-01"
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-lise",
+        "command": {
+          "type": "end",
+          "facing": "N"
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-neia",
+        "command": {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-neia",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 1,
+            "y": 6
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 2,
+            "y": 6
+          },
+          "to": {
+            "x": 1,
+            "y": 6
+          },
+          "cost": 1,
+          "wetCounterfactualCost": 1
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-neia",
+        "command": {
+          "type": "attack",
+          "targetId": "enemy-melee-01"
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-neia",
+        "command": {
+          "type": "end",
+          "facing": "E"
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      },
+      {
+        "enemy": true,
+        "round": 2,
+        "hp": [
+          6,
+          24,
+          11
+        ]
+      },
+      {
+        "enemy": true,
+        "round": 2,
+        "hp": [
+          1,
+          24,
+          11
+        ]
+      },
+      {
+        "enemy": true,
+        "round": 3,
+        "hp": [
+          1,
+          24,
+          6
+        ]
+      },
+      {
+        "round": 3,
+        "actor": "ally-lise",
+        "command": {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 3,
+        "actor": "ally-lise",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 9,
+            "y": 4
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 6,
+            "y": 3
+          },
+          "to": {
+            "x": 9,
+            "y": 4
+          },
+          "cost": 4,
+          "wetCounterfactualCost": 4
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 3,
+        "actor": "ally-lise",
+        "command": {
+          "type": "defend"
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 3,
+        "actor": "ally-lise",
+        "command": {
+          "type": "end",
+          "facing": "W"
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 3,
+        "actor": "ally-garan",
+        "command": {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 3,
+        "actor": "ally-garan",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 6,
+            "y": 3
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 6,
+            "y": 5
+          },
+          "to": {
+            "x": 6,
+            "y": 3
+          },
+          "cost": 4,
+          "wetCounterfactualCost": 4
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 3,
+        "actor": "ally-garan",
+        "command": {
+          "type": "attack",
+          "targetId": "enemy-melee-02"
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 3,
+        "actor": "ally-garan",
+        "command": {
+          "type": "end",
+          "facing": "S"
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 3,
+        "actor": "ally-neia",
+        "command": {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 3,
+        "actor": "ally-neia",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 3,
+            "y": 4
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 1,
+            "y": 6
+          },
+          "to": {
+            "x": 3,
+            "y": 4
+          },
+          "cost": 4,
+          "wetCounterfactualCost": 4
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 3,
+        "actor": "ally-neia",
+        "command": {
+          "type": "attack",
+          "targetId": "enemy-melee-02"
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 3,
+        "actor": "ally-neia",
+        "command": {
+          "type": "end",
+          "facing": "S"
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      },
+      {
+        "enemy": true,
+        "round": 3,
+        "hp": [
+          1,
+          24,
+          0
+        ]
+      },
+      {
+        "enemy": true,
+        "round": 3,
+        "hp": [
+          1,
+          21,
+          0
+        ]
+      },
+      {
+        "enemy": true,
+        "round": 4,
+        "hp": [
+          1,
+          21,
+          0
+        ]
+      },
+      {
+        "round": 4,
+        "actor": "ally-lise",
+        "command": {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 4,
+        "actor": "ally-lise",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 9,
+            "y": 6
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 9,
+            "y": 4
+          },
+          "to": {
+            "x": 9,
+            "y": 6
+          },
+          "cost": 2,
+          "wetCounterfactualCost": 2
+        },
+        "gate": {
+          "drained": true,
+          "pendingRound": null
+        }
+      }
+    ]
+  },
+  "neiaFirst": {
+    "commands": [
+      {
+        "type": "start",
+        "unitId": "ally-neia"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "type": "attack",
+        "targetId": "enemy-melee-01"
+      },
+      {
+        "type": "end",
+        "facing": "E"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-garan"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 1,
+          "y": 2
+        }
+      },
+      {
+        "type": "collect",
+        "recordId": "A"
+      },
+      {
+        "type": "end",
+        "facing": "E"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-lise"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 3,
+          "y": 6
+        }
+      },
+      {
+        "type": "defend"
+      },
+      {
+        "type": "end",
+        "facing": "E"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-lise"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 7,
+          "y": 6
+        }
+      },
+      {
+        "type": "collect",
+        "recordId": "B"
+      },
+      {
+        "type": "end",
+        "facing": "N"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-neia"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 3,
+          "y": 6
+        }
+      },
+      {
+        "type": "attack",
+        "targetId": "enemy-melee-01"
+      },
+      {
+        "type": "end",
+        "facing": "E"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-garan"
+      },
+      {
+        "type": "defend"
+      },
+      {
+        "type": "end",
+        "facing": "E"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-lise"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 9,
+          "y": 6
+        }
+      }
+    ],
+    "phase": "won",
+    "round": 3,
+    "hp": [
+      [
+        "ally-lise",
+        6
+      ],
+      [
+        "ally-garan",
+        21
+      ],
+      [
+        "ally-neia",
+        4
+      ]
+    ],
+    "moveCost": 19,
+    "activations": 7,
+    "actions": 6,
+    "commandsCount": 25,
+    "expanded": 1865,
+    "width": 10,
+    "maxDepth": 24,
+    "events": [
+      {
+        "round": 1,
+        "actor": "ally-neia",
+        "command": {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-neia",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 3,
+            "y": 7
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 0,
+            "y": 6
+          },
+          "to": {
+            "x": 3,
+            "y": 7
+          },
+          "cost": 4,
+          "wetCounterfactualCost": 4
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-neia",
+        "command": {
+          "type": "attack",
+          "targetId": "enemy-melee-01"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-neia",
+        "command": {
+          "type": "end",
+          "facing": "E"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-garan",
+        "command": {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-garan",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 1,
+            "y": 2
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 1,
+            "y": 6
+          },
+          "to": {
+            "x": 1,
+            "y": 2
+          },
+          "cost": 4,
+          "wetCounterfactualCost": 4
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-garan",
+        "command": {
+          "type": "collect",
+          "recordId": "A"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-garan",
+        "command": {
+          "type": "end",
+          "facing": "E"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-lise",
+        "command": {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-lise",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 3,
+            "y": 6
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 0,
+            "y": 5
+          },
+          "to": {
+            "x": 3,
+            "y": 6
+          },
+          "cost": 4,
+          "wetCounterfactualCost": 4
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-lise",
+        "command": {
+          "type": "defend"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-lise",
+        "command": {
+          "type": "end",
+          "facing": "E"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "enemy": true,
+        "round": 1,
+        "hp": [
+          18,
+          24,
+          11
+        ]
+      },
+      {
+        "enemy": true,
+        "round": 1,
+        "hp": [
+          18,
+          21,
+          11
+        ]
+      },
+      {
+        "enemy": true,
+        "round": 2,
+        "hp": [
+          18,
+          21,
+          11
+        ]
+      },
+      {
+        "round": 2,
+        "actor": "ally-lise",
+        "command": {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-lise",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 7,
+            "y": 6
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 3,
+            "y": 6
+          },
+          "to": {
+            "x": 7,
+            "y": 6
+          },
+          "cost": 4,
+          "wetCounterfactualCost": 4
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-lise",
+        "command": {
+          "type": "collect",
+          "recordId": "B"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-lise",
+        "command": {
+          "type": "end",
+          "facing": "N"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-neia",
+        "command": {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-neia",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 3,
+            "y": 6
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 3,
+            "y": 7
+          },
+          "to": {
+            "x": 3,
+            "y": 6
+          },
+          "cost": 1,
+          "wetCounterfactualCost": 1
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-neia",
+        "command": {
+          "type": "attack",
+          "targetId": "enemy-melee-01"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-neia",
+        "command": {
+          "type": "end",
+          "facing": "E"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-garan",
+        "command": {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-garan",
+        "command": {
+          "type": "defend"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-garan",
+        "command": {
+          "type": "end",
+          "facing": "E"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "enemy": true,
+        "round": 2,
+        "hp": [
+          18,
+          21,
+          4
+        ]
+      },
+      {
+        "enemy": true,
+        "round": 2,
+        "hp": [
+          11,
+          21,
+          4
+        ]
+      },
+      {
+        "enemy": true,
+        "round": 3,
+        "hp": [
+          6,
+          21,
+          4
+        ]
+      },
+      {
+        "round": 3,
+        "actor": "ally-lise",
+        "command": {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 3,
+        "actor": "ally-lise",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 9,
+            "y": 6
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 7,
+            "y": 6
+          },
+          "to": {
+            "x": 9,
+            "y": 6
+          },
+          "cost": 2,
+          "wetCounterfactualCost": 2
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      }
+    ]
+  },
+  "liseFirst": {
+    "commands": [
+      {
+        "type": "start",
+        "unitId": "ally-lise"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "type": "defend"
+      },
+      {
+        "type": "end",
+        "facing": "E"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-garan"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 1,
+          "y": 2
+        }
+      },
+      {
+        "type": "collect",
+        "recordId": "A"
+      },
+      {
+        "type": "end",
+        "facing": "E"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-neia"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      {
+        "type": "attack",
+        "targetId": "enemy-melee-01"
+      },
+      {
+        "type": "end",
+        "facing": "E"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-lise"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 6,
+          "y": 5
+        }
+      },
+      {
+        "type": "collect",
+        "recordId": "B"
+      },
+      {
+        "type": "end",
+        "facing": "E"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-neia"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 2,
+          "y": 5
+        }
+      },
+      {
+        "type": "attack",
+        "targetId": "enemy-melee-01"
+      },
+      {
+        "type": "end",
+        "facing": "E"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-garan"
+      },
+      {
+        "type": "defend"
+      },
+      {
+        "type": "end",
+        "facing": "E"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-lise"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 9,
+          "y": 6
+        }
+      }
+    ],
+    "phase": "won",
+    "round": 3,
+    "hp": [
+      [
+        "ally-lise",
+        6
+      ],
+      [
+        "ally-garan",
+        21
+      ],
+      [
+        "ally-neia",
+        4
+      ]
+    ],
+    "moveCost": 19,
+    "activations": 7,
+    "actions": 6,
+    "commandsCount": 25,
+    "expanded": 2163,
+    "width": 10,
+    "maxDepth": 24,
+    "events": [
+      {
+        "round": 1,
+        "actor": "ally-lise",
+        "command": {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-lise",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 3,
+            "y": 5
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 0,
+            "y": 5
+          },
+          "to": {
+            "x": 3,
+            "y": 5
+          },
+          "cost": 4,
+          "wetCounterfactualCost": 4
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-lise",
+        "command": {
+          "type": "defend"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-lise",
+        "command": {
+          "type": "end",
+          "facing": "E"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-garan",
+        "command": {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-garan",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 1,
+            "y": 2
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 1,
+            "y": 6
+          },
+          "to": {
+            "x": 1,
+            "y": 2
+          },
+          "cost": 4,
+          "wetCounterfactualCost": 4
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-garan",
+        "command": {
+          "type": "collect",
+          "recordId": "A"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-garan",
+        "command": {
+          "type": "end",
+          "facing": "E"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-neia",
+        "command": {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-neia",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 2,
+            "y": 6
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 0,
+            "y": 6
+          },
+          "to": {
+            "x": 2,
+            "y": 6
+          },
+          "cost": 2,
+          "wetCounterfactualCost": 2
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-neia",
+        "command": {
+          "type": "attack",
+          "targetId": "enemy-melee-01"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 1,
+        "actor": "ally-neia",
+        "command": {
+          "type": "end",
+          "facing": "E"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "enemy": true,
+        "round": 1,
+        "hp": [
+          18,
+          24,
+          11
+        ]
+      },
+      {
+        "enemy": true,
+        "round": 1,
+        "hp": [
+          18,
+          21,
+          11
+        ]
+      },
+      {
+        "enemy": true,
+        "round": 2,
+        "hp": [
+          18,
+          21,
+          11
+        ]
+      },
+      {
+        "round": 2,
+        "actor": "ally-lise",
+        "command": {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-lise",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 6,
+            "y": 5
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 3,
+            "y": 5
+          },
+          "to": {
+            "x": 6,
+            "y": 5
+          },
+          "cost": 4,
+          "wetCounterfactualCost": 4
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-lise",
+        "command": {
+          "type": "collect",
+          "recordId": "B"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-lise",
+        "command": {
+          "type": "end",
+          "facing": "E"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-neia",
+        "command": {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-neia",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 2,
+            "y": 5
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 2,
+            "y": 6
+          },
+          "to": {
+            "x": 2,
+            "y": 5
+          },
+          "cost": 1,
+          "wetCounterfactualCost": 1
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-neia",
+        "command": {
+          "type": "attack",
+          "targetId": "enemy-melee-01"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-neia",
+        "command": {
+          "type": "end",
+          "facing": "E"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-garan",
+        "command": {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-garan",
+        "command": {
+          "type": "defend"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 2,
+        "actor": "ally-garan",
+        "command": {
+          "type": "end",
+          "facing": "E"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "enemy": true,
+        "round": 2,
+        "hp": [
+          18,
+          21,
+          4
+        ]
+      },
+      {
+        "enemy": true,
+        "round": 2,
+        "hp": [
+          11,
+          21,
+          4
+        ]
+      },
+      {
+        "enemy": true,
+        "round": 3,
+        "hp": [
+          6,
+          21,
+          4
+        ]
+      },
+      {
+        "round": 3,
+        "actor": "ally-lise",
+        "command": {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      },
+      {
+        "round": 3,
+        "actor": "ally-lise",
+        "command": {
+          "type": "move",
+          "to": {
+            "x": 9,
+            "y": 6
+          }
+        },
+        "movement": {
+          "from": {
+            "x": 6,
+            "y": 5
+          },
+          "to": {
+            "x": 9,
+            "y": 6
+          },
+          "cost": 4,
+          "wetCounterfactualCost": 4
+        },
+        "gate": {
+          "drained": false,
+          "pendingRound": null
+        }
+      }
+    ]
+  }
+}

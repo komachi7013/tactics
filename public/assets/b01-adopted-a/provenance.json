@@ -1,0 +1,33 @@
+{
+  "source": "assets/landscape-sources/b01/river-scene.png",
+  "sourceSha256": "8bb1cacd72ddd2d83905feeebfb6fd69baa7a2899ae2fc19b5617200ef33baa5",
+  "operation": "Existing approved raster material crops only; no generated artwork or map geometry changes",
+  "crops": {
+    "floor": [
+      1160,
+      600,
+      1370,
+      700
+    ],
+    "water": [
+      1060,
+      210,
+      1260,
+      310
+    ],
+    "wall": [
+      770,
+      495,
+      920,
+      630
+    ],
+    "river-distance": [
+      0,
+      0,
+      1536,
+      250
+    ]
+  },
+  "anchorMethod": "Actual 2x2 shipped sheets; per cardinal frame alpha >=96; mean x in bottom 5 rows; last solid row feet; originals unchanged",
+  "distantScenery": "Noninteractive distant bank above the playable footprint; no world hit/collision"
+}

@@ -1,0 +1,10 @@
+{
+  "rawOriginal": "generated_images/exec-c4ce7a3a-39aa-4530-a70b-75892ee709ce.png",
+  "generator": "built-in image_gen",
+  "generationCalls": 1,
+  "reference": "public/assets/units/iva/sheet-transparent.png",
+  "background": "solid #FF00FF",
+  "originalSHA256": "808b8b1f0923a89c436329cf2faa774d31703f6b774568b5e8884484181a8312",
+  "rawSHA256": "770b3fffc0f274732458652506fbb92feb9d560b47127ce179b82529aff7fd67",
+  "rawConversion": "RGB original to RGBA PNG; identical RGBA pixels, not a byte-for-byte copy"
+}

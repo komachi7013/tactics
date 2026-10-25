@@ -1,0 +1,83 @@
+{
+  "source": "built-in image_gen",
+  "generationCalls": 1,
+  "character": "Toma, unarmed male clerk, story age 31",
+  "style": "project-native clean HD hand-painted chibi",
+  "reference": "units/iva/sheet-transparent.png; style/camera only; inspected Sena and Iva",
+  "rawOriginal": "generated_images/exec-c4ce7a3a-39aa-4530-a70b-75892ee709ce.png",
+  "rawCopy": "units/toma/raw-sheet.png",
+  "originalSHA256": "808b8b1f0923a89c436329cf2faa774d31703f6b774568b5e8884484181a8312",
+  "originalMode": "RGB",
+  "rawMode": "RGBA",
+  "rawConversion": "RGB original to RGBA PNG; identical RGBA pixels, not a byte-for-byte copy",
+  "rgbaPixelsIdentical": true,
+  "rawSHA256": "770b3fffc0f274732458652506fbb92feb9d560b47127ce179b82529aff7fd67",
+  "path": "units/toma/sheet-transparent.png",
+  "sha256": "d6c046c58bfcfab5104d3e12c318ef095686ce923e0f5ae1846c06b02cf4e771",
+  "sheetSize": [
+    512,
+    512
+  ],
+  "frameSize": [
+    256,
+    256
+  ],
+  "rows": 2,
+  "columns": 2,
+  "directions": [
+    "N",
+    "E",
+    "S",
+    "W"
+  ],
+  "origin": [
+    0.5,
+    0.92578125
+  ],
+  "prompt": "units/toma/prompt-used.txt",
+  "pipelinePromptField": "processor field only; actual generation text is prompt-used.txt",
+  "frameAlphaBBoxes": [
+    [
+      90,
+      30,
+      166,
+      228
+    ],
+    [
+      89,
+      29,
+      166,
+      228
+    ],
+    [
+      88,
+      33,
+      168,
+      228
+    ],
+    [
+      90,
+      33,
+      166,
+      228
+    ]
+  ],
+  "qc": {
+    "frame_count": 4,
+    "valid_frame_count": 4,
+    "empty_count": 0,
+    "edge_touch_count": 0,
+    "paste_clamped_count": 0,
+    "body_scale_mean": 0.4239555016131242,
+    "output_subject_height_mean": 196.75,
+    "body_scale_cv": 0.00692825283333276,
+    "anchor_x_std": 0.02290379140348599,
+    "anchor_y_std": 0.01672558904753528,
+    "anchor_y_mean": 0.8760096930533118
+  },
+  "scope": "Four static facing frames. GIF cycles directions for inspection, not walking animation.",
+  "limitations": [
+    "Native browser scale/overlap is a separate acceptance gate.",
+    "Exact age is story metadata rather than visually proven."
+  ]
+}

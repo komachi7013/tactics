@@ -1,0 +1,92 @@
+{
+  "source": "built-in image_gen",
+  "generationCalls": 2,
+  "style": "project-native clean_hd hand-painted chibi",
+  "sena": {
+    "rawOriginal": "generated_images/exec-2732f46d-885e-4a95-952e-86802db40ef7.png",
+    "path": "units/sena/sheet-transparent.png",
+    "frameSize": [
+      256,
+      256
+    ],
+    "sheetSize": [
+      512,
+      512
+    ],
+    "rows": 2,
+    "columns": 2,
+    "directions": [
+      "N",
+      "E",
+      "S",
+      "W"
+    ],
+    "origin": [
+      0.5,
+      0.92578125
+    ],
+    "rawSHA256": "3d20fd5a3120f8443e1f25e9c800a4d2f153b2d5baae3b1e45b2265c08c84cd0",
+    "sha256": "ce464bd8d8ef952442a635c69c12cb8e4058b8d08b3f08eb61ec297788e285e8",
+    "prompt": "units/sena/prompt-used.txt",
+    "qc": {
+      "frame_count": 4,
+      "valid_frame_count": 4,
+      "empty_count": 0,
+      "edge_touch_count": 0,
+      "paste_clamped_count": 0,
+      "body_scale_mean": 0.4243531207234859,
+      "output_subject_height_mean": 197.0,
+      "body_scale_cv": 0.008567097153884392,
+      "anchor_x_std": 0.01329118147972888,
+      "anchor_y_std": 0.016415510042731455,
+      "anchor_y_mean": 0.9087237479806138
+    }
+  },
+  "cart": {
+    "rawOriginal": "generated_images/exec-3bdf6654-1479-4836-a617-2eb9f7040ba6.png",
+    "path": "escort/cart.png",
+    "size": [
+      256,
+      256
+    ],
+    "origin": [
+      0.5,
+      0.92
+    ],
+    "rawSHA256": "d74e2e45acec0071223944b844fa3b4da980e1ee01c246580f3fd2c0cd63efd4",
+    "sha256": "86b6d7289791eb578a72d5ffbeece1425106742b8a21f69d5c01924774eb65bd",
+    "prompt": "escort/prompt-used.txt",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "alphaNoiseFloor": 8,
+    "sourceBBox": [
+      221,
+      309,
+      1174,
+      976
+    ],
+    "outputBBox": [
+      26,
+      93,
+      230,
+      236
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "worldFootprint": [
+      1,
+      1
+    ],
+    "occlusionClass": "escort_occupant",
+    "occupantPolicy": "cart occupies its own cell; no standing combat unit shares the cell"
+  },
+  "scope": "Four static directional Sena frames; one static cart. Runtime tween movement only. No walk or attack animation.",
+  "limitations": [
+    "No in-engine visual inspection performed by asset author; parent performs Mac browser QA.",
+    "Sena adult age is story metadata; chibi art does not establish exact apparent age."
+  ]
+}

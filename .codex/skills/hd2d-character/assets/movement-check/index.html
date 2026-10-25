@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>キャラクターの移動確認</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#111b24;color:#e5edf3;font:15px system-ui;padding:28px}main{max-width:960px;margin:auto}h1{font-size:26px;margin:0 0 10px}p{color:#a9becd;line-height:1.7}canvas{width:100%;background:#1b2a36;border:1px solid #425c6d;border-radius:8px;image-rendering:pixelated}button{background:#283e50;color:#e5edf3;border:1px solid #57758b;border-radius:6px;padding:10px 16px;margin:12px 8px 0 0;cursor:pointer}output{display:block;white-space:pre-wrap;font:13px monospace;color:#a8d9c7;margin-top:16px}.tag{color:#efc684;font-size:12px;letter-spacing:2px}
+</style>
+<main><div class="tag">CHARACTER / MOVEMENT CHECK</div><h1>キャラクターの移動確認</h1>
+<p>矢印キー / WASD で移動。斜め入力にも対応。枠とブロックで衝突を確認できます。<br>検証用平面です。マップ素材・音源は含みません。</p>
+<canvas width="900" height="500" tabindex="0" aria-label="キャラクターの移動検証面"></canvas>
+<button id="pause">操作を停止</button><button id="place">移動先へ再配置</button><button id="reset">開始地点へ戻る</button>
+<output id="status">素材を読み込んでいます…</output></main>
+<script type="module">
+import {Actor} from './movement.mjs';
+const config=await fetch('./character.json').then(r=>r.json());
+document.title=document.querySelector('h1').textContent=`${config.displayName || 'キャラクター'}の移動確認`;
+const canvas=document.querySelector('canvas'),ctx=canvas.getContext('2d');
+const world={width:900,height:500,obstacles:[{x:350,y:125,width:40,height:245},{x:580,y:250,width:160,height:35},{x:450,y:80,width:160,height:20}],materialAt:()=> 'test-floor'};
+const actor=new Actor(world,config);window.fixture={actor,world};
+const image=new Image();image.src=config.sheet;await image.decode();
+let active=true,last=performance.now();
+const controls=new Set(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','w','a','s','d']);
+window.addEventListener('keydown',e=>{const k=e.key.length===1?e.key.toLowerCase():e.key;if(controls.has(k) && e.target.tagName!=='BUTTON'){e.preventDefault();if(active && actor.enabled)actor.keys.add(k);}});
+window.addEventListener('keyup',e=>actor.keys.delete(e.key.length===1?e.key.toLowerCase():e.key));
+window.addEventListener('blur',()=>{active=false;actor.stop();});
+window.addEventListener('focus',()=>{active=true;last=performance.now();});
+document.addEventListener('visibilitychange',()=>{active=!document.hidden;actor.stop();last=performance.now();});
+document.querySelector('#pause').onclick=()=>{actor.setEnabled(!actor.enabled);document.querySelector('#pause').textContent=actor.enabled?'操作を停止':'操作を再開';canvas.focus();};
+document.querySelector('#place').onclick=()=>{actor.place(780,170,'left');canvas.focus();};
+document.querySelector('#reset').onclick=()=>{actor.place(120,170,'down');canvas.focus();};
+canvas.focus();
+function draw(t){const dt=(t-last)/1000;last=t;if(active)actor.update(dt);
+ctx.clearRect(0,0,900,500);ctx.strokeStyle='#2a3d4b';ctx.lineWidth=1;for(let x=0;x<900;x+=50){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,500);ctx.stroke();}for(let y=0;y<500;y+=50){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(900,y);ctx.stroke();}
+for(const b of world.obstacles){ctx.fillStyle='#4a6171';ctx.fillRect(b.x,b.y,b.width,b.height);ctx.strokeStyle='#7b98aa';ctx.strokeRect(b.x,b.y,b.width,b.height);}
+ctx.fillStyle='#0007';ctx.beginPath();ctx.ellipse(actor.x,actor.y,20,7,0,0,Math.PI*2);ctx.fill();
+const row=config.directions.indexOf(actor.facing),col=actor.moving?Math.floor(actor.phase/config.frameDurationMs)%4:0;
+ctx.imageSmoothingEnabled=false;ctx.drawImage(image,col*config.cellSize,row*config.cellSize,config.cellSize,config.cellSize,actor.x-config.footOrigin[0],actor.y-config.footOrigin[1],config.cellSize,config.cellSize);
+ctx.strokeStyle='#79d6be';ctx.strokeRect(actor.x-config.collision.halfWidth,actor.y-config.collision.halfHeight,config.collision.halfWidth*2,config.collision.halfHeight*2);
+document.querySelector('#status').textContent=`位置 (${actor.x.toFixed(1)}, ${actor.y.toFixed(1)}) / 向き ${actor.facing} / ${actor.moving?'歩行':'待機'}\n移動距離 ${actor.distance.toFixed(1)} px / 足音イベント ${actor.steps.length}（音源未接続） / 操作 ${actor.enabled?'有効':'停止'}`;
+requestAnimationFrame(draw);}requestAnimationFrame(draw);
+</script></html>

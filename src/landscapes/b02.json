@@ -1,0 +1,954 @@
+{
+  "map": {
+    "width": 33,
+    "height": 3
+  },
+  "registration": {
+    "width": 1536,
+    "height": 1024,
+    "ox": 280,
+    "oy": 120,
+    "tw": 80,
+    "th": 40,
+    "elevation": 20
+  },
+  "points": {
+    "observation": {
+      "x": 2,
+      "y": 0
+    },
+    "exit": {
+      "x": 31,
+      "y": 2
+    },
+    "chest": {
+      "x": 16,
+      "y": 1
+    }
+  },
+  "placements": [
+    {
+      "id": "ally-lise",
+      "x": 0,
+      "y": 1
+    },
+    {
+      "id": "ally-garan",
+      "x": 1,
+      "y": 1
+    },
+    {
+      "id": "ally-neia",
+      "x": 1,
+      "y": 2
+    },
+    {
+      "id": "enemy-melee-01",
+      "x": 7,
+      "y": 1
+    },
+    {
+      "id": "enemy-melee-02",
+      "x": 21,
+      "y": 1
+    },
+    {
+      "id": "enemy-bow-01",
+      "x": 27,
+      "y": 2
+    }
+  ],
+  "cells": [
+    {
+      "x": 0,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "height": 2,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 11,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 12,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 13,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 14,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 15,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 16,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 17,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 18,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 19,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 20,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 21,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 22,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 23,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 24,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 25,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 26,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 27,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 28,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 29,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 30,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 31,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 32,
+      "y": 0,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "height": 2,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "height": 2,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "height": 2,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "height": 1,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 4,
+      "y": 1,
+      "height": 1,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 5,
+      "y": 1,
+      "height": 1,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": true
+    },
+    {
+      "x": 6,
+      "y": 1,
+      "height": 1,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": true
+    },
+    {
+      "x": 7,
+      "y": 1,
+      "height": 1,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": true
+    },
+    {
+      "x": 8,
+      "y": 1,
+      "height": 1,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": true
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "height": 1,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": true
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "height": 1,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": true
+    },
+    {
+      "x": 11,
+      "y": 1,
+      "height": 1,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": true
+    },
+    {
+      "x": 12,
+      "y": 1,
+      "height": 1,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": true
+    },
+    {
+      "x": 13,
+      "y": 1,
+      "height": 1,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": true
+    },
+    {
+      "x": 14,
+      "y": 1,
+      "height": 1,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": true
+    },
+    {
+      "x": 15,
+      "y": 1,
+      "height": 1,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": true
+    },
+    {
+      "x": 16,
+      "y": 1,
+      "height": 1,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": true
+    },
+    {
+      "x": 17,
+      "y": 1,
+      "height": 1,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": true
+    },
+    {
+      "x": 18,
+      "y": 1,
+      "height": 1,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": true
+    },
+    {
+      "x": 19,
+      "y": 1,
+      "height": 1,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": true
+    },
+    {
+      "x": 20,
+      "y": 1,
+      "height": 1,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": true
+    },
+    {
+      "x": 21,
+      "y": 1,
+      "height": 1,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": true
+    },
+    {
+      "x": 22,
+      "y": 1,
+      "height": 1,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": true
+    },
+    {
+      "x": 23,
+      "y": 1,
+      "height": 0,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 24,
+      "y": 1,
+      "height": 0,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 25,
+      "y": 1,
+      "height": 0,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 26,
+      "y": 1,
+      "height": 0,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 27,
+      "y": 1,
+      "height": 0,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 28,
+      "y": 1,
+      "height": 0,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 29,
+      "y": 1,
+      "height": 0,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 30,
+      "y": 1,
+      "height": 0,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 31,
+      "y": 1,
+      "height": 0,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 32,
+      "y": 1,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "height": 2,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 4,
+      "y": 2,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "height": 1,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 8,
+      "y": 2,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 9,
+      "y": 2,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 11,
+      "y": 2,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 12,
+      "y": 2,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 13,
+      "y": 2,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 14,
+      "y": 2,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 15,
+      "y": 2,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 16,
+      "y": 2,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 17,
+      "y": 2,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 18,
+      "y": 2,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 19,
+      "y": 2,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 20,
+      "y": 2,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 21,
+      "y": 2,
+      "height": 0,
+      "blocked": true,
+      "shallow": false,
+      "water": true,
+      "bridge": false
+    },
+    {
+      "x": 22,
+      "y": 2,
+      "height": 0,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 23,
+      "y": 2,
+      "height": 0,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 24,
+      "y": 2,
+      "height": 0,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 25,
+      "y": 2,
+      "height": 0,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 26,
+      "y": 2,
+      "height": 0,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 27,
+      "y": 2,
+      "height": 0,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 28,
+      "y": 2,
+      "height": 0,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 29,
+      "y": 2,
+      "height": 0,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 30,
+      "y": 2,
+      "height": 0,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 31,
+      "y": 2,
+      "height": 0,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    },
+    {
+      "x": 32,
+      "y": 2,
+      "height": 0,
+      "blocked": false,
+      "shallow": false,
+      "water": false,
+      "bridge": false
+    }
+  ]
+}

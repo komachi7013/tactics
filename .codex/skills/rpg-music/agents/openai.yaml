@@ -1,0 +1,4 @@
+interface:
+  display_name: "オーケストラBGM・SE制作"
+  short_description: "場面に合うオーケストラ風BGMと自由な音色のSE・環境音を制作"
+  default_prompt: "$rpg-music-skill を使って、ゲームの世界観と用途に合うオーケストラ風BGM・SEを制作してください。"

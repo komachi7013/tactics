@@ -1,0 +1,2425 @@
+{
+  "level": 3,
+  "results": [
+    {
+      "root": 1835626289,
+      "level": 3,
+      "commands": [
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "gate",
+          "gateId": "S"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 8,
+            "y": 8
+          }
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-melee-01"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 8,
+            "y": 9
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "loot",
+          "eventId": "chest:B08"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-melee-01"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "gate",
+          "gateId": "N"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 8,
+            "y": 10
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 13,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "gate",
+          "gateId": "N"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-melee-02"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "gate",
+          "gateId": "N"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-melee-02"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 10,
+            "y": 8
+          }
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-melee-02"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 9,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 8,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 15,
+            "y": 6
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 14,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 13,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 12,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 13,
+            "y": 4
+          }
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-bow-01"
+        },
+        {
+          "type": "end",
+          "facing": "W"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 14,
+            "y": 6
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "W"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 16,
+            "y": 7
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "W"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 15,
+            "y": 7
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "W"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 12,
+            "y": 4
+          }
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-bow-01"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 13,
+            "y": 4
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 17,
+            "y": 7
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 12,
+            "y": 2
+          }
+        },
+        {
+          "type": "collect",
+          "recordId": "P"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 15,
+            "y": 6
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 13,
+            "y": 5
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 17,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        }
+      ],
+      "phase": "won",
+      "round": 10,
+      "records": [
+        "P",
+        "C"
+      ],
+      "playerHp": [
+        [
+          "ally-lise",
+          22
+        ],
+        [
+          "ally-garan",
+          26
+        ],
+        [
+          "ally-neia",
+          20
+        ],
+        [
+          "ally-iva",
+          24
+        ]
+      ],
+      "provenance": "Faction turns v1; legal player commands, unchanged actual AI, factory, stats and deadline."
+    },
+    {
+      "root": 0,
+      "level": 3,
+      "commands": [
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "gate",
+          "gateId": "S"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 8,
+            "y": 8
+          }
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-melee-01"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 8,
+            "y": 9
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "loot",
+          "eventId": "chest:B08"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-melee-01"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "gate",
+          "gateId": "N"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 8,
+            "y": 10
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 13,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "gate",
+          "gateId": "N"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-melee-02"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "gate",
+          "gateId": "N"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-melee-02"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 12,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 11,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 10,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 15,
+            "y": 6
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 15,
+            "y": 7
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 15,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 14,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 13,
+            "y": 5
+          }
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-bow-01"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 14,
+            "y": 6
+          }
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-bow-01"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 16,
+            "y": 7
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 17,
+            "y": 7
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 12,
+            "y": 2
+          }
+        },
+        {
+          "type": "collect",
+          "recordId": "P"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 15,
+            "y": 7
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 13,
+            "y": 5
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 17,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        }
+      ],
+      "phase": "won",
+      "round": 9,
+      "records": [
+        "P",
+        "C"
+      ],
+      "playerHp": [
+        [
+          "ally-lise",
+          22
+        ],
+        [
+          "ally-garan",
+          21
+        ],
+        [
+          "ally-neia",
+          17
+        ],
+        [
+          "ally-iva",
+          24
+        ]
+      ],
+      "provenance": "Faction turns v1; legal player commands, unchanged actual AI, factory, stats and deadline."
+    },
+    {
+      "root": 1,
+      "level": 3,
+      "commands": [
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "gate",
+          "gateId": "S"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 8,
+            "y": 8
+          }
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-melee-01"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 8,
+            "y": 9
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "loot",
+          "eventId": "chest:B08"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-melee-01"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "gate",
+          "gateId": "N"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 8,
+            "y": 10
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 11,
+            "y": 8
+          }
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-melee-01"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "gate",
+          "gateId": "N"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-melee-02"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "gate",
+          "gateId": "N"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-melee-02"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 10,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 9,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 8,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 15,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 14,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 13,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 12,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 14,
+            "y": 5
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 14,
+            "y": 6
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 16,
+            "y": 7
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 15,
+            "y": 7
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 12,
+            "y": 4
+          }
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-bow-01"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 13,
+            "y": 5
+          }
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-bow-01"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 17,
+            "y": 7
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 12,
+            "y": 2
+          }
+        },
+        {
+          "type": "collect",
+          "recordId": "P"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 15,
+            "y": 7
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 13,
+            "y": 5
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 17,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        }
+      ],
+      "phase": "won",
+      "round": 10,
+      "records": [
+        "P",
+        "C"
+      ],
+      "playerHp": [
+        [
+          "ally-lise",
+          22
+        ],
+        [
+          "ally-garan",
+          22
+        ],
+        [
+          "ally-neia",
+          17
+        ],
+        [
+          "ally-iva",
+          24
+        ]
+      ],
+      "provenance": "Faction turns v1; legal player commands, unchanged actual AI, factory, stats and deadline."
+    },
+    {
+      "root": 4294967295,
+      "level": 3,
+      "commands": [
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "gate",
+          "gateId": "S"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 8,
+            "y": 8
+          }
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-melee-01"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 8,
+            "y": 9
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "loot",
+          "eventId": "chest:B08"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-melee-01"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "gate",
+          "gateId": "N"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 8,
+            "y": 10
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 13,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "gate",
+          "gateId": "N"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-melee-02"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "gate",
+          "gateId": "N"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-melee-02"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 12,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 11,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 10,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 15,
+            "y": 6
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 15,
+            "y": 7
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 15,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 14,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 13,
+            "y": 5
+          }
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-bow-01"
+        },
+        {
+          "type": "end",
+          "facing": "N"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 14,
+            "y": 6
+          }
+        },
+        {
+          "type": "attack",
+          "targetId": "enemy-bow-01"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 16,
+            "y": 7
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 17,
+            "y": 7
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 12,
+            "y": 2
+          }
+        },
+        {
+          "type": "collect",
+          "recordId": "P"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 15,
+            "y": 7
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-garan"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 13,
+            "y": 5
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-neia"
+        },
+        {
+          "type": "move",
+          "to": {
+            "x": 17,
+            "y": 8
+          }
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-iva"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        },
+        {
+          "type": "start",
+          "unitId": "ally-lise"
+        },
+        {
+          "type": "defend"
+        },
+        {
+          "type": "end",
+          "facing": "E"
+        }
+      ],
+      "phase": "won",
+      "round": 9,
+      "records": [
+        "P",
+        "C"
+      ],
+      "playerHp": [
+        [
+          "ally-lise",
+          22
+        ],
+        [
+          "ally-garan",
+          21
+        ],
+        [
+          "ally-neia",
+          17
+        ],
+        [
+          "ally-iva",
+          24
+        ]
+      ],
+      "provenance": "Faction turns v1; legal player commands, unchanged actual AI, factory, stats and deadline."
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "HD-2D Character"
+  short_description: "HD-2Dキャラクター素材・方向別アニメーション・移動契約の制作と検証"
+  default_prompt: "$hd2d-character を使い、プロジェクト指定のキャラクター素材と移動仕様を制作・検証してください。"

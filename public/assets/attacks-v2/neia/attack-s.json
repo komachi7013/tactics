@@ -1,0 +1,103 @@
+{
+  "actor": "neia",
+  "direction": "S",
+  "phaseMs": 100,
+  "attackMs": 400,
+  "cell": 288,
+  "originPx": [
+    144,
+    275.0
+  ],
+  "displaySizeForExisting80": 90,
+  "rawProfileQC": {
+    "frame_count": 4,
+    "valid_frame_count": 4,
+    "empty_count": 0,
+    "edge_touch_count": 0,
+    "paste_clamped_count": 0,
+    "body_scale_mean": 0.39733671245237484,
+    "output_subject_height_mean": 155.75,
+    "body_scale_cv": 0.011057701445150142,
+    "anchor_x_std": 0.03642067953988851,
+    "anchor_y_std": 0.029748182573751045,
+    "anchor_y_mean": 0.8180936995153468,
+    "profile_body_scale_drift": 0.020226980729711963
+  },
+  "finalStats": [
+    {
+      "bbox": [
+        55,
+        54,
+        169,
+        248
+      ],
+      "heightAlpha32": 193,
+      "feetY98": 236.0,
+      "feetXBottom2Median": 137.0,
+      "opaqueMagenta": 0
+    },
+    {
+      "bbox": [
+        39,
+        54,
+        169,
+        249
+      ],
+      "heightAlpha32": 194,
+      "feetY98": 237.0,
+      "feetXBottom2Median": 138.0,
+      "opaqueMagenta": 0
+    },
+    {
+      "bbox": [
+        39,
+        51,
+        169,
+        249
+      ],
+      "heightAlpha32": 197,
+      "feetY98": 237.0,
+      "feetXBottom2Median": 138.0,
+      "opaqueMagenta": 0
+    },
+    {
+      "bbox": [
+        53,
+        50,
+        169,
+        249
+      ],
+      "heightAlpha32": 199,
+      "feetY98": 237.0,
+      "feetXBottom2Median": 137.0,
+      "opaqueMagenta": 0
+    }
+  ],
+  "runtimeIdleFeetY98": 215.0,
+  "meanBodyHeightRatioToDirectionalIdle": 0.9987244897959183,
+  "feetY98StdPx": 0.4330127018922193,
+  "idleReturnFeetDeltaPx": 0.0,
+  "processingFailures": [],
+  "visualGate": "passed static asset gate; runtime and normal-speed playback unverified",
+  "runtimeIntegrated": true,
+  "actualGIFPlaybackObserved": false,
+  "independentReviewer": "/root/directional_asset_review",
+  "optionalIssue": "fine hair/ribbon color fringe",
+  "repairsUsed": 1,
+  "minimumPaddedMarginPx": 23,
+  "previewGif": {
+    "frames": 6,
+    "totalMs": 10000,
+    "actionSpeed": 0.1,
+    "actionActualMs": 4000,
+    "observedRealTime": false
+  },
+  "nativeAccepted": false,
+  "sourceCandidate": "neia-s-r1",
+  "sourceSHA256": "46225c4d80199a6d57cdb82e1015a4f49710d41b7643bd7496f36742d5430381",
+  "paddedOriginPx": [
+    144,
+    275.0
+  ],
+  "pixelsUnchangedByPadding": true
+}

@@ -1,0 +1,52 @@
+{
+  "generator": "built-in image_gen",
+  "date": "2026-10-17",
+  "paidApiOrKeyUsed": false,
+  "reference": "First Rise sheet used as style reference for other actors; no pre-existing game/IP artwork used.",
+  "assets": [
+    {
+      "id": "rise",
+      "source": "generated_images/exec-2530a87f-4b6d-47f2-a07a-f3ae2b2b28ca.png",
+      "prompt": "units/rise/prompt-used.txt"
+    },
+    {
+      "id": "garan",
+      "source": "generated_images/exec-c48de9d8-e8a0-49bd-b086-ea31b807129b.png",
+      "prompt": "units/garan/prompt-used.txt"
+    },
+    {
+      "id": "neia",
+      "source": "generated_images/exec-30d22484-2c04-4acc-98e1-817d0d3c9fc3.png",
+      "prompt": "units/neia/prompt-v3.txt",
+      "rejectedSource": [
+        "units/neia/raw-sheet-rejected-v1.png",
+        "units/neia/raw-sheet-rejected-v2.png"
+      ],
+      "reason": "V1 spear clipped cell boundary; V2 fixed framing but independent QA found spear inconsistent with domain crossbow. V3 changes weapon to crossbow, preserves identity/layout."
+    },
+    {
+      "id": "guard",
+      "source": "generated_images/exec-c0672320-dcea-48e4-88d7-ecb2fb05cb58.png",
+      "prompt": "units/guard/prompt-used.txt"
+    },
+    {
+      "id": "archer",
+      "source": "generated_images/exec-0bc83b35-039a-4d68-ba08-27428fd8403d.png",
+      "prompt": "units/archer/prompt-used.txt"
+    },
+    {
+      "id": "terrain",
+      "source": "generated_images/exec-76981a7e-b96a-4dc2-b519-c61e57b81dba.png",
+      "prompt": "terrain/prompt-used.txt"
+    },
+    {
+      "id": "gate",
+      "source": "generated_images/exec-188b31ef-d117-43bd-9e53-60811932f667.png",
+      "prompt": "gate/prompt-used.txt"
+    }
+  ],
+  "python": ".venv/bin/python",
+  "processing": "Local generate2dsprite processor (preserve, shared scale, feet, largest component, strict QC); Neia uses one shared fit scale .78 for smaller regenerated framing. finish_assets.py slices terrain, resizes transparent gate, assembles QA only.",
+  "scope": "20 directional standing frames, 6 terrain textures, one gate prop. Walking/attack/body animation deferred; runtime tween must not be represented as generated animation.",
+  "generationCalls": 9
+}

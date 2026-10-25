@@ -1,0 +1,57 @@
+{
+  "rise": {
+    "size": [
+      512,
+      512
+    ],
+    "alpha_range": [
+      0,
+      255
+    ],
+    "opaque_magenta_pixels": 0
+  },
+  "garan": {
+    "size": [
+      512,
+      512
+    ],
+    "alpha_range": [
+      0,
+      255
+    ],
+    "opaque_magenta_pixels": 0
+  },
+  "neia": {
+    "size": [
+      512,
+      512
+    ],
+    "alpha_range": [
+      0,
+      255
+    ],
+    "opaque_magenta_pixels": 0
+  },
+  "guard": {
+    "size": [
+      512,
+      512
+    ],
+    "alpha_range": [
+      0,
+      255
+    ],
+    "opaque_magenta_pixels": 0
+  },
+  "archer": {
+    "size": [
+      512,
+      512
+    ],
+    "alpha_range": [
+      0,
+      255
+    ],
+    "opaque_magenta_pixels": 0
+  }
+}
