@@ -1,0 +1,99 @@
+{
+  "id": "bgm-prologue",
+  "master": {
+    "file": "masters/bgm-prologue.wav",
+    "sha256": "5d660563ac119934642db23a3003de612e43727be7697f92b640c700d9458365",
+    "bytes": 10584036,
+    "sampleRate": 44100,
+    "channels": 2,
+    "frames": 2645998,
+    "seconds": 59.99995464852608,
+    "samplePeak": 0.319976806640625,
+    "rmsDbFS": -24.36240836436628,
+    "dc": [
+      -1.9110984571086223e-08,
+      2.4635523864719475e-08
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      2645998
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        0.001678466796875,
+        -0.00048828125
+      ],
+      "rmsDifferenceDb": [
+        1.0037778180764831,
+        0.9034354400517912
+      ],
+      "slopeError": [
+        0.001922607421875,
+        0.001190185546875
+      ],
+      "numericalFlags": []
+    }
+  },
+  "delivery": {
+    "file": "delivery/bgm-prologue.wav",
+    "sha256": "105dd4fe2de4a792eb2aff82fea6f01d1550b92f0bc7a78436acf46cc1957d26",
+    "bytes": 5292040,
+    "sampleRate": 22050,
+    "channels": 2,
+    "frames": 1322999,
+    "seconds": 59.99995464852608,
+    "samplePeak": 0.318817138671875,
+    "rmsDbFS": -24.362441295108272,
+    "dc": [
+      -2.8072502381426592e-08,
+      2.1567616866584934e-08
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      1322999
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        0.001129150390625,
+        -0.000701904296875
+      ],
+      "rmsDifferenceDb": [
+        0.9987944397333088,
+        0.8998516316313271
+      ],
+      "slopeError": [
+        0.0015869140625,
+        0.0023193359375
+      ],
+      "numericalFlags": []
+    }
+  },
+  "listeningVerified": false,
+  "compositionRevision": "independent-r2",
+  "title": "二年前の薄明",
+  "usage": "src/view/prologue.ts: 過去の放流と改竄された地図の回想。",
+  "bpm": 72,
+  "bars": 24,
+  "meter": [
+    3,
+    4
+  ],
+  "mode": "minor",
+  "rationale": "src/view/prologue.ts: 過去の放流と改竄された地図の回想。",
+  "direction": "回想の3/4。チェロ独奏の長い息と問いかけるオーボエ。短調から一瞬長調を望み、静かに戻る。",
+  "source": "scores/bgm-prologue.json",
+  "midi": "scores/bgm-prologue.mid",
+  "renderCycles": 3,
+  "extractStartFrame": 2658655,
+  "rotationSeconds": 0.2870068027210884,
+  "motif": {
+    "id": "river-record",
+    "version": 3,
+    "quotation": "single three-note cameo in C only; title/ending link restricted to opening two bars"
+  },
+  "scoreFingerprint": "9737f60f6f5aa33f3fc4cf5a40836adce60e831168c9c7cc2ce9f935fd3d9ba9"
+}

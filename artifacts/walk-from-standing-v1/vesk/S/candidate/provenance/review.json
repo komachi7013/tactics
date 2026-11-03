@@ -1,0 +1,66 @@
+{
+  "status": "比較候補：Seedance2.5・S立ち絵＋リセS動画・6条件",
+  "inputImageCount": 1,
+  "inputDirection": "S",
+  "referenceVideoCount": 1,
+  "motionRequirementCount": 6,
+  "equipmentInstructionsIncluded": false,
+  "frames": 19,
+  "cycleMs": 800,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "all19FramesViewedOnLight": true,
+  "all19FramesViewedOnDark": true,
+  "facingRetainedInAllSelectedFrames": true,
+  "fullBodyAndBothSolesInsideSelectedFrames": true,
+  "nativeCanvasEdgePixels": 0,
+  "contactReview": {
+    "videoSha256": "37c8ee08fb24c420e58a86a28e78901894dcbccea0c754dbecf05e15d6cafe1b",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "L"
+      },
+      {
+        "frame": 48,
+        "foot": "R"
+      },
+      {
+        "frame": 58,
+        "foot": "L"
+      }
+    ],
+    "reviewNote": "Vesk S source/full feet sheets reviewed: near image-right L38/58 and far R48 support, both legs pass alternately with low lifting. Navy coat, silver hair, stance and full soles retained. Existing Lise S driver, own S standing and same original six conditions. Estimated support phases, not motion capture."
+  },
+  "selectedOutputSeamReviewed": true,
+  "automaticGaitLoopStatus": "automatic selection requires visual review",
+  "issues": [
+    "リセS動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の通過、服と足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+  ],
+  "gameApplied": false,
+  "userApproved": false,
+  "referenceMotionReady": true,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "generationCountThisRequest": 1,
+  "quotedCreditsThisRequest": 28,
+  "headCentroidRangePx": [
+    0.40025004574468426,
+    0.6530885598482712
+  ],
+  "footRegionSeamOverMedianStep": 0.390369559596321,
+  "headTopRangePx": [
+    96,
+    97
+  ],
+  "groundRangePx": [
+    281,
+    283
+  ],
+  "drivingCast": "lise",
+  "drivingDirection": "S",
+  "appearanceSource": "own standing image",
+  "motionSource": "same-direction reference video"
+}

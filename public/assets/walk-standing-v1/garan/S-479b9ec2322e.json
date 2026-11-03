@@ -1,0 +1,187 @@
+{
+  "frames": 19,
+  "cycleMs": 800,
+  "fpsRational": [
+    95,
+    4
+  ],
+  "durationsMs": [
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42
+  ],
+  "sourceIndices": [
+    16,
+    19,
+    21,
+    24,
+    26,
+    29,
+    31,
+    34,
+    36,
+    39,
+    41,
+    44,
+    46,
+    49,
+    51,
+    54,
+    56,
+    59,
+    61
+  ],
+  "sourceVideoSha256": "f5d3e3e4dbb4c13bb2d155d929cdcfedf6446f9043c8d0b4ea5b9be96625c626",
+  "sheetSha256": "bae8394ee79d8202a5efedc4a4e1c65a8dd384ff4c891640ffed64481fd8d977",
+  "fixedScale": 0.2702702702702703,
+  "fixedOffset": [
+    -2,
+    62
+  ],
+  "frameGeometry": [
+    {
+      "headTop": 102,
+      "ground": 272,
+      "width": 88
+    },
+    {
+      "headTop": 101,
+      "ground": 272,
+      "width": 90
+    },
+    {
+      "headTop": 101,
+      "ground": 275,
+      "width": 92
+    },
+    {
+      "headTop": 100,
+      "ground": 280,
+      "width": 95
+    },
+    {
+      "headTop": 101,
+      "ground": 281,
+      "width": 97
+    },
+    {
+      "headTop": 101,
+      "ground": 277,
+      "width": 100
+    },
+    {
+      "headTop": 101,
+      "ground": 278,
+      "width": 100
+    },
+    {
+      "headTop": 102,
+      "ground": 283,
+      "width": 101
+    },
+    {
+      "headTop": 103,
+      "ground": 286,
+      "width": 100
+    },
+    {
+      "headTop": 102,
+      "ground": 284,
+      "width": 98
+    },
+    {
+      "headTop": 101,
+      "ground": 282,
+      "width": 95
+    },
+    {
+      "headTop": 101,
+      "ground": 281,
+      "width": 93
+    },
+    {
+      "headTop": 101,
+      "ground": 280,
+      "width": 92
+    },
+    {
+      "headTop": 101,
+      "ground": 278,
+      "width": 91
+    },
+    {
+      "headTop": 101,
+      "ground": 278,
+      "width": 92
+    },
+    {
+      "headTop": 102,
+      "ground": 276,
+      "width": 89
+    },
+    {
+      "headTop": 103,
+      "ground": 276,
+      "width": 85
+    },
+    {
+      "headTop": 103,
+      "ground": 273,
+      "width": 86
+    },
+    {
+      "headTop": 102,
+      "ground": 272,
+      "width": 88
+    }
+  ],
+  "contactReview": {
+    "videoSha256": "f5d3e3e4dbb4c13bb2d155d929cdcfedf6446f9043c8d0b4ea5b9be96625c626",
+    "visualReviewed": true,
+    "contacts": [
+      {
+        "frame": 16,
+        "foot": "R"
+      },
+      {
+        "frame": 40,
+        "foot": "L"
+      },
+      {
+        "frame": 64,
+        "foot": "R"
+      }
+    ],
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "reviewNote": "Feet inspected every2 frames through94. S front three-quarter: anatomical R is image-left, L image-right. R supports around16/64 with L recovering; L supports around40 with R raised behind. Approximate support phases +/-2 source frames, not motion capture. Native two-step period48 frames=2seconds; retime to800ms. Facing/full body retained, no reference video."
+  },
+  "status": "visually-reviewed-S-six-requirements-comparison-candidate; automatic period gate not passed",
+  "matteReportStatus": "pass",
+  "matteOverrideReason": null,
+  "gameApplied": true,
+  "art_source": "Higgsfield / Seedance 2.5 image-to-video",
+  "userApproved": false,
+  "nativeFullCycleSeconds": 2.0,
+  "retimeSpeedMultiplier": 2.5,
+  "automaticGaitLoopStatus": "no gait period in configured12..38 source-frame search; native manually observed period48 source frames; not auto-certified",
+  "sheetColumns": 5,
+  "candidateDirectory": "artifacts/walk-from-standing-v1/garan/S/candidate",
+  "sourceSheetSha256": "99cda64f6eb1a0a1bce735f1d75cdf7e4f95771dccf3063399eff62b7d5beb90"
+}

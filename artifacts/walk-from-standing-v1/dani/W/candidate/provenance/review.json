@@ -1,0 +1,66 @@
+{
+  "status": "比較候補：Seedance2.5・W立ち絵＋ガランW動画・6条件",
+  "inputImageCount": 1,
+  "inputDirection": "W",
+  "referenceVideoCount": 1,
+  "motionRequirementCount": 6,
+  "equipmentInstructionsIncluded": false,
+  "frames": 19,
+  "cycleMs": 800,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "all19FramesViewedOnLight": true,
+  "all19FramesViewedOnDark": true,
+  "facingRetainedInAllSelectedFrames": true,
+  "fullBodyAndBothSolesInsideSelectedFrames": true,
+  "nativeCanvasEdgePixels": 0,
+  "contactReview": {
+    "videoSha256": "03dc02f97ea5d2dde1232053ae0a4b786674d4c6e713d548c23427e6a690fa2a",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "L"
+      },
+      {
+        "frame": 48,
+        "foot": "R"
+      },
+      {
+        "frame": 58,
+        "foot": "L"
+      }
+    ],
+    "reviewNote": "W full and feet sheets reviewed: near image-left L support38/58 and far R48, both legs take turns swinging forward; heel/toe passage visible. Full body and both soles remain inside source, facing and bag retained. Garan W driver. Estimated support phases, not motion capture."
+  },
+  "selectedOutputSeamReviewed": true,
+  "automaticGaitLoopStatus": "automatic selection requires visual review",
+  "issues": [
+    "ガランW動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の振り出し、背面の向き、全身と両足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+  ],
+  "gameApplied": false,
+  "userApproved": false,
+  "referenceMotionReady": true,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "generationCountThisRequest": 1,
+  "quotedCreditsThisRequest": 28,
+  "headCentroidRangePx": [
+    3.1673651490718697,
+    1.5248791588610402
+  ],
+  "footRegionSeamOverMedianStep": 0.25217411738902246,
+  "headTopRangePx": [
+    95,
+    98
+  ],
+  "groundRangePx": [
+    273,
+    283
+  ],
+  "drivingCast": "garan",
+  "drivingDirection": "W",
+  "appearanceSource": "own standing image",
+  "motionSource": "same-direction reference video"
+}

@@ -1,0 +1,1499 @@
+{
+  "lise/S": {
+    "cast": "lise",
+    "direction": "S",
+    "image": "artifacts/standing-cast-repairs-local-v1/lise/S/equipment-corrected.png",
+    "master": "artifacts/standing-cast-repairs-local-v1/lise/S/pair-aligned-hires.png",
+    "jaw": 156,
+    "label": "E基準・5点位置補正・本を拡大・右腰の装備補正",
+    "status": "equipment correction candidate; head and lower body retained",
+    "approvedHairPixelsUnchanged": false,
+    "originalFeetPixelsUnchanged": false,
+    "higgsfieldAdditionalCredits": 0,
+    "sourceGeneration": "exec-cb3bc800-cb03-4858-801c-f5d70e77f65f.png",
+    "sha256": "d7ec1eea03bed70626ca219aa0b563dbfb2532e55e9ce0d8ff25361066588a08",
+    "landmarks": {
+      "head": 100,
+      "jaw": 156,
+      "waist": 192,
+      "knee": 235,
+      "ground": 280
+    },
+    "userEquipmentDecision": "book held in anatomical left hand",
+    "protectedExceptLeftHandBookRegion": false,
+    "referenceDirection": "E",
+    "geometryRemap": {
+      "reference": "E",
+      "source": [
+        0,
+        100,
+        153,
+        187,
+        238,
+        280,
+        300
+      ],
+      "target": [
+        0,
+        100,
+        156,
+        192,
+        235,
+        280,
+        300
+      ]
+    },
+    "headDesignPreserved": true,
+    "bookEditProtectedOutsideHandRegion": true,
+    "equipmentCorrection": {
+      "sourceImage": "artifacts/standing-cast-repairs-local-v1/lise/S/pair-aligned-display.png",
+      "generatedImage": "artifacts/standing-cast-repairs-local-v1/lise/S/equipment-generated.png",
+      "anatomicalPlacement": "right hip",
+      "headPixelsPreservedThroughRow": 157,
+      "lowerBodyPixelsPreservedFromRow": 234,
+      "protectedAccessoryAndLimbPixelsUnchanged": true,
+      "fivePointCoordinates": {
+        "head": 100,
+        "jaw": 156,
+        "waist": 192,
+        "knee": 235,
+        "ground": 280
+      },
+      "higgsfieldAdditionalCredits": 0,
+      "status": "protected accessory edit; visual review candidate"
+    }
+  },
+  "sena/N": {
+    "cast": "sena",
+    "direction": "N",
+    "image": "artifacts/standing-cast-repairs-local-v1/sena/N/display-v2.png",
+    "master": "artifacts/standing-cast-repairs-local-v1/sena/N/generated-v1.png",
+    "jaw": 152,
+    "landmarks": {
+      "head": 100,
+      "waist": 188,
+      "knee": 237,
+      "ground": 280
+    },
+    "landmarkMethod": "manual visual estimate; waist and knee estimated +/-3px",
+    "label": "頭部縮小案",
+    "status": "candidate for user visual review; not approved for animation",
+    "art_source": "host_image",
+    "route": "built-in image_gen + local palette/framing",
+    "colourAdjustments": {
+      "hair": {
+        "hueShift": 0.00392156862745098,
+        "saturationRatio": 1.1025641025641026,
+        "pixels": 2583
+      },
+      "leather": {
+        "hueShift": 0.0,
+        "saturationRatio": 0.9631578947368421,
+        "pixels": 2266
+      },
+      "teal": {
+        "hueShift": -0.025,
+        "saturationRatio": 1.1666666666666667,
+        "pixels": 257
+      }
+    },
+    "eastUpperBodyPixelsUnchanged": false,
+    "higgsfieldAdditionalCredits": 0,
+    "sha256": "c0eb91f952ba594cd4347dc0f1e37fabb957edae0bc9aa0dbef2fad366e8dcc4"
+  },
+  "sena/E": {
+    "cast": "sena",
+    "direction": "E",
+    "image": "artifacts/standing-cast-repairs-local-v1/sena/E/head-width-matched.png",
+    "master": "artifacts/standing-cast-repairs-local-v1/sena/E/generated-Smatched-v3.png",
+    "jaw": 155,
+    "landmarks": {
+      "head": 100,
+      "jaw": 155,
+      "waist": 192,
+      "knee": 239,
+      "ground": 280
+    },
+    "landmarkMethod": "manual visual estimate; knees partly hidden, +/-3px",
+    "label": "S基準・5点位置補正・頭幅補正",
+    "status": "manual landmark alignment candidate; visual approval pending",
+    "art_source": "host_image",
+    "route": "built-in image_gen + local palette/framing",
+    "colourAdjustments": {},
+    "eastUpperBodyPixelsUnchanged": false,
+    "higgsfieldAdditionalCredits": 0,
+    "sha256": "1b86632995063d0ac83e3a9654e482771a7c8963da17a30068ae31281c968593",
+    "referenceDirection": "S",
+    "geometryRemap": {
+      "source": [
+        0,
+        100,
+        153,
+        188,
+        239,
+        280,
+        300
+      ],
+      "target": [
+        0,
+        100,
+        155,
+        192,
+        239,
+        280,
+        300
+      ]
+    },
+    "bodyPixelsUnchangedBelow": null,
+    "originalFeetPixelsUnchanged": false,
+    "geometryRemapChanged": true,
+    "headWidthCorrection": {
+      "referenceCast": "iva",
+      "referenceDirection": "E",
+      "sourceImage": "artifacts/standing-cast-repairs-local-v1/sena/E/five-point-aligned.png",
+      "referenceImage": "artifacts/standing-cast-review-v1/original/iva/E/standing.png",
+      "beforeWidthPx": 65,
+      "targetWidthPx": 67,
+      "afterWidthPx": 67,
+      "horizontalScale": 1.0307692307692307,
+      "verticalCoordinatesUnchanged": true,
+      "unchangedPixelsFromRow": 169,
+      "alphaTopBefore": 100,
+      "alphaTopAfter": 100,
+      "alphaGroundBefore": 280,
+      "alphaGroundAfter": 280,
+      "method": "horizontal head-only resampling with a smooth neck transition",
+      "measurement": "hair/head alpha silhouette through jaw row at alpha >128"
+    }
+  },
+  "sena/W": {
+    "cast": "sena",
+    "direction": "W",
+    "image": "artifacts/standing-cast-repairs-local-v1/sena/W/equipment-corrected.png",
+    "master": "artifacts/standing-cast-repairs-local-v1/sena/W/generated-v1.png",
+    "jaw": 152,
+    "landmarks": {
+      "head": 100,
+      "jaw": 152,
+      "waist": 188,
+      "knee": 237,
+      "ground": 280
+    },
+    "landmarkMethod": "manual visual estimate; knees partly hidden, +/-3px",
+    "label": "N基準・5点位置補正・右腰の装備補正",
+    "status": "equipment correction candidate; head and lower body retained",
+    "art_source": "host_image",
+    "route": "built-in image_gen + local palette/framing",
+    "colourAdjustments": {
+      "hair": {
+        "hueShift": 0.00392156862745098,
+        "saturationRatio": 1.162162162162162,
+        "pixels": 2042
+      },
+      "leather": {
+        "hueShift": 0.0,
+        "saturationRatio": 0.9481865284974094,
+        "pixels": 2489
+      },
+      "teal": {
+        "hueShift": -0.0117647058823529,
+        "saturationRatio": 1.2,
+        "pixels": 239
+      }
+    },
+    "eastUpperBodyPixelsUnchanged": false,
+    "higgsfieldAdditionalCredits": 0,
+    "sha256": "b4c56ea7e1dbcfb4916a265df07d0c362924b88d83d74429b7c2463369e89dd9",
+    "referenceDirection": "N",
+    "geometryRemap": {
+      "source": [
+        0,
+        100,
+        151,
+        183,
+        239,
+        280,
+        300
+      ],
+      "target": [
+        0,
+        100,
+        152,
+        188,
+        237,
+        280,
+        300
+      ]
+    },
+    "bodyPixelsUnchangedBelow": null,
+    "originalFeetPixelsUnchanged": false,
+    "geometryRemapChanged": true,
+    "equipmentCorrection": {
+      "sourceImage": "artifacts/standing-cast-repairs-local-v1/sena/W/five-point-aligned.png",
+      "generatedImage": "artifacts/standing-cast-repairs-local-v1/sena/W/equipment-generated.png",
+      "anatomicalPlacement": "right hip",
+      "headPixelsPreservedThroughRow": 183,
+      "lowerBodyPixelsPreservedFromRow": 233,
+      "protectedAccessoryAndLimbPixelsUnchanged": true,
+      "fivePointCoordinates": {
+        "head": 100,
+        "jaw": 152,
+        "waist": 188,
+        "knee": 237,
+        "ground": 280
+      },
+      "higgsfieldAdditionalCredits": 0,
+      "status": "protected accessory edit; visual review candidate"
+    }
+  },
+  "sena/S": {
+    "cast": "sena",
+    "direction": "S",
+    "image": "artifacts/standing-cast-repairs-local-v1/sena/S/head-width-matched.png",
+    "master": "artifacts/standing-cast-repairs-local-v1/sena/S/generated-detail-v2.png",
+    "jaw": 155,
+    "landmarks": {
+      "head": 100,
+      "waist": 192,
+      "knee": 239,
+      "ground": 280
+    },
+    "landmarkMethod": "manual visual estimate; waist and knee estimated +/-3px",
+    "label": "デザイン修正案・頭幅補正",
+    "status": "candidate for user visual review; not approved for animation",
+    "art_source": "host_image",
+    "route": "built-in image_gen + local palette/framing",
+    "colourAdjustments": {
+      "hair": {
+        "hueShift": 0.011764705882352941,
+        "saturationRatio": 1.162162162162162,
+        "pixels": 2511
+      },
+      "leather": {
+        "hueShift": 0.00392156862745098,
+        "saturationRatio": 1.0223463687150838,
+        "pixels": 1691
+      },
+      "teal": {
+        "hueShift": -0.025,
+        "saturationRatio": 1.2,
+        "pixels": 200
+      }
+    },
+    "eastUpperBodyPixelsUnchanged": false,
+    "higgsfieldAdditionalCredits": 0,
+    "sha256": "f0bdb5df9fbd070e919da3fe0b8ab682922328649cf507ce588c0ba83b0fb76b",
+    "headWidthCorrection": {
+      "referenceCast": "iva",
+      "referenceDirection": "E",
+      "sourceImage": "artifacts/standing-cast-repairs-local-v1/sena/S/display-v2.png",
+      "referenceImage": "artifacts/standing-cast-review-v1/original/iva/E/standing.png",
+      "beforeWidthPx": 77,
+      "targetWidthPx": 67,
+      "afterWidthPx": 67,
+      "horizontalScale": 0.8701298701298701,
+      "verticalCoordinatesUnchanged": true,
+      "unchangedPixelsFromRow": 169,
+      "alphaTopBefore": 100,
+      "alphaTopAfter": 100,
+      "alphaGroundBefore": 280,
+      "alphaGroundAfter": 280,
+      "method": "horizontal head-only resampling with a smooth neck transition",
+      "measurement": "hair/head alpha silhouette through jaw row at alpha >128"
+    }
+  },
+  "neia/S": {
+    "cast": "neia",
+    "direction": "S",
+    "image": "artifacts/standing-cast-repairs-local-v1/neia/S/five-point-aligned.png",
+    "master": "artifacts/standing-cast-repairs-local-v1/neia/S/head-generated-v1.png",
+    "jaw": 167,
+    "landmarks": {
+      "head": 100,
+      "jaw": 167,
+      "waist": 199,
+      "knee": 235,
+      "ground": 280
+    },
+    "landmarkMethod": "manual visual estimate; knees partly hidden, +/-3px",
+    "label": "E基準・5点位置補正",
+    "status": "manual landmark alignment candidate; visual approval pending",
+    "higgsfieldAdditionalCredits": 0,
+    "bodyPixelsUnchangedBelow": null,
+    "sha256": "bb0b708befd826bea08afe3e56791c0e89fb7b0d2ffca5e505abb99d1a30dc2a",
+    "referenceDirection": "E",
+    "geometryRemap": {
+      "source": [
+        0,
+        100,
+        164,
+        200,
+        235,
+        280,
+        300
+      ],
+      "target": [
+        0,
+        100,
+        167,
+        199,
+        235,
+        280,
+        300
+      ]
+    },
+    "originalFeetPixelsUnchanged": false,
+    "eastUpperBodyPixelsUnchanged": false,
+    "geometryRemapChanged": true
+  },
+  "lise/W": {
+    "cast": "lise",
+    "direction": "W",
+    "image": "artifacts/standing-cast-repairs-local-v1/lise/W/pair-aligned-display.png",
+    "master": "artifacts/standing-cast-repairs-local-v1/lise/W/pair-aligned-hires.png",
+    "jaw": 160,
+    "landmarks": {
+      "head": 100,
+      "jaw": 160,
+      "waist": 195,
+      "knee": 241,
+      "ground": 280
+    },
+    "label": "N基準・5点位置補正",
+    "referenceDirection": "N",
+    "geometryRemap": {
+      "reference": "N",
+      "source": [
+        0,
+        100,
+        161,
+        195,
+        240,
+        280,
+        300
+      ],
+      "target": [
+        0,
+        100,
+        160,
+        195,
+        241,
+        280,
+        300
+      ]
+    },
+    "status": "pair-aligned review candidate; anatomy positions manually estimated",
+    "approvedHairPixelsUnchanged": false,
+    "headDesignPreserved": true,
+    "higgsfieldAdditionalCredits": 0,
+    "sha256": "b97e7c7f3c9e670be1d58f5dfc55d48038b98a2135ae9bfc5f3c4434a19b7568",
+    "originalFeetPixelsUnchanged": false,
+    "protectedExceptLeftHandBookRegion": false,
+    "bookEditProtectedOutsideHandRegion": false
+  },
+  "garan/N": {
+    "cast": "garan",
+    "direction": "N",
+    "image": "artifacts/standing-cast-repairs-local-v1/garan/N/five-point-aligned.png",
+    "jaw": 149,
+    "landmarks": {
+      "head": 100,
+      "jaw": 149,
+      "waist": 189,
+      "knee": 239,
+      "ground": 280
+    },
+    "label": "W基準・5点位置補正",
+    "referenceDirection": "W",
+    "geometryRemap": {
+      "source": [
+        0,
+        100,
+        149,
+        191,
+        240,
+        280,
+        300
+      ],
+      "target": [
+        0,
+        100,
+        149,
+        189,
+        239,
+        280,
+        300
+      ]
+    },
+    "status": "manual landmark alignment candidate; visual approval pending",
+    "landmarkMethod": "manual visual estimate; knees partly hidden, +/-3px",
+    "bodyPixelsUnchangedBelow": null,
+    "originalFeetPixelsUnchanged": false,
+    "eastUpperBodyPixelsUnchanged": false,
+    "higgsfieldAdditionalCredits": 0,
+    "sha256": "ad3272022e03a3a2d29ebdf9588323cdc6ef917a3a261738654364350de9e71a",
+    "geometryRemapChanged": true
+  },
+  "garan/S": {
+    "cast": "garan",
+    "direction": "S",
+    "image": "artifacts/standing-cast-repairs-local-v1/garan/S/equipment-corrected.png",
+    "jaw": 155,
+    "landmarks": {
+      "head": 100,
+      "jaw": 155,
+      "waist": 190,
+      "knee": 239,
+      "ground": 280
+    },
+    "label": "E基準・5点位置補正・右腰の装備補正",
+    "referenceDirection": "E",
+    "geometryRemap": {
+      "source": [
+        0,
+        100,
+        156,
+        192,
+        239,
+        280,
+        300
+      ],
+      "target": [
+        0,
+        100,
+        155,
+        190,
+        239,
+        280,
+        300
+      ]
+    },
+    "status": "equipment correction candidate; head and lower body retained",
+    "landmarkMethod": "manual visual estimate; knees partly hidden, +/-3px",
+    "bodyPixelsUnchangedBelow": null,
+    "originalFeetPixelsUnchanged": false,
+    "eastUpperBodyPixelsUnchanged": false,
+    "higgsfieldAdditionalCredits": 0,
+    "sha256": "41d981a97615f7188f4dae5b604652e08332c37c16cb22b9646acb0b071376a9",
+    "geometryRemapChanged": true,
+    "equipmentCorrection": {
+      "sourceImage": "artifacts/standing-cast-repairs-local-v1/garan/S/five-point-aligned.png",
+      "generatedImage": "artifacts/standing-cast-repairs-local-v1/garan/S/equipment-generated.png",
+      "anatomicalPlacement": "right hip",
+      "headPixelsPreservedThroughRow": 179,
+      "lowerBodyPixelsPreservedFromRow": 244,
+      "protectedAccessoryAndLimbPixelsUnchanged": true,
+      "fivePointCoordinates": {
+        "head": 100,
+        "jaw": 155,
+        "waist": 190,
+        "knee": 239,
+        "ground": 280
+      },
+      "higgsfieldAdditionalCredits": 0,
+      "status": "protected accessory edit; visual review candidate"
+    }
+  },
+  "neia/W": {
+    "cast": "neia",
+    "direction": "W",
+    "image": "artifacts/standing-cast-repairs-local-v1/neia/W/five-point-aligned.png",
+    "jaw": 164,
+    "landmarks": {
+      "head": 100,
+      "jaw": 164,
+      "waist": 195,
+      "knee": 240,
+      "ground": 280
+    },
+    "label": "N基準・5点位置補正",
+    "referenceDirection": "N",
+    "geometryRemap": {
+      "source": [
+        0,
+        100,
+        164,
+        195,
+        239,
+        280,
+        300
+      ],
+      "target": [
+        0,
+        100,
+        164,
+        195,
+        240,
+        280,
+        300
+      ]
+    },
+    "status": "manual landmark alignment candidate; visual approval pending",
+    "landmarkMethod": "manual visual estimate; knees partly hidden, +/-3px",
+    "bodyPixelsUnchangedBelow": null,
+    "originalFeetPixelsUnchanged": false,
+    "eastUpperBodyPixelsUnchanged": false,
+    "higgsfieldAdditionalCredits": 0,
+    "sha256": "04e9cb7d8907133c6380ca5bc94ca1b6eef215070b73954590c0abef327727db",
+    "geometryRemapChanged": true
+  },
+  "iva/N": {
+    "cast": "iva",
+    "direction": "N",
+    "image": "artifacts/standing-cast-repairs-local-v1/iva/N/five-point-aligned.png",
+    "jaw": 157,
+    "landmarks": {
+      "head": 100,
+      "jaw": 157,
+      "waist": 189,
+      "knee": 239,
+      "ground": 280
+    },
+    "label": "W基準・5点位置補正",
+    "referenceDirection": "W",
+    "geometryRemap": {
+      "source": [
+        0,
+        100,
+        158,
+        194,
+        239,
+        280,
+        300
+      ],
+      "target": [
+        0,
+        100,
+        157,
+        189,
+        239,
+        280,
+        300
+      ]
+    },
+    "status": "manual landmark alignment candidate; visual approval pending",
+    "landmarkMethod": "manual visual estimate; knees partly hidden, +/-3px",
+    "bodyPixelsUnchangedBelow": null,
+    "originalFeetPixelsUnchanged": false,
+    "eastUpperBodyPixelsUnchanged": false,
+    "higgsfieldAdditionalCredits": 0,
+    "sha256": "8e35537403cb648fa0b1bac4129ee20a20b593d2bff7c1057eb9dc60f2dddd24",
+    "geometryRemapChanged": true
+  },
+  "iva/S": {
+    "cast": "iva",
+    "direction": "S",
+    "image": "artifacts/standing-cast-repairs-local-v1/iva/S/head-width-matched.png",
+    "jaw": 155,
+    "landmarks": {
+      "head": 100,
+      "jaw": 155,
+      "waist": 194,
+      "knee": 239,
+      "ground": 280
+    },
+    "label": "E基準・5点位置補正・頭幅補正",
+    "referenceDirection": "E",
+    "geometryRemap": {
+      "source": [
+        0,
+        100,
+        155,
+        186,
+        240,
+        280,
+        300
+      ],
+      "target": [
+        0,
+        100,
+        155,
+        194,
+        239,
+        280,
+        300
+      ]
+    },
+    "status": "manual landmark alignment candidate; visual approval pending",
+    "landmarkMethod": "manual visual estimate; knees partly hidden, +/-3px",
+    "bodyPixelsUnchangedBelow": null,
+    "originalFeetPixelsUnchanged": false,
+    "eastUpperBodyPixelsUnchanged": false,
+    "higgsfieldAdditionalCredits": 0,
+    "sha256": "0ff0b257310ebd0c855e0adffe60cf37b2ddc46db19c80d20aa713b19c8737d2",
+    "geometryRemapChanged": true,
+    "headWidthCorrection": {
+      "referenceCast": "iva",
+      "referenceDirection": "E",
+      "sourceImage": "artifacts/standing-cast-repairs-local-v1/iva/S/five-point-aligned.png",
+      "referenceImage": "artifacts/standing-cast-review-v1/original/iva/E/standing.png",
+      "beforeWidthPx": 75,
+      "targetWidthPx": 67,
+      "afterWidthPx": 67,
+      "horizontalScale": 0.8933333333333333,
+      "verticalCoordinatesUnchanged": true,
+      "unchangedPixelsFromRow": 169,
+      "alphaTopBefore": 100,
+      "alphaTopAfter": 100,
+      "alphaGroundBefore": 280,
+      "alphaGroundAfter": 280,
+      "method": "horizontal head-only resampling with a smooth neck transition",
+      "measurement": "hair/head alpha silhouette through jaw row at alpha >128"
+    }
+  },
+  "dani/N": {
+    "cast": "dani",
+    "direction": "N",
+    "image": "artifacts/standing-cast-repairs-local-v1/dani/N/head-size-smaller.png",
+    "jaw": 154,
+    "landmarks": {
+      "head": 100,
+      "jaw": 154,
+      "waist": 198,
+      "knee": 239,
+      "ground": 280
+    },
+    "label": "N/W頭部を縮小・5点位置補正",
+    "referenceDirection": "W",
+    "geometryRemap": {
+      "source": [
+        0,
+        100,
+        160,
+        196,
+        238,
+        280,
+        300
+      ],
+      "target": [
+        0,
+        100,
+        159,
+        198,
+        239,
+        280,
+        300
+      ]
+    },
+    "status": "manual landmark alignment candidate; visual approval pending",
+    "landmarkMethod": "manual visual estimate; knees partly hidden, +/-3px",
+    "bodyPixelsUnchangedBelow": null,
+    "originalFeetPixelsUnchanged": false,
+    "eastUpperBodyPixelsUnchanged": false,
+    "higgsfieldAdditionalCredits": 0,
+    "sha256": "1e3945368b6cb53b9a5fc1dc121d33e1f6c99dcdab16f8dc41cefa6e3c5e1b1b",
+    "geometryRemapChanged": true,
+    "headSizeCorrection": {
+      "sourceImage": "artifacts/standing-cast-repairs-local-v1/dani/N/five-point-aligned.png",
+      "headHeightBeforePx": 59,
+      "headHeightAfterPx": 54,
+      "headWidthBeforePx": 71,
+      "headWidthAfterPx": 67,
+      "bodyPixelsUnchangedFromRow": 178,
+      "neckTransition": [
+        154,
+        178
+      ]
+    }
+  },
+  "dani/S": {
+    "cast": "dani",
+    "direction": "S",
+    "image": "artifacts/standing-cast-repairs-local-v1/dani/S/head-width-matched.png",
+    "jaw": 155,
+    "landmarks": {
+      "head": 100,
+      "jaw": 155,
+      "waist": 192,
+      "knee": 238,
+      "ground": 280
+    },
+    "label": "E基準・5点位置補正・頭幅補正",
+    "referenceDirection": "E",
+    "geometryRemap": {
+      "source": [
+        0,
+        100,
+        154,
+        191,
+        234,
+        280,
+        300
+      ],
+      "target": [
+        0,
+        100,
+        155,
+        192,
+        238,
+        280,
+        300
+      ]
+    },
+    "status": "manual landmark alignment candidate; visual approval pending",
+    "landmarkMethod": "manual visual estimate; knees partly hidden, +/-3px",
+    "bodyPixelsUnchangedBelow": null,
+    "originalFeetPixelsUnchanged": false,
+    "eastUpperBodyPixelsUnchanged": false,
+    "higgsfieldAdditionalCredits": 0,
+    "sha256": "7c79d9dc3f0a458397af6ceac345831b9377f877a92d549932de88a252549bd2",
+    "geometryRemapChanged": true,
+    "headWidthCorrection": {
+      "referenceCast": "dani",
+      "referenceDirection": "E",
+      "sourceImage": "artifacts/standing-cast-repairs-local-v1/dani/S/five-point-aligned.png",
+      "referenceImage": "artifacts/standing-cast-repairs-local-v1/dani/E/arm-straight-corrected.png",
+      "beforeWidthPx": 76,
+      "targetWidthPx": 67,
+      "afterWidthPx": 67,
+      "horizontalScale": 0.884078947368421,
+      "verticalCoordinatesUnchanged": true,
+      "unchangedPixelsFromRow": 169,
+      "alphaTopBefore": 100,
+      "alphaTopAfter": 100,
+      "alphaGroundBefore": 280,
+      "alphaGroundAfter": 280,
+      "method": "horizontal head-only resampling with a smooth neck transition",
+      "measurement": "hair/head alpha silhouette through jaw row at alpha >128"
+    }
+  },
+  "guard/W": {
+    "cast": "guard",
+    "direction": "W",
+    "image": "artifacts/standing-cast-repairs-local-v1/guard/W/five-point-aligned.png",
+    "jaw": 155,
+    "landmarks": {
+      "head": 100,
+      "jaw": 155,
+      "waist": 189,
+      "knee": 231,
+      "ground": 280
+    },
+    "label": "N基準・5点位置補正",
+    "referenceDirection": "N",
+    "geometryRemap": {
+      "source": [
+        0,
+        100,
+        152,
+        189,
+        232,
+        280,
+        300
+      ],
+      "target": [
+        0,
+        100,
+        155,
+        189,
+        231,
+        280,
+        300
+      ]
+    },
+    "status": "manual landmark alignment candidate; visual approval pending",
+    "landmarkMethod": "manual visual estimate; knees partly hidden, +/-3px",
+    "bodyPixelsUnchangedBelow": null,
+    "originalFeetPixelsUnchanged": false,
+    "eastUpperBodyPixelsUnchanged": false,
+    "higgsfieldAdditionalCredits": 0,
+    "sha256": "4add5d6c994e1bab964ee29d709725d6a3a8792f85feba74c78ba491d2e646db",
+    "geometryRemapChanged": true
+  },
+  "guard/S": {
+    "cast": "guard",
+    "direction": "S",
+    "image": "artifacts/standing-cast-repairs-local-v1/guard/S/five-point-aligned.png",
+    "jaw": 158,
+    "landmarks": {
+      "head": 100,
+      "jaw": 158,
+      "waist": 192,
+      "knee": 239,
+      "ground": 280
+    },
+    "label": "E基準・5点位置補正",
+    "referenceDirection": "E",
+    "geometryRemap": {
+      "source": [
+        0,
+        100,
+        160,
+        192,
+        235,
+        280,
+        300
+      ],
+      "target": [
+        0,
+        100,
+        158,
+        192,
+        239,
+        280,
+        300
+      ]
+    },
+    "status": "manual landmark alignment candidate; visual approval pending",
+    "landmarkMethod": "manual visual estimate; knees partly hidden, +/-3px",
+    "bodyPixelsUnchangedBelow": null,
+    "originalFeetPixelsUnchanged": false,
+    "eastUpperBodyPixelsUnchanged": false,
+    "higgsfieldAdditionalCredits": 0,
+    "sha256": "933bf4840031344013aa9f81c643f0e9f0252f69bf9658dbb717cadba060d34b",
+    "geometryRemapChanged": true
+  },
+  "archer/W": {
+    "cast": "archer",
+    "direction": "W",
+    "image": "artifacts/standing-cast-repairs-local-v1/archer/W/five-point-aligned.png",
+    "jaw": 160,
+    "landmarks": {
+      "head": 100,
+      "jaw": 160,
+      "waist": 190,
+      "knee": 239,
+      "ground": 280
+    },
+    "label": "5点位置確認・変更なし",
+    "referenceDirection": "N",
+    "geometryRemap": {
+      "source": [
+        0,
+        100,
+        160,
+        190,
+        239,
+        280,
+        300
+      ],
+      "target": [
+        0,
+        100,
+        160,
+        190,
+        239,
+        280,
+        300
+      ]
+    },
+    "geometryRemapChanged": false,
+    "status": "manual landmark alignment candidate; visual approval pending",
+    "landmarkMethod": "manual visual estimate; knees partly hidden, +/-3px",
+    "bodyPixelsUnchangedBelow": null,
+    "originalFeetPixelsUnchanged": false,
+    "eastUpperBodyPixelsUnchanged": false,
+    "higgsfieldAdditionalCredits": 0,
+    "sha256": "deb909c446c2290975614ab469da4f906ca3db24a01c81de8609e89a4ac7041d"
+  },
+  "archer/S": {
+    "cast": "archer",
+    "direction": "S",
+    "image": "artifacts/standing-cast-repairs-local-v1/archer/S/equipment-corrected.png",
+    "jaw": 158,
+    "landmarks": {
+      "head": 100,
+      "jaw": 158,
+      "waist": 196,
+      "knee": 239,
+      "ground": 280
+    },
+    "label": "E基準・5点位置補正・右腰の装備補正",
+    "referenceDirection": "E",
+    "geometryRemap": {
+      "source": [
+        0,
+        100,
+        156,
+        193,
+        241,
+        280,
+        300
+      ],
+      "target": [
+        0,
+        100,
+        158,
+        196,
+        239,
+        280,
+        300
+      ]
+    },
+    "geometryRemapChanged": true,
+    "status": "equipment correction candidate; head and lower body retained",
+    "landmarkMethod": "manual visual estimate; knees partly hidden, +/-3px",
+    "bodyPixelsUnchangedBelow": null,
+    "originalFeetPixelsUnchanged": false,
+    "eastUpperBodyPixelsUnchanged": false,
+    "higgsfieldAdditionalCredits": 0,
+    "sha256": "6064b5976bee1c13ba4f4522d6f800bb487490a991b40d0aba3bf4ef484f931a",
+    "equipmentCorrection": {
+      "sourceImage": "artifacts/standing-cast-repairs-local-v1/archer/S/five-point-aligned.png",
+      "generatedImage": "artifacts/standing-cast-repairs-local-v1/archer/S/equipment-generated.png",
+      "anatomicalPlacement": "right hip",
+      "headPixelsPreservedThroughRow": 189,
+      "lowerBodyPixelsPreservedFromRow": 232,
+      "protectedAccessoryAndLimbPixelsUnchanged": true,
+      "fivePointCoordinates": {
+        "head": 100,
+        "jaw": 158,
+        "waist": 196,
+        "knee": 239,
+        "ground": 280
+      },
+      "higgsfieldAdditionalCredits": 0,
+      "status": "protected accessory edit; visual review candidate"
+    }
+  },
+  "vesk/W": {
+    "cast": "vesk",
+    "direction": "W",
+    "image": "artifacts/standing-cast-repairs-local-v1/vesk/W/arm-straight-corrected.png",
+    "jaw": 145,
+    "landmarks": {
+      "head": 100,
+      "jaw": 145,
+      "waist": 182,
+      "knee": 244,
+      "ground": 280
+    },
+    "label": "N基準・5点位置補正・腕を下ろす補正",
+    "referenceDirection": "N",
+    "geometryRemap": {
+      "source": [
+        0,
+        100,
+        144,
+        183,
+        246,
+        280,
+        300
+      ],
+      "target": [
+        0,
+        100,
+        145,
+        182,
+        244,
+        280,
+        300
+      ]
+    },
+    "geometryRemapChanged": true,
+    "status": "manual landmark alignment candidate; visual approval pending",
+    "landmarkMethod": "manual visual estimate; knees partly hidden, +/-3px",
+    "bodyPixelsUnchangedBelow": null,
+    "originalFeetPixelsUnchanged": false,
+    "eastUpperBodyPixelsUnchanged": false,
+    "higgsfieldAdditionalCredits": 0,
+    "sha256": "8532c56a2e062aaf47e5302b0e75bfe08ec1bc9677187ae279365146215a437b",
+    "armCorrection": {
+      "sourceImage": "artifacts/standing-cast-repairs-local-v1/vesk/W/five-point-aligned.png",
+      "anatomicalArm": "left",
+      "pose": "straight downward beside torso",
+      "headPixelsPreservedThroughRow": 150,
+      "lowerBodyPixelsPreservedFromRow": 231,
+      "outsideArmMaskPixelsUnchanged": true,
+      "higgsfieldAdditionalCredits": 0
+    }
+  },
+  "vesk/S": {
+    "cast": "vesk",
+    "direction": "S",
+    "image": "artifacts/standing-cast-repairs-local-v1/vesk/S/five-point-aligned.png",
+    "jaw": 146,
+    "landmarks": {
+      "head": 100,
+      "jaw": 146,
+      "waist": 182,
+      "knee": 245,
+      "ground": 280
+    },
+    "label": "E基準・5点位置補正",
+    "referenceDirection": "E",
+    "geometryRemap": {
+      "source": [
+        0,
+        100,
+        146,
+        184,
+        247,
+        280,
+        300
+      ],
+      "target": [
+        0,
+        100,
+        146,
+        182,
+        245,
+        280,
+        300
+      ]
+    },
+    "geometryRemapChanged": true,
+    "status": "manual landmark alignment candidate; visual approval pending",
+    "landmarkMethod": "manual visual estimate; knees partly hidden, +/-3px",
+    "bodyPixelsUnchangedBelow": null,
+    "originalFeetPixelsUnchanged": false,
+    "eastUpperBodyPixelsUnchanged": false,
+    "higgsfieldAdditionalCredits": 0,
+    "sha256": "e493492b62df0a0aa0f995a203d0bd87a61fa21c7c4c488caa0e9107b3729434"
+  },
+  "toma/W": {
+    "cast": "toma",
+    "direction": "W",
+    "image": "artifacts/standing-cast-repairs-local-v1/toma/W/material-colour-matched.png",
+    "jaw": 156,
+    "landmarks": {
+      "head": 100,
+      "jaw": 156,
+      "waist": 193,
+      "knee": 242,
+      "ground": 280
+    },
+    "label": "N基準・5点補正＋色調整案",
+    "referenceDirection": "N",
+    "geometryRemap": {
+      "source": [
+        0,
+        100,
+        152,
+        186,
+        249,
+        280,
+        300
+      ],
+      "target": [
+        0,
+        100,
+        156,
+        193,
+        242,
+        280,
+        300
+      ]
+    },
+    "geometryRemapChanged": true,
+    "status": "geometry aligned; material-colour correction candidate; equipment differences remain",
+    "landmarkMethod": "manual visual estimate; knees partly hidden, +/-3px",
+    "bodyPixelsUnchangedBelow": null,
+    "originalFeetPixelsUnchanged": false,
+    "eastUpperBodyPixelsUnchanged": false,
+    "higgsfieldAdditionalCredits": 0,
+    "sha256": "d1fec1b6bde763951f93433b79a7652dad1ccd9766490927db132270504d7acd",
+    "colourAdjustments": {
+      "hair": {
+        "pixels": 2334,
+        "hueShift": -0.01568627450980392,
+        "saturationRatio": 0.7894736842105263,
+        "valueRatio": 0.8760330578512397
+      },
+      "coat": {
+        "pixels": 1915,
+        "hueShift": 0.03137254901960784,
+        "saturationRatio": 1.0833333333333333,
+        "valueRatio": 0.8285714285714286
+      },
+      "pants": {
+        "pixels": 726,
+        "hueShift": -0.011764705882352941,
+        "saturationRatio": 0.7175141242937854,
+        "valueRatio": 0.5296442687747036
+      },
+      "boots": {
+        "pixels": 1131,
+        "hueShift": -0.00784313725490196,
+        "saturationRatio": 0.9642857142857143,
+        "valueRatio": 0.8266129032258065
+      }
+    },
+    "colourReference": "N",
+    "alphaPixelsUnchangedByColourAdjustment": true
+  },
+  "toma/S": {
+    "cast": "toma",
+    "direction": "S",
+    "image": "artifacts/standing-cast-repairs-local-v1/toma/S/equipment-corrected.png",
+    "jaw": 155,
+    "landmarks": {
+      "head": 100,
+      "jaw": 155,
+      "waist": 194,
+      "knee": 239,
+      "ground": 280
+    },
+    "label": "E基準・5点位置補正・右腰の装備補正",
+    "referenceDirection": "E",
+    "geometryRemap": {
+      "source": [
+        0,
+        100,
+        156,
+        197,
+        240,
+        280,
+        300
+      ],
+      "target": [
+        0,
+        100,
+        155,
+        194,
+        239,
+        280,
+        300
+      ]
+    },
+    "geometryRemapChanged": true,
+    "status": "equipment correction candidate; head and lower body retained",
+    "landmarkMethod": "manual visual estimate; knees partly hidden, +/-3px",
+    "bodyPixelsUnchangedBelow": null,
+    "originalFeetPixelsUnchanged": false,
+    "eastUpperBodyPixelsUnchanged": false,
+    "higgsfieldAdditionalCredits": 0,
+    "sha256": "eba3bd7f87c80ffd7962fd49fdd9bed87e5b912d82587ef4604ac971a221644d",
+    "equipmentCorrection": {
+      "sourceImage": "artifacts/standing-cast-repairs-local-v1/toma/S/five-point-aligned.png",
+      "generatedImage": "artifacts/standing-cast-repairs-local-v1/toma/S/equipment-generated.png",
+      "anatomicalPlacement": "right hip",
+      "headPixelsPreservedThroughRow": 155,
+      "lowerBodyPixelsPreservedFromRow": 234,
+      "protectedAccessoryAndLimbPixelsUnchanged": true,
+      "fivePointCoordinates": {
+        "head": 100,
+        "jaw": 155,
+        "waist": 194,
+        "knee": 239,
+        "ground": 280
+      },
+      "higgsfieldAdditionalCredits": 0,
+      "status": "protected accessory edit; visual review candidate"
+    }
+  },
+  "worker/W": {
+    "cast": "worker",
+    "direction": "W",
+    "image": "artifacts/standing-cast-repairs-local-v1/worker/W/five-point-aligned.png",
+    "jaw": 150,
+    "landmarks": {
+      "head": 100,
+      "jaw": 150,
+      "waist": 188,
+      "knee": 239,
+      "ground": 280
+    },
+    "label": "N基準・5点位置補正",
+    "referenceDirection": "N",
+    "geometryRemap": {
+      "source": [
+        0,
+        100,
+        149,
+        187,
+        247,
+        280,
+        300
+      ],
+      "target": [
+        0,
+        100,
+        150,
+        188,
+        239,
+        280,
+        300
+      ]
+    },
+    "geometryRemapChanged": true,
+    "status": "manual landmark alignment candidate; visual approval pending",
+    "landmarkMethod": "manual visual estimate; knees partly hidden, +/-3px",
+    "bodyPixelsUnchangedBelow": null,
+    "originalFeetPixelsUnchanged": false,
+    "eastUpperBodyPixelsUnchanged": false,
+    "higgsfieldAdditionalCredits": 0,
+    "sha256": "a073d4ff5c5be2bec7d48fc27b54b602710adc2feb41811c94ef28474bb5df05"
+  },
+  "worker/E": {
+    "cast": "worker",
+    "direction": "E",
+    "image": "artifacts/standing-cast-repairs-local-v1/worker/E/five-point-aligned.png",
+    "jaw": 152,
+    "landmarks": {
+      "head": 100,
+      "jaw": 152,
+      "waist": 190,
+      "knee": 240,
+      "ground": 280
+    },
+    "label": "S基準・5点位置補正",
+    "referenceDirection": "S",
+    "geometryRemap": {
+      "source": [
+        0,
+        100,
+        149,
+        184,
+        239,
+        280,
+        300
+      ],
+      "target": [
+        0,
+        100,
+        152,
+        190,
+        240,
+        280,
+        300
+      ]
+    },
+    "geometryRemapChanged": true,
+    "status": "manual landmark alignment candidate; visual approval pending",
+    "landmarkMethod": "manual visual estimate; knees partly hidden, +/-3px",
+    "bodyPixelsUnchangedBelow": null,
+    "originalFeetPixelsUnchanged": false,
+    "eastUpperBodyPixelsUnchanged": false,
+    "higgsfieldAdditionalCredits": 0,
+    "sha256": "1225b908aebf65b7b0fdb293d7ff0de586dd71c7708d93b81fd7896690190806"
+  },
+  "delegation/W": {
+    "cast": "delegation",
+    "direction": "W",
+    "image": "artifacts/standing-cast-repairs-local-v1/delegation/W/material-colour-matched.png",
+    "jaw": 145,
+    "landmarks": {
+      "head": 100,
+      "jaw": 145,
+      "waist": 181,
+      "knee": 248,
+      "ground": 280
+    },
+    "label": "N基準・5点補正＋色調整案",
+    "referenceDirection": "N",
+    "geometryRemap": {
+      "source": [
+        0,
+        100,
+        146,
+        183,
+        249,
+        280,
+        300
+      ],
+      "target": [
+        0,
+        100,
+        145,
+        181,
+        248,
+        280,
+        300
+      ]
+    },
+    "geometryRemapChanged": true,
+    "status": "geometry aligned; material-colour correction candidate; equipment differences remain",
+    "landmarkMethod": "manual visual estimate; knees partly hidden, +/-3px",
+    "bodyPixelsUnchangedBelow": null,
+    "originalFeetPixelsUnchanged": false,
+    "eastUpperBodyPixelsUnchanged": false,
+    "higgsfieldAdditionalCredits": 0,
+    "sha256": "9b84406986867336c370de7f532b31ed7055a706cd0b14a3a3ad4d0c5b2a0630",
+    "colourAdjustments": {
+      "hair": {
+        "pixels": 1953,
+        "hueShift": -0.0196078431372549,
+        "saturationRatio": 0.7129629629629629,
+        "valueRatio": 0.8695652173913044
+      },
+      "coat": {
+        "pixels": 3354,
+        "hueShift": -0.01568627450980392,
+        "saturationRatio": 0.8669950738916257,
+        "valueRatio": 0.6772486772486772
+      },
+      "scarf": {
+        "pixels": 697,
+        "hueShift": -0.027450980392156862,
+        "saturationRatio": 0.8333333333333334,
+        "valueRatio": 0.6766467065868264
+      },
+      "pants": {
+        "pixels": 634,
+        "hueShift": -0.047058823529411764,
+        "saturationRatio": 0.8383838383838383,
+        "valueRatio": 0.6101694915254237
+      },
+      "boots": {
+        "pixels": 1112,
+        "hueShift": -0.027450980392156862,
+        "saturationRatio": 0.663316582914573,
+        "valueRatio": 0.5546875
+      }
+    },
+    "colourReference": "N",
+    "alphaPixelsUnchangedByColourAdjustment": true
+  },
+  "delegation/S": {
+    "cast": "delegation",
+    "direction": "S",
+    "image": "artifacts/standing-cast-repairs-local-v1/delegation/S/five-point-aligned.png",
+    "jaw": 147,
+    "landmarks": {
+      "head": 100,
+      "jaw": 147,
+      "waist": 181,
+      "knee": 248,
+      "ground": 280
+    },
+    "label": "E基準・5点位置補正",
+    "referenceDirection": "E",
+    "geometryRemap": {
+      "source": [
+        0,
+        100,
+        147,
+        182,
+        250,
+        280,
+        300
+      ],
+      "target": [
+        0,
+        100,
+        147,
+        181,
+        248,
+        280,
+        300
+      ]
+    },
+    "geometryRemapChanged": true,
+    "status": "manual landmark alignment candidate; visual approval pending",
+    "landmarkMethod": "manual visual estimate; knees partly hidden, +/-3px",
+    "bodyPixelsUnchangedBelow": null,
+    "originalFeetPixelsUnchanged": false,
+    "eastUpperBodyPixelsUnchanged": false,
+    "higgsfieldAdditionalCredits": 0,
+    "sha256": "0e90fa9d7b10b4434f82bc7438ed06e1aa61b24e1063d6e65b3cc4b1bb466bf4"
+  },
+  "dani/W": {
+    "cast": "dani",
+    "direction": "W",
+    "image": "artifacts/standing-cast-repairs-local-v1/dani/W/head-size-smaller.png",
+    "label": "N/W頭部を縮小・5点位置補正",
+    "jaw": 154,
+    "landmarks": {
+      "head": 100,
+      "jaw": 154,
+      "waist": 198,
+      "knee": 239,
+      "ground": 280
+    },
+    "headSizeCorrection": {
+      "sourceImage": "artifacts/standing-cast-review-v1/original/dani/W/standing.png",
+      "headHeightBeforePx": 59,
+      "headHeightAfterPx": 54,
+      "headWidthBeforePx": 73,
+      "headWidthAfterPx": 67,
+      "bodyPixelsUnchangedFromRow": 178,
+      "neckTransition": [
+        154,
+        178
+      ]
+    },
+    "higgsfieldAdditionalCredits": 0,
+    "sha256": "2a2b99164a0fbb040b006f54e5c45736d6457898d1d5a32078d87580fb946885"
+  },
+  "toma/E": {
+    "cast": "toma",
+    "direction": "E",
+    "image": "artifacts/standing-cast-repairs-local-v1/toma/E/equipment-corrected.png",
+    "label": "基準画像・右腰の装備補正",
+    "equipmentCorrection": {
+      "sourceImage": "artifacts/standing-cast-review-v1/original/toma/E/standing.png",
+      "generatedImage": "artifacts/standing-cast-repairs-local-v1/toma/E/equipment-generated.png",
+      "anatomicalPlacement": "right hip",
+      "headPixelsPreservedThroughRow": 155,
+      "lowerBodyPixelsPreservedFromRow": 234,
+      "protectedAccessoryAndLimbPixelsUnchanged": true,
+      "fivePointCoordinates": {
+        "head": 100,
+        "jaw": 155,
+        "waist": 194,
+        "knee": 239,
+        "ground": 280
+      },
+      "higgsfieldAdditionalCredits": 0,
+      "status": "protected accessory edit; visual review candidate"
+    },
+    "status": "equipment correction candidate; head and lower body retained",
+    "sha256": "6c6fce7b54751598b0fd1e8386b44f2505badf1b4fce19fca3d19a25eaea711f",
+    "jaw": 155,
+    "landmarks": {
+      "head": 100,
+      "jaw": 155,
+      "waist": 194,
+      "knee": 239,
+      "ground": 280
+    }
+  },
+  "iva/W": {
+    "cast": "iva",
+    "direction": "W",
+    "image": "artifacts/standing-cast-repairs-local-v1/iva/W/equipment-corrected.png",
+    "label": "基準画像・右腰の装備補正",
+    "equipmentCorrection": {
+      "sourceImage": "artifacts/standing-cast-review-v1/original/iva/W/standing.png",
+      "generatedImage": "artifacts/standing-cast-repairs-local-v1/iva/W/equipment-generated.png",
+      "anatomicalPlacement": "right hip",
+      "headPixelsPreservedThroughRow": 182,
+      "lowerBodyPixelsPreservedFromRow": 232,
+      "protectedAccessoryAndLimbPixelsUnchanged": true,
+      "fivePointCoordinates": {
+        "head": 100,
+        "jaw": 157,
+        "waist": 189,
+        "knee": 239,
+        "ground": 280
+      },
+      "higgsfieldAdditionalCredits": 0,
+      "status": "protected accessory edit; visual review candidate"
+    },
+    "status": "equipment correction candidate; head and lower body retained",
+    "sha256": "882bffcdc6fdb747a6e393041085794192c7db9cd5069d6baf51a907733578ef",
+    "jaw": 157,
+    "landmarks": {
+      "head": 100,
+      "jaw": 157,
+      "waist": 189,
+      "knee": 239,
+      "ground": 280
+    }
+  },
+  "dani/E": {
+    "cast": "dani",
+    "direction": "E",
+    "image": "artifacts/standing-cast-repairs-local-v1/dani/E/arm-straight-corrected.png",
+    "jaw": 155,
+    "landmarks": {
+      "head": 100,
+      "jaw": 155,
+      "waist": 192,
+      "knee": 238,
+      "ground": 280
+    },
+    "label": "基準画像・腕を下ろす補正",
+    "armCorrection": {
+      "sourceImage": "artifacts/standing-cast-review-v1/original/dani/E/standing.png",
+      "anatomicalArm": "right",
+      "pose": "straight downward beside torso",
+      "headPixelsPreservedThroughRow": 159,
+      "lowerBodyPixelsPreservedFromRow": 230,
+      "outsideArmMaskPixelsUnchanged": true,
+      "higgsfieldAdditionalCredits": 0
+    },
+    "sha256": "9db91dbd76b98480847b83e5a35d351bef6992011ed5ddd89063165113cd323f"
+  }
+}

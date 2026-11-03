@@ -1,0 +1,1176 @@
+{
+  "deliveryFiles": [
+    {
+      "id": "bgm-title",
+      "file": "delivery/bgm-title.wav",
+      "sha256": "f5e9eb0a1132284149badede0b960e92c2dfefd703d3a37abb9607fca35ff212",
+      "bytes": 5292044,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 1323000,
+      "seconds": 60.0,
+      "samplePeak": 0.319915771484375,
+      "rmsDbFS": -22.57697987926507,
+      "dc": [
+        -1.3655635865457295e-08,
+        1.2940560338718821e-08
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        1323000
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          -0.003021240234375,
+          -0.004913330078125
+        ],
+        "rmsDifferenceDb": [
+          -0.24221202302607536,
+          0.5418029550465334
+        ],
+        "slopeError": [
+          0.001983642578125,
+          0.00341796875
+        ],
+        "numericalFlags": []
+      },
+      "http": {
+        "url": "http://localhost:5173/audio/v2/bgm-title.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "bgm-prologue",
+      "file": "delivery/bgm-prologue.wav",
+      "sha256": "105dd4fe2de4a792eb2aff82fea6f01d1550b92f0bc7a78436acf46cc1957d26",
+      "bytes": 5292040,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 1322999,
+      "seconds": 59.99995464852608,
+      "samplePeak": 0.318817138671875,
+      "rmsDbFS": -24.362441295108272,
+      "dc": [
+        -2.8072502381426592e-08,
+        2.1567616866584934e-08
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        1322999
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          0.001129150390625,
+          -0.000701904296875
+        ],
+        "rmsDifferenceDb": [
+          0.9987944397333088,
+          0.8998516316313271
+        ],
+        "slopeError": [
+          0.0015869140625,
+          0.0023193359375
+        ],
+        "numericalFlags": []
+      },
+      "http": {
+        "url": "http://localhost:5173/audio/v2/bgm-prologue.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "bgm-briefing",
+      "file": "delivery/bgm-briefing.wav",
+      "sha256": "a1839e719f64b55dc1b25c49ca92b325ff56a005006d72aec4dd4730030b4cdd",
+      "bytes": 7938044,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 1984500,
+      "seconds": 90.0,
+      "samplePeak": 0.31854248046875,
+      "rmsDbFS": -23.819949832388385,
+      "dc": [
+        7.91350249590577e-08,
+        1.2456154336734694e-09
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        1984500
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          0.000518798828125,
+          0.00030517578125
+        ],
+        "rmsDifferenceDb": [
+          -1.280514131926465,
+          -0.9743324289041515
+        ],
+        "slopeError": [
+          0.000244140625,
+          0.001434326171875
+        ],
+        "numericalFlags": []
+      },
+      "http": {
+        "url": "http://localhost:5173/audio/v2/bgm-briefing.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "bgm-b01",
+      "file": "delivery/bgm-b01.wav",
+      "sha256": "65fb601d50f53da9a459dac7156be68cb31914d82f8d6fe968349af5e5e722f6",
+      "bytes": 8759208,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2189791,
+      "seconds": 99.31024943310658,
+      "samplePeak": 0.31939697265625,
+      "rmsDbFS": -23.749568354296912,
+      "dc": [
+        5.936862596133604e-09,
+        3.0799216754589822e-09
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        2189791
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          -0.001678466796875,
+          -0.0013427734375
+        ],
+        "rmsDifferenceDb": [
+          0.7884288520732221,
+          0.7503525088001296
+        ],
+        "slopeError": [
+          0.003173828125,
+          0.00189208984375
+        ],
+        "numericalFlags": []
+      },
+      "http": {
+        "url": "http://localhost:5173/audio/v2/bgm-b01.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "bgm-b02",
+      "file": "delivery/bgm-b02.wav",
+      "sha256": "8b4fa62225610f9ee86e87d0e95d762489d8a1622fa3a3333c5d4ab170381a31",
+      "bytes": 8419128,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2104771,
+      "seconds": 95.4544671201814,
+      "samplePeak": 0.315460205078125,
+      "rmsDbFS": -26.92011947815171,
+      "dc": [
+        8.699543501407042e-10,
+        -8.235567847998665e-09
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        2104771
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          0.001129150390625,
+          0.0013427734375
+        ],
+        "rmsDifferenceDb": [
+          0.8066045239986728,
+          0.5722406071963246
+        ],
+        "slopeError": [
+          0.00347900390625,
+          0.00506591796875
+        ],
+        "numericalFlags": []
+      },
+      "http": {
+        "url": "http://localhost:5173/audio/v2/bgm-b02.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "bgm-b03",
+      "file": "delivery/bgm-b03.wav",
+      "sha256": "6963626c5b5a8add7a3ada872c45c7e83063725b95e42f0307636b02146c1b97",
+      "bytes": 8316040,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2078999,
+      "seconds": 94.28566893424036,
+      "samplePeak": 0.318023681640625,
+      "rmsDbFS": -26.22609402022812,
+      "dc": [
+        1.6778070502619288e-08,
+        -2.2693698160148226e-08
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        2078999
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          -0.0018310546875,
+          -0.003265380859375
+        ],
+        "rmsDifferenceDb": [
+          0.14612138843383163,
+          -0.7415929868118145
+        ],
+        "slopeError": [
+          0.00299072265625,
+          0.002471923828125
+        ],
+        "numericalFlags": []
+      },
+      "http": {
+        "url": "http://localhost:5173/audio/v2/bgm-b03.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "bgm-b04",
+      "file": "delivery/bgm-b04.wav",
+      "sha256": "14c8ceb96a25b43b0d46ef1d3aae2da26a60a369da59ddef07238e8f381c99e3",
+      "bytes": 8820052,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2205002,
+      "seconds": 100.00009070294784,
+      "samplePeak": 0.32000732421875,
+      "rmsDbFS": -25.580044539160163,
+      "dc": [
+        3.108499696088711e-08,
+        1.622066626810316e-08
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        2205002
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          -0.00103759765625,
+          0.000335693359375
+        ],
+        "rmsDifferenceDb": [
+          1.3166330020353234,
+          1.2659949280450757
+        ],
+        "slopeError": [
+          0.001708984375,
+          0.001434326171875
+        ],
+        "numericalFlags": []
+      },
+      "http": {
+        "url": "http://localhost:5173/audio/v2/bgm-b04.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "bgm-b05",
+      "file": "delivery/bgm-b05.wav",
+      "sha256": "8938b5d5cc1dc24630665d7f04a076d961a020e66e45b6d96fc7f681b37ad188",
+      "bytes": 8436572,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2109132,
+      "seconds": 95.65224489795918,
+      "samplePeak": 0.3179931640625,
+      "rmsDbFS": -25.259266187258195,
+      "dc": [
+        -1.0779598291204629e-08,
+        -2.6478744795844927e-09
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        2109132
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          0.0040283203125,
+          0.003173828125
+        ],
+        "rmsDifferenceDb": [
+          -0.11311687085570021,
+          -0.22947480040536608
+        ],
+        "slopeError": [
+          0.003753662109375,
+          0.002532958984375
+        ],
+        "numericalFlags": []
+      },
+      "http": {
+        "url": "http://localhost:5173/audio/v2/bgm-b05.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "bgm-b06",
+      "file": "delivery/bgm-b06.wav",
+      "sha256": "02907925e4cffcd28161d7ad5e84bd8f43dddc725d9dd99d1a9d1d487ed79dcb",
+      "bytes": 8930292,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2232562,
+      "seconds": 101.24997732426304,
+      "samplePeak": 0.319244384765625,
+      "rmsDbFS": -25.339805232487464,
+      "dc": [
+        1.3806001314297207e-08,
+        -2.720192338163509e-09
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        2232562
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          -0.0020751953125,
+          -0.000701904296875
+        ],
+        "rmsDifferenceDb": [
+          0.9288216719494573,
+          0.8494610943142287
+        ],
+        "slopeError": [
+          0.0054931640625,
+          0.00701904296875
+        ],
+        "numericalFlags": []
+      },
+      "http": {
+        "url": "http://localhost:5173/audio/v2/bgm-b06.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "bgm-b07",
+      "file": "delivery/bgm-b07.wav",
+      "sha256": "7cf01c3dfe58af8715c13b481c84ce473c961ff471474149b7617542fa9001c6",
+      "bytes": 8548652,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2137152,
+      "seconds": 96.92299319727891,
+      "samplePeak": 0.32012939453125,
+      "rmsDbFS": -21.91459784135539,
+      "dc": [
+        -4.5280466824247876e-08,
+        2.23760616567633e-08
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        2137152
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          -0.000579833984375,
+          0.000213623046875
+        ],
+        "rmsDifferenceDb": [
+          -1.565965015616254,
+          -1.867240431673058
+        ],
+        "slopeError": [
+          0.004150390625,
+          0.00390625
+        ],
+        "numericalFlags": []
+      },
+      "http": {
+        "url": "http://localhost:5173/audio/v2/bgm-b07.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "bgm-b08",
+      "file": "delivery/bgm-b08.wav",
+      "sha256": "78056786bf264745f52645773ea23eea4cbef2a7ea5697f77802ee34b7b73040",
+      "bytes": 8820036,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2204998,
+      "seconds": 99.99990929705216,
+      "samplePeak": 0.319580078125,
+      "rmsDbFS": -23.885650000581723,
+      "dc": [
+        8.13802821476482e-09,
+        3.1527939240194324e-08
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        2204998
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          -0.0025634765625,
+          -0.00250244140625
+        ],
+        "rmsDifferenceDb": [
+          0.3688400363334557,
+          -0.0511778532068924
+        ],
+        "slopeError": [
+          0.008453369140625,
+          0.007659912109375
+        ],
+        "numericalFlags": []
+      },
+      "http": {
+        "url": "http://localhost:5173/audio/v2/bgm-b08.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "bgm-b09",
+      "file": "delivery/bgm-b09.wav",
+      "sha256": "faece9dfa906eaa57c07952b2b86f1fb063f8c76e6b2c9c4b8b5c0298cfde248",
+      "bytes": 8876948,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2219226,
+      "seconds": 100.64517006802721,
+      "samplePeak": 0.31976318359375,
+      "rmsDbFS": -25.071182129607084,
+      "dc": [
+        -2.614150880335081e-08,
+        2.8052960525426434e-09
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        2219226
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          -0.00177001953125,
+          -0.001129150390625
+        ],
+        "rmsDifferenceDb": [
+          -0.5182639734871753,
+          0.4477364660546215
+        ],
+        "slopeError": [
+          0.002838134765625,
+          0.002960205078125
+        ],
+        "numericalFlags": []
+      },
+      "http": {
+        "url": "http://localhost:5173/audio/v2/bgm-b09.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "bgm-b10",
+      "file": "delivery/bgm-b10.wav",
+      "sha256": "99544381b27accdd63fc21a6ea76dfd3f5fad8689fb3864a78981f4c0d7edd3c",
+      "bytes": 8716268,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2179056,
+      "seconds": 98.82340136054422,
+      "samplePeak": 0.3194580078125,
+      "rmsDbFS": -25.83852553869268,
+      "dc": [
+        -2.1357554207246167e-08,
+        1.4817240886076355e-08
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        2179056
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          6.103515625e-05,
+          -0.000640869140625
+        ],
+        "rmsDifferenceDb": [
+          0.24706805631755063,
+          0.5004356417730491
+        ],
+        "slopeError": [
+          0.001861572265625,
+          0.005035400390625
+        ],
+        "numericalFlags": []
+      },
+      "http": {
+        "url": "http://localhost:5173/audio/v2/bgm-b10.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "bgm-b11",
+      "file": "delivery/bgm-b11.wav",
+      "sha256": "4c7a6f3abd89b62d9d3c220c4dd8bea63122622835c26bfddf18151a78808a96",
+      "bytes": 8659672,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2164907,
+      "seconds": 98.18172335600907,
+      "samplePeak": 0.31884765625,
+      "rmsDbFS": -23.829425318643004,
+      "dc": [
+        -4.214848886984521e-09,
+        9.501030601429992e-09
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        2164907
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          0.002227783203125,
+          0.000579833984375
+        ],
+        "rmsDifferenceDb": [
+          2.6860433149601617,
+          1.69008556226637
+        ],
+        "slopeError": [
+          0.004608154296875,
+          0.004364013671875
+        ],
+        "numericalFlags": []
+      },
+      "http": {
+        "url": "http://localhost:5173/audio/v2/bgm-b11.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "bgm-b12",
+      "file": "delivery/bgm-b12.wav",
+      "sha256": "5dee1356399c5b669d513ab8c4de10f328501a1e47df8cc800b3bea1eaba313c",
+      "bytes": 9153764,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2288430,
+      "seconds": 103.78367346938775,
+      "samplePeak": 0.32012939453125,
+      "rmsDbFS": -25.79981408723413,
+      "dc": [
+        1.261680744618035e-07,
+        1.4775840450658312e-08
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        2288430
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          0.00128173828125,
+          0.003173828125
+        ],
+        "rmsDifferenceDb": [
+          1.5872385571962582,
+          1.901791475471371
+        ],
+        "slopeError": [
+          0.005279541015625,
+          0.0068359375
+        ],
+        "numericalFlags": []
+      },
+      "http": {
+        "url": "http://localhost:5173/audio/v2/bgm-b12.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "bgm-ending",
+      "file": "delivery/bgm-ending.wav",
+      "sha256": "fc7a0c7eed3622d324c72a8c10931f9d3a411bfc4ffcf7e70b441e9cce04f2b8",
+      "bytes": 6350444,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 1587600,
+      "seconds": 72.0,
+      "samplePeak": 0.31915283203125,
+      "rmsDbFS": -23.294086279880133,
+      "dc": [
+        -1.0956802425831444e-08,
+        4.651835415879315e-09
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        1587600
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          -0.0040283203125,
+          -0.002105712890625
+        ],
+        "rmsDifferenceDb": [
+          0.06106704426339354,
+          -0.15124379682934722
+        ],
+        "slopeError": [
+          0.001007080078125,
+          0.000732421875
+        ],
+        "numericalFlags": []
+      },
+      "http": {
+        "url": "http://localhost:5173/audio/v2/bgm-ending.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "se-ui",
+      "file": "delivery/se-ui.wav",
+      "sha256": "68803234f8ca53323eb30c8276681930d493266fafa8f112658004ed634cad30",
+      "bytes": 8424,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2095,
+      "seconds": 0.09501133786848072,
+      "samplePeak": 0.05877685546875,
+      "rmsDbFS": -37.86623763768936,
+      "dc": [
+        -4.3700589200477326e-08,
+        -4.3700589200477326e-08
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false,
+      "http": {
+        "url": "http://localhost:5173/audio/v2/se-ui.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "se-cancel",
+      "file": "delivery/se-cancel.wav",
+      "sha256": "12d4e42ba93bc3c36175d1798aee99ee0b1daec2e3cb7e4110e7dad6bb39e229",
+      "bytes": 10628,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2646,
+      "seconds": 0.12,
+      "samplePeak": 0.058807373046875,
+      "rmsDbFS": -35.865422280311485,
+      "dc": [
+        1.153347623771731e-08,
+        1.153347623771731e-08
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false,
+      "http": {
+        "url": "http://localhost:5173/audio/v2/se-cancel.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "se-invalid",
+      "file": "delivery/se-invalid.wav",
+      "sha256": "7e162025f66930046ecb72d75fd21f06ee01a49d9ea612447093e2ce5d1af6e5",
+      "bytes": 12392,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 3087,
+      "seconds": 0.14,
+      "samplePeak": 0.058441162109375,
+      "rmsDbFS": -38.530005487728765,
+      "dc": [
+        3.163467768059605e-07,
+        3.163467768059605e-07
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false,
+      "http": {
+        "url": "http://localhost:5173/audio/v2/se-invalid.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "se-sword",
+      "file": "delivery/se-sword.wav",
+      "sha256": "266f5736ec8790b11a753356f17dfc9b61452f0ac34b4069401d538f06434579",
+      "bytes": 24740,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 6174,
+      "seconds": 0.28,
+      "samplePeak": 0.438262939453125,
+      "rmsDbFS": -19.905842925451893,
+      "dc": [
+        1.5817338840298024e-07,
+        1.5817338840298024e-07
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false,
+      "http": {
+        "url": "http://localhost:5173/audio/v2/se-sword.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "se-arrow",
+      "file": "delivery/se-arrow.wav",
+      "sha256": "cbb7950539a397e522b29bcf9b31c56557ff07e6d4b7c5868fc75df8e50888d8",
+      "bytes": 26504,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 6615,
+      "seconds": 0.3,
+      "samplePeak": 0.439056396484375,
+      "rmsDbFS": -25.037654832354313,
+      "dc": [
+        1.706954483182162e-07,
+        1.706954483182162e-07
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false,
+      "http": {
+        "url": "http://localhost:5173/audio/v2/se-arrow.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "se-impact",
+      "file": "delivery/se-impact.wav",
+      "sha256": "1b3bcc03c2a8484d3f19e8161922965f3ed95afd5aed7fd9af9b941e2f6d517b",
+      "bytes": 21212,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 5292,
+      "seconds": 0.24,
+      "samplePeak": 0.43890380859375,
+      "rmsDbFS": -22.583099378696193,
+      "dc": [
+        -1.5570192920918366e-07,
+        -1.5570192920918366e-07
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false,
+      "http": {
+        "url": "http://localhost:5173/audio/v2/se-impact.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "se-miss",
+      "file": "delivery/se-miss.wav",
+      "sha256": "2ef1ec36a9c188d9da1b4aea46fd6c2a6cbd350e13d91fdae0812ce2866ca510",
+      "bytes": 19448,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 4851,
+      "seconds": 0.22,
+      "samplePeak": 0.478607177734375,
+      "rmsDbFS": -18.96356263708689,
+      "dc": [
+        -1.2581974077509791e-07,
+        -1.2581974077509791e-07
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false,
+      "http": {
+        "url": "http://localhost:5173/audio/v2/se-miss.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "se-guard",
+      "file": "delivery/se-guard.wav",
+      "sha256": "94c3f0448f0c6764fc09c6139b3f018d3b61a13cf2e82dc0430f94013719673d",
+      "bytes": 26504,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 6615,
+      "seconds": 0.3,
+      "samplePeak": 0.4395751953125,
+      "rmsDbFS": -24.78745985204757,
+      "dc": [
+        0.0,
+        0.0
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false,
+      "http": {
+        "url": "http://localhost:5173/audio/v2/se-guard.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "se-skill",
+      "file": "delivery/se-skill.wav",
+      "sha256": "b24ec3bf2df81015583d5f398c412784c34687eface40a033610511897a9bc42",
+      "bytes": 44144,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 11025,
+      "seconds": 0.5,
+      "samplePeak": 0.479217529296875,
+      "rmsDbFS": -18.3972953168387,
+      "dc": [
+        1.2456154336734695e-07,
+        1.2456154336734695e-07
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false,
+      "http": {
+        "url": "http://localhost:5173/audio/v2/se-skill.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "se-heal",
+      "file": "delivery/se-heal.wav",
+      "sha256": "b11028d811c0cc031da77ff143005fe797e7c6096cc5cff51f9aaf5042117d40",
+      "bytes": 57376,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 14333,
+      "seconds": 0.6500226757369615,
+      "samplePeak": 0.479705810546875,
+      "rmsDbFS": -18.20671246711938,
+      "dc": [
+        3.832529172190051e-08,
+        3.832529172190051e-08
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false,
+      "http": {
+        "url": "http://localhost:5173/audio/v2/se-heal.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "se-chest",
+      "file": "delivery/se-chest.wav",
+      "sha256": "379e919f3ccbf5d89b8a79cc312c775e27463b413849170156bb71309bcdf357",
+      "bytes": 57376,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 14333,
+      "seconds": 0.6500226757369615,
+      "samplePeak": 0.470977783203125,
+      "rmsDbFS": -19.829656113224864,
+      "dc": [
+        -6.17463033297286e-08,
+        -6.17463033297286e-08
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false,
+      "http": {
+        "url": "http://localhost:5173/audio/v2/se-chest.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "se-record",
+      "file": "delivery/se-record.wav",
+      "sha256": "5ea10a21b26b22272a7e097eaf8e0d6d081a988b2ad2b7652eb177fc62dcb92a",
+      "bytes": 37088,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 9261,
+      "seconds": 0.42,
+      "samplePeak": 0.23016357421875,
+      "rmsDbFS": -25.346278044579478,
+      "dc": [
+        -8.238197312655221e-08,
+        -8.238197312655221e-08
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false,
+      "http": {
+        "url": "http://localhost:5173/audio/v2/se-record.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "se-mechanism",
+      "file": "delivery/se-mechanism.wav",
+      "sha256": "7b8bf91f91a4ca25bc06cbc965f2e30c8af692c7e36ac4b6e6f835c5c1188a64",
+      "bytes": 88244,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 22050,
+      "seconds": 1.0,
+      "samplePeak": 0.428009033203125,
+      "rmsDbFS": -22.672323272233985,
+      "dc": [
+        8.857709750566894e-08,
+        8.857709750566894e-08
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false,
+      "http": {
+        "url": "http://localhost:5173/audio/v2/se-mechanism.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "se-exit",
+      "file": "delivery/se-exit.wav",
+      "sha256": "84196278a4b04a1c4bb873b6d770cc3202c0ac139ef2ff04f715e964408f6939",
+      "bytes": 61784,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 15435,
+      "seconds": 0.7,
+      "samplePeak": 0.4794921875,
+      "rmsDbFS": -17.38011711589934,
+      "dc": [
+        7.315519213637836e-08,
+        7.315519213637836e-08
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false,
+      "http": {
+        "url": "http://localhost:5173/audio/v2/se-exit.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "se-cart",
+      "file": "delivery/se-cart.wav",
+      "sha256": "58e72f27030cf1a94c9479420b900272c5ff97c480e206b69b3ecae1efabeeac",
+      "bytes": 79424,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 19845,
+      "seconds": 0.9,
+      "samplePeak": 0.222686767578125,
+      "rmsDbFS": -28.86957312268558,
+      "dc": [
+        8.765441940665155e-08,
+        8.765441940665155e-08
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false,
+      "http": {
+        "url": "http://localhost:5173/audio/v2/se-cart.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "se-turn",
+      "file": "delivery/se-turn.wav",
+      "sha256": "0b2ed036c98a2db4e392d2f0d5cb1577e7fb5ff33a482a1b4465fc9ba7c99c29",
+      "bytes": 15920,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 3969,
+      "seconds": 0.18,
+      "samplePeak": 0.058807373046875,
+      "rmsDbFS": -37.552935654796734,
+      "dc": [
+        -2.0760257227891156e-07,
+        -2.0760257227891156e-07
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false,
+      "http": {
+        "url": "http://localhost:5173/audio/v2/se-turn.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "se-down",
+      "file": "delivery/se-down.wav",
+      "sha256": "81a5d9f740fe01489463ae39c677c134cc81f297ddf92152f61f3c81a5ff4f15",
+      "bytes": 39736,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 9923,
+      "seconds": 0.4500226757369615,
+      "samplePeak": 0.234375,
+      "rmsDbFS": -25.196756838539805,
+      "dc": [
+        -1.1071579285498337e-07,
+        -1.1071579285498337e-07
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false,
+      "http": {
+        "url": "http://localhost:5173/audio/v2/se-down.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "se-victory",
+      "file": "delivery/se-victory.wav",
+      "sha256": "b78dfd0b22d42b30b901a8b383bf610d8688b5e8547ed8c6d60e3ce6c89cca06",
+      "bytes": 312796,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 77175,
+      "seconds": 3.5,
+      "samplePeak": 0.479156494140625,
+      "rmsDbFS": -20.378482165458514,
+      "dc": [
+        3.72102896218011e-07,
+        1.2428473993764173e-06
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false,
+      "http": {
+        "url": "http://localhost:5173/audio/v2/se-victory.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    },
+    {
+      "id": "se-defeat",
+      "file": "delivery/se-defeat.wav",
+      "sha256": "78b4ca3cbb1c6958e0eb777bb81f0a022a7a5f4c51d02f29e90e966b3a0c4f70",
+      "bytes": 312796,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 77175,
+      "seconds": 3.5,
+      "samplePeak": 0.480010986328125,
+      "rmsDbFS": -24.906836925875275,
+      "dc": [
+        -1.6477712736880466e-06,
+        -1.548122038994169e-06
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false,
+      "http": {
+        "url": "http://localhost:5173/audio/v2/se-defeat.wav",
+        "status": 200,
+        "contentType": "audio/wav",
+        "sha256": "matches"
+      }
+    }
+  ],
+  "conservativeMaximumPCMAmplitude": 0.7281021118164062,
+  "boundDbFS": -2.75615418603077,
+  "headroom": 0.35,
+  "maximumMusicVoices": 2,
+  "maximumSEVoices": 3,
+  "truePeak": "not measured",
+  "LUFS": "not measured",
+  "listening": "not performed",
+  "verification": "PCM, loop diagnostics, SHA, optional HTTP; not acoustic quality"
+}

@@ -1,0 +1,517 @@
+{
+  "level": 3,
+  "commands": [
+    {
+      "type": "start",
+      "unitId": "ally-garan"
+    },
+    {
+      "type": "move",
+      "to": {
+        "x": 10,
+        "y": 11
+      }
+    },
+    {
+      "type": "defend"
+    },
+    {
+      "type": "end",
+      "facing": "E"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-neia"
+    },
+    {
+      "type": "move",
+      "to": {
+        "x": 12,
+        "y": 14
+      }
+    },
+    {
+      "type": "attack",
+      "targetId": "enemy-melee-02"
+    },
+    {
+      "type": "end",
+      "facing": "E"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-sena"
+    },
+    {
+      "type": "move",
+      "to": {
+        "x": 11,
+        "y": 11
+      }
+    },
+    {
+      "type": "defend"
+    },
+    {
+      "type": "end",
+      "facing": "E"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-lise"
+    },
+    {
+      "type": "move",
+      "to": {
+        "x": 10,
+        "y": 12
+      }
+    },
+    {
+      "type": "defend"
+    },
+    {
+      "type": "end",
+      "facing": "E"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-garan"
+    },
+    {
+      "type": "move",
+      "to": {
+        "x": 9,
+        "y": 8
+      }
+    },
+    {
+      "type": "end",
+      "facing": "N"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-neia"
+    },
+    {
+      "type": "move",
+      "to": {
+        "x": 11,
+        "y": 14
+      }
+    },
+    {
+      "type": "attack",
+      "targetId": "enemy-melee-02"
+    },
+    {
+      "type": "end",
+      "facing": "N"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-sena"
+    },
+    {
+      "type": "move",
+      "to": {
+        "x": 11,
+        "y": 13
+      }
+    },
+    {
+      "type": "heal",
+      "targetId": "ally-neia"
+    },
+    {
+      "type": "end",
+      "facing": "N"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-lise"
+    },
+    {
+      "type": "move",
+      "to": {
+        "x": 12,
+        "y": 12
+      }
+    },
+    {
+      "type": "collect",
+      "recordId": "V2"
+    },
+    {
+      "type": "end",
+      "facing": "N"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-garan"
+    },
+    {
+      "type": "move",
+      "to": {
+        "x": 8,
+        "y": 5
+      }
+    },
+    {
+      "type": "defend"
+    },
+    {
+      "type": "end",
+      "facing": "W"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-neia"
+    },
+    {
+      "type": "move",
+      "to": {
+        "x": 10,
+        "y": 11
+      }
+    },
+    {
+      "type": "defend"
+    },
+    {
+      "type": "end",
+      "facing": "N"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-sena"
+    },
+    {
+      "type": "move",
+      "to": {
+        "x": 11,
+        "y": 9
+      }
+    },
+    {
+      "type": "defend"
+    },
+    {
+      "type": "end",
+      "facing": "N"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-lise"
+    },
+    {
+      "type": "move",
+      "to": {
+        "x": 15,
+        "y": 11
+      }
+    },
+    {
+      "type": "defend"
+    },
+    {
+      "type": "end",
+      "facing": "W"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-garan"
+    },
+    {
+      "type": "attack",
+      "targetId": "enemy-melee-01"
+    },
+    {
+      "type": "end",
+      "facing": "N"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-neia"
+    },
+    {
+      "type": "end",
+      "facing": "N"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-sena"
+    },
+    {
+      "type": "move",
+      "to": {
+        "x": 8,
+        "y": 8
+      }
+    },
+    {
+      "type": "end",
+      "facing": "N"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-lise"
+    },
+    {
+      "type": "move",
+      "to": {
+        "x": 19,
+        "y": 11
+      }
+    },
+    {
+      "type": "end",
+      "facing": "W"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-garan"
+    },
+    {
+      "type": "attack",
+      "targetId": "enemy-melee-01"
+    },
+    {
+      "type": "end",
+      "facing": "N"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-neia"
+    },
+    {
+      "type": "move",
+      "to": {
+        "x": 9,
+        "y": 8
+      }
+    },
+    {
+      "type": "defend"
+    },
+    {
+      "type": "end",
+      "facing": "N"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-sena"
+    },
+    {
+      "type": "move",
+      "to": {
+        "x": 8,
+        "y": 6
+      }
+    },
+    {
+      "type": "heal",
+      "targetId": "ally-garan"
+    },
+    {
+      "type": "end",
+      "facing": "N"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-lise"
+    },
+    {
+      "type": "defend"
+    },
+    {
+      "type": "end",
+      "facing": "W"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-garan"
+    },
+    {
+      "type": "move",
+      "to": {
+        "x": 8,
+        "y": 3
+      }
+    },
+    {
+      "type": "attack",
+      "targetId": "enemy-bow-01"
+    },
+    {
+      "type": "end",
+      "facing": "N"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-neia"
+    },
+    {
+      "type": "move",
+      "to": {
+        "x": 8,
+        "y": 7
+      }
+    },
+    {
+      "type": "end",
+      "facing": "N"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-sena"
+    },
+    {
+      "type": "move",
+      "to": {
+        "x": 8,
+        "y": 4
+      }
+    },
+    {
+      "type": "defend"
+    },
+    {
+      "type": "end",
+      "facing": "N"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-lise"
+    },
+    {
+      "type": "end",
+      "facing": "W"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-garan"
+    },
+    {
+      "type": "attack",
+      "targetId": "enemy-bow-01"
+    },
+    {
+      "type": "end",
+      "facing": "E"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-neia"
+    },
+    {
+      "type": "move",
+      "to": {
+        "x": 8,
+        "y": 5
+      }
+    },
+    {
+      "type": "defend"
+    },
+    {
+      "type": "end",
+      "facing": "E"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-sena"
+    },
+    {
+      "type": "end",
+      "facing": "E"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-lise"
+    },
+    {
+      "type": "defend"
+    },
+    {
+      "type": "end",
+      "facing": "E"
+    },
+    {
+      "type": "start",
+      "unitId": "ally-garan"
+    },
+    {
+      "type": "move",
+      "to": {
+        "x": 4,
+        "y": 3
+      }
+    },
+    {
+      "type": "collect",
+      "recordId": "V1"
+    }
+  ],
+  "phase": "won",
+  "round": 8,
+  "records": [
+    "V2",
+    "V1"
+  ],
+  "playerHp": [
+    [
+      "ally-lise",
+      22
+    ],
+    [
+      "ally-garan",
+      26
+    ],
+    [
+      "ally-neia",
+      15
+    ],
+    [
+      "ally-sena",
+      15
+    ]
+  ],
+  "provenance": "Faction turns v1: regenerated legal public player commands and unchanged AI, actual initial factory, unchanged terrain/stats/deadlines. Pre-change fixtures preserved under faction-turn-v1/before/tests.",
+  "cooldownAdaptation": {
+    "version": 1,
+    "originalFile": "progression-v2/b07-route.json",
+    "originalCommandIndicesOmitted": [
+      18,
+      52,
+      56,
+      60,
+      82,
+      89,
+      99
+    ],
+    "omissionReasons": [
+      "防御は再使用待ちです（第3ラウンドの本人行動から再使用可）",
+      "防御は再使用待ちです（第5ラウンドの本人行動から再使用可）",
+      "防御は再使用待ちです（第5ラウンドの本人行動から再使用可）",
+      "防御は再使用待ちです（第5ラウンドの本人行動から再使用可）",
+      "防御は再使用待ちです（第7ラウンドの本人行動から再使用可）",
+      "防御は再使用待ちです（第7ラウンドの本人行動から再使用可）",
+      "防御は再使用待ちです（第8ラウンドの本人行動から再使用可）"
+    ],
+    "factory": {
+      "name": "createPartyBattle",
+      "id": "B07",
+      "level": 3,
+      "party": [
+        "ally-lise",
+        "ally-garan",
+        "ally-neia",
+        "ally-sena"
+      ],
+      "equipment": "default",
+      "combat": "legacy-oracle"
+    },
+    "rule": "T1 defense allowed, T2 unavailable, T3 available; no defense or damage granted for omitted commands"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "referenceHead": {
+    "width": 57,
+    "area": 2404
+  },
+  "candidateHeadWidthMedian": 56.0,
+  "headAreaRatio": 0.9854409317803661,
+  "headTopRange": [
+    99,
+    100
+  ],
+  "groundRange": [
+    273,
+    282
+  ],
+  "frames": 19,
+  "cycleMs": 800,
+  "all19FramesViewedOnLight": true,
+  "gameApplied": false,
+  "status": "比較用候補：19コマ目視確認済み・ゲーム未適用",
+  "all19FramesViewedOnDark": true,
+  "shieldAndSheathRetainedInSelectedFrames": true,
+  "facingRetainedInSelectedFrames": true,
+  "manualContactPhase": "R0-L10-R19; estimated +/-2 source frames",
+  "source": "Higgsfield Genjutsu; approved Lise E cycle as driving video"
+}

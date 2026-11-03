@@ -1,0 +1,35 @@
+{
+  "status": "比較候補：N画像のみ・19フレーム／0.8秒",
+  "inputImageCount": 1,
+  "inputDirection": "N",
+  "referenceVideoCount": 0,
+  "EImageOrVideoUsed": false,
+  "equipmentInstructionsIncluded": false,
+  "frames": 19,
+  "cycleMs": 800,
+  "nativeFullCycleSourceFrames": 32,
+  "nativeFullCycleSeconds": 1.3333333333333333,
+  "all19FramesViewedOnLight": true,
+  "facingRetainedInAllSelectedFrames": true,
+  "headCentroidRangePx": [
+    3.74170022324968,
+    1.7947270109643512
+  ],
+  "headTopRangePx": [
+    101,
+    104
+  ],
+  "groundRangePx": [
+    274,
+    284
+  ],
+  "footRegionSeamOverMedianStep": 0.2255593382582998,
+  "automaticSourceLoopCheck": "no window; manual support phases used and selected output reviewed separately",
+  "manualContactUncertaintySourceFrames": 2,
+  "gameApplied": false,
+  "art_source": "Higgsfield / Seedance 2.5 image-to-video",
+  "all19FramesViewedOnDark": true,
+  "selectedOutputSeamReviewed": true,
+  "referenceMotionReady": true,
+  "userApproved": false
+}

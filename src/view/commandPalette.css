@@ -1,0 +1,109 @@
+/* A reserved row after the battlefield, never an overlay over the map. */
+body[data-ui-notebook="true"] .game-shell:has(>.command-palette){height:100dvh;min-height:0;overflow:hidden}
+body[data-ui-notebook="true"] .game-shell:has(>.command-palette)>.battle-layout{flex:1;min-height:0;overflow:hidden}
+.command-palette{
+  --palette-paper:var(--paper,#e8dec1);
+  --palette-ink:var(--ink,#183a3d);
+  --palette-edge:var(--edge,#647b6c);
+  --palette-surface:#193b30;
+  --palette-text:#eee9d4;
+  --palette-muted:#c2cdb9;
+  --palette-accent:var(--gold,#d8bd7d);
+  flex:none;position:relative;display:grid;grid-template-columns:minmax(150px,210px) minmax(0,1fr);
+  align-items:start;gap:8px 16px;min-width:0;max-height:min(42dvh,340px);overflow:auto;
+  overscroll-behavior:contain;scrollbar-width:thin;padding:12px 20px;
+  color:var(--palette-text);background:var(--palette-surface);border-top:1px solid var(--palette-edge);
+}
+.command-palette[hidden]{display:none!important}
+.command-palette:has(>.palette-options){grid-template-rows:auto minmax(0,1fr);overflow:hidden}
+.command-palette .palette-controls{grid-column:2;min-width:0;position:sticky;top:0;z-index:2;background:var(--palette-surface)}
+.command-palette .palette-identity{grid-column:1;grid-row:1/4}
+.command-palette .palette-options{grid-column:2;grid-row:2;min-width:0;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.command-palette:has(>.palette-options)>.palette-identity{grid-row:1/3}
+.command-palette:has(>.palette-options) .palette-controls{position:static}
+.command-palette .notebook-target-options,.command-palette .notebook-extra-commands{grid-column:2;min-width:0}
+body[data-ui-notebook="true"] .command-palette #acting-unit,
+.command-palette .palette-identity{
+  display:block;position:static;min-height:0;margin:0;padding:0;border:0;border-radius:0;background:transparent;color:var(--palette-text);
+}
+.command-palette .palette-identity-content{display:flex;align-items:center;gap:9px;min-width:0}
+.command-palette .palette-identity-copy{min-width:0}
+.command-palette .palette-identity-caption{display:block;font-size:10px;line-height:1.4;color:var(--palette-muted)}
+.command-palette .palette-identity-status{font-size:13px;line-height:1.55;margin:2px 0 0;overflow-wrap:anywhere}
+.command-palette .palette-actor-name{font-weight:700;color:var(--palette-accent)}
+.command-palette .palette-actor-mode{display:block}
+.command-palette .inspection-face{display:block;flex:none;width:40px;height:45px;overflow:hidden;background:var(--palette-paper);border:1px solid var(--palette-edge);border-radius:3px}
+.command-palette .inspection-face img{display:block;width:100%;height:100%;max-width:none;object-fit:contain;object-position:center}
+body[data-ui-notebook="true"] .command-palette #commands{margin:0;padding:0;border:0;min-width:0}
+body[data-ui-notebook="true"] .command-palette .notebook-primary-actions{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+body[data-ui-notebook="true"] .command-palette .notebook-primary-actions .acting-command-label{display:none}
+body[data-ui-notebook="true"] .command-palette .notebook-primary-actions>.context-control{grid-column:auto}
+body[data-ui-notebook="true"] .command-palette .notebook-primary-actions button{min-height:44px}
+body[data-ui-notebook="true"] .command-palette .notebook-target-options{margin:0;max-height:min(22dvh,170px);overflow:auto;overscroll-behavior:contain}
+body[data-ui-notebook="true"] .command-palette .notebook-extra-commands{margin:0;padding:0;border-top:1px solid var(--palette-edge)}
+body[data-ui-notebook="true"] .command-palette .notebook-extra-commands>summary{min-height:36px;padding:6px 0}
+body[data-ui-notebook="true"] .command-palette .notebook-extra-commands>div{max-height:min(22dvh,170px);overflow:auto;overscroll-behavior:contain}
+body[data-ui-notebook="true"] .command-palette .palette-options .notebook-target-options,
+body[data-ui-notebook="true"] .command-palette .palette-options .notebook-extra-commands>div{max-height:none;overflow:visible}
+@media(max-width:1050px){
+  .command-palette{grid-template-columns:minmax(135px,175px) minmax(0,1fr);padding:10px 14px;gap:8px 12px}
+  body[data-ui-notebook="true"] .command-palette .notebook-primary-actions{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:700px){
+  body[data-ui-notebook="true"] .game-shell:has(>.command-palette)>.battle-layout{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto;flex:1}
+  body[data-ui-notebook="true"] .game-shell:has(>.command-palette) .battlefield{height:100%;min-height:0;min-width:0}
+  body[data-ui-notebook="true"] .game-shell:has(>.command-palette) .command-panel{height:auto;max-height:min(20dvh,140px);min-height:0;overflow:auto;padding:8px 12px}
+  .command-palette{grid-template-columns:minmax(0,1fr);padding:10px 12px;max-height:42dvh;gap:8px}
+  .command-palette:has(>.palette-options){grid-template-rows:auto auto minmax(0,1fr)}
+  .command-palette .palette-identity,.command-palette .palette-controls,.command-palette .notebook-target-options,.command-palette .notebook-extra-commands{grid-column:1;grid-row:auto}
+  .command-palette:has(>.palette-options)>.palette-identity{grid-row:1}
+  .command-palette:has(>.palette-options)>.palette-controls{grid-row:2}
+  .command-palette .palette-options{grid-column:1;grid-row:3}
+  .command-palette .palette-identity-content{align-items:center}
+  .command-palette .inspection-face{width:32px;height:36px}
+  .command-palette .palette-identity-caption{font-size:10px}
+  .command-palette .palette-identity-status{margin:0;font-size:12px}
+  .command-palette .palette-actor-mode{display:inline}
+  body[data-ui-notebook="true"] .game-shell:has(>.command-palette) #selection{display:grid;grid-template-columns:minmax(110px,1fr) minmax(120px,1fr);gap:2px 10px;padding:2px 0 4px;margin:0}
+  body[data-ui-notebook="true"] #selection .inspection-label{grid-column:1/-1;font-size:10px;margin:0}
+  body[data-ui-notebook="true"] #selection h2{font-size:15px;line-height:1.3;gap:6px;margin:2px 0;align-self:start}
+  body[data-ui-notebook="true"] #selection h2 small{font-size:10px;line-height:1.3}
+  body[data-ui-notebook="true"] #selection h2 .inspection-face{width:28px;height:32px}
+  body[data-ui-notebook="true"] #selection .stats{font-size:10px;margin:0}
+  body[data-ui-notebook="true"] #selection .notebook-inspection-hp b{font-size:17px}
+  body[data-ui-notebook="true"] #selection .notebook-hp-meter{height:4px;margin:2px 0}
+  body[data-ui-notebook="true"] #selection .inspection-condition{font-size:10px;line-height:1.3;margin:2px 0}
+  body[data-ui-notebook="true"] #selection .inspection-details>summary{min-height:24px;padding:2px 0}
+}
+@media(max-height:500px){.command-palette{max-height:54dvh}}
+
+/* Reference precedes the roster, without covering its scrollable buttons. */
+body[data-ui-notebook="true"] .game-shell:has(>.command-palette) #selection{position:static;background:#203b32;padding-bottom:8px}
+.inspection-condition{font-size:12px;line-height:1.5;margin:3px 0;color:#dce7cf}
+
+/* Stable command slots; explanations never stretch an adjacent button. */
+body[data-ui-notebook="true"] .command-palette .notebook-primary-actions{grid-template-columns:repeat(5,minmax(0,1fr));align-items:start}
+body[data-ui-notebook="true"] .command-palette .notebook-primary-actions button{height:48px;min-height:48px;margin:0;padding:7px 10px;line-height:1.4}
+body[data-ui-notebook="true"] .command-palette .context-control{align-self:start}
+body[data-ui-notebook="true"] .command-palette .context-control button{height:48px}
+body[data-ui-notebook="true"] footer{grid-template-columns:minmax(0,1fr) minmax(150px,240px);min-height:44px;gap:12px;padding:8px 20px}
+body[data-ui-notebook="true"] footer #message{margin:0;min-height:0}
+body[data-ui-notebook="true"] footer #save-status{min-width:0;overflow-wrap:anywhere;font-size:10px}
+.skill-menu,.floor-controls{font-size:12px;line-height:1.6;padding-top:8px}
+.skill-menu p,.floor-controls p{margin:6px 0;color:#eee9d4}
+.skill-menu button,.floor-controls button{min-height:44px;margin:4px 8px 4px 0}
+body[data-ui-notebook="true"] .command-palette .palette-options:has(>.notebook-target-options:not([hidden])){min-height:90px}
+@media(max-width:1050px){body[data-ui-notebook="true"] .command-palette .notebook-primary-actions{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){
+  body[data-ui-notebook="true"] .command-palette .notebook-primary-actions{grid-template-columns:repeat(2,minmax(0,1fr))}
+  body[data-ui-notebook="true"] footer{grid-template-columns:minmax(0,1fr);gap:3px;padding:6px 12px max(6px,env(safe-area-inset-bottom))}
+}
+@media(max-width:700px){
+  body[data-ui-notebook="true"] .game-shell:has(.skill-targets,.skill-menu) .command-panel{display:none}
+  .command-palette:has(.skill-targets){max-height:48dvh}
+}
+/* Let the option area fill its grid track so every portrait remains scrollable. */
+.command-palette .palette-options{align-self:stretch}
+.floor-controls{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.floor-controls p{flex-basis:100%}
+body[data-ui-notebook="true"] .floor-controls button{width:auto;min-width:130px;margin:0}

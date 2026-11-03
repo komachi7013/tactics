@@ -1,0 +1,66 @@
+{
+  "status": "比較候補：Seedance2.5・W立ち絵＋リセW動画・6条件",
+  "inputImageCount": 1,
+  "inputDirection": "W",
+  "referenceVideoCount": 1,
+  "motionRequirementCount": 6,
+  "equipmentInstructionsIncluded": false,
+  "frames": 19,
+  "cycleMs": 800,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "all19FramesViewedOnLight": true,
+  "all19FramesViewedOnDark": true,
+  "facingRetainedInAllSelectedFrames": true,
+  "fullBodyAndBothSolesInsideSelectedFrames": true,
+  "nativeCanvasEdgePixels": 0,
+  "contactReview": {
+    "videoSha256": "405fb3ede9b4d73ff3ecccfa6e46fde01271a6477f525256302c2083efea872f",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "R"
+      },
+      {
+        "frame": 48,
+        "foot": "L"
+      },
+      {
+        "frame": 58,
+        "foot": "R"
+      }
+    ],
+    "reviewNote": "W fullbody source reviewed; close feet crop truncates bottoms but full source retains them. Near image-left L swings with sole visible38/58 while far R supports; L supports48 while R swings. Direction and equipment retained. Lise W driver. Estimated support phases, not motion capture."
+  },
+  "selectedOutputSeamReviewed": true,
+  "automaticGaitLoopStatus": "automatic selection requires visual review",
+  "issues": [
+    "リセW動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代と全身・足先を保持。原周期約0.83秒を0.8秒に調整。髪の縁に紫寄りの色が残る。自動探索は低信頼、利用者確認待ち。"
+  ],
+  "gameApplied": false,
+  "userApproved": false,
+  "referenceMotionReady": true,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "generationCountThisRequest": 1,
+  "quotedCreditsThisRequest": 28,
+  "headCentroidRangePx": [
+    1.4924672732697104,
+    1.452889554592332
+  ],
+  "footRegionSeamOverMedianStep": 0.3759361495433395,
+  "headTopRangePx": [
+    97,
+    99
+  ],
+  "groundRangePx": [
+    280,
+    286
+  ],
+  "drivingCast": "lise",
+  "drivingDirection": "W",
+  "appearanceSource": "own standing image",
+  "motionSource": "same-direction reference video"
+}

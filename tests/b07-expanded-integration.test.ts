@@ -7,7 +7,7 @@ import {reduce,lineOfSight,getCell,reachable} from '../src/domain/engine';
 import {runEnemyActivationWithTrace} from '../src/domain/ai';
 import {registeredLandscape,registeredFloors} from '../src/view/registeredLandscape';
 import type {BattleState,Command} from '../src/domain/types';
-import roots from './fixtures/expanded-b07-roots.json';
+import roots from './fixtures/defend-cooldown-v1/expanded-b07-roots.json';
 function replay(s:BattleState,commands:Command[]){for(const c of commands){const r=reduce(s,c);expect(r.error,JSON.stringify(c)).toBeUndefined();s=r.state;while(s.phase==='playing'&&s.turn==='enemy')s=runEnemyActivationWithTrace(s).state;}return s;}
 describe('expanded adopted B07 runtime contracts',()=>{
  it.each(roots)('guides both groups and loots against real AI without losing anyone at root $root',r=>{const c=buildSixBattleCheckpoint();c.combat={version:1,rootSeed:r.root};const s=createPartyBattle('B07',defaultParty('B07'),c.jobs,commonLevel(c.completed),{equipment:c.equipment,combat:c.combat}),won=replay(s,r.commands as Command[]);expect(won.phase).toBe('won');expect(won.round).toBe(r.round);expect(won.round).toBeLessThanOrEqual(10);expect(won.records).toEqual(['V2','V1']);expect(won.pendingEquipment).toEqual(['chest:B07']);expect(won.units.find(u=>u.id==='ally-lise')!.pos).toEqual({x:19,y:11});expect(won.units.filter(u=>u.team==='player').map(u=>[u.id,u.hp])).toEqual(r.playerHp);expect(won.units.filter(u=>u.team==='player').every(u=>u.hp>0)).toBe(true);expect(completeBattle(c,won).unlocked).toContain('B08');});

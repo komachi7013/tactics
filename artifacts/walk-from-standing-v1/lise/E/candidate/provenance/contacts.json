@@ -1,0 +1,22 @@
+{
+  "videoSha256": "c681e2e1744a708fc384c7a994f2a2872f8d5f344f52eed84ddba61048d0eec8",
+  "visualReviewed": true,
+  "contacts": [
+    {
+      "frame": 9,
+      "foot": "R"
+    },
+    {
+      "frame": 19,
+      "foot": "L"
+    },
+    {
+      "frame": 28,
+      "foot": "R"
+    }
+  ],
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "reviewNote": "Native source frames 0–43 inspected. Anatomical R is the near leg on the satchel side (image left); L is the farther leg (image right). R support/front pose around 9, L around 19, R around 28. These are visually estimated contact phases, not motion-capture measurements. The conservative silhouette test remains ambiguous in this three-quarter view. Full output design and loop review remains required.",
+  "estimatedContactUncertaintyFrames": 2,
+  "automaticPeriodVerdict": "ambiguous; manual contact phases used"
+}

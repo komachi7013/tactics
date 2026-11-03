@@ -1,0 +1,99 @@
+{
+  "id": "bgm-b01",
+  "master": {
+    "file": "masters/bgm-b01.wav",
+    "sha256": "551767166256ab797494b9fc9655e882506a84dcf9211476f5c86370328043d0",
+    "bytes": 17518372,
+    "sampleRate": 44100,
+    "channels": 2,
+    "frames": 4379582,
+    "seconds": 99.31024943310658,
+    "samplePeak": 0.319976806640625,
+    "rmsDbFS": -23.749197701377348,
+    "dc": [
+      2.689705354586351e-09,
+      2.3622023709968213e-09
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      4379582
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        -0.000396728515625,
+        -0.001678466796875
+      ],
+      "rmsDifferenceDb": [
+        0.786619986557937,
+        0.7482398695948801
+      ],
+      "slopeError": [
+        0.0018310546875,
+        0.001678466796875
+      ],
+      "numericalFlags": []
+    }
+  },
+  "delivery": {
+    "file": "delivery/bgm-b01.wav",
+    "sha256": "65fb601d50f53da9a459dac7156be68cb31914d82f8d6fe968349af5e5e722f6",
+    "bytes": 8759208,
+    "sampleRate": 22050,
+    "channels": 2,
+    "frames": 2189791,
+    "seconds": 99.31024943310658,
+    "samplePeak": 0.31939697265625,
+    "rmsDbFS": -23.749568354296912,
+    "dc": [
+      5.936862596133604e-09,
+      3.0799216754589822e-09
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      2189791
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        -0.001678466796875,
+        -0.0013427734375
+      ],
+      "rmsDifferenceDb": [
+        0.7884288520732221,
+        0.7503525088001296
+      ],
+      "slopeError": [
+        0.003173828125,
+        0.00189208984375
+      ],
+      "numericalFlags": []
+    }
+  },
+  "listeningVerified": false,
+  "compositionRevision": "independent-r2",
+  "title": "渡し場の水位痕",
+  "usage": "B01 トルネ渡し場: 水位記録確保と脱出。水路の流れを分散弦で。",
+  "bpm": 116,
+  "bars": 64,
+  "meter": [
+    6,
+    8
+  ],
+  "mode": "major",
+  "rationale": "B01 トルネ渡し場: 水位記録確保と脱出。水路の流れを分散弦で。",
+  "direction": "流れる6/8の渡し場。フルートの細かい装飾、軽快なピチカート。最初の冒険を明るく能動的に。",
+  "source": "scores/bgm-b01.json",
+  "midi": "scores/bgm-b01.mid",
+  "renderCycles": 3,
+  "extractStartFrame": 4394797,
+  "rotationSeconds": 0.3450113378684807,
+  "motif": {
+    "id": "river-record",
+    "version": 3,
+    "quotation": "single three-note cameo in C only; title/ending link restricted to opening two bars"
+  },
+  "scoreFingerprint": "5328e662309bb446e2e7bbf132bb7198a4acb377bdf8316bd19b5fa151ea89a2"
+}

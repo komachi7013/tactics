@@ -1,0 +1,24 @@
+[
+  {
+    "cast": "dani",
+    "direction": "E",
+    "sourceImage": "artifacts/standing-cast-review-v1/original/dani/E/standing.png",
+    "anatomicalArm": "right",
+    "pose": "straight downward beside torso",
+    "headPixelsPreservedThroughRow": 159,
+    "lowerBodyPixelsPreservedFromRow": 230,
+    "outsideArmMaskPixelsUnchanged": true,
+    "higgsfieldAdditionalCredits": 0
+  },
+  {
+    "cast": "vesk",
+    "direction": "W",
+    "sourceImage": "artifacts/standing-cast-repairs-local-v1/vesk/W/five-point-aligned.png",
+    "anatomicalArm": "left",
+    "pose": "straight downward beside torso",
+    "headPixelsPreservedThroughRow": 150,
+    "lowerBodyPixelsPreservedFromRow": 231,
+    "outsideArmMaskPixelsUnchanged": true,
+    "higgsfieldAdditionalCredits": 0
+  }
+]

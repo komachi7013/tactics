@@ -1,11 +1,12 @@
+import { tutor, equipSupport, learnSkill, setMainJob, legacyPreparation } from './fixtures/legacy-preparation';
 import { describe, expect, it } from 'vitest';
 import { CAMPAIGN_KEY, completeBattle, createCampaign, editPreparation, getConfirmedEquipmentEvents, readCampaign, selectBattle, writeCampaign, type Campaign, type StorageLike } from '../src/campaign';
 import { createInitialState } from '../src/domain/engine';
 import { createBattleRandom, createCombatRandomConfig, nextCombatRoll } from '../src/domain/combatRandom';
 import type { BattleId } from '../src/domain/types';
-import { BATTLE_IDS, tutor } from '../src/progression';
+import {BATTLE_IDS} from '../src/progression';
 import { equipItem } from '../src/equipment';
-import { equipSupport, learnSkill, setMainJob } from '../src/jobs';
+
 
 const records: Record<BattleId, string[]> = { B01: ['A','B'], B02: ['O'], B03: ['M'], B04: ['C'], B05: ['D','T','S','K'], B06: ['W'], B07: ['V1','V2'], B08: ['P','C'], B09: ['J','H'], B10: ['C'], B11: ['W1','W2','A','B'], B12: ['U','V'] };
 function memory() {
@@ -53,7 +54,7 @@ describe('Campaign v4 combat root and existing inventory/save boundaries', () =>
     const growth = tutor(c.growth!, 'ally-dani', c.completed);
     let jobs = learnSkill(c.jobs!, growth, 'ally-lise', 'surveyor-foundation', 'B09');
     jobs = setMainJob(jobs, 'ally-lise', 'warden', 'B09'); jobs = equipSupport(jobs, 'ally-lise', 'surveyor-foundation');
-    c = editPreparation(c, { growth, jobs, parties: { B05: ['ally-lise','ally-garan','ally-iva','ally-dani'] }, equipment: equipItem(c.equipment!, c.completed, jobs, 'ally-neia', 'weapon', 'chest:B08') });
+    c = legacyPreparation(c, { growth, jobs, parties: { B05: ['ally-lise','ally-garan','ally-iva','ally-dani'] }, equipment: equipItem(c.equipment!, c.completed, jobs, 'ally-neia', 'weapon', 'chest:B08') });
     const raw = JSON.stringify(legacy(c, 3)); m.data.set(CAMPAIGN_KEY, raw);
     const migrated = readCampaign(m.storage).campaign;
     for (const key of ['growth','jobs','parties','equipment'] as const) expect(migrated[key]).toEqual(c[key]);

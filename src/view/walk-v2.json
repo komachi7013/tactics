@@ -1,0 +1,554 @@
+{
+  "lise": {
+    "N": {
+      "key": "walk-standing-lise-N-0fb7bf65a938",
+      "path": "/assets/walk-standing-v1/lise/N-0fb7bf65a938.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "E": {
+      "key": "walk-standing-lise-E-56ba67538a70",
+      "path": "/assets/walk-standing-v1/lise/E-56ba67538a70.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "S": {
+      "key": "walk-standing-lise-S-97918c4fe43d",
+      "path": "/assets/walk-standing-v1/lise/S-97918c4fe43d.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "W": {
+      "key": "walk-standing-lise-W-3faec9053e9c",
+      "path": "/assets/walk-standing-v1/lise/W-3faec9053e9c.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    }
+  },
+  "garan": {
+    "N": {
+      "key": "walk-standing-garan-N-965526059bc2",
+      "path": "/assets/walk-standing-v1/garan/N-965526059bc2.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "E": {
+      "key": "walk-standing-garan-E-73aa8c600a95",
+      "path": "/assets/walk-standing-v1/garan/E-73aa8c600a95.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "S": {
+      "key": "walk-standing-garan-S-479b9ec2322e",
+      "path": "/assets/walk-standing-v1/garan/S-479b9ec2322e.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "W": {
+      "key": "walk-standing-garan-W-bf975d418fe3",
+      "path": "/assets/walk-standing-v1/garan/W-bf975d418fe3.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    }
+  },
+  "neia": {
+    "N": {
+      "key": "walk-standing-neia-N-947bb204edc2",
+      "path": "/assets/walk-standing-v1/neia/N-947bb204edc2.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "E": {
+      "key": "walk-standing-neia-E-8bcc07387b15",
+      "path": "/assets/walk-standing-v1/neia/E-8bcc07387b15.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "S": {
+      "key": "walk-standing-neia-S-acc3aae1059a",
+      "path": "/assets/walk-standing-v1/neia/S-acc3aae1059a.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "W": {
+      "key": "walk-standing-neia-W-048d662be82e",
+      "path": "/assets/walk-standing-v1/neia/W-048d662be82e.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    }
+  },
+  "sena": {
+    "N": {
+      "key": "walk-standing-sena-N-b1d8e4213a46",
+      "path": "/assets/walk-standing-v1/sena/N-b1d8e4213a46.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "E": {
+      "key": "walk-standing-sena-E-dff9e98e3081",
+      "path": "/assets/walk-standing-v1/sena/E-dff9e98e3081.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "S": {
+      "key": "walk-standing-sena-S-2ff20613a420",
+      "path": "/assets/walk-standing-v1/sena/S-2ff20613a420.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "W": {
+      "key": "walk-standing-sena-W-6f508a4ea61b",
+      "path": "/assets/walk-standing-v1/sena/W-6f508a4ea61b.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    }
+  },
+  "iva": {
+    "N": {
+      "key": "walk-standing-iva-N-0cc70d98e7b4",
+      "path": "/assets/walk-standing-v1/iva/N-0cc70d98e7b4.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "E": {
+      "key": "walk-standing-iva-E-38d32f36dffd",
+      "path": "/assets/walk-standing-v1/iva/E-38d32f36dffd.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "S": {
+      "key": "walk-standing-iva-S-d78daecebbc7",
+      "path": "/assets/walk-standing-v1/iva/S-d78daecebbc7.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "W": {
+      "key": "walk-standing-iva-W-6192b6bc4e8c",
+      "path": "/assets/walk-standing-v1/iva/W-6192b6bc4e8c.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    }
+  },
+  "dani": {
+    "N": {
+      "key": "walk-standing-dani-N-8f79ee15ce3e",
+      "path": "/assets/walk-standing-v1/dani/N-8f79ee15ce3e.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "E": {
+      "key": "walk-standing-dani-E-fee5eecf1221",
+      "path": "/assets/walk-standing-v1/dani/E-fee5eecf1221.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "S": {
+      "key": "walk-standing-dani-S-7eaa4de04bb1",
+      "path": "/assets/walk-standing-v1/dani/S-7eaa4de04bb1.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "W": {
+      "key": "walk-standing-dani-W-5f9aa2b01d25",
+      "path": "/assets/walk-standing-v1/dani/W-5f9aa2b01d25.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    }
+  },
+  "guard": {
+    "N": {
+      "key": "walk-standing-guard-N-f6ea43d81d0c",
+      "path": "/assets/walk-standing-v1/guard/N-f6ea43d81d0c.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "E": {
+      "key": "walk-standing-guard-E-50b2003d04c6",
+      "path": "/assets/walk-standing-v1/guard/E-50b2003d04c6.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "S": {
+      "key": "walk-standing-guard-S-9fff27d37840",
+      "path": "/assets/walk-standing-v1/guard/S-9fff27d37840.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "W": {
+      "key": "walk-standing-guard-W-69f04da7163a",
+      "path": "/assets/walk-standing-v1/guard/W-69f04da7163a.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    }
+  },
+  "archer": {
+    "N": {
+      "key": "walk-standing-archer-N-2ad2c8c5e0c3",
+      "path": "/assets/walk-standing-v1/archer/N-2ad2c8c5e0c3.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "E": {
+      "key": "walk-standing-archer-E-b8444843137f",
+      "path": "/assets/walk-standing-v1/archer/E-b8444843137f.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "S": {
+      "key": "walk-standing-archer-S-500346758a75",
+      "path": "/assets/walk-standing-v1/archer/S-500346758a75.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "W": {
+      "key": "walk-standing-archer-W-e8bcb425f1cc",
+      "path": "/assets/walk-standing-v1/archer/W-e8bcb425f1cc.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    }
+  },
+  "vesk": {
+    "N": {
+      "key": "walk-standing-vesk-N-f9acf7add87a",
+      "path": "/assets/walk-standing-v1/vesk/N-f9acf7add87a.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "E": {
+      "key": "walk-standing-vesk-E-45bb439b4e18",
+      "path": "/assets/walk-standing-v1/vesk/E-45bb439b4e18.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "S": {
+      "key": "walk-standing-vesk-S-5e41e42c8cb3",
+      "path": "/assets/walk-standing-v1/vesk/S-5e41e42c8cb3.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "W": {
+      "key": "walk-standing-vesk-W-768140e890d9",
+      "path": "/assets/walk-standing-v1/vesk/W-768140e890d9.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    }
+  },
+  "toma": {
+    "N": {
+      "key": "walk-standing-toma-N-c8e0ca044cf6",
+      "path": "/assets/walk-standing-v1/toma/N-c8e0ca044cf6.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "E": {
+      "key": "walk-standing-toma-E-93ba2b72ea42",
+      "path": "/assets/walk-standing-v1/toma/E-93ba2b72ea42.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "S": {
+      "key": "walk-standing-toma-S-4ee839c100e9",
+      "path": "/assets/walk-standing-v1/toma/S-4ee839c100e9.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "W": {
+      "key": "walk-standing-toma-W-b196f4c423b2",
+      "path": "/assets/walk-standing-v1/toma/W-b196f4c423b2.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    }
+  },
+  "worker": {
+    "N": {
+      "key": "walk-standing-worker-N-40002c4ade0e",
+      "path": "/assets/walk-standing-v1/worker/N-40002c4ade0e.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "E": {
+      "key": "walk-standing-worker-E-c5cd031a8097",
+      "path": "/assets/walk-standing-v1/worker/E-c5cd031a8097.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "S": {
+      "key": "walk-standing-worker-S-f6f4d0e44801",
+      "path": "/assets/walk-standing-v1/worker/S-f6f4d0e44801.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "W": {
+      "key": "walk-standing-worker-W-31fe719b774f",
+      "path": "/assets/walk-standing-v1/worker/W-31fe719b774f.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    }
+  },
+  "delegation": {
+    "N": {
+      "key": "walk-standing-delegation-N-07a05811f8ba",
+      "path": "/assets/walk-standing-v1/delegation/N-07a05811f8ba.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "E": {
+      "key": "walk-standing-delegation-E-ab576e9254ee",
+      "path": "/assets/walk-standing-v1/delegation/E-ab576e9254ee.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "S": {
+      "key": "walk-standing-delegation-S-e8c6d66317df",
+      "path": "/assets/walk-standing-v1/delegation/S-e8c6d66317df.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    },
+    "W": {
+      "key": "walk-standing-delegation-W-ca86c0662285",
+      "path": "/assets/walk-standing-v1/delegation/W-ca86c0662285.png",
+      "cell": 300,
+      "frames": 19,
+      "originX": 0.5,
+      "originY": 0.9333333333333333,
+      "visibleHeight": 179,
+      "cycleMs": 800,
+      "tilesPerCycle": 4
+    }
+  }
+}

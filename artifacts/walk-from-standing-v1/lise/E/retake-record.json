@@ -1,0 +1,23 @@
+{
+  "prompt": "Animate this exact brown-haired female scholar in her cream tunic, short dark teal shoulder cape and brown boots. She carries a CLOSED RECTANGULAR BOOK firmly in her left hand and a leather satchel on her right hip. Keep these two items unchanged and held still relative to her torso. She has NO WEAPONS: no bow, no arrows, no sword, no staff. Only animate her legs and a little cloth movement. She faces the lower-right diagonal exactly as pictured for the whole clip; hold this same three-quarter angle without any turn. A treadmill WALK IN PLACE, left foot then right foot, small equal steps, supporting knee straightens, repeating complete left-right cycles. Neutral upright torso, relaxed modest motion, fixed ground level, no body travel. Walk immediately. Fixed orthographic camera, no zoom. Same face, same head proportions, same costume and colour palette, hand-painted game sprite. Uniform flat solid magenta background with absolutely no floor shadow. Nothing else appears.",
+  "submission": {
+    "results": [
+      {
+        "id": "73289ea4-3786-4e0a-9212-90c0ca0d8276",
+        "type": "video",
+        "status": "pending",
+        "model": "kling3_0",
+        "params": {
+          "prompt": "Animate this exact brown-haired female scholar in her cream tunic, short dark teal shoulder cape and brown boots. She carries a CLOSED RECTANGULAR BOOK firmly in her left hand and a leather satchel on her right hip. Keep these two items unchanged and held still relative to her torso. She has NO WEAPONS: no bow, no arrows, no sword, no staff. Only animate her legs and a little cloth movement. She faces the lower-right diagonal exactly as pictured for the whole clip; hold this same three-quarter angle without any turn. A treadmill WALK IN PLACE, left foot then right foot, small equal steps, supporting knee straightens, repeating complete left-right cycles. Neutral upright torso, relaxed modest motion, fixed ground level, no body travel. Walk immediately. Fixed orthographic camera, no zoom. Same face, same head proportions, same costume and colour palette, hand-painted game sprite. Uniform flat solid magenta background with absolutely no floor shadow. Nothing else appears.",
+          "aspect_ratio": "1:1",
+          "duration": 4,
+          "reference_images": [
+            "338f2ba5-526b-428b-8735-8862a2d4e7f3"
+          ],
+          "mode": "std",
+          "sound": "off"
+        }
+      }
+    ]
+  }
+}

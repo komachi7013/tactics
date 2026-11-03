@@ -18,7 +18,7 @@ export function createInspectionFace(unit:Pick<Unit,'id'|'weapon'>):HTMLSpanElem
 
 /** Presentation only: HP0 commanders are preserved, while ordinary casualties withdraw. */
 export function inspectionUnitStatus(unit:Pick<Unit,'id'|'hp'|'kind'|'acted'>):string {
- return unit.hp<=0 ? (unit.id==='enemy-vesk'?'制圧済み・保全対象':'退避') : unit.kind==='escort'?'護送・自動':unit.acted?'行動済み':'未行動';
+ return unit.hp<=0 ? (unit.id==='enemy-vesk'?'制圧済み・保全対象':'退避') : unit.kind==='escort'?(unit.id==='escort-cart'?'護送・手動押し':'護送・自動'):unit.acted?'行動済み':'未行動';
 }
 
 /** Read-only inspection controls; target confirmation and activation belong elsewhere. */

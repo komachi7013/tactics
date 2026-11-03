@@ -1,0 +1,99 @@
+{
+  "id": "bgm-briefing",
+  "master": {
+    "file": "masters/bgm-briefing.wav",
+    "sha256": "07211816daa57c59e103d8795f7782335cbbda04a7a1b898d9510545e6a782d8",
+    "bytes": 15876044,
+    "sampleRate": 44100,
+    "channels": 2,
+    "frames": 3969000,
+    "seconds": 90.0,
+    "samplePeak": 0.319976806640625,
+    "rmsDbFS": -23.819930126554127,
+    "dc": [
+      8.090349131550769e-08,
+      8.611662257495591e-10
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      3969000
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        0.00164794921875,
+        0.000457763671875
+      ],
+      "rmsDifferenceDb": [
+        -1.27216103499573,
+        -0.9658506266459271
+      ],
+      "slopeError": [
+        0.002349853515625,
+        0.00067138671875
+      ],
+      "numericalFlags": []
+    }
+  },
+  "delivery": {
+    "file": "delivery/bgm-briefing.wav",
+    "sha256": "a1839e719f64b55dc1b25c49ca92b325ff56a005006d72aec4dd4730030b4cdd",
+    "bytes": 7938044,
+    "sampleRate": 22050,
+    "channels": 2,
+    "frames": 1984500,
+    "seconds": 90.0,
+    "samplePeak": 0.31854248046875,
+    "rmsDbFS": -23.819949832388385,
+    "dc": [
+      7.91350249590577e-08,
+      1.2456154336734694e-09
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      1984500
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        0.000518798828125,
+        0.00030517578125
+      ],
+      "rmsDifferenceDb": [
+        -1.280514131926465,
+        -0.9743324289041515
+      ],
+      "slopeError": [
+        0.000244140625,
+        0.001434326171875
+      ],
+      "numericalFlags": []
+    }
+  },
+  "listeningVerified": false,
+  "compositionRevision": "independent-r2",
+  "title": "盤上の水路",
+  "usage": "全戦共通の作戦説明・準備: 判断の余白と期待。",
+  "bpm": 100,
+  "bars": 30,
+  "meter": [
+    5,
+    4
+  ],
+  "mode": "lydian",
+  "rationale": "全戦共通の作戦説明・準備: 判断の余白と期待。",
+  "direction": "戦略を組み立てる5/4（3+2）。ピチカートとクラリネットの軽い問答。静止したパッド主体を廃止。",
+  "source": "scores/bgm-briefing.json",
+  "midi": "scores/bgm-briefing.mid",
+  "renderCycles": 3,
+  "extractStartFrame": 3982519,
+  "rotationSeconds": 0.30655328798185943,
+  "motif": {
+    "id": "river-record",
+    "version": 3,
+    "quotation": "single three-note cameo in C only; title/ending link restricted to opening two bars"
+  },
+  "scoreFingerprint": "f592ad98f3365948b348523f0e0830752930eba3ae4d947d9e420f6dc69b8d1f"
+}

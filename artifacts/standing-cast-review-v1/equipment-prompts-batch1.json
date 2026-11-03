@@ -1,0 +1,24 @@
+{
+  "route": "built-in image_gen",
+  "higgsfieldAdditionalCredits": 0,
+  "specs": [
+    {
+      "cast": "toma",
+      "direction": "E",
+      "ref": "/Users/komachi/work/tactics/artifacts/standing-cast-repairs-local-v1/toma/E/strap-edit-reference.png",
+      "prompt": "The boy Toma is in the EAST front-right three-quarter view, facing IMAGE RIGHT. Correct the satchel and diagonal strap only. The strap must run from HIS OWN LEFT SHOULDER to HIS OWN RIGHT HIP. In this front view, start at the UPPER IMAGE-RIGHT shoulder and descend diagonally across his chest toward the LOWER IMAGE-LEFT hip. Remove the incorrect opposite diagonal strap from upper image-left to lower image-right, and restore the underlying navy coat/ivory shirt. Relocate the same brown leather satchel to his RIGHT HIP, on IMAGE LEFT, naturally behind his near hanging forearm. A partly hidden bag is correct. Keep the original right-facing torso, asymmetric coat lapels and both hands EXACTLY unchanged. Do not mirror the torso to solve the strap direction. Precise accessory-only edit of the supplied game sprite. Keep the original complete character, exact hairstyle, head/face dimensions, face direction, torso rotation, lapels/cape, clothing colors, sleeves, hands and arm positions, leg positions, boots, body height, waist/knee heights, canvas registration and painterly style. No body mirroring or twisting. No shadow, letters, guides, duplicates or extra items. True transparent background. Allow natural arm/tunic occlusion; do not rotate the torso to expose the equipment."
+    },
+    {
+      "cast": "toma",
+      "direction": "S",
+      "ref": "/Users/komachi/work/tactics/artifacts/standing-cast-repairs-local-v1/toma/S/strap-edit-reference.png",
+      "prompt": "The boy Toma is in the SOUTH front-left three-quarter view, facing IMAGE LEFT. Correct the satchel and diagonal strap only. The strap must run from HIS OWN LEFT SHOULDER to HIS OWN RIGHT HIP. In this front view, start at the UPPER IMAGE-RIGHT shoulder and descend diagonally across his chest toward the LOWER IMAGE-LEFT hip. Remove the incorrect opposite diagonal strap from upper image-left to lower image-right and restore the underlying navy coat/ivory shirt. Move the original brown leather satchel from IMAGE RIGHT to HIS RIGHT HIP at IMAGE LEFT, behind his far forearm and coat edge. The satchel may be largely occluded. Keep the original left-facing torso, asymmetric coat lapels and both hands EXACTLY unchanged. Do not turn the chest to face right or show the bag. Precise accessory-only edit of the supplied game sprite. Keep the original complete character, exact hairstyle, head/face dimensions, face direction, torso rotation, lapels/cape, clothing colors, sleeves, hands and arm positions, leg positions, boots, body height, waist/knee heights, canvas registration and painterly style. No body mirroring or twisting. No shadow, letters, guides, duplicates or extra items. True transparent background. Allow natural arm/tunic occlusion; do not rotate the torso to expose the equipment."
+    },
+    {
+      "cast": "garan",
+      "direction": "S",
+      "ref": "/Users/komachi/work/tactics/artifacts/standing-cast-repairs-local-v1/garan/S/scabbard-edit-reference.png",
+      "prompt": "Garan SOUTH front-left three-quarter standing warrior. Move ONLY the fully sheathed sword, its hilt, scabbard and belt suspension from HIS ANATOMICAL LEFT HIP (currently IMAGE RIGHT, on the shield side) to HIS ANATOMICAL RIGHT HIP (IMAGE LEFT, opposite the shield). Remove the old hilt/scabbard completely from the shield side. Attach the same leather scabbard and sword to the image-left side of his belt, hanging naturally alongside/behind his right forearm and outer right leg. Preserve the sheathed state, sword/scabbard materials and details; no second sword and no drawn weapon. Keep the shield in HIS LEFT HAND on IMAGE RIGHT. His body, right hand and shield pose must remain exactly as supplied. Precise accessory-only edit of the supplied game sprite. Keep the original complete character, exact hairstyle, head/face dimensions, face direction, torso rotation, lapels/cape, clothing colors, sleeves, hands and arm positions, leg positions, boots, body height, waist/knee heights, canvas registration and painterly style. No body mirroring or twisting. No shadow, letters, guides, duplicates or extra items. True transparent background. Allow natural arm/tunic occlusion; do not rotate the torso to expose the equipment."
+    }
+  ]
+}

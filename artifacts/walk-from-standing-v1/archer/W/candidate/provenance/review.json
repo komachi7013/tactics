@@ -1,0 +1,66 @@
+{
+  "status": "比較候補：Seedance2.5・W立ち絵＋ガランW動画・6条件",
+  "inputImageCount": 1,
+  "inputDirection": "W",
+  "referenceVideoCount": 1,
+  "motionRequirementCount": 6,
+  "equipmentInstructionsIncluded": false,
+  "frames": 19,
+  "cycleMs": 800,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "all19FramesViewedOnLight": true,
+  "all19FramesViewedOnDark": true,
+  "facingRetainedInAllSelectedFrames": true,
+  "fullBodyAndBothSolesInsideSelectedFrames": true,
+  "nativeCanvasEdgePixels": 0,
+  "contactReview": {
+    "videoSha256": "da2364473be0b19001a5b01163167761943fe1fc4e9553c84fa86f74c4786911",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "L"
+      },
+      {
+        "frame": 48,
+        "foot": "R"
+      },
+      {
+        "frame": 58,
+        "foot": "L"
+      }
+    ],
+    "reviewNote": "Archer W source/full feet sheets inspected. Near image-left L38/58 and far R48 support alternate; both legs pass and toe/heel motion visible. Back-facing direction, crossbow/grip, full soles maintained. Garan W video driver, original six conditions. Estimated support phases, not motion capture."
+  },
+  "selectedOutputSeamReviewed": true,
+  "automaticGaitLoopStatus": "automatic selection requires visual review",
+  "issues": [
+    "ガランW動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の振り出し、背面の向き、武器と足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+  ],
+  "gameApplied": false,
+  "userApproved": false,
+  "referenceMotionReady": true,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "generationCountThisRequest": 1,
+  "quotedCreditsThisRequest": 28,
+  "headCentroidRangePx": [
+    2.5910442509050995,
+    0.9064420036320087
+  ],
+  "footRegionSeamOverMedianStep": 0.2192777600235994,
+  "headTopRangePx": [
+    95,
+    97
+  ],
+  "groundRangePx": [
+    270,
+    283
+  ],
+  "drivingCast": "garan",
+  "drivingDirection": "W",
+  "appearanceSource": "own standing image",
+  "motionSource": "same-direction reference video"
+}

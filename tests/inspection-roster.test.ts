@@ -1,5 +1,5 @@
 import {afterEach,describe,it,expect,vi} from 'vitest';
-import {renderInspectionRoster} from '../src/view/inspectionRoster';
+import {inspectionUnitStatus,renderInspectionRoster} from '../src/view/inspectionRoster';
 import {createInitialState} from '../src/domain/engine';
 class Node {
  children:Node[]=[];dataset:Record<string,string>={};attrs:Record<string,string>={};className='';textContent='';disabled=false;src='';hidden=false;onclick?:()=>void;onerror?:()=>void;
@@ -34,6 +34,19 @@ describe('read-only inspection cards',()=>{
    expect(card.attrs['aria-label']).toContain(expected);expect(card.children[1].children[2].textContent).toContain(expected);
   }
   expect(s).toEqual(before);
+ });
+
+ it('labels only the cart as manual pushing while Toma and the delegation remain automatic',()=>{
+  vi.stubGlobal('document',{createElement:()=>new Node()});
+  for(const [battleId,unitId,status] of [['B03','escort-cart','護送・手動押し'],['B06','escort-toma','護送・自動'],['B09','escort-delegation','護送・自動']] as const){
+   const state=createInitialState(battleId),unit=state.units.find(u=>u.id===unitId)!,before=structuredClone(state),host=new Node();
+   renderInspectionRoster(host as unknown as HTMLElement,[unit],null,false,()=>{});
+   expect(inspectionUnitStatus(unit)).toBe(status);
+   expect(host.children[0].attrs['aria-label']).toContain(status);
+   expect(host.children[0].children[1].children[2].textContent).toContain(status);
+   expect(state).toEqual(before);
+   expect(inspectionUnitStatus({...unit,hp:0})).toBe('退避');
+  }
  });
 
 });

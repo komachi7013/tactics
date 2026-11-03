@@ -1,0 +1,41 @@
+{
+  "status": "比較候補：Seedance2.5・N画像のみ・6条件（自動ループ判定は未通過）",
+  "inputImageCount": 1,
+  "inputDirection": "N",
+  "referenceVideoCount": 0,
+  "motionRequirementCount": 6,
+  "equipmentInstructionsIncluded": false,
+  "frames": 19,
+  "cycleMs": 800,
+  "nativeFullCycleSeconds": 1.0,
+  "all19FramesViewedOnLight": true,
+  "all19FramesViewedOnDark": true,
+  "facingRetainedInAllSelectedFrames": true,
+  "fullBodyAndBothSolesInsideSelectedFrames": true,
+  "nativeCanvasEdgePixels": 0,
+  "contactPhases": "manual R8-L20-R32; estimated +/-2 source frames",
+  "selectedOutputSeamReviewed": true,
+  "automaticGaitLoopStatus": "no acceptable window; manual review used; not auto-certified",
+  "issues": [
+    "自動ループ判定は未通過。目視で選んだ周期を比較用として提示。"
+  ],
+  "gameApplied": false,
+  "userApproved": false,
+  "referenceMotionReady": true,
+  "art_source": "Higgsfield / Seedance 2.5 image-to-video",
+  "generationCountThisRequest": 1,
+  "quotedCreditsThisRequest": 28,
+  "headCentroidRangePx": [
+    3.5958239048689506,
+    0.8704481603261058
+  ],
+  "footRegionSeamOverMedianStep": 1.330388902758393,
+  "headTopRangePx": [
+    96,
+    99
+  ],
+  "groundRangePx": [
+    277,
+    290
+  ]
+}

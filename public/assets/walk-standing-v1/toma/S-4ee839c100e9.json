@@ -1,0 +1,187 @@
+{
+  "frames": 19,
+  "cycleMs": 800,
+  "fpsRational": [
+    95,
+    4
+  ],
+  "durationsMs": [
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42
+  ],
+  "sourceIndices": [
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57
+  ],
+  "sourceVideoSha256": "b6c8d1263fff10da7e390c3c10f51c5b2dab30a67699f17d5b5c6f7682160fed",
+  "sheetSha256": "984be0eda7b7c0ce5e041b136234b1e13ba3b3b73e9526701fca69687e58eea7",
+  "fixedScale": 0.24,
+  "fixedOffset": [
+    10,
+    71
+  ],
+  "frameGeometry": [
+    {
+      "headTop": 100,
+      "ground": 279,
+      "width": 67
+    },
+    {
+      "headTop": 100,
+      "ground": 279,
+      "width": 65
+    },
+    {
+      "headTop": 99,
+      "ground": 278,
+      "width": 63
+    },
+    {
+      "headTop": 98,
+      "ground": 277,
+      "width": 62
+    },
+    {
+      "headTop": 98,
+      "ground": 278,
+      "width": 64
+    },
+    {
+      "headTop": 98,
+      "ground": 278,
+      "width": 65
+    },
+    {
+      "headTop": 98,
+      "ground": 280,
+      "width": 68
+    },
+    {
+      "headTop": 99,
+      "ground": 281,
+      "width": 72
+    },
+    {
+      "headTop": 99,
+      "ground": 281,
+      "width": 76
+    },
+    {
+      "headTop": 99,
+      "ground": 281,
+      "width": 78
+    },
+    {
+      "headTop": 99,
+      "ground": 284,
+      "width": 76
+    },
+    {
+      "headTop": 99,
+      "ground": 283,
+      "width": 74
+    },
+    {
+      "headTop": 98,
+      "ground": 283,
+      "width": 72
+    },
+    {
+      "headTop": 98,
+      "ground": 282,
+      "width": 67
+    },
+    {
+      "headTop": 98,
+      "ground": 281,
+      "width": 64
+    },
+    {
+      "headTop": 99,
+      "ground": 281,
+      "width": 62
+    },
+    {
+      "headTop": 99,
+      "ground": 280,
+      "width": 61
+    },
+    {
+      "headTop": 99,
+      "ground": 280,
+      "width": 66
+    },
+    {
+      "headTop": 100,
+      "ground": 279,
+      "width": 66
+    }
+  ],
+  "contactReview": {
+    "videoSha256": "b6c8d1263fff10da7e390c3c10f51c5b2dab30a67699f17d5b5c6f7682160fed",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "L"
+      },
+      {
+        "frame": 48,
+        "foot": "R"
+      },
+      {
+        "frame": 58,
+        "foot": "L"
+      }
+    ],
+    "reviewNote": "Toma S source/full feet sheets reviewed. Near image-right L38/58 and far R48 support, both legs alternately pass with low foot lift. Strap and coat match input; original wrist/sleeve pixel gaps remain. Fullbody and soles inside source. Lise S driver. Estimated support phases, not motion capture."
+  },
+  "status": "visually-reviewed-comparison-candidate; user review pending",
+  "matteReportStatus": "pass",
+  "matteOverrideReason": null,
+  "gameApplied": true,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "userApproved": false,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "automaticGaitLoopStatus": "automatic selection requires visual review",
+  "sheetColumns": 5,
+  "candidateDirectory": "artifacts/walk-from-standing-v1/toma/S/candidate",
+  "sourceSheetSha256": "e5417c5ddd375d91cbc4ecf47b87f8a348226c5d4ccce583ece0587d3433d69d"
+}

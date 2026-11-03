@@ -27,11 +27,11 @@ class DocumentPort {
   getSelection():Selection|null{return null;}
 }
 let now=1000;
-function setup(pages:readonly StoryPage[]=B01_INTRO){
+function setup(pages:readonly StoryPage[]=B01_INTRO,skipLabel?:string){
   now=1000;vi.spyOn(performance,'now').mockImplementation(()=>now);
   const doc=new DocumentPort();vi.stubGlobal('document',doc);
   const units=createInitialState().units,before=structuredClone(units),complete=vi.fn();
-  const dispose=mountStoryPanel(doc.host as unknown as HTMLElement,{title:'B01',pages,completeLabel:'作戦説明へ',findSpeaker:id=>units.find(u=>u.id===id),complete});
+  const dispose=mountStoryPanel(doc.host as unknown as HTMLElement,{title:'B01',pages,completeLabel:'作戦説明へ',findSpeaker:id=>units.find(u=>u.id===id),complete,skipLabel});
   const all=()=>doc.host.all(),text=()=>all().find(n=>n.className==='story-text')!;
   const buttons=()=>all().filter(n=>n.tagName==='BUTTON');
   const click=(n:ElementPort,detail=1)=>n.onclick?.({detail,stopPropagation:vi.fn()} as unknown as MouseEvent);
@@ -43,7 +43,7 @@ describe('authored B01 story',()=>{
   it('retains complete original blocks and does not invent an unnamed speaker',()=>{
     expect(B01_INTRO.map(p=>p.text)).toEqual(['「杭は流されていない。\n……地図のほうが、書き換えられている。」','測量官リセは、警備隊が接収する前に水位痕と住民名簿を確保しようと決めた。渡し守ネイアが水路を指し、ガランは退路に立つ。']);
     expect(B01_INTRO.every(p=>!p.speaker)).toBe(true);
-    expect(B01_GUIDE).toBe('記録は上下左右の隣接から1行動で取得。リセが倒れると敗北。水門は任意。次ラウンドから対象水路の移動費2→1（浅瀬適性のある人物は1のまま）。');
+    expect(B01_GUIDE).toBe('記録は上下左右の隣接から1行動で取得。リセが倒れると敗北。水門を操作すると、操作直後から対象水路の移動費2→1（浅瀬適性のある人物は1のまま）。');
   });
   it('ignores rapid/repeated inputs and settles once, including after back/replay',()=>{
     const c=new StoryCursor(2);expect(c.input('next',0)).toBe('page');expect(c.input('next',100)).toBe('ignored');
@@ -104,5 +104,17 @@ describe('story input and lifecycle',()=>{
     s.text().scrollTop=500;s.click(s.text());expect(s.text().textContent.length).toBeGreaterThan(1000);
     expect(s.text().scrollTop).toBe(500);
     s.click(s.buttons()[1]);expect(s.text().textContent).toBe('次の本文');expect(s.text().scrollTop).toBe(0);
+  });
+});
+
+describe('explicit conversation skip',()=>{
+  it('skips once without consuming or mutating combat, and stale callbacks cannot re-complete',()=>{
+    const s=setup(B01_INTRO,'会話をスキップ'),skip=s.buttons().find(b=>b.className==='story-skip')!,queued=skip.onclick!;
+    s.click(skip);s.click(skip);s.key('Enter',skip,true);expect(s.complete).toHaveBeenCalledOnce();expect(s.units).toEqual(s.before);
+    s.dispose();queued({detail:1,stopPropagation:()=>{}} as MouseEvent);expect(s.complete).toHaveBeenCalledOnce();
+  });
+  it('keyboard Enter on skip does not advance merely one page or repeat the continuation',()=>{
+    const s=setup(B01_INTRO,'会話をスキップ'),skip=s.buttons().find(b=>b.className==='story-skip')!;
+    s.key('Enter',skip);s.key(' ',skip);expect(s.complete).toHaveBeenCalledOnce();expect(s.units).toEqual(s.before);
   });
 });

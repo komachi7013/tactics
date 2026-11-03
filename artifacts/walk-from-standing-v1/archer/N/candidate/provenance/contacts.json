@@ -1,0 +1,21 @@
+{
+  "videoSha256": "0de1c0b006409932ae3ba2fdd70d464dc817abb232b83c48ace0d1f3b7c547c9",
+  "visualReviewed": true,
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "contacts": [
+    {
+      "frame": 38,
+      "foot": "R"
+    },
+    {
+      "frame": 48,
+      "foot": "L"
+    },
+    {
+      "frame": 58,
+      "foot": "R"
+    }
+  ],
+  "reviewNote": "Archer N source and complete feet sheets reviewed. Near image-right R supports38/58 and L48 with alternating lifted legs and heel/toe passage. Hood back, quiver/crossbow and grip retained. Full feet and wholebody remain inside source. Garan N driver. Estimated support phases, not motion capture."
+}

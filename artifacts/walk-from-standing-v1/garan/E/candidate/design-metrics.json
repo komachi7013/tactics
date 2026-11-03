@@ -1,0 +1,20 @@
+{
+  "referenceHead": {
+    "width": 57,
+    "area": 2404
+  },
+  "candidateHeadWidthMedian": 56.0,
+  "headAreaRatio": 0.9854409317803661,
+  "headTopRange": [
+    99,
+    100
+  ],
+  "groundRange": [
+    273,
+    282
+  ],
+  "frames": 19,
+  "cycleMs": 800,
+  "all19FramesViewedOnLight": true,
+  "gameApplied": false
+}

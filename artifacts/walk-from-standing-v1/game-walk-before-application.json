@@ -1,0 +1,554 @@
+{
+  "lise": {
+    "N": {
+      "frames": 18,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.875,
+      "visibleHeight": 156.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-lise-N",
+      "path": "/assets/motion-v3/lise/walk-N.png"
+    },
+    "E": {
+      "frames": 17,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.8828125,
+      "visibleHeight": 155.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-lise-E",
+      "path": "/assets/motion-v3/lise/walk-E.png"
+    },
+    "S": {
+      "frames": 13,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.80859375,
+      "visibleHeight": 153.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-lise-S",
+      "path": "/assets/motion-v3/lise/walk-S.png"
+    },
+    "W": {
+      "key": "motion-v4-walk-lise-W",
+      "path": "/assets/motion-v4/lise/walk-W.png",
+      "cell": 256,
+      "frames": 20,
+      "originX": 0.5,
+      "originY": 0.87890625,
+      "visibleHeight": 155.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4
+    }
+  },
+  "garan": {
+    "N": {
+      "key": "motion-v4-walk-garan-N",
+      "path": "/assets/motion-v4/garan/walk-N.png",
+      "cell": 256,
+      "frames": 16,
+      "originX": 0.5,
+      "originY": 0.875,
+      "visibleHeight": 152.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4
+    },
+    "E": {
+      "key": "motion-v4-walk-garan-E",
+      "path": "/assets/motion-v4/garan/walk-E.png",
+      "cell": 256,
+      "frames": 17,
+      "originX": 0.5,
+      "originY": 0.87890625,
+      "visibleHeight": 159.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4
+    },
+    "S": {
+      "key": "motion-v4-walk-garan-S",
+      "path": "/assets/motion-v4/garan/walk-S.png",
+      "cell": 256,
+      "frames": 22,
+      "originX": 0.5,
+      "originY": 0.8828125,
+      "visibleHeight": 177.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4
+    },
+    "W": {
+      "key": "motion-v4-walk-garan-W",
+      "path": "/assets/motion-v4/garan/walk-W.png",
+      "cell": 256,
+      "frames": 20,
+      "originX": 0.5,
+      "originY": 0.8671875,
+      "visibleHeight": 161.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4
+    }
+  },
+  "neia": {
+    "N": {
+      "frames": 18,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.8125,
+      "visibleHeight": 153.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-neia-N",
+      "path": "/assets/motion-v3/neia/walk-N.png"
+    },
+    "E": {
+      "frames": 31,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.8125,
+      "visibleHeight": 158.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-neia-E",
+      "path": "/assets/motion-v3/neia/walk-E.png"
+    },
+    "S": {
+      "frames": 17,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.8125,
+      "visibleHeight": 152.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-neia-S",
+      "path": "/assets/motion-v3/neia/walk-S.png"
+    },
+    "W": {
+      "frames": 37,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.8125,
+      "visibleHeight": 154.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-neia-W",
+      "path": "/assets/motion-v3/neia/walk-W.png"
+    }
+  },
+  "sena": {
+    "N": {
+      "frames": 18,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.8046875,
+      "visibleHeight": 156.5,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-sena-N",
+      "path": "/assets/motion-v3/sena/walk-N.png"
+    },
+    "E": {
+      "frames": 24,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.8125,
+      "visibleHeight": 157.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-sena-E",
+      "path": "/assets/motion-v3/sena/walk-E.png"
+    },
+    "S": {
+      "frames": 17,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.80859375,
+      "visibleHeight": 153.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-sena-S",
+      "path": "/assets/motion-v3/sena/walk-S.png"
+    },
+    "W": {
+      "frames": 21,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.80859375,
+      "visibleHeight": 157.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-sena-W",
+      "path": "/assets/motion-v3/sena/walk-W.png"
+    }
+  },
+  "iva": {
+    "N": {
+      "frames": 17,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.8125,
+      "visibleHeight": 158.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-iva-N",
+      "path": "/assets/motion-v3/iva/walk-N.png"
+    },
+    "E": {
+      "frames": 17,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.8125,
+      "visibleHeight": 156.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-iva-E",
+      "path": "/assets/motion-v3/iva/walk-E.png"
+    },
+    "S": {
+      "frames": 22,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.8046875,
+      "visibleHeight": 153.5,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-iva-S",
+      "path": "/assets/motion-v3/iva/walk-S.png"
+    },
+    "W": {
+      "frames": 21,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.80859375,
+      "visibleHeight": 157.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-iva-W",
+      "path": "/assets/motion-v3/iva/walk-W.png"
+    }
+  },
+  "dani": {
+    "N": {
+      "frames": 18,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.8046875,
+      "visibleHeight": 156.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-dani-N",
+      "path": "/assets/motion-v3/dani/walk-N.png"
+    },
+    "E": {
+      "frames": 16,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.8125,
+      "visibleHeight": 156.5,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-dani-E",
+      "path": "/assets/motion-v3/dani/walk-E.png"
+    },
+    "S": {
+      "key": "motion-v4-walk-dani-S",
+      "path": "/assets/motion-v4/dani/walk-S.png",
+      "cell": 256,
+      "frames": 22,
+      "originX": 0.5,
+      "originY": 0.80859375,
+      "visibleHeight": 153.5,
+      "cycleMs": 720,
+      "tilesPerCycle": 4
+    },
+    "W": {
+      "frames": 19,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.8125,
+      "visibleHeight": 154.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-dani-W",
+      "path": "/assets/motion-v3/dani/walk-W.png"
+    }
+  },
+  "guard": {
+    "N": {
+      "frames": 23,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.80859375,
+      "visibleHeight": 154.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-guard-N",
+      "path": "/assets/motion-v3/guard/walk-N.png"
+    },
+    "E": {
+      "frames": 23,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.80859375,
+      "visibleHeight": 155.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-guard-E",
+      "path": "/assets/motion-v3/guard/walk-E.png"
+    },
+    "S": {
+      "frames": 23,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.80859375,
+      "visibleHeight": 153.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-guard-S",
+      "path": "/assets/motion-v3/guard/walk-S.png"
+    },
+    "W": {
+      "key": "motion-v4-walk-guard-W",
+      "path": "/assets/motion-v4/guard/walk-W.png",
+      "cell": 256,
+      "frames": 20,
+      "originX": 0.5,
+      "originY": 0.80859375,
+      "visibleHeight": 158.5,
+      "cycleMs": 720,
+      "tilesPerCycle": 4
+    }
+  },
+  "archer": {
+    "N": {
+      "frames": 21,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.80859375,
+      "visibleHeight": 153.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-archer-N",
+      "path": "/assets/motion-v3/archer/walk-N.png"
+    },
+    "E": {
+      "frames": 16,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.80859375,
+      "visibleHeight": 156.5,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-archer-E",
+      "path": "/assets/motion-v3/archer/walk-E.png"
+    },
+    "S": {
+      "frames": 22,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.8046875,
+      "visibleHeight": 153.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-archer-S",
+      "path": "/assets/motion-v3/archer/walk-S.png"
+    },
+    "W": {
+      "frames": 33,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.8046875,
+      "visibleHeight": 155.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-archer-W",
+      "path": "/assets/motion-v3/archer/walk-W.png"
+    }
+  },
+  "vesk": {
+    "N": {
+      "frames": 19,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.8046875,
+      "visibleHeight": 152.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-vesk-N",
+      "path": "/assets/motion-v3/vesk/walk-N.png"
+    },
+    "E": {
+      "frames": 21,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.8046875,
+      "visibleHeight": 154.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-vesk-E",
+      "path": "/assets/motion-v3/vesk/walk-E.png"
+    },
+    "S": {
+      "key": "motion-v4-walk-vesk-S",
+      "path": "/assets/motion-v4/vesk/walk-S.png",
+      "cell": 256,
+      "frames": 22,
+      "originX": 0.5,
+      "originY": 0.8046875,
+      "visibleHeight": 184.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4
+    },
+    "W": {
+      "key": "motion-v4-walk-vesk-W",
+      "path": "/assets/motion-v4/vesk/walk-W.png",
+      "cell": 256,
+      "frames": 20,
+      "originX": 0.5,
+      "originY": 0.80859375,
+      "visibleHeight": 191.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4
+    }
+  },
+  "toma": {
+    "N": {
+      "frames": 26,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.8125,
+      "visibleHeight": 157.5,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-toma-N",
+      "path": "/assets/motion-v3/toma/walk-N.png"
+    },
+    "E": {
+      "frames": 22,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.8125,
+      "visibleHeight": 153.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-toma-E",
+      "path": "/assets/motion-v3/toma/walk-E.png"
+    },
+    "S": {
+      "frames": 18,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.8125,
+      "visibleHeight": 152.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-toma-S",
+      "path": "/assets/motion-v3/toma/walk-S.png"
+    },
+    "W": {
+      "key": "motion-v4-walk-toma-W",
+      "path": "/assets/motion-v4/toma/walk-W.png",
+      "cell": 256,
+      "frames": 21,
+      "originX": 0.5,
+      "originY": 0.8046875,
+      "visibleHeight": 158.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4
+    }
+  },
+  "worker": {
+    "N": {
+      "frames": 18,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.8046875,
+      "visibleHeight": 150.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-worker-N",
+      "path": "/assets/motion-v3/worker/walk-N.png"
+    },
+    "E": {
+      "frames": 16,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.80859375,
+      "visibleHeight": 154.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-worker-E",
+      "path": "/assets/motion-v3/worker/walk-E.png"
+    },
+    "S": {
+      "key": "motion-v4-walk-worker-S",
+      "path": "/assets/motion-v4/worker/walk-S.png",
+      "cell": 256,
+      "frames": 22,
+      "originX": 0.5,
+      "originY": 0.80859375,
+      "visibleHeight": 193.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4
+    },
+    "W": {
+      "key": "motion-v4-walk-worker-W",
+      "path": "/assets/motion-v4/worker/walk-W.png",
+      "cell": 256,
+      "frames": 20,
+      "originX": 0.5,
+      "originY": 0.80859375,
+      "visibleHeight": 153.5,
+      "cycleMs": 720,
+      "tilesPerCycle": 4
+    }
+  },
+  "delegation": {
+    "N": {
+      "frames": 21,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.8046875,
+      "visibleHeight": 155.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-delegation-N",
+      "path": "/assets/motion-v3/delegation/walk-N.png"
+    },
+    "E": {
+      "frames": 22,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.80859375,
+      "visibleHeight": 153.5,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-delegation-E",
+      "path": "/assets/motion-v3/delegation/walk-E.png"
+    },
+    "S": {
+      "key": "motion-v4-walk-delegation-S",
+      "path": "/assets/motion-v4/delegation/walk-S.png",
+      "cell": 256,
+      "frames": 22,
+      "originX": 0.5,
+      "originY": 0.80859375,
+      "visibleHeight": 154.5,
+      "cycleMs": 720,
+      "tilesPerCycle": 4
+    },
+    "W": {
+      "frames": 19,
+      "cell": 256,
+      "originX": 0.5,
+      "originY": 0.80859375,
+      "visibleHeight": 155.0,
+      "cycleMs": 720,
+      "tilesPerCycle": 4,
+      "key": "motion-v3-walk-delegation-W",
+      "path": "/assets/motion-v3/delegation/walk-W.png"
+    }
+  }
+}

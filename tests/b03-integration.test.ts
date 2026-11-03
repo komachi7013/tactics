@@ -4,8 +4,8 @@ import { createInitialState, getUnit, reduce } from '../src/domain/engine';
 import { runEnemyActivation } from '../src/domain/ai';
 import type { BattleId, BattleState, Command } from '../src/domain/types';
 import b01 from './fixtures/routes.json';
-import b02 from './fixtures/b02-route.json';
-import b03 from './fixtures/b03-route.json';
+import b02 from './fixtures/defend-cooldown-v1/b02-route.json';
+import b03 from './fixtures/manual-cart-v1/b03-route.json';
 
 function memory(raw?: string) {
   const data = new Map<string, string>(raw ? [[CAMPAIGN_KEY, raw]] : []);

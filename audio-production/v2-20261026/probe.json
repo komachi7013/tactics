@@ -1,0 +1,18 @@
+{
+  "executables": {
+    "python3": "/opt/homebrew/bin/python3",
+    "ffmpeg": null,
+    "ffprobe": null,
+    "fluidsynth": "/opt/homebrew/bin/fluidsynth",
+    "timidity": null
+  },
+  "soundfonts": [
+    {
+      "path": "/Users/komachi/work/tactics/.codex/skills/rpg-music/assets/GeneralUser-GS.sf2",
+      "exists": true
+    }
+  ],
+  "scope": "PATH and explicit soundfonts or the single .sf2 in skill assets",
+  "renderer_tested": false,
+  "music_service": "not inspected by this local helper"
+}

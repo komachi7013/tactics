@@ -1,0 +1,187 @@
+{
+  "frames": 19,
+  "cycleMs": 800,
+  "fpsRational": [
+    95,
+    4
+  ],
+  "durationsMs": [
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42
+  ],
+  "sourceIndices": [
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57
+  ],
+  "sourceVideoSha256": "35a40293bc5a25e028d8427bf4038268ce432dec16d0facfe84c44b461b4c0d7",
+  "sheetSha256": "3f5b4fff54ef55b91c294616bce862b5b8d5c295678505abc1cbbc6ff194b5ee",
+  "fixedScale": 0.26865671641791045,
+  "fixedOffset": [
+    -1,
+    63
+  ],
+  "frameGeometry": [
+    {
+      "headTop": 101,
+      "ground": 281,
+      "width": 70
+    },
+    {
+      "headTop": 101,
+      "ground": 280,
+      "width": 70
+    },
+    {
+      "headTop": 100,
+      "ground": 279,
+      "width": 70
+    },
+    {
+      "headTop": 100,
+      "ground": 278,
+      "width": 72
+    },
+    {
+      "headTop": 100,
+      "ground": 278,
+      "width": 72
+    },
+    {
+      "headTop": 100,
+      "ground": 279,
+      "width": 74
+    },
+    {
+      "headTop": 100,
+      "ground": 279,
+      "width": 75
+    },
+    {
+      "headTop": 100,
+      "ground": 279,
+      "width": 76
+    },
+    {
+      "headTop": 100,
+      "ground": 280,
+      "width": 77
+    },
+    {
+      "headTop": 100,
+      "ground": 281,
+      "width": 78
+    },
+    {
+      "headTop": 100,
+      "ground": 283,
+      "width": 77
+    },
+    {
+      "headTop": 100,
+      "ground": 283,
+      "width": 77
+    },
+    {
+      "headTop": 100,
+      "ground": 283,
+      "width": 75
+    },
+    {
+      "headTop": 100,
+      "ground": 282,
+      "width": 74
+    },
+    {
+      "headTop": 100,
+      "ground": 282,
+      "width": 74
+    },
+    {
+      "headTop": 100,
+      "ground": 282,
+      "width": 72
+    },
+    {
+      "headTop": 100,
+      "ground": 281,
+      "width": 71
+    },
+    {
+      "headTop": 100,
+      "ground": 281,
+      "width": 70
+    },
+    {
+      "headTop": 101,
+      "ground": 280,
+      "width": 70
+    }
+  ],
+  "contactReview": {
+    "videoSha256": "35a40293bc5a25e028d8427bf4038268ce432dec16d0facfe84c44b461b4c0d7",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "L"
+      },
+      {
+        "frame": 48,
+        "foot": "R"
+      },
+      {
+        "frame": 58,
+        "foot": "L"
+      }
+    ],
+    "reviewNote": "Worker S source/full feet sheets reviewed: near image-right L38/58 and far R48 support, both feet alternately pass with small stride/lift. Upperbody upright, cap/apron/gloves/tool retained. Fullbody and soles inside source. Existing Lise S driver and own S standing. Estimated support phases, not motion capture."
+  },
+  "status": "visually-reviewed-comparison-candidate; user review pending",
+  "matteReportStatus": "pass",
+  "matteOverrideReason": null,
+  "gameApplied": true,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "userApproved": false,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "automaticGaitLoopStatus": "automatic selection requires visual review",
+  "sheetColumns": 5,
+  "candidateDirectory": "artifacts/walk-from-standing-v1/worker/S/candidate",
+  "sourceSheetSha256": "1b25203fef1d49bcf398fb389051557ea59aa39a32eef1f35056c1d38798ac31"
+}

@@ -1,0 +1,345 @@
+{
+  "standingSourcesUnchanged": 48,
+  "uniqueSubmittedJobs": 9,
+  "acceptedDirections": 0,
+  "targetFrames": 19,
+  "targetCycleMs": 800,
+  "rows": [
+    {
+      "cast": "lise",
+      "direction": "N",
+      "inputSourceUnchanged": true,
+      "generated": true,
+      "accepted": false
+    },
+    {
+      "cast": "lise",
+      "direction": "E",
+      "inputSourceUnchanged": true,
+      "generated": true,
+      "accepted": false
+    },
+    {
+      "cast": "lise",
+      "direction": "S",
+      "inputSourceUnchanged": true,
+      "generated": true,
+      "accepted": false
+    },
+    {
+      "cast": "lise",
+      "direction": "W",
+      "inputSourceUnchanged": true,
+      "generated": true,
+      "accepted": false
+    },
+    {
+      "cast": "garan",
+      "direction": "N",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "garan",
+      "direction": "E",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "garan",
+      "direction": "S",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "garan",
+      "direction": "W",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "neia",
+      "direction": "N",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "neia",
+      "direction": "E",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "neia",
+      "direction": "S",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "neia",
+      "direction": "W",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "sena",
+      "direction": "N",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "sena",
+      "direction": "E",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "sena",
+      "direction": "S",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "sena",
+      "direction": "W",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "iva",
+      "direction": "N",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "iva",
+      "direction": "E",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "iva",
+      "direction": "S",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "iva",
+      "direction": "W",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "dani",
+      "direction": "N",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "dani",
+      "direction": "E",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "dani",
+      "direction": "S",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "dani",
+      "direction": "W",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "guard",
+      "direction": "N",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "guard",
+      "direction": "E",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "guard",
+      "direction": "S",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "guard",
+      "direction": "W",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "archer",
+      "direction": "N",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "archer",
+      "direction": "E",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "archer",
+      "direction": "S",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "archer",
+      "direction": "W",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "vesk",
+      "direction": "N",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "vesk",
+      "direction": "E",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "vesk",
+      "direction": "S",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "vesk",
+      "direction": "W",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "toma",
+      "direction": "N",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "toma",
+      "direction": "E",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "toma",
+      "direction": "S",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "toma",
+      "direction": "W",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "worker",
+      "direction": "N",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "worker",
+      "direction": "E",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "worker",
+      "direction": "S",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "worker",
+      "direction": "W",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "delegation",
+      "direction": "N",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "delegation",
+      "direction": "E",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "delegation",
+      "direction": "S",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    },
+    {
+      "cast": "delegation",
+      "direction": "W",
+      "inputSourceUnchanged": true,
+      "generated": false,
+      "accepted": false
+    }
+  ]
+}

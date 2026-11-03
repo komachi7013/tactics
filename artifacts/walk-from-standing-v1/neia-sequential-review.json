@@ -1,0 +1,52 @@
+{
+  "generationOrder": [
+    "E",
+    "N",
+    "S",
+    "W"
+  ],
+  "generationCount": 4,
+  "quotedCredits": 112,
+  "sameSixConditions": true,
+  "oneOwnDirectionStandingImagePerJob": true,
+  "referenceVideos": 0,
+  "automaticPaidRetakes": 0,
+  "gameWalkingUnchanged": true,
+  "directions": [
+    {
+      "direction": "E",
+      "jobId": "1ba7c673-6b34-4076-86a1-290f2155a420",
+      "nativeCycleSeconds": 1.3333333333333333,
+      "frames": 19,
+      "cycleMs": 800,
+      "automaticStatus": "automatic selected27:85 (58 frames) at low confidence; manual support cycle32:64 used for output",
+      "reviewRecordedBeforeNextRequestFile": true
+    },
+    {
+      "direction": "N",
+      "jobId": "3fd143fb-9623-445a-a388-6d5d35f29979",
+      "nativeCycleSeconds": 1.3333333333333333,
+      "frames": 19,
+      "cycleMs": 800,
+      "automaticStatus": "no acceptable automatic loop window; manual R32-L48-R64 reviewed; pink background removed with scoped profile",
+      "reviewRecordedBeforeNextRequestFile": true
+    },
+    {
+      "direction": "S",
+      "jobId": "6d87797f-901b-4537-8172-0ba206b055ea",
+      "nativeCycleSeconds": 1.0,
+      "frames": 19,
+      "cycleMs": 800,
+      "automaticStatus": "no acceptable automatic loop window; early rhythm uneven; manual later L60-R72-L84 reviewed",
+      "reviewRecordedBeforeNextRequestFile": true
+    },
+    {
+      "direction": "W",
+      "jobId": "cab63936-220f-4303-9b84-0cc3b33589c8",
+      "nativeCycleSeconds": 2.0,
+      "frames": 19,
+      "cycleMs": 800,
+      "automaticStatus": "no gait period in configured12..38 frame search; manual48-frame L8-R32-L56 reviewed"
+    }
+  ]
+}

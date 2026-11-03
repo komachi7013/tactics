@@ -92,15 +92,9 @@ export function trainingPoints(growth: Growth, character: CharacterId): number {
 }
 // Optional catch-up only. Each completed chapter raises the gross-earned ceiling by 6.
 // Resting characters receive nothing until this explicit action is requested.
-export function tutor(growth: Growth, character: CharacterId, completed: readonly BattleId[]): Growth {
-  if (!validGrowth(growth,completed)) throw new Error('育成とクリア履歴が一致しません。');
-  const frontier = BATTLE_IDS[Math.min(completed.length,11)];
-  if (!availableCharacters(frontier).includes(character)) throw new Error('未加入または強制離脱中の人物は補習できません。');
-  // Settle mandatory return compensation first so its pending state cannot be
-  // used to claim catch-up for the same missing reward twice.
-  const next = returnFromAbsence(growth,frontier);
-  next.tutoring[character] += Math.max(0, Math.floor(completed.length / 3) * 6 - trainingPoints(next,character));
-  return next;
+/** Historical tutoring totals remain readable, but new training is disabled. */
+export function tutor(_growth: Growth, _character: CharacterId, _completed: readonly BattleId[]): Growth {
+  throw new Error('訓練・補習は現在利用できません。成長は章共通レベルと装備に反映されます。');
 }
 export function migrateLegacyGrowth(completed: readonly BattleId[]): Growth {
   if (!prefix(completed)) throw new Error('旧クリア履歴が不正です。');

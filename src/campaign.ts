@@ -1,7 +1,7 @@
 import type { BattleId, BattleState } from './domain/types';
 import { awardFirstClear, createGrowth, migrateLegacyGrowth, returnFromAbsence, validGrowth, validParty, type CharacterId, type Growth } from './progression';
 import { createJobs, validJobs, type JobsState } from './jobs';
-import { createEquipment, validEquipment, ownedEquipment, EQUIPMENT_EVENTS, type EquipmentState } from './equipment';
+import { createEquipment, validEquipment, validLegacyEquipment, reconcileEquipmentRoles, ownedEquipment, EQUIPMENT_EVENTS, type EquipmentState } from './equipment';
 import { createCombatRandomConfig, validCombatRandomConfig, type CombatRandomConfig } from './domain/combatRandom';
 
 export const CAMPAIGN_KEY = 'mio-tactics.progress.v1';
@@ -39,7 +39,10 @@ function validParties(value: unknown): value is Partial<Record<BattleId,Characte
   return !!value && typeof value === 'object' && !Array.isArray(value) && Object.entries(value).every(([id,party]) => ids.includes(id as BattleId) && validParty(id as BattleId,party));
 }
 export function editPreparation(c: Campaign, changes: { growth?: Growth; jobs?: JobsState; parties?: Partial<Record<BattleId,CharacterId[]>>; equipment?:EquipmentState }): Campaign {
-  const next = { ...normalize(c), ...structuredClone(changes) };
+  const normalized=normalize(c);
+  if((changes.jobs&&!same(changes.jobs,normalized.jobs))||(changes.growth&&!same(changes.growth,normalized.growth)))throw new Error('職業・訓練の履歴は変更できません。編成と装備を選んでください。');
+  const next = { ...normalized, ...structuredClone(changes) };
+  if(changes.equipment&&!validEquipment(next.equipment,next.completed,next.jobs!))throw new Error('この人物に装備できない武器、未所持品、または重複装備は準備に反映できません。');
   if (!isCampaign(next)) throw new Error('準備内容と進行履歴が一致しません。');
   return inherit(c,next);
 }
@@ -55,7 +58,7 @@ function isCampaign(value: unknown): value is Campaign {
   const versionValid = c.version===1 ? Object.keys(c).every(key=>legacyKeys.includes(key)) :
     (c.version===2||c.version===3||c.version===4) && Object.keys(c).every(key=>(c.version===4?[...currentKeys,'equipment','combat']:c.version===3?[...currentKeys,'equipment']:currentKeys).includes(key)) &&
     list(c.completed,ids) && validGrowth(c.growth,c.completed) && validJobs(c.jobs,c.growth!) && validParties(c.parties) &&
-    ((c.version!==3&&c.version!==4)||validEquipment(c.equipment,c.completed,c.jobs!)) &&
+    ((c.version!==3&&c.version!==4)||validLegacyEquipment(c.equipment,c.completed,c.jobs!)) &&
     (c.version!==4||validCombatRandomConfig(c.combat));
   return versionValid && list(c.unlocked, ids) && list(c.completed, ids) && list(c.evidence, knownEvidence)
     && c.unlocked.includes('B01') && ids.includes(c.currentBattle) && c.unlocked.includes(c.currentBattle)
@@ -90,7 +93,7 @@ function normalize(c: Campaign): Campaign {
   const growth = c.version === 1 ? migrateLegacyGrowth(completed) : structuredClone(c.growth!);
   const jobs = c.version === 1 ? createJobs() : structuredClone(c.jobs!);
   const parties = c.version === 1 ? {} : structuredClone(c.parties!);
-  const equipment=(c.version===3||c.version===4)?structuredClone(c.equipment!):createEquipment();
+  const equipment=reconcileEquipmentRoles((c.version===3||c.version===4)?structuredClone(c.equipment!):createEquipment());
   const combat=c.version===4?structuredClone(c.combat!):createCombatRandomConfig();
   // Canonical event order is stable; only explicit victory events enter acquired.
   equipment.acquired=EQUIPMENT_EVENTS.filter(e=>e.source==='chest'&&equipment.acquired.includes(e.id)).map(e=>e.id);
@@ -123,7 +126,10 @@ export function readCampaign(storage: StorageLike): { campaign: Campaign; warnin
     if (raw === null) return { campaign: createCampaign(), warning: null, writable: true };
     const value: unknown = JSON.parse(raw);
     if (!isCampaign(value)) return { campaign: createCampaign(), warning: '保存データの版または内容を読めません。元のデータは保持しています。保存せずに遊ぶか、明示的に進行をリセットできます。', writable: false };
-    return { campaign: track(normalize(structuredClone(value))), warning: null, writable: true };
+    const normalized=normalize(structuredClone(value));
+    const archived=Object.entries(normalized.jobs!).some(([id,entry])=>entry.main!==createJobs()[id as CharacterId].main||entry.learned.length>0||entry.support!==null)||Object.values(normalized.growth!.tutoring).some(points=>points>0);
+    const returned=value.equipment&&!same(value.equipment.loadouts,normalized.equipment!.loadouts);
+    return { campaign: track(normalized), warning: archived||returned?'職業・訓練の設定は履歴として保持し、能力には反映しません。合わない武器は共有保管へ戻します。':null, writable: true };
   } catch {
     return { campaign: createCampaign(), warning: '進行の保存データを読めません。元のデータは変更していません。保存せずに遊べます。', writable: false };
   }
@@ -157,6 +163,7 @@ export function writeCampaign(storage: StorageLike, campaign: Campaign): { ok: b
     growth.tutoring[character] = changed ? incoming : existing;
   }
   const editedJobs = !same(local.jobs,baseline.local.jobs);
+  if(editedJobs||Object.keys(local.growth!.tutoring).some(id=>local.growth!.tutoring[id as CharacterId]!==baseline.local.growth.tutoring[id as CharacterId]))return {ok:false,error:'職業・訓練の履歴は変更できないため保存していません。'};
   if (editedJobs && !same(saved.jobs,baseline.stored.jobs) && !same(local.jobs,saved.jobs)) return conflict();
   const jobs = editedJobs ? local.jobs! : saved.jobs!;
   const parties = structuredClone(saved.parties!);

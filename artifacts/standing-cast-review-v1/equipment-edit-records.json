@@ -1,0 +1,58 @@
+[
+  {
+    "cast": "toma",
+    "direction": "E",
+    "generated": "artifacts/standing-cast-repairs-local-v1/toma/E/equipment-generated.png",
+    "base": "artifacts/standing-cast-repairs-local-v1/toma/E/equipment-before.png",
+    "normalized": "artifacts/standing-cast-repairs-local-v1/toma/E/equipment-normalized.png",
+    "sourceActiveImage": "artifacts/standing-cast-review-v1/original/toma/E/standing.png"
+  },
+  {
+    "cast": "toma",
+    "direction": "S",
+    "generated": "artifacts/standing-cast-repairs-local-v1/toma/S/equipment-generated.png",
+    "base": "artifacts/standing-cast-repairs-local-v1/toma/S/equipment-before.png",
+    "normalized": "artifacts/standing-cast-repairs-local-v1/toma/S/equipment-normalized.png",
+    "sourceActiveImage": "artifacts/standing-cast-repairs-local-v1/toma/S/five-point-aligned.png"
+  },
+  {
+    "cast": "garan",
+    "direction": "S",
+    "generated": "artifacts/standing-cast-repairs-local-v1/garan/S/equipment-generated.png",
+    "base": "artifacts/standing-cast-repairs-local-v1/garan/S/equipment-before.png",
+    "normalized": "artifacts/standing-cast-repairs-local-v1/garan/S/equipment-normalized.png",
+    "sourceActiveImage": "artifacts/standing-cast-repairs-local-v1/garan/S/five-point-aligned.png"
+  },
+  {
+    "cast": "sena",
+    "direction": "W",
+    "generated": "artifacts/standing-cast-repairs-local-v1/sena/W/equipment-generated.png",
+    "base": "artifacts/standing-cast-repairs-local-v1/sena/W/equipment-before.png",
+    "normalized": "artifacts/standing-cast-repairs-local-v1/sena/W/equipment-normalized.png",
+    "sourceActiveImage": "artifacts/standing-cast-repairs-local-v1/sena/W/five-point-aligned.png"
+  },
+  {
+    "cast": "iva",
+    "direction": "W",
+    "generated": "artifacts/standing-cast-repairs-local-v1/iva/W/equipment-generated.png",
+    "base": "artifacts/standing-cast-repairs-local-v1/iva/W/equipment-before.png",
+    "normalized": "artifacts/standing-cast-repairs-local-v1/iva/W/equipment-normalized.png",
+    "sourceActiveImage": "artifacts/standing-cast-review-v1/original/iva/W/standing.png"
+  },
+  {
+    "cast": "archer",
+    "direction": "S",
+    "generated": "artifacts/standing-cast-repairs-local-v1/archer/S/equipment-generated.png",
+    "base": "artifacts/standing-cast-repairs-local-v1/archer/S/equipment-before.png",
+    "normalized": "artifacts/standing-cast-repairs-local-v1/archer/S/equipment-normalized.png",
+    "sourceActiveImage": "artifacts/standing-cast-repairs-local-v1/archer/S/five-point-aligned.png"
+  },
+  {
+    "cast": "lise",
+    "direction": "S",
+    "generated": "artifacts/standing-cast-repairs-local-v1/lise/S/equipment-generated.png",
+    "base": "artifacts/standing-cast-repairs-local-v1/lise/S/equipment-before.png",
+    "normalized": "artifacts/standing-cast-repairs-local-v1/lise/S/equipment-normalized.png",
+    "sourceActiveImage": "artifacts/standing-cast-repairs-local-v1/lise/S/pair-aligned-display.png"
+  }
+]

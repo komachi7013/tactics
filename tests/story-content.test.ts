@@ -7,15 +7,47 @@ import { readAuthoredStory, storySpeakerFace } from '../src/view/storyScript';
 import { StoryCursor } from '../src/view/storyPanel';
 import { endingContent } from '../src/ending';
 import { BATTLE_IDS } from '../src/progression';
+import type { BattleId } from '../src/domain/types';
 
 // Independent plain text comparison: formatting wrappers may move, authored text may not.
 const plain = (html:string) => html.replace(/<br\s*\/?\s*>/gi,'\n').replace(/<[^>]*>/g,'').replace(/\s+/g,'');
 const pageText = (html:string) => readAuthoredStory(html).map(p=>p.sourceText).join('').replace(/\s+/g,'');
+const canonicalOnly = (html:string) => html.replace(/<blockquote data-story-addition="[^"]+">[\s\S]*?<\/blockquote>/g,'');
+type StoryVariant='intro'|'result'|'resultWithK';
+type CopyEdit=readonly [before:string,after:string];
+// The archived fixture stays unchanged. Only these explicitly approved operation
+// supplements may differ; dialogue, events, optional K and all other HTML remain exact.
+const operationCopyEdits:Partial<Record<BattleId,Partial<Record<'intro'|'result',readonly CopyEdit[]>>>>={
+  B04:{result:[['職固有技は今後拡充します。','']]},
+  B05:{intro:[['新職技は今後拡充します。','']],result:[['新職技は今後拡充します。','']]},
+  B06:{intro:[['新職技は今後拡充します。','']],result:[['編成・訓練は戦闘前に変更できます。','出撃メンバーと装備は戦闘前に変更できます。']]},
+  B07:{result:[['編成・訓練は戦闘前に変更できます。','出撃メンバーと装備は戦闘前に変更できます。']]},
+  B08:{
+    intro:[['編成・訓練は戦闘前の「部隊の準備」から変更できます。','出撃メンバーと装備は戦闘前の「出撃準備」で変更できます。']],
+    result:[['編成・訓練は戦闘前の「部隊の準備」から変更できます。','出撃メンバーと装備は戦闘前の「出撃準備」で変更できます。']],
+  },
+  B09:{result:[['職固有技の拡充・','']]},
+  B10:{result:[['編成・訓練は戦闘前に変更できます。','出撃メンバーと装備は戦闘前に変更できます。']]},
+  B11:{intro:[['弁復旧は個人の新職技ではありません。','弁の復旧には救出した保守員が協力します。']],result:[['職固有技の拡充・','']]},
+  B12:{result:[['育成・職業・編成は段階実装中です。職固有技の拡充・','']]},
+};
+function approvedStoryCopy(id:BattleId,variant:StoryVariant):string {
+  let html=original[id][variant];
+  for(const [before,after] of operationCopyEdits[id]?.[variant==='intro'?'intro':'result']??[]){
+    expect(html.split(before),`${id}/${variant}: approved old copy must occur exactly once`).toHaveLength(2);
+    html=html.replace(before,after);
+  }
+  return html;
+}
 describe('complete operation instructions retain original conditions',()=>{
   for(const id of BATTLE_IDS)for(const gate of [false,true]){
     it(`${id}: original full briefing, gate=${gate}`,()=>{
-      expect(briefingRulesText(id,{gate:gate ? {} : undefined,roundLimit:7},briefingOriginal.context))
-        .toBe(briefingOriginal.cases[id][gate ? 'withGate':'withoutGate']);
+      const originalCopy=briefingOriginal.cases[id][gate ? 'withGate':'withoutGate'];
+      let expected=gate&&['B01','B02','B03'].includes(id)
+        ? originalCopy.replace('水門は任意。次ラウンドから','水門を操作すると、次ラウンドから') : originalCopy;
+      if (id === 'B01' && gate) expected = expected.replace('次ラウンドから', '操作直後から');
+      if (id === 'B03' && !gate) expected = expected.replace('荷車は味方戦闘員の隣接と次セルの空きを確認し、次R開始に1セルずつ進みます。敵が隣接すると停止。施療士として出撃したセナの手当は+6・2回、荷車も対象。', '荷車の上下左右に生存味方戦闘員を隣接させ、「荷車を押す」で1行動を使い経路上を1マス進めます。荷車全体で1ラウンド1回まで。斜めは不可。敵が荷車に隣接している、次の進行先が埋まっている、通行不能の場合は押せません。ラウンド経過では自動移動しません。セナの手当は+6・2回で、荷車にも使えます。');
+      expect(briefingRulesText(id,{gate:gate ? {} : undefined,roundLimit:7},briefingOriginal.context)).toBe(expected);
     });
   }
   it('keeps the supplied convoy deadline and expanded exit coordinates verbatim',()=>{
@@ -25,10 +57,14 @@ describe('complete operation instructions retain original conditions',()=>{
 });
 describe('verbatim scenario migration for every battle',()=>{
   for(const id of BATTLE_IDS){
-    it(`${id}: retains exact authored HTML including both optional K outcomes`,()=>{
-      expect(introStoryHtml(id)).toBe(original[id].intro);
-      expect(resultStoryHtml(id,[])).toBe(original[id].result);
-      expect(resultStoryHtml(id,['K'])).toBe(original[id].resultWithK);
+    it(`${id}: retains original HTML except approved operation copy, including both optional K outcomes`,()=>{
+      expect(canonicalOnly(introStoryHtml(id))).toBe(approvedStoryCopy(id,'intro'));
+      expect(canonicalOnly(resultStoryHtml(id,[]))).toBe(approvedStoryCopy(id,'result'));
+      expect(canonicalOnly(resultStoryHtml(id,['K']))).toBe(approvedStoryCopy(id,'resultWithK'));
+      const quotations=(html:string)=>html.match(/<blockquote>[\s\S]*?<\/blockquote>/g)??[];
+      expect(quotations(introStoryHtml(id))).toEqual(quotations(original[id].intro));
+      expect(quotations(resultStoryHtml(id,[]))).toEqual(quotations(original[id].result));
+      expect(quotations(resultStoryHtml(id,['K']))).toEqual(quotations(original[id].resultWithK));
     });
     it(`${id}: every original dialogue/narrative character remains in authored order`,()=>{
       for(const html of [introStoryHtml(id),resultStoryHtml(id,[]),resultStoryHtml(id,['K'])]){
@@ -57,7 +93,7 @@ describe('explicit speaker attribution and non-lossy block handling',()=>{
     for(const id of BATTLE_IDS)for(const page of readAuthoredStory(introStoryHtml(id)+resultStoryHtml(id,[]))){
       if(!page.speaker)continue;names.add(page.speaker.name);expect(page.speaker.unitId).toBeTruthy();expect(storySpeakerFace(page.speaker.unitId!)).toBeDefined();
     }
-    expect([...names].sort()).toEqual(['イヴァ','セナ','ダニ','トマ','ネイア','リセ']);
+    expect([...names].sort()).toEqual(['イヴァ','ガラン','セナ','ダニ','トマ','ネイア','リセ']);
     expect(storySpeakerFace('ally-dani')?.id).toBe('ally-dani');expect(storySpeakerFace('escort-toma')?.id).toBe('escort-toma');
   });
   it('preserves unnamed, unknown, and incomplete dialogue without inventing faces',()=>{
@@ -70,6 +106,6 @@ describe('explicit speaker attribution and non-lossy block handling',()=>{
     expect(pages.map(p=>p.text)).toEqual(['第一文。第二文。\n改行&保持。','未知の説明<文字>']);
   });
   it('retains every ending heading, article, optional compensation paragraph and named final speech',()=>{
-    for(const evidence of [[],['B05:K']]){const html=endingContent(evidence);expect(pageText(html)).toBe(plain(html));const pages=readAuthoredStory(html);expect(pages.filter(p=>p.speaker).map(p=>p.speaker?.name)).toEqual(['ネイア']);expect(pages.some(p=>p.text.includes('恒久的な議席変更'))).toBe(true);}
+    for(const evidence of [[],['B05:K']]){const html=endingContent(evidence);expect(pageText(html)).toBe(plain(html));const pages=readAuthoredStory(canonicalOnly(html));expect(pages.filter(p=>p.speaker).map(p=>p.speaker?.name)).toEqual(['ネイア']);expect(pages.some(p=>p.text.includes('恒久的な議席変更'))).toBe(true);}
   });
 });

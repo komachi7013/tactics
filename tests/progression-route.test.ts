@@ -1,20 +1,21 @@
+import { learnSkill, setMainJob, equipSupport, legacyPreparation } from './fixtures/legacy-preparation';
 import route01 from './fixtures/progression-v2/b01-route.json';
-import route02 from './fixtures/progression-v2/b02-route.json';
-import route03 from './fixtures/progression-v2/b03-route.json';
-import route04 from './fixtures/progression-v2/b04-route.json';
-import route05 from './fixtures/progression-v2/b05-route.json';
-import route06 from './fixtures/progression-v2/b06-route.json';
-import route07 from './fixtures/progression-v2/b07-route.json';
-import route08 from './fixtures/progression-v2/b08-route.json';
-import route09 from './fixtures/progression-v2/b09-route.json';
-import route10 from './fixtures/progression-v2/b10-route.json';
-import route11 from './fixtures/progression-v2/b11-route.json';
-import route12 from './fixtures/progression-v2/b12-route.json';
-import custom09 from './fixtures/progression-v2/b09-custom-route.json';
+import route02 from './fixtures/defend-cooldown-v1/progression-v2/b02-route.json';
+import route03 from './fixtures/manual-cart-v1/progression-v2/b03-route.json';
+import route04 from './fixtures/defend-cooldown-v1/progression-v2/b04-route.json';
+import route05 from './fixtures/defend-cooldown-v1/progression-v2/b05-route.json';
+import route06 from './fixtures/defend-cooldown-v1/progression-v2/b06-route.json';
+import route07 from './fixtures/defend-cooldown-v1/progression-v2/b07-route.json';
+import route08 from './fixtures/defend-cooldown-v1/progression-v2/b08-route.json';
+import route09 from './fixtures/defend-cooldown-v1/progression-v2/b09-route.json';
+import route10 from './fixtures/defend-cooldown-v1/progression-v2/b10-route.json';
+import route11 from './fixtures/defend-cooldown-v1/progression-v2/b11-route.json';
+import route12 from './fixtures/defend-cooldown-v1/progression-v2/b12-route.json';
+import custom09 from './fixtures/defend-cooldown-v1/progression-v2/b09-custom-route.json';
 import {describe,it,expect} from 'vitest';
 import {createPartyBattle} from '../src/party';
-import {BATTLE_IDS,defaultParty,commonLevel,trainingPoints,type CharacterId} from '../src/progression';
-import {createJobs,learnSkill,setMainJob,equipSupport} from '../src/jobs';
+import {BATTLE_IDS, defaultParty, commonLevel, trainingPoints, type CharacterId} from '../src/progression';
+import {createJobs} from '../src/jobs';
 import {reduce} from '../src/domain/engine';
 import {runEnemyActivation} from '../src/domain/ai';
 import {createCampaign,completeBattle,readCampaign,writeCampaign,selectBattle,editPreparation,type Campaign,type StorageLike} from '../src/campaign';
@@ -32,7 +33,7 @@ function replay(state:BattleState,route:Route):BattleState {
  }
  expect(s.phase).toBe('won');expect(s.round).toBe(route.round);expect(s.records).toEqual(route.records);expect(s.units.filter(u=>u.team==='player').map(u=>[u.id,u.hp])).toEqual(route.playerHp);return s;
 }
-function saved(store:StorageLike,c:Campaign):Campaign {const result=writeCampaign(store,c);expect(result.ok,result.error).toBe(true);const read=readCampaign(store);expect(read.warning).toBeNull();expect(read.writable).toBe(true);expect(read.campaign.completed).toEqual(c.completed);expect(read.campaign.growth).toEqual(c.growth);expect(read.campaign.jobs).toEqual(c.jobs);return read.campaign;}
+function saved(store:StorageLike,c:Campaign):Campaign {const result=writeCampaign(store,c);expect(result.ok,result.error).toBe(true);const read=readCampaign(store);if(JSON.stringify(c.jobs)!==JSON.stringify(createJobs()))expect(read.warning).not.toBeNull();else expect(read.warning).toBeNull();expect(read.writable).toBe(true);expect(read.campaign.completed).toEqual(c.completed);expect(read.campaign.growth).toEqual(c.growth);expect(read.campaign.jobs).toEqual(c.jobs);return read.campaign;}
 function campaignThrough(count:number,store:StorageLike):Campaign {
  let campaign=saved(store,createCampaign());
  for(const [index,id] of BATTLE_IDS.slice(0,count).entries()){
@@ -48,14 +49,17 @@ describe('live progression routes with normal deterministic AI and persistent gr
  it('wins B01 through B12 with common chapter growth, records first-clear rosters and survives every save/reload',()=>{
   const campaign=campaignThrough(12,storage());expect(commonLevel(campaign.completed)).toBe(5);expect(campaign.completed).toEqual(BATTLE_IDS);expect(campaign.evidence).toContain('B12:U');expect(campaign.evidence).toContain('B12:V');expect(campaign.growth!.compensated).toEqual(['B06']);expect(trainingPoints(campaign.growth!,'ally-neia')).toBe(24);expect(trainingPoints(campaign.growth!,'ally-dani')).toBe(0);expect(campaign.jobs).toEqual(createJobs());
  });
- it('wins and persists B09 with Dani replacing the optional reserve and a switched main job plus one learned cross-job support',()=>{
+ it('replays the old custom B09 roster with archived role/support data ignored at deployment',()=>{
   const store=storage();let campaign=campaignThrough(8,store);campaign=selectBattle(campaign,'B09');
   const party:CharacterId[]=['ally-lise','ally-garan','ally-neia','ally-dani'];
   let jobs=learnSkill(campaign.jobs!,campaign.growth!,'ally-lise','surveyor-foundation','B09');jobs=setMainJob(jobs,'ally-lise','warden','B09');jobs=equipSupport(jobs,'ally-lise','surveyor-foundation');
-  campaign=editPreparation(campaign,{jobs,parties:{...campaign.parties,B09:party}});campaign=saved(store,campaign);
+  campaign=legacyPreparation(campaign,{jobs,parties:{...campaign.parties,B09:party}});store.setItem('mio-tactics.progress.v1',JSON.stringify(campaign));campaign=readCampaign(store).campaign;
   const beforeSena=trainingPoints(campaign.growth!,'ally-sena'),beforeDani=trainingPoints(campaign.growth!,'ally-dani');
-  const start=createPartyBattle('B09',party,campaign.jobs!,commonLevel(campaign.completed));expect(start.units.find(u=>u.id==='ally-lise')).toMatchObject({role:'堤防衛士',maxHp:30,atk:9,def:3});
-  const won=replay(start,fixture('B09',true));campaign=saved(store,completeBattle(campaign,won));
+  const start=createPartyBattle('B09',party,campaign.jobs!,commonLevel(campaign.completed));expect(start.units.find(u=>u.id==='ally-lise')).toMatchObject({role:'測量官',maxHp:22,atk:9,def:1});
+  // The versioned current route records measured fixed-role/cooldown outcomes.
+  // The old 30-HP job-conversion fixture remains archived separately, not mixed into this replay.
+  const fixedExpected=fixture('B09',true);expect(fixedExpected.playerHp.find(([id])=>id==='ally-lise')).toEqual(['ally-lise',22]);
+  const won=replay(start,fixedExpected);campaign=saved(store,completeBattle(campaign,won));
   expect(campaign.growth!.deployments.B09).toEqual(party);expect(campaign.parties!.B09).toEqual(party);expect(campaign.jobs!['ally-lise']).toEqual({main:'warden',learned:['surveyor-foundation'],support:'surveyor-foundation'});expect(trainingPoints(campaign.growth!,'ally-dani')).toBe(beforeDani+2);expect(trainingPoints(campaign.growth!,'ally-sena')).toBe(beforeSena);expect(campaign.unlocked).toContain('B10');
  });
 });

@@ -1,0 +1,21 @@
+{
+  "videoSha256": "ff8f89f907708478861df00266ce2e98627fe078c3db8fd670eefe03bbebe411",
+  "visualReviewed": true,
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "contacts": [
+    {
+      "frame": 38,
+      "foot": "R"
+    },
+    {
+      "frame": 48,
+      "foot": "L"
+    },
+    {
+      "frame": 58,
+      "foot": "R"
+    }
+  ],
+  "reviewNote": "N source and feet sheets inspected. Near image-right R supports38/58 while far L lifted; L supports48 as R passes. Brown/teal/ochre palette validated for pink matte; pink background and cast shadow removed. Full soles and back-facing orientation retained. Garan N driver. Estimated support phases, not motion capture."
+}

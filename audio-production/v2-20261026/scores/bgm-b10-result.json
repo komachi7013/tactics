@@ -1,0 +1,99 @@
+{
+  "id": "bgm-b10",
+  "master": {
+    "file": "masters/bgm-b10.wav",
+    "sha256": "ff63bb968b74255990a56eb5641574347117422873c079a373e9eb210d2b57a2",
+    "bytes": 17432492,
+    "sampleRate": 44100,
+    "channels": 2,
+    "frames": 4358112,
+    "seconds": 98.82340136054422,
+    "samplePeak": 0.319976806640625,
+    "rmsDbFS": -25.83809928738878,
+    "dc": [
+      -1.6609874944127183e-08,
+      1.3171658840600012e-08
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      4358112
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        0.000213623046875,
+        0.00042724609375
+      ],
+      "rmsDifferenceDb": [
+        0.24835041704024188,
+        0.500829847435954
+      ],
+      "slopeError": [
+        0.000885009765625,
+        0.002532958984375
+      ],
+      "numericalFlags": []
+    }
+  },
+  "delivery": {
+    "file": "delivery/bgm-b10.wav",
+    "sha256": "99544381b27accdd63fc21a6ea76dfd3f5fad8689fb3864a78981f4c0d7edd3c",
+    "bytes": 8716268,
+    "sampleRate": 22050,
+    "channels": 2,
+    "frames": 2179056,
+    "seconds": 98.82340136054422,
+    "samplePeak": 0.3194580078125,
+    "rmsDbFS": -25.83852553869268,
+    "dc": [
+      -2.1357554207246167e-08,
+      1.4817240886076355e-08
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      2179056
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        6.103515625e-05,
+        -0.000640869140625
+      ],
+      "rmsDifferenceDb": [
+        0.24706805631755063,
+        0.5004356417730491
+      ],
+      "slopeError": [
+        0.001861572265625,
+        0.005035400390625
+      ],
+      "numericalFlags": []
+    }
+  },
+  "listeningVerified": false,
+  "compositionRevision": "independent-r2",
+  "title": "救援を迎える港",
+  "usage": "B10 首府外港: 鎖門信号と検問保持、場外船団。開けた金管、抑制した打楽器。",
+  "bpm": 136,
+  "bars": 112,
+  "meter": [
+    2,
+    4
+  ],
+  "mode": "major",
+  "rationale": "B10 首府外港: 鎖門信号と検問保持、場外船団。開けた金管、抑制した打楽器。",
+  "direction": "快活な2/4の港の行進。トランペットのファンファーレとトロンボーンの合いの手。救援を迎える明るいアクション。",
+  "source": "scores/bgm-b10.json",
+  "midi": "scores/bgm-b10.mid",
+  "renderCycles": 3,
+  "extractStartFrame": 4364805,
+  "rotationSeconds": 0.1517687074829932,
+  "motif": {
+    "id": "river-record",
+    "version": 3,
+    "quotation": "single three-note cameo in C only; title/ending link restricted to opening two bars"
+  },
+  "scoreFingerprint": "10bc232e460cfbeac1c68aab869739446755858dfdd834c6cfa40a0fffa0e9b4"
+}

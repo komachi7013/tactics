@@ -5,13 +5,15 @@ vi.mock('phaser', () => ({ default: {
   Scene: class {},
   Geom: { Point: class { constructor(public x: number, public y: number) {} }, Polygon: Object.assign(class {}, { Contains: () => true }) },
 } }));
-import { BoardScene, type BoardRenderReport } from '../src/view/BoardScene';
+import { BoardScene, type BoardRenderReport, type BoardView } from '../src/view/BoardScene';
+import { CAST_WALK, castIdle, castWalk } from '../src/view/castMotion';
 import { PlaybackGate } from '../src/view/playbackGate';
 import { ATTACK_BODIES } from '../src/view/dedicatedAttack';
 import { HD2D_WALK } from '../src/qa/hd2dWalk';
 import { createInitialState } from '../src/domain/engine';
 import type { BattleState } from '../src/domain/types';
 import type { PresentationPlan } from '../src/view/presentation';
+import { committedAttackFixture } from './helpers/committedAttackFixture';
 
 class ObjectStub {
   x = 0; y = 0; alpha = 1; visible = true; destroyed = false; children: ObjectStub[] = [];
@@ -22,15 +24,18 @@ class ObjectStub {
   setPosition(x: number, y: number) { this.x = x; this.y = y; return this; }
   setAlpha(a: number) { this.alpha = a; return this; }
   setVisible(v: boolean) { this.visible = v; return this; }
-  textureKey = ''; frame: number | undefined; originX = 0; originY = 0; size = 0;
-  setTexture(key: string, frame?: number) { this.textureKey = key; this.frame = frame; return this; }
+  textureKey = ''; frame: number | undefined; originX = 0; originY = 0; size = 0; textureWrites = 0;
+  setTexture(key: string, frame?: number) { this.textureKey = key; this.frame = frame; this.textureWrites++; return this; }
   setOrigin(x: number, y: number) { this.originX = x; this.originY = y; return this; } setDisplaySize(size: number) { this.size = size; return this; } setInteractive() { return this; }
   setRotation() { return this; } setScale() { return this; } on() { return this; }
-  fillStyle() { return this; } fillPoints() { return this; } lineStyle() { return this; }
+  fillStyle() { return this; } fillPoints() { return this; } lineStyle(...args: number[]) { this.lineState = args; return this; }
   rectangles: number[][] = []; ellipseStrokes = 0;
-  strokePoints() { return this; } lineBetween() { return this; } fillRect(...args: number[]) { this.rectangles.push(args); return this; }
+  ellipsePaint: { args: number[]; style: number[] }[] = [];
+  lineState: number[] = []; segments: { args: number[]; style: number[] }[] = [];
+  clear() { this.rectangles = []; this.segments = []; return this; }
+  strokePoints() { return this; } lineBetween(...args: number[]) { this.segments.push({ args, style: this.lineState }); return this; } fillRect(...args: number[]) { this.rectangles.push(args); return this; }
   fillRoundedRect() { return this; } fillCircle() { return this; }
-  fillEllipse() { return this; } strokeEllipse() { this.ellipseStrokes++; return this; }
+  fillEllipse() { return this; } strokeEllipse(...args: number[]) { this.ellipseStrokes++; this.ellipsePaint.push({ args, style: [...this.lineState] }); return this; }
 }
 function harness(walk = false) {
   let now = 0;
@@ -48,14 +53,84 @@ function harness(walk = false) {
       container: (x: number, y: number) => { const c = new ObjectStub(x, y); containers.push(c); return c; },
       image: (x: number, y: number, key: string, frame?: number) => new ObjectStub(x, y).setTexture(key, frame), graphics: () => new ObjectStub(), zone: () => new ObjectStub(),
       text: (x: number, y: number, value: string) => { if (failDraw) throw new Error('injected draw failure'); labels.push(value); return new ObjectStub(x, y); },
-    }, scale, textures: { exists: (key: string) => loaded.has(key), createCanvas:(key:string)=>{loaded.add(key);return {getContext:()=>new Proxy({},{get:()=>vi.fn()}),refresh:()=>{}}}, get: (key: string) => ({ getSourceImage:()=>({}),has: (frame: string | number) => Number(frame) >= 0 && Number(frame) < (key === HD2D_WALK.key ? 6 : 4) && !missingFrames.has(`${key}:${frame}`) }) }, sys: { isActive: () => active },
+    }, scale, textures: { exists: (key: string) => loaded.has(key), createCanvas:(key:string)=>{loaded.add(key);return {getContext:()=>new Proxy({},{get:()=>vi.fn()}),refresh:()=>{}}}, get: (key: string) => ({ getSourceImage:()=>({}),has: (frame: string | number) => Number(frame) >= 0 && Number(frame) < (key === HD2D_WALK.key ? 6 : Object.values(CAST_WALK).flatMap(d=>Object.values(d)).find(a=>a.key===key)?.frames ?? 4) && !missingFrames.has(`${key}:${frame}`) }) }, sys: { isActive: () => active },
     events: { once: (event: string, fn: () => void) => lifecycle.set(event, fn) },
   });
-  const display = (state: BattleState) => scene.display({ state, selected: null, cursor: { x: 0, y: 5 }, reachable: [], mode: 'inspect', enabled: false });
+  const display = (state: BattleState, options: Partial<Omit<BoardView, 'state'>> = {}) => scene.display({ state, selected: null, cursor: { x: 0, y: 5 }, reachable: [], mode: 'inspect', enabled: false, ...options });
   const actors = () => (scene as unknown as { actors: Map<string, { group: ObjectStub }> }).actors;
   return { loaded, missingFrames, scene, display, actors, labels, containers, scale, listeners, lifecycle, reports, failDraw: (value: boolean) => { failDraw = value; }, activate: (value: boolean) => { active = value; }, time: (value: number) => { now = value; scene.update(); } };
 }
 afterEach(() => vi.restoreAllMocks());
+
+describe('always-visible health and independent committed result FX', () => {
+  function committed(hit = true, lethal = false, weapon: 'melee' | 'bow' = 'melee') {
+    const { after: state, plan, target, targetBefore } = committedAttackFixture({ hit, lethal, weapon });
+    return { state, plan, target, targetBefore };
+  }
+  it('shows compact overhead HP for every unselected ally and enemy on the adopted board', () => {
+    const h = harness(), state = createInitialState('B03'); h.display(state);
+    for (const unit of state.units.filter(unit => unit.hp > 0)) {
+      const ref = h.actors().get(unit.id) as any, health = ref.health;
+      expect(health.ink.visible).toBe(true); expect(health.ink.rectangles).toHaveLength(2);
+      expect(health.y).toBeLessThan(-90 * (h.scene as any).unitScale);
+      expect(health.width).toBe(32 * (h.scene as any).unitScale);
+      expect(ref.overlay.children[1].visible).toBe(false); // Selection label stays optional.
+    }
+  });
+  it('switches only the actual target HP and red wound at the same impact instant', () => {
+    const h = harness(), { state, plan, target, targetBefore } = committed(), snapshot = JSON.stringify(state);
+    h.display(state); h.scene.playPresentation(plan);
+    const hpRatio = () => { const rect = (h.actors().get(target.id) as any).health.ink.rectangles; return rect[1][2] / rect[0][2]; };
+    h.time(109); expect(hpRatio()).toBeCloseTo(targetBefore.hp / target.maxHp);
+    expect((h.scene as any).attackGraphics.segments.filter((line: any) => line.style[1] === 0xdc3341)).toHaveLength(0);
+    h.time(110); expect(hpRatio()).toBeCloseTo(target.hp / target.maxHp);
+    const targetRef = h.actors().get(target.id)!, red = (h.scene as any).attackGraphics.segments.filter((line: any) => line.style[1] === 0xdc3341);
+    expect(red).toHaveLength(3);
+    for (const line of red) {
+      expect(Math.abs(line.args[0] - targetRef.group.x)).toBeLessThan(20 * (h.scene as any).unitScale);
+      expect(Math.abs(line.args[1] - (targetRef.group.y - 44 * (h.scene as any).unitScale))).toBeLessThan(20 * (h.scene as any).unitScale);
+    }
+    expect(JSON.stringify(state)).toBe(snapshot);
+  });
+  it('unlocks at220ms while the result survives redraw and expires800ms after impact', () => {
+    const h = harness(), { state, plan } = committed(); h.display(state);
+    let complete = () => {};
+    const gate = new PlaybackGate({ setTimeout: fn => { complete = fn; return 1; }, clearTimeout: () => {} });
+    gate.start(plan.durationMs, () => h.scene.clearPresentation(true)); h.scene.playPresentation(plan);
+    h.time(110); expect((h.scene as any).attackFeedback.visible).toBe(true);
+    h.time(220); complete(); expect(gate.busy).toBe(false); expect((h.scene as any).attackFeedback.visible).toBe(true);
+    h.time(500); h.display(state); expect((h.scene as any).attackFeedback.visible).toBe(true);
+    h.time(909); expect((h.scene as any).attackFeedback.visible).toBe(true);
+    h.time(910); expect((h.scene as any).attackFeedback).toBeUndefined();
+    complete(); expect(gate.busy).toBe(false);
+  });
+  it('clears on cancellation, the next attack, battle switch and round rollback without stale results', () => {
+    const h = harness(), { state, plan } = committed(); h.display(state); h.scene.playPresentation(plan); h.time(110);
+    h.scene.clearPresentation(); expect((h.scene as any).attackResult.present).toBe(false); expect((h.scene as any).attackFeedback).toBeUndefined();
+    h.scene.playPresentation(plan); h.time(220); expect((h.scene as any).attackFeedback.visible).toBe(true);
+    h.scene.playPresentation(plan); expect((h.scene as any).attackFeedback.visible).toBe(false);
+    h.display(createInitialState('B02')); expect((h.scene as any).attackResult.present).toBe(false);
+    state.round = 3; h.display(state); h.scene.playPresentation(plan); state.round = 1; h.display(state);
+    expect((h.scene as any).attackResult.present).toBe(false);
+  });
+  it('shows uppercase MISS without a wound or HP change, then removes it on cancellation', () => {
+    const h = harness(), { state, plan, target, targetBefore } = committed(false, false, 'bow'), snapshot = JSON.stringify(state);
+    h.display(state); h.scene.playPresentation(plan); h.time(110);
+    expect(h.labels).toContain('MISS'); expect((h.scene as any).attackFeedback.visible).toBe(true);
+    expect((h.scene as any).attackGraphics.segments.some((line: any) => line.style[1] === 0xdc3341)).toBe(false);
+    const rect = (h.actors().get(target.id) as any).health.ink.rectangles;
+    expect(rect[1][2] / rect[0][2]).toBeCloseTo(targetBefore.hp / target.maxHp);
+    h.scene.clearPresentation(); h.time(1000); expect((h.scene as any).attackFeedback).toBeUndefined();
+    expect(JSON.stringify(state)).toBe(snapshot);
+  });
+  it('retains the downed target only for its result lifetime after the gate releases', () => {
+    const h = harness(), { state, plan, target } = committed(true, true); h.display(state); h.scene.playPresentation(plan);
+    h.time(220); h.scene.clearPresentation(true); const ghost = h.actors().get(target.id)!;
+    expect(ghost.group.visible).toBe(true); expect((ghost as any).health.ink.rectangles[1][2]).toBe(0);
+    h.time(910); expect(ghost.group.destroyed).toBe(true); expect(h.actors().has(target.id)).toBe(false);
+  });
+});
+
 describe('plan-driven board presentation', () => {
   it('uses each route cell elevation and preserves elapsed time across HUD redraw and resize', () => {
     const h = harness(), state = createInitialState('B01'), unit = state.units[0];
@@ -188,7 +263,7 @@ it('ends dedicated lethal ghost at400ms before subsequent escort movement, resto
  actor.pos={x:2,y:5};target.pos={x:3,y:5};const targetBefore=structuredClone(target);target.hp=0;
  h.loaded.add('cast-rise');h.loaded.add('attack-lise-e');h.display(state);const frozen=JSON.stringify(state);
  const p=h.scene.preparePresentation({moves:[{unitId:following.id,path:[{x:1,y:5},following.pos],afterAttack:true}],attack:{actorId:actor.id,targetId:target.id,weapon:'melee',targetBefore},moveDuration:0,attackDuration:220,afterMoveDuration:110,durationMs:330},state)!;
- expect(p.attackDuration).toBe(400);expect(p.afterMoveDuration).toBe(180);expect(p.durationMs).toBe(580);h.scene.playPresentation(p);const ghost=h.actors().get(target.id)!.group;
+ expect(p.attackDuration).toBe(400);expect(p.afterMoveDuration).toBe(200);expect(p.durationMs).toBe(600);h.scene.playPresentation(p);const ghost=h.actors().get(target.id)!.group;
  h.time(399);expect(ghost.visible).toBe(true);h.time(400);expect(ghost.visible).toBe(false);
  const ref=h.actors().get(actor.id)! as any;expect(ref.body.image.textureKey).toBe('cast-rise');h.time(20000);expect(JSON.stringify(state)).toBe(frozen);
 });
@@ -239,8 +314,8 @@ describe('redundant resize redraw guard', () => {
       h.scene.display({ state, ...view, reachable: [{ x: 0, y: 4 }], enabled: true });
       expect(previous.destroyed).toBe(true);
       previous = h.actors().get(unit.id)!.group; expect(previous.destroyed).toBe(false);
-      const ring = previous.children[0];
-      expect(ring.rectangles.at(-1)![2] / ring.rectangles.at(-2)![2]).toBeCloseTo(unit.hp / unit.maxHp);
+      const ring = previous.children[0], hp = (h.actors().get(unit.id) as any).health.ink as ObjectStub;
+      expect(hp.rectangles.at(-1)![2] / hp.rectangles.at(-2)![2]).toBeCloseTo(unit.hp / unit.maxHp);
       expect(ring.ellipseStrokes).toBe(view.selected === unit.id ? 1 : 0);
       const count = h.containers.length; h.listeners.get('resize')!(); expect(h.containers).toHaveLength(count);
     }
@@ -333,16 +408,16 @@ describe('headfixed trial interruption ownership',()=>{
  });
 });
 
-describe('production four-pose materials on BoardScene adapter',()=>{
- it('plays four-pose distance phase and restores grounded same-direction idle without mutating state',()=>{
-  const h=harness(),s=createInitialState(),u=s.units[0];u.facing='E';u.pos={x:2,y:5};h.loaded.add('motion-idle-lise-E');h.loaded.add('motion-walk-lise-E');h.display(s);h.scene.create();
+describe('production 19-frame materials on BoardScene adapter',()=>{
+ it('plays the 19-frame distance phase and restores grounded same-direction idle without mutating state',()=>{
+  const h=harness(),s=createInitialState(),u=s.units[0];u.facing='E';u.pos={x:2,y:5};h.loaded.add('motion-idle-lise-E');h.loaded.add(castWalk(u,'E')!.key);h.display(s);h.scene.create();
   const ref=()=>h.actors().get(u.id)! as any;expect(ref().body.image.textureKey).toBe('motion-idle-lise-E');const frozen=JSON.stringify(s);
-  const p=h.scene.preparePresentation({moves:[{unitId:u.id,path:[{x:0,y:5},{x:1,y:5},{x:2,y:5}]}],moveDuration:220,attackDuration:0,durationMs:220},s)!;expect(p.durationMs).toBe(360);h.scene.playPresentation(p);
-  for(const [t,f] of [[0,0],[90,1],[180,2],[270,3]]){h.time(t);expect(ref().body.image.textureKey).toBe('motion-walk-lise-E');expect(ref().body.image.frame).toBe(f);}
-  h.time(360);expect(ref().body.image.textureKey).toBe('motion-idle-lise-E');expect(JSON.stringify(s)).toBe(frozen);h.scene.clearPresentation();expect(ref().body.image.textureKey).toBe('motion-idle-lise-E');
+  const p=h.scene.preparePresentation({moves:[{unitId:u.id,path:[{x:0,y:5},{x:1,y:5},{x:2,y:5}]}],moveDuration:220,attackDuration:0,durationMs:220},s)!;expect(p.durationMs).toBe(400);h.scene.playPresentation(p);
+  for(const [t,f] of [[0,0],[100,2],[200,4],[300,7]]){h.time(t);expect(ref().body.image.textureKey).toBe(castWalk(u,'E')!.key);expect(ref().body.image.frame).toBe(f);}
+  h.time(400);expect(ref().body.image.textureKey).toBe('motion-idle-lise-E');expect(JSON.stringify(s)).toBe(frozen);h.scene.clearPresentation();expect(ref().body.image.textureKey).toBe('motion-idle-lise-E');
  });
  it('keeps grounded static if a required walking frame is missing',()=>{
-  const h=harness(),s=createInitialState(),u=s.units[0];u.facing='E';u.pos={x:1,y:5};h.loaded.add('motion-idle-lise-E');h.loaded.add('motion-walk-lise-E');h.missingFrames.add('motion-walk-lise-E:2');h.display(s);h.scene.playPresentation({moves:[{unitId:u.id,path:[{x:0,y:5},{x:1,y:5}]}],moveDuration:180,attackDuration:0,durationMs:180});h.time(90);expect((h.actors().get(u.id)! as any).body.image.textureKey).toBe('motion-idle-lise-E');
+  const h=harness(),s=createInitialState(),u=s.units[0];u.facing='E';u.pos={x:1,y:5};h.loaded.add('motion-idle-lise-E');h.loaded.add(castWalk(u,'E')!.key);h.missingFrames.add(castWalk(u,'E')!.key+':18');h.display(s);h.scene.playPresentation({moves:[{unitId:u.id,path:[{x:0,y:5},{x:1,y:5}]}],moveDuration:180,attackDuration:0,durationMs:180});h.time(90);expect((h.actors().get(u.id)! as any).body.image.textureKey).toBe('motion-idle-lise-E');
  });
  it('freezes cart phase while enemy moves and after its own movement ends',()=>{
   const h=harness(),s=createInitialState('B03'),cart=s.units.find(u=>u.kind==='escort')!;h.loaded.add('motion-cart-wheel');h.display(s);const ref=()=>h.actors().get(cart.id)! as any;const from={...cart.pos},to={x:from.x+1,y:from.y};cart.pos=to;
@@ -353,10 +428,133 @@ describe('production four-pose materials on BoardScene adapter',()=>{
 describe('escort natural idle direction is visual only',()=>{
  it.each(['N','S','W'] as const)('holds prior idle before queued movement and restores %s idle after its own move',direction=>{
   const h=harness(),s=createInitialState('B06'),u=s.units.find(x=>x.id==='escort-toma')!,end={x:direction==='W'?10:11,y:direction==='N'?15:direction==='S'?17:16};u.pos=end;u.facing='E';s.escort={unitId:u.id,index:2,route:[{x:10,y:16},{x:11,y:16},end]};
-  h.loaded.add('b06-adopted-landscape');for(const d of ['N','E','S','W']){h.loaded.add('motion-idle-toma-'+d);h.loaded.add('motion-walk-toma-'+d);}h.display(s);h.scene.create();const ref=()=>h.actors().get(u.id)! as any;const frozen=JSON.stringify(s);
+  h.loaded.add('b06-adopted-landscape');for(const d of ['N','E','S','W'] as const){h.loaded.add('motion-idle-toma-'+d);h.loaded.add(castWalk(u,d)!.key);}h.display(s);h.scene.create();const ref=()=>h.actors().get(u.id)! as any;const frozen=JSON.stringify(s);
   const plan:PresentationPlan={moves:[{unitId:u.id,path:[{x:11,y:16},end],afterAttack:true,durationMs:180}],moveDuration:360,attackDuration:220,afterMoveDuration:180,durationMs:760};h.scene.playPresentation(plan);
-  h.time(100);expect(ref().body.image.textureKey).toBe('motion-idle-toma-E');h.time(600);expect(ref().body.image.textureKey).toBe('motion-walk-toma-'+direction);h.time(760);expect(ref().body.image.textureKey).toBe('motion-idle-toma-'+direction);h.scene.clearPresentation();expect(ref().body.image.textureKey).toBe('motion-idle-toma-'+direction);expect(JSON.stringify(s)).toBe(frozen);
+  h.time(100);expect(ref().body.image.textureKey).toBe('motion-idle-toma-E');h.time(600);expect(ref().body.image.textureKey).toBe(castWalk(u,direction)!.key);h.time(760);expect(ref().body.image.textureKey).toBe('motion-idle-toma-'+direction);h.scene.clearPresentation();expect(ref().body.image.textureKey).toBe('motion-idle-toma-'+direction);expect(JSON.stringify(s)).toBe(frozen);
   // A fresh renderer re-derives the direction from save data, without persistent view state.
   const fresh=harness();fresh.loaded.add('b06-adopted-landscape');fresh.loaded.add('motion-idle-toma-'+direction);fresh.display(JSON.parse(frozen));fresh.scene.create();expect((fresh.actors().get(u.id)! as any).body.image.textureKey).toBe('motion-idle-toma-'+direction);
  });
+});
+
+describe('command actor slow stepping in place', () => {
+  afterEach(() => vi.unstubAllGlobals());
+  function ready(state = createInitialState(), actorId = state.units[0].id) {
+    const preference = { matches: false }; vi.stubGlobal('matchMedia', () => preference);
+    const h = harness(), actor = state.units.find(unit => unit.id === actorId)!;
+    actor.facing = 'E'; h.loaded.add('b06-adopted-landscape'); h.loaded.add('escort-cart');
+    for (const key of ['rise', 'garan', 'neia', 'guard', 'archer']) h.loaded.add('cast-' + key);
+    for (const unit of state.units) for (const facing of ['N', 'E', 'S', 'W'] as const) {
+      const idle = castIdle(unit, facing), walk = castWalk(unit, facing);
+      if (idle) h.loaded.add(idle.key); if (walk) h.loaded.add(walk.key);
+    }
+    const display = (options: Partial<Omit<BoardView, 'state'>> = {}) => h.display(state, { enabled: true, commandActorId: actorId, selected: actorId, ...options });
+    const ref = (id = actorId) => h.actors().get(id)! as any;
+    display(); h.scene.create();
+    return { h, state, actor, preference, display, ref };
+  }
+  it('cycles 19 approved poses in800ms without moving feet containers, HUD, depth, or game state', () => {
+    const r = ready(), { h, actor, state } = r, walk = castWalk(actor, 'E')!;
+    const frozen = JSON.stringify(state), ref = r.ref(), position = { x: ref.group.x, y: ref.group.y, depth: ref.group.depth };
+    for (const [time, frame] of [[0, 0], [41, 0], [43, 1], [400, 9], [799, 18], [800, 0], [841, 0], [843, 1]]) {
+      h.time(time); const body = r.ref().body.image;
+      expect(body.textureKey).toBe(walk.key); expect(body.frame).toBe(frame);
+      expect(body.originX).toBe(walk.originX); expect(body.originY).toBe(walk.originY);
+      expect(body.size).toBeCloseTo(walk.cell * 90 / walk.visibleHeight * (h.scene as any).unitScale);
+      expect({ x: ref.group.x, y: ref.group.y, depth: ref.group.depth }).toEqual(position);
+    }
+    expect(JSON.stringify(state)).toBe(frozen);
+    const writes = r.ref().body.image.textureWrites; h.time(844); h.time(850);
+    expect(r.ref().body.image.textureWrites).toBe(writes);
+  });
+  it('keeps the command actor and phase when another ally or enemy is inspected after activation', () => {
+    const r = ready(); r.state.activeId = r.actor.id; r.h.time(540);
+    for (const selected of [r.state.units[1].id, r.state.units.find(unit => unit.team === 'enemy')!.id]) {
+      r.display({ selected }); expect(r.ref().body.image.frame).toBe(12);
+      expect(r.ref(selected).body.walking).not.toBe(true);
+    }
+    r.h.time(810); expect(r.ref().body.image.frame).toBe(0);
+    expect(r.state.activeId).toBe(r.actor.id);
+  });
+  it('marks only the living player command actor strongly while separate inspection stays weak, without duplicate rings', () => {
+    const r = ready(createInitialState('B03')); r.state.activeId = r.actor.id;
+    const other = r.state.units[1].id;
+    const ring = (id: string) => r.ref(id).group.children[0] as ObjectStub;
+    r.display({ selected: other });
+    expect(ring(r.actor.id).ellipsePaint).toHaveLength(2);
+    expect(ring(r.actor.id).ellipsePaint.map(row => row.style)).toEqual([[5, 0x0d1d1f, 1], [2.5, 0xffffff, 1]]);
+    expect(ring(r.actor.id).ellipsePaint[0].args).toEqual(ring(r.actor.id).ellipsePaint[1].args);
+    expect(ring(other).ellipsePaint).toHaveLength(1); expect(ring(other).ellipsePaint[0].style[0]).toBeLessThan(2.5);
+    r.display({ selected: r.actor.id }); expect(ring(r.actor.id).ellipsePaint).toHaveLength(2);
+    const whiteMarkers = () => [...r.h.actors().values()].flatMap((ref: any) => ref.group.children[0].ellipsePaint)
+      .filter((row: { style: number[] }) => row.style[1] === 0xffffff);
+    r.state.turn = 'enemy'; r.display({ selected: other }); expect(whiteMarkers()).toHaveLength(0);
+    r.state.turn = 'player'; r.display({ commandActorId: 'missing-id' }); expect(whiteMarkers()).toHaveLength(0);
+    r.actor.hp = 0; r.display(); expect(whiteMarkers()).toHaveLength(0);
+  });
+  it.each(['disabled', 'enemy-turn', 'won', 'dead', 'ended', 'action-used', 'no-actor', 'other-active'] as const)('restores natural idle when %s', reason => {
+    const r = ready(), idle = castIdle(r.actor, 'E')!; r.h.time(270);
+    if (reason === 'disabled') r.display({ enabled: false });
+    if (reason === 'enemy-turn') r.state.turn = 'enemy';
+    if (reason === 'won') r.state.phase = 'won';
+    if (reason === 'dead') r.actor.hp = 0;
+    if (reason === 'ended') r.actor.acted = true;
+    if (reason === 'action-used') r.state.activation.acted = true;
+    if (reason === 'no-actor') r.display({ commandActorId: null });
+    if (reason === 'other-active') r.state.activeId = r.state.units[1].id;
+    const frozen = JSON.stringify(r.state); r.h.time(540);
+    const body = r.ref().body.image;
+    expect(body.textureKey).toBe(idle.key); expect(body.frame).toBeUndefined();
+    expect(body.originX).toBe(idle.originX); expect(body.originY).toBe(idle.originY);
+    expect(body.size).toBeCloseTo(256 * 90 / idle.visibleHeight * (r.h.scene as any).unitScale);
+    expect(JSON.stringify(r.state)).toBe(frozen);
+  });
+  it('responds to reduced-motion changes without reload and restarts safely if enabled again', () => {
+    const r = ready(), idle = castIdle(r.actor, 'E')!; r.h.time(270);
+    r.preference.matches = true; r.h.time(540); expect(r.ref().body.image.textureKey).toBe(idle.key);
+    r.preference.matches = false; r.h.time(810); expect(r.ref().body.image.frame).toBe(0);
+    r.h.time(1080); expect(r.ref().body.image.frame).toBe(6);
+  });
+  it('restores idle on missing pose/texture and uses metadata for a changed facing', () => {
+    const r = ready(), walk = castWalk(r.actor, 'E')!, idle = castIdle(r.actor, 'E')!;
+    r.h.time(270); r.h.missingFrames.add(walk.key + ':2'); r.h.time(540);
+    expect(r.ref().body.image.textureKey).toBe(idle.key);
+    r.h.missingFrames.clear(); r.h.time(810); expect(r.ref().body.image.frame).toBe(0);
+    r.h.loaded.delete(walk.key); r.h.time(1080); expect(r.ref().body.image.textureKey).toBe(idle.key);
+    r.actor.facing = 'W'; r.display(); const west = castWalk(r.actor, 'W')!;
+    expect(r.ref().body.image.textureKey).toBe(west.key); expect(r.ref().body.image.originY).toBe(west.originY);
+    r.preference.matches = true; r.h.time(1200);
+    expect(r.ref().body.image.textureKey).toBe(castIdle(r.actor, 'W')!.key); expect(r.actor.facing).toBe('W');
+  });
+  it('keeps the movement cadence and resumes command stepping only after presentation clears', () => {
+    const r = ready(), from = { ...r.actor.pos }; r.h.time(270);
+    r.actor.pos = { x: from.x + 2, y: from.y }; const frozen = JSON.stringify(r.state);
+    const plan = r.h.scene.preparePresentation({ moves: [{ unitId: r.actor.id, path: [from, { x: from.x + 1, y: from.y }, r.actor.pos] }], moveDuration: 360, attackDuration: 0, durationMs: 360 }, r.state)!;
+    r.h.scene.playPresentation(plan); r.h.time(360); expect(r.ref().body.image.frame).toBe(2);
+    r.h.time(670); expect(r.ref().body.image.textureKey).toBe(castIdle(r.actor, 'E')!.key);
+    r.h.scene.clearPresentation(true); expect(r.ref().body.image.frame).toBe(0);
+    r.h.time(754); expect(r.ref().body.image.frame).toBe(1); expect(JSON.stringify(r.state)).toBe(frozen);
+  });
+  it('keeps stepping stopped through attack result feedback after the presentation input gate ends', () => {
+    const fixture = committedAttackFixture({ hit: true, lethal: false, weapon: 'melee' });
+    // Declared view fixture: a following living ally is command-ready while prior result FX remain.
+    const state = fixture.after, unit = structuredClone(createInitialState().units[1]); state.units.push(unit);
+    state.activeId = unit.id; state.activation.acted = false; unit.acted = false;
+    const r = ready(state, unit.id), idle = castIdle(unit, 'E')!;
+    r.h.scene.playPresentation(fixture.plan); r.h.time(220); r.h.scene.clearPresentation(true);
+    expect(r.ref().body.image.textureKey).toBe(idle.key); r.h.time(909); expect(r.ref().body.image.textureKey).toBe(idle.key);
+    r.h.time(910); expect(r.ref().body.image.textureKey).toBe(castWalk(unit, 'E')!.key); expect(r.ref().body.image.frame).toBe(0);
+  });
+  it('does not infer a command actor from inspection alone or animate unsupported escorts/characters', () => {
+    const r = ready(); r.display({ commandActorId: undefined }); r.h.time(810);
+    expect(r.ref().body.image.textureKey).toBe(castIdle(r.actor, 'E')!.key);
+    r.actor.kind = 'escort'; r.display(); r.h.time(1080); expect(r.ref().body.walking).not.toBe(true);
+    r.actor.kind = undefined; r.actor.id = 'ally-no-approved-motion'; r.display({ commandActorId: r.actor.id, selected: r.actor.id }); r.h.time(1350);
+    expect(r.ref(r.actor.id).body.walking).not.toBe(true);
+  });
+  it('clears the step clock with Scene shutdown and does not touch destroyed actors', () => {
+    const r = ready(); r.h.time(540); const image = r.ref().body.image;
+    r.h.lifecycle.get('shutdown')!(); const writes = image.textureWrites; r.h.time(810);
+    expect(image.textureWrites).toBe(writes); expect(r.h.actors().size).toBe(0);
+    expect((r.h.scene as any).commandStep).toBeUndefined();
+  });
 });

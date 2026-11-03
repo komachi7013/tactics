@@ -1,0 +1,21 @@
+{
+  "videoSha256": "1358b93ff8c15a8d3ca350ae6c4f7e9e65459cf7ab92c022ce20c1a661295437",
+  "visualReviewed": true,
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "contacts": [
+    {
+      "frame": 38,
+      "foot": "R"
+    },
+    {
+      "frame": 48,
+      "foot": "L"
+    },
+    {
+      "frame": 58,
+      "foot": "R"
+    }
+  ],
+  "reviewNote": "Toma N source/full feet sheets reviewed. Near image-right R38/58 and far L48 support with alternate foot lift and passage. Bag at same hip, strap and back-facing design retained. Ground shadow keyed with magenta; inspect boots and coat after key. Fullbody/soles within source. Garan N driver. Estimated support phases, not motion capture."
+}

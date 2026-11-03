@@ -1,0 +1,31 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><title>ゲーム適用：48方向の接地・滑り確認</title>
+<style>body{background:#19292d;color:#eee;font:15px system-ui;margin:18px}header{position:sticky;top:0;background:#19292def;z-index:1;padding:10px}main{display:grid;grid-template-columns:repeat(4,250px);gap:10px}article{border:1px solid #718c83;padding:5px}canvas{width:240px;height:180px}label,button{margin-right:15px}p{max-width:1000px}a{color:#ffd485}</style>
+<header><h1>ゲーム適用：全12キャラ・48方向</h1><p>ゲームと同じ歩行画像・原点・表示倍率・距離に連動する再生処理を使用。平地B01の基準（1マス120×60、200ms/マス）で地面をスクロール。通常の戦闘画面とは別の検証表示です。</p><label><input id="pause" type="checkbox">停止</label><label><input id="moving" type="checkbox" checked>移動する地面</label><label>速度<select id="speed"><option value="1">1倍</option><option value="0.25">0.25倍</option></select></label><button id="next">1コマ進む</button><span id="status">画像読込中</span><p>橙の十字＝ゲームの足元原点。薄い横線＝原点高さ。画像下端は靴全体の範囲であり、解剖学的な支持点の自動判定ではありません。接地・滑りは要確認です。<a href="/?qaSession=walk-application-20261102">戦闘ゲームを開く</a></p></header><main></main>
+<script type="module">
+import {CAST_WALK,CAST_IDLE} from '/src/view/castMotion.ts';
+import {distancePose,withFourPoseTempo,STANDING_WALK_TEMPO} from '/src/view/movementTempo.ts';
+let elapsed=0,previous=performance.now();const cards=[];let loaded=0;
+for(const [cast,dirs] of Object.entries(CAST_WALK)) for(const [direction,asset] of Object.entries(dirs)){
+ const article=document.createElement('article');article.innerHTML=`<b>${cast} ${direction}</b><canvas width="240" height="180" aria-label="${cast} ${direction} ゲーム歩行"></canvas><div class="phase"></div>`;document.querySelector('main').append(article);
+ const image=new Image();image.src=asset.path;await image.decode();loaded++;
+ const idle=new Image();idle.src=CAST_IDLE[cast][direction].path;await idle.decode();
+ const delta={E:[1,0],W:[-1,0],N:[0,-1],S:[0,1]}[direction];
+ const plan=withFourPoseTempo({moves:[{unitId:'check',path:Array.from({length:101},(_,i)=>({x:delta[0]*i,y:delta[1]*i}))}],moveDuration:1,attackDuration:0,durationMs:1},STANDING_WALK_TEMPO.tileMs);
+ cards.push({article,image,idle,asset,plan,delta});
+}
+document.querySelector('#status').textContent=`${loaded}/48方向 読込完了 ／ 19コマ・800ms`;
+document.querySelector('#next').onclick=()=>{document.querySelector('#pause').checked=true;elapsed+=800/19;};
+function draw(now){const dt=now-previous;previous=now;if(!document.querySelector('#pause').checked)elapsed+=dt*Number(document.querySelector('#speed').value);
+ for(const {article,image,asset,plan,delta} of cards){
+ const canvas=article.querySelector('canvas'),c=canvas.getContext('2d');c.fillStyle='#b9bf9e';c.fillRect(0,0,240,180);
+ const t=elapsed%16000;const distance=document.querySelector('#moving').checked?t/200:0;
+ const dx=(delta[0]-delta[1])*60,dy=(delta[0]+delta[1])*30;
+ c.strokeStyle='#6a7d6f';c.lineWidth=1;
+ for(let i=-10;i<12;i++)for(let j=-10;j<12;j++) {const x=120+(i-j)*60-dx*distance%120,y=135+(i+j)*30-dy*distance%60;c.beginPath();c.moveTo(x,y);c.lineTo(x+60,y+30);c.lineTo(x,y+60);c.lineTo(x-60,y+30);c.closePath();c.stroke();}
+ const frame=distancePose(plan,'check',t,0,asset.frames,asset.tilesPerCycle),size=asset.cell*90/asset.visibleHeight;
+ c.strokeStyle='#e9dfa0';c.beginPath();c.moveTo(0,135);c.lineTo(240,135);c.stroke();
+ c.drawImage(image,frame%5*asset.cell,Math.floor(frame/5)*asset.cell,asset.cell,asset.cell,120-size*asset.originX,135-size*asset.originY,size,size);
+ c.strokeStyle='#f67e21';c.beginPath();c.moveTo(115,135);c.lineTo(125,135);c.moveTo(120,130);c.lineTo(120,140);c.stroke();article.querySelector('.phase').textContent=`コマ ${frame}/18 ／ ${Math.round(t%800)}ms`;
+ }requestAnimationFrame(draw);
+}requestAnimationFrame(draw);
+</script></html>

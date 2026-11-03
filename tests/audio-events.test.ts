@@ -1,47 +1,13 @@
-import { describe, expect, it } from 'vitest';
+import { describe,it,expect } from 'vitest';
+import { soundsForTransition, resultSounds } from '../src/audio-events';
 import { createInitialState, reduce } from '../src/domain/engine';
-import { soundForTransition } from '../src/audio-events';
-
-describe('audio only observes committed battle transitions', () => {
-  it('does not emit for unchanged/illegal actions; committed movement emits once and undo is UI only', () => {
-    const initial = createInitialState('B12');
-    const failed = reduce(initial, { type: 'move', to: { x: 4, y: 4 } });
-    expect(failed.error).toBeTruthy();
-    expect(soundForTransition(initial, failed.state)).toBeNull();
-    const started = reduce(initial, { type: 'start', unitId: 'ally-garan' }).state;
-    expect(soundForTransition(initial, started, { type: 'start', unitId: 'ally-garan' })).toBe('se-ui');
-    const command = { type: 'move', to: { x: 8, y: 15 } } as const;
-    const moved = reduce(started, command).state;
-    expect(soundForTransition(started, moved, command)).toBe('se-move');
-    expect(soundForTransition(moved, moved, command)).toBeNull();
-    expect(soundForTransition(moved, reduce(moved, { type: 'undoMove' }).state, { type: 'undoMove' })).toBe('se-ui');
-  });
-  it('prioritizes final outcome over hits or records; does not repeat a completed outcome', () => {
-    const state = createInitialState('B12');
-    const won = structuredClone(state); won.phase = 'won'; won.records = ['U', 'V'];
-    expect(soundForTransition(state, won)).toBe('se-victory');
-    expect(soundForTransition(won, structuredClone(won))).toBeNull();
-    const lost = structuredClone(state); lost.phase = 'lost'; lost.units[0].hp = 0;
-    expect(soundForTransition(state, lost)).toBe('se-defeat');
-  });
-  it('uses HP changes for either side and nonlethal hits without inventing a death sound', () => {
-    const state = createInitialState('B12');
-    const hit = structuredClone(state); hit.units.find(u => u.id === 'enemy-vesk')!.hp = 0;
-    hit.finalControl!.commanderSubdued = true;
-    expect(soundForTransition(state, hit)).toBe('se-impact');
-    const injured = structuredClone(state); injured.units[0].hp = 1;
-    expect(soundForTransition(injured, state)).toBe('se-heal');
-    const recorded = structuredClone(state); recorded.records.push('U');
-    expect(soundForTransition(state, recorded)).toBe('se-record');
-  });
-  it('observes automatic gate/repair and escort movement without frame-based footsteps', () => {
-    const state = createInitialState('B11');
-    const repaired = structuredClone(state); repaired.repairs!.A.completed = true;
-    expect(soundForTransition(state, repaired)).toBe('se-mechanism');
-    const gate = createInitialState('B06'); const opened = structuredClone(gate); opened.gate.drained = true;
-    expect(soundForTransition(gate, opened)).toBe('se-mechanism');
-    const escorted = structuredClone(gate); escorted.units.find(u => u.kind === 'escort')!.pos.x++;
-    expect(soundForTransition(gate, escorted)).toBe('se-move');
-    expect(soundForTransition(gate, structuredClone(gate))).toBeNull();
-  });
+import { battleMusic, MUSIC_IDS } from '../src/audio-cues';
+const ids=(...args: Parameters<typeof soundsForTransition>)=>soundsForTransition(...args).map(e=>e.id);
+describe('committed v2 sound events',()=>{
+ it('has distinct music for all twelve battles',()=>{for(let n=1;n<=12;n++)expect(MUSIC_IDS).toContain(battleMusic(`B${String(n).padStart(2,'0')}` as 'B01'));expect(new Set(MUSIC_IDS).size).toBe(16);});
+ it('ordinary movement, unchanged states, and idle/blocked animation stay silent',()=>{const s=createInitialState('B03');expect(ids(s,s)).toEqual([]);const a=structuredClone(s);a.units[0].pos.x++;expect(ids(s,a,{type:'move',to:a.units[0].pos})).toEqual([]);expect(ids(s,structuredClone(s))).toEqual([]);});
+ it('sounds cart only for real cart position change, never person escort or stationary cart',()=>{const s=createInitialState('B03'),a=structuredClone(s);a.units.find(u=>u.id==='escort-cart')!.pos.x++;expect(ids(s,a)).toEqual(['se-cart']);const p=createInitialState('B06'),q=structuredClone(p);q.units.find(u=>u.kind==='escort')!.pos.x++;expect(ids(p,q)).toEqual([]);});
+ it('follows the actual manual pushCart reducer and stays silent on a rejected second push',()=>{let s=createInitialState('B03');s.units=s.units.filter(u=>u.team==='player');s.cells.forEach(c=>{c.height=0;c.blocked=false;});const cart=s.units.find(u=>u.id==='escort-cart')!;s.units.find(u=>u.id==='ally-lise')!.pos={x:cart.pos.x-1,y:cart.pos.y};s=reduce(s,{type:'start',unitId:'ally-lise'}).state;const r=reduce(s,{type:'pushCart'});expect(r.error).toBeUndefined();expect(ids(s,r.state,{type:'pushCart'})).toEqual(['se-cart']);const failed=reduce(r.state,{type:'pushCart'});expect(failed.error).toBeTruthy();expect(ids(r.state,failed.state,{type:'pushCart'})).toEqual([]);});
+ it('distinguishes chest, record, skill, guard, cancellation and applied mechanisms',()=>{const s=createInitialState('B11');const a=structuredClone(s);a.pendingEquipment=['item'];expect(ids(s,a,{type:'loot',eventId:'item'})).toEqual(['se-chest']);a.pendingEquipment=[];a.records.push('W1');expect(ids(s,a)).toEqual(['se-record']);const b=structuredClone(s);b.repairs!.A.completed=true;expect(ids(s,b)).toEqual(['se-mechanism']);expect(ids(s,structuredClone(s),{type:'repair',siteId:'A'})).toEqual(['se-ui']);expect(ids(s,structuredClone(s),{type:'defend'})).toEqual(['se-guard']);expect(ids(s,structuredClone(s),{type:'undoMove'})).toEqual(['se-cancel']);expect(ids(s,structuredClone(s),{type:'survey',targetId:'e'})).toEqual(['se-skill']);});
+ it('prioritizes outcome and leaves result jingles to the scene owner',()=>{const s=createInitialState('B01'),a=structuredClone(s);a.phase='won';a.records=['A','B'];expect(ids(s,a)).toEqual([]);expect(resultSounds('B01',true)).toEqual([{id:'se-exit',delayMs:0},{id:'se-victory',delayMs:700}]);expect(resultSounds('B12',true)).toEqual([{id:'se-victory',delayMs:0}]);expect(resultSounds('B12',false)).toEqual([{id:'se-defeat',delayMs:0}]);});
 });

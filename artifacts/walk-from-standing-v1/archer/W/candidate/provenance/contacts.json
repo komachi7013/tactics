@@ -1,0 +1,21 @@
+{
+  "videoSha256": "da2364473be0b19001a5b01163167761943fe1fc4e9553c84fa86f74c4786911",
+  "visualReviewed": true,
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "contacts": [
+    {
+      "frame": 38,
+      "foot": "L"
+    },
+    {
+      "frame": 48,
+      "foot": "R"
+    },
+    {
+      "frame": 58,
+      "foot": "L"
+    }
+  ],
+  "reviewNote": "Archer W source/full feet sheets inspected. Near image-left L38/58 and far R48 support alternate; both legs pass and toe/heel motion visible. Back-facing direction, crossbow/grip, full soles maintained. Garan W video driver, original six conditions. Estimated support phases, not motion capture."
+}

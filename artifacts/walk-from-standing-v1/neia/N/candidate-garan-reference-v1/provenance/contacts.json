@@ -1,0 +1,21 @@
+{
+  "videoSha256": "275e946c7390d435bf4a7b2c1818feacd8a5f2df28b0d6e17b6bd9fb907dee4a",
+  "visualReviewed": true,
+  "contacts": [
+    {
+      "frame": 38,
+      "foot": "R"
+    },
+    {
+      "frame": 48,
+      "foot": "L"
+    },
+    {
+      "frame": 58,
+      "foot": "R"
+    }
+  ],
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "reviewNote": "Seedance2.5 image+same-direction Garan N video. Near anatomical R(image-right) supports38/58 while far L passes; far L supports48 with near R advanced. Native feet every2frames through96 inspected including full soles to960. Approximate support phases +/-2frames;20frames at24fps ->19frames800ms. User specifically requests this N proposal be shown on comparison page, not certified as final."
+}

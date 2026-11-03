@@ -1,0 +1,24 @@
+{
+  "all19Unchanged": true,
+  "sha256": {
+    "se-heal.wav": "b11028d811c0cc031da77ff143005fe797e7c6096cc5cff51f9aaf5042117d40",
+    "se-ui.wav": "68803234f8ca53323eb30c8276681930d493266fafa8f112658004ed634cad30",
+    "se-down.wav": "81a5d9f740fe01489463ae39c677c134cc81f297ddf92152f61f3c81a5ff4f15",
+    "se-cancel.wav": "12d4e42ba93bc3c36175d1798aee99ee0b1daec2e3cb7e4110e7dad6bb39e229",
+    "se-impact.wav": "1b3bcc03c2a8484d3f19e8161922965f3ed95afd5aed7fd9af9b941e2f6d517b",
+    "se-cart.wav": "58e72f27030cf1a94c9479420b900272c5ff97c480e206b69b3ecae1efabeeac",
+    "se-mechanism.wav": "7b8bf91f91a4ca25bc06cbc965f2e30c8af692c7e36ac4b6e6f835c5c1188a64",
+    "se-invalid.wav": "7e162025f66930046ecb72d75fd21f06ee01a49d9ea612447093e2ce5d1af6e5",
+    "se-skill.wav": "b24ec3bf2df81015583d5f398c412784c34687eface40a033610511897a9bc42",
+    "se-chest.wav": "379e919f3ccbf5d89b8a79cc312c775e27463b413849170156bb71309bcdf357",
+    "se-record.wav": "5ea10a21b26b22272a7e097eaf8e0d6d081a988b2ad2b7652eb177fc62dcb92a",
+    "se-arrow.wav": "cbb7950539a397e522b29bcf9b31c56557ff07e6d4b7c5868fc75df8e50888d8",
+    "se-guard.wav": "94c3f0448f0c6764fc09c6139b3f018d3b61a13cf2e82dc0430f94013719673d",
+    "se-victory.wav": "b78dfd0b22d42b30b901a8b383bf610d8688b5e8547ed8c6d60e3ce6c89cca06",
+    "se-sword.wav": "266f5736ec8790b11a753356f17dfc9b61452f0ac34b4069401d538f06434579",
+    "se-turn.wav": "0b2ed036c98a2db4e392d2f0d5cb1577e7fb5ff33a482a1b4465fc9ba7c99c29",
+    "se-defeat.wav": "78b4ca3cbb1c6958e0eb777bb81f0a022a7a5f4c51d02f29e90e966b3a0c4f70",
+    "se-miss.wav": "2ef1ec36a9c188d9da1b4aea46fd6c2a6cbd350e13d91fdae0812ce2866ca510",
+    "se-exit.wav": "84196278a4b04a1c4bb873b6d770cc3202c0ac139ef2ff04f715e964408f6939"
+  }
+}

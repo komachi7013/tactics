@@ -1,0 +1,99 @@
+{
+  "id": "bgm-b06",
+  "master": {
+    "file": "masters/bgm-b06.wav",
+    "sha256": "4133f583fc5372003bb01fdf4816797fd2444ac214a761b45f6b14d00b190cf9",
+    "bytes": 17860540,
+    "sampleRate": 44100,
+    "channels": 2,
+    "frames": 4465124,
+    "seconds": 101.24997732426304,
+    "samplePeak": 0.319976806640625,
+    "rmsDbFS": -25.33957613731883,
+    "dc": [
+      3.0687596980789334e-09,
+      -4.784257881192101e-11
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      4465124
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        -0.000457763671875,
+        0.000457763671875
+      ],
+      "rmsDifferenceDb": [
+        0.9305148825351279,
+        0.8518505139286426
+      ],
+      "slopeError": [
+        0.003265380859375,
+        0.004638671875
+      ],
+      "numericalFlags": []
+    }
+  },
+  "delivery": {
+    "file": "delivery/bgm-b06.wav",
+    "sha256": "02907925e4cffcd28161d7ad5e84bd8f43dddc725d9dd99d1a9d1d487ed79dcb",
+    "bytes": 8930292,
+    "sampleRate": 22050,
+    "channels": 2,
+    "frames": 2232562,
+    "seconds": 101.24997732426304,
+    "samplePeak": 0.319244384765625,
+    "rmsDbFS": -25.339805232487464,
+    "dc": [
+      1.3806001314297207e-08,
+      -2.720192338163509e-09
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      2232562
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        -0.0020751953125,
+        -0.000701904296875
+      ],
+      "rmsDifferenceDb": [
+        0.9288216719494573,
+        0.8494610943142287
+      ],
+      "slopeError": [
+        0.0054931640625,
+        0.00701904296875
+      ],
+      "numericalFlags": []
+    }
+  },
+  "listeningVerified": false,
+  "compositionRevision": "independent-r2",
+  "title": "鎖門を越える証言",
+  "usage": "B06 ケスト運河鎖門: 開門後の証人護送。交互の弦と金管、波のような木管。",
+  "bpm": 128,
+  "bars": 72,
+  "meter": [
+    6,
+    8
+  ],
+  "mode": "mixolydian",
+  "rationale": "B06 ケスト運河鎖門: 開門後の証人護送。交互の弦と金管、波のような木管。",
+  "direction": "鎖門を越える6/8の舟歌型戦闘。付点の揺れ、ヴァイオリンの跳躍、低音の短い押し返し。",
+  "source": "scores/bgm-b06.json",
+  "midi": "scores/bgm-b06.mid",
+  "renderCycles": 3,
+  "extractStartFrame": 4472807,
+  "rotationSeconds": 0.17421768707482993,
+  "motif": {
+    "id": "river-record",
+    "version": 3,
+    "quotation": "single three-note cameo in C only; title/ending link restricted to opening two bars"
+  },
+  "scoreFingerprint": "400f524975b2ee238fd54ed48176c9ca782190bb73554b6c1924ca7490f14f21"
+}

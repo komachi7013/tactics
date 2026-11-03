@@ -1,0 +1,67 @@
+{
+  "status": "比較候補：Seedance2.5・E立ち絵＋リセE動画・6条件",
+  "inputImageCount": 1,
+  "inputDirection": "E",
+  "referenceVideoCount": 1,
+  "motionRequirementCount": 6,
+  "equipmentInstructionsIncluded": false,
+  "frames": 19,
+  "cycleMs": 800,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "all19FramesViewedOnLight": true,
+  "all19FramesViewedOnDark": true,
+  "facingRetainedInAllSelectedFrames": true,
+  "fullBodyAndBothSolesInsideSelectedFrames": true,
+  "nativeCanvasEdgePixels": 0,
+  "contactReview": {
+    "videoSha256": "eff7b67d9f0d45b621fb54eaa86b65e3a90fcd74878526b300878d6b8426206d",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "R"
+      },
+      {
+        "frame": 48,
+        "foot": "L"
+      },
+      {
+        "frame": 58,
+        "foot": "R"
+      }
+    ],
+    "reviewNote": "Native full clip and feet every2frames inspected. E near anatomical R is image-left, supporting around38/58; far L supports around48. Full body/facing retained; no bow or other extra equipment visible. Same-direction Lise E driver.20source frames at24fps. Estimated support phases, not motion capture."
+  },
+  "selectedOutputSeamReviewed": true,
+  "automaticGaitLoopStatus": "automatic selection requires visual review",
+  "issues": [
+    "リセE動画参照。全19コマを明暗背景で確認。原周期約0.83秒を0.8秒に調整。自動探索は補助判定で、利用者確認待ち。追加の弓などは見られない。"
+  ],
+  "gameApplied": false,
+  "userApproved": false,
+  "referenceMotionReady": true,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "generationCountThisRequest": 1,
+  "quotedCreditsThisRequest": 28,
+  "headCentroidRangePx": [
+    1.2202688425534376,
+    0.9856850598609554
+  ],
+  "footRegionSeamOverMedianStep": 0.3357313576476296,
+  "headTopRangePx": [
+    97,
+    98
+  ],
+  "groundRangePx": [
+    280,
+    285
+  ],
+  "drivingCast": "lise",
+  "drivingDirection": "E",
+  "appearanceSource": "own standing image",
+  "motionSource": "same-direction reference video",
+  "templateException": "First request accidentally retained the word bow in appearance text; no added bow seen in selected19frames. Subsequent common template removes specific equipment nouns."
+}

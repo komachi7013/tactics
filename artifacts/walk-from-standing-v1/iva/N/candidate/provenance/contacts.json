@@ -1,0 +1,21 @@
+{
+  "videoSha256": "40384457c2b826dfa9237b4da83469a499682709a688f8ff6a3e34fe40dec9ef",
+  "visualReviewed": true,
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "contacts": [
+    {
+      "frame": 38,
+      "foot": "R"
+    },
+    {
+      "frame": 48,
+      "foot": "L"
+    },
+    {
+      "frame": 58,
+      "foot": "R"
+    }
+  ],
+  "reviewNote": "N source and feet sheets inspected: near image-right anatomical R support38/58, L48. Full soles fit source canvas although feet review crop cuts lower rows. Orientation and appearance retained, low amplitude body motion; Lise N driver. Estimated support phases, not motion capture."
+}

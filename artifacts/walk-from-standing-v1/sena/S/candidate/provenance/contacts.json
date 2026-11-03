@@ -1,0 +1,21 @@
+{
+  "videoSha256": "658f939f1fc26bb528a4c6e21a9dc625193d313b5bfc8b0279a6618f2aad81b0",
+  "visualReviewed": true,
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "contacts": [
+    {
+      "frame": 38,
+      "foot": "L"
+    },
+    {
+      "frame": 48,
+      "foot": "R"
+    },
+    {
+      "frame": 58,
+      "foot": "L"
+    }
+  ],
+  "reviewNote": "Native clip and feet every2frames inspected. S near anatomical L image-right supports38/58; far R supports48 as near L passes forward along lower-left. Full body/facing/design retained, no added props. Pink background keyed with scoped palette profile.20source-frame cycle. Estimated support phases, not motion capture."
+}

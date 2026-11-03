@@ -1,0 +1,66 @@
+{
+  "status": "比較候補：Seedance2.5・W立ち絵＋リセW動画・6条件",
+  "inputImageCount": 1,
+  "inputDirection": "W",
+  "referenceVideoCount": 1,
+  "motionRequirementCount": 6,
+  "equipmentInstructionsIncluded": false,
+  "frames": 19,
+  "cycleMs": 800,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "all19FramesViewedOnLight": true,
+  "all19FramesViewedOnDark": true,
+  "facingRetainedInAllSelectedFrames": true,
+  "fullBodyAndBothSolesInsideSelectedFrames": true,
+  "nativeCanvasEdgePixels": 0,
+  "contactReview": {
+    "videoSha256": "0ee659d3a25450266bf2a0048db4e0b280cafd27ec2d1991fce9daee3abe7256",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "L"
+      },
+      {
+        "frame": 48,
+        "foot": "R"
+      },
+      {
+        "frame": 58,
+        "foot": "L"
+      }
+    ],
+    "reviewNote": "Full source and feet sheets reviewed: W facing held; near image-left anatomical left support at38 and58, other support at48. Full soles visible, no added equipment. Low amplitude gait with small arm movement; compare driver manually. Estimated support phases, not motion capture."
+  },
+  "selectedOutputSeamReviewed": true,
+  "automaticGaitLoopStatus": "automatic selection requires visual review",
+  "issues": [
+    "リセW動画参照。全19コマを明暗背景と立ち絵比較で確認。小さな歩幅で左右の支持脚が交代。原周期約0.83秒を0.8秒に調整。自動探索は低信頼のため目視の1周期を使用。利用者確認待ち。"
+  ],
+  "gameApplied": false,
+  "userApproved": false,
+  "referenceMotionReady": true,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "generationCountThisRequest": 1,
+  "quotedCreditsThisRequest": 28,
+  "headCentroidRangePx": [
+    1.2821490765069257,
+    1.340458966623629
+  ],
+  "footRegionSeamOverMedianStep": 0.6592957613142068,
+  "headTopRangePx": [
+    98,
+    100
+  ],
+  "groundRangePx": [
+    282,
+    288
+  ],
+  "drivingCast": "lise",
+  "drivingDirection": "W",
+  "appearanceSource": "own standing image",
+  "motionSource": "same-direction reference video"
+}

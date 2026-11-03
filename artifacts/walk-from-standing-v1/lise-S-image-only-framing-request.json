@@ -1,0 +1,44 @@
+{
+  "params": {
+    "model": "kling3_0",
+    "duration": 4,
+    "mode": "std",
+    "sound": "off",
+    "aspect_ratio": "1:1",
+    "count": 1,
+    "prompt": "Animate the character in the supplied SOUTH-facing standing image, keeping the same front-facing three-quarter orientation toward the lower-left and viewpoint.\n\n1. One complete left-and-right TWO-step gait cycle takes approximately 0.8 seconds.\n2. Walk in place with restrained, clearly alternating left and right steps.\n3. Use small strides and low foot lift. Keep the upper body upright.\n4. The supporting leg straightens naturally while the opposite leg passes with a slight knee bend.\n5. Keep head and torso movement small.\n\nFraming: fixed camera and constant character size. Keep the entire character, including both boots and soles, fully inside the frame with generous empty space below the feet throughout. No close-up or zoom.",
+    "medias": [
+      {
+        "role": "start_image",
+        "value": "931fce26-9563-41f0-be4e-89843e7a831d"
+      }
+    ]
+  },
+  "quote": {
+    "cost": {
+      "credits": 5,
+      "credits_exact": 5
+    }
+  },
+  "submission": {
+    "results": [
+      {
+        "id": "c46aec9d-05f3-4365-bd32-d9b2493b1d7f",
+        "type": "video",
+        "status": "pending",
+        "model": "kling3_0",
+        "params": {
+          "prompt": "Animate the character in the supplied SOUTH-facing standing image, keeping the same front-facing three-quarter orientation toward the lower-left and viewpoint.\n\n1. One complete left-and-right TWO-step gait cycle takes approximately 0.8 seconds.\n2. Walk in place with restrained, clearly alternating left and right steps.\n3. Use small strides and low foot lift. Keep the upper body upright.\n4. The supporting leg straightens naturally while the opposite leg passes with a slight knee bend.\n5. Keep head and torso movement small.\n\nFraming: fixed camera and constant character size. Keep the entire character, including both boots and soles, fully inside the frame with generous empty space below the feet throughout. No close-up or zoom.",
+          "aspect_ratio": "1:1",
+          "duration": 4,
+          "reference_images": [
+            "931fce26-9563-41f0-be4e-89843e7a831d"
+          ],
+          "mode": "std",
+          "sound": "off"
+        }
+      }
+    ]
+  },
+  "reason": "First image-only take cropped both feet; full-body framing correction only, no added equipment instructions or media."
+}

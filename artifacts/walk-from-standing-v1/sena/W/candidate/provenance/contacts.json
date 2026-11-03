@@ -1,0 +1,21 @@
+{
+  "videoSha256": "0ee659d3a25450266bf2a0048db4e0b280cafd27ec2d1991fce9daee3abe7256",
+  "visualReviewed": true,
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "contacts": [
+    {
+      "frame": 38,
+      "foot": "L"
+    },
+    {
+      "frame": 48,
+      "foot": "R"
+    },
+    {
+      "frame": 58,
+      "foot": "L"
+    }
+  ],
+  "reviewNote": "Full source and feet sheets reviewed: W facing held; near image-left anatomical left support at38 and58, other support at48. Full soles visible, no added equipment. Low amplitude gait with small arm movement; compare driver manually. Estimated support phases, not motion capture."
+}

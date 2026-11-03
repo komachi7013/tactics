@@ -1,0 +1,184 @@
+{
+  "frames": 19,
+  "cycleMs": 800,
+  "fpsRational": [
+    95,
+    4
+  ],
+  "durationsMs": [
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42
+  ],
+  "sourceIndices": [
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57
+  ],
+  "sourceVideoSha256": "787610aaf30d60a7743a8fb6fba4f98c5937c035cce5bfeaceb5b2c1ea3cf75a",
+  "sheetSha256": "9d9c7acf1c7269d6aad2d79e11ea886d57ddb778681002d79392d5bc3ba16462",
+  "fixedScale": 0.25069637883008355,
+  "fixedOffset": [
+    11,
+    68
+  ],
+  "frameGeometry": [
+    {
+      "headTop": 100,
+      "ground": 279,
+      "width": 89
+    },
+    {
+      "headTop": 100,
+      "ground": 281,
+      "width": 89
+    },
+    {
+      "headTop": 100,
+      "ground": 282,
+      "width": 88
+    },
+    {
+      "headTop": 100,
+      "ground": 281,
+      "width": 86
+    },
+    {
+      "headTop": 99,
+      "ground": 280,
+      "width": 85
+    },
+    {
+      "headTop": 99,
+      "ground": 280,
+      "width": 83
+    },
+    {
+      "headTop": 99,
+      "ground": 279,
+      "width": 84
+    },
+    {
+      "headTop": 99,
+      "ground": 278,
+      "width": 83
+    },
+    {
+      "headTop": 99,
+      "ground": 277,
+      "width": 84
+    },
+    {
+      "headTop": 99,
+      "ground": 277,
+      "width": 84
+    },
+    {
+      "headTop": 100,
+      "ground": 276,
+      "width": 83
+    },
+    {
+      "headTop": 100,
+      "ground": 275,
+      "width": 83
+    },
+    {
+      "headTop": 99,
+      "ground": 276,
+      "width": 83
+    },
+    {
+      "headTop": 99,
+      "ground": 277,
+      "width": 83
+    },
+    {
+      "headTop": 99,
+      "ground": 277,
+      "width": 83
+    },
+    {
+      "headTop": 99,
+      "ground": 277,
+      "width": 84
+    },
+    {
+      "headTop": 99,
+      "ground": 278,
+      "width": 86
+    },
+    {
+      "headTop": 99,
+      "ground": 278,
+      "width": 87
+    },
+    {
+      "headTop": 100,
+      "ground": 279,
+      "width": 89
+    }
+  ],
+  "contactReview": {
+    "videoSha256": "787610aaf30d60a7743a8fb6fba4f98c5937c035cce5bfeaceb5b2c1ea3cf75a",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "R"
+      },
+      {
+        "frame": 48,
+        "foot": "L"
+      },
+      {
+        "frame": 58,
+        "foot": "R"
+      }
+    ],
+    "reviewNote": "Dani E palette brown/ochre/teal with no purple garment reviewed. Source and feet sheets show near image-left R38/58 then far L48 support, small alternating strides. Both arms remain lowered without large elbow bend; full soles and direction retained. Garan E driver. Estimated support phases, not motion capture."
+  },
+  "status": "visually-reviewed-comparison-candidate; user review pending",
+  "matteReportStatus": "pass",
+  "matteOverrideReason": null,
+  "gameApplied": false,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "userApproved": false,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "automaticGaitLoopStatus": "automatic selection requires visual review"
+}

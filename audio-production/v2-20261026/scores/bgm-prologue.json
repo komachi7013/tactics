@@ -1,0 +1,1484 @@
+{
+  "schema_version": 1,
+  "compositionRevision": "independent-r2",
+  "tempo_bpm": 72,
+  "meter": [
+    3,
+    4
+  ],
+  "bars": 24,
+  "tracks": [
+    {
+      "name": "主題",
+      "program": 42,
+      "channel": 0,
+      "notes": [
+        {
+          "beat": 0.0,
+          "duration": 1.29,
+          "pitch": 57,
+          "velocity": 51
+        },
+        {
+          "beat": 1.5,
+          "duration": 0.43,
+          "pitch": 53,
+          "velocity": 44
+        },
+        {
+          "beat": 2.0,
+          "duration": 0.86,
+          "pitch": 55,
+          "velocity": 51
+        },
+        {
+          "beat": 3.0,
+          "duration": 1.72,
+          "pitch": 52,
+          "velocity": 51
+        },
+        {
+          "beat": 5.5,
+          "duration": 0.43,
+          "pitch": 50,
+          "velocity": 44
+        },
+        {
+          "beat": 6.0,
+          "duration": 0.86,
+          "pitch": 48,
+          "velocity": 51
+        },
+        {
+          "beat": 7.0,
+          "duration": 0.43,
+          "pitch": 52,
+          "velocity": 51
+        },
+        {
+          "beat": 7.5,
+          "duration": 0.86,
+          "pitch": 57,
+          "velocity": 44
+        },
+        {
+          "beat": 9.0,
+          "duration": 1.29,
+          "pitch": 55,
+          "velocity": 51
+        },
+        {
+          "beat": 10.5,
+          "duration": 0.43,
+          "pitch": 53,
+          "velocity": 44
+        },
+        {
+          "beat": 11.0,
+          "duration": 0.43,
+          "pitch": 52,
+          "velocity": 51
+        },
+        {
+          "beat": 11.5,
+          "duration": 0.43,
+          "pitch": 48,
+          "velocity": 44
+        },
+        {
+          "beat": 12.0,
+          "duration": 2.15,
+          "pitch": 50,
+          "velocity": 51
+        },
+        {
+          "beat": 14.5,
+          "duration": 0.43,
+          "pitch": 57,
+          "velocity": 44
+        },
+        {
+          "beat": 15.0,
+          "duration": 0.86,
+          "pitch": 55,
+          "velocity": 51
+        },
+        {
+          "beat": 16.0,
+          "duration": 0.86,
+          "pitch": 52,
+          "velocity": 51
+        },
+        {
+          "beat": 17.5,
+          "duration": 0.43,
+          "pitch": 48,
+          "velocity": 44
+        },
+        {
+          "beat": 18.0,
+          "duration": 0.43,
+          "pitch": 58,
+          "velocity": 51
+        },
+        {
+          "beat": 18.5,
+          "duration": 0.43,
+          "pitch": 57,
+          "velocity": 44
+        },
+        {
+          "beat": 19.0,
+          "duration": 1.72,
+          "pitch": 53,
+          "velocity": 51
+        },
+        {
+          "beat": 21.0,
+          "duration": 0.86,
+          "pitch": 55,
+          "velocity": 51
+        },
+        {
+          "beat": 22.0,
+          "duration": 0.86,
+          "pitch": 60,
+          "velocity": 51
+        },
+        {
+          "beat": 23.0,
+          "duration": 0.43,
+          "pitch": 58,
+          "velocity": 51
+        },
+        {
+          "beat": 23.5,
+          "duration": 0.43,
+          "pitch": 55,
+          "velocity": 44
+        },
+        {
+          "beat": 24.0,
+          "duration": 1.72,
+          "pitch": 57,
+          "velocity": 51
+        },
+        {
+          "beat": 26.0,
+          "duration": 0.43,
+          "pitch": 52,
+          "velocity": 51
+        },
+        {
+          "beat": 26.5,
+          "duration": 0.43,
+          "pitch": 53,
+          "velocity": 44
+        },
+        {
+          "beat": 27.0,
+          "duration": 0.43,
+          "pitch": 50,
+          "velocity": 51
+        },
+        {
+          "beat": 27.5,
+          "duration": 0.43,
+          "pitch": 48,
+          "velocity": 44
+        },
+        {
+          "beat": 28.0,
+          "duration": 0.86,
+          "pitch": 45,
+          "velocity": 51
+        },
+        {
+          "beat": 29.0,
+          "duration": 0.86,
+          "pitch": 48,
+          "velocity": 51
+        },
+        {
+          "beat": 30.0,
+          "duration": 1.29,
+          "pitch": 52,
+          "velocity": 51
+        },
+        {
+          "beat": 31.5,
+          "duration": 0.43,
+          "pitch": 53,
+          "velocity": 44
+        },
+        {
+          "beat": 32.0,
+          "duration": 0.86,
+          "pitch": 57,
+          "velocity": 51
+        },
+        {
+          "beat": 33.0,
+          "duration": 0.86,
+          "pitch": 55,
+          "velocity": 51
+        },
+        {
+          "beat": 34.0,
+          "duration": 0.43,
+          "pitch": 52,
+          "velocity": 51
+        },
+        {
+          "beat": 34.5,
+          "duration": 0.43,
+          "pitch": 48,
+          "velocity": 44
+        },
+        {
+          "beat": 35.0,
+          "duration": 0.43,
+          "pitch": 50,
+          "velocity": 51
+        },
+        {
+          "beat": 54.0,
+          "duration": 1.29,
+          "pitch": 57,
+          "velocity": 51
+        },
+        {
+          "beat": 55.5,
+          "duration": 0.43,
+          "pitch": 53,
+          "velocity": 44
+        },
+        {
+          "beat": 56.0,
+          "duration": 0.86,
+          "pitch": 55,
+          "velocity": 51
+        },
+        {
+          "beat": 57.0,
+          "duration": 1.72,
+          "pitch": 52,
+          "velocity": 51
+        },
+        {
+          "beat": 59.5,
+          "duration": 0.43,
+          "pitch": 50,
+          "velocity": 44
+        },
+        {
+          "beat": 60.0,
+          "duration": 0.86,
+          "pitch": 48,
+          "velocity": 51
+        },
+        {
+          "beat": 61.0,
+          "duration": 0.43,
+          "pitch": 52,
+          "velocity": 51
+        },
+        {
+          "beat": 61.5,
+          "duration": 0.86,
+          "pitch": 57,
+          "velocity": 44
+        },
+        {
+          "beat": 63.0,
+          "duration": 1.29,
+          "pitch": 55,
+          "velocity": 51
+        },
+        {
+          "beat": 64.5,
+          "duration": 0.43,
+          "pitch": 53,
+          "velocity": 44
+        },
+        {
+          "beat": 65.0,
+          "duration": 0.43,
+          "pitch": 52,
+          "velocity": 51
+        },
+        {
+          "beat": 65.5,
+          "duration": 0.43,
+          "pitch": 48,
+          "velocity": 44
+        },
+        {
+          "beat": 66.0,
+          "duration": 2.15,
+          "pitch": 50,
+          "velocity": 51
+        },
+        {
+          "beat": 68.5,
+          "duration": 0.43,
+          "pitch": 57,
+          "velocity": 44
+        },
+        {
+          "beat": 69.0,
+          "duration": 0.86,
+          "pitch": 55,
+          "velocity": 51
+        },
+        {
+          "beat": 70.0,
+          "duration": 0.86,
+          "pitch": 52,
+          "velocity": 51
+        },
+        {
+          "beat": 71.5,
+          "duration": 0.43,
+          "pitch": 48,
+          "velocity": 44
+        }
+      ]
+    },
+    {
+      "name": "固有リズムの弦",
+      "program": 49,
+      "channel": 1,
+      "notes": [
+        {
+          "beat": 0.0,
+          "duration": 2.6,
+          "pitch": 50,
+          "velocity": 57
+        },
+        {
+          "beat": 1.0,
+          "duration": 1.5,
+          "pitch": 57,
+          "velocity": 52
+        },
+        {
+          "beat": 3.0,
+          "duration": 2.6,
+          "pitch": 58,
+          "velocity": 57
+        },
+        {
+          "beat": 4.0,
+          "duration": 1.5,
+          "pitch": 65,
+          "velocity": 52
+        },
+        {
+          "beat": 6.0,
+          "duration": 2.6,
+          "pitch": 55,
+          "velocity": 57
+        },
+        {
+          "beat": 7.0,
+          "duration": 1.5,
+          "pitch": 62,
+          "velocity": 52
+        },
+        {
+          "beat": 9.0,
+          "duration": 2.6,
+          "pitch": 57,
+          "velocity": 57
+        },
+        {
+          "beat": 10.0,
+          "duration": 1.5,
+          "pitch": 64,
+          "velocity": 52
+        },
+        {
+          "beat": 12.0,
+          "duration": 2.6,
+          "pitch": 50,
+          "velocity": 57
+        },
+        {
+          "beat": 13.0,
+          "duration": 1.5,
+          "pitch": 57,
+          "velocity": 52
+        },
+        {
+          "beat": 15.0,
+          "duration": 2.6,
+          "pitch": 53,
+          "velocity": 57
+        },
+        {
+          "beat": 16.0,
+          "duration": 1.5,
+          "pitch": 60,
+          "velocity": 52
+        },
+        {
+          "beat": 18.0,
+          "duration": 2.6,
+          "pitch": 48,
+          "velocity": 57
+        },
+        {
+          "beat": 19.0,
+          "duration": 1.5,
+          "pitch": 55,
+          "velocity": 52
+        },
+        {
+          "beat": 21.0,
+          "duration": 2.6,
+          "pitch": 57,
+          "velocity": 57
+        },
+        {
+          "beat": 22.0,
+          "duration": 1.5,
+          "pitch": 64,
+          "velocity": 52
+        },
+        {
+          "beat": 24.0,
+          "duration": 2.6,
+          "pitch": 58,
+          "velocity": 57
+        },
+        {
+          "beat": 25.0,
+          "duration": 1.5,
+          "pitch": 65,
+          "velocity": 52
+        },
+        {
+          "beat": 27.0,
+          "duration": 2.6,
+          "pitch": 55,
+          "velocity": 57
+        },
+        {
+          "beat": 28.0,
+          "duration": 1.5,
+          "pitch": 62,
+          "velocity": 52
+        },
+        {
+          "beat": 30.0,
+          "duration": 2.6,
+          "pitch": 52,
+          "velocity": 57
+        },
+        {
+          "beat": 31.0,
+          "duration": 1.5,
+          "pitch": 59,
+          "velocity": 52
+        },
+        {
+          "beat": 33.0,
+          "duration": 2.6,
+          "pitch": 57,
+          "velocity": 57
+        },
+        {
+          "beat": 34.0,
+          "duration": 1.5,
+          "pitch": 64,
+          "velocity": 52
+        },
+        {
+          "beat": 36.0,
+          "duration": 2.6,
+          "pitch": 50,
+          "velocity": 42
+        },
+        {
+          "beat": 39.0,
+          "duration": 2.6,
+          "pitch": 58,
+          "velocity": 42
+        },
+        {
+          "beat": 42.0,
+          "duration": 2.6,
+          "pitch": 55,
+          "velocity": 42
+        },
+        {
+          "beat": 45.0,
+          "duration": 2.6,
+          "pitch": 57,
+          "velocity": 42
+        },
+        {
+          "beat": 48.0,
+          "duration": 2.6,
+          "pitch": 50,
+          "velocity": 42
+        },
+        {
+          "beat": 51.0,
+          "duration": 2.6,
+          "pitch": 53,
+          "velocity": 42
+        },
+        {
+          "beat": 54.0,
+          "duration": 2.6,
+          "pitch": 48,
+          "velocity": 57
+        },
+        {
+          "beat": 55.0,
+          "duration": 1.5,
+          "pitch": 55,
+          "velocity": 52
+        },
+        {
+          "beat": 57.0,
+          "duration": 2.6,
+          "pitch": 57,
+          "velocity": 57
+        },
+        {
+          "beat": 58.0,
+          "duration": 1.5,
+          "pitch": 64,
+          "velocity": 52
+        },
+        {
+          "beat": 60.0,
+          "duration": 2.6,
+          "pitch": 58,
+          "velocity": 57
+        },
+        {
+          "beat": 61.0,
+          "duration": 1.5,
+          "pitch": 65,
+          "velocity": 52
+        },
+        {
+          "beat": 63.0,
+          "duration": 2.6,
+          "pitch": 55,
+          "velocity": 57
+        },
+        {
+          "beat": 64.0,
+          "duration": 1.5,
+          "pitch": 62,
+          "velocity": 52
+        },
+        {
+          "beat": 66.0,
+          "duration": 2.6,
+          "pitch": 52,
+          "velocity": 57
+        },
+        {
+          "beat": 67.0,
+          "duration": 1.5,
+          "pitch": 59,
+          "velocity": 52
+        },
+        {
+          "beat": 69.0,
+          "duration": 2.6,
+          "pitch": 57,
+          "velocity": 57
+        },
+        {
+          "beat": 70.0,
+          "duration": 1.5,
+          "pitch": 64,
+          "velocity": 52
+        }
+      ]
+    },
+    {
+      "name": "チェロ/低弦",
+      "program": 43,
+      "channel": 2,
+      "notes": [
+        {
+          "beat": 0.0,
+          "duration": 2.5,
+          "pitch": 38,
+          "velocity": 56
+        },
+        {
+          "beat": 3.0,
+          "duration": 2.5,
+          "pitch": 46,
+          "velocity": 56
+        },
+        {
+          "beat": 6.0,
+          "duration": 2.5,
+          "pitch": 43,
+          "velocity": 56
+        },
+        {
+          "beat": 9.0,
+          "duration": 2.5,
+          "pitch": 45,
+          "velocity": 56
+        },
+        {
+          "beat": 12.0,
+          "duration": 2.5,
+          "pitch": 38,
+          "velocity": 56
+        },
+        {
+          "beat": 15.0,
+          "duration": 2.5,
+          "pitch": 41,
+          "velocity": 56
+        },
+        {
+          "beat": 18.0,
+          "duration": 2.5,
+          "pitch": 36,
+          "velocity": 56
+        },
+        {
+          "beat": 21.0,
+          "duration": 2.5,
+          "pitch": 45,
+          "velocity": 56
+        },
+        {
+          "beat": 24.0,
+          "duration": 2.5,
+          "pitch": 46,
+          "velocity": 56
+        },
+        {
+          "beat": 27.0,
+          "duration": 2.5,
+          "pitch": 43,
+          "velocity": 56
+        },
+        {
+          "beat": 30.0,
+          "duration": 2.5,
+          "pitch": 40,
+          "velocity": 56
+        },
+        {
+          "beat": 33.0,
+          "duration": 2.5,
+          "pitch": 45,
+          "velocity": 56
+        },
+        {
+          "beat": 36.0,
+          "duration": 2.5,
+          "pitch": 38,
+          "velocity": 43
+        },
+        {
+          "beat": 39.0,
+          "duration": 2.5,
+          "pitch": 46,
+          "velocity": 43
+        },
+        {
+          "beat": 42.0,
+          "duration": 2.5,
+          "pitch": 43,
+          "velocity": 43
+        },
+        {
+          "beat": 45.0,
+          "duration": 2.5,
+          "pitch": 45,
+          "velocity": 43
+        },
+        {
+          "beat": 48.0,
+          "duration": 2.5,
+          "pitch": 38,
+          "velocity": 43
+        },
+        {
+          "beat": 51.0,
+          "duration": 2.5,
+          "pitch": 41,
+          "velocity": 43
+        },
+        {
+          "beat": 54.0,
+          "duration": 2.5,
+          "pitch": 36,
+          "velocity": 56
+        },
+        {
+          "beat": 57.0,
+          "duration": 2.5,
+          "pitch": 45,
+          "velocity": 56
+        },
+        {
+          "beat": 60.0,
+          "duration": 2.5,
+          "pitch": 46,
+          "velocity": 56
+        },
+        {
+          "beat": 63.0,
+          "duration": 2.5,
+          "pitch": 43,
+          "velocity": 56
+        },
+        {
+          "beat": 66.0,
+          "duration": 2.5,
+          "pitch": 40,
+          "velocity": 56
+        },
+        {
+          "beat": 69.0,
+          "duration": 2.5,
+          "pitch": 45,
+          "velocity": 56
+        }
+      ]
+    },
+    {
+      "name": "応答声部",
+      "program": 68,
+      "channel": 3,
+      "notes": [
+        {
+          "beat": 7.5,
+          "duration": 0.7,
+          "pitch": 67,
+          "velocity": 49
+        },
+        {
+          "beat": 16.5,
+          "duration": 0.7,
+          "pitch": 65,
+          "velocity": 49
+        },
+        {
+          "beat": 22.5,
+          "duration": 0.7,
+          "pitch": 76,
+          "velocity": 49
+        },
+        {
+          "beat": 31.5,
+          "duration": 0.7,
+          "pitch": 68,
+          "velocity": 49
+        },
+        {
+          "beat": 36.0,
+          "duration": 0.43,
+          "pitch": 58,
+          "velocity": 54
+        },
+        {
+          "beat": 36.5,
+          "duration": 0.43,
+          "pitch": 57,
+          "velocity": 47
+        },
+        {
+          "beat": 37.0,
+          "duration": 1.72,
+          "pitch": 53,
+          "velocity": 54
+        },
+        {
+          "beat": 42.0,
+          "duration": 1.72,
+          "pitch": 57,
+          "velocity": 54
+        },
+        {
+          "beat": 44.0,
+          "duration": 0.43,
+          "pitch": 52,
+          "velocity": 54
+        },
+        {
+          "beat": 44.5,
+          "duration": 0.43,
+          "pitch": 53,
+          "velocity": 47
+        },
+        {
+          "beat": 48.0,
+          "duration": 1.29,
+          "pitch": 52,
+          "velocity": 54
+        },
+        {
+          "beat": 49.5,
+          "duration": 0.43,
+          "pitch": 53,
+          "velocity": 47
+        },
+        {
+          "beat": 50.0,
+          "duration": 0.86,
+          "pitch": 57,
+          "velocity": 54
+        },
+        {
+          "beat": 61.5,
+          "duration": 0.7,
+          "pitch": 70,
+          "velocity": 49
+        },
+        {
+          "beat": 70.5,
+          "duration": 0.7,
+          "pitch": 69,
+          "velocity": 49
+        }
+      ]
+    },
+    {
+      "name": "ハープ",
+      "program": 46,
+      "channel": 4,
+      "notes": [
+        {
+          "beat": 0.1,
+          "duration": 1.3,
+          "pitch": 62,
+          "velocity": 35
+        },
+        {
+          "beat": 0.34,
+          "duration": 1.3,
+          "pitch": 65,
+          "velocity": 35
+        },
+        {
+          "beat": 0.58,
+          "duration": 1.3,
+          "pitch": 69,
+          "velocity": 35
+        },
+        {
+          "beat": 3.1,
+          "duration": 1.3,
+          "pitch": 70,
+          "velocity": 35
+        },
+        {
+          "beat": 3.34,
+          "duration": 1.3,
+          "pitch": 74,
+          "velocity": 35
+        },
+        {
+          "beat": 3.58,
+          "duration": 1.3,
+          "pitch": 77,
+          "velocity": 35
+        },
+        {
+          "beat": 6.1,
+          "duration": 1.3,
+          "pitch": 67,
+          "velocity": 35
+        },
+        {
+          "beat": 6.34,
+          "duration": 1.3,
+          "pitch": 70,
+          "velocity": 35
+        },
+        {
+          "beat": 6.58,
+          "duration": 1.3,
+          "pitch": 74,
+          "velocity": 35
+        },
+        {
+          "beat": 9.1,
+          "duration": 1.3,
+          "pitch": 69,
+          "velocity": 35
+        },
+        {
+          "beat": 9.34,
+          "duration": 1.3,
+          "pitch": 73,
+          "velocity": 35
+        },
+        {
+          "beat": 9.58,
+          "duration": 1.3,
+          "pitch": 76,
+          "velocity": 35
+        },
+        {
+          "beat": 12.1,
+          "duration": 1.3,
+          "pitch": 62,
+          "velocity": 35
+        },
+        {
+          "beat": 12.34,
+          "duration": 1.3,
+          "pitch": 65,
+          "velocity": 35
+        },
+        {
+          "beat": 12.58,
+          "duration": 1.3,
+          "pitch": 69,
+          "velocity": 35
+        },
+        {
+          "beat": 15.1,
+          "duration": 1.3,
+          "pitch": 65,
+          "velocity": 35
+        },
+        {
+          "beat": 15.34,
+          "duration": 1.3,
+          "pitch": 69,
+          "velocity": 35
+        },
+        {
+          "beat": 15.58,
+          "duration": 1.3,
+          "pitch": 72,
+          "velocity": 35
+        },
+        {
+          "beat": 18.1,
+          "duration": 1.3,
+          "pitch": 60,
+          "velocity": 35
+        },
+        {
+          "beat": 18.34,
+          "duration": 1.3,
+          "pitch": 64,
+          "velocity": 35
+        },
+        {
+          "beat": 18.58,
+          "duration": 1.3,
+          "pitch": 67,
+          "velocity": 35
+        },
+        {
+          "beat": 21.1,
+          "duration": 1.3,
+          "pitch": 69,
+          "velocity": 35
+        },
+        {
+          "beat": 21.34,
+          "duration": 1.3,
+          "pitch": 73,
+          "velocity": 35
+        },
+        {
+          "beat": 21.58,
+          "duration": 1.3,
+          "pitch": 76,
+          "velocity": 35
+        },
+        {
+          "beat": 24.1,
+          "duration": 1.3,
+          "pitch": 70,
+          "velocity": 35
+        },
+        {
+          "beat": 24.34,
+          "duration": 1.3,
+          "pitch": 74,
+          "velocity": 35
+        },
+        {
+          "beat": 24.58,
+          "duration": 1.3,
+          "pitch": 77,
+          "velocity": 35
+        },
+        {
+          "beat": 27.1,
+          "duration": 1.3,
+          "pitch": 67,
+          "velocity": 35
+        },
+        {
+          "beat": 27.34,
+          "duration": 1.3,
+          "pitch": 70,
+          "velocity": 35
+        },
+        {
+          "beat": 27.58,
+          "duration": 1.3,
+          "pitch": 74,
+          "velocity": 35
+        },
+        {
+          "beat": 30.1,
+          "duration": 1.3,
+          "pitch": 64,
+          "velocity": 35
+        },
+        {
+          "beat": 30.34,
+          "duration": 1.3,
+          "pitch": 68,
+          "velocity": 35
+        },
+        {
+          "beat": 30.58,
+          "duration": 1.3,
+          "pitch": 71,
+          "velocity": 35
+        },
+        {
+          "beat": 30.82,
+          "duration": 1.3,
+          "pitch": 74,
+          "velocity": 35
+        },
+        {
+          "beat": 33.1,
+          "duration": 1.3,
+          "pitch": 69,
+          "velocity": 35
+        },
+        {
+          "beat": 33.34,
+          "duration": 1.3,
+          "pitch": 73,
+          "velocity": 35
+        },
+        {
+          "beat": 33.58,
+          "duration": 1.3,
+          "pitch": 76,
+          "velocity": 35
+        },
+        {
+          "beat": 36.1,
+          "duration": 1.3,
+          "pitch": 62,
+          "velocity": 35
+        },
+        {
+          "beat": 36.34,
+          "duration": 1.3,
+          "pitch": 65,
+          "velocity": 35
+        },
+        {
+          "beat": 36.58,
+          "duration": 1.3,
+          "pitch": 69,
+          "velocity": 35
+        },
+        {
+          "beat": 39.1,
+          "duration": 1.3,
+          "pitch": 70,
+          "velocity": 35
+        },
+        {
+          "beat": 39.34,
+          "duration": 1.3,
+          "pitch": 74,
+          "velocity": 35
+        },
+        {
+          "beat": 39.58,
+          "duration": 1.3,
+          "pitch": 77,
+          "velocity": 35
+        },
+        {
+          "beat": 42.1,
+          "duration": 1.3,
+          "pitch": 67,
+          "velocity": 35
+        },
+        {
+          "beat": 42.34,
+          "duration": 1.3,
+          "pitch": 70,
+          "velocity": 35
+        },
+        {
+          "beat": 42.58,
+          "duration": 1.3,
+          "pitch": 74,
+          "velocity": 35
+        },
+        {
+          "beat": 45.1,
+          "duration": 1.3,
+          "pitch": 69,
+          "velocity": 35
+        },
+        {
+          "beat": 45.34,
+          "duration": 1.3,
+          "pitch": 73,
+          "velocity": 35
+        },
+        {
+          "beat": 45.58,
+          "duration": 1.3,
+          "pitch": 76,
+          "velocity": 35
+        },
+        {
+          "beat": 48.1,
+          "duration": 1.3,
+          "pitch": 62,
+          "velocity": 35
+        },
+        {
+          "beat": 48.34,
+          "duration": 1.3,
+          "pitch": 65,
+          "velocity": 35
+        },
+        {
+          "beat": 48.58,
+          "duration": 1.3,
+          "pitch": 69,
+          "velocity": 35
+        },
+        {
+          "beat": 51.1,
+          "duration": 1.3,
+          "pitch": 65,
+          "velocity": 35
+        },
+        {
+          "beat": 51.34,
+          "duration": 1.3,
+          "pitch": 69,
+          "velocity": 35
+        },
+        {
+          "beat": 51.58,
+          "duration": 1.3,
+          "pitch": 72,
+          "velocity": 35
+        },
+        {
+          "beat": 54.1,
+          "duration": 1.3,
+          "pitch": 60,
+          "velocity": 35
+        },
+        {
+          "beat": 54.34,
+          "duration": 1.3,
+          "pitch": 64,
+          "velocity": 35
+        },
+        {
+          "beat": 54.58,
+          "duration": 1.3,
+          "pitch": 67,
+          "velocity": 35
+        },
+        {
+          "beat": 57.1,
+          "duration": 1.3,
+          "pitch": 69,
+          "velocity": 35
+        },
+        {
+          "beat": 57.34,
+          "duration": 1.3,
+          "pitch": 73,
+          "velocity": 35
+        },
+        {
+          "beat": 57.58,
+          "duration": 1.3,
+          "pitch": 76,
+          "velocity": 35
+        },
+        {
+          "beat": 60.1,
+          "duration": 1.3,
+          "pitch": 70,
+          "velocity": 35
+        },
+        {
+          "beat": 60.34,
+          "duration": 1.3,
+          "pitch": 74,
+          "velocity": 35
+        },
+        {
+          "beat": 60.58,
+          "duration": 1.3,
+          "pitch": 77,
+          "velocity": 35
+        },
+        {
+          "beat": 63.1,
+          "duration": 1.3,
+          "pitch": 67,
+          "velocity": 35
+        },
+        {
+          "beat": 63.34,
+          "duration": 1.3,
+          "pitch": 70,
+          "velocity": 35
+        },
+        {
+          "beat": 63.58,
+          "duration": 1.3,
+          "pitch": 74,
+          "velocity": 35
+        },
+        {
+          "beat": 66.1,
+          "duration": 1.3,
+          "pitch": 64,
+          "velocity": 35
+        },
+        {
+          "beat": 66.34,
+          "duration": 1.3,
+          "pitch": 68,
+          "velocity": 35
+        },
+        {
+          "beat": 66.58,
+          "duration": 1.3,
+          "pitch": 71,
+          "velocity": 35
+        },
+        {
+          "beat": 66.82,
+          "duration": 1.3,
+          "pitch": 74,
+          "velocity": 35
+        },
+        {
+          "beat": 69.1,
+          "duration": 1.3,
+          "pitch": 69,
+          "velocity": 35
+        },
+        {
+          "beat": 69.34,
+          "duration": 1.3,
+          "pitch": 73,
+          "velocity": 35
+        },
+        {
+          "beat": 69.58,
+          "duration": 1.3,
+          "pitch": 76,
+          "velocity": 35
+        }
+      ]
+    },
+    {
+      "name": "和声の弦",
+      "program": 49,
+      "channel": 5,
+      "notes": [
+        {
+          "beat": 36.06,
+          "duration": 2.82,
+          "pitch": 50,
+          "velocity": 34
+        },
+        {
+          "beat": 36.06,
+          "duration": 2.82,
+          "pitch": 53,
+          "velocity": 34
+        },
+        {
+          "beat": 36.06,
+          "duration": 2.82,
+          "pitch": 57,
+          "velocity": 34
+        },
+        {
+          "beat": 39.06,
+          "duration": 2.82,
+          "pitch": 58,
+          "velocity": 34
+        },
+        {
+          "beat": 39.06,
+          "duration": 2.82,
+          "pitch": 62,
+          "velocity": 34
+        },
+        {
+          "beat": 39.06,
+          "duration": 2.82,
+          "pitch": 65,
+          "velocity": 34
+        },
+        {
+          "beat": 42.06,
+          "duration": 2.82,
+          "pitch": 55,
+          "velocity": 34
+        },
+        {
+          "beat": 42.06,
+          "duration": 2.82,
+          "pitch": 58,
+          "velocity": 34
+        },
+        {
+          "beat": 42.06,
+          "duration": 2.82,
+          "pitch": 62,
+          "velocity": 34
+        },
+        {
+          "beat": 45.06,
+          "duration": 2.82,
+          "pitch": 57,
+          "velocity": 34
+        },
+        {
+          "beat": 45.06,
+          "duration": 2.82,
+          "pitch": 61,
+          "velocity": 34
+        },
+        {
+          "beat": 45.06,
+          "duration": 2.82,
+          "pitch": 64,
+          "velocity": 34
+        },
+        {
+          "beat": 48.06,
+          "duration": 2.82,
+          "pitch": 50,
+          "velocity": 34
+        },
+        {
+          "beat": 48.06,
+          "duration": 2.82,
+          "pitch": 53,
+          "velocity": 34
+        },
+        {
+          "beat": 48.06,
+          "duration": 2.82,
+          "pitch": 57,
+          "velocity": 34
+        },
+        {
+          "beat": 51.06,
+          "duration": 2.82,
+          "pitch": 53,
+          "velocity": 34
+        },
+        {
+          "beat": 51.06,
+          "duration": 2.82,
+          "pitch": 57,
+          "velocity": 34
+        },
+        {
+          "beat": 51.06,
+          "duration": 2.82,
+          "pitch": 60,
+          "velocity": 34
+        }
+      ]
+    },
+    {
+      "name": "ティンパニ",
+      "program": 47,
+      "channel": 6,
+      "notes": []
+    },
+    {
+      "name": "管弦楽打楽器",
+      "program": 0,
+      "channel": 9,
+      "notes": []
+    }
+  ],
+  "title": "二年前の薄明",
+  "rationale": "src/view/prologue.ts: 過去の放流と改竄された地図の回想。",
+  "direction": "回想の3/4。チェロ独奏の長い息と問いかけるオーボエ。短調から一瞬長調を望み、静かに戻る。",
+  "sections": [
+    {
+      "bar": 0,
+      "bars": 6,
+      "name": "A"
+    },
+    {
+      "bar": 6,
+      "bars": 6,
+      "name": "B"
+    },
+    {
+      "bar": 12,
+      "bars": 6,
+      "name": "C"
+    },
+    {
+      "bar": 18,
+      "bars": 6,
+      "name": "A2"
+    }
+  ],
+  "harmony": [
+    "Dm",
+    "Bb",
+    "Gm",
+    "A",
+    "Dm",
+    "F",
+    "C",
+    "A",
+    "Bb",
+    "Gm",
+    "E7",
+    "A"
+  ],
+  "sourceEvidence": [
+    "src/domain/battles.ts",
+    "src/view/storyContent.ts",
+    "src/view/prologue.ts"
+  ],
+  "motif": {
+    "id": "river-record",
+    "version": 3,
+    "quotation": "single three-note cameo in C only; title/ending link restricted to opening two bars"
+  },
+  "articulation": "individual authored themes, note lengths, section density, instrument-specific phrasing; GM SoundFont constraints"
+}

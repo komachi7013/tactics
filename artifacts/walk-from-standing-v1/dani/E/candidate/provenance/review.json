@@ -1,0 +1,66 @@
+{
+  "status": "比較候補：Seedance2.5・E立ち絵＋ガランE動画・6条件",
+  "inputImageCount": 1,
+  "inputDirection": "E",
+  "referenceVideoCount": 1,
+  "motionRequirementCount": 6,
+  "equipmentInstructionsIncluded": false,
+  "frames": 19,
+  "cycleMs": 800,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "all19FramesViewedOnLight": true,
+  "all19FramesViewedOnDark": true,
+  "facingRetainedInAllSelectedFrames": true,
+  "fullBodyAndBothSolesInsideSelectedFrames": true,
+  "nativeCanvasEdgePixels": 0,
+  "contactReview": {
+    "videoSha256": "787610aaf30d60a7743a8fb6fba4f98c5937c035cce5bfeaceb5b2c1ea3cf75a",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "R"
+      },
+      {
+        "frame": 48,
+        "foot": "L"
+      },
+      {
+        "frame": 58,
+        "foot": "R"
+      }
+    ],
+    "reviewNote": "Dani E palette brown/ochre/teal with no purple garment reviewed. Source and feet sheets show near image-left R38/58 then far L48 support, small alternating strides. Both arms remain lowered without large elbow bend; full soles and direction retained. Garan E driver. Estimated support phases, not motion capture."
+  },
+  "selectedOutputSeamReviewed": true,
+  "automaticGaitLoopStatus": "automatic selection requires visual review",
+  "issues": [
+    "ガランE動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、全身と両足先、下ろした腕の形を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+  ],
+  "gameApplied": false,
+  "userApproved": false,
+  "referenceMotionReady": true,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "generationCountThisRequest": 1,
+  "quotedCreditsThisRequest": 28,
+  "headCentroidRangePx": [
+    1.6700925915608025,
+    0.7406565008068782
+  ],
+  "footRegionSeamOverMedianStep": 0.2607775216178554,
+  "headTopRangePx": [
+    96,
+    97
+  ],
+  "groundRangePx": [
+    278,
+    284
+  ],
+  "drivingCast": "garan",
+  "drivingDirection": "E",
+  "appearanceSource": "own standing image",
+  "motionSource": "same-direction reference video"
+}

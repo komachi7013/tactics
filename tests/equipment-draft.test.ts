@@ -1,7 +1,8 @@
+import { setMainJob } from './fixtures/legacy-preparation';
 import { describe, expect, it } from 'vitest';
 import { createEquipment, equipItem } from '../src/equipment';
-import { createJobs, setMainJob } from '../src/jobs';
-import { BATTLE_IDS } from '../src/progression';
+import {createJobs} from '../src/jobs';
+import {BATTLE_IDS} from '../src/progression';
 import { compareEquipmentDraft, createEquipmentDraft, resolveEquipmentDraft, type EquipmentDraftContext } from '../src/view/equipmentDraft';
 
 function context(): EquipmentDraftContext {

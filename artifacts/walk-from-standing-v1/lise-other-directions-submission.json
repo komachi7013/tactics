@@ -1,0 +1,133 @@
+{
+  "requests": [
+    {
+      "index": 0,
+      "params": {
+        "model": "hf_mult_motion_control",
+        "resolution": "720p",
+        "count": 1,
+        "prompt": "The IMAGE defines the exact character design, camera angle, facing, body proportions and equipment. The VIDEO supplies ONLY the approved restrained walking rhythm and alternating anatomical left/right leg joint motion. Map that gait into the IMAGE character's local forward direction: adapt foot trajectories and toe yaw to HER facing, never copy the video's screen-facing direction. Her view is locked to: BACK three-quarter view facing away toward screen UPPER-RIGHT; show the BACK of her hair and cape, not her front face. NEVER turn her head or body, and NEVER rotate the camera. She is the same brown-haired female scholar in the image, with a cream tunic and sleeves, SHORT dark teal shoulder cape, brown boots and the same waist accessories. The closed brown book stays held in her anatomical LEFT hand, and her leather satchel belongs on her anatomical RIGHT hip. Preserve their exact visibility and placement from this directional IMAGE; keep any occluded parts occluded and never twist the torso to display them. Preserve the short cape shape and length, hair silhouette, face where visible, head width, jaw-to-waist and waist-to-knee lengths, clothing colours, book and bag design. No added objects, weapons, long cloak panels or straps. Keep equipment grips steady. Only modest leg motion, a small weight transfer and subtle cloth response. No expressive arm gestures. Natural upright WALK IN PLACE: equal low-lift alternating left and right steps, heel contact, supporting leg straightens, passing knee bends, toe-off; one foot supports her at all times. No one-leg repeated step, hop, run, marching or constant crouch. A complete LEFT-plus-RIGHT cycle every 0.8 seconds, repeat continuously with no idle lead-in or stopping. Root centered at fixed scale, no translation, no size pumping. The entire head, boots and soles stay inside frame with empty margins at all times. Same hand-painted illustrated chibi game style as the IMAGE. Fixed orthographic camera, no pan, zoom, cuts or lighting change. Uniform flat solid magenta #ff00ff background. No floor, ground shadow, reflection, particles or text.",
+        "medias": [
+          {
+            "role": "image",
+            "value": "637749fd-61a4-41fa-a94d-12343b55b59f"
+          },
+          {
+            "role": "video",
+            "value": "90c9e480-c976-4cce-8839-131e7afb4b6b"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "params": {
+        "model": "hf_mult_motion_control",
+        "resolution": "720p",
+        "count": 1,
+        "prompt": "The IMAGE defines the exact character design, camera angle, facing, body proportions and equipment. The VIDEO supplies ONLY the approved restrained walking rhythm and alternating anatomical left/right leg joint motion. Map that gait into the IMAGE character's local forward direction: adapt foot trajectories and toe yaw to HER facing, never copy the video's screen-facing direction. Her view is locked to: FRONT three-quarter view facing toward screen LOWER-LEFT; preserve this exact front view, do not switch to lower-right. NEVER turn her head or body, and NEVER rotate the camera. She is the same brown-haired female scholar in the image, with a cream tunic and sleeves, SHORT dark teal shoulder cape, brown boots and the same waist accessories. The closed brown book stays held in her anatomical LEFT hand, and her leather satchel belongs on her anatomical RIGHT hip. Preserve their exact visibility and placement from this directional IMAGE; keep any occluded parts occluded and never twist the torso to display them. Preserve the short cape shape and length, hair silhouette, face where visible, head width, jaw-to-waist and waist-to-knee lengths, clothing colours, book and bag design. No added objects, weapons, long cloak panels or straps. Keep equipment grips steady. Only modest leg motion, a small weight transfer and subtle cloth response. No expressive arm gestures. Natural upright WALK IN PLACE: equal low-lift alternating left and right steps, heel contact, supporting leg straightens, passing knee bends, toe-off; one foot supports her at all times. No one-leg repeated step, hop, run, marching or constant crouch. A complete LEFT-plus-RIGHT cycle every 0.8 seconds, repeat continuously with no idle lead-in or stopping. Root centered at fixed scale, no translation, no size pumping. The entire head, boots and soles stay inside frame with empty margins at all times. Same hand-painted illustrated chibi game style as the IMAGE. Fixed orthographic camera, no pan, zoom, cuts or lighting change. Uniform flat solid magenta #ff00ff background. No floor, ground shadow, reflection, particles or text.",
+        "medias": [
+          {
+            "role": "image",
+            "value": "931fce26-9563-41f0-be4e-89843e7a831d"
+          },
+          {
+            "role": "video",
+            "value": "90c9e480-c976-4cce-8839-131e7afb4b6b"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "params": {
+        "model": "hf_mult_motion_control",
+        "resolution": "720p",
+        "count": 1,
+        "prompt": "The IMAGE defines the exact character design, camera angle, facing, body proportions and equipment. The VIDEO supplies ONLY the approved restrained walking rhythm and alternating anatomical left/right leg joint motion. Map that gait into the IMAGE character's local forward direction: adapt foot trajectories and toe yaw to HER facing, never copy the video's screen-facing direction. Her view is locked to: BACK three-quarter view facing away toward screen UPPER-LEFT; preserve the visible back of her hair and cape, not a front or side view. NEVER turn her head or body, and NEVER rotate the camera. She is the same brown-haired female scholar in the image, with a cream tunic and sleeves, SHORT dark teal shoulder cape, brown boots and the same waist accessories. The closed brown book stays held in her anatomical LEFT hand, and her leather satchel belongs on her anatomical RIGHT hip. Preserve their exact visibility and placement from this directional IMAGE; keep any occluded parts occluded and never twist the torso to display them. Preserve the short cape shape and length, hair silhouette, face where visible, head width, jaw-to-waist and waist-to-knee lengths, clothing colours, book and bag design. No added objects, weapons, long cloak panels or straps. Keep equipment grips steady. Only modest leg motion, a small weight transfer and subtle cloth response. No expressive arm gestures. Natural upright WALK IN PLACE: equal low-lift alternating left and right steps, heel contact, supporting leg straightens, passing knee bends, toe-off; one foot supports her at all times. No one-leg repeated step, hop, run, marching or constant crouch. A complete LEFT-plus-RIGHT cycle every 0.8 seconds, repeat continuously with no idle lead-in or stopping. Root centered at fixed scale, no translation, no size pumping. The entire head, boots and soles stay inside frame with empty margins at all times. Same hand-painted illustrated chibi game style as the IMAGE. Fixed orthographic camera, no pan, zoom, cuts or lighting change. Uniform flat solid magenta #ff00ff background. No floor, ground shadow, reflection, particles or text.",
+        "medias": [
+          {
+            "role": "image",
+            "value": "ff1c35ae-c1c3-458f-8564-394d026b2b70"
+          },
+          {
+            "role": "video",
+            "value": "90c9e480-c976-4cce-8839-131e7afb4b6b"
+          }
+        ]
+      }
+    }
+  ],
+  "submission": {
+    "jobs": [
+      {
+        "index": 0,
+        "job_id": "ac83afde-4304-450f-b1f5-87c7694c0f9c",
+        "status": "pending",
+        "adjustments": {
+          "medias[0].role": {
+            "requested": "image",
+            "used": "image_references",
+            "reason": "Genjutsu backend expects schema-key media roles"
+          },
+          "medias[1].role": {
+            "requested": "video",
+            "used": "video_references",
+            "reason": "Genjutsu backend expects schema-key media roles"
+          }
+        }
+      },
+      {
+        "index": 2,
+        "job_id": "0a595dac-5658-4296-9bd7-398e01438ba9",
+        "status": "pending",
+        "adjustments": {
+          "medias[0].role": {
+            "requested": "image",
+            "used": "image_references",
+            "reason": "Genjutsu backend expects schema-key media roles"
+          },
+          "medias[1].role": {
+            "requested": "video",
+            "used": "video_references",
+            "reason": "Genjutsu backend expects schema-key media roles"
+          }
+        }
+      },
+      {
+        "index": 3,
+        "job_id": "48025f91-ff5b-490e-8eb3-4afba1d7a8d4",
+        "status": "pending",
+        "adjustments": {
+          "medias[0].role": {
+            "requested": "image",
+            "used": "image_references",
+            "reason": "Genjutsu backend expects schema-key media roles"
+          },
+          "medias[1].role": {
+            "requested": "video",
+            "used": "video_references",
+            "reason": "Genjutsu backend expects schema-key media roles"
+          }
+        }
+      }
+    ],
+    "submitted_count": 3,
+    "failed_count": 0
+  },
+  "quotes": [
+    {
+      "credits": 28,
+      "credits_exact": 28
+    },
+    {
+      "credits": 28,
+      "credits_exact": 28
+    },
+    {
+      "credits": 28,
+      "credits_exact": 28
+    }
+  ],
+  "authorization": "User explicitly requested Lise N, S, W from the approved E reference. Review-only; do not apply walking to game."
+}

@@ -1,0 +1,14 @@
+{
+  "src/audio-cues.ts": "0167d8efe20cc82d69a9c7b3171793833120137615625da380d4aef9d2f314cf",
+  "src/audio-events.ts": "992c3c273a611628a4a86d5d13a7602a74a41e09a8231be4a42cb5674b55cf0a",
+  "src/audio.ts": "9a02f65a757e7e6b6bd0a7e1376790e11ea4ec667b0b8f619605cf672e2a2f6f",
+  "src/main.ts": "47145f793eb3c53ebf1f1eafcacf399f4b4b767e45e84e9623c3be6a32c97045",
+  "src/view/audioControls.css": "d154c533491db972829f7f644198c4a64ae02a11f01e8e91f4415e427de9326d",
+  "tests/audio.test.ts": "1900590999e3fbae8b25a5b16abdf88e8bd2814951f23875d758f4f1ab3c19dc",
+  "tests/audio-events.test.ts": "145924d5c13b20e14526c90bce82d51308972f4f2a1904b4c9e4fcb30fa203ef",
+  "tests/combat-presentation.test.ts": "110502dddfbcc0ece38ce728579d9ae625f1343d8c30ae91091e5a3607508f04",
+  "tests/story-main-path.test.ts": "db1064781983e16b22a3434233f7ef01b38bcc9555681cc783afaf4d171ed024",
+  "scripts/build-game-audio.py": "e4bd60608de1c6cd708559abf47c54d1af7c0a6b2567a38ff5367ef2fe979f62",
+  "scripts/verify-game-audio.py": "0f6a2c504115cea623ab804b6e048a638796de0caace768148e9cbc81db1399b",
+  "docs/design/audio-contract.md": "4a6fa14269c4cf1c14c4ed4fcc89abcaf2ee9cdff181cf9bd0d7d87fab4e669e"
+}

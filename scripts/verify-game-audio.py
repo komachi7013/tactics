@@ -1,37 +1,35 @@
 #!/usr/bin/env python3
-"""Read-only audit of decoded delivery PCM and conservative runtime mix headroom."""
+"""Read-only v2 delivery/PCM/loop/hash/HTTP audit. Use .venv/bin/python."""
 from pathlib import Path
-import array, hashlib, json, math, sys, wave
-ROOT = Path(__file__).resolve().parent.parent
-metadata = json.loads((ROOT/'assets/audio/v1/metadata.json').read_text())
-expected = {'bgm-briefing','bgm-tactics','bgm-ending','se-ui','se-move','se-impact','se-heal','se-record','se-mechanism','se-victory','se-defeat'}
-assert {c['id'] for c in metadata['cues']} == expected and len(metadata['cues']) == len(expected)
+import hashlib,json,math,runpy,sys,urllib.request
+ROOT=Path(__file__).resolve().parent.parent
+STAGE=ROOT/'audio-production/v2-20261026'
+build=runpy.run_path(str(STAGE/'build.py'))
+metadata=json.loads((STAGE/'metadata.json').read_text())
+origin=next((v.split('=',1)[1] for v in sys.argv if v.startswith('--origin=')),'http://127.0.0.1:5173')
+expected={'bgm-'+c[0] for c in build['CUES']}|{'se-'+s for s in build['SE']}|{'se-victory','se-defeat'}
+assert {c['id'] for c in metadata['cues']}==expected and len(expected)==35
 results=[]
 for cue in metadata['cues']:
-    spec=cue['delivery'];path=ROOT/spec['path'];assert hashlib.sha256(path.read_bytes()).hexdigest()==spec['sha256'],cue['id']
-    with wave.open(str(path),'rb') as wav:
-        assert (wav.getframerate(),wav.getnchannels(),wav.getsampwidth())==(22050,2,2)
-        frames=wav.getnframes(); assert frames==spec['frames'];raw=wav.readframes(frames)
-    values=array.array('h');values.frombytes(raw)
-    if sys.byteorder!='little':values.byteswap()
-    assert len(values)==frames*2 and frames>0
-    peak=max(abs(v) for v in values)/32768
-    rms=math.sqrt(sum((v/32768)**2 for v in values)/len(values))
-    dc=[sum(values[ch::2])/frames/32768 for ch in (0,1)]
-    rails=sum(v in (-32768,32767) for v in values)
-    assert peak>0.001 and rails==0 and max(map(abs,dc))<.005,cue['id']
-    assert abs(peak-spec['samplePeak'])<1/32768
-    if cue['kind']=='bgm':
-        assert spec['loop']==[0,frames] and spec['loopEndExclusive'] is True
-    else:assert spec['loop'] is None
-    results.append({'id':cue['id'],'frames':frames,'seconds':frames/22050,'samplePeak':peak,'rms':rms,'dc':dc,'railSamples':rails,'sha256':spec['sha256']})
-bgm_peak=max(x['samplePeak'] for x in results if x['id'].startswith('bgm'))
-se_peak=max(x['samplePeak'] for x in results if x['id'].startswith('se'))
-# Bounding two crossfading music voices and three simultaneous SE at category volume=1.
-# This is a conservative arithmetic PCM bound, not a browser true-peak or listening test.
-headroom=.35
+ path=ROOT/'public/audio/v2'/f"{cue['id']}.wav"
+ # metrics uses paths relative to STAGE, so inspect identical staging delivery
+ # then hash actual served copy; do not regenerate or modify either file.
+ assert path.is_file() and hashlib.sha256(path.read_bytes()).hexdigest()==cue['delivery']['sha256'],cue['id']
+ actual=build['metrics'](STAGE/cue['delivery']['file'],cue['id'].startswith('bgm'))
+ assert actual==cue['delivery'],cue['id']
+ assert actual['sampleRate']==22050 and actual['channels']==2
+ if cue['id'].startswith('bgm'):
+  assert not actual['boundary']['numericalFlags'],cue['id']
+  assert actual['loop']==[0,actual['frames']]
+ if '--http' in sys.argv:
+  url=origin+'/audio/v2/'+path.name
+  with urllib.request.urlopen(url,timeout=15) as response:
+   body=response.read();assert response.status==200 and 'audio' in response.headers.get('Content-Type','')
+   assert hashlib.sha256(body).hexdigest()==actual['sha256']
+  actual['http']=dict(url=url,status=response.status,contentType=response.headers.get('Content-Type'),sha256='matches')
+ results.append(dict(id=cue['id'],**actual))
+bgm=max(c['samplePeak'] for c in results if c['id'].startswith('bgm'));se=max(c['samplePeak'] for c in results if c['id'].startswith('se'))
+bound=.35*(2*bgm+3*se);assert bound<1
 assert 'export const AUDIO_HEADROOM = 0.35' in (ROOT/'src/audio.ts').read_text()
-bound=headroom*(2*bgm_peak+3*se_peak)
-assert bound<1
-report={'deliveryFiles':results,'conservativeMaximumPCMAmplitude':bound,'boundDbFS':20*math.log10(bound),'headroom':headroom,'maximumMusicVoices':2,'maximumSEVoices':3,'sampleClippingBound':'below full-scale under stated voice and gain limits','truePeak':'not measured','LUFS':'not measured','listening':'not performed','nativeBrowser':'not performed'}
-print(json.dumps(report,ensure_ascii=False,indent=2))
+assert '/audio/v1/' not in (ROOT/'src/main.ts').read_text()
+print(json.dumps(dict(deliveryFiles=results,conservativeMaximumPCMAmplitude=bound,boundDbFS=20*math.log10(bound),headroom=.35,maximumMusicVoices=2,maximumSEVoices=3,truePeak='not measured',LUFS='not measured',listening='not performed',verification='PCM, loop diagnostics, SHA, optional HTTP; not acoustic quality'),ensure_ascii=False,indent=2))

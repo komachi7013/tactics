@@ -1,0 +1,6 @@
+#battle-dialogue-live{flex:none;display:flex;align-items:center;gap:12px;max-height:110px;overflow:auto;padding:8px 18px;border-top:1px solid #7d9078;background:#142e29;color:#f4ebce}
+#battle-dialogue-live[hidden]{display:none}
+.battle-dialogue-words{flex:1;min-width:0;margin:0;font-size:14px;line-height:1.65}
+#battle-dialogue-live>button{flex:none;min-height:36px;padding:4px 12px}
+.story-actions .story-skip{font-size:12px;margin-left:auto;min-height:36px}
+@media(max-width:700px){#battle-dialogue-live{padding:6px 10px;gap:6px;max-height:88px}.battle-dialogue-words{font-size:12px;line-height:1.5}}

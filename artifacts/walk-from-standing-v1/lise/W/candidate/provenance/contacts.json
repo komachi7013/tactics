@@ -1,0 +1,21 @@
+{
+  "videoSha256": "d3f753d3ef32d20f182ebb2efeee7fbab0921c180260207c5b3b00f94b482ba0",
+  "visualReviewed": true,
+  "contacts": [
+    {
+      "frame": 16,
+      "foot": "R"
+    },
+    {
+      "frame": 32,
+      "foot": "L"
+    },
+    {
+      "frame": 48,
+      "foot": "R"
+    }
+  ],
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "reviewNote": "Native frames8–71 inspected. In this back three-quarter view anatomical L is the near image-left leg, R is the farther image-right leg. Near L sole rises while R supports around16, L supports with R raised around32, R supports again around48. These are estimated support phases +/-2 source frames, not motion capture. Single W standing image plus six conditions, no reference video. Full-body and sole visibility checked on the selected interval; output still requires19-frame review."
+}

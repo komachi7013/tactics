@@ -1,0 +1,66 @@
+{
+  "status": "比較候補：Seedance2.5・W立ち絵＋ガランW動画・6条件",
+  "inputImageCount": 1,
+  "inputDirection": "W",
+  "referenceVideoCount": 1,
+  "motionRequirementCount": 6,
+  "equipmentInstructionsIncluded": false,
+  "frames": 19,
+  "cycleMs": 800,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "all19FramesViewedOnLight": true,
+  "all19FramesViewedOnDark": true,
+  "facingRetainedInAllSelectedFrames": true,
+  "fullBodyAndBothSolesInsideSelectedFrames": true,
+  "nativeCanvasEdgePixels": 0,
+  "contactReview": {
+    "videoSha256": "f747a3ba0dccd23eaef4dee9e46a4a6b7a276417a1ec391e4fc8163646d8ba7c",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "L"
+      },
+      {
+        "frame": 48,
+        "foot": "R"
+      },
+      {
+        "frame": 58,
+        "foot": "L"
+      }
+    ],
+    "reviewNote": "W source and full feet sheets reviewed: near image-left L support38/58, far R48, alternate forward swings with toe/heel passage. Both soles fully within source. Background pink-red; pink matte on W only, verify red costume on light/dark. Garan W driver. Estimated support phases, not motion capture."
+  },
+  "selectedOutputSeamReviewed": true,
+  "automaticGaitLoopStatus": "automatic selection requires visual review",
+  "issues": [
+    "ガランW動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の振り出し、剣・盾と足先を確認。赤い衣装を保持して背景除去。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+  ],
+  "gameApplied": false,
+  "userApproved": false,
+  "referenceMotionReady": true,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "generationCountThisRequest": 1,
+  "quotedCreditsThisRequest": 28,
+  "headCentroidRangePx": [
+    2.796622055082068,
+    1.861905176785001
+  ],
+  "footRegionSeamOverMedianStep": 0.1996335002261871,
+  "headTopRangePx": [
+    95,
+    98
+  ],
+  "groundRangePx": [
+    270,
+    283
+  ],
+  "drivingCast": "garan",
+  "drivingDirection": "W",
+  "appearanceSource": "own standing image",
+  "motionSource": "same-direction reference video"
+}

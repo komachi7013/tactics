@@ -1,0 +1,218 @@
+{
+  "frames": 19,
+  "cycleMs": 800,
+  "fpsRational": [
+    95,
+    4
+  ],
+  "durationsMs": [
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42
+  ],
+  "sourceIndices": [
+    32,
+    33,
+    35,
+    36,
+    38,
+    39,
+    41,
+    42,
+    44,
+    45,
+    47,
+    49,
+    51,
+    53,
+    55,
+    56,
+    58,
+    60,
+    62
+  ],
+  "sourceVideoSha256": "cfb8c11df60c4f5a5013db0195132df4c4cef2e4fbc54b47937198d2d9a81ec0",
+  "sheetSha256": "e08e461dba78265539bb840b9bbacb8a14679d7298c809457c8cf469c56e9408",
+  "fixedScale": 0.26785714285714285,
+  "fixedOffset": [
+    -1,
+    64
+  ],
+  "frameGeometry": [
+    {
+      "headTop": 104,
+      "ground": 275,
+      "width": 71
+    },
+    {
+      "headTop": 103,
+      "ground": 276,
+      "width": 71
+    },
+    {
+      "headTop": 102,
+      "ground": 277,
+      "width": 72
+    },
+    {
+      "headTop": 102,
+      "ground": 279,
+      "width": 74
+    },
+    {
+      "headTop": 102,
+      "ground": 281,
+      "width": 76
+    },
+    {
+      "headTop": 102,
+      "ground": 281,
+      "width": 78
+    },
+    {
+      "headTop": 102,
+      "ground": 283,
+      "width": 81
+    },
+    {
+      "headTop": 102,
+      "ground": 283,
+      "width": 81
+    },
+    {
+      "headTop": 103,
+      "ground": 284,
+      "width": 82
+    },
+    {
+      "headTop": 103,
+      "ground": 284,
+      "width": 82
+    },
+    {
+      "headTop": 103,
+      "ground": 284,
+      "width": 82
+    },
+    {
+      "headTop": 102,
+      "ground": 283,
+      "width": 78
+    },
+    {
+      "headTop": 102,
+      "ground": 280,
+      "width": 75
+    },
+    {
+      "headTop": 101,
+      "ground": 274,
+      "width": 73
+    },
+    {
+      "headTop": 101,
+      "ground": 275,
+      "width": 72
+    },
+    {
+      "headTop": 101,
+      "ground": 277,
+      "width": 71
+    },
+    {
+      "headTop": 102,
+      "ground": 277,
+      "width": 73
+    },
+    {
+      "headTop": 103,
+      "ground": 277,
+      "width": 71
+    },
+    {
+      "headTop": 104,
+      "ground": 275,
+      "width": 71
+    }
+  ],
+  "contactReview": {
+    "videoSha256": "cfb8c11df60c4f5a5013db0195132df4c4cef2e4fbc54b47937198d2d9a81ec0",
+    "visualReviewed": true,
+    "contacts": [
+      {
+        "frame": 32,
+        "foot": "R"
+      },
+      {
+        "frame": 46,
+        "foot": "L"
+      },
+      {
+        "frame": 64,
+        "foot": "R"
+      }
+    ],
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "automaticLoopCheck": "no acceptable window; manual selection and output seam review required",
+    "reviewNote": "Native frames28–67 inspected. Anatomical R is the image-right leg on the satchel side; L is image-left. R support around32, L support around46, R support around64. Support/contact phases are visually estimated +/-2 source frames. This full two-step interval is retimed to800ms and19 output frames. No E media or equipment instructions were supplied. This annotation does not certify full gait quality."
+  },
+  "status": "manually-selected-and-reviewed-N-only-comparison-candidate",
+  "matteReportStatus": "pass",
+  "matteOverrideReason": null,
+  "gameApplied": false,
+  "art_source": "Higgsfield / Seedance 2.5 image-only",
+  "visualReview": {
+    "status": "比較候補：N画像のみ・19フレーム／0.8秒",
+    "inputImageCount": 1,
+    "inputDirection": "N",
+    "referenceVideoCount": 0,
+    "EImageOrVideoUsed": false,
+    "equipmentInstructionsIncluded": false,
+    "frames": 19,
+    "cycleMs": 800,
+    "nativeFullCycleSourceFrames": 32,
+    "nativeFullCycleSeconds": 1.3333333333333333,
+    "all19FramesViewedOnLight": true,
+    "facingRetainedInAllSelectedFrames": true,
+    "headCentroidRangePx": [
+      3.74170022324968,
+      1.7947270109643512
+    ],
+    "headTopRangePx": [
+      101,
+      104
+    ],
+    "groundRangePx": [
+      274,
+      284
+    ],
+    "footRegionSeamOverMedianStep": 0.2255593382582998,
+    "automaticSourceLoopCheck": "no window; manual support phases used and selected output reviewed separately",
+    "manualContactUncertaintySourceFrames": 2,
+    "gameApplied": false,
+    "art_source": "Higgsfield / Seedance 2.5 image-to-video",
+    "all19FramesViewedOnDark": true,
+    "selectedOutputSeamReviewed": true,
+    "referenceMotionReady": true,
+    "userApproved": false
+  },
+  "nativeCycleMsBeforeRetiming": 1333.3333333333333,
+  "playbackRateVsSource": 1.6666666666666665
+}

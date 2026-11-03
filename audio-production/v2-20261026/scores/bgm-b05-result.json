@@ -1,0 +1,99 @@
+{
+  "id": "bgm-b05",
+  "master": {
+    "file": "masters/bgm-b05.wav",
+    "sha256": "3c3bda51059a430872712937cfacd00b8fc1152c736adebd86f324d369c3d1be",
+    "bytes": 16873100,
+    "sampleRate": 44100,
+    "channels": 2,
+    "frames": 4218264,
+    "seconds": 95.65224489795918,
+    "samplePeak": 0.319976806640625,
+    "rmsDbFS": -25.259221978159907,
+    "dc": [
+      -1.1966077566209701e-08,
+      -1.7435457638794063e-09
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      4218264
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        0.003173828125,
+        0.001800537109375
+      ],
+      "rmsDifferenceDb": [
+        -0.11170411326909241,
+        -0.2300143802910015
+      ],
+      "slopeError": [
+        0.003173828125,
+        0.0015869140625
+      ],
+      "numericalFlags": []
+    }
+  },
+  "delivery": {
+    "file": "delivery/bgm-b05.wav",
+    "sha256": "8938b5d5cc1dc24630665d7f04a076d961a020e66e45b6d96fc7f681b37ad188",
+    "bytes": 8436572,
+    "sampleRate": 22050,
+    "channels": 2,
+    "frames": 2109132,
+    "seconds": 95.65224489795918,
+    "samplePeak": 0.3179931640625,
+    "rmsDbFS": -25.259266187258195,
+    "dc": [
+      -1.0779598291204629e-08,
+      -2.6478744795844927e-09
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      2109132
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        0.0040283203125,
+        0.003173828125
+      ],
+      "rmsDifferenceDb": [
+        -0.11311687085570021,
+        -0.22947480040536608
+      ],
+      "slopeError": [
+        0.003753662109375,
+        0.002532958984375
+      ],
+      "numericalFlags": []
+    }
+  },
+  "listeningVerified": false,
+  "compositionRevision": "independent-r2",
+  "title": "署名の影",
+  "usage": "B05 イェルン文書蔵: 必須文書と自身の署名、封鎖迫る室内戦。低い弦とファゴット。",
+  "bpm": 138,
+  "bars": 44,
+  "meter": [
+    5,
+    4
+  ],
+  "mode": "minor",
+  "rationale": "B05 イェルン文書蔵: 必須文書と自身の署名、封鎖迫る室内戦。低い弦とファゴット。",
+  "direction": "文書蔵の5/4。16分ピチカート、角張ったクラリネットと低いファゴット。緊張する潜入・証拠奪取。",
+  "source": "scores/bgm-b05.json",
+  "midi": "scores/bgm-b05.mid",
+  "renderCycles": 3,
+  "extractStartFrame": 4232641,
+  "rotationSeconds": 0.3260090702947846,
+  "motif": {
+    "id": "river-record",
+    "version": 3,
+    "quotation": "single three-note cameo in C only; title/ending link restricted to opening two bars"
+  },
+  "scoreFingerprint": "630aa222a513c1d03695c6c259ba4cbe4fd99b534ce2bf9f8d558835518d5f0a"
+}

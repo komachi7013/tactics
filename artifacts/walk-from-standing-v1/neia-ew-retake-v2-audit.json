@@ -1,0 +1,30 @@
+{
+  "userAuthorizedQuotedCredits": 56,
+  "submittedJobs": 2,
+  "quotedCredits": 56,
+  "order": [
+    "E",
+    "W"
+  ],
+  "gameWalkingUnchanged": true,
+  "directions": [
+    {
+      "direction": "E",
+      "jobId": "a6a442ec-6a73-4c5c-89d8-e19a8b0b712e",
+      "nativeCycleSeconds": 2.0,
+      "frames": 19,
+      "cycleMs": 800,
+      "automaticStatus": "no reliable period in configured12..38 source-frame range; manually inspected48-frame cycle",
+      "previousSpriteSheetPreserved": true
+    },
+    {
+      "direction": "W",
+      "jobId": "7b4064a0-9ded-4861-874b-5e36bc316be9",
+      "nativeCycleSeconds": 4.0,
+      "frames": 19,
+      "cycleMs": 800,
+      "automaticStatus": "no period in configured12..38 source-frame range; manual full96-frame two-step interval reviewed",
+      "previousSpriteSheetPreserved": true
+    }
+  ]
+}

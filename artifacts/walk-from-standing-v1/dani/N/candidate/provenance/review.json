@@ -1,0 +1,66 @@
+{
+  "status": "比較候補：Seedance2.5・N立ち絵＋ガランN動画・6条件",
+  "inputImageCount": 1,
+  "inputDirection": "N",
+  "referenceVideoCount": 1,
+  "motionRequirementCount": 6,
+  "equipmentInstructionsIncluded": false,
+  "frames": 19,
+  "cycleMs": 800,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "all19FramesViewedOnLight": true,
+  "all19FramesViewedOnDark": true,
+  "facingRetainedInAllSelectedFrames": true,
+  "fullBodyAndBothSolesInsideSelectedFrames": true,
+  "nativeCanvasEdgePixels": 0,
+  "contactReview": {
+    "videoSha256": "ff8f89f907708478861df00266ce2e98627fe078c3db8fd670eefe03bbebe411",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "R"
+      },
+      {
+        "frame": 48,
+        "foot": "L"
+      },
+      {
+        "frame": 58,
+        "foot": "R"
+      }
+    ],
+    "reviewNote": "N source and feet sheets inspected. Near image-right R supports38/58 while far L lifted; L supports48 as R passes. Brown/teal/ochre palette validated for pink matte; pink background and cast shadow removed. Full soles and back-facing orientation retained. Garan N driver. Estimated support phases, not motion capture."
+  },
+  "selectedOutputSeamReviewed": true,
+  "automaticGaitLoopStatus": "automatic selection requires visual review",
+  "issues": [
+    "ガランN動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、背面の向き、全身と両足先を確認。背景と足元の影を除去。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+  ],
+  "gameApplied": false,
+  "userApproved": false,
+  "referenceMotionReady": true,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "generationCountThisRequest": 1,
+  "quotedCreditsThisRequest": 28,
+  "headCentroidRangePx": [
+    2.4443210223279976,
+    1.0933547530764542
+  ],
+  "footRegionSeamOverMedianStep": 0.3484205826543141,
+  "headTopRangePx": [
+    96,
+    98
+  ],
+  "groundRangePx": [
+    275,
+    284
+  ],
+  "drivingCast": "garan",
+  "drivingDirection": "N",
+  "appearanceSource": "own standing image",
+  "motionSource": "same-direction reference video"
+}

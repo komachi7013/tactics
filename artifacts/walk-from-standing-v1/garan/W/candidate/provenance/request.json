@@ -1,0 +1,46 @@
+{
+  "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "duration": 4,
+    "resolution": "720p",
+    "generate_audio": false,
+    "count": 1,
+    "aspect_ratio": "1:1",
+    "prompt": "Animate the character in the supplied WEST-facing standing image, keeping the same back-facing three-quarter orientation toward the upper-left and viewpoint.\n\n1. One complete left-and-right TWO-step gait cycle takes approximately 0.8 seconds. The final export will use 19 frames per cycle.\n2. Walk in place with restrained, clearly alternating left and right steps.\n3. Use small strides and low foot lift. Keep the upper body upright.\n4. The supporting leg straightens naturally while the opposite leg passes with a slight knee bend.\n5. Keep head and torso movement small.\n6. Keep the entire character and both feet, including the boot tips and soles, fully inside the frame throughout the clip.",
+    "medias": [
+      {
+        "role": "start_image",
+        "value": "5e38575b-7625-4376-8530-3ed903af425b"
+      }
+    ]
+  },
+  "quote": {
+    "cost": {
+      "credits": 28,
+      "credits_exact": 28
+    }
+  },
+  "submission": {
+    "results": [
+      {
+        "id": "9ffb4ed0-78c2-48e7-83fa-1407fa33745b",
+        "type": "video",
+        "status": "pending",
+        "model": "seedance_2_5",
+        "params": {
+          "prompt": "Animate the character in the supplied WEST-facing standing image, keeping the same back-facing three-quarter orientation toward the upper-left and viewpoint.\n\n1. One complete left-and-right TWO-step gait cycle takes approximately 0.8 seconds. The final export will use 19 frames per cycle.\n2. Walk in place with restrained, clearly alternating left and right steps.\n3. Use small strides and low foot lift. Keep the upper body upright.\n4. The supporting leg straightens naturally while the opposite leg passes with a slight knee bend.\n5. Keep head and torso movement small.\n6. Keep the entire character and both feet, including the boot tips and soles, fully inside the frame throughout the clip.",
+          "aspect_ratio": "1:1",
+          "duration": 4,
+          "reference_images": [
+            "5e38575b-7625-4376-8530-3ed903af425b"
+          ],
+          "mode": "omni_reference",
+          "resolution": "720p",
+          "generate_audio": false
+        }
+      }
+    ]
+  },
+  "userScope": "Garan W only; same six requirements + W standing image; preserve Garan N/E/S; no reference video; no game walking application; no automatic retake"
+}

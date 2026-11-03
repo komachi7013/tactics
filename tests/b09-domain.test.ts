@@ -4,7 +4,7 @@ import {attackPreview,canCollect,canGate,createInitialState,escortAdvancePreview
 import {getBattleConfig} from '../src/domain/battles';
 import {runEnemyActivation} from '../src/domain/ai';
 import type {BattleState,Command} from '../src/domain/types';
-import route from './fixtures/b09-route.json';
+import route from './fixtures/defend-cooldown-v1/b09-route.json';
 const delegation=(s:BattleState)=>escortUnit(s)!;
 // Boundary tests deliberately isolate rule predicates; fixture replay below never edits runtime state.
 function safe(){const s=createInitialState('B09');s.units.filter(u=>u.team==='enemy').forEach(u=>u.hp=0);s.units.filter(u=>u.team==='player'&&u.kind!=='escort').forEach(u=>u.pos={x:20,y:21});return s;}

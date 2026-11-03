@@ -1,0 +1,21 @@
+{
+  "videoSha256": "f747a3ba0dccd23eaef4dee9e46a4a6b7a276417a1ec391e4fc8163646d8ba7c",
+  "visualReviewed": true,
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "contacts": [
+    {
+      "frame": 38,
+      "foot": "L"
+    },
+    {
+      "frame": 48,
+      "foot": "R"
+    },
+    {
+      "frame": 58,
+      "foot": "L"
+    }
+  ],
+  "reviewNote": "W source and full feet sheets reviewed: near image-left L support38/58, far R48, alternate forward swings with toe/heel passage. Both soles fully within source. Background pink-red; pink matte on W only, verify red costume on light/dark. Garan W driver. Estimated support phases, not motion capture."
+}

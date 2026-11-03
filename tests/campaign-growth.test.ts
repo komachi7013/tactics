@@ -1,8 +1,9 @@
+import { tutor, learnSkill, setMainJob, legacyPreparation } from './fixtures/legacy-preparation';
 import { describe, expect, it } from 'vitest';
 import { CAMPAIGN_KEY, completeBattle, createCampaign, editPreparation, readCampaign, selectBattle, writeCampaign, type Campaign, type StorageLike } from '../src/campaign';
 import { createInitialState } from '../src/domain/engine';
-import { defaultParty, trainingPoints, tutor } from '../src/progression';
-import { learnSkill, setMainJob } from '../src/jobs';
+import {defaultParty, trainingPoints} from '../src/progression';
+
 import type { BattleId } from '../src/domain/types';
 const records: Record<BattleId,string[]> = { B01:['A','B'],B02:['O'],B03:['M'],B04:['C'],B05:['D','T','S'],B06:['W'],B07:['V1','V2'],B08:['P','C'],B09:['J','H'],B10:['C'],B11:['W1','W2','A','B'],B12:['U','V'] };
 const ids = Object.keys(records) as BattleId[];
@@ -37,10 +38,10 @@ describe('Campaign v2 growth and legacy checkpoint preservation',()=>{
   c=selectBattle(selectBattle(c,'B01'),'B07');expect(c.growth!.compensated).toEqual(['B06']);expect(trainingPoints(c.growth!,'ally-neia')).toBe(before+2);
   const {storage}=memory();expect(writeCampaign(storage,c).ok).toBe(true);expect(trainingPoints(readCampaign(storage).campaign.growth!,'ally-neia')).toBe(before+2);
  });
- it('persists explicit capped catch-up, preparation choices and learned support with evidence intact',()=>{
+ it('preserves historical catch-up, party choices and learned support input without re-enabling them',()=>{
   let c=selectBattle(through(4),'B05');const growth=tutor(c.growth!,'ally-dani',c.completed);
   const jobs=learnSkill(c.jobs!,growth,'ally-lise','surveyor-foundation','B04');const party=['ally-lise','ally-garan','ally-neia','ally-dani'] as const;
-  c=editPreparation(c,{growth,jobs,parties:{B05:[...party]}});const {storage}=memory();expect(writeCampaign(storage,c).ok).toBe(true);
+  c=legacyPreparation(c,{growth,jobs,parties:{B05:[...party]}});const {storage,data}=memory();data.set(CAMPAIGN_KEY,JSON.stringify(c));const migrated=readCampaign(storage);expect(migrated.writable).toBe(true);expect(writeCampaign(storage,migrated.campaign).ok).toBe(true);
   const loaded=readCampaign(storage).campaign;expect(loaded).toEqual(c);expect(trainingPoints(loaded.growth!,'ally-dani')).toBe(6);expect(loaded.evidence).toEqual(c.evidence);
  });
  it.each(['growth','jobs','parties'] as const)('protects malformed v2 %s instead of silently migrating it',field=>{
@@ -60,20 +61,22 @@ describe('Campaign v2 multiple-session conflict safety',()=>{
   const battle=createInitialState('B04');battle.phase='won';battle.records=records.B04;battle.units.find(u=>u.id==='ally-iva')!.id='ally-sena';const other=completeBattle(selectBattle(b,'B04'),battle);
   const raw=data.get(CAMPAIGN_KEY);expect(writeCampaign(storage,other)).toMatchObject({ok:false});expect(data.get(CAMPAIGN_KEY)).toBe(raw);
  });
- it('rejects stale conflicting jobs, keeps the accepted edit, and requests reload',()=>{
+ it('rejects new job-history edits through preparation and preserves an externally supplied old save',()=>{
   const {storage,data}=memory();writeCampaign(storage,through(3));const a=readCampaign(storage).campaign,b=readCampaign(storage).campaign;
-  const first=editPreparation(a,{jobs:learnSkill(a.jobs!,a.growth!,'ally-lise','surveyor-foundation','B04')});expect(writeCampaign(storage,first).ok).toBe(true);
-  const other=editPreparation(b,{jobs:setMainJob(b.jobs!,'ally-lise','warden','B04')});const raw=data.get(CAMPAIGN_KEY);
-  expect(writeCampaign(storage,other)).toMatchObject({ok:false,error:expect.stringContaining('再読込')});expect(data.get(CAMPAIGN_KEY)).toBe(raw);
+  const archived=legacyPreparation(a,{jobs:learnSkill(a.jobs!,a.growth!,'ally-lise','surveyor-foundation','B04')});
+  data.set(CAMPAIGN_KEY,JSON.stringify(archived));const raw=data.get(CAMPAIGN_KEY);
+  expect(()=>editPreparation(b,{jobs:setMainJob(b.jobs!,'ally-lise','warden','B04')})).toThrow();
+  expect(data.get(CAMPAIGN_KEY)).toBe(raw);expect(readCampaign(storage).campaign.jobs).toEqual(archived.jobs);
  });
- it('allows sequential preparation edits after saving and after taking the returned merged campaign',()=>{
-  const {storage}=memory();let c=through(3);expect(writeCampaign(storage,c).ok).toBe(true);
-  c=editPreparation(c,{jobs:learnSkill(c.jobs!,c.growth!,'ally-lise','surveyor-foundation','B04')});const saved=writeCampaign(storage,c);expect(saved.ok).toBe(true);
-  c=editPreparation(saved.campaign!,{jobs:setMainJob(saved.campaign!.jobs!,'ally-lise','warden','B04')});expect(writeCampaign(storage,c).ok).toBe(true);expect(readCampaign(storage).campaign.jobs!['ally-lise'].main).toBe('warden');
+ it('allows sequential party preparation edits after saving, while archived role data stays unchanged',()=>{
+  const {storage}=memory();let c=through(3);expect(writeCampaign(storage,c).ok).toBe(true);const jobs=structuredClone(c.jobs);
+  c=editPreparation(c,{parties:{B04:['ally-lise','ally-garan','ally-neia','ally-sena']}});const saved=writeCampaign(storage,c);expect(saved.ok).toBe(true);
+  c=editPreparation(saved.campaign!,{parties:{B04:['ally-lise','ally-garan','ally-sena','ally-iva']}});expect(writeCampaign(storage,c).ok).toBe(true);
+  expect(readCampaign(storage).campaign.parties!.B04).toEqual(['ally-lise','ally-garan','ally-sena','ally-iva']);expect(readCampaign(storage).campaign.jobs).toEqual(jobs);
  });
- it('preserves a newer job edit when stale progress is saved without its own job edit',()=>{
-  const {storage}=memory();writeCampaign(storage,through(3));const stale=readCampaign(storage).campaign,current=readCampaign(storage).campaign;
-  const changed=editPreparation(current,{jobs:learnSkill(current.jobs!,current.growth!,'ally-lise','surveyor-foundation','B04')});expect(writeCampaign(storage,changed).ok).toBe(true);
+ it('preserves a newer archived role ledger when stale progress is saved without editing that ledger',()=>{
+  const {storage,data}=memory();writeCampaign(storage,through(3));const stale=readCampaign(storage).campaign,current=readCampaign(storage).campaign;
+  const archived=legacyPreparation(current,{jobs:learnSkill(current.jobs!,current.growth!,'ally-lise','surveyor-foundation','B04')});data.set(CAMPAIGN_KEY,JSON.stringify(archived));
   const result=writeCampaign(storage,win(selectBattle(stale,'B04'),'B04'));expect(result.ok).toBe(true);expect(result.campaign!.jobs!['ally-lise'].learned).toEqual(['surveyor-foundation']);expect(result.campaign!.completed).toContain('B04');
  });
  it('rejects stale conflicting preparation parties rather than replacing another window choice',()=>{

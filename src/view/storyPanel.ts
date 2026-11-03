@@ -7,7 +7,7 @@ export const B01_INTRO: readonly StoryPage[] = [
   { text: '「杭は流されていない。\n……地図のほうが、書き換えられている。」' },
   { text: '測量官リセは、警備隊が接収する前に水位痕と住民名簿を確保しようと決めた。渡し守ネイアが水路を指し、ガランは退路に立つ。' },
 ];
-export const B01_GUIDE = '記録は上下左右の隣接から1行動で取得。リセが倒れると敗北。水門は任意。次ラウンドから対象水路の移動費2→1（浅瀬適性のある人物は1のまま）。';
+export const B01_GUIDE = '記録は上下左右の隣接から1行動で取得。リセが倒れると敗北。水門を操作すると、操作直後から対象水路の移動費2→1（浅瀬適性のある人物は1のまま）。';
 
 /** One deliberate input per block, including the final transition. */
 export class StoryCursor {
@@ -26,7 +26,7 @@ export class StoryCursor {
 
 export function mountStoryPanel(host: HTMLElement, options: {
   title: string; pages: readonly StoryPage[]; completeLabel: string;
-  findSpeaker: (id: string) => Pick<Unit, 'id' | 'weapon'> | undefined; complete: () => void;
+  findSpeaker: (id: string) => Pick<Unit, 'id' | 'weapon'> | undefined; complete: () => void; skipLabel?: string;
 }): () => void {
   const doc = host.ownerDocument, cursor = new StoryCursor(options.pages.length);
   const shield = doc.createElement('div'); shield.className = 'story-shield';
@@ -45,7 +45,10 @@ export function mountStoryPanel(host: HTMLElement, options: {
   const back = doc.createElement('button'); back.type = 'button'; back.textContent = '戻る';
   const next = doc.createElement('button'); next.type = 'button';
   actions.append(back, next); panel.append(heading, content, actions); shield.append(panel); host.replaceChildren(shield);
-  let disposed = false;
+  let disposed = false, settled = false;
+  const complete = () => { if (disposed || settled || !shield.isConnected) return; settled = true; options.complete(); };
+  const skip = options.skipLabel ? doc.createElement('button') : null;
+  if (skip) { skip.type = 'button'; skip.className = 'story-skip'; skip.textContent = options.skipLabel!; skip.onclick = event => { event.stopPropagation(); if (event.detail < 2) complete(); }; actions.append(skip); }
   const paint = () => {
     const page = options.pages[cursor.index];
     name.textContent = page.speaker?.name ?? '語り'; text.textContent = page.text;
@@ -62,7 +65,7 @@ export function mountStoryPanel(host: HTMLElement, options: {
   const act = (direction: 'next' | 'back', repeat = false) => {
     if (disposed || !shield.isConnected) return;
     const result = cursor.input(direction, performance.now(), repeat);
-    if (result === 'complete') options.complete();
+    if (result === 'complete') complete();
     else if (result === 'page') paint();
   };
   const clickNext = (event: MouseEvent) => { event.stopPropagation(); if (event.detail < 2) act('next'); };
@@ -74,6 +77,7 @@ export function mountStoryPanel(host: HTMLElement, options: {
     if (event.ctrlKey || event.metaKey || event.altKey || event.key === 'Tab') return;
     if (['Enter', ' ', 'ArrowRight', 'ArrowLeft', 'Escape'].includes(event.key)) {
       event.preventDefault(); event.stopPropagation();
+      if (event.target === skip && ['Enter',' '].includes(event.key)) { if (!event.repeat) complete(); return; }
       if (event.key === 'Escape' || event.key === 'ArrowLeft' || (['Enter', ' '].includes(event.key) && event.target === back)) act('back', event.repeat);
       else if (cursor.index < options.pages.length - 1
         || (event.target === next && ['Enter', ' '].includes(event.key))) act('next', event.repeat);
@@ -81,5 +85,5 @@ export function mountStoryPanel(host: HTMLElement, options: {
   };
   shield.addEventListener('keydown', keys);
   paint(); next.focus();
-  return () => { disposed = true; shield.removeEventListener('keydown', keys); next.onclick = null; back.onclick = null; text.onclick = null; };
+  return () => { disposed = true; shield.removeEventListener('keydown', keys); next.onclick = null; back.onclick = null; text.onclick = null; if (skip) skip.onclick = null; };
 }

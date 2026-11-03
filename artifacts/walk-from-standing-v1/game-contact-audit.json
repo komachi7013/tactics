@@ -1,0 +1,1409 @@
+{
+  "scope": "12 cast / 48 directions, B01 flat ground, unitScale=1",
+  "timing": {
+    "frames": 19,
+    "cycleMs": 800,
+    "tileMs": 200,
+    "tilesPerCycle": 4
+  },
+  "limitations": [
+    "Alpha ground range is silhouette extent, not anatomical support contact.",
+    "Slip bound assumes one support phase lasts 400ms; no left/right tracking or contact classification.",
+    "Terrain elevation, camera changes and actual support duration need gameplay visual checks.",
+    "No claim that all foot motion or identity issues are resolved."
+  ],
+  "records": [
+    {
+      "cast": "lise",
+      "direction": "N",
+      "candidate": "artifacts/walk-from-standing-v1/lise/N/candidate",
+      "path": "assets/walk-standing-v1/lise/N-0fb7bf65a938.png",
+      "groundSourceRange": [
+        274,
+        284
+      ],
+      "groundOffsetGamePxRange": [
+        -3.016759776536313,
+        2.011173184357542
+      ],
+      "headRange": [
+        101,
+        104
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        32.682,
+        30.67
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 87.318,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "lise",
+      "direction": "E",
+      "candidate": "artifacts/walk-from-standing-v1/lise/E/candidate",
+      "path": "assets/walk-standing-v1/lise/E-56ba67538a70.png",
+      "groundSourceRange": [
+        274,
+        283
+      ],
+      "groundOffsetGamePxRange": [
+        -3.016759776536313,
+        1.5083798882681565
+      ],
+      "headRange": [
+        99,
+        100
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        33.184,
+        30.168
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 86.816,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "lise",
+      "direction": "S",
+      "candidate": "artifacts/walk-from-standing-v1/lise/S/candidate",
+      "path": "assets/walk-standing-v1/lise/S-97918c4fe43d.png",
+      "groundSourceRange": [
+        277,
+        283
+      ],
+      "groundOffsetGamePxRange": [
+        -1.5083798882681565,
+        1.5083798882681565
+      ],
+      "headRange": [
+        100,
+        102
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        30.67,
+        29.162
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 89.33,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "lise",
+      "direction": "W",
+      "candidate": "artifacts/walk-from-standing-v1/lise/W/candidate",
+      "path": "assets/walk-standing-v1/lise/W-3faec9053e9c.png",
+      "groundSourceRange": [
+        272,
+        282
+      ],
+      "groundOffsetGamePxRange": [
+        -4.022346368715084,
+        1.005586592178771
+      ],
+      "headRange": [
+        99,
+        102
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        32.179,
+        30.67
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 87.821,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "garan",
+      "direction": "N",
+      "candidate": "artifacts/walk-from-standing-v1/garan/N/candidate",
+      "path": "assets/walk-standing-v1/garan/N-965526059bc2.png",
+      "groundSourceRange": [
+        274,
+        287
+      ],
+      "groundOffsetGamePxRange": [
+        -3.016759776536313,
+        3.5195530726256985
+      ],
+      "headRange": [
+        99,
+        102
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        40.223,
+        32.179
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 79.777,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "garan",
+      "direction": "E",
+      "candidate": "artifacts/walk-from-standing-v1/garan/E/candidate",
+      "path": "assets/walk-standing-v1/garan/E-73aa8c600a95.png",
+      "groundSourceRange": [
+        273,
+        282
+      ],
+      "groundOffsetGamePxRange": [
+        -3.5195530726256985,
+        1.005586592178771
+      ],
+      "headRange": [
+        99,
+        100
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        40.223,
+        30.168
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 79.777,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "garan",
+      "direction": "S",
+      "candidate": "artifacts/walk-from-standing-v1/garan/S/candidate",
+      "path": "assets/walk-standing-v1/garan/S-479b9ec2322e.png",
+      "groundSourceRange": [
+        272,
+        286
+      ],
+      "groundOffsetGamePxRange": [
+        -4.022346368715084,
+        3.016759776536313
+      ],
+      "headRange": [
+        100,
+        103
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        42.235,
+        32.179
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 77.765,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "garan",
+      "direction": "W",
+      "candidate": "artifacts/walk-from-standing-v1/garan/W/candidate",
+      "path": "assets/walk-standing-v1/garan/W-bf975d418fe3.png",
+      "groundSourceRange": [
+        271,
+        286
+      ],
+      "groundOffsetGamePxRange": [
+        -4.5251396648044695,
+        3.016759776536313
+      ],
+      "headRange": [
+        100,
+        103
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        47.765,
+        32.682
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 72.235,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "neia",
+      "direction": "N",
+      "candidate": "artifacts/walk-from-standing-v1/neia/N/candidate-garan-reference-v1",
+      "path": "assets/walk-standing-v1/neia/N-947bb204edc2.png",
+      "groundSourceRange": [
+        268,
+        281
+      ],
+      "groundOffsetGamePxRange": [
+        -6.033519553072626,
+        0.5027932960893855
+      ],
+      "headRange": [
+        98,
+        101
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        33.184,
+        31.676
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 86.816,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "neia",
+      "direction": "E",
+      "candidate": "artifacts/walk-from-standing-v1/neia/E/candidate-v2",
+      "path": "assets/walk-standing-v1/neia/E-8bcc07387b15.png",
+      "groundSourceRange": [
+        278,
+        282
+      ],
+      "groundOffsetGamePxRange": [
+        -1.005586592178771,
+        1.005586592178771
+      ],
+      "headRange": [
+        100,
+        103
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        36.704,
+        28.156
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 83.296,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "neia",
+      "direction": "S",
+      "candidate": "artifacts/walk-from-standing-v1/neia/S/candidate",
+      "path": "assets/walk-standing-v1/neia/S-acc3aae1059a.png",
+      "groundSourceRange": [
+        276,
+        284
+      ],
+      "groundOffsetGamePxRange": [
+        -2.011173184357542,
+        2.011173184357542
+      ],
+      "headRange": [
+        101,
+        102
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        37.207,
+        29.665
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 82.793,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "neia",
+      "direction": "W",
+      "candidate": "artifacts/walk-from-standing-v1/neia/W/candidate-garan-reference-v2",
+      "path": "assets/walk-standing-v1/neia/W-048d662be82e.png",
+      "groundSourceRange": [
+        267,
+        282
+      ],
+      "groundOffsetGamePxRange": [
+        -6.5363128491620115,
+        1.005586592178771
+      ],
+      "headRange": [
+        97,
+        100
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        42.235,
+        32.682
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 77.765,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "sena",
+      "direction": "N",
+      "candidate": "artifacts/walk-from-standing-v1/sena/N/candidate",
+      "path": "assets/walk-standing-v1/sena/N-b1d8e4213a46.png",
+      "groundSourceRange": [
+        276,
+        285
+      ],
+      "groundOffsetGamePxRange": [
+        -2.011173184357542,
+        2.5139664804469275
+      ],
+      "headRange": [
+        100,
+        102
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        32.179,
+        30.67
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 87.821,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "sena",
+      "direction": "E",
+      "candidate": "artifacts/walk-from-standing-v1/sena/E/candidate",
+      "path": "assets/walk-standing-v1/sena/E-dff9e98e3081.png",
+      "groundSourceRange": [
+        277,
+        283
+      ],
+      "groundOffsetGamePxRange": [
+        -1.5083798882681565,
+        1.5083798882681565
+      ],
+      "headRange": [
+        99,
+        100
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        33.184,
+        29.162
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 86.816,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "sena",
+      "direction": "S",
+      "candidate": "artifacts/walk-from-standing-v1/sena/S/candidate",
+      "path": "assets/walk-standing-v1/sena/S-2ff20613a420.png",
+      "groundSourceRange": [
+        275,
+        282
+      ],
+      "groundOffsetGamePxRange": [
+        -2.5139664804469275,
+        1.005586592178771
+      ],
+      "headRange": [
+        98,
+        100
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        29.665,
+        29.665
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 90.335,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "sena",
+      "direction": "W",
+      "candidate": "artifacts/walk-from-standing-v1/sena/W/candidate",
+      "path": "assets/walk-standing-v1/sena/W-6f508a4ea61b.png",
+      "groundSourceRange": [
+        280,
+        285
+      ],
+      "groundOffsetGamePxRange": [
+        0.0,
+        2.5139664804469275
+      ],
+      "headRange": [
+        100,
+        103
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        32.682,
+        29.162
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 87.318,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "iva",
+      "direction": "N",
+      "candidate": "artifacts/walk-from-standing-v1/iva/N/candidate",
+      "path": "assets/walk-standing-v1/iva/N-0cc70d98e7b4.png",
+      "groundSourceRange": [
+        273,
+        282
+      ],
+      "groundOffsetGamePxRange": [
+        -3.5195530726256985,
+        1.005586592178771
+      ],
+      "headRange": [
+        98,
+        100
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        34.19,
+        30.67
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 85.81,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "iva",
+      "direction": "E",
+      "candidate": "artifacts/walk-from-standing-v1/iva/E/candidate",
+      "path": "assets/walk-standing-v1/iva/E-38d32f36dffd.png",
+      "groundSourceRange": [
+        277,
+        284
+      ],
+      "groundOffsetGamePxRange": [
+        -1.5083798882681565,
+        2.011173184357542
+      ],
+      "headRange": [
+        99,
+        101
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        32.682,
+        29.665
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 87.318,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "iva",
+      "direction": "S",
+      "candidate": "artifacts/walk-from-standing-v1/iva/S/candidate",
+      "path": "assets/walk-standing-v1/iva/S-d78daecebbc7.png",
+      "groundSourceRange": [
+        278,
+        283
+      ],
+      "groundOffsetGamePxRange": [
+        -1.005586592178771,
+        1.5083798882681565
+      ],
+      "headRange": [
+        99,
+        100
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        30.168,
+        29.162
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 89.832,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "iva",
+      "direction": "W",
+      "candidate": "artifacts/walk-from-standing-v1/iva/W/candidate",
+      "path": "assets/walk-standing-v1/iva/W-6192b6bc4e8c.png",
+      "groundSourceRange": [
+        277,
+        283
+      ],
+      "groundOffsetGamePxRange": [
+        -1.5083798882681565,
+        1.5083798882681565
+      ],
+      "headRange": [
+        99,
+        102
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        36.201,
+        29.162
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 83.799,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "dani",
+      "direction": "N",
+      "candidate": "artifacts/walk-from-standing-v1/dani/N/candidate",
+      "path": "assets/walk-standing-v1/dani/N-8f79ee15ce3e.png",
+      "groundSourceRange": [
+        273,
+        281
+      ],
+      "groundOffsetGamePxRange": [
+        -3.5195530726256985,
+        0.5027932960893855
+      ],
+      "headRange": [
+        99,
+        101
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        32.179,
+        29.665
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 87.821,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "dani",
+      "direction": "E",
+      "candidate": "artifacts/walk-from-standing-v1/dani/E/candidate",
+      "path": "assets/walk-standing-v1/dani/E-fee5eecf1221.png",
+      "groundSourceRange": [
+        275,
+        282
+      ],
+      "groundOffsetGamePxRange": [
+        -2.5139664804469275,
+        1.005586592178771
+      ],
+      "headRange": [
+        99,
+        100
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        38.715,
+        29.665
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 81.285,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "dani",
+      "direction": "S",
+      "candidate": "artifacts/walk-from-standing-v1/dani/S/candidate-genjutsu-v1",
+      "path": "assets/walk-standing-v1/dani/S-7eaa4de04bb1.png",
+      "groundSourceRange": [
+        279,
+        287
+      ],
+      "groundOffsetGamePxRange": [
+        -0.5027932960893855,
+        3.5195530726256985
+      ],
+      "headRange": [
+        98,
+        100
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        35.698,
+        30.67
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 84.302,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "dani",
+      "direction": "W",
+      "candidate": "artifacts/walk-from-standing-v1/dani/W/candidate",
+      "path": "assets/walk-standing-v1/dani/W-5f9aa2b01d25.png",
+      "groundSourceRange": [
+        271,
+        281
+      ],
+      "groundOffsetGamePxRange": [
+        -4.5251396648044695,
+        0.5027932960893855
+      ],
+      "headRange": [
+        98,
+        100
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        40.726,
+        30.67
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 79.274,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "guard",
+      "direction": "N",
+      "candidate": "artifacts/walk-from-standing-v1/guard/N/candidate",
+      "path": "assets/walk-standing-v1/guard/N-f6ea43d81d0c.png",
+      "groundSourceRange": [
+        267,
+        281
+      ],
+      "groundOffsetGamePxRange": [
+        -6.5363128491620115,
+        0.5027932960893855
+      ],
+      "headRange": [
+        98,
+        100
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        49.274,
+        32.179
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 70.726,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "guard",
+      "direction": "E",
+      "candidate": "artifacts/walk-from-standing-v1/guard/E/candidate",
+      "path": "assets/walk-standing-v1/guard/E-50b2003d04c6.png",
+      "groundSourceRange": [
+        280,
+        286
+      ],
+      "groundOffsetGamePxRange": [
+        0.0,
+        3.016759776536313
+      ],
+      "headRange": [
+        100,
+        101
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        36.704,
+        29.665
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 83.296,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "guard",
+      "direction": "S",
+      "candidate": "artifacts/walk-from-standing-v1/guard/S/candidate-seedance-v4",
+      "path": "assets/walk-standing-v1/guard/S-9fff27d37840.png",
+      "groundSourceRange": [
+        279,
+        289
+      ],
+      "groundOffsetGamePxRange": [
+        -0.5027932960893855,
+        4.5251396648044695
+      ],
+      "headRange": [
+        100,
+        103
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        50.279,
+        31.173
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 69.721,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "guard",
+      "direction": "W",
+      "candidate": "artifacts/walk-from-standing-v1/guard/W/candidate",
+      "path": "assets/walk-standing-v1/guard/W-69f04da7163a.png",
+      "groundSourceRange": [
+        268,
+        280
+      ],
+      "groundOffsetGamePxRange": [
+        -6.033519553072626,
+        0.0
+      ],
+      "headRange": [
+        98,
+        101
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        54.804,
+        31.173
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 65.196,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "archer",
+      "direction": "N",
+      "candidate": "artifacts/walk-from-standing-v1/archer/N/candidate",
+      "path": "assets/walk-standing-v1/archer/N-2ad2c8c5e0c3.png",
+      "groundSourceRange": [
+        268,
+        281
+      ],
+      "groundOffsetGamePxRange": [
+        -6.033519553072626,
+        0.5027932960893855
+      ],
+      "headRange": [
+        99,
+        101
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        36.201,
+        31.676
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 83.799,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "archer",
+      "direction": "E",
+      "candidate": "artifacts/walk-from-standing-v1/archer/E/candidate",
+      "path": "assets/walk-standing-v1/archer/E-b8444843137f.png",
+      "groundSourceRange": [
+        275,
+        282
+      ],
+      "groundOffsetGamePxRange": [
+        -2.5139664804469275,
+        1.005586592178771
+      ],
+      "headRange": [
+        98,
+        100
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        43.743,
+        29.665
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 76.257,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "archer",
+      "direction": "S",
+      "candidate": "artifacts/walk-from-standing-v1/archer/S/candidate",
+      "path": "assets/walk-standing-v1/archer/S-500346758a75.png",
+      "groundSourceRange": [
+        278,
+        284
+      ],
+      "groundOffsetGamePxRange": [
+        -1.005586592178771,
+        2.011173184357542
+      ],
+      "headRange": [
+        99,
+        100
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        29.665,
+        29.665
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 90.335,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "archer",
+      "direction": "W",
+      "candidate": "artifacts/walk-from-standing-v1/archer/W/candidate",
+      "path": "assets/walk-standing-v1/archer/W-e8bcb425f1cc.png",
+      "groundSourceRange": [
+        268,
+        280
+      ],
+      "groundOffsetGamePxRange": [
+        -6.033519553072626,
+        0.0
+      ],
+      "headRange": [
+        98,
+        100
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        41.732,
+        31.173
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 78.268,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "vesk",
+      "direction": "N",
+      "candidate": "artifacts/walk-from-standing-v1/vesk/N/candidate",
+      "path": "assets/walk-standing-v1/vesk/N-f9acf7add87a.png",
+      "groundSourceRange": [
+        269,
+        280
+      ],
+      "groundOffsetGamePxRange": [
+        -5.5307262569832405,
+        0.0
+      ],
+      "headRange": [
+        98,
+        100
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        37.709,
+        30.67
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 82.291,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "vesk",
+      "direction": "E",
+      "candidate": "artifacts/walk-from-standing-v1/vesk/E/candidate",
+      "path": "assets/walk-standing-v1/vesk/E-45bb439b4e18.png",
+      "groundSourceRange": [
+        279,
+        281
+      ],
+      "groundOffsetGamePxRange": [
+        -0.5027932960893855,
+        0.5027932960893855
+      ],
+      "headRange": [
+        99,
+        101
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        38.212,
+        27.654
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 81.788,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "vesk",
+      "direction": "S",
+      "candidate": "artifacts/walk-from-standing-v1/vesk/S/candidate",
+      "path": "assets/walk-standing-v1/vesk/S-5e41e42c8cb3.png",
+      "groundSourceRange": [
+        278,
+        281
+      ],
+      "groundOffsetGamePxRange": [
+        -1.005586592178771,
+        0.5027932960893855
+      ],
+      "headRange": [
+        99,
+        100
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        34.693,
+        28.156
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 85.307,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "vesk",
+      "direction": "W",
+      "candidate": "artifacts/walk-from-standing-v1/vesk/W/candidate",
+      "path": "assets/walk-standing-v1/vesk/W-768140e890d9.png",
+      "groundSourceRange": [
+        271,
+        282
+      ],
+      "groundOffsetGamePxRange": [
+        -4.5251396648044695,
+        1.005586592178771
+      ],
+      "headRange": [
+        98,
+        101
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        45.754,
+        31.173
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 74.246,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "toma",
+      "direction": "N",
+      "candidate": "artifacts/walk-from-standing-v1/toma/N/candidate",
+      "path": "assets/walk-standing-v1/toma/N-c8e0ca044cf6.png",
+      "groundSourceRange": [
+        269,
+        280
+      ],
+      "groundOffsetGamePxRange": [
+        -5.5307262569832405,
+        0.0
+      ],
+      "headRange": [
+        98,
+        100
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        35.196,
+        30.67
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 84.804,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "toma",
+      "direction": "E",
+      "candidate": "artifacts/walk-from-standing-v1/toma/E/candidate",
+      "path": "assets/walk-standing-v1/toma/E-93ba2b72ea42.png",
+      "groundSourceRange": [
+        277,
+        283
+      ],
+      "groundOffsetGamePxRange": [
+        -1.5083798882681565,
+        1.5083798882681565
+      ],
+      "headRange": [
+        100,
+        101
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        33.687,
+        29.162
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 86.313,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "toma",
+      "direction": "S",
+      "candidate": "artifacts/walk-from-standing-v1/toma/S/candidate",
+      "path": "assets/walk-standing-v1/toma/S-4ee839c100e9.png",
+      "groundSourceRange": [
+        277,
+        284
+      ],
+      "groundOffsetGamePxRange": [
+        -1.5083798882681565,
+        2.011173184357542
+      ],
+      "headRange": [
+        98,
+        100
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        33.687,
+        30.168
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 86.313,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "toma",
+      "direction": "W",
+      "candidate": "artifacts/walk-from-standing-v1/toma/W/candidate",
+      "path": "assets/walk-standing-v1/toma/W-b196f4c423b2.png",
+      "groundSourceRange": [
+        279,
+        290
+      ],
+      "groundOffsetGamePxRange": [
+        -0.5027932960893855,
+        5.027932960893855
+      ],
+      "headRange": [
+        99,
+        101
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        40.726,
+        32.179
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 79.274,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "worker",
+      "direction": "N",
+      "candidate": "artifacts/walk-from-standing-v1/worker/N/candidate",
+      "path": "assets/walk-standing-v1/worker/N-40002c4ade0e.png",
+      "groundSourceRange": [
+        270,
+        280
+      ],
+      "groundOffsetGamePxRange": [
+        -5.027932960893855,
+        0.0
+      ],
+      "headRange": [
+        98,
+        100
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        38.212,
+        30.67
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 81.788,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "worker",
+      "direction": "E",
+      "candidate": "artifacts/walk-from-standing-v1/worker/E/candidate",
+      "path": "assets/walk-standing-v1/worker/E-c5cd031a8097.png",
+      "groundSourceRange": [
+        279,
+        282
+      ],
+      "groundOffsetGamePxRange": [
+        -0.5027932960893855,
+        1.005586592178771
+      ],
+      "headRange": [
+        100,
+        101
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        38.715,
+        28.156
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 81.285,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "worker",
+      "direction": "S",
+      "candidate": "artifacts/walk-from-standing-v1/worker/S/candidate",
+      "path": "assets/walk-standing-v1/worker/S-f6f4d0e44801.png",
+      "groundSourceRange": [
+        278,
+        283
+      ],
+      "groundOffsetGamePxRange": [
+        -1.005586592178771,
+        1.5083798882681565
+      ],
+      "headRange": [
+        100,
+        101
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        30.67,
+        28.659
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 89.33,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "worker",
+      "direction": "W",
+      "candidate": "artifacts/walk-from-standing-v1/worker/W/candidate",
+      "path": "assets/walk-standing-v1/worker/W-31fe719b774f.png",
+      "groundSourceRange": [
+        268,
+        282
+      ],
+      "groundOffsetGamePxRange": [
+        -6.033519553072626,
+        1.005586592178771
+      ],
+      "headRange": [
+        97,
+        100
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        44.246,
+        32.179
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 75.754,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "delegation",
+      "direction": "N",
+      "candidate": "artifacts/walk-from-standing-v1/delegation/N/candidate",
+      "path": "assets/walk-standing-v1/delegation/N-07a05811f8ba.png",
+      "groundSourceRange": [
+        273,
+        284
+      ],
+      "groundOffsetGamePxRange": [
+        -3.5195530726256985,
+        2.011173184357542
+      ],
+      "headRange": [
+        99,
+        101
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        37.709,
+        31.173
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 82.291,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "delegation",
+      "direction": "E",
+      "candidate": "artifacts/walk-from-standing-v1/delegation/E/candidate",
+      "path": "assets/walk-standing-v1/delegation/E-ab576e9254ee.png",
+      "groundSourceRange": [
+        276,
+        281
+      ],
+      "groundOffsetGamePxRange": [
+        -2.011173184357542,
+        0.5027932960893855
+      ],
+      "headRange": [
+        99,
+        101
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        32.682,
+        28.659
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 87.318,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "delegation",
+      "direction": "S",
+      "candidate": "artifacts/walk-from-standing-v1/delegation/S/candidate",
+      "path": "assets/walk-standing-v1/delegation/S-e8c6d66317df.png",
+      "groundSourceRange": [
+        277,
+        282
+      ],
+      "groundOffsetGamePxRange": [
+        -1.5083798882681565,
+        1.005586592178771
+      ],
+      "headRange": [
+        98,
+        100
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        37.709,
+        28.659
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 82.291,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    },
+    {
+      "cast": "delegation",
+      "direction": "W",
+      "candidate": "artifacts/walk-from-standing-v1/delegation/W/candidate",
+      "path": "assets/walk-standing-v1/delegation/W-ca86c0662285.png",
+      "groundSourceRange": [
+        268,
+        282
+      ],
+      "groundOffsetGamePxRange": [
+        -6.033519553072626,
+        1.005586592178771
+      ],
+      "headRange": [
+        99,
+        101
+      ],
+      "sourcePixelsUnchanged": true,
+      "lowerBodyEnvelopeGamePx": [
+        41.732,
+        32.179
+      ],
+      "groundTravelHalfCycleGamePx": [
+        120,
+        60
+      ],
+      "minimumHorizontalSlipOverAssumedHalfCyclePx": 78.268,
+      "slipFeasibility": "cannot stay planted for a whole 400ms support phase at current translation speed"
+    }
+  ]
+}

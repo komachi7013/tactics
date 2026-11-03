@@ -1,0 +1,62 @@
+{
+  "status": "比較候補：Seedance2.5・W画像のみ・6条件",
+  "inputImageCount": 1,
+  "inputDirection": "W",
+  "referenceVideoCount": 0,
+  "motionRequirementCount": 6,
+  "equipmentInstructionsIncluded": false,
+  "frames": 19,
+  "cycleMs": 800,
+  "nativeFullCycleSeconds": 2.0,
+  "retimeSpeedMultiplier": 2.5,
+  "all19FramesViewedOnLight": true,
+  "all19FramesViewedOnDark": true,
+  "facingRetainedInAllSelectedFrames": true,
+  "fullBodyAndBothSolesInsideSelectedFrames": true,
+  "nativeCanvasEdgePixels": 0,
+  "contactReview": {
+    "videoSha256": "95c982ac5d20c2072a9c5da7db6382f597081e845d6d6d82bac99177532e128b",
+    "visualReviewed": true,
+    "contacts": [
+      {
+        "frame": 8,
+        "foot": "L"
+      },
+      {
+        "frame": 32,
+        "foot": "R"
+      },
+      {
+        "frame": 56,
+        "foot": "L"
+      }
+    ],
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "reviewNote": "Back three-quarter W: near L image-left supports8/56 while far R passes behind; far R supports32 while near L advances. Feet every2frames through96 inspected. Native48frames=2seconds; retime800ms. Estimated support phases +/-2frames, not motion capture. Full body/facing and bow retained."
+  },
+  "selectedOutputSeamReviewed": true,
+  "automaticGaitLoopStatus": "no gait period in configured12..38 frame search; manual48-frame L8-R32-L56 reviewed",
+  "issues": [
+    "原動画の約2秒周期を0.8秒に短縮。自動周期判定は未通過。目視確認済みの比較候補。"
+  ],
+  "gameApplied": false,
+  "userApproved": false,
+  "referenceMotionReady": true,
+  "art_source": "Higgsfield / Seedance 2.5 image-to-video",
+  "generationCountThisRequest": 1,
+  "quotedCreditsThisRequest": 28,
+  "headCentroidRangePx": [
+    1.804044226344871,
+    1.6570150744976218
+  ],
+  "footRegionSeamOverMedianStep": 1.427460559255137,
+  "headTopRangePx": [
+    97,
+    100
+  ],
+  "groundRangePx": [
+    278,
+    286
+  ]
+}

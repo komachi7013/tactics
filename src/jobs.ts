@@ -1,5 +1,5 @@
 import type { BattleId, Unit } from './domain/types';
-import { availableCharacters, trainingPoints, type CharacterId, type Growth } from './progression';
+import { trainingPoints, type CharacterId, type Growth } from './progression';
 
 export const JOB_IDS = ['surveyor','warden','scout','healer','engineer','recorder'] as const;
 export type JobId = typeof JOB_IDS[number];
@@ -21,7 +21,6 @@ export const SKILLS: readonly Skill[] = Object.freeze(definitions.flatMap(([job,
 export function createJobs(): JobsState { return Object.fromEntries(Object.entries(INITIAL_JOBS).map(([id,main])=>[id,{main,learned:[] as SkillId[],support:null} as CharacterJobs])) as JobsState; }
 const skillById=(id:unknown)=>SKILLS.find(s=>s.id===id);
 const character=(id:unknown):id is CharacterId=>typeof id==='string'&&Object.hasOwn(INITIAL_JOBS,id);
-const copy=(state:JobsState):JobsState=>structuredClone(state);
 export function spentTraining(state:JobsState,id:CharacterId):number { return state[id].learned.reduce((sum,key)=>sum+(skillById(key)?.cost??0),0); }
 export function availableTraining(state:JobsState,growth:Growth,id:CharacterId):number { return trainingPoints(growth,id)-spentTraining(state,id); }
 export function validJobs(value:unknown,growth:Growth):value is JobsState {
@@ -38,47 +37,33 @@ export function validJobs(value:unknown,growth:Growth):value is JobsState {
  return true;
 }
 export const validateJobs=validJobs;
-export function learnSkill(state:JobsState,growth:Growth,id:CharacterId,skill:SkillId,battleId:BattleId):JobsState {
- if(!character(id)||!validJobs(state,growth))throw Error('職業データが不正です');
- const n=Number(battleId?.slice(1));if(!/^B(0[1-9]|1[0-2])$/.test(battleId))throw Error('戦闘が不正です');
- if(!availableCharacters(battleId).includes(id))throw Error('未加入・強制離脱中の人物です');
- const unlock=state[id].main==='healer'?3:state[id].main==='engineer'||state[id].main==='recorder'?4:1;
- if(n<unlock)throw Error('この職業はまだ登場していません');
- const entry=skillById(skill);if(!entry||entry.job!==state[id].main)throw Error('主職の支援だけを習得できます');
- if(state[id].learned.includes(skill))throw Error('習得済みです');
- if(availableTraining(state,growth,id)<entry.cost)throw Error('訓練ポイントが不足しています');
- const next=copy(state);next[id].learned.push(skill);return next;
-}
-export function setMainJob(state:JobsState,id:CharacterId,job:JobId,battleId:BattleId):JobsState {
- if(!character(id)||!JOB_IDS.includes(job))throw Error('職業が不正です');
- const n=Number(battleId.slice(1));if(!/^B(0[1-9]|1[0-2])$/.test(battleId)||!Number.isInteger(n)||n<1||n>12)throw Error('戦闘が不正です');
- if(!availableCharacters(battleId).includes(id))throw Error('未加入・強制離脱中の人物です');
- // The first playable increment permits switching to two jobs. Other initial jobs remain valid.
- if(job!==INITIAL_JOBS[id]&&job!=='surveyor'&&job!=='warden')throw Error('この職業への変更は未開放です');
- if((job==='healer'&&n<3)||((job==='engineer'||job==='recorder')&&n<4))throw Error('この職業はまだ登場していません');
- const next=copy(state);next[id].main=job;if(next[id].support&&skillById(next[id].support)?.job===job)next[id].support=null;return next;
-}
-export function equipSupport(state:JobsState,id:CharacterId,skill:SkillId|null):JobsState {
- if(!character(id))throw Error('人物が不正です');
- if(skill!==null&&(!state[id].learned.includes(skill)||!skillById(skill)||skillById(skill)!.job===state[id].main))throw Error('他職の習得済み支援を1つ選んでください');
- const next=copy(state);next[id].support=skill;return next;
-}
-export function respec(state:JobsState,id:CharacterId):JobsState { if(!character(id))throw Error('人物が不正です');const next=copy(state);next[id].learned=[];next[id].support=null;return next; }
-export function applyJobs(unit:Unit,state:JobsState):Unit {
- if(!character(unit.id))return structuredClone(unit);
- const entry=state[unit.id],next=structuredClone(unit);
- // Active commands belong to the current main job, never to learned support.
- // Clear battle-local payloads before assigning a fresh deployment allowance.
- delete next.readCharges;delete next.plankReady;delete next.plankCharges;delete next.jobCommand;delete next.surveyCharges;delete next.surveyBonus;delete next.protection;delete next.healCharges;
- if(entry.main!==INITIAL_JOBS[unit.id]){
-  if(entry.main!=='surveyor'&&entry.main!=='warden')throw Error('未対応の職業です');
-  const ward=entry.main==='warden';next.role=JOB_NAMES[entry.main];next.hp=next.maxHp=ward?24:18;next.atk=7;next.def=ward?3:1;next.move=4;next.weapon='melee';next.shallowCost=2;delete next.healCharges;
- }
- if(entry.main==='surveyor'){next.jobCommand='survey';next.surveyCharges=2;}
- else if(entry.main==='warden')next.jobCommand='protect';
- else if(entry.main==='healer')next.healCharges=2;
- else if(entry.main==='engineer'){next.jobCommand='plank';next.plankCharges=2;}
- else if(entry.main==='recorder'){next.jobCommand='readOrder';next.readCharges=2;}
- if(entry.support){const support=skillById(entry.support);if(!support||support.job===entry.main||!entry.learned.includes(entry.support))throw Error('支援が不正です');switch(support.effect){case 'hp':next.maxHp+=support.amount;next.hp+=support.amount;break;case 'shallow':next.shallowCost=1;break;case 'atk':next.atk+=support.amount;break;case 'def':next.def+=support.amount;break;case 'move':next.move+=support.amount;break;}}
+/** Compatibility signatures remain, but new job/training edits are disabled. */
+const fixedRoleEdit = (): never => { throw Error('職業変更・他職の支援・訓練は現在利用できません。各人物の役割は固定です。'); };
+export function learnSkill(_state:JobsState,_growth:Growth,_id:CharacterId,_skill:SkillId,_battleId:BattleId):JobsState { return fixedRoleEdit(); }
+export function setMainJob(_state:JobsState,_id:CharacterId,_job:JobId,_battleId:BattleId):JobsState { return fixedRoleEdit(); }
+export function equipSupport(_state:JobsState,_id:CharacterId,_skill:SkillId|null):JobsState { return fixedRoleEdit(); }
+export function respec(_state:JobsState,_id:CharacterId):JobsState { return fixedRoleEdit(); }
+
+const FIXED_CAPABILITIES: Record<CharacterId, { role:string; hp:number; atk:number; def:number; weapon:'melee'|'bow'; shallowCost:number }> = {
+ 'ally-lise': {role:'測量官',hp:18,atk:7,def:1,weapon:'melee',shallowCost:2},
+ 'ally-garan': {role:'堤防衛士',hp:24,atk:7,def:3,weapon:'melee',shallowCost:2},
+ 'ally-neia': {role:'水路斥候',hp:16,atk:6,def:1,weapon:'bow',shallowCost:1},
+ 'ally-sena': {role:'救護師',hp:16,atk:4,def:1,weapon:'melee',shallowCost:2},
+ 'ally-iva': {role:'水路保守係',hp:20,atk:6,def:2,weapon:'melee',shallowCost:2},
+ 'ally-dani': {role:'記録官',hp:18,atk:5,def:1,weapon:'melee',shallowCost:2},
+};
+/** Initial identity is effective; archived job/support choices never affect a unit. */
+export function applyCharacterRole(unit:Unit):Unit {
+ const next=structuredClone(unit);if(!character(unit.id))return next;
+ const base=FIXED_CAPABILITIES[unit.id],role=INITIAL_JOBS[unit.id];
+ next.role=base.role;next.maxHp=base.hp;next.hp=Math.min(unit.hp,base.hp);next.atk=base.atk;next.def=base.def;next.weapon=base.weapon;next.move=4;next.shallowCost=base.shallowCost;
+ delete next.equipmentWeaponId;delete next.readCharges;delete next.plankReady;delete next.plankCharges;delete next.jobCommand;delete next.surveyCharges;delete next.surveyBonus;delete next.protection;delete next.healCharges;
+ if(role==='surveyor'){next.jobCommand='survey';next.surveyCharges=2;}
+ else if(role==='warden')next.jobCommand='protect';
+ else if(role==='healer')next.healCharges=2;
+ else if(role==='engineer'){next.jobCommand='plank';next.plankCharges=2;}
+ else if(role==='recorder'){next.jobCommand='readOrder';next.readCharges=2;}
  return next;
 }
+/** Legacy API name; state is retained only for source/old-save compatibility. */
+export function applyJobs(unit:Unit,_state:JobsState):Unit { return applyCharacterRole(unit); }

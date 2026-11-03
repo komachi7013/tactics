@@ -1,0 +1,21 @@
+{
+  "videoSha256": "16ef8c66d2e698f3453369c413b0e1d025d06d679c24127957a47dd1d9fdbaca",
+  "visualReviewed": true,
+  "contacts": [
+    {
+      "frame": 38,
+      "foot": "L"
+    },
+    {
+      "frame": 48,
+      "foot": "R"
+    },
+    {
+      "frame": 58,
+      "foot": "L"
+    }
+  ],
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "reviewNote": "W: near anatomical L image-left supports38/58 while R passes; far R supports48 while L advances upper-left. Native every2frames through96 and detailed36..59 frames checked. Same-direction Garan W video+own W standing+original6conditions, framing clarification only;20source frames~0.833sec retimed800ms. Approximate support phases, not motion capture."
+}

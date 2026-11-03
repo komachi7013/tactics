@@ -1,0 +1,62 @@
+{
+  "pairsWithEqualGuideCoordinates": 24,
+  "sourceMasterHashesUnchanged": 48,
+  "protectedEdits": [
+    {
+      "castDirection": "lise/S",
+      "correction": "equipmentCorrection",
+      "headExactPixelsRetained": true,
+      "lowerBodyExactPixelsRetained": true
+    },
+    {
+      "castDirection": "sena/W",
+      "correction": "equipmentCorrection",
+      "headExactPixelsRetained": true,
+      "lowerBodyExactPixelsRetained": true
+    },
+    {
+      "castDirection": "garan/S",
+      "correction": "equipmentCorrection",
+      "headExactPixelsRetained": true,
+      "lowerBodyExactPixelsRetained": true
+    },
+    {
+      "castDirection": "archer/S",
+      "correction": "equipmentCorrection",
+      "headExactPixelsRetained": true,
+      "lowerBodyExactPixelsRetained": true
+    },
+    {
+      "castDirection": "vesk/W",
+      "correction": "armCorrection",
+      "headExactPixelsRetained": true,
+      "lowerBodyExactPixelsRetained": true
+    },
+    {
+      "castDirection": "toma/S",
+      "correction": "equipmentCorrection",
+      "headExactPixelsRetained": true,
+      "lowerBodyExactPixelsRetained": true
+    },
+    {
+      "castDirection": "toma/E",
+      "correction": "equipmentCorrection",
+      "headExactPixelsRetained": true,
+      "lowerBodyExactPixelsRetained": true
+    },
+    {
+      "castDirection": "iva/W",
+      "correction": "equipmentCorrection",
+      "headExactPixelsRetained": true,
+      "lowerBodyExactPixelsRetained": true
+    },
+    {
+      "castDirection": "dani/E",
+      "correction": "armCorrection",
+      "headExactPixelsRetained": true,
+      "lowerBodyExactPixelsRetained": true
+    }
+  ],
+  "headWidthsChecked": 6,
+  "manualAnatomyEstimates": true
+}

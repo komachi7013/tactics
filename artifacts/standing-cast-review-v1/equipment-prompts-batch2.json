@@ -1,0 +1,30 @@
+{
+  "route": "built-in image_gen",
+  "higgsfieldAdditionalCredits": 0,
+  "specs": [
+    {
+      "cast": "sena",
+      "direction": "W",
+      "ref": "/Users/komachi/work/tactics/artifacts/standing-cast-repairs-local-v1/sena/W/equipment-edit-reference.png",
+      "prompt": "Sena is in WEST rear-left three-quarter view. Move the main brown leather flap satchel from IMAGE LEFT at her anatomical left hip to HER OWN RIGHT HIP, which is IMAGE RIGHT in this BACK view. Her existing strap already crosses from upper IMAGE LEFT shoulder toward lower IMAGE RIGHT waist: keep that correct strap direction, and attach the moved satchel at its lower image-right end. The rolled parchment should sit with the satchel on that same right hip. Remove the old satchel from image left and restore the original ivory/teal coat under it. Keep her original arms/shoulders and gold back cross motifs completely unchanged. Right satchel may be partly hidden behind her image-right hand; do not twist torso. Precise equipment-only edit. Preserve the supplied character's exact head, hairstyle, face, viewing direction, torso orientation, clothing cut and colors, arm and hand positions, stance, legs, boots, full-body size and original transparent canvas registration. Do not mirror or turn the body to show the bag. Natural occlusion is correct. No second bag, no extra items, no labels, shadows or background. Keep the original painterly game sprite appearance."
+    },
+    {
+      "cast": "iva",
+      "direction": "W",
+      "ref": "/Users/komachi/work/tactics/artifacts/standing-cast-repairs-local-v1/iva/W/equipment-edit-reference.png",
+      "prompt": "Iva is in WEST rear-left three-quarter view. Move the MAIN brown leather flap satchel with the large round brass attachment from IMAGE LEFT/anatomical left hip to HER OWN RIGHT HIP, which appears on IMAGE RIGHT in this BACK view. Keep the existing diagonal shoulder strap from upper IMAGE LEFT to lower IMAGE RIGHT and connect it to the right-hip satchel. Put the existing rolled parchment with that satchel as one natural bundle, replacing the small case there if necessary. Remove the main left-side satchel; restore teal coat where it was. No duplicated main satchels. Preserve both gauntlets, hands, original coat hem, head, hairstyle and torso orientation exactly. Allow the satchel to be occluded by the right-side forearm. Precise equipment-only edit. Preserve the supplied character's exact head, hairstyle, face, viewing direction, torso orientation, clothing cut and colors, arm and hand positions, stance, legs, boots, full-body size and original transparent canvas registration. Do not mirror or turn the body to show the bag. Natural occlusion is correct. No second bag, no extra items, no labels, shadows or background. Keep the original painterly game sprite appearance."
+    },
+    {
+      "cast": "archer",
+      "direction": "S",
+      "ref": "/Users/komachi/work/tactics/artifacts/standing-cast-repairs-local-v1/archer/S/equipment-edit-reference.png",
+      "prompt": "Archer SOUTH front-left three-quarter sprite with red hood holding a wooden crossbow across waist. Move ONLY the main brown leather satchel currently on IMAGE RIGHT/anatomical left hip to HER OWN RIGHT HIP, which appears on IMAGE LEFT in this FRONT view. Remove the old bag protruding from image right and restore the tunic/transparent area there. Attach the same bag to the image-left waist behind her own right forearm/crossbow; it may be partly hidden naturally. Preserve the crossbow, both hands and grips, red hood/cape, face, tunic and belt details exactly. Do not turn torso or change the weapon pose. Precise equipment-only edit. Preserve the supplied character's exact head, hairstyle, face, viewing direction, torso orientation, clothing cut and colors, arm and hand positions, stance, legs, boots, full-body size and original transparent canvas registration. Do not mirror or turn the body to show the bag. Natural occlusion is correct. No second bag, no extra items, no labels, shadows or background. Keep the original painterly game sprite appearance."
+    },
+    {
+      "cast": "lise",
+      "direction": "S",
+      "ref": "/Users/komachi/work/tactics/artifacts/standing-cast-repairs-local-v1/lise/S/bag-retry-reference.png",
+      "prompt": "Lise SOUTH front-left three-quarter sprite holding a small closed brown BOOK IN HER OWN LEFT HAND (IMAGE RIGHT). Add a compact brown leather satchel at HER ANATOMICAL RIGHT HIP, appearing on IMAGE LEFT, behind her hanging far/right forearm and ivory tunic edge. Add a narrow brown shoulder strap from HER OWN LEFT SHOULDER to HER OWN RIGHT HIP: from UPPER IMAGE RIGHT, under the blue-grey cape, emerging below cape and descending toward LOWER IMAGE LEFT. Do not add any bag on image right; the brown object on image right is the existing HANDHELD BOOK and must remain exactly unchanged in the left hand. The new right-hip satchel should be partly hidden with just a natural glimpse visible at image left; do not force full display. Preserve the original left-facing torso, broad cape panel on image right, clasp and belt buckle positions, both arms and hand positions. Most importantly NEVER twist, mirror or rotate the torso to show the bag; keep the book, approved bob hair, face and stance exactly as supplied. Precise equipment-only edit. Preserve the supplied character's exact head, hairstyle, face, viewing direction, torso orientation, clothing cut and colors, arm and hand positions, stance, legs, boots, full-body size and original transparent canvas registration. Do not mirror or turn the body to show the bag. Natural occlusion is correct. No second bag, no extra items, no labels, shadows or background. Keep the original painterly game sprite appearance."
+    }
+  ]
+}

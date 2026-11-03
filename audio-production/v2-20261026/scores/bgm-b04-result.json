@@ -1,0 +1,99 @@
+{
+  "id": "bgm-b04",
+  "master": {
+    "file": "masters/bgm-b04.wav",
+    "sha256": "c7af40d3c0bc940944e36e24fc81ce2d9410ddbe46b586cdb830a195c3286d8c",
+    "bytes": 17640060,
+    "sampleRate": 44100,
+    "channels": 2,
+    "frames": 4410004,
+    "seconds": 100.00009070294784,
+    "samplePeak": 0.319976806640625,
+    "rmsDbFS": -25.5796813901113,
+    "dc": [
+      2.047651513964046e-08,
+      2.1424566026470725e-08
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      4410004
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        -0.00054931640625,
+        0.00018310546875
+      ],
+      "rmsDifferenceDb": [
+        1.3233054374466588,
+        1.2692166970887886
+      ],
+      "slopeError": [
+        0.00091552734375,
+        0.000732421875
+      ],
+      "numericalFlags": []
+    }
+  },
+  "delivery": {
+    "file": "delivery/bgm-b04.wav",
+    "sha256": "14c8ceb96a25b43b0d46ef1d3aae2da26a60a369da59ddef07238e8f381c99e3",
+    "bytes": 8820052,
+    "sampleRate": 22050,
+    "channels": 2,
+    "frames": 2205002,
+    "seconds": 100.00009070294784,
+    "samplePeak": 0.32000732421875,
+    "rmsDbFS": -25.580044539160163,
+    "dc": [
+      3.108499696088711e-08,
+      1.622066626810316e-08
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      2205002
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        -0.00103759765625,
+        0.000335693359375
+      ],
+      "rmsDifferenceDb": [
+        1.3166330020353234,
+        1.2659949280450757
+      ],
+      "slopeError": [
+        0.001708984375,
+        0.001434326171875
+      ],
+      "numericalFlags": []
+    }
+  },
+  "listeningVerified": false,
+  "compositionRevision": "independent-r2",
+  "title": "乾いた支渠へ",
+  "usage": "B04 乾いた支渠: 取水拠点保持。乾いたピチカートと水を戻す木管。",
+  "bpm": 144,
+  "bars": 40,
+  "meter": [
+    12,
+    8
+  ],
+  "mode": "dorian",
+  "rationale": "B04 乾いた支渠: 取水拠点保持。乾いたピチカートと水を戻す木管。",
+  "direction": "水が戻る12/8。ハープの波、フルートとファゴットの立体的な応答。乾いた支渠から水の推進へ。",
+  "source": "scores/bgm-b04.json",
+  "midi": "scores/bgm-b04.mid",
+  "renderCycles": 3,
+  "extractStartFrame": 4424569,
+  "rotationSeconds": 0.3302721088435374,
+  "motif": {
+    "id": "river-record",
+    "version": 3,
+    "quotation": "single three-note cameo in C only; title/ending link restricted to opening two bars"
+  },
+  "scoreFingerprint": "a079d2bfc890bb11dfeca5a78198dface35b9e7015ac4ba2c55a36305633016d"
+}

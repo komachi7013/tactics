@@ -1,0 +1,615 @@
+{
+  "status": "comparison-deliverables-verified",
+  "generatedDirections": 36,
+  "comparisonCandidates": 34,
+  "rejected": 2,
+  "quotedCredits": 1008,
+  "extraRetakes": 0,
+  "model": "seedance_2_5",
+  "gameWalkingUnchanged": true,
+  "gameWalkingSha256": "ca7e8ccb59515ba9c0364cb0e7b659e95c53954c0c84fe1c0241ea94a446ea8d",
+  "scopeStandingMastersUnchanged": true,
+  "scope": "File, media-input and timing verification plus recorded manual reviews. Not motion-capture or anatomical certification; user visual review pending.",
+  "directions": [
+    {
+      "cast": "sena",
+      "direction": "E",
+      "status": "candidate",
+      "jobId": "6e74f3f1-0ba5-422e-8a76-db7ba1937565",
+      "referenceCast": "lise",
+      "sourceSha256": "eff7b67d9f0d45b621fb54eaa86b65e3a90fcd74878526b300878d6b8426206d",
+      "issues": [
+        "リセE動画参照。全19コマを明暗背景で確認。原周期約0.83秒を0.8秒に調整。自動探索は補助判定で、利用者確認待ち。追加の弓などは見られない。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "sena",
+      "direction": "N",
+      "status": "candidate",
+      "jobId": "813407f5-015e-4e15-b705-984ed136442c",
+      "referenceCast": "lise",
+      "sourceSha256": "8eaf9975bdfd4ee863081a4ae1a16dd5454ccc60b37ece0a45bb29752501fa6a",
+      "issues": [
+        "リセN動画参照。全19コマの向き・全身・足運びを明暗背景で確認。頭部帯の横幅は立ち絵64pxに対して候補63〜64px。原周期約0.83秒を0.8秒に調整。自動探索は低信頼で利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "sena",
+      "direction": "S",
+      "status": "candidate",
+      "jobId": "fec3b0e9-e886-4522-a5ac-c3aeb149be83",
+      "referenceCast": "lise",
+      "sourceSha256": "658f939f1fc26bb528a4c6e21a9dc625193d313b5bfc8b0279a6618f2aad81b0",
+      "issues": [
+        "リセS動画参照。全19コマを明暗背景で確認。原周期約0.83秒を0.8秒に調整。背景のピンクを除去し、頭・胴・装備と足先の保持を確認。自動探索は補助判定、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "sena",
+      "direction": "W",
+      "status": "candidate",
+      "jobId": "9cad0add-92bc-402b-9fdc-f7622fb2e8d6",
+      "referenceCast": "lise",
+      "sourceSha256": "0ee659d3a25450266bf2a0048db4e0b280cafd27ec2d1991fce9daee3abe7256",
+      "issues": [
+        "リセW動画参照。全19コマを明暗背景と立ち絵比較で確認。小さな歩幅で左右の支持脚が交代。原周期約0.83秒を0.8秒に調整。自動探索は低信頼のため目視の1周期を使用。利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "iva",
+      "direction": "E",
+      "status": "candidate",
+      "jobId": "75b86478-3ba3-4d96-8d78-5efcbd33eac5",
+      "referenceCast": "lise",
+      "sourceSha256": "4db0c5b91a15457557e2110f2b685a5d58414ad9fdd321612b5c7573039625e3",
+      "issues": [
+        "リセE動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、足先、装備を確認。暗い紫の髪色を保持。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "iva",
+      "direction": "N",
+      "status": "candidate",
+      "jobId": "3a5c3aab-7a71-429d-a503-acf668f69032",
+      "referenceCast": "lise",
+      "sourceSha256": "40384457c2b826dfa9237b4da83469a499682709a688f8ff6a3e34fe40dec9ef",
+      "issues": [
+        "リセN動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代・向き・全身の保持を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "iva",
+      "direction": "S",
+      "status": "candidate",
+      "jobId": "6f985fb1-f356-425a-9457-d2960af97198",
+      "referenceCast": "lise",
+      "sourceSha256": "ad81ff8e08e8efa532b3680472ff492a71276212601e6447297b0be9eb02ad57",
+      "issues": [
+        "リセS動画参照。全19コマを明暗背景と立ち絵比較で確認。足の重なりはあるが左右の支持脚が交代し、全身と足先を保持。原周期約0.83秒を0.8秒に調整。髪の縁に紫寄りの色が残る。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "iva",
+      "direction": "W",
+      "status": "candidate",
+      "jobId": "3924857c-e5d1-40c4-9637-5d2550dd5446",
+      "referenceCast": "lise",
+      "sourceSha256": "405fb3ede9b4d73ff3ecccfa6e46fde01271a6477f525256302c2083efea872f",
+      "issues": [
+        "リセW動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代と全身・足先を保持。原周期約0.83秒を0.8秒に調整。髪の縁に紫寄りの色が残る。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "dani",
+      "direction": "E",
+      "status": "candidate",
+      "jobId": "8fb637a8-3907-4ac9-bf20-e21f2ac810f8",
+      "referenceCast": "garan",
+      "sourceSha256": "787610aaf30d60a7743a8fb6fba4f98c5937c035cce5bfeaceb5b2c1ea3cf75a",
+      "issues": [
+        "ガランE動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、全身と両足先、下ろした腕の形を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "dani",
+      "direction": "N",
+      "status": "candidate",
+      "jobId": "d68e484f-9f45-4aae-b16e-49ea9e7ece29",
+      "referenceCast": "garan",
+      "sourceSha256": "ff8f89f907708478861df00266ce2e98627fe078c3db8fd670eefe03bbebe411",
+      "issues": [
+        "ガランN動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、背面の向き、全身と両足先を確認。背景と足元の影を除去。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "dani",
+      "direction": "S",
+      "status": "rejected",
+      "jobId": "c7126295-0d76-4647-92c0-34298c12614f",
+      "referenceCast": "garan",
+      "sourceSha256": "6dc66280ee505c9b95f649d102f95c5b3a54f86e2d6c2ce5c746d4d6c9ed4210",
+      "issues": [
+        "左右の踏み出しが不均等。画面右側の脚が支持したままに見える区間が続き、反対の脚のステップが目立つ。6条件の左右交互の支持脚交代を十分確認できないため、19コマの歩行候補としては不採用。追加生成なし。"
+      ]
+    },
+    {
+      "cast": "dani",
+      "direction": "W",
+      "status": "candidate",
+      "jobId": "678bb09a-3843-4e79-86c2-d38b9c429690",
+      "referenceCast": "garan",
+      "sourceSha256": "03dc02f97ea5d2dde1232053ae0a4b786674d4c6e713d548c23427e6a690fa2a",
+      "issues": [
+        "ガランW動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の振り出し、背面の向き、全身と両足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "guard",
+      "direction": "E",
+      "status": "candidate",
+      "jobId": "fc9a28f1-26c5-44ea-8bc4-ba649b3730ec",
+      "referenceCast": "garan",
+      "sourceSha256": "563727e668485ec9486d2edeff8b5480414aa16f50c832ae1611b1465ef4a350",
+      "issues": [
+        "ガランE動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、剣・盾、全身と両足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "guard",
+      "direction": "N",
+      "status": "candidate",
+      "jobId": "906836a6-e147-41a3-a709-c022ae7a054f",
+      "referenceCast": "garan",
+      "sourceSha256": "3664f42b103d93f4cce036b582dff55b1b29207a25c58aa7657d6a3bb18f158e",
+      "issues": [
+        "ガランN動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、背面の向き、剣・盾と足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "guard",
+      "direction": "S",
+      "status": "rejected",
+      "jobId": "ec719548-8fae-4c0d-b579-0e96cbcf675c",
+      "referenceCast": "garan",
+      "sourceSha256": "05cb65cd7c5e9caf5daef153b655dc4049f40983fc5a32dafcfdee7ab4647ed2",
+      "issues": [
+        "足元を38〜57コマで拡大確認。画面右側の脚が支持したままに見え、反対側の脚の前後運動が中心。左右交互の支持脚交代を十分確認できないため不採用。ガランS動画参照でも偏りが残った。追加生成なし。"
+      ]
+    },
+    {
+      "cast": "guard",
+      "direction": "W",
+      "status": "candidate",
+      "jobId": "e3098866-7fa3-4216-a18c-5c0393c82c80",
+      "referenceCast": "garan",
+      "sourceSha256": "f747a3ba0dccd23eaef4dee9e46a4a6b7a276417a1ec391e4fc8163646d8ba7c",
+      "issues": [
+        "ガランW動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の振り出し、剣・盾と足先を確認。赤い衣装を保持して背景除去。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "archer",
+      "direction": "E",
+      "status": "candidate",
+      "jobId": "fee64397-00d9-461a-a0e7-e03150101bad",
+      "referenceCast": "garan",
+      "sourceSha256": "38c82c3299379802e9df68264399ced419f0030294db3d5981a6de65b583b218",
+      "issues": [
+        "ガランE動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、武器の形・持ち方、全身と両足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "archer",
+      "direction": "N",
+      "status": "candidate",
+      "jobId": "a1518b09-c9fa-4af4-afdf-1add43843cb6",
+      "referenceCast": "garan",
+      "sourceSha256": "0de1c0b006409932ae3ba2fdd70d464dc817abb232b83c48ace0d1f3b7c547c9",
+      "issues": [
+        "ガランN動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、背面の向き、武器と足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "archer",
+      "direction": "S",
+      "status": "candidate",
+      "jobId": "e26295fb-358a-4a78-83ad-80995d38fb9b",
+      "referenceCast": "lise",
+      "sourceSha256": "f758265d70e69dbc7fb9d047f6cd154dd9ad3f73dd3b82d6eb438be9ab5fe6d3",
+      "issues": [
+        "リセS動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の通過と支持脚交代、武器と足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "archer",
+      "direction": "W",
+      "status": "candidate",
+      "jobId": "5f864f25-9a72-44b0-9561-fe8af31dbf67",
+      "referenceCast": "garan",
+      "sourceSha256": "da2364473be0b19001a5b01163167761943fe1fc4e9553c84fa86f74c4786911",
+      "issues": [
+        "ガランW動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の振り出し、背面の向き、武器と足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "vesk",
+      "direction": "E",
+      "status": "candidate",
+      "jobId": "e8685c7e-1414-4edd-aeb3-1c9cf27ae39b",
+      "referenceCast": "garan",
+      "sourceSha256": "70e30e58f2eab43a26a8e5867e5542d03673f21c6eddc6deb4e6a49c9d0d43a1",
+      "issues": [
+        "ガランE動画参照。冒頭の静止を除いた歩行部分から1周期を選択。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、服と足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "vesk",
+      "direction": "N",
+      "status": "candidate",
+      "jobId": "8207d432-9426-42b6-ab82-cd1c937ce12a",
+      "referenceCast": "garan",
+      "sourceSha256": "c1d424716068c67e518e69f4978164ccac1f39046e5bf29b1563f6f8a220b562",
+      "issues": [
+        "ガランN動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、背面の向き、服と足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "vesk",
+      "direction": "S",
+      "status": "candidate",
+      "jobId": "4be3a1da-b720-4c45-8b69-97e701d4ea67",
+      "referenceCast": "lise",
+      "sourceSha256": "37c8ee08fb24c420e58a86a28e78901894dcbccea0c754dbecf05e15d6cafe1b",
+      "issues": [
+        "リセS動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の通過、服と足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "vesk",
+      "direction": "W",
+      "status": "candidate",
+      "jobId": "049fb86f-78e4-4c08-baff-9f2eae2ec6e5",
+      "referenceCast": "garan",
+      "sourceSha256": "a1cae0ef1cd1ea620aba2e7149c241cf70300bb37d11f8413b802eda9fc4c7fd",
+      "issues": [
+        "ガランW動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の振り出し、下ろした左腕、背面の向きと足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "toma",
+      "direction": "E",
+      "status": "candidate",
+      "jobId": "7924c2b0-a261-4488-8bce-41d72b2b7191",
+      "referenceCast": "garan",
+      "sourceSha256": "9dc658d9e80143810926e576d97082790273c1d229c95b40900aac644cd46aa8",
+      "issues": [
+        "ガランE動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、足の向きと紐の向きを確認。立ち絵にもある手首周辺の細かな欠けは残る。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "toma",
+      "direction": "N",
+      "status": "candidate",
+      "jobId": "6cf2458b-635d-4330-89ba-29ec41ac0d22",
+      "referenceCast": "garan",
+      "sourceSha256": "1358b93ff8c15a8d3ca350ae6c4f7e9e65459cf7ab92c022ce20c1a661295437",
+      "issues": [
+        "ガランN動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、背面の向き、カバンと足先を確認。足元の影を除去。立ち絵由来の袖・手首周辺の欠けは残る。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "toma",
+      "direction": "S",
+      "status": "candidate",
+      "jobId": "26fd2257-4885-464e-b127-0165a37d9115",
+      "referenceCast": "lise",
+      "sourceSha256": "b6c8d1263fff10da7e390c3c10f51c5b2dab30a67699f17d5b5c6f7682160fed",
+      "issues": [
+        "リセS動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の通過、紐の向きと足先を確認。立ち絵由来の袖・手首周辺の欠けは残る。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "toma",
+      "direction": "W",
+      "status": "candidate",
+      "jobId": "c9aa8ebc-5ed0-45d6-b002-6706c5eed2cc",
+      "referenceCast": "garan",
+      "sourceSha256": "832e6244f5e97ba24c55213070fa141591db932774e70885387d1b59c4066ee3",
+      "issues": [
+        "ガランW動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の振り出し、背面と紐を確認。足元が立ち絵より低いコマがあり、下端位置は282〜292px。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "worker",
+      "direction": "E",
+      "status": "candidate",
+      "jobId": "976e8937-27ad-436a-b5b7-99f5085bb8ab",
+      "referenceCast": "garan",
+      "sourceSha256": "937910c28abacc4b3a806eab3f55ffe7bab259e4864ea6bd045510fb8c4b29a7",
+      "issues": [
+        "ガランE動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、足先の向き、帽子・エプロン・道具を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "worker",
+      "direction": "N",
+      "status": "candidate",
+      "jobId": "17ce0cd4-e7cf-4570-8ddd-d01bc90f2c57",
+      "referenceCast": "garan",
+      "sourceSha256": "86b0ef6f29537bc1b0e9817e1b6266247ce90d44a3c8e52403921fc2682f9610",
+      "issues": [
+        "ガランN動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、背面の帽子・エプロン・道具と足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "worker",
+      "direction": "S",
+      "status": "candidate",
+      "jobId": "f9013a03-5223-49f5-b5d1-46fdfa3e131f",
+      "referenceCast": "lise",
+      "sourceSha256": "35a40293bc5a25e028d8427bf4038268ce432dec16d0facfe84c44b461b4c0d7",
+      "issues": [
+        "リセS動画参照。全19コマを明暗背景と立ち絵比較で確認。小さな歩幅で両脚が交互に通過し、帽子・エプロン・道具と足先を保持。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "worker",
+      "direction": "W",
+      "status": "candidate",
+      "jobId": "9cd2f62a-8278-482a-92b6-5e27f0d1daa5",
+      "referenceCast": "garan",
+      "sourceSha256": "3f1ecf18c8fef7f0ce47ce401883b138c90d6728a84dcf0251f38cf6dfb5997a",
+      "issues": [
+        "ガランW動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の振り出しと支持脚交代、背面の帽子・エプロン・足先を確認。選択周期では片脚だけの反復なし。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "delegation",
+      "direction": "E",
+      "status": "candidate",
+      "jobId": "fff22758-cf6d-4c0c-b5a8-6ad9dc81554d",
+      "referenceCast": "garan",
+      "sourceSha256": "884e1c18e8da1a2eaff8c5ffdb5a10bb053a05ab58726fb87718d68b01290f2e",
+      "issues": [
+        "ガランE動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、衣装・持ち物と足先を確認。瞬きあり。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "delegation",
+      "direction": "N",
+      "status": "candidate",
+      "jobId": "4db468ff-9b53-451f-a105-87595243d37f",
+      "referenceCast": "garan",
+      "sourceSha256": "7855e0bb83a7489f9e395677a419fc435904f8e6c88632fd94eec12a7f4f37d2",
+      "issues": [
+        "ガランN動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の通過、背面の衣装・持ち物と足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "delegation",
+      "direction": "S",
+      "status": "candidate",
+      "jobId": "79c3c550-99ae-4fc7-9725-d730f3d78122",
+      "referenceCast": "lise",
+      "sourceSha256": "18eb73bae495b53a6a7f11f32ce482af21d8be0ae57d3c8e8ced48b50cd80cb8",
+      "issues": [
+        "リセS動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の通過、衣装・持ち物と足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    },
+    {
+      "cast": "delegation",
+      "direction": "W",
+      "status": "candidate",
+      "jobId": "0f79e659-8bd8-4ed3-a8cc-0792b9408154",
+      "referenceCast": "garan",
+      "sourceSha256": "534adf55e367fe1f45e76eb7652cae7cda968be1ff4626dbd9efb8719b2cbdaa",
+      "issues": [
+        "ガランW動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の振り出し、背面の衣装・持ち物と足先を確認。急な色の切り替わりなし。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+      ],
+      "frames": 19,
+      "cycleMs": 800,
+      "videoFrames": 114,
+      "videoSeconds": 4.8,
+      "nativeFullCycleSeconds": 0.8333333333333334,
+      "automaticGaitLoopStatus": "automatic selection requires visual review"
+    }
+  ]
+}

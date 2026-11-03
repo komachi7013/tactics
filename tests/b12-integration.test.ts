@@ -6,17 +6,21 @@ import { createQaStorage, qaStorageKey } from '../src/qa/storage';
 import { buildTenBattleCheckpoint } from '../src/qa/checkpoint';
 import type { BattleId, BattleState, Command } from '../src/domain/types';
 import b01 from './fixtures/routes.json';
-import b02 from './fixtures/b02-route.json';
-import b03 from './fixtures/b03-route.json';
-import b04 from './fixtures/b04-route.json';
-import b05 from './fixtures/b05-route.json';
-import b06 from './fixtures/b06-route.json';
-import b07 from './fixtures/b07-route.json';
-import b08 from './fixtures/b08-route.json';
-import b09 from './fixtures/b09-route.json';
-import b10 from './fixtures/b10-route.json';
-import b11 from './fixtures/b11-route.json';
-import b12 from './fixtures/b12-route.json';
+import b02 from './fixtures/defend-cooldown-v1/b02-route.json';
+import b03 from './fixtures/manual-cart-v1/b03-route.json';
+import b04 from './fixtures/defend-cooldown-v1/b04-route.json';
+import b05 from './fixtures/defend-cooldown-v1/b05-route.json';
+import b06 from './fixtures/defend-cooldown-v1/b06-route.json';
+import b07 from './fixtures/defend-cooldown-v1/b07-route.json';
+import b08 from './fixtures/defend-cooldown-v1/b08-route.json';
+import b09 from './fixtures/defend-cooldown-v1/b09-route.json';
+import b10 from './fixtures/defend-cooldown-v1/b10-route.json';
+import b11 from './fixtures/defend-cooldown-v1/b11-route.json';
+import b12 from './fixtures/b12-fixed-role-friendly-pass-route.json';
+import {createPartyBattle} from '../src/party';
+import {createJobs} from '../src/jobs';
+import {createCombatRandomConfig} from '../src/domain/combatRandom';
+import {defaultParty,commonLevel} from '../src/progression';
 
 const controls = [{id:'A',x:5,y:9},{id:'B',x:15,y:7}];
 const same = (a:{x:number;y:number},b:{x:number;y:number}) => a.x===b.x&&a.y===b.y;
@@ -86,7 +90,10 @@ function auditFinale(before:BattleState,after:BattleState,command?:Command) {
   return enteredPreservationCell;
 }
 function play(id:BattleId,commands:Command[]) {
-  let state=createInitialState(id),enteredPreservationCell=false;
+  // Earlier routes retain their explicit level-1 domain-oracle setups.
+  // B12 uses normal level/default campaign combat seed after eleven clears; no state/HP edits.
+  let state=id==='B12'?createPartyBattle(id,defaultParty(id),createJobs(),b12.setup.commonLevel,{combat:createCombatRandomConfig()}):createInitialState(id),enteredPreservationCell=false;
+  if(id==='B12'){expect(createCombatRandomConfig()).toEqual(b12.setup.combat);expect(defaultParty(id)).toEqual(b12.setup.party);expect(commands.some(c=>c.type==='defend')).toBe(false);}
   const observe=(next:BattleState,command?:Command)=>{if(id==='B12')enteredPreservationCell=auditFinale(state,next,command)||enteredPreservationCell;state=next;};
   for(const command of commands) {
     expect(state.phase).toBe('playing'); expect(state.turn).toBe('player');
@@ -127,14 +134,14 @@ function endingEligible(c:Campaign){return c.completed.includes('B12')&&['B12:U'
 
 describe('B12 independent final campaign and isolated QA integration',{timeout:30_000},()=>{
   it('earns eleven real victories, unlocks old v1 without writes, wins B12 and restores all 23 evidence',()=>{
-    const eleven=elevenBattleCampaign();expect(eleven.completed).toHaveLength(11);expect(eleven.evidence).toHaveLength(21);
+    const eleven=elevenBattleCampaign();expect(eleven.completed).toHaveLength(11);expect(eleven.evidence).toHaveLength(21);expect(commonLevel(eleven.completed)).toBe(b12.setup.commonLevel);
     const raw=JSON.stringify({...eleven,unlocked:eleven.unlocked.filter(id=>id!=='B12')});
     const {storage,values}=memory([[CAMPAIGN_KEY,raw]]);const loaded=readCampaign(storage);
     expect(loaded.writable).toBe(true);expect(loaded.warning).toBeNull();expect(loaded.campaign.unlocked).toContain('B12');
     expect(values.get(CAMPAIGN_KEY)).toBe(raw);expect(storage.setItem).not.toHaveBeenCalled();expect(storage.removeItem).not.toHaveBeenCalled();
     expect(endingEligible(loaded.campaign)).toBe(false);
     const won=play('B12',b12.victory.commands as Command[]);expect(won.phase).toBe('won');expect(won.round).toBe(b12.victory.round);
-    expect(won.units.filter(u=>u.team==='player').map(u=>[u.id,u.hp])).toEqual(b12.victory.playerHp);
+    expect(won.units.filter(u=>u.team==='player').map(u=>[u.id,u.hp])).toEqual(b12.victory.playerHp);expect(won.combatRandom).toEqual(b12.victory.combatRandom);
     expect(writeCampaign(storage,completeBattle(selectBattle(loaded.campaign,'B12'),won)).ok).toBe(true);
     const restored=readCampaign(storage).campaign;
     expect(restored.completed).toEqual(['B01','B02','B03','B04','B05','B06','B07','B08','B09','B10','B11','B12']);

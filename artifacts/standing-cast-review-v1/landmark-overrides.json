@@ -1,0 +1,578 @@
+{
+  "lise/W": {
+    "jaw": 160,
+    "landmarks": {
+      "head": 100,
+      "jaw": 160,
+      "waist": 195,
+      "knee": 241,
+      "ground": 280
+    },
+    "method": "manual visual landmarks; knees partly obscured, estimated +/-3px",
+    "pairReference": "N"
+  },
+  "lise/N": {
+    "jaw": 160,
+    "landmarks": {
+      "head": 100,
+      "jaw": 160,
+      "waist": 195,
+      "knee": 241,
+      "ground": 280
+    },
+    "method": "manual visual landmarks; knees partly obscured, estimated +/-3px",
+    "pairReference": "N"
+  },
+  "lise/S": {
+    "jaw": 156,
+    "landmarks": {
+      "head": 100,
+      "jaw": 156,
+      "waist": 192,
+      "knee": 235,
+      "ground": 280
+    },
+    "method": "manual visual landmarks; knees partly obscured, estimated +/-3px",
+    "pairReference": "E"
+  },
+  "lise/E": {
+    "jaw": 156,
+    "landmarks": {
+      "head": 100,
+      "jaw": 156,
+      "waist": 192,
+      "knee": 235,
+      "ground": 280
+    },
+    "method": "manual visual landmarks; knees partly obscured, estimated +/-3px",
+    "pairReference": "E"
+  },
+  "garan/N": {
+    "jaw": 149,
+    "landmarks": {
+      "head": 100,
+      "jaw": 149,
+      "waist": 189,
+      "knee": 239,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "W"
+  },
+  "garan/W": {
+    "jaw": 149,
+    "landmarks": {
+      "head": 100,
+      "jaw": 149,
+      "waist": 189,
+      "knee": 239,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "W"
+  },
+  "garan/E": {
+    "jaw": 155,
+    "landmarks": {
+      "head": 100,
+      "jaw": 155,
+      "waist": 190,
+      "knee": 239,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "E"
+  },
+  "garan/S": {
+    "jaw": 155,
+    "landmarks": {
+      "head": 100,
+      "jaw": 155,
+      "waist": 190,
+      "knee": 239,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "E"
+  },
+  "neia/N": {
+    "jaw": 164,
+    "landmarks": {
+      "head": 100,
+      "jaw": 164,
+      "waist": 195,
+      "knee": 240,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "N"
+  },
+  "neia/W": {
+    "jaw": 164,
+    "landmarks": {
+      "head": 100,
+      "jaw": 164,
+      "waist": 195,
+      "knee": 240,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "N"
+  },
+  "neia/E": {
+    "jaw": 167,
+    "landmarks": {
+      "head": 100,
+      "jaw": 167,
+      "waist": 199,
+      "knee": 235,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "E"
+  },
+  "neia/S": {
+    "jaw": 167,
+    "landmarks": {
+      "head": 100,
+      "jaw": 167,
+      "waist": 199,
+      "knee": 235,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "E"
+  },
+  "sena/N": {
+    "jaw": 152,
+    "landmarks": {
+      "head": 100,
+      "jaw": 152,
+      "waist": 188,
+      "knee": 237,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "N"
+  },
+  "sena/W": {
+    "jaw": 152,
+    "landmarks": {
+      "head": 100,
+      "jaw": 152,
+      "waist": 188,
+      "knee": 237,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "N"
+  },
+  "sena/E": {
+    "jaw": 155,
+    "landmarks": {
+      "head": 100,
+      "jaw": 155,
+      "waist": 192,
+      "knee": 239,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "S"
+  },
+  "sena/S": {
+    "jaw": 155,
+    "landmarks": {
+      "head": 100,
+      "jaw": 155,
+      "waist": 192,
+      "knee": 239,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "S"
+  },
+  "iva/N": {
+    "jaw": 157,
+    "landmarks": {
+      "head": 100,
+      "jaw": 157,
+      "waist": 189,
+      "knee": 239,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "W"
+  },
+  "iva/W": {
+    "jaw": 157,
+    "landmarks": {
+      "head": 100,
+      "jaw": 157,
+      "waist": 189,
+      "knee": 239,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "W"
+  },
+  "iva/E": {
+    "jaw": 155,
+    "landmarks": {
+      "head": 100,
+      "jaw": 155,
+      "waist": 194,
+      "knee": 239,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "E"
+  },
+  "iva/S": {
+    "jaw": 155,
+    "landmarks": {
+      "head": 100,
+      "jaw": 155,
+      "waist": 194,
+      "knee": 239,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "E"
+  },
+  "dani/N": {
+    "jaw": 154,
+    "landmarks": {
+      "head": 100,
+      "jaw": 154,
+      "waist": 198,
+      "knee": 239,
+      "ground": 280
+    },
+    "pairReference": "W",
+    "method": "user-requested head reduction for both N/W; common manual body landmarks"
+  },
+  "dani/W": {
+    "jaw": 154,
+    "landmarks": {
+      "head": 100,
+      "jaw": 154,
+      "waist": 198,
+      "knee": 239,
+      "ground": 280
+    },
+    "pairReference": "W",
+    "method": "user-requested head reduction for both N/W; common manual body landmarks"
+  },
+  "dani/E": {
+    "jaw": 155,
+    "landmarks": {
+      "head": 100,
+      "jaw": 155,
+      "waist": 192,
+      "knee": 238,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "E"
+  },
+  "dani/S": {
+    "jaw": 155,
+    "landmarks": {
+      "head": 100,
+      "jaw": 155,
+      "waist": 192,
+      "knee": 238,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "E"
+  },
+  "guard/N": {
+    "jaw": 155,
+    "landmarks": {
+      "head": 100,
+      "jaw": 155,
+      "waist": 189,
+      "knee": 231,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "N"
+  },
+  "guard/W": {
+    "jaw": 155,
+    "landmarks": {
+      "head": 100,
+      "jaw": 155,
+      "waist": 189,
+      "knee": 231,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "N"
+  },
+  "guard/E": {
+    "jaw": 158,
+    "landmarks": {
+      "head": 100,
+      "jaw": 158,
+      "waist": 192,
+      "knee": 239,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "E"
+  },
+  "guard/S": {
+    "jaw": 158,
+    "landmarks": {
+      "head": 100,
+      "jaw": 158,
+      "waist": 192,
+      "knee": 239,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "E"
+  },
+  "archer/N": {
+    "jaw": 160,
+    "landmarks": {
+      "head": 100,
+      "jaw": 160,
+      "waist": 190,
+      "knee": 239,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "N"
+  },
+  "archer/W": {
+    "jaw": 160,
+    "landmarks": {
+      "head": 100,
+      "jaw": 160,
+      "waist": 190,
+      "knee": 239,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "N"
+  },
+  "archer/E": {
+    "jaw": 158,
+    "landmarks": {
+      "head": 100,
+      "jaw": 158,
+      "waist": 196,
+      "knee": 239,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "E"
+  },
+  "archer/S": {
+    "jaw": 158,
+    "landmarks": {
+      "head": 100,
+      "jaw": 158,
+      "waist": 196,
+      "knee": 239,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "E"
+  },
+  "vesk/N": {
+    "jaw": 145,
+    "landmarks": {
+      "head": 100,
+      "jaw": 145,
+      "waist": 182,
+      "knee": 244,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "N"
+  },
+  "vesk/W": {
+    "jaw": 145,
+    "landmarks": {
+      "head": 100,
+      "jaw": 145,
+      "waist": 182,
+      "knee": 244,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "N"
+  },
+  "vesk/E": {
+    "jaw": 146,
+    "landmarks": {
+      "head": 100,
+      "jaw": 146,
+      "waist": 182,
+      "knee": 245,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "E"
+  },
+  "vesk/S": {
+    "jaw": 146,
+    "landmarks": {
+      "head": 100,
+      "jaw": 146,
+      "waist": 182,
+      "knee": 245,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "E"
+  },
+  "toma/N": {
+    "jaw": 156,
+    "landmarks": {
+      "head": 100,
+      "jaw": 156,
+      "waist": 193,
+      "knee": 242,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "N"
+  },
+  "toma/W": {
+    "jaw": 156,
+    "landmarks": {
+      "head": 100,
+      "jaw": 156,
+      "waist": 193,
+      "knee": 242,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "N"
+  },
+  "toma/E": {
+    "jaw": 155,
+    "landmarks": {
+      "head": 100,
+      "jaw": 155,
+      "waist": 194,
+      "knee": 239,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "E"
+  },
+  "toma/S": {
+    "jaw": 155,
+    "landmarks": {
+      "head": 100,
+      "jaw": 155,
+      "waist": 194,
+      "knee": 239,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "E"
+  },
+  "worker/N": {
+    "jaw": 150,
+    "landmarks": {
+      "head": 100,
+      "jaw": 150,
+      "waist": 188,
+      "knee": 239,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "N"
+  },
+  "worker/W": {
+    "jaw": 150,
+    "landmarks": {
+      "head": 100,
+      "jaw": 150,
+      "waist": 188,
+      "knee": 239,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "N"
+  },
+  "worker/E": {
+    "jaw": 152,
+    "landmarks": {
+      "head": 100,
+      "jaw": 152,
+      "waist": 190,
+      "knee": 240,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "S"
+  },
+  "worker/S": {
+    "jaw": 152,
+    "landmarks": {
+      "head": 100,
+      "jaw": 152,
+      "waist": 190,
+      "knee": 240,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "S"
+  },
+  "delegation/N": {
+    "jaw": 145,
+    "landmarks": {
+      "head": 100,
+      "jaw": 145,
+      "waist": 181,
+      "knee": 248,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "N"
+  },
+  "delegation/W": {
+    "jaw": 145,
+    "landmarks": {
+      "head": 100,
+      "jaw": 145,
+      "waist": 181,
+      "knee": 248,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "N"
+  },
+  "delegation/E": {
+    "jaw": 147,
+    "landmarks": {
+      "head": 100,
+      "jaw": 147,
+      "waist": 181,
+      "knee": 248,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "E"
+  },
+  "delegation/S": {
+    "jaw": 147,
+    "landmarks": {
+      "head": 100,
+      "jaw": 147,
+      "waist": 181,
+      "knee": 248,
+      "ground": 280
+    },
+    "method": "manual visual estimates; geometry aligned to selected reference",
+    "pairReference": "E"
+  }
+}

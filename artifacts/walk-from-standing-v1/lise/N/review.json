@@ -1,0 +1,8 @@
+{
+  "status": "不採用：デザイン・向きが変化",
+  "issues": [
+    "後半で顔・胴体が横向きに回転",
+    "頭部とカバンの形が変化"
+  ],
+  "reviewMethod": "native temporal contact sheet inspected at 6 fps; sufficient to reject, not a full-frame gait approval"
+}

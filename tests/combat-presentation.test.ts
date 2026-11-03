@@ -11,7 +11,7 @@ import type { BattleState, Command } from '../src/domain/types';
 import { committedAttackResolution, createPresentation, samplePresentation } from '../src/view/presentation';
 import { withDedicatedAttack } from '../src/view/dedicatedAttack';
 import { BoardScene } from '../src/view/BoardScene';
-import { soundForTransition } from '../src/audio-events';
+import { soundsForTransition } from '../src/audio-events';
 import { PlaybackGate } from '../src/view/playbackGate';
 
 function attackCase(hit: boolean, lethal = false, weapon: 'melee'|'bow' = 'melee') {
@@ -37,6 +37,7 @@ class DisplayObject {
   setPosition(x:number,y:number){this.x=x;this.y=y;return this;}
   setAlpha(n:number){this.alpha=n;return this;}
   setVisible(v:boolean){this.visible=v;return this;}
+  setDepth(){return this;} clear(){return this;}
   setOrigin(){return this;} setDisplaySize(){return this;} setInteractive(){return this;} setTexture(){return this;}
   setRotation(){return this;}setScale(){return this;}on(){return this;}
   fillStyle(){return this;}fillPoints(){return this;}lineStyle(){return this;}strokePoints(){return this;}
@@ -65,7 +66,7 @@ describe('committed combat result presentation without rerolls',()=>{
     for(let n=0;n<=100;n++)samplePresentation(plan,n*3);
     expect(JSON.stringify({before,after})).toBe(snapshot);
     plan.attack!.resolution!.damage=999;expect(after.lastAttack!.damage).toBe(0);
-    expect(soundForTransition(before,after,command)).toBeNull();
+    expect(soundsForTransition(before,after,command).map(e=>e.id)).toEqual(['se-sword','se-miss']);
   });
   it('uses the same 400ms dedicated body on a miss, with generic duration retained when assets are unavailable',()=>{
     const {before,after,command}=attackCase(false),plan=createPresentation(before,after,[command])!;
@@ -76,14 +77,14 @@ describe('committed combat result presentation without rerolls',()=>{
     const {before,after,command}=attackCase(true,true),plan=createPresentation(before,after,[command])!;
     expect(plan.attack?.resolution).toMatchObject({hit:true,damage:1});
     expect(plan.attack!.resolution!.damageOnHit).toBeGreaterThan(1);
-    expect(plan.attack!.targetBefore.hp).toBe(1);expect(soundForTransition(before,after,command)).toBe('se-impact');
+    expect(plan.attack!.targetBefore.hp).toBe(1);expect(soundsForTransition(before,after,command).map(e=>e.id)).toContain('se-impact');
   });
   it('never replays stale results or substitutes HP changes for a missing new result',()=>{
     const {after,command}=attackCase(false),later=structuredClone(after);
     getUnit(later,'enemy-melee-01')!.hp--;
     expect(createPresentation(after,later,[command])).toBeNull();
-    expect(soundForTransition(after,later,command)).toBeNull();
-    expect(soundForTransition(after,later)).toBeNull();
+    expect(soundsForTransition(after,later,command)).toEqual([]);
+    expect(soundsForTransition(after,later)).toEqual([]);
     expect(committedAttackResolution(after,later)).toBeUndefined();
   });
   it('matches event sequence, actor and target instead of guessing from an attack command',()=>{
@@ -99,29 +100,31 @@ describe('committed combat result presentation without rerolls',()=>{
     const {before,command}=attackCase(true);delete before.combatRandom;
     const after=reduce(before,command).state,plan=createPresentation(before,after,[command])!;
     expect(plan.attack).toBeDefined();expect(plan.attack?.resolution).toBeUndefined();
-    expect(plan.attackDuration).toBe(220);expect(soundForTransition(before,after,command)).toBe('se-impact');
+    expect(plan.attackDuration).toBe(220);expect(soundsForTransition(before,after,command).map(e=>e.id)).toContain('se-impact');
   });
   it('prioritizes terminal audio over either combat result',()=>{
     const {before,after,command}=attackCase(false);
-    const won=structuredClone(after);won.phase='won';expect(soundForTransition(before,won,command)).toBe('se-victory');
-    const lost=structuredClone(after);lost.phase='lost';expect(soundForTransition(before,lost,command)).toBe('se-defeat');
-    expect(soundForTransition(won,structuredClone(won),command)).toBeNull();
+    const won=structuredClone(after);won.phase='won';expect(soundsForTransition(before,won,command)).toEqual([]);
+    const lost=structuredClone(after);lost.phase='lost';expect(soundsForTransition(before,lost,command)).toEqual([]);
+    expect(soundsForTransition(won,structuredClone(won),command)).toEqual([]);
   });
-  it.each(['melee','bow'] as const)('draws %s miss feedback without a target hit pulse or ghost and clears it on settle',weapon=>{
+  it.each(['melee','bow'] as const)('draws %s MISS without a target hit pulse or ghost and retains it past normal settle',weapon=>{
     const {before,after,command}=attackCase(false,false,weapon),snapshot=JSON.stringify(after),h=sceneHarness(after);
     const plan=createPresentation(before,after,[command])!;h.scene.playPresentation(plan);h.time(110);
     const target=h.actors().get(command.type==='attack'?command.targetId:'')!;
     expect(target.ghost).toBe(false);expect(target.group.alpha).toBe(1);
-    const feedback=h.labels.filter(x=>x.value==='外れ').at(-1)!;expect(feedback.visible).toBe(true);
+    const feedback=h.labels.filter(x=>x.value==='MISS').at(-1)!;expect(feedback.visible).toBe(true);
     expect(h.errors).toEqual([]);expect(JSON.stringify(after)).toBe(snapshot);
-    h.time(220);expect(feedback.visible).toBe(false);h.scene.clearPresentation();expect(feedback.destroyed).toBe(true);
+    h.time(220);expect(feedback.visible).toBe(true);h.scene.clearPresentation(true);expect(feedback.destroyed).toBe(true);
+    expect((h.scene as any).attackFeedback.visible).toBe(true);h.time(910);expect((h.scene as any).attackFeedback).toBeUndefined();
   });
   it('retains hit ghost behavior and shows actual damage on a lethal hit',()=>{
     const {before,after,command}=attackCase(true,true),h=sceneHarness(after),plan=createPresentation(before,after,[command])!;
     h.scene.playPresentation(plan);h.time(110);
     const target=h.actors().get(plan.attack!.targetId)!;expect(target.ghost).toBe(true);expect(target.group.alpha).toBeLessThan(1);
     expect(h.labels.filter(x=>x.value==='命中 −1').at(-1)?.visible).toBe(true);
-    h.time(220);expect(target.group.visible).toBe(false);h.scene.clearPresentation();expect(h.actors().has(plan.attack!.targetId)).toBe(false);
+    h.time(220);expect(target.group.visible).toBe(true);h.scene.clearPresentation(true);expect(h.actors().has(plan.attack!.targetId)).toBe(true);
+    h.time(910);expect(h.actors().has(plan.attack!.targetId)).toBe(false);
     expect(h.errors).toEqual([]);
   });
   it('lets shortening or stale timers settle the already committed miss only once',()=>{

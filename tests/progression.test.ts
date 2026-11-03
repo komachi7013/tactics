@@ -1,11 +1,13 @@
+import { tutor as currentTutor } from '../src/progression';
+import { tutor } from './fixtures/legacy-preparation';
 import { describe, expect, it } from 'vitest';
 import { createInitialState } from '../src/domain/engine';
-import { BATTLE_IDS, CHARACTER_IDS, availableCharacters, defaultParty, validParty, createGrowth, validGrowth, awardFirstClear, returnFromAbsence, trainingPoints, tutor, commonLevel, migrateLegacyGrowth } from '../src/progression';
+import {BATTLE_IDS, CHARACTER_IDS, availableCharacters, defaultParty, validParty, createGrowth, validGrowth, awardFirstClear, returnFromAbsence, trainingPoints, commonLevel, migrateLegacyGrowth} from '../src/progression';
 import type { BattleId } from '../src/domain/types';
 const upto = (n: number) => BATTLE_IDS.slice(0,n);
 const lise = 'ally-lise', neia = 'ally-neia', dani = 'ally-dani';
 
-describe('deployment-based growth', () => {
+describe('deployment history and common chapter growth', () => {
   it('starts with no individual awards and chapter level one', () => {
     const g=createGrowth(); expect(validGrowth(g,[])).toBe(true); expect(commonLevel([])).toBe(1);
     CHARACTER_IDS.forEach(id=>expect(trainingPoints(g,id)).toBe(0));
@@ -59,21 +61,21 @@ describe('deployment-based growth', () => {
     expect(returnFromAbsence(returned,'B07')).toEqual(returned); expect(g).toEqual(before);
     expect(returnFromAbsence(migrateLegacyGrowth(upto(5)),'B07').compensated).toEqual([]);
   });
-  it('manual tutoring fills a bounded chapter deficit without grind or automatic reserve awards', () => {
+  it('historical tutoring fixtures describe a bounded chapter deficit without grind or automatic reserve awards', () => {
     const g=migrateLegacyGrowth(upto(4)), before=structuredClone(g);
     expect(trainingPoints(g,'ally-sena')).toBe(2);
     const trained=tutor(g,'ally-sena',upto(4)); expect(trainingPoints(trained,'ally-sena')).toBe(6);
     expect(trained.tutoring['ally-sena']).toBe(4); expect(tutor(trained,'ally-sena',upto(4))).toEqual(trained);
     expect(tutor(g,lise,upto(4))).toEqual(g); expect(g).toEqual(before);
   });
-  it('settles return compensation before tutoring to prevent duplicate catch-up', () => {
+  it('validates old compensation-before-tutoring history to prevent duplicate catch-up', () => {
     let g=createGrowth(); for(const id of upto(6)) g=awardFirstClear(g,id,defaultParty(id));
     const trained=tutor(g,neia,upto(6));
     expect(trainingPoints(trained,neia)).toBe(12); expect(trained.tutoring[neia]).toBe(0);
     expect(trained.compensated).toEqual(['B06']); expect(returnFromAbsence(trained,'B07')).toEqual(trained);
     expect(validGrowth({...trained,tutoring:{...trained.tutoring,[neia]:2}},upto(6))).toBe(false);
   });
-  it('raises tutoring ceiling only on chapter clear and keeps earlier tutoring after later deployments', () => {
+  it('retains historical tutoring ceilings by chapter clear and keeps earlier tutoring after later deployments', () => {
     let g=tutor(migrateLegacyGrowth(upto(4)),'ally-sena',upto(4));
     g=awardFirstClear(g,'B05',defaultParty('B05'));
     expect(tutor(g,'ally-sena',upto(5))).toEqual(g);
@@ -116,4 +118,10 @@ describe('deployment-based growth', () => {
     copy.deployments.B01!.reverse(); expect(g.deployments.B01).toEqual(defaultParty('B01'));
     const party=defaultParty('B01'); party.reverse(); expect(defaultParty('B01')[0]).toBe(lise);
   });
+  it('rejects new public tutoring even with a valid historical deficit, without changing ledger or level',()=>{
+    const completed=upto(4),growth=migrateLegacyGrowth(completed),before=structuredClone(growth),level=commonLevel(completed);
+    expect(()=>currentTutor(growth,'ally-sena',completed)).toThrow();
+    expect(growth).toEqual(before);expect(commonLevel(completed)).toBe(level);
+  });
+
 });

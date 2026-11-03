@@ -16,3 +16,19 @@ __pycache__/
 /public/assets/qa-contact-sheet.png
 /public/assets/*/*-contact-sheet.png
 /public/assets/*/contact-sheet.png
+
+# Local generation history and reproducible media intermediates.
+/artifacts/*
+!/artifacts/walk-from-standing-v1/
+!/artifacts/standing-cast-review-v1/
+/generated_images/
+/public/assets/motion-v2/
+/public/assets/motion-v3/
+/public/assets/motion-v4/
+/.codex/skills/rpg-music/outputs/
+/audio-production/v2-20261026/masters/
+/audio-production/v2-20261026/listen/
+/audio-production/v2-20261026/render/
+/audio-production/v2-20261026/integration/
+/audio-production/v2-20261026/integration-baseline/
+/audio-production/v2-20261026/*.patch

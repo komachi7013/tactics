@@ -1,0 +1,28 @@
+[
+  {
+    "direction": "N",
+    "sourceImage": "artifacts/standing-cast-repairs-local-v1/dani/N/five-point-aligned.png",
+    "headHeightBeforePx": 59,
+    "headHeightAfterPx": 54,
+    "headWidthBeforePx": 71,
+    "headWidthAfterPx": 67,
+    "bodyPixelsUnchangedFromRow": 178,
+    "neckTransition": [
+      154,
+      178
+    ]
+  },
+  {
+    "direction": "W",
+    "sourceImage": "artifacts/standing-cast-review-v1/original/dani/W/standing.png",
+    "headHeightBeforePx": 59,
+    "headHeightAfterPx": 54,
+    "headWidthBeforePx": 73,
+    "headWidthAfterPx": 67,
+    "bodyPixelsUnchangedFromRow": 178,
+    "neckTransition": [
+      154,
+      178
+    ]
+  }
+]

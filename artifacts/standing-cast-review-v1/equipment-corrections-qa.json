@@ -1,0 +1,135 @@
+[
+  {
+    "cast": "toma",
+    "direction": "E",
+    "sourceImage": "artifacts/standing-cast-review-v1/original/toma/E/standing.png",
+    "generatedImage": "artifacts/standing-cast-repairs-local-v1/toma/E/equipment-generated.png",
+    "anatomicalPlacement": "right hip",
+    "headPixelsPreservedThroughRow": 155,
+    "lowerBodyPixelsPreservedFromRow": 234,
+    "protectedAccessoryAndLimbPixelsUnchanged": true,
+    "fivePointCoordinates": {
+      "head": 100,
+      "jaw": 155,
+      "waist": 194,
+      "knee": 239,
+      "ground": 280
+    },
+    "higgsfieldAdditionalCredits": 0,
+    "status": "protected accessory edit; visual review candidate"
+  },
+  {
+    "cast": "toma",
+    "direction": "S",
+    "sourceImage": "artifacts/standing-cast-repairs-local-v1/toma/S/five-point-aligned.png",
+    "generatedImage": "artifacts/standing-cast-repairs-local-v1/toma/S/equipment-generated.png",
+    "anatomicalPlacement": "right hip",
+    "headPixelsPreservedThroughRow": 155,
+    "lowerBodyPixelsPreservedFromRow": 234,
+    "protectedAccessoryAndLimbPixelsUnchanged": true,
+    "fivePointCoordinates": {
+      "head": 100,
+      "jaw": 155,
+      "waist": 194,
+      "knee": 239,
+      "ground": 280
+    },
+    "higgsfieldAdditionalCredits": 0,
+    "status": "protected accessory edit; visual review candidate"
+  },
+  {
+    "cast": "garan",
+    "direction": "S",
+    "sourceImage": "artifacts/standing-cast-repairs-local-v1/garan/S/five-point-aligned.png",
+    "generatedImage": "artifacts/standing-cast-repairs-local-v1/garan/S/equipment-generated.png",
+    "anatomicalPlacement": "right hip",
+    "headPixelsPreservedThroughRow": 179,
+    "lowerBodyPixelsPreservedFromRow": 244,
+    "protectedAccessoryAndLimbPixelsUnchanged": true,
+    "fivePointCoordinates": {
+      "head": 100,
+      "jaw": 155,
+      "waist": 190,
+      "knee": 239,
+      "ground": 280
+    },
+    "higgsfieldAdditionalCredits": 0,
+    "status": "protected accessory edit; visual review candidate"
+  },
+  {
+    "cast": "sena",
+    "direction": "W",
+    "sourceImage": "artifacts/standing-cast-repairs-local-v1/sena/W/five-point-aligned.png",
+    "generatedImage": "artifacts/standing-cast-repairs-local-v1/sena/W/equipment-generated.png",
+    "anatomicalPlacement": "right hip",
+    "headPixelsPreservedThroughRow": 183,
+    "lowerBodyPixelsPreservedFromRow": 233,
+    "protectedAccessoryAndLimbPixelsUnchanged": true,
+    "fivePointCoordinates": {
+      "head": 100,
+      "jaw": 152,
+      "waist": 188,
+      "knee": 237,
+      "ground": 280
+    },
+    "higgsfieldAdditionalCredits": 0,
+    "status": "protected accessory edit; visual review candidate"
+  },
+  {
+    "cast": "iva",
+    "direction": "W",
+    "sourceImage": "artifacts/standing-cast-review-v1/original/iva/W/standing.png",
+    "generatedImage": "artifacts/standing-cast-repairs-local-v1/iva/W/equipment-generated.png",
+    "anatomicalPlacement": "right hip",
+    "headPixelsPreservedThroughRow": 182,
+    "lowerBodyPixelsPreservedFromRow": 232,
+    "protectedAccessoryAndLimbPixelsUnchanged": true,
+    "fivePointCoordinates": {
+      "head": 100,
+      "jaw": 157,
+      "waist": 189,
+      "knee": 239,
+      "ground": 280
+    },
+    "higgsfieldAdditionalCredits": 0,
+    "status": "protected accessory edit; visual review candidate"
+  },
+  {
+    "cast": "archer",
+    "direction": "S",
+    "sourceImage": "artifacts/standing-cast-repairs-local-v1/archer/S/five-point-aligned.png",
+    "generatedImage": "artifacts/standing-cast-repairs-local-v1/archer/S/equipment-generated.png",
+    "anatomicalPlacement": "right hip",
+    "headPixelsPreservedThroughRow": 189,
+    "lowerBodyPixelsPreservedFromRow": 232,
+    "protectedAccessoryAndLimbPixelsUnchanged": true,
+    "fivePointCoordinates": {
+      "head": 100,
+      "jaw": 158,
+      "waist": 196,
+      "knee": 239,
+      "ground": 280
+    },
+    "higgsfieldAdditionalCredits": 0,
+    "status": "protected accessory edit; visual review candidate"
+  },
+  {
+    "cast": "lise",
+    "direction": "S",
+    "sourceImage": "artifacts/standing-cast-repairs-local-v1/lise/S/pair-aligned-display.png",
+    "generatedImage": "artifacts/standing-cast-repairs-local-v1/lise/S/equipment-generated.png",
+    "anatomicalPlacement": "right hip",
+    "headPixelsPreservedThroughRow": 157,
+    "lowerBodyPixelsPreservedFromRow": 234,
+    "protectedAccessoryAndLimbPixelsUnchanged": true,
+    "fivePointCoordinates": {
+      "head": 100,
+      "jaw": 156,
+      "waist": 192,
+      "knee": 235,
+      "ground": 280
+    },
+    "higgsfieldAdditionalCredits": 0,
+    "status": "protected accessory edit; visual review candidate"
+  }
+]

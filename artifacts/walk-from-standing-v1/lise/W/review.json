@@ -1,0 +1,9 @@
+{
+  "status": "不採用：デザイン・向きが変化",
+  "issues": [
+    "後半で横向きに回転",
+    "本と袖の形が変化",
+    "床影が生成される"
+  ],
+  "reviewMethod": "native temporal contact sheet inspected at 6 fps; sufficient to reject, not a full-frame gait approval"
+}

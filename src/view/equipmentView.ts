@@ -1,7 +1,7 @@
 import { EQUIPMENT_EVENTS, EQUIPMENT_ITEMS, equipmentBonus, ownedEquipment, type EquipmentSlot, type EquipmentState } from '../equipment';
 import { CHARACTER_IDS, type CharacterId } from '../progression';
 import type { BattleId } from '../domain/types';
-import type { JobsState } from '../jobs';
+import { INITIAL_JOBS, type JobsState } from '../jobs';
 
 export const EQUIPMENT_SLOT_NAMES: Record<EquipmentSlot, string> = { weapon: '武器', head: '頭', body: '胴', legs: '脚' };
 export function equipmentEffectText(bonus: { hp: number; atk: number; def: number }): string {
@@ -20,8 +20,8 @@ export function equipmentSlotOptions(equipment: EquipmentState, completed: reado
     const item = equipmentDefinition(event.id);
     if (!item || item.slot !== slot) return [];
     const owner = equipmentOwner(equipment, event.id);
-    const fits = !item.weapon || item.weapon === (jobs[character].main === 'scout' ? 'bow' : 'melee');
-    return [{ event, item, owner, disabled: !fits || Boolean(owner && owner !== character), reason: !fits ? '主職不適合' : owner && owner !== character ? '他人物が装着中' : '' }];
+    const fits = !item.weapon || item.weapon === (INITIAL_JOBS[character] === 'scout' ? 'bow' : 'melee');
+    return [{ event, item, owner, disabled: !fits || Boolean(owner && owner !== character), reason: !fits ? 'この人物は装備不可' : owner && owner !== character ? '他人物が装着中' : '' }];
   });
 }
 export function equipmentCollectionRows(completed: readonly BattleId[], equipment: EquipmentState, confirmed: readonly string[], pending: readonly string[] = []) {

@@ -1,0 +1,21 @@
+{
+  "videoSha256": "ff002e7ac5008ae5997e2b85c49b462dc43873bf8b9b7f7cd58ec05d0c46421c",
+  "visualReviewed": true,
+  "contacts": [
+    {
+      "frame": 24,
+      "foot": "L"
+    },
+    {
+      "frame": 48,
+      "foot": "R"
+    },
+    {
+      "frame": 72,
+      "foot": "L"
+    }
+  ],
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "reviewNote": "New E take; native feet every2frames reviewed; detailed passing phases inspected. Far anatomical L supports24/72 with near R passing; R supports48 while L advances. Estimated phases +/-2frames, not anatomical certification. Native48frame/2second cycle; retime to800ms. Prior take retained separately."
+}

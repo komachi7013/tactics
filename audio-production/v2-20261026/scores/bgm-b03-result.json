@@ -1,0 +1,99 @@
+{
+  "id": "bgm-b03",
+  "master": {
+    "file": "masters/bgm-b03.wav",
+    "sha256": "42116b22722e2eca24f3994ceef46ea438a8e05df6a60b47c9c49124556ccf38",
+    "bytes": 16632036,
+    "sampleRate": 44100,
+    "channels": 2,
+    "frames": 4157998,
+    "seconds": 94.28566893424036,
+    "samplePeak": 0.319976806640625,
+    "rmsDbFS": -26.226006815204414,
+    "dc": [
+      6.39269440410385e-09,
+      -3.001850759217537e-08
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      4157998
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        -0.000335693359375,
+        -0.001556396484375
+      ],
+      "rmsDifferenceDb": [
+        0.1507495452782666,
+        -0.7357855605216654
+      ],
+      "slopeError": [
+        0.001220703125,
+        0.00018310546875
+      ],
+      "numericalFlags": []
+    }
+  },
+  "delivery": {
+    "file": "delivery/bgm-b03.wav",
+    "sha256": "6963626c5b5a8add7a3ada872c45c7e83063725b95e42f0307636b02146c1b97",
+    "bytes": 8316040,
+    "sampleRate": 22050,
+    "channels": 2,
+    "frames": 2078999,
+    "seconds": 94.28566893424036,
+    "samplePeak": 0.318023681640625,
+    "rmsDbFS": -26.22609402022812,
+    "dc": [
+      1.6778070502619288e-08,
+      -2.2693698160148226e-08
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      2078999
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        -0.0018310546875,
+        -0.003265380859375
+      ],
+      "rmsDifferenceDb": [
+        0.14612138843383163,
+        -0.7415929868118145
+      ],
+      "slopeError": [
+        0.00299072265625,
+        0.002471923828125
+      ],
+      "numericalFlags": []
+    }
+  },
+  "listeningVerified": false,
+  "compositionRevision": "independent-r2",
+  "title": "名簿と車輪",
+  "usage": "B03 ラウム救護倉: 負傷者の荷車を護送。穏やかな決意の旋律、重い刻み。",
+  "bpm": 112,
+  "bars": 44,
+  "meter": [
+    4,
+    4
+  ],
+  "mode": "major",
+  "rationale": "B03 ラウム救護倉: 負傷者の荷車を護送。穏やかな決意の旋律、重い刻み。",
+  "direction": "人を守る温かな4/4の行進。オーボエの歌う長い旋律とホルン、付点リズムで荷車を前へ運ぶ。",
+  "source": "scores/bgm-b03.json",
+  "midi": "scores/bgm-b03.mid",
+  "renderCycles": 3,
+  "extractStartFrame": 4166477,
+  "rotationSeconds": 0.1922675736961451,
+  "motif": {
+    "id": "river-record",
+    "version": 3,
+    "quotation": "single three-note cameo in C only; title/ending link restricted to opening two bars"
+  },
+  "scoreFingerprint": "4eb1e524dd5bad25fa5afcf9a222f67a5b474ed4f60d0328bf5bd11845419a73"
+}

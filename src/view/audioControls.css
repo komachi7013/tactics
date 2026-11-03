@@ -1,0 +1,19 @@
+/* Audio settings also appear on the paper title/prologue surfaces. */
+.start-copy .audio-controls,
+.start-copy .audio-controls summary,
+.start-copy .audio-controls p,
+.start-copy .audio-controls pre,
+.start-copy .audio-control-fields label,
+.prologue-panel .audio-controls,
+.prologue-panel .audio-controls summary,
+.prologue-panel .audio-controls p,
+.prologue-panel .audio-controls pre,
+.prologue-panel .audio-control-fields label {
+  color: #29463d;
+  border-color: #8b9b80;
+}
+.start-copy .audio-controls button,
+.prologue-panel .audio-controls button {
+  background: #284d43;
+  color: #fff3d5;
+}

@@ -1,0 +1,966 @@
+{
+  "deliveryFiles": [
+    {
+      "id": "bgm-title",
+      "file": "delivery/bgm-title.wav",
+      "sha256": "5ba0b461d2aeeac57923aadb959bea3088c3636efaab0d51855c7371ff2f5ac1",
+      "bytes": 5292044,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 1323000,
+      "seconds": 60.0,
+      "samplePeak": 0.318939208984375,
+      "rmsDbFS": -26.096003023297037,
+      "dc": [
+        -9.319048800075586e-09,
+        8.650107178287982e-09
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        1323000
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          0.0103759765625,
+          0.00592041015625
+        ],
+        "rmsDifferenceDb": [
+          0.17394039341432496,
+          -0.25144226418212945
+        ],
+        "slopeError": [
+          0.00518798828125,
+          0.002685546875
+        ],
+        "numericalFlags": []
+      }
+    },
+    {
+      "id": "bgm-prologue",
+      "file": "delivery/bgm-prologue.wav",
+      "sha256": "4b79126c591b9fc625014e8d588689626d8600a79202e1ff6ef46bae1431273e",
+      "bytes": 5292044,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 1323000,
+      "seconds": 60.0,
+      "samplePeak": 0.31658935546875,
+      "rmsDbFS": -24.797703354378456,
+      "dc": [
+        -3.2524402990362813e-09,
+        -3.995196168745276e-08
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        1323000
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          0.006744384765625,
+          0.00091552734375
+        ],
+        "rmsDifferenceDb": [
+          0.5306125341749847,
+          0.589987546908988
+        ],
+        "slopeError": [
+          0.013641357421875,
+          0.013885498046875
+        ],
+        "numericalFlags": []
+      }
+    },
+    {
+      "id": "bgm-briefing",
+      "file": "delivery/bgm-briefing.wav",
+      "sha256": "49cfce8be5b58b8a7e77f8f14f5758af65cda67ea6589e4ba00566610534f86f",
+      "bytes": 7938044,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 1984500,
+      "seconds": 90.0,
+      "samplePeak": 0.319366455078125,
+      "rmsDbFS": -24.724811199670782,
+      "dc": [
+        4.5980125267699675e-09,
+        -4.290453160430839e-09
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        1984500
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          0.002227783203125,
+          -3.0517578125e-05
+        ],
+        "rmsDifferenceDb": [
+          0.10869998638334522,
+          0.5422392885726895
+        ],
+        "slopeError": [
+          0.017822265625,
+          0.02001953125
+        ],
+        "numericalFlags": []
+      }
+    },
+    {
+      "id": "bgm-b01",
+      "file": "delivery/bgm-b01.wav",
+      "sha256": "3b65949b3946a76f790f3205ebac1d9a575dad889f5ba18e60e6e4b099f4bb22",
+      "bytes": 8467244,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2116800,
+      "seconds": 96.0,
+      "samplePeak": 0.3201904296875,
+      "rmsDbFS": -25.992301534240788,
+      "dc": [
+        -1.0120625398596938e-07,
+        6.587056616266298e-08
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        2116800
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          -0.00030517578125,
+          0.000732421875
+        ],
+        "rmsDifferenceDb": [
+          -1.6041681466443505,
+          -1.3613397840529486
+        ],
+        "slopeError": [
+          0.0035400390625,
+          0.003265380859375
+        ],
+        "numericalFlags": []
+      }
+    },
+    {
+      "id": "bgm-b02",
+      "file": "delivery/bgm-b02.wav",
+      "sha256": "6073b0bce61162f3305d8346105f0afbed553b3373e37827ba8b95edcab29c7e",
+      "bytes": 8624052,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2156002,
+      "seconds": 97.77786848072563,
+      "samplePeak": 0.32000732421875,
+      "rmsDbFS": -26.261580004277782,
+      "dc": [
+        3.813278256177406e-08,
+        6.689514862173134e-08
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        2156002
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          -0.00030517578125,
+          -0.0001220703125
+        ],
+        "rmsDifferenceDb": [
+          0.001664066227677571,
+          0.46340206978092213
+        ],
+        "slopeError": [
+          0.00115966796875,
+          0.00054931640625
+        ],
+        "numericalFlags": []
+      }
+    },
+    {
+      "id": "bgm-b03",
+      "file": "delivery/bgm-b03.wav",
+      "sha256": "5665acc87a422b233196e9fad07ab9cae5192eaee72dbb50518b0c6bcf4dd310",
+      "bytes": 8820044,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2205000,
+      "seconds": 100.0,
+      "samplePeak": 0.320220947265625,
+      "rmsDbFS": -25.394858770320127,
+      "dc": [
+        2.495382918792517e-08,
+        3.1001984126984127e-09
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        2205000
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          0.00238037109375,
+          0.0018310546875
+        ],
+        "rmsDifferenceDb": [
+          -0.5357078297059383,
+          -0.9598791450013493
+        ],
+        "slopeError": [
+          0.00665283203125,
+          0.0059814453125
+        ],
+        "numericalFlags": []
+      }
+    },
+    {
+      "id": "bgm-b04",
+      "file": "delivery/bgm-b04.wav",
+      "sha256": "1a33b3977de52575540e96107f465103b4a2fb96fd92bd9f8643c10c919a0faf",
+      "bytes": 8141580,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2035384,
+      "seconds": 92.30766439909297,
+      "samplePeak": 0.32000732421875,
+      "rmsDbFS": -26.033208033096113,
+      "dc": [
+        -4.2461658954772173e-08,
+        1.1772914763872567e-07
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        2035384
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          -0.004791259765625,
+          -0.004241943359375
+        ],
+        "rmsDifferenceDb": [
+          -1.6776505072339845,
+          -1.8115095355314308
+        ],
+        "slopeError": [
+          0.00518798828125,
+          0.0040283203125
+        ],
+        "numericalFlags": []
+      }
+    },
+    {
+      "id": "bgm-b05",
+      "file": "delivery/bgm-b05.wav",
+      "sha256": "f4d49e82ec438ce55f6fbc2327b10160bab1dfeaa1283b2f08c75e7181dcd436",
+      "bytes": 8467244,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2116800,
+      "seconds": 96.0,
+      "samplePeak": 0.318603515625,
+      "rmsDbFS": -25.139398906319922,
+      "dc": [
+        -2.0644922465513984e-08,
+        2.378779474029195e-09
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        2116800
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          6.103515625e-05,
+          0.00079345703125
+        ],
+        "rmsDifferenceDb": [
+          -0.8822605874035804,
+          -0.9247255573859801
+        ],
+        "slopeError": [
+          0.001708984375,
+          0.001922607421875
+        ],
+        "numericalFlags": []
+      }
+    },
+    {
+      "id": "bgm-b06",
+      "file": "delivery/bgm-b06.wav",
+      "sha256": "d2802a6d0b54d4ea3c3cbaa6b9b716ea2a6617448c0d92bd1552cbaf58171012",
+      "bytes": 8786764,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2196680,
+      "seconds": 99.62267573696145,
+      "samplePeak": 0.320098876953125,
+      "rmsDbFS": -25.376777042856922,
+      "dc": [
+        4.376166355306645e-09,
+        6.946295802074039e-11
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        2196680
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          0.005126953125,
+          0.00823974609375
+        ],
+        "rmsDifferenceDb": [
+          -1.3342436822121546,
+          -1.4521347198728884
+        ],
+        "slopeError": [
+          0.0089111328125,
+          0.017303466796875
+        ],
+        "numericalFlags": []
+      }
+    },
+    {
+      "id": "bgm-b07",
+      "file": "delivery/bgm-b07.wav",
+      "sha256": "e2fe84d2cf8b7dfb502ab2bd081bc5e72adbdd89443a1f9fa1fd86423545c287",
+      "bytes": 8316040,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2078999,
+      "seconds": 94.28566893424036,
+      "samplePeak": 0.3199462890625,
+      "rmsDbFS": -25.030064669908203,
+      "dc": [
+        7.412883292933282e-09,
+        4.84406234983759e-10
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        2078999
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          0.0059814453125,
+          0.00927734375
+        ],
+        "rmsDifferenceDb": [
+          -0.03951242693265639,
+          0.16032142766946927
+        ],
+        "slopeError": [
+          0.023345947265625,
+          0.029083251953125
+        ],
+        "numericalFlags": []
+      }
+    },
+    {
+      "id": "bgm-b08",
+      "file": "delivery/bgm-b08.wav",
+      "sha256": "f5b9bbc73874578c1d69e25c2592339d9174edf137e7c3bf10057e2367ceae33",
+      "bytes": 9131332,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2282822,
+      "seconds": 103.52934240362812,
+      "samplePeak": 0.319580078125,
+      "rmsDbFS": -26.003571820835166,
+      "dc": [
+        -2.3100519882846756e-08,
+        -3.0934376741265854e-08
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        2282822
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          0.003265380859375,
+          0.006683349609375
+        ],
+        "rmsDifferenceDb": [
+          -0.8004364757192707,
+          -0.8631529187924093
+        ],
+        "slopeError": [
+          0.0081787109375,
+          0.009918212890625
+        ],
+        "numericalFlags": []
+      }
+    },
+    {
+      "id": "bgm-b09",
+      "file": "delivery/bgm-b09.wav",
+      "sha256": "f0b9f17d9b38adfa524cd266ccba2b664d3522ad3392569d3e610b0c3f75a3f0",
+      "bytes": 9313964,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2328480,
+      "seconds": 105.6,
+      "samplePeak": 0.3170166015625,
+      "rmsDbFS": -27.202406614532528,
+      "dc": [
+        -3.294904461547877e-08,
+        4.423350261624536e-08
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        2328480
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          -0.0013427734375,
+          -0.001312255859375
+        ],
+        "rmsDifferenceDb": [
+          -0.7422281526243522,
+          -0.4678587463597278
+        ],
+        "slopeError": [
+          0.0028076171875,
+          0.00286865234375
+        ],
+        "numericalFlags": []
+      }
+    },
+    {
+      "id": "bgm-b10",
+      "file": "delivery/bgm-b10.wav",
+      "sha256": "c4826239913f15f8afc4d67bb04904a14788eef2f731baf9601e2bfcc0c21c20",
+      "bytes": 8467252,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2116802,
+      "seconds": 96.00009070294784,
+      "samplePeak": 0.31536865234375,
+      "rmsDbFS": -26.487769255300087,
+      "dc": [
+        -4.003554156370081e-08,
+        -4.041037918727165e-08
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        2116802
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          0.0,
+          0.000213623046875
+        ],
+        "rmsDifferenceDb": [
+          -2.1542452341615332,
+          -1.3268212874531287
+        ],
+        "slopeError": [
+          0.0001220703125,
+          0.000579833984375
+        ],
+        "numericalFlags": []
+      }
+    },
+    {
+      "id": "bgm-b11",
+      "file": "delivery/bgm-b11.wav",
+      "sha256": "dc26293eb9d832c61fe534afff2665c472acb0cbe4e05939b2544fc06b1d3cea",
+      "bytes": 8955736,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2238923,
+      "seconds": 101.53845804988661,
+      "samplePeak": 0.31884765625,
+      "rmsDbFS": -25.108015540979366,
+      "dc": [
+        3.5316553951107294e-08,
+        -3.291759081124049e-08
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        2238923
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          0.003814697265625,
+          0.00347900390625
+        ],
+        "rmsDifferenceDb": [
+          0.4309603367466346,
+          0.28177129107546245
+        ],
+        "slopeError": [
+          0.005645751953125,
+          0.002655029296875
+        ],
+        "numericalFlags": []
+      }
+    },
+    {
+      "id": "bgm-b12",
+      "file": "delivery/bgm-b12.wav",
+      "sha256": "93ccf527dcb15d89b1e7f3056338e505f3f9597e81f18ae205c2f5df825923f9",
+      "bytes": 9072040,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2267999,
+      "seconds": 102.85709750566893,
+      "samplePeak": 0.319854736328125,
+      "rmsDbFS": -26.038785326703064,
+      "dc": [
+        3.389497936148781e-08,
+        -3.7514570250030975e-08
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        2267999
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          0.00048828125,
+          0.0009765625
+        ],
+        "rmsDifferenceDb": [
+          -0.09905755334927484,
+          -0.6028073192525478
+        ],
+        "slopeError": [
+          0.00189208984375,
+          0.00177001953125
+        ],
+        "numericalFlags": []
+      }
+    },
+    {
+      "id": "bgm-ending",
+      "file": "delivery/bgm-ending.wav",
+      "sha256": "9cbcbb129324d842af406052fa5cea66d24d50f26188e52e1c2aeb83934d149c",
+      "bytes": 6350444,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 1587600,
+      "seconds": 72.0,
+      "samplePeak": 0.319091796875,
+      "rmsDbFS": -25.38815605819574,
+      "dc": [
+        4.509589208947468e-08,
+        -5.382288910934745e-09
+      ],
+      "railSamples": 0,
+      "loop": [
+        0,
+        1587600
+      ],
+      "loopEndExclusive": true,
+      "boundary": {
+        "jump": [
+          -0.00067138671875,
+          -0.001739501953125
+        ],
+        "rmsDifferenceDb": [
+          1.6316934846724918,
+          1.754560735647628
+        ],
+        "slopeError": [
+          0.002105712890625,
+          0.001434326171875
+        ],
+        "numericalFlags": []
+      }
+    },
+    {
+      "id": "se-ui",
+      "file": "delivery/se-ui.wav",
+      "sha256": "68803234f8ca53323eb30c8276681930d493266fafa8f112658004ed634cad30",
+      "bytes": 8424,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2095,
+      "seconds": 0.09501133786848072,
+      "samplePeak": 0.05877685546875,
+      "rmsDbFS": -37.86623763768936,
+      "dc": [
+        -4.3700589200477326e-08,
+        -4.3700589200477326e-08
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false
+    },
+    {
+      "id": "se-cancel",
+      "file": "delivery/se-cancel.wav",
+      "sha256": "12d4e42ba93bc3c36175d1798aee99ee0b1daec2e3cb7e4110e7dad6bb39e229",
+      "bytes": 10628,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 2646,
+      "seconds": 0.12,
+      "samplePeak": 0.058807373046875,
+      "rmsDbFS": -35.865422280311485,
+      "dc": [
+        1.153347623771731e-08,
+        1.153347623771731e-08
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false
+    },
+    {
+      "id": "se-invalid",
+      "file": "delivery/se-invalid.wav",
+      "sha256": "7e162025f66930046ecb72d75fd21f06ee01a49d9ea612447093e2ce5d1af6e5",
+      "bytes": 12392,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 3087,
+      "seconds": 0.14,
+      "samplePeak": 0.058441162109375,
+      "rmsDbFS": -38.530005487728765,
+      "dc": [
+        3.163467768059605e-07,
+        3.163467768059605e-07
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false
+    },
+    {
+      "id": "se-sword",
+      "file": "delivery/se-sword.wav",
+      "sha256": "266f5736ec8790b11a753356f17dfc9b61452f0ac34b4069401d538f06434579",
+      "bytes": 24740,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 6174,
+      "seconds": 0.28,
+      "samplePeak": 0.438262939453125,
+      "rmsDbFS": -19.905842925451893,
+      "dc": [
+        1.5817338840298024e-07,
+        1.5817338840298024e-07
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false
+    },
+    {
+      "id": "se-arrow",
+      "file": "delivery/se-arrow.wav",
+      "sha256": "cbb7950539a397e522b29bcf9b31c56557ff07e6d4b7c5868fc75df8e50888d8",
+      "bytes": 26504,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 6615,
+      "seconds": 0.3,
+      "samplePeak": 0.439056396484375,
+      "rmsDbFS": -25.037654832354313,
+      "dc": [
+        1.706954483182162e-07,
+        1.706954483182162e-07
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false
+    },
+    {
+      "id": "se-impact",
+      "file": "delivery/se-impact.wav",
+      "sha256": "1b3bcc03c2a8484d3f19e8161922965f3ed95afd5aed7fd9af9b941e2f6d517b",
+      "bytes": 21212,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 5292,
+      "seconds": 0.24,
+      "samplePeak": 0.43890380859375,
+      "rmsDbFS": -22.583099378696193,
+      "dc": [
+        -1.5570192920918366e-07,
+        -1.5570192920918366e-07
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false
+    },
+    {
+      "id": "se-miss",
+      "file": "delivery/se-miss.wav",
+      "sha256": "2ef1ec36a9c188d9da1b4aea46fd6c2a6cbd350e13d91fdae0812ce2866ca510",
+      "bytes": 19448,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 4851,
+      "seconds": 0.22,
+      "samplePeak": 0.478607177734375,
+      "rmsDbFS": -18.96356263708689,
+      "dc": [
+        -1.2581974077509791e-07,
+        -1.2581974077509791e-07
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false
+    },
+    {
+      "id": "se-guard",
+      "file": "delivery/se-guard.wav",
+      "sha256": "94c3f0448f0c6764fc09c6139b3f018d3b61a13cf2e82dc0430f94013719673d",
+      "bytes": 26504,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 6615,
+      "seconds": 0.3,
+      "samplePeak": 0.4395751953125,
+      "rmsDbFS": -24.78745985204757,
+      "dc": [
+        0.0,
+        0.0
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false
+    },
+    {
+      "id": "se-skill",
+      "file": "delivery/se-skill.wav",
+      "sha256": "b24ec3bf2df81015583d5f398c412784c34687eface40a033610511897a9bc42",
+      "bytes": 44144,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 11025,
+      "seconds": 0.5,
+      "samplePeak": 0.479217529296875,
+      "rmsDbFS": -18.3972953168387,
+      "dc": [
+        1.2456154336734695e-07,
+        1.2456154336734695e-07
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false
+    },
+    {
+      "id": "se-heal",
+      "file": "delivery/se-heal.wav",
+      "sha256": "b11028d811c0cc031da77ff143005fe797e7c6096cc5cff51f9aaf5042117d40",
+      "bytes": 57376,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 14333,
+      "seconds": 0.6500226757369615,
+      "samplePeak": 0.479705810546875,
+      "rmsDbFS": -18.20671246711938,
+      "dc": [
+        3.832529172190051e-08,
+        3.832529172190051e-08
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false
+    },
+    {
+      "id": "se-chest",
+      "file": "delivery/se-chest.wav",
+      "sha256": "379e919f3ccbf5d89b8a79cc312c775e27463b413849170156bb71309bcdf357",
+      "bytes": 57376,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 14333,
+      "seconds": 0.6500226757369615,
+      "samplePeak": 0.470977783203125,
+      "rmsDbFS": -19.829656113224864,
+      "dc": [
+        -6.17463033297286e-08,
+        -6.17463033297286e-08
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false
+    },
+    {
+      "id": "se-record",
+      "file": "delivery/se-record.wav",
+      "sha256": "5ea10a21b26b22272a7e097eaf8e0d6d081a988b2ad2b7652eb177fc62dcb92a",
+      "bytes": 37088,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 9261,
+      "seconds": 0.42,
+      "samplePeak": 0.23016357421875,
+      "rmsDbFS": -25.346278044579478,
+      "dc": [
+        -8.238197312655221e-08,
+        -8.238197312655221e-08
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false
+    },
+    {
+      "id": "se-mechanism",
+      "file": "delivery/se-mechanism.wav",
+      "sha256": "7b8bf91f91a4ca25bc06cbc965f2e30c8af692c7e36ac4b6e6f835c5c1188a64",
+      "bytes": 88244,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 22050,
+      "seconds": 1.0,
+      "samplePeak": 0.428009033203125,
+      "rmsDbFS": -22.672323272233985,
+      "dc": [
+        8.857709750566894e-08,
+        8.857709750566894e-08
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false
+    },
+    {
+      "id": "se-exit",
+      "file": "delivery/se-exit.wav",
+      "sha256": "84196278a4b04a1c4bb873b6d770cc3202c0ac139ef2ff04f715e964408f6939",
+      "bytes": 61784,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 15435,
+      "seconds": 0.7,
+      "samplePeak": 0.4794921875,
+      "rmsDbFS": -17.38011711589934,
+      "dc": [
+        7.315519213637836e-08,
+        7.315519213637836e-08
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false
+    },
+    {
+      "id": "se-cart",
+      "file": "delivery/se-cart.wav",
+      "sha256": "58e72f27030cf1a94c9479420b900272c5ff97c480e206b69b3ecae1efabeeac",
+      "bytes": 79424,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 19845,
+      "seconds": 0.9,
+      "samplePeak": 0.222686767578125,
+      "rmsDbFS": -28.86957312268558,
+      "dc": [
+        8.765441940665155e-08,
+        8.765441940665155e-08
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false
+    },
+    {
+      "id": "se-turn",
+      "file": "delivery/se-turn.wav",
+      "sha256": "0b2ed036c98a2db4e392d2f0d5cb1577e7fb5ff33a482a1b4465fc9ba7c99c29",
+      "bytes": 15920,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 3969,
+      "seconds": 0.18,
+      "samplePeak": 0.058807373046875,
+      "rmsDbFS": -37.552935654796734,
+      "dc": [
+        -2.0760257227891156e-07,
+        -2.0760257227891156e-07
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false
+    },
+    {
+      "id": "se-down",
+      "file": "delivery/se-down.wav",
+      "sha256": "81a5d9f740fe01489463ae39c677c134cc81f297ddf92152f61f3c81a5ff4f15",
+      "bytes": 39736,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 9923,
+      "seconds": 0.4500226757369615,
+      "samplePeak": 0.234375,
+      "rmsDbFS": -25.196756838539805,
+      "dc": [
+        -1.1071579285498337e-07,
+        -1.1071579285498337e-07
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false
+    },
+    {
+      "id": "se-victory",
+      "file": "delivery/se-victory.wav",
+      "sha256": "b78dfd0b22d42b30b901a8b383bf610d8688b5e8547ed8c6d60e3ce6c89cca06",
+      "bytes": 312796,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 77175,
+      "seconds": 3.5,
+      "samplePeak": 0.479156494140625,
+      "rmsDbFS": -20.378482165458514,
+      "dc": [
+        3.72102896218011e-07,
+        1.2428473993764173e-06
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false
+    },
+    {
+      "id": "se-defeat",
+      "file": "delivery/se-defeat.wav",
+      "sha256": "78b4ca3cbb1c6958e0eb777bb81f0a022a7a5f4c51d02f29e90e966b3a0c4f70",
+      "bytes": 312796,
+      "sampleRate": 22050,
+      "channels": 2,
+      "frames": 77175,
+      "seconds": 3.5,
+      "samplePeak": 0.480010986328125,
+      "rmsDbFS": -24.906836925875275,
+      "dc": [
+        -1.6477712736880466e-06,
+        -1.548122038994169e-06
+      ],
+      "railSamples": 0,
+      "loop": null,
+      "loopEndExclusive": false
+    }
+  ],
+  "conservativeMaximumPCMAmplitude": 0.7281661987304687,
+  "boundDbFS": -2.755389695230387,
+  "headroom": 0.35,
+  "maximumMusicVoices": 2,
+  "maximumSEVoices": 3,
+  "truePeak": "not measured",
+  "LUFS": "not measured",
+  "listening": "not performed",
+  "verification": "PCM, loop diagnostics, SHA, optional HTTP; not acoustic quality"
+}

@@ -1,0 +1,7 @@
+Animate the character in the supplied NORTH-facing standing image, keeping the same back-facing three-quarter orientation and viewpoint.
+
+1. One complete left-and-right TWO-step gait cycle takes approximately 0.8 seconds.
+2. Walk in place with restrained, clearly alternating left and right steps.
+3. Use small strides and low foot lift. Keep the upper body upright.
+4. The supporting leg straightens naturally while the opposite leg passes with a slight knee bend.
+5. Keep head and torso movement small.

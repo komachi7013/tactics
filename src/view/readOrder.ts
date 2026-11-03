@@ -19,7 +19,7 @@ export function readOrderRows(state: BattleState, snapshot: ReadOrderSnapshot): 
       const route = intent.path.map(coordinate).join(' → ');
       const movement = intent.moveCost > 0 ? `${coordinate(intent.destination)}へ移動（費用${intent.moveCost}）` : `${coordinate(intent.destination)}で移動なし`;
       const target = state.units.find(u => u.id === intent.targetId);
-      let action = intent.action === 'attack' ? `${target?.name ?? '対象不明'}を攻撃・現在の予測 ${intent.damage ?? 0} ダメージ` : '防御';
+      let action = intent.action === 'attack' ? `${target?.name ?? '対象不明'}を攻撃・現在の予測 ${intent.damage ?? 0} ダメージ` : intent.action === 'wait' ? '行動終了（防御の再使用待ち）' : '防御';
       if (state.combatRandom && intent.action === 'attack' && target) {
         const projected = { ...state, units: state.units.map(unit => unit.id === id ? { ...unit, pos: { ...intent.destination } } : unit) };
         const preview = attackPreview(projected, id, target.id);

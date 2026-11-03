@@ -4,10 +4,10 @@ import { createInitialState, reduce } from '../src/domain/engine';
 import { runEnemyActivation } from '../src/domain/ai';
 import type { BattleId, BattleState, Command } from '../src/domain/types';
 import b01 from './fixtures/routes.json';
-import b02 from './fixtures/b02-route.json';
-import b03 from './fixtures/b03-route.json';
-import b04 from './fixtures/b04-route.json';
-import b05 from './fixtures/b05-route.json';
+import b02 from './fixtures/defend-cooldown-v1/b02-route.json';
+import b03 from './fixtures/manual-cart-v1/b03-route.json';
+import b04 from './fixtures/defend-cooldown-v1/b04-route.json';
+import b05 from './fixtures/defend-cooldown-v1/b05-route.json';
 
 function memory(raw?: string) {
   const data = new Map<string, string>([['unrelated-user-state', 'keep']]);
@@ -113,19 +113,16 @@ describe('Independent B05 normal-AI campaign integration', () => {
     expect(m.data.get('unrelated-user-state')).toBe('keep');
   });
 
-  it('loses under normal stationary defense, preserves progress, and wins a fresh retry', () => {
+  it('loses under legal cooldown defense and stationary waiting, preserves progress, and wins a fresh retry', () => {
     const m = memory();
     const before = selectBattle(fourBattles(), 'B05');
     expect(writeCampaign(m.storage, before).ok).toBe(true);
     const raw = m.data.get(CAMPAIGN_KEY);
     let state = createInitialState('B05');
     let activations = 0;
-    while (state.phase === 'playing') {
-      const unit = state.units.find(u => u.team === 'player' && u.hp > 0 && !u.acted);
-      expect(unit).toBeDefined();
-      for (const command of [{ type: 'start', unitId: unit!.id }, { type: 'defend' }, { type: 'end', facing: 'E' }] as Command[])
-        state = step(state, command);
-      expect(++activations).toBeLessThanOrEqual(40);
+    for (const command of b05.defeat.commands as Command[]) {
+      state = step(state, command);
+      if (command.type === 'start') expect(++activations).toBeLessThanOrEqual(40);
     }
     expect(state).toMatchObject({ phase: 'lost', round: 10, records: [] });
     expect(state.units.find(u => u.id === 'ally-lise')?.hp).toBe(18);

@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-26",
+  "browser": "ChatGPT in-app browser on walnut.local",
+  "runtime": "audio-v2-r1",
+  "all35HTTP_SHA_decode_sourceStart": true,
+  "bgmLoopFlagCount": 16,
+  "previewSecondsPerCue": 0.35,
+  "context": "running",
+  "error": null,
+  "appObserved": [
+    "initial off",
+    "title started",
+    "mute and unmute",
+    "BGM 30% / SE 40% independently",
+    "prologue started, same volumes",
+    "reload resets off",
+    "diagnostic direct link /audio/v2/se-heal.wav"
+  ],
+  "acousticListening": false,
+  "threeLoopListening": false,
+  "fullCampaignBrowser": false,
+  "storage": "app URL uses unique qaSession=audio-v2-20261026; no normal campaign storage read/write/reset; standalone has no storage API"
+}

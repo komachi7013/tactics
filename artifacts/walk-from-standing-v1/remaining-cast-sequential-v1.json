@@ -1,0 +1,407 @@
+{
+  "order": [
+    {
+      "cast": "sena",
+      "direction": "E",
+      "referenceCast": "lise",
+      "source": "artifacts/standing-cast-repairs-local-v1/sena/E/head-width-matched.png",
+      "sourceSha256": "1b86632995063d0ac83e3a9654e482771a7c8963da17a30068ae31281c968593",
+      "status": "candidate",
+      "job_id": "6e74f3f1-0ba5-422e-8a76-db7ba1937565",
+      "reviewNote": "リセE動画参照。全19コマを明暗背景で確認。原周期約0.83秒を0.8秒に調整。自動探索は補助判定で、利用者確認待ち。追加の弓などは見られない。"
+    },
+    {
+      "cast": "sena",
+      "direction": "N",
+      "referenceCast": "lise",
+      "source": "artifacts/standing-cast-repairs-local-v1/sena/N/display-v2.png",
+      "sourceSha256": "c0eb91f952ba594cd4347dc0f1e37fabb957edae0bc9aa0dbef2fad366e8dcc4",
+      "status": "candidate",
+      "job_id": "813407f5-015e-4e15-b705-984ed136442c",
+      "reviewNote": "リセN動画参照。全19コマの向き・全身・足運びを明暗背景で確認。頭部帯の横幅は立ち絵64pxに対して候補63〜64px。原周期約0.83秒を0.8秒に調整。自動探索は低信頼で利用者確認待ち。"
+    },
+    {
+      "cast": "sena",
+      "direction": "S",
+      "referenceCast": "lise",
+      "source": "artifacts/standing-cast-repairs-local-v1/sena/S/head-width-matched.png",
+      "sourceSha256": "f0bdb5df9fbd070e919da3fe0b8ab682922328649cf507ce588c0ba83b0fb76b",
+      "status": "candidate",
+      "job_id": "fec3b0e9-e886-4522-a5ac-c3aeb149be83",
+      "reviewNote": "リセS動画参照。全19コマを明暗背景で確認。原周期約0.83秒を0.8秒に調整。背景のピンクを除去し、頭・胴・装備と足先の保持を確認。自動探索は補助判定、利用者確認待ち。"
+    },
+    {
+      "cast": "sena",
+      "direction": "W",
+      "referenceCast": "lise",
+      "source": "artifacts/standing-cast-repairs-local-v1/sena/W/equipment-corrected.png",
+      "sourceSha256": "b4c56ea7e1dbcfb4916a265df07d0c362924b88d83d74429b7c2463369e89dd9",
+      "status": "candidate",
+      "job_id": "9cad0add-92bc-402b-9fdc-f7622fb2e8d6",
+      "reviewNote": "リセW動画参照。全19コマを明暗背景と立ち絵比較で確認。小さな歩幅で左右の支持脚が交代。原周期約0.83秒を0.8秒に調整。自動探索は低信頼のため目視の1周期を使用。利用者確認待ち。"
+    },
+    {
+      "cast": "iva",
+      "direction": "E",
+      "referenceCast": "lise",
+      "source": "artifacts/standing-cast-review-v1/original/iva/E/standing.png",
+      "sourceSha256": "744f799194cfe688633a70183f79ffd8b56b00c84e2b30d2bed10607abcd106f",
+      "status": "candidate",
+      "job_id": "75b86478-3ba3-4d96-8d78-5efcbd33eac5",
+      "reviewNote": "リセE動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、足先、装備を確認。暗い紫の髪色を保持。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "iva",
+      "direction": "N",
+      "referenceCast": "lise",
+      "source": "artifacts/standing-cast-repairs-local-v1/iva/N/five-point-aligned.png",
+      "sourceSha256": "8e35537403cb648fa0b1bac4129ee20a20b593d2bff7c1057eb9dc60f2dddd24",
+      "status": "candidate",
+      "job_id": "3a5c3aab-7a71-429d-a503-acf668f69032",
+      "reviewNote": "リセN動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代・向き・全身の保持を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "iva",
+      "direction": "S",
+      "referenceCast": "lise",
+      "source": "artifacts/standing-cast-repairs-local-v1/iva/S/head-width-matched.png",
+      "sourceSha256": "0ff0b257310ebd0c855e0adffe60cf37b2ddc46db19c80d20aa713b19c8737d2",
+      "status": "candidate",
+      "job_id": "6f985fb1-f356-425a-9457-d2960af97198",
+      "reviewNote": "リセS動画参照。全19コマを明暗背景と立ち絵比較で確認。足の重なりはあるが左右の支持脚が交代し、全身と足先を保持。原周期約0.83秒を0.8秒に調整。髪の縁に紫寄りの色が残る。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "iva",
+      "direction": "W",
+      "referenceCast": "lise",
+      "source": "artifacts/standing-cast-repairs-local-v1/iva/W/equipment-corrected.png",
+      "sourceSha256": "882bffcdc6fdb747a6e393041085794192c7db9cd5069d6baf51a907733578ef",
+      "status": "candidate",
+      "job_id": "3924857c-e5d1-40c4-9637-5d2550dd5446",
+      "reviewNote": "リセW動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代と全身・足先を保持。原周期約0.83秒を0.8秒に調整。髪の縁に紫寄りの色が残る。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "dani",
+      "direction": "E",
+      "referenceCast": "garan",
+      "source": "artifacts/standing-cast-repairs-local-v1/dani/E/arm-straight-corrected.png",
+      "sourceSha256": "9db91dbd76b98480847b83e5a35d351bef6992011ed5ddd89063165113cd323f",
+      "status": "candidate",
+      "job_id": "8fb637a8-3907-4ac9-bf20-e21f2ac810f8",
+      "reviewNote": "ガランE動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、全身と両足先、下ろした腕の形を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "dani",
+      "direction": "N",
+      "referenceCast": "garan",
+      "source": "artifacts/standing-cast-repairs-local-v1/dani/N/head-size-smaller.png",
+      "sourceSha256": "1e3945368b6cb53b9a5fc1dc121d33e1f6c99dcdab16f8dc41cefa6e3c5e1b1b",
+      "status": "candidate",
+      "job_id": "d68e484f-9f45-4aae-b16e-49ea9e7ece29",
+      "reviewNote": "ガランN動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、背面の向き、全身と両足先を確認。背景と足元の影を除去。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "dani",
+      "direction": "S",
+      "referenceCast": "garan",
+      "source": "artifacts/standing-cast-repairs-local-v1/dani/S/head-width-matched.png",
+      "sourceSha256": "7c79d9dc3f0a458397af6ceac345831b9377f877a92d549932de88a252549bd2",
+      "status": "candidate",
+      "job_id": "c7126295-0d76-4647-92c0-34298c12614f",
+      "reviewNote": "Genjutsuで再試行。左右の踏み出し・支持交代を原動画と全19コマの明暗背景で確認。足元高さ282〜290pxの変動が残るため比較候補、利用者確認待ち。原周期0.833秒を0.8秒に調整。",
+      "firstAttemptStatus": "rejected",
+      "retryModel": "hf_mult_motion_control",
+      "retryJobId": "b624196b-134d-4ef4-9e44-454477f295fb"
+    },
+    {
+      "cast": "dani",
+      "direction": "W",
+      "referenceCast": "garan",
+      "source": "artifacts/standing-cast-repairs-local-v1/dani/W/head-size-smaller.png",
+      "sourceSha256": "2a2b99164a0fbb040b006f54e5c45736d6457898d1d5a32078d87580fb946885",
+      "status": "candidate",
+      "job_id": "678bb09a-3843-4e79-86c2-d38b9c429690",
+      "reviewNote": "ガランW動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の振り出し、背面の向き、全身と両足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "guard",
+      "direction": "E",
+      "referenceCast": "garan",
+      "source": "artifacts/standing-cast-review-v1/original/guard/E/standing.png",
+      "sourceSha256": "d6a499e3d2577daf53c6018f9139eb1ebf48e611a2d5a7a03d6091d814d7df7a",
+      "status": "candidate",
+      "job_id": "fc9a28f1-26c5-44ea-8bc4-ba649b3730ec",
+      "reviewNote": "ガランE動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、剣・盾、全身と両足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "guard",
+      "direction": "N",
+      "referenceCast": "garan",
+      "source": "artifacts/standing-cast-review-v1/original/guard/N/standing.png",
+      "sourceSha256": "c3ee40732cddc7ac15ec0a3ebcc85eedc88ac153803e64942050759cdab0bb9d",
+      "status": "candidate",
+      "job_id": "906836a6-e147-41a3-a709-c022ae7a054f",
+      "reviewNote": "ガランN動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、背面の向き、剣・盾と足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "guard",
+      "direction": "S",
+      "referenceCast": "garan",
+      "source": "artifacts/standing-cast-repairs-local-v1/guard/S/five-point-aligned.png",
+      "sourceSha256": "933bf4840031344013aa9f81c643f0e9f0252f69bf9658dbb717cadba060d34b",
+      "status": "candidate",
+      "job_id": "ec719548-8fae-4c0d-b579-0e96cbcf675c",
+      "reviewNote": "Seedance2.5再試行。参照画像を見る指定と6条件、痙攣防止、画像にない布・装備の追加禁止を入力。剣盾を保持し長い布の追加なし。全19コマの明暗背景・立ち絵比較・足元の連続24コマを確認。痙攣の解消は利用者確認待ち。足元高さ282〜291pxの変動と、首元の緑が立ち絵より明るめな点は要確認。比較用候補、ゲーム未適用。",
+      "firstAttemptStatus": "rejected",
+      "retryModel": "seedance_2_5",
+      "retryJobId": "b4eb406a-4ccf-4d2f-8a25-da1689ab55d2"
+    },
+    {
+      "cast": "guard",
+      "direction": "W",
+      "referenceCast": "garan",
+      "source": "artifacts/standing-cast-repairs-local-v1/guard/W/five-point-aligned.png",
+      "sourceSha256": "4add5d6c994e1bab964ee29d709725d6a3a8792f85feba74c78ba491d2e646db",
+      "status": "candidate",
+      "job_id": "e3098866-7fa3-4216-a18c-5c0393c82c80",
+      "reviewNote": "ガランW動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の振り出し、剣・盾と足先を確認。赤い衣装を保持して背景除去。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "archer",
+      "direction": "E",
+      "referenceCast": "garan",
+      "source": "artifacts/standing-cast-review-v1/original/archer/E/standing.png",
+      "sourceSha256": "03fcc352252b8a66f9b38215ac27dd517c04b6c2ce575a7f56fa2eea6546b530",
+      "status": "candidate",
+      "job_id": "fee64397-00d9-461a-a0e7-e03150101bad",
+      "reviewNote": "ガランE動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、武器の形・持ち方、全身と両足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "archer",
+      "direction": "N",
+      "referenceCast": "garan",
+      "source": "artifacts/standing-cast-review-v1/original/archer/N/standing.png",
+      "sourceSha256": "6ab374b1c38ba158845337e6a9de021d0d060c896707d15bb3ff86f21c6f6308",
+      "status": "candidate",
+      "job_id": "a1518b09-c9fa-4af4-afdf-1add43843cb6",
+      "reviewNote": "ガランN動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、背面の向き、武器と足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "archer",
+      "direction": "S",
+      "referenceCast": "lise",
+      "source": "artifacts/standing-cast-repairs-local-v1/archer/S/equipment-corrected.png",
+      "sourceSha256": "6064b5976bee1c13ba4f4522d6f800bb487490a991b40d0aba3bf4ef484f931a",
+      "status": "candidate",
+      "referenceSelectionReason": "Dani S and Guard S retained one-leg bias with Garan S driver; use existing Lise S under authorized Garan-or-Lise choice. Same six conditions and own S standing; no new driver generation.",
+      "job_id": "e26295fb-358a-4a78-83ad-80995d38fb9b",
+      "reviewNote": "リセS動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の通過と支持脚交代、武器と足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "archer",
+      "direction": "W",
+      "referenceCast": "garan",
+      "source": "artifacts/standing-cast-repairs-local-v1/archer/W/five-point-aligned.png",
+      "sourceSha256": "deb909c446c2290975614ab469da4f906ca3db24a01c81de8609e89a4ac7041d",
+      "status": "candidate",
+      "job_id": "5f864f25-9a72-44b0-9561-fe8af31dbf67",
+      "reviewNote": "ガランW動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の振り出し、背面の向き、武器と足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "vesk",
+      "direction": "E",
+      "referenceCast": "garan",
+      "source": "artifacts/standing-cast-review-v1/original/vesk/E/standing.png",
+      "sourceSha256": "554d8a8db1bbff007ca0d2e8db3463276f73c1a3d39517a55f81856df6689691",
+      "status": "candidate",
+      "job_id": "e8685c7e-1414-4edd-aeb3-1c9cf27ae39b",
+      "reviewNote": "ガランE動画参照。冒頭の静止を除いた歩行部分から1周期を選択。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、服と足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "vesk",
+      "direction": "N",
+      "referenceCast": "garan",
+      "source": "artifacts/standing-cast-review-v1/original/vesk/N/standing.png",
+      "sourceSha256": "01e21a75cd191a46f9147231490b2fc92ad994b7097e4d5cdceb8e88bb867ad6",
+      "status": "candidate",
+      "job_id": "8207d432-9426-42b6-ab82-cd1c937ce12a",
+      "reviewNote": "ガランN動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、背面の向き、服と足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "vesk",
+      "direction": "S",
+      "referenceCast": "lise",
+      "source": "artifacts/standing-cast-repairs-local-v1/vesk/S/five-point-aligned.png",
+      "sourceSha256": "e493492b62df0a0aa0f995a203d0bd87a61fa21c7c4c488caa0e9107b3729434",
+      "status": "candidate",
+      "referenceSelectionReason": "Dani S and Guard S retained one-leg bias with Garan S driver; use existing Lise S under authorized Garan-or-Lise choice. Same six conditions and own S standing; no new driver generation.",
+      "job_id": "4be3a1da-b720-4c45-8b69-97e701d4ea67",
+      "reviewNote": "リセS動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の通過、服と足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "vesk",
+      "direction": "W",
+      "referenceCast": "garan",
+      "source": "artifacts/standing-cast-repairs-local-v1/vesk/W/arm-straight-corrected.png",
+      "sourceSha256": "8532c56a2e062aaf47e5302b0e75bfe08ec1bc9677187ae279365146215a437b",
+      "status": "candidate",
+      "job_id": "049fb86f-78e4-4c08-baff-9f2eae2ec6e5",
+      "reviewNote": "ガランW動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の振り出し、下ろした左腕、背面の向きと足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "toma",
+      "direction": "E",
+      "referenceCast": "garan",
+      "source": "artifacts/standing-cast-repairs-local-v1/toma/E/equipment-corrected.png",
+      "sourceSha256": "6c6fce7b54751598b0fd1e8386b44f2505badf1b4fce19fca3d19a25eaea711f",
+      "status": "candidate",
+      "job_id": "7924c2b0-a261-4488-8bce-41d72b2b7191",
+      "reviewNote": "ガランE動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、足の向きと紐の向きを確認。立ち絵にもある手首周辺の細かな欠けは残る。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "toma",
+      "direction": "N",
+      "referenceCast": "garan",
+      "source": "artifacts/standing-cast-review-v1/original/toma/N/standing.png",
+      "sourceSha256": "87b07150179df75e028ca4e8b48600bc3dc03c2b70d481d340c4cb7c341fc0f6",
+      "status": "candidate",
+      "job_id": "6cf2458b-635d-4330-89ba-29ec41ac0d22",
+      "reviewNote": "ガランN動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、背面の向き、カバンと足先を確認。足元の影を除去。立ち絵由来の袖・手首周辺の欠けは残る。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "toma",
+      "direction": "S",
+      "referenceCast": "lise",
+      "source": "artifacts/standing-cast-repairs-local-v1/toma/S/equipment-corrected.png",
+      "sourceSha256": "eba3bd7f87c80ffd7962fd49fdd9bed87e5b912d82587ef4604ac971a221644d",
+      "status": "candidate",
+      "referenceSelectionReason": "Dani S and Guard S retained one-leg bias with Garan S driver; use existing Lise S under authorized Garan-or-Lise choice. Same six conditions and own S standing; no new driver generation.",
+      "job_id": "26fd2257-4885-464e-b127-0165a37d9115",
+      "reviewNote": "リセS動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の通過、紐の向きと足先を確認。立ち絵由来の袖・手首周辺の欠けは残る。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "toma",
+      "direction": "W",
+      "referenceCast": "garan",
+      "source": "artifacts/standing-cast-repairs-local-v1/toma/W/material-colour-matched.png",
+      "sourceSha256": "d1fec1b6bde763951f93433b79a7652dad1ccd9766490927db132270504d7acd",
+      "status": "candidate",
+      "job_id": "c9aa8ebc-5ed0-45d6-b002-6706c5eed2cc",
+      "reviewNote": "ガランW動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の振り出し、背面と紐を確認。足元が立ち絵より低いコマがあり、下端位置は282〜292px。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "worker",
+      "direction": "E",
+      "referenceCast": "garan",
+      "source": "artifacts/standing-cast-repairs-local-v1/worker/E/five-point-aligned.png",
+      "sourceSha256": "1225b908aebf65b7b0fdb293d7ff0de586dd71c7708d93b81fd7896690190806",
+      "status": "candidate",
+      "job_id": "976e8937-27ad-436a-b5b7-99f5085bb8ab",
+      "reviewNote": "ガランE動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、足先の向き、帽子・エプロン・道具を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "worker",
+      "direction": "N",
+      "referenceCast": "garan",
+      "source": "artifacts/standing-cast-review-v1/original/worker/N/standing.png",
+      "sourceSha256": "d04ed85add74bae882556f53312b77e62226e7dd62b62b9a6c92ea04efb051b3",
+      "status": "candidate",
+      "job_id": "17ce0cd4-e7cf-4570-8ddd-d01bc90f2c57",
+      "reviewNote": "ガランN動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、背面の帽子・エプロン・道具と足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "worker",
+      "direction": "S",
+      "referenceCast": "lise",
+      "source": "artifacts/standing-cast-review-v1/original/worker/S/standing.png",
+      "sourceSha256": "aed230bed99485dfa1adc77803483b7abcabab9ee8dbfe452e011bf6389d6367",
+      "status": "candidate",
+      "referenceSelectionReason": "Dani S and Guard S retained one-leg bias with Garan S driver; use existing Lise S under authorized Garan-or-Lise choice. Same six conditions and own S standing; no new driver generation.",
+      "job_id": "f9013a03-5223-49f5-b5d1-46fdfa3e131f",
+      "reviewNote": "リセS動画参照。全19コマを明暗背景と立ち絵比較で確認。小さな歩幅で両脚が交互に通過し、帽子・エプロン・道具と足先を保持。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "worker",
+      "direction": "W",
+      "referenceCast": "garan",
+      "source": "artifacts/standing-cast-repairs-local-v1/worker/W/five-point-aligned.png",
+      "sourceSha256": "a073d4ff5c5be2bec7d48fc27b54b602710adc2feb41811c94ef28474bb5df05",
+      "status": "candidate",
+      "job_id": "9cd2f62a-8278-482a-92b6-5e27f0d1daa5",
+      "reviewNote": "ガランW動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の振り出しと支持脚交代、背面の帽子・エプロン・足先を確認。選択周期では片脚だけの反復なし。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "delegation",
+      "direction": "E",
+      "referenceCast": "garan",
+      "source": "artifacts/standing-cast-review-v1/original/delegation/E/standing.png",
+      "sourceSha256": "74c5590aa31a8065cc8c530330041e5417d06f2d35e23674b4546a62acbecd1a",
+      "status": "candidate",
+      "job_id": "fff22758-cf6d-4c0c-b5a8-6ad9dc81554d",
+      "reviewNote": "ガランE動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、衣装・持ち物と足先を確認。瞬きあり。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "delegation",
+      "direction": "N",
+      "referenceCast": "garan",
+      "source": "artifacts/standing-cast-review-v1/original/delegation/N/standing.png",
+      "sourceSha256": "b12ed72814f73cfb9f218df9b00c444de8daac775b59a809118a4babe6c09d7a",
+      "status": "candidate",
+      "job_id": "4db468ff-9b53-451f-a105-87595243d37f",
+      "reviewNote": "ガランN動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の通過、背面の衣装・持ち物と足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "delegation",
+      "direction": "S",
+      "referenceCast": "lise",
+      "source": "artifacts/standing-cast-repairs-local-v1/delegation/S/five-point-aligned.png",
+      "sourceSha256": "0e90fa9d7b10b4434f82bc7438ed06e1aa61b24e1063d6e65b3cc4b1bb466bf4",
+      "status": "candidate",
+      "referenceSelectionReason": "Dani S and Guard S retained one-leg bias with Garan S driver; use existing Lise S under authorized Garan-or-Lise choice. Same six conditions and own S standing; no new driver generation.",
+      "job_id": "79c3c550-99ae-4fc7-9725-d730f3d78122",
+      "reviewNote": "リセS動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の通過、衣装・持ち物と足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    },
+    {
+      "cast": "delegation",
+      "direction": "W",
+      "referenceCast": "garan",
+      "source": "artifacts/standing-cast-repairs-local-v1/delegation/W/material-colour-matched.png",
+      "sourceSha256": "9b84406986867336c370de7f532b31ed7055a706cd0b14a3a3ad4d0c5b2a0630",
+      "status": "candidate",
+      "job_id": "0f79e659-8bd8-4ed3-a8cc-0792b9408154",
+      "reviewNote": "ガランW動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の振り出し、背面の衣装・持ち物と足先を確認。急な色の切り替わりなし。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+    }
+  ],
+  "model": "seedance_2_5",
+  "directionsPerCast": [
+    "E",
+    "N",
+    "S",
+    "W"
+  ],
+  "generationConcurrency": 1,
+  "generationCount": 36,
+  "quotedCreditsPerJob": 28,
+  "quotedCreditsTotal": 1008,
+  "referenceFormat": "same-direction walking video, confirmed by user",
+  "fallbackModel": "hf_mult_motion_control",
+  "fallbackRequiresExplicitUserRejection": true,
+  "automaticRetakes": false,
+  "gameWalkingApplied": false,
+  "referenceSelectionUpdates": [
+    {
+      "directions": [
+        "archer",
+        "vesk",
+        "toma",
+        "worker",
+        "delegation"
+      ],
+      "direction": "S",
+      "referenceCast": "lise",
+      "reason": "Two sequential Garan S transfers showed unilateral step bias; switch remaining unsubmitted S jobs to existing Lise S. Original six conditions and Seedance2.5 unchanged."
+    }
+  ],
+  "status": "generated-and-reviewed-comparison-deliverables",
+  "finalAudit": "remaining36-final-audit.json"
+}

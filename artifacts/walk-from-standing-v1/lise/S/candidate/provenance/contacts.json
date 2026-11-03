@@ -1,0 +1,21 @@
+{
+  "videoSha256": "0e20f8b3deaa64474152310527affb5b62e49fe7f203abcd2c4ba955ab9838e6",
+  "visualReviewed": true,
+  "contacts": [
+    {
+      "frame": 32,
+      "foot": "R"
+    },
+    {
+      "frame": 48,
+      "foot": "L"
+    },
+    {
+      "frame": 64,
+      "foot": "R"
+    }
+  ],
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "reviewNote": "Native frames8–71 inspected. In this front three-quarter view, anatomical R is the farther leg on the image-left hip side, L is the nearer image-right hip side; feet cross in projection. R front/support phase around32, opposite L around48, R around64. These are manually estimated support phases +/-2 source frames, not motion capture. One S standing image plus the six user requirements was supplied; no video reference. Full-body and sole visibility checked on the selected interval. Output still needs all19-frame review."
+}

@@ -19,8 +19,8 @@ describe('B01 difficulty and early drainage evidence',()=>{
  }
  }
  const beforeRound=state.round,result=reduce(state,command);expect(result.error).toBeUndefined();state=result.state;
- if(command.type==='gate'){expect(state.gate.pendingRound).toBe(beforeRound+1);expect(state.gate.drained).toBe(false);}
- if(state.gate.drained){expect(reservedAt).not.toBeNull();expect(state.round).toBeGreaterThan(reservedAt!);}
+ if(command.type==='gate'){expect(state.gate.pendingRound).toBeNull();expect(state.round).toBe(beforeRound);expect(state.gate.drained).toBe(true);}
+ if(state.gate.drained){expect(reservedAt).not.toBeNull();expect(state.round).toBeGreaterThanOrEqual(reservedAt!);}
  }
  expect(state.phase).toBe(route.phase);expect(state.round).toBe(route.round);expect(hp()).toEqual(route.hp);expect(totalCost).toBe(route.moveCost);if(route.phase==='won')expect(state.records.slice().sort()).toEqual(['A','B']);
  if(name==='noGate'){expect(state.units.filter(u=>u.team==='player').every(u=>u.hp>0)).toBe(true);expect(state.gate.drained).toBe(false);}

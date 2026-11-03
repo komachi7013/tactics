@@ -1,0 +1,202 @@
+{
+  "frames": 19,
+  "cycleMs": 800,
+  "fpsRational": [
+    95,
+    4
+  ],
+  "durationsMs": [
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42
+  ],
+  "sourceIndices": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+  ],
+  "sourceVideoSha256": "c681e2e1744a708fc384c7a994f2a2872f8d5f344f52eed84ddba61048d0eec8",
+  "sheetSha256": "a7172a195cfe9e16a2b614097c8e9410b328b8d8a3971ef05f5904491fe91ec0",
+  "fixedScale": 0.20930232558139536,
+  "fixedOffset": [
+    32,
+    85
+  ],
+  "frameGeometry": [
+    {
+      "headTop": 100,
+      "ground": 281,
+      "width": 75
+    },
+    {
+      "headTop": 100,
+      "ground": 283,
+      "width": 76
+    },
+    {
+      "headTop": 100,
+      "ground": 283,
+      "width": 76
+    },
+    {
+      "headTop": 100,
+      "ground": 282,
+      "width": 75
+    },
+    {
+      "headTop": 100,
+      "ground": 281,
+      "width": 74
+    },
+    {
+      "headTop": 99,
+      "ground": 280,
+      "width": 72
+    },
+    {
+      "headTop": 99,
+      "ground": 279,
+      "width": 71
+    },
+    {
+      "headTop": 99,
+      "ground": 278,
+      "width": 70
+    },
+    {
+      "headTop": 100,
+      "ground": 277,
+      "width": 70
+    },
+    {
+      "headTop": 100,
+      "ground": 276,
+      "width": 70
+    },
+    {
+      "headTop": 100,
+      "ground": 276,
+      "width": 70
+    },
+    {
+      "headTop": 100,
+      "ground": 275,
+      "width": 69
+    },
+    {
+      "headTop": 100,
+      "ground": 274,
+      "width": 69
+    },
+    {
+      "headTop": 100,
+      "ground": 274,
+      "width": 69
+    },
+    {
+      "headTop": 99,
+      "ground": 274,
+      "width": 70
+    },
+    {
+      "headTop": 99,
+      "ground": 274,
+      "width": 71
+    },
+    {
+      "headTop": 99,
+      "ground": 276,
+      "width": 72
+    },
+    {
+      "headTop": 99,
+      "ground": 277,
+      "width": 74
+    },
+    {
+      "headTop": 100,
+      "ground": 278,
+      "width": 75
+    }
+  ],
+  "contactReview": {
+    "videoSha256": "c681e2e1744a708fc384c7a994f2a2872f8d5f344f52eed84ddba61048d0eec8",
+    "visualReviewed": true,
+    "contacts": [
+      {
+        "frame": 9,
+        "foot": "R"
+      },
+      {
+        "frame": 19,
+        "foot": "L"
+      },
+      {
+        "frame": 28,
+        "foot": "R"
+      }
+    ],
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "reviewNote": "Native source frames 0–43 inspected. Anatomical R is the near leg on the satchel side (image left); L is the farther leg (image right). R support/front pose around 9, L around 19, R around 28. These are visually estimated contact phases, not motion-capture measurements. The conservative silhouette test remains ambiguous in this three-quarter view. Full output design and loop review remains required.",
+    "estimatedContactUncertaintyFrames": 2,
+    "automaticPeriodVerdict": "ambiguous; manual contact phases used"
+  },
+  "status": "user-approved-walk-reference; game walking unchanged",
+  "matteReportStatus": "pass",
+  "matteOverrideReason": null,
+  "gameApplied": true,
+  "art_source": "Higgsfield image-to-video",
+  "visualReview": {
+    "status": "19コマ候補作成・利用者確認待ち",
+    "frames": 19,
+    "cycleMs": 800,
+    "all19FramesViewedOnLightAndDark": true,
+    "contactPhasesManuallyEstimated": true,
+    "contactUncertaintySourceFrames": 2,
+    "automaticGaitTest": "ambiguous",
+    "gameApplied": false,
+    "notes": [
+      "頭部幅中央値66px／静止画70px、頭部帯面積比97.8%",
+      "姿勢と装備を19コマで目視比較。完全なデザイン一致や全キャラでの均一性は未承認",
+      "生成時の紫色の影は専用マットで除去",
+      "0.8秒は19コマの再生周期。左右の接地判断は原動画の目視記録"
+    ],
+    "source": "Higgsfield Genjutsu free generation"
+  },
+  "userReferenceApproved": true,
+  "sheetColumns": 5,
+  "candidateDirectory": "artifacts/walk-from-standing-v1/lise/E/candidate",
+  "sourceSheetSha256": "8b9e299fcae946adb832a0853489e9d82bed8b5f092e443f614843e1c1300201"
+}

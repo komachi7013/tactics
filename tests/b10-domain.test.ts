@@ -4,7 +4,7 @@ import {createInitialState,reduce,getCell,getUnit,canGate,gatePreview,capturePre
 import {getBattleConfig} from '../src/domain/battles';
 import {runEnemyActivation} from '../src/domain/ai';
 import type {BattleState,Command} from '../src/domain/types';
-import route from './fixtures/b10-route.json';
+import route from './fixtures/defend-cooldown-v1/b10-route.json';
 function safe(){const s=createInitialState('B10');s.units.filter(u=>u.team==='enemy').forEach(u=>u.hp=0);return s;}
 function boundary(s:BattleState){s.units.forEach(u=>u.acted=u.id!=='ally-lise');s.turn='player';s.activeId=null;s=reduce(s,{type:'start',unitId:'ally-lise'}).state;return reduce(s,{type:'end',facing:'E'}).state;}
 function eligible(){const s=safe();s.gate.drained=true;getUnit(s,'ally-garan')!.pos={x:11,y:3};return s;}

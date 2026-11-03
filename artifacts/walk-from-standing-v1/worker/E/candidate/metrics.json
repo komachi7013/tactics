@@ -1,0 +1,15 @@
+{
+  "headCentroidRangePx": [
+    1.4917394197818226,
+    0.890929667247633
+  ],
+  "footRegionSeamOverMedianStep": 0.32392857212049825,
+  "headTopRangePx": [
+    97,
+    99
+  ],
+  "groundRangePx": [
+    282,
+    285
+  ]
+}

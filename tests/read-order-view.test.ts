@@ -51,6 +51,12 @@ describe('read order conditional view', () => {
     enemies[0].hp = 0;
     expect(readOrderRows(state, snapshot).map(row => row.id)).toEqual([enemies[1].id]);
   });
+  it('does not promise a defensive effect while that enemy is on cooldown', () => {
+    const { state, enemies, snapshot } = fixture();
+    snapshot.byActor[enemies[0].id] = { actorId: enemies[0].id, destination: enemies[0].pos, path: [], action: 'wait', moveCost: 0 };
+    expect(readOrderRows(state, snapshot)[0].detail).toContain('行動終了（防御の再使用待ち）');
+    expect(readOrderRows(state, snapshot)[0].detail).not.toContain('→ 防御');
+  });
   it('announces only changes in existing settled candidates and permits a fresh battle with the same IDs', () => {
     const { state, enemies, snapshot } = fixture();
     const tracker = new ReadOrderUpdates();

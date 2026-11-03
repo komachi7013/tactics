@@ -6,17 +6,17 @@ import {reduce} from '../src/domain/engine';
 import {runEnemyActivationWithTrace} from '../src/domain/ai';
 import type {Command} from '../src/domain/types';
 import b01 from './fixtures/expanded-b01-roots.json';
-import b02 from './fixtures/expanded-b02-roots.json';
-import b03 from './fixtures/expanded-b03-roots.json';
-import b04 from './fixtures/expanded-b04-roots.json';
-import b05 from './fixtures/expanded-b05-roots.json';
-import b06 from './fixtures/expanded-b06-roots.json';
-import b07 from './fixtures/expanded-b07-roots.json';
-import b08 from './fixtures/expanded-b08-roots.json';
-import b09 from './fixtures/expanded-b09-roots.json';
-import b10 from './fixtures/expanded-b10-roots.json';
-import b11 from './fixtures/expanded-b11-roots.json';
-import b12 from './fixtures/expanded-b12-roots.json';
+import b02 from './fixtures/defend-cooldown-v1/expanded-b02-roots.json';
+import b03 from './fixtures/manual-cart-v1/expanded-b03-roots.json';
+import b04 from './fixtures/defend-cooldown-v1/expanded-b04-roots.json';
+import b05 from './fixtures/defend-cooldown-v1/expanded-b05-roots.json';
+import b06 from './fixtures/defend-cooldown-v1/expanded-b06-roots.json';
+import b07 from './fixtures/defend-cooldown-v1/expanded-b07-roots.json';
+import b08 from './fixtures/defend-cooldown-v1/expanded-b08-roots.json';
+import b09 from './fixtures/defend-cooldown-v1/expanded-b09-roots.json';
+import b10 from './fixtures/defend-cooldown-v1/expanded-b10-roots.json';
+import b11 from './fixtures/defend-cooldown-v1/expanded-b11-roots.json';
+import b12 from './fixtures/defend-cooldown-v1/expanded-b12-roots.json';
 const fixtures=[b01,b02,b03,b04,b05,b06,b07,b08.results,b09.results,b10.results,b11.results,b12.results];
 describe('faction turn twelve-stage v4 campaign with actual AI',()=>{
  it.each([1835626289,0,1,4294967295])('wins all twelve with unchanged deadlines and reloads every checkpoint at root %s',root=>{

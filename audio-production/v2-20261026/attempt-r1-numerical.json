@@ -1,0 +1,2569 @@
+{
+  "version": "audio-v2-candidate",
+  "created": "2026-10-26",
+  "skill": "/Users/komachi/work/tactics/.codex/skills/rpg-music/SKILL.md",
+  "scriptSha256": "6339eb6704e24e48d592fab8cbbb9a3b7543fb52fa0df3f9f8c9eb5090d8ac4b",
+  "renderer": "FluidSynth 2.6.1 + GeneralUser GS 2.0.3 BETA; afconvert PCM 22050 stereo",
+  "soundfontSha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+  "soundfontRedistributed": false,
+  "numericalVerified": true,
+  "listeningVerified": false,
+  "gameVerified": false,
+  "truePeakLUFS": "not measured; ffmpeg unavailable",
+  "cues": [
+    {
+      "id": "bgm-title",
+      "master": {
+        "file": "masters/bgm-title.wav",
+        "sha256": "39f5c7cba55ecd444748be5b7634fd6a60a7aa4f4700e76a535d6d2802df8984",
+        "bytes": 10584044,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 2646000,
+        "seconds": 60.0,
+        "samplePeak": 0.319976806640625,
+        "rmsDbFS": -26.09596660724217,
+        "dc": [
+          -1.3355765483276643e-08,
+          -6.94315269510582e-09
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          2646000
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            0.003570556640625,
+            0.0020751953125
+          ],
+          "rmsDifferenceDb": [
+            0.1707372926315867,
+            -0.250814946696724
+          ],
+          "slopeError": [
+            0.003173828125,
+            0.00299072265625
+          ],
+          "numericalFlags": []
+        }
+      },
+      "delivery": {
+        "file": "delivery/bgm-title.wav",
+        "sha256": "34851e8a71e6ccbf4fe7599040da6b12a84a5d3cfd4cc911a887dbe902ee607d",
+        "bytes": 5296096,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 1323000,
+        "seconds": 60.0,
+        "samplePeak": 0.318939208984375,
+        "rmsDbFS": -26.096004504346453,
+        "dc": [
+          -1.8292093313019652e-08,
+          3.9213819208238853e-10
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          1323000
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            -0.010284423828125,
+            -0.012908935546875
+          ],
+          "rmsDifferenceDb": [
+            0.16913095150432167,
+            -0.2549389110542648
+          ],
+          "slopeError": [
+            0.039154052734375,
+            0.04296875
+          ],
+          "numericalFlags": []
+        }
+      },
+      "listeningVerified": false,
+      "title": "岸を越える地図",
+      "bpm": 96,
+      "bars": 24,
+      "mode": "major",
+      "rationale": "スタート画面: 冒険への期待。主題をホルンから木管へ渡す。",
+      "source": "scores/bgm-title.json",
+      "midi": "scores/bgm-title.mid",
+      "renderCycles": 3,
+      "extractStartFrame": 2658647,
+      "rotationSeconds": 0.28678004535147394,
+      "motif": {
+        "id": "river-record",
+        "version": 2,
+        "priorVersion": 1,
+        "degrees": [
+          0,
+          2,
+          1
+        ],
+        "beats": [
+          0,
+          1.5,
+          2.5
+        ],
+        "durations": [
+          1.25,
+          0.65,
+          0.85
+        ],
+        "rests": "1.25–1.5 / 2.15–2.5 / 3.35–4",
+        "origin": "v1 D–F–E; title/ending major third, battle modal/fragmented/inverted replies"
+      }
+    },
+    {
+      "id": "bgm-prologue",
+      "master": {
+        "file": "masters/bgm-prologue.wav",
+        "sha256": "078a3618f15b08583e5167bd73a87ca62425dd2a97fbfb3a1ef6fd58d0eb70b2",
+        "bytes": 10584044,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 2646000,
+        "seconds": 60.0,
+        "samplePeak": 0.319976806640625,
+        "rmsDbFS": -24.79764653433746,
+        "dc": [
+          2.041425294075964e-09,
+          -3.305494289729781e-08
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          2646000
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            0.0018310546875,
+            -0.00103759765625
+          ],
+          "rmsDifferenceDb": [
+            0.5345358012209637,
+            0.5926192340685307
+          ],
+          "slopeError": [
+            0.00286865234375,
+            0.002349853515625
+          ],
+          "numericalFlags": []
+        }
+      },
+      "delivery": {
+        "file": "delivery/bgm-prologue.wav",
+        "sha256": "a506013f579548d77afb4e8b9feedaf644843152c8b159f753770c7e257be219",
+        "bytes": 5296096,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 1323000,
+        "seconds": 60.0,
+        "samplePeak": 0.31658935546875,
+        "rmsDbFS": -24.797703534175266,
+        "dc": [
+          3.690712396069539e-10,
+          -3.656111967356387e-08
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          1323000
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            0.0145263671875,
+            0.008453369140625
+          ],
+          "rmsDifferenceDb": [
+            0.5297320518029152,
+            0.5892765448038343
+          ],
+          "slopeError": [
+            0.018890380859375,
+            0.016998291015625
+          ],
+          "numericalFlags": []
+        }
+      },
+      "listeningVerified": false,
+      "title": "二年前の薄明",
+      "bpm": 80,
+      "bars": 20,
+      "mode": "minor",
+      "rationale": "src/view/prologue.ts: 過去の放流と改竄された地図の回想。",
+      "source": "scores/bgm-prologue.json",
+      "midi": "scores/bgm-prologue.mid",
+      "renderCycles": 3,
+      "extractStartFrame": 2660215,
+      "rotationSeconds": 0.32233560090702945,
+      "motif": {
+        "id": "river-record",
+        "version": 2,
+        "priorVersion": 1,
+        "degrees": [
+          0,
+          2,
+          1
+        ],
+        "beats": [
+          0,
+          1.5,
+          2.5
+        ],
+        "durations": [
+          1.25,
+          0.65,
+          0.85
+        ],
+        "rests": "1.25–1.5 / 2.15–2.5 / 3.35–4",
+        "origin": "v1 D–F–E; title/ending major third, battle modal/fragmented/inverted replies"
+      }
+    },
+    {
+      "id": "bgm-briefing",
+      "master": {
+        "file": "masters/bgm-briefing.wav",
+        "sha256": "7df833fd7b5adc0a19e7a44c333169ef513351d16cfa87f647d72f14c8c6cb96",
+        "bytes": 15876044,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 3969000,
+        "seconds": 90.0,
+        "samplePeak": 0.319976806640625,
+        "rmsDbFS": -24.724767393167056,
+        "dc": [
+          9.134513180272109e-09,
+          2.82954617031998e-09
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          3969000
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            -0.00103759765625,
+            -0.00274658203125
+          ],
+          "rmsDifferenceDb": [
+            0.1054146829172341,
+            0.5387892960180001
+          ],
+          "slopeError": [
+            0.00677490234375,
+            0.00738525390625
+          ],
+          "numericalFlags": []
+        }
+      },
+      "delivery": {
+        "file": "delivery/bgm-briefing.wav",
+        "sha256": "00c157fa3dda8e2aab4cded2be0f6ea1c30b5e57a3e7213f7f4ccb907a722f81",
+        "bytes": 7942096,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 1984500,
+        "seconds": 90.0,
+        "samplePeak": 0.319366455078125,
+        "rmsDbFS": -24.72481183982999,
+        "dc": [
+          9.749631912950366e-09,
+          1.41477308515999e-09
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          1984500
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            0.020294189453125,
+            0.020111083984375
+          ],
+          "rmsDifferenceDb": [
+            0.10591801640902627,
+            0.5391287002638235
+          ],
+          "slopeError": [
+            0.056243896484375,
+            0.06268310546875
+          ],
+          "numericalFlags": [
+            "jump",
+            "jump"
+          ]
+        }
+      },
+      "listeningVerified": false,
+      "title": "盤上の水路",
+      "bpm": 85.33333333333333,
+      "bars": 32,
+      "mode": "dorian",
+      "rationale": "全戦共通の作戦説明・準備: 判断の余白と期待。",
+      "source": "scores/bgm-briefing.json",
+      "midi": "scores/bgm-briefing.mid",
+      "renderCycles": 3,
+      "extractStartFrame": 3981247,
+      "rotationSeconds": 0.2777097505668934,
+      "motif": {
+        "id": "river-record",
+        "version": 2,
+        "priorVersion": 1,
+        "degrees": [
+          0,
+          2,
+          1
+        ],
+        "beats": [
+          0,
+          1.5,
+          2.5
+        ],
+        "durations": [
+          1.25,
+          0.65,
+          0.85
+        ],
+        "rests": "1.25–1.5 / 2.15–2.5 / 3.35–4",
+        "origin": "v1 D–F–E; title/ending major third, battle modal/fragmented/inverted replies"
+      }
+    },
+    {
+      "id": "bgm-b01",
+      "master": {
+        "file": "masters/bgm-b01.wav",
+        "sha256": "efd210648e2f1352d8e9d14a63fcb56e80c86773ad7afb04e6bad14e60e4dbef",
+        "bytes": 16934444,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 4233600,
+        "seconds": 96.0,
+        "samplePeak": 0.319976806640625,
+        "rmsDbFS": -25.992274300164024,
+        "dc": [
+          -9.743624894076555e-08,
+          6.933781745662675e-08
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          4233600
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            -0.000213623046875,
+            0.000213623046875
+          ],
+          "rmsDifferenceDb": [
+            -1.5861383616540206,
+            -1.3452538159637417
+          ],
+          "slopeError": [
+            3.0517578125e-05,
+            0.000152587890625
+          ],
+          "numericalFlags": []
+        }
+      },
+      "delivery": {
+        "file": "delivery/bgm-b01.wav",
+        "sha256": "43fe6733161380df8d0de7207fa3f92cadbb6a379f112de8e1255d3ab9888762",
+        "bytes": 8471296,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 2116800,
+        "seconds": 96.0,
+        "samplePeak": 0.3201904296875,
+        "rmsDbFS": -25.99230162894648,
+        "dc": [
+          -1.020135973226096e-07,
+          6.357828776041667e-08
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          2116800
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            -0.003082275390625,
+            -0.007354736328125
+          ],
+          "rmsDifferenceDb": [
+            -1.6042592699732314,
+            -1.3620360983407387
+          ],
+          "slopeError": [
+            0.006683349609375,
+            0.01708984375
+          ],
+          "numericalFlags": []
+        }
+      },
+      "listeningVerified": false,
+      "title": "渡し場の水位痕",
+      "bpm": 100,
+      "bars": 40,
+      "mode": "dorian",
+      "rationale": "B01 トルネ渡し場: 水位記録確保と脱出。水路の流れを分散弦で。",
+      "source": "scores/bgm-b01.json",
+      "midi": "scores/bgm-b01.mid",
+      "renderCycles": 3,
+      "extractStartFrame": 4248591,
+      "rotationSeconds": 0.33993197278911563,
+      "motif": {
+        "id": "river-record",
+        "version": 2,
+        "priorVersion": 1,
+        "degrees": [
+          0,
+          2,
+          1
+        ],
+        "beats": [
+          0,
+          1.5,
+          2.5
+        ],
+        "durations": [
+          1.25,
+          0.65,
+          0.85
+        ],
+        "rests": "1.25–1.5 / 2.15–2.5 / 3.35–4",
+        "origin": "v1 D–F–E; title/ending major third, battle modal/fragmented/inverted replies"
+      }
+    },
+    {
+      "id": "bgm-b02",
+      "master": {
+        "file": "masters/bgm-b02.wav",
+        "sha256": "b6da2c4f53d87bead056c3f56a227cdfe94d2b218b96fe8c048c9a9e355d6fdb",
+        "bytes": 17248056,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 4312003,
+        "seconds": 97.77784580498866,
+        "samplePeak": 0.319976806640625,
+        "rmsDbFS": -26.26156466400314,
+        "dc": [
+          -6.8862668962950625e-09,
+          -3.37165215765156e-08
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          4312003
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            0.0,
+            0.00018310546875
+          ],
+          "rmsDifferenceDb": [
+            -0.7700099872881148,
+            -0.5848473686365615
+          ],
+          "slopeError": [
+            0.00018310546875,
+            0.000518798828125
+          ],
+          "numericalFlags": []
+        }
+      },
+      "delivery": {
+        "file": "delivery/bgm-b02.wav",
+        "sha256": "34c3606207c9af03176508433844597e61825e3e5d15c68731b581c193662d3d",
+        "bytes": 8628104,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 2156002,
+        "seconds": 97.77786848072563,
+        "samplePeak": 0.318695068359375,
+        "rmsDbFS": -26.26159396111309,
+        "dc": [
+          -1.2682618105178011e-08,
+          -3.581141049787987e-08
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          2156002
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            6.103515625e-05,
+            0.0001220703125
+          ],
+          "rmsDifferenceDb": [
+            -0.7841801759651044,
+            -0.6023642605000855
+          ],
+          "slopeError": [
+            0.002716064453125,
+            0.0140380859375
+          ],
+          "numericalFlags": []
+        }
+      },
+      "listeningVerified": false,
+      "title": "閉ざされる石橋",
+      "bpm": 108,
+      "bars": 44,
+      "mode": "minor",
+      "rationale": "B02 旧セラ堤: 高低差と石橋閉鎖までの時間圧。下降低音と短い応答。",
+      "source": "scores/bgm-b02.json",
+      "midi": "scores/bgm-b02.mid",
+      "renderCycles": 3,
+      "extractStartFrame": 4322874,
+      "rotationSeconds": 0.2465079365079365,
+      "motif": {
+        "id": "river-record",
+        "version": 2,
+        "priorVersion": 1,
+        "degrees": [
+          0,
+          2,
+          1
+        ],
+        "beats": [
+          0,
+          1.5,
+          2.5
+        ],
+        "durations": [
+          1.25,
+          0.65,
+          0.85
+        ],
+        "rests": "1.25–1.5 / 2.15–2.5 / 3.35–4",
+        "origin": "v1 D–F–E; title/ending major third, battle modal/fragmented/inverted replies"
+      }
+    },
+    {
+      "id": "bgm-b03",
+      "master": {
+        "file": "masters/bgm-b03.wav",
+        "sha256": "3b8557282cd9cb4be7f924abafe3310f8cafaaf1043bb16496631da79c9578f3",
+        "bytes": 17640044,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 4410000,
+        "seconds": 100.0,
+        "samplePeak": 0.319976806640625,
+        "rmsDbFS": -25.720302436920605,
+        "dc": [
+          -3.682869632227891e-08,
+          3.2005396559665534e-08
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          4410000
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            0.000640869140625,
+            0.0010986328125
+          ],
+          "rmsDifferenceDb": [
+            0.4811644708399709,
+            0.09137074981226814
+          ],
+          "slopeError": [
+            0.000640869140625,
+            0.000885009765625
+          ],
+          "numericalFlags": []
+        }
+      },
+      "delivery": {
+        "file": "delivery/bgm-b03.wav",
+        "sha256": "c200cbb853eee972f3a18c019f3f10458efed51d4b87745b585bb7ae96eb108c",
+        "bytes": 8824096,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 2205000,
+        "seconds": 100.0,
+        "samplePeak": 0.318511962890625,
+        "rmsDbFS": -25.720322458236865,
+        "dc": [
+          -2.275324192176871e-08,
+          2.9770208864795918e-08
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          2205000
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            0.00335693359375,
+            0.00140380859375
+          ],
+          "rmsDifferenceDb": [
+            0.47728448150294556,
+            0.08759785148372226
+          ],
+          "slopeError": [
+            0.00653076171875,
+            0.003997802734375
+          ],
+          "numericalFlags": []
+        }
+      },
+      "listeningVerified": false,
+      "title": "名簿と車輪",
+      "bpm": 96,
+      "bars": 40,
+      "mode": "minor",
+      "rationale": "B03 ラウム救護倉: 負傷者の荷車を護送。穏やかな決意の旋律、重い刻み。",
+      "source": "scores/bgm-b03.json",
+      "midi": "scores/bgm-b03.mid",
+      "renderCycles": 3,
+      "extractStartFrame": 4419753,
+      "rotationSeconds": 0.22115646258503402,
+      "motif": {
+        "id": "river-record",
+        "version": 2,
+        "priorVersion": 1,
+        "degrees": [
+          0,
+          2,
+          1
+        ],
+        "beats": [
+          0,
+          1.5,
+          2.5
+        ],
+        "durations": [
+          1.25,
+          0.65,
+          0.85
+        ],
+        "rests": "1.25–1.5 / 2.15–2.5 / 3.35–4",
+        "origin": "v1 D–F–E; title/ending major third, battle modal/fragmented/inverted replies"
+      }
+    },
+    {
+      "id": "bgm-b04",
+      "master": {
+        "file": "masters/bgm-b04.wav",
+        "sha256": "afcb03225afd37e6d532afa0816e86136f674db0b579791290f8b2f7b1190f12",
+        "bytes": 16283120,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 4070769,
+        "seconds": 92.30768707482993,
+        "samplePeak": 0.319976806640625,
+        "rmsDbFS": -26.0331630121485,
+        "dc": [
+          -5.2177449457338405e-08,
+          8.616775920440339e-08
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          4070769
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            0.00335693359375,
+            0.001190185546875
+          ],
+          "rmsDifferenceDb": [
+            -1.0866713458555013,
+            -1.307329510551862
+          ],
+          "slopeError": [
+            0.00177001953125,
+            0.00238037109375
+          ],
+          "numericalFlags": []
+        }
+      },
+      "delivery": {
+        "file": "delivery/bgm-b04.wav",
+        "sha256": "30a310e7c33eddd17da3803ba7a82039084a1005eb2b111c0a989f1be5005bb7",
+        "bytes": 8145636,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 2035385,
+        "seconds": 92.3077097505669,
+        "samplePeak": 0.31781005859375,
+        "rmsDbFS": -26.03318680568111,
+        "dc": [
+          -4.9658525905418385e-08,
+          8.54330557394547e-08
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          2035385
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            0.003814697265625,
+            0.00213623046875
+          ],
+          "rmsDifferenceDb": [
+            -1.0867980306763,
+            -1.307314994641432
+          ],
+          "slopeError": [
+            0.010589599609375,
+            0.01275634765625
+          ],
+          "numericalFlags": []
+        }
+      },
+      "listeningVerified": false,
+      "title": "乾いた支渠へ",
+      "bpm": 104,
+      "bars": 40,
+      "mode": "dorian",
+      "rationale": "B04 乾いた支渠: 取水拠点保持。乾いたピチカートと水を戻す木管。",
+      "source": "scores/bgm-b04.json",
+      "midi": "scores/bgm-b04.mid",
+      "renderCycles": 3,
+      "extractStartFrame": 4084594,
+      "rotationSeconds": 0.3134920634920635,
+      "motif": {
+        "id": "river-record",
+        "version": 2,
+        "priorVersion": 1,
+        "degrees": [
+          0,
+          2,
+          1
+        ],
+        "beats": [
+          0,
+          1.5,
+          2.5
+        ],
+        "durations": [
+          1.25,
+          0.65,
+          0.85
+        ],
+        "rests": "1.25–1.5 / 2.15–2.5 / 3.35–4",
+        "origin": "v1 D–F–E; title/ending major third, battle modal/fragmented/inverted replies"
+      }
+    },
+    {
+      "id": "bgm-b05",
+      "master": {
+        "file": "masters/bgm-b05.wav",
+        "sha256": "d81bc2d6e20731256625485c47539d2e971d4a05ba4c1bc311fc2b7c08cbf4ce",
+        "bytes": 16934444,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 4233600,
+        "seconds": 96.0,
+        "samplePeak": 0.319976806640625,
+        "rmsDbFS": -25.57218089297571,
+        "dc": [
+          -3.5573565770709325e-08,
+          -6.181943263416478e-08
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          4233600
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            0.0,
+            -0.000213623046875
+          ],
+          "rmsDifferenceDb": [
+            0.8562247914159762,
+            1.0660034533565985
+          ],
+          "slopeError": [
+            0.00018310546875,
+            0.000213623046875
+          ],
+          "numericalFlags": []
+        }
+      },
+      "delivery": {
+        "file": "delivery/bgm-b05.wav",
+        "sha256": "401727a53850918912dd3e5337d5e36ad7aafc4eb39fb908143de6c4074e496a",
+        "bytes": 8471296,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 2116800,
+        "seconds": 96.0,
+        "samplePeak": 0.32000732421875,
+        "rmsDbFS": -25.57221155938818,
+        "dc": [
+          -3.9242652898833146e-08,
+          -4.878660448554422e-08
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          2116800
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            0.005218505859375,
+            0.007293701171875
+          ],
+          "rmsDifferenceDb": [
+            0.8537742146393053,
+            1.0633554556735807
+          ],
+          "slopeError": [
+            0.011138916015625,
+            0.017120361328125
+          ],
+          "numericalFlags": []
+        }
+      },
+      "listeningVerified": false,
+      "title": "署名の影",
+      "bpm": 100,
+      "bars": 40,
+      "mode": "minor",
+      "rationale": "B05 イェルン文書蔵: 必須文書と自身の署名、封鎖迫る室内戦。低い弦とファゴット。",
+      "source": "scores/bgm-b05.json",
+      "midi": "scores/bgm-b05.mid",
+      "renderCycles": 3,
+      "extractStartFrame": 4247637,
+      "rotationSeconds": 0.31829931972789116,
+      "motif": {
+        "id": "river-record",
+        "version": 2,
+        "priorVersion": 1,
+        "degrees": [
+          0,
+          2,
+          1
+        ],
+        "beats": [
+          0,
+          1.5,
+          2.5
+        ],
+        "durations": [
+          1.25,
+          0.65,
+          0.85
+        ],
+        "rests": "1.25–1.5 / 2.15–2.5 / 3.35–4",
+        "origin": "v1 D–F–E; title/ending major third, battle modal/fragmented/inverted replies"
+      }
+    },
+    {
+      "id": "bgm-b06",
+      "master": {
+        "file": "masters/bgm-b06.wav",
+        "sha256": "b6770ed66b9367ce067801e15d7691c4f06f8c30b0b3d35f944024770dc5250f",
+        "bytes": 17573488,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 4393361,
+        "seconds": 99.62269841269841,
+        "samplePeak": 0.319976806640625,
+        "rmsDbFS": -25.376778218793625,
+        "dc": [
+          2.8834067311307902e-08,
+          -2.126260661043447e-08
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          4393361
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            0.00628662109375,
+            0.004058837890625
+          ],
+          "rmsDifferenceDb": [
+            -1.1527660038712044,
+            -0.6780104688668364
+          ],
+          "slopeError": [
+            0.00482177734375,
+            0.003692626953125
+          ],
+          "numericalFlags": []
+        }
+      },
+      "delivery": {
+        "file": "delivery/bgm-b06.wav",
+        "sha256": "82502b5de56f5195a1dee98ccb284e154f0c87a8d63f9227f93b5c6ab7024dad",
+        "bytes": 8790820,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 2196681,
+        "seconds": 99.62272108843537,
+        "samplePeak": 0.319976806640625,
+        "rmsDbFS": -25.3767950102953,
+        "dc": [
+          2.0797200163849463e-08,
+          -1.4587214543782187e-08
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          2196681
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            0.006103515625,
+            0.004974365234375
+          ],
+          "rmsDifferenceDb": [
+            -1.1539329037509438,
+            -0.6792320401800078
+          ],
+          "slopeError": [
+            0.01690673828125,
+            0.030303955078125
+          ],
+          "numericalFlags": []
+        }
+      },
+      "listeningVerified": false,
+      "title": "鎖門を越える証言",
+      "bpm": 106,
+      "bars": 44,
+      "mode": "minor",
+      "rationale": "B06 ケスト運河鎖門: 開門後の証人護送。交互の弦と金管、波のような木管。",
+      "source": "scores/bgm-b06.json",
+      "midi": "scores/bgm-b06.mid",
+      "renderCycles": 3,
+      "extractStartFrame": 4406584,
+      "rotationSeconds": 0.29984126984126985,
+      "motif": {
+        "id": "river-record",
+        "version": 2,
+        "priorVersion": 1,
+        "degrees": [
+          0,
+          2,
+          1
+        ],
+        "beats": [
+          0,
+          1.5,
+          2.5
+        ],
+        "durations": [
+          1.25,
+          0.65,
+          0.85
+        ],
+        "rests": "1.25–1.5 / 2.15–2.5 / 3.35–4",
+        "origin": "v1 D–F–E; title/ending major third, battle modal/fragmented/inverted replies"
+      }
+    },
+    {
+      "id": "bgm-b07",
+      "master": {
+        "file": "masters/bgm-b07.wav",
+        "sha256": "1aee1d6b3e8da4f3299ecfd6a996bf2de210a864e47935a0adca86550395fb6c",
+        "bytes": 16632036,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 4157998,
+        "seconds": 94.28566893424036,
+        "samplePeak": 0.319976806640625,
+        "rmsDbFS": -25.030033390741913,
+        "dc": [
+          1.6778070502619288e-08,
+          -3.6257072739693477e-09
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          4157998
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            -0.00360107421875,
+            -0.00079345703125
+          ],
+          "rmsDifferenceDb": [
+            -0.037753753350104,
+            0.16245194291718018
+          ],
+          "slopeError": [
+            0.0152587890625,
+            0.0140380859375
+          ],
+          "numericalFlags": []
+        }
+      },
+      "delivery": {
+        "file": "delivery/bgm-b07.wav",
+        "sha256": "464bf4a61538bedbfff410aae73bf0e6106d9ed9ee0d3434b34205cdfafc29e2",
+        "bytes": 8320092,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 2078999,
+        "seconds": 94.28566893424036,
+        "samplePeak": 0.3199462890625,
+        "rmsDbFS": -25.030064800412838,
+        "dc": [
+          9.365187209686007e-09,
+          3.0091902476263818e-09
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          2078999
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            0.014434814453125,
+            0.0196533203125
+          ],
+          "rmsDifferenceDb": [
+            -0.04002201898934937,
+            0.1595474772163874
+          ],
+          "slopeError": [
+            0.04052734375,
+            0.050384521484375
+          ],
+          "numericalFlags": []
+        }
+      },
+      "listeningVerified": false,
+      "title": "二つの退避路",
+      "bpm": 112,
+      "bars": 44,
+      "mode": "dorian",
+      "rationale": "B07 ヴァセル段丘村: 北段と南道の避難。二声の応答と切迫した弦。",
+      "source": "scores/bgm-b07.json",
+      "midi": "scores/bgm-b07.mid",
+      "renderCycles": 3,
+      "extractStartFrame": 4167109,
+      "rotationSeconds": 0.2065986394557823,
+      "motif": {
+        "id": "river-record",
+        "version": 2,
+        "priorVersion": 1,
+        "degrees": [
+          0,
+          2,
+          1
+        ],
+        "beats": [
+          0,
+          1.5,
+          2.5
+        ],
+        "durations": [
+          1.25,
+          0.65,
+          0.85
+        ],
+        "rests": "1.25–1.5 / 2.15–2.5 / 3.35–4",
+        "origin": "v1 D–F–E; title/ending major third, battle modal/fragmented/inverted replies"
+      }
+    },
+    {
+      "id": "bgm-b08",
+      "master": {
+        "file": "masters/bgm-b08.wav",
+        "sha256": "f77e238f57ec0109af7f7365f9099efd233afbc5b959dc9c28aa01bbd726f5a2",
+        "bytes": 18262624,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 4565645,
+        "seconds": 103.52936507936508,
+        "samplePeak": 0.319976806640625,
+        "rmsDbFS": -26.00344479329399,
+        "dc": [
+          6.142758426657131e-08,
+          -5.686229155122113e-08
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          4565645
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            -0.00201416015625,
+            -0.001007080078125
+          ],
+          "rmsDifferenceDb": [
+            -0.02801727280637989,
+            -0.2734424494657047
+          ],
+          "slopeError": [
+            0.002685546875,
+            0.003875732421875
+          ],
+          "numericalFlags": []
+        }
+      },
+      "delivery": {
+        "file": "delivery/bgm-b08.wav",
+        "sha256": "c9750865f8da6c63165729b1f5f5500e8d45d28bd5e4c83954292bd8b478a1ee",
+        "bytes": 9135388,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 2282823,
+        "seconds": 103.52938775510204,
+        "samplePeak": 0.3177490234375,
+        "rmsDbFS": -26.003515565538624,
+        "dc": [
+          5.8005273069517437e-08,
+          -6.545144433011232e-08
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          2282823
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            -0.00238037109375,
+            -0.001708984375
+          ],
+          "rmsDifferenceDb": [
+            -0.023578849362345958,
+            -0.2701058080629765
+          ],
+          "slopeError": [
+            0.020233154296875,
+            0.022369384765625
+          ],
+          "numericalFlags": []
+        }
+      },
+      "listeningVerified": false,
+      "title": "南北の補助堰",
+      "bpm": 102,
+      "bars": 44,
+      "mode": "minor",
+      "rationale": "B08 ベルカ補助堰: 独立二水路と操作所保持。低音と高音が交差する対位。",
+      "source": "scores/bgm-b08.json",
+      "midi": "scores/bgm-b08.mid",
+      "renderCycles": 3,
+      "extractStartFrame": 4576558,
+      "rotationSeconds": 0.24746031746031746,
+      "motif": {
+        "id": "river-record",
+        "version": 2,
+        "priorVersion": 1,
+        "degrees": [
+          0,
+          2,
+          1
+        ],
+        "beats": [
+          0,
+          1.5,
+          2.5
+        ],
+        "durations": [
+          1.25,
+          0.65,
+          0.85
+        ],
+        "rests": "1.25–1.5 / 2.15–2.5 / 3.35–4",
+        "origin": "v1 D–F–E; title/ending major third, battle modal/fragmented/inverted replies"
+      }
+    },
+    {
+      "id": "bgm-b09",
+      "master": {
+        "file": "masters/bgm-b09.wav",
+        "sha256": "9f3e8b1133dfb80278a25d5e82cb40415cdfb0a22dd6681c8658f99c7783d4de",
+        "bytes": 18627884,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 4656960,
+        "seconds": 105.6,
+        "samplePeak": 0.319976806640625,
+        "rmsDbFS": -27.202350784166846,
+        "dc": [
+          -3.263449526354102e-08,
+          4.5609656030972996e-08
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          4656960
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            -0.000518798828125,
+            -0.00067138671875
+          ],
+          "rmsDifferenceDb": [
+            -0.7311794673197741,
+            -0.45621937043507743
+          ],
+          "slopeError": [
+            0.00030517578125,
+            3.0517578125e-05
+          ],
+          "numericalFlags": []
+        }
+      },
+      "delivery": {
+        "file": "delivery/bgm-b09.wav",
+        "sha256": "9909e31334719f42a7a967fe8d85c266f0ace660e512c64e2db87bf4bf43a9ba",
+        "bytes": 9318016,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 2328480,
+        "seconds": 105.6,
+        "samplePeak": 0.3170166015625,
+        "rmsDbFS": -27.202406646878174,
+        "dc": [
+          -3.330291263640873e-08,
+          4.542616890900931e-08
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          2328480
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            -0.0025634765625,
+            0.0035400390625
+          ],
+          "rmsDifferenceDb": [
+            -0.7422295185178589,
+            -0.4680860882287682
+          ],
+          "slopeError": [
+            0.003173828125,
+            0.01068115234375
+          ],
+          "numericalFlags": []
+        }
+      },
+      "listeningVerified": false,
+      "title": "公開の場への道",
+      "bpm": 100,
+      "bars": 44,
+      "mode": "dorian",
+      "rationale": "B09 水段回廊: 代表・証人の一行護送。歩みを守る低弦、毅然としたホルン。",
+      "source": "scores/bgm-b09.json",
+      "midi": "scores/bgm-b09.mid",
+      "renderCycles": 3,
+      "extractStartFrame": 4669521,
+      "rotationSeconds": 0.2848299319727891,
+      "motif": {
+        "id": "river-record",
+        "version": 2,
+        "priorVersion": 1,
+        "degrees": [
+          0,
+          2,
+          1
+        ],
+        "beats": [
+          0,
+          1.5,
+          2.5
+        ],
+        "durations": [
+          1.25,
+          0.65,
+          0.85
+        ],
+        "rests": "1.25–1.5 / 2.15–2.5 / 3.35–4",
+        "origin": "v1 D–F–E; title/ending major third, battle modal/fragmented/inverted replies"
+      }
+    },
+    {
+      "id": "bgm-b10",
+      "master": {
+        "file": "masters/bgm-b10.wav",
+        "sha256": "41482f60bc59db6d11497b986a23fd84488a66234dbc85a4cd560e7979a3fef7",
+        "bytes": 16934460,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 4233604,
+        "seconds": 96.00009070294784,
+        "samplePeak": 0.319976806640625,
+        "rmsDbFS": -26.4877529820407,
+        "dc": [
+          -4.295494997805062e-08,
+          -4.227015047345004e-08
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          4233604
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            0.00018310546875,
+            0.00048828125
+          ],
+          "rmsDifferenceDb": [
+            -2.1595412959650133,
+            -1.332518989475937
+          ],
+          "slopeError": [
+            0.0003662109375,
+            0.000640869140625
+          ],
+          "numericalFlags": []
+        }
+      },
+      "delivery": {
+        "file": "delivery/bgm-b10.wav",
+        "sha256": "778222871d5dd0f276ea11672bcb257f9a47aa2bdb2473f9c12e8b5b320904d7",
+        "bytes": 8471304,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 2116802,
+        "seconds": 96.00009070294784,
+        "samplePeak": 0.31536865234375,
+        "rmsDbFS": -26.487771226111843,
+        "dc": [
+          -4.584552472904882e-08,
+          -4.9593900964757214e-08
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          2116802
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            -0.020538330078125,
+            -0.032470703125
+          ],
+          "rmsDifferenceDb": [
+            -2.163132157389924,
+            -1.337760209421432
+          ],
+          "slopeError": [
+            0.0443115234375,
+            0.070037841796875
+          ],
+          "numericalFlags": [
+            "jump",
+            "jump"
+          ]
+        }
+      },
+      "listeningVerified": false,
+      "title": "救援を迎える港",
+      "bpm": 110,
+      "bars": 44,
+      "mode": "mixolydian",
+      "rationale": "B10 首府外港: 鎖門信号と検問保持、場外船団。開けた金管、抑制した打楽器。",
+      "source": "scores/bgm-b10.json",
+      "midi": "scores/bgm-b10.mid",
+      "renderCycles": 3,
+      "extractStartFrame": 4246245,
+      "rotationSeconds": 0.2866439909297052,
+      "motif": {
+        "id": "river-record",
+        "version": 2,
+        "priorVersion": 1,
+        "degrees": [
+          0,
+          2,
+          1
+        ],
+        "beats": [
+          0,
+          1.5,
+          2.5
+        ],
+        "durations": [
+          1.25,
+          0.65,
+          0.85
+        ],
+        "rests": "1.25–1.5 / 2.15–2.5 / 3.35–4",
+        "origin": "v1 D–F–E; title/ending major third, battle modal/fragmented/inverted replies"
+      }
+    },
+    {
+      "id": "bgm-b11",
+      "master": {
+        "file": "masters/bgm-b11.wav",
+        "sha256": "613ab9145b36d32a6aa3616bb961e7215b08dbe39767bead8f84aaecab23a248",
+        "bytes": 17911428,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 4477846,
+        "seconds": 101.53845804988661,
+        "samplePeak": 0.319976806640625,
+        "rmsDbFS": -24.515833460858726,
+        "dc": [
+          5.929255487738971e-08,
+          4.3399424075772146e-08
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          4477846
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            -0.004150390625,
+            -0.002777099609375
+          ],
+          "rmsDifferenceDb": [
+            -0.16811179028528228,
+            -0.18229694695368465
+          ],
+          "slopeError": [
+            0.001373291015625,
+            0.003204345703125
+          ],
+          "numericalFlags": []
+        }
+      },
+      "delivery": {
+        "file": "delivery/bgm-b11.wav",
+        "sha256": "985d5270f70158f7d0ddef7023d8d55d658a82ee3ac7b2e2678974c462583cd5",
+        "bytes": 8959788,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 2238923,
+        "seconds": 101.53845804988661,
+        "samplePeak": 0.31768798828125,
+        "rmsDbFS": -24.515868327275193,
+        "dc": [
+          4.5975583356651835e-08,
+          3.490763977953909e-08
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          2238923
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            -0.052154541015625,
+            -0.047943115234375
+          ],
+          "rmsDifferenceDb": [
+            -0.1762642276497074,
+            -0.19100377895226991
+          ],
+          "slopeError": [
+            0.094146728515625,
+            0.084381103515625
+          ],
+          "numericalFlags": [
+            "jump",
+            "jump"
+          ]
+        }
+      },
+      "listeningVerified": false,
+      "title": "保守路の手",
+      "bpm": 104,
+      "bars": 44,
+      "mode": "minor",
+      "rationale": "B11 下層保守路: 保守員救出と補助弁復旧。ファゴットとヴィオラの低い応答。",
+      "source": "scores/bgm-b11.json",
+      "midi": "scores/bgm-b11.mid",
+      "renderCycles": 3,
+      "extractStartFrame": 4486419,
+      "rotationSeconds": 0.19439909297052155,
+      "motif": {
+        "id": "river-record",
+        "version": 2,
+        "priorVersion": 1,
+        "degrees": [
+          0,
+          2,
+          1
+        ],
+        "beats": [
+          0,
+          1.5,
+          2.5
+        ],
+        "durations": [
+          1.25,
+          0.65,
+          0.85
+        ],
+        "rests": "1.25–1.5 / 2.15–2.5 / 3.35–4",
+        "origin": "v1 D–F–E; title/ending major third, battle modal/fragmented/inverted replies"
+      }
+    },
+    {
+      "id": "bgm-b12",
+      "master": {
+        "file": "masters/bgm-b12.wav",
+        "sha256": "e1da216ac531a53c20995adb1a3bc1fc0249c3bfb3f3c70bb5e8f17e459bd54b",
+        "bytes": 18144036,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 4535998,
+        "seconds": 102.85709750566893,
+        "samplePeak": 0.319976806640625,
+        "rmsDbFS": -26.03876155226679,
+        "dc": [
+          4.3616742993355596e-08,
+          -3.79384256886522e-08
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          4535998
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            0.000732421875,
+            0.00018310546875
+          ],
+          "rmsDifferenceDb": [
+            -0.09807525467726542,
+            -0.6056342993931081
+          ],
+          "slopeError": [
+            0.00091552734375,
+            0.00054931640625
+          ],
+          "numericalFlags": []
+        }
+      },
+      "delivery": {
+        "file": "delivery/bgm-b12.wav",
+        "sha256": "e4ed7ac6f53358655ee5b60fa0952c442c4d23222752d7ac6416f89a643ae9bc",
+        "bytes": 9076092,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 2267999,
+        "seconds": 102.85709750566893,
+        "samplePeak": 0.319854736328125,
+        "rmsDbFS": -26.038785602504223,
+        "dc": [
+          3.331638304844932e-08,
+          -4.160511162593105e-08
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          2267999
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            -0.001922607421875,
+            -0.014678955078125
+          ],
+          "rmsDifferenceDb": [
+            -0.09917429683101464,
+            -0.6061083956693682
+          ],
+          "slopeError": [
+            0.005035400390625,
+            0.032012939453125
+          ],
+          "numericalFlags": []
+        }
+      },
+      "listeningVerified": false,
+      "title": "誰の堤か",
+      "bpm": 112,
+      "bars": 48,
+      "mode": "minor",
+      "rationale": "B12 上層操作台: 二操作点保持と非致死制圧。主題の集約、密度を落とす中間部。",
+      "source": "scores/bgm-b12.json",
+      "midi": "scores/bgm-b12.mid",
+      "renderCycles": 3,
+      "extractStartFrame": 4549787,
+      "rotationSeconds": 0.31267573696145123,
+      "motif": {
+        "id": "river-record",
+        "version": 2,
+        "priorVersion": 1,
+        "degrees": [
+          0,
+          2,
+          1
+        ],
+        "beats": [
+          0,
+          1.5,
+          2.5
+        ],
+        "durations": [
+          1.25,
+          0.65,
+          0.85
+        ],
+        "rests": "1.25–1.5 / 2.15–2.5 / 3.35–4",
+        "origin": "v1 D–F–E; title/ending major third, battle modal/fragmented/inverted replies"
+      }
+    },
+    {
+      "id": "bgm-ending",
+      "master": {
+        "file": "masters/bgm-ending.wav",
+        "sha256": "61a13f55f02077d98dd9a303e7bf6d7c769a413d230c2e7e73498a166925243f",
+        "bytes": 12700844,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 3175200,
+        "seconds": 72.0,
+        "samplePeak": 0.319976806640625,
+        "rmsDbFS": -25.3881088301525,
+        "dc": [
+          3.576338756712175e-08,
+          -1.7204102054594987e-09
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          3175200
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            0.000946044921875,
+            -0.000244140625
+          ],
+          "rmsDifferenceDb": [
+            1.633943030642523,
+            1.7565742156094388
+          ],
+          "slopeError": [
+            0.00213623046875,
+            0.00238037109375
+          ],
+          "numericalFlags": []
+        }
+      },
+      "delivery": {
+        "file": "delivery/bgm-ending.wav",
+        "sha256": "fd32ff3564ce0aa8df132c9a1bd3cb0784761fc55004f8595047006ea736c691",
+        "bytes": 6354496,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 1587600,
+        "seconds": 72.0,
+        "samplePeak": 0.319091796875,
+        "rmsDbFS": -25.388156076370944,
+        "dc": [
+          4.401943430728773e-08,
+          -6.228077168367347e-09
+        ],
+        "railSamples": 0,
+        "loop": [
+          0,
+          1587600
+        ],
+        "loopEndExclusive": true,
+        "boundary": {
+          "jump": [
+            -0.00347900390625,
+            -0.003570556640625
+          ],
+          "rmsDifferenceDb": [
+            1.6315754992072429,
+            1.754494079000179
+          ],
+          "slopeError": [
+            0.006378173828125,
+            0.002716064453125
+          ],
+          "numericalFlags": []
+        }
+      },
+      "listeningVerified": false,
+      "title": "同じ杭に記す明日",
+      "bpm": 80,
+      "bars": 24,
+      "mode": "major",
+      "rationale": "終幕: タイトル主題の穏やかな再編曲。フルート・ハープ・柔らかな弦。",
+      "source": "scores/bgm-ending.json",
+      "midi": "scores/bgm-ending.mid",
+      "renderCycles": 3,
+      "extractStartFrame": 3182047,
+      "rotationSeconds": 0.1552607709750567,
+      "motif": {
+        "id": "river-record",
+        "version": 2,
+        "priorVersion": 1,
+        "degrees": [
+          0,
+          2,
+          1
+        ],
+        "beats": [
+          0,
+          1.5,
+          2.5
+        ],
+        "durations": [
+          1.25,
+          0.65,
+          0.85
+        ],
+        "rests": "1.25–1.5 / 2.15–2.5 / 3.35–4",
+        "origin": "v1 D–F–E; title/ending major third, battle modal/fragmented/inverted replies"
+      }
+    },
+    {
+      "id": "se-ui",
+      "master": {
+        "file": "masters/se-ui.wav",
+        "sha256": "cb79e266c0fb39cc909c170f422a9f20e4b6dad51fd5ce3ce78d54fd2d9ec374",
+        "bytes": 16804,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 4190,
+        "seconds": 0.09501133786848072,
+        "samplePeak": 0.05877685546875,
+        "rmsDbFS": -37.86601071108768,
+        "dc": [
+          -1.4566863066825776e-08,
+          -1.4566863066825776e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "delivery": {
+        "file": "delivery/se-ui.wav",
+        "sha256": "68803234f8ca53323eb30c8276681930d493266fafa8f112658004ed634cad30",
+        "bytes": 8424,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 2095,
+        "seconds": 0.09501133786848072,
+        "samplePeak": 0.05877685546875,
+        "rmsDbFS": -37.86623763768936,
+        "dc": [
+          -4.3700589200477326e-08,
+          -4.3700589200477326e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "listeningVerified": false,
+      "seed": 2026102600,
+      "synthesis": "numpy noise / damped sine / envelopes; build.py synth()",
+      "relativePeak": 0.16799999999999998
+    },
+    {
+      "id": "se-cancel",
+      "master": {
+        "file": "masters/se-cancel.wav",
+        "sha256": "e7967ad82d11b0405f37af5dd535b730d65294f92f48af3cee3907861e86eeed",
+        "bytes": 21212,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 5292,
+        "seconds": 0.12,
+        "samplePeak": 0.0589599609375,
+        "rmsDbFS": -35.865475847819205,
+        "dc": [
+          -1.7300214356575964e-08,
+          -1.7300214356575964e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "delivery": {
+        "file": "delivery/se-cancel.wav",
+        "sha256": "12d4e42ba93bc3c36175d1798aee99ee0b1daec2e3cb7e4110e7dad6bb39e229",
+        "bytes": 10628,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 2646,
+        "seconds": 0.12,
+        "samplePeak": 0.058807373046875,
+        "rmsDbFS": -35.865422280311485,
+        "dc": [
+          1.153347623771731e-08,
+          1.153347623771731e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "listeningVerified": false,
+      "seed": 2026102601,
+      "synthesis": "numpy noise / damped sine / envelopes; build.py synth()",
+      "relativePeak": 0.16799999999999998
+    },
+    {
+      "id": "se-invalid",
+      "master": {
+        "file": "masters/se-invalid.wav",
+        "sha256": "16d9215811e57900ac92b82860c45dc71b6190522a02d2915171cc6b344fac20",
+        "bytes": 24740,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 6174,
+        "seconds": 0.14,
+        "samplePeak": 0.0584716796875,
+        "rmsDbFS": -38.530022402559524,
+        "dc": [
+          3.657759606818918e-07,
+          3.657759606818918e-07
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "delivery": {
+        "file": "delivery/se-invalid.wav",
+        "sha256": "7e162025f66930046ecb72d75fd21f06ee01a49d9ea612447093e2ce5d1af6e5",
+        "bytes": 12392,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 3087,
+        "seconds": 0.14,
+        "samplePeak": 0.058441162109375,
+        "rmsDbFS": -38.530005487728765,
+        "dc": [
+          3.163467768059605e-07,
+          3.163467768059605e-07
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "listeningVerified": false,
+      "seed": 2026102602,
+      "synthesis": "numpy noise / damped sine / envelopes; build.py synth()",
+      "relativePeak": 0.16799999999999998
+    },
+    {
+      "id": "se-sword",
+      "master": {
+        "file": "masters/se-sword.wav",
+        "sha256": "566207f5e74199d6f9b2991278af8c831e0ebdb431f4970165c473a262b7e10e",
+        "bytes": 49436,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 12348,
+        "seconds": 0.28,
+        "samplePeak": 0.479583740234375,
+        "rmsDbFS": -19.69964026389309,
+        "dc": [
+          0.0,
+          0.0
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "delivery": {
+        "file": "delivery/se-sword.wav",
+        "sha256": "266f5736ec8790b11a753356f17dfc9b61452f0ac34b4069401d538f06434579",
+        "bytes": 24740,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 6174,
+        "seconds": 0.28,
+        "samplePeak": 0.438262939453125,
+        "rmsDbFS": -19.905842925451893,
+        "dc": [
+          1.5817338840298024e-07,
+          1.5817338840298024e-07
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "listeningVerified": false,
+      "seed": 2026102603,
+      "synthesis": "numpy noise / damped sine / envelopes; build.py synth()",
+      "relativePeak": 0.48
+    },
+    {
+      "id": "se-arrow",
+      "master": {
+        "file": "masters/se-arrow.wav",
+        "sha256": "eb4d2c941c9b15e652fcfce4c1ffdf018ce0158739dd6e357c4efa616a26d882",
+        "bytes": 52964,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 13230,
+        "seconds": 0.3,
+        "samplePeak": 0.47723388671875,
+        "rmsDbFS": -24.860084619507674,
+        "dc": [
+          1.3148162910997732e-07,
+          1.3148162910997732e-07
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "delivery": {
+        "file": "delivery/se-arrow.wav",
+        "sha256": "cbb7950539a397e522b29bcf9b31c56557ff07e6d4b7c5868fc75df8e50888d8",
+        "bytes": 26504,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 6615,
+        "seconds": 0.3,
+        "samplePeak": 0.439056396484375,
+        "rmsDbFS": -25.037654832354313,
+        "dc": [
+          1.706954483182162e-07,
+          1.706954483182162e-07
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "listeningVerified": false,
+      "seed": 2026102604,
+      "synthesis": "numpy noise / damped sine / envelopes; build.py synth()",
+      "relativePeak": 0.48
+    },
+    {
+      "id": "se-impact",
+      "master": {
+        "file": "masters/se-impact.wav",
+        "sha256": "ba2c3e834e272c6426d0d0dff8991bb894376bf1db945961437c3940b10d42a8",
+        "bytes": 42380,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 10584,
+        "seconds": 0.24,
+        "samplePeak": 0.4774169921875,
+        "rmsDbFS": -22.398304840707063,
+        "dc": [
+          -1.7300214356575964e-07,
+          -1.7300214356575964e-07
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "delivery": {
+        "file": "delivery/se-impact.wav",
+        "sha256": "1b3bcc03c2a8484d3f19e8161922965f3ed95afd5aed7fd9af9b941e2f6d517b",
+        "bytes": 21212,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 5292,
+        "seconds": 0.24,
+        "samplePeak": 0.43890380859375,
+        "rmsDbFS": -22.583099378696193,
+        "dc": [
+          -1.5570192920918366e-07,
+          -1.5570192920918366e-07
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "listeningVerified": false,
+      "seed": 2026102605,
+      "synthesis": "numpy noise / damped sine / envelopes; build.py synth()",
+      "relativePeak": 0.48
+    },
+    {
+      "id": "se-miss",
+      "master": {
+        "file": "masters/se-miss.wav",
+        "sha256": "a06b48403f3d0bb7deabe9f025ea0e12d0d5d60c8d406046baae0b1186ef10df",
+        "bytes": 38852,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 9702,
+        "seconds": 0.22,
+        "samplePeak": 0.47998046875,
+        "rmsDbFS": -18.915704542633133,
+        "dc": [
+          -1.8243862412389198e-07,
+          -1.8243862412389198e-07
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "delivery": {
+        "file": "delivery/se-miss.wav",
+        "sha256": "2ef1ec36a9c188d9da1b4aea46fd6c2a6cbd350e13d91fdae0812ce2866ca510",
+        "bytes": 19448,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 4851,
+        "seconds": 0.22,
+        "samplePeak": 0.478607177734375,
+        "rmsDbFS": -18.96356263708689,
+        "dc": [
+          -1.2581974077509791e-07,
+          -1.2581974077509791e-07
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "listeningVerified": false,
+      "seed": 2026102606,
+      "synthesis": "numpy noise / damped sine / envelopes; build.py synth()",
+      "relativePeak": 0.48
+    },
+    {
+      "id": "se-guard",
+      "master": {
+        "file": "masters/se-guard.wav",
+        "sha256": "19999bcf7fb7a5688b4cfbc8b5689090269dfbbe41e02b3a89bb4ab720804ba9",
+        "bytes": 52964,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 13230,
+        "seconds": 0.3,
+        "samplePeak": 0.47998046875,
+        "rmsDbFS": -24.697022816326005,
+        "dc": [
+          -4.613390495086924e-09,
+          -4.613390495086924e-09
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "delivery": {
+        "file": "delivery/se-guard.wav",
+        "sha256": "94c3f0448f0c6764fc09c6139b3f018d3b61a13cf2e82dc0430f94013719673d",
+        "bytes": 26504,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 6615,
+        "seconds": 0.3,
+        "samplePeak": 0.4395751953125,
+        "rmsDbFS": -24.78745985204757,
+        "dc": [
+          0.0,
+          0.0
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "listeningVerified": false,
+      "seed": 2026102607,
+      "synthesis": "numpy noise / damped sine / envelopes; build.py synth()",
+      "relativePeak": 0.48
+    },
+    {
+      "id": "se-skill",
+      "master": {
+        "file": "masters/se-skill.wav",
+        "sha256": "0e05aedd94f07a3b2bf24351a3a0a8ebf7e48ed459358de7864966c58d3e53b2",
+        "bytes": 88244,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 22050,
+        "seconds": 0.5,
+        "samplePeak": 0.47998046875,
+        "rmsDbFS": -18.39576828104148,
+        "dc": [
+          -3.183239441609977e-08,
+          -3.183239441609977e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "delivery": {
+        "file": "delivery/se-skill.wav",
+        "sha256": "b24ec3bf2df81015583d5f398c412784c34687eface40a033610511897a9bc42",
+        "bytes": 44144,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 11025,
+        "seconds": 0.5,
+        "samplePeak": 0.479217529296875,
+        "rmsDbFS": -18.3972953168387,
+        "dc": [
+          1.2456154336734695e-07,
+          1.2456154336734695e-07
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "listeningVerified": false,
+      "seed": 2026102608,
+      "synthesis": "numpy noise / damped sine / envelopes; build.py synth()",
+      "relativePeak": 0.48
+    },
+    {
+      "id": "se-heal",
+      "master": {
+        "file": "masters/se-heal.wav",
+        "sha256": "f18a2e7f8df5bb643cc252d9052901671da06211be254bfdd4b8daf2a14cc7be",
+        "bytes": 114704,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 28665,
+        "seconds": 0.65,
+        "samplePeak": 0.479705810546875,
+        "rmsDbFS": -18.20656160906431,
+        "dc": [
+          1.277554290947148e-08,
+          1.277554290947148e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "delivery": {
+        "file": "delivery/se-heal.wav",
+        "sha256": "b11028d811c0cc031da77ff143005fe797e7c6096cc5cff51f9aaf5042117d40",
+        "bytes": 57376,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 14333,
+        "seconds": 0.6500226757369615,
+        "samplePeak": 0.479705810546875,
+        "rmsDbFS": -18.20671246711938,
+        "dc": [
+          3.832529172190051e-08,
+          3.832529172190051e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "listeningVerified": false,
+      "seed": 2026102609,
+      "synthesis": "numpy noise / damped sine / envelopes; build.py synth()",
+      "relativePeak": 0.48
+    },
+    {
+      "id": "se-chest",
+      "master": {
+        "file": "masters/se-chest.wav",
+        "sha256": "15d585a8ecf44341710e50cdad027f3412b8b7ca1028d098dac049a896080604",
+        "bytes": 114704,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 28665,
+        "seconds": 0.65,
+        "samplePeak": 0.479095458984375,
+        "rmsDbFS": -19.82864561710062,
+        "dc": [
+          -9.581657182103611e-08,
+          -9.581657182103611e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "delivery": {
+        "file": "delivery/se-chest.wav",
+        "sha256": "379e919f3ccbf5d89b8a79cc312c775e27463b413849170156bb71309bcdf357",
+        "bytes": 57376,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 14333,
+        "seconds": 0.6500226757369615,
+        "samplePeak": 0.470977783203125,
+        "rmsDbFS": -19.829656113224864,
+        "dc": [
+          -6.17463033297286e-08,
+          -6.17463033297286e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "listeningVerified": false,
+      "seed": 2026102610,
+      "synthesis": "numpy noise / damped sine / envelopes; build.py synth()",
+      "relativePeak": 0.48
+    },
+    {
+      "id": "se-record",
+      "master": {
+        "file": "masters/se-record.wav",
+        "sha256": "2c91ef9e0a7ef6b56206895ea2542aa3c361601fbdb087169505e9a80532c3a0",
+        "bytes": 74132,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 18522,
+        "seconds": 0.42,
+        "samplePeak": 0.235076904296875,
+        "rmsDbFS": -25.316018043221938,
+        "dc": [
+          1.6476394625310442e-09,
+          1.6476394625310442e-09
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "delivery": {
+        "file": "delivery/se-record.wav",
+        "sha256": "5ea10a21b26b22272a7e097eaf8e0d6d081a988b2ad2b7652eb177fc62dcb92a",
+        "bytes": 37088,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 9261,
+        "seconds": 0.42,
+        "samplePeak": 0.23016357421875,
+        "rmsDbFS": -25.346278044579478,
+        "dc": [
+          -8.238197312655221e-08,
+          -8.238197312655221e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "listeningVerified": false,
+      "seed": 2026102611,
+      "synthesis": "numpy noise / damped sine / envelopes; build.py synth()",
+      "relativePeak": 0.33599999999999997
+    },
+    {
+      "id": "se-mechanism",
+      "master": {
+        "file": "masters/se-mechanism.wav",
+        "sha256": "00a03299c42c7ac0b6b4b998645e53a6dd98b8618c24f5a6c792209f20ab5255",
+        "bytes": 176444,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 44100,
+        "seconds": 1.0,
+        "samplePeak": 0.47998046875,
+        "rmsDbFS": -22.556101710760686,
+        "dc": [
+          -4.567256590136055e-08,
+          -4.567256590136055e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "delivery": {
+        "file": "delivery/se-mechanism.wav",
+        "sha256": "7b8bf91f91a4ca25bc06cbc965f2e30c8af692c7e36ac4b6e6f835c5c1188a64",
+        "bytes": 88244,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 22050,
+        "seconds": 1.0,
+        "samplePeak": 0.428009033203125,
+        "rmsDbFS": -22.672323272233985,
+        "dc": [
+          8.857709750566894e-08,
+          8.857709750566894e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "listeningVerified": false,
+      "seed": 2026102612,
+      "synthesis": "numpy noise / damped sine / envelopes; build.py synth()",
+      "relativePeak": 0.48
+    },
+    {
+      "id": "se-exit",
+      "master": {
+        "file": "masters/se-exit.wav",
+        "sha256": "c89c4dd6fb88d4f67569fbd90f0a131d2506cb200fb688f330140070d9059a7d",
+        "bytes": 123524,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 30870,
+        "seconds": 0.7,
+        "samplePeak": 0.4794921875,
+        "rmsDbFS": -17.380114259891663,
+        "dc": [
+          1.0478986981697441e-07,
+          1.0478986981697441e-07
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "delivery": {
+        "file": "delivery/se-exit.wav",
+        "sha256": "84196278a4b04a1c4bb873b6d770cc3202c0ac139ef2ff04f715e964408f6939",
+        "bytes": 61784,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 15435,
+        "seconds": 0.7,
+        "samplePeak": 0.4794921875,
+        "rmsDbFS": -17.38011711589934,
+        "dc": [
+          7.315519213637836e-08,
+          7.315519213637836e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "listeningVerified": false,
+      "seed": 2026102613,
+      "synthesis": "numpy noise / damped sine / envelopes; build.py synth()",
+      "relativePeak": 0.48
+    },
+    {
+      "id": "se-cart",
+      "master": {
+        "file": "masters/se-cart.wav",
+        "sha256": "76823435f2965025a017df92da6d1d0ac3101d421c218286e1561dc101d1b950",
+        "bytes": 158804,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 39690,
+        "seconds": 0.9,
+        "samplePeak": 0.2340087890625,
+        "rmsDbFS": -28.75967036392985,
+        "dc": [
+          -2.22980540595868e-08,
+          -2.22980540595868e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "delivery": {
+        "file": "delivery/se-cart.wav",
+        "sha256": "58e72f27030cf1a94c9479420b900272c5ff97c480e206b69b3ecae1efabeeac",
+        "bytes": 79424,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 19845,
+        "seconds": 0.9,
+        "samplePeak": 0.222686767578125,
+        "rmsDbFS": -28.86957312268558,
+        "dc": [
+          8.765441940665155e-08,
+          8.765441940665155e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "listeningVerified": false,
+      "seed": 2026102614,
+      "synthesis": "numpy noise / damped sine / envelopes; build.py synth()",
+      "relativePeak": 0.33599999999999997
+    },
+    {
+      "id": "se-turn",
+      "master": {
+        "file": "masters/se-turn.wav",
+        "sha256": "7f2297158bab3706cec18faf027c203f11c0f70a0c4d595c16debd8aed410af3",
+        "bytes": 31796,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 7938,
+        "seconds": 0.18,
+        "samplePeak": 0.05889892578125,
+        "rmsDbFS": -37.55287510231102,
+        "dc": [
+          -2.422030009920635e-07,
+          -2.422030009920635e-07
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "delivery": {
+        "file": "delivery/se-turn.wav",
+        "sha256": "0b2ed036c98a2db4e392d2f0d5cb1577e7fb5ff33a482a1b4465fc9ba7c99c29",
+        "bytes": 15920,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 3969,
+        "seconds": 0.18,
+        "samplePeak": 0.058807373046875,
+        "rmsDbFS": -37.552935654796734,
+        "dc": [
+          -2.0760257227891156e-07,
+          -2.0760257227891156e-07
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "listeningVerified": false,
+      "seed": 2026102615,
+      "synthesis": "numpy noise / damped sine / envelopes; build.py synth()",
+      "relativePeak": 0.16799999999999998
+    },
+    {
+      "id": "se-down",
+      "master": {
+        "file": "masters/se-down.wav",
+        "sha256": "936f1fe79b62f7d97759149a536a214e7ff58d190d7e451eec1cc73904e6dc1c",
+        "bytes": 79424,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 19845,
+        "seconds": 0.45,
+        "samplePeak": 0.234649658203125,
+        "rmsDbFS": -25.196146043371506,
+        "dc": [
+          7.996543524817334e-08,
+          7.996543524817334e-08
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "delivery": {
+        "file": "delivery/se-down.wav",
+        "sha256": "81a5d9f740fe01489463ae39c677c134cc81f297ddf92152f61f3c81a5ff4f15",
+        "bytes": 39736,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 9923,
+        "seconds": 0.4500226757369615,
+        "samplePeak": 0.234375,
+        "rmsDbFS": -25.196756838539805,
+        "dc": [
+          -1.1071579285498337e-07,
+          -1.1071579285498337e-07
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "listeningVerified": false,
+      "seed": 2026102616,
+      "synthesis": "numpy noise / damped sine / envelopes; build.py synth()",
+      "relativePeak": 0.33599999999999997
+    },
+    {
+      "id": "se-victory",
+      "master": {
+        "file": "masters/se-victory.wav",
+        "sha256": "1e8ded05e59e16e3bca66dea43bc19526f16cb85a637bd155ae199a749997fa2",
+        "bytes": 617444,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 154350,
+        "seconds": 3.5,
+        "samplePeak": 0.47998046875,
+        "rmsDbFS": -20.37847373835676,
+        "dc": [
+          3.3671160056284416e-07,
+          1.2786341285025915e-06
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "delivery": {
+        "file": "delivery/se-victory.wav",
+        "sha256": "b78dfd0b22d42b30b901a8b383bf610d8688b5e8547ed8c6d60e3ce6c89cca06",
+        "bytes": 312796,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 77175,
+        "seconds": 3.5,
+        "samplePeak": 0.479156494140625,
+        "rmsDbFS": -20.378482165458514,
+        "dc": [
+          3.72102896218011e-07,
+          1.2428473993764173e-06
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "listeningVerified": false,
+      "source": "scores/se-victory.json",
+      "midi": "scores/se-victory.mid",
+      "loop": false
+    },
+    {
+      "id": "se-defeat",
+      "master": {
+        "file": "masters/se-defeat.wav",
+        "sha256": "3364ba84d680e18f44654f4247bebcb860abad38a334fdbbd87cc10be6e9d0bd",
+        "bytes": 617444,
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 154350,
+        "seconds": 3.5,
+        "samplePeak": 0.47998046875,
+        "rmsDbFS": -24.90681161092771,
+        "dc": [
+          -1.6210795143950437e-06,
+          -1.5987375232831228e-06
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "delivery": {
+        "file": "delivery/se-defeat.wav",
+        "sha256": "78b4ca3cbb1c6958e0eb777bb81f0a022a7a5f4c51d02f29e90e966b3a0c4f70",
+        "bytes": 312796,
+        "sampleRate": 22050,
+        "channels": 2,
+        "frames": 77175,
+        "seconds": 3.5,
+        "samplePeak": 0.480010986328125,
+        "rmsDbFS": -24.906836925875275,
+        "dc": [
+          -1.6477712736880466e-06,
+          -1.548122038994169e-06
+        ],
+        "railSamples": 0,
+        "loop": null,
+        "loopEndExclusive": false
+      },
+      "listeningVerified": false,
+      "source": "scores/se-defeat.json",
+      "midi": "scores/se-defeat.mid",
+      "loop": false
+    }
+  ]
+}

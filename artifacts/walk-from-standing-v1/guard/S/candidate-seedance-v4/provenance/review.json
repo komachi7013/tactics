@@ -1,0 +1,73 @@
+{
+  "status": "比較候補：Seedance2.5・S立ち絵＋ガランS動画・6条件",
+  "inputImageCount": 1,
+  "inputDirection": "S",
+  "referenceVideoCount": 1,
+  "motionRequirementCount": 6,
+  "equipmentInstructionsIncluded": true,
+  "frames": 19,
+  "cycleMs": 800,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "all19FramesViewedOnLight": true,
+  "all19FramesViewedOnDark": true,
+  "facingRetainedInAllSelectedFrames": true,
+  "fullBodyAndBothSolesInsideSelectedFrames": true,
+  "nativeCanvasEdgePixels": 0,
+  "contactReview": {
+    "videoSha256": "bd1d9955ac680d27cd64cb2376355870f581f9f69421a87b52df4a11b837f918",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 36,
+        "foot": "R"
+      },
+      {
+        "frame": 46,
+        "foot": "L"
+      },
+      {
+        "frame": 56,
+        "foot": "R"
+      }
+    ],
+    "reviewNote": "Screen-left boot forward at36/56, screen-right boot supporting forward during44:46 while screen-left passes. Estimated alternating phases, not motion capture or twitch-free certification."
+  },
+  "selectedOutputSeamReviewed": true,
+  "automaticGaitLoopStatus": "Automatic proposal low confidence; manually reviewed chronological36:56 full two-step interval used; no automatic twitch-free certification",
+  "issues": [
+    "Seedance2.5再試行。参照画像を見る指定と6条件、痙攣防止、画像にない布・装備の追加禁止を入力。剣盾を保持し長い布の追加なし。全19コマの明暗背景・立ち絵比較・足元の連続24コマを確認。痙攣の解消は利用者確認待ち。足元高さ282〜291pxの変動と、首元の緑が立ち絵より明るめな点は要確認。比較用候補、ゲーム未適用。"
+  ],
+  "gameApplied": false,
+  "userApproved": false,
+  "referenceMotionReady": true,
+  "art_source": "Higgsfield / Seedance2.5 image + video reference",
+  "generationCountThisRequest": 1,
+  "quotedCreditsThisRequest": 28,
+  "headCentroidRangePx": [
+    0.06584306262772088,
+    1.2614288580962807
+  ],
+  "footRegionSeamOverMedianStep": 0.32375960184578495,
+  "headTopRangePx": [
+    98,
+    100
+  ],
+  "groundRangePx": [
+    282,
+    291
+  ],
+  "drivingCast": "garan",
+  "drivingDirection": "S",
+  "appearanceSource": "own standing image",
+  "motionSource": "same-direction reference video",
+  "referenceImageAttentionExplicit": true,
+  "noAddedClothInstruction": true,
+  "antiTwitchInstruction": true,
+  "consecutiveFootFramesReviewed": [
+    34,
+    57
+  ]
+}

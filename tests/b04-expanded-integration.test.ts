@@ -1,6 +1,6 @@
 import{describe,it,expect}from'vitest';
 import{createCampaign,completeBattle,readCampaign,CAMPAIGN_KEY}from'../src/campaign';import{createInitialState,reduce,getCell,reachable,lineOfSight}from'../src/domain/engine';import{getBattleConfig}from'../src/domain/battles';import{runEnemyActivationWithTrace}from'../src/domain/ai';import{createPartyBattle}from'../src/party';import{defaultParty,commonLevel}from'../src/progression';import{registeredLandscape,registeredFloors}from'../src/view/registeredLandscape';import type{BattleState,Command,BattleId}from'../src/domain/types';
-import b01 from'./fixtures/routes.json';import b02 from'./fixtures/b02-route.json';import b03 from'./fixtures/b03-route.json';import roots from'./fixtures/expanded-b04-roots.json';
+import b01 from'./fixtures/routes.json';import b02 from'./fixtures/defend-cooldown-v1/b02-route.json';import b03 from'./fixtures/manual-cart-v1/b03-route.json';import roots from'./fixtures/defend-cooldown-v1/expanded-b04-roots.json';
 function replay(s:BattleState,commands:Command[]){for(const c of commands){const r=reduce(s,c);expect(r.error,JSON.stringify(c)).toBeUndefined();s=r.state;while(s.phase==='playing'&&s.turn==='enemy')s=runEnemyActivationWithTrace(s).state}return s}
 function checkpoint(){let c=createCampaign();for(const[id,commands]of[['B01',b01.gate.commands],['B02',b02.commands],['B03',b03.commands]]as[BattleId,Command[]][])c=completeBattle(c,replay(createInitialState(id),commands));return c}
 describe('expanded B04 adopted channel integration',()=>{

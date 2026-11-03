@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "tempo_bpm": 96,
+  "meter": [
+    4,
+    4
+  ],
+  "bars": 1,
+  "tracks": [
+    {
+      "name": "Horn cadence",
+      "channel": 0,
+      "program": 60,
+      "notes": [
+        {
+          "beat": 0.0,
+          "duration": 0.42,
+          "pitch": 62,
+          "velocity": 52
+        },
+        {
+          "beat": 0.5,
+          "duration": 0.42,
+          "pitch": 60,
+          "velocity": 52
+        },
+        {
+          "beat": 1.0,
+          "duration": 0.42,
+          "pitch": 57,
+          "velocity": 52
+        }
+      ]
+    },
+    {
+      "name": "Strings",
+      "channel": 1,
+      "program": 48,
+      "notes": [
+        {
+          "beat": 0,
+          "duration": 2.8,
+          "pitch": 50,
+          "velocity": 40
+        },
+        {
+          "beat": 0,
+          "duration": 2.8,
+          "pitch": 57,
+          "velocity": 40
+        },
+        {
+          "beat": 0,
+          "duration": 2.8,
+          "pitch": 60,
+          "velocity": 40
+        },
+        {
+          "beat": 0,
+          "duration": 2.8,
+          "pitch": 65,
+          "velocity": 40
+        }
+      ]
+    }
+  ]
+}

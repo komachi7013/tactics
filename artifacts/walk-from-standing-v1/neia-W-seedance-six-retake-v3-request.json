@@ -1,0 +1,46 @@
+{
+  "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "duration": 4,
+    "resolution": "720p",
+    "generate_audio": false,
+    "count": 1,
+    "aspect_ratio": "1:1",
+    "prompt": "入力したW方向の立ち絵のキャラクターを、その立ち絵と同じ左上向き・背面斜めの向きと視点を保ったまま歩かせてください。\n\n1. 左右2歩で1周期0.8秒。書き出しは19フレーム。4秒の動画の中で5周期、左右合計10歩を繰り返す。\n2. その場で、左右の足を交互に踏み出す控えめな歩行。左足→右足→左足→右足の順に、両足とも向いている方向へ踏み出す。左右1歩ずつを必ず1周期に含める。\n3. 歩幅と足の持ち上げは小さく、上体は起こしたまま。\n4. 支持脚は伸び、反対の脚が軽く膝を曲げて通過する。\n5. 頭・胴の揺れは小さく。\n6. 全身と両足先を画面内に保つ。",
+    "medias": [
+      {
+        "role": "start_image",
+        "value": "f4b7eab3-ff77-4e81-ac11-21bed262dc19"
+      }
+    ]
+  },
+  "quote": {
+    "cost": {
+      "credits": 28,
+      "credits_exact": 28
+    }
+  },
+  "submission": {
+    "results": [
+      {
+        "id": "ad29c421-1f31-4c8c-9f2a-b1f6be6c384a",
+        "type": "video",
+        "status": "pending",
+        "model": "seedance_2_5",
+        "params": {
+          "prompt": "入力したW方向の立ち絵のキャラクターを、その立ち絵と同じ左上向き・背面斜めの向きと視点を保ったまま歩かせてください。\n\n1. 左右2歩で1周期0.8秒。書き出しは19フレーム。4秒の動画の中で5周期、左右合計10歩を繰り返す。\n2. その場で、左右の足を交互に踏み出す控えめな歩行。左足→右足→左足→右足の順に、両足とも向いている方向へ踏み出す。左右1歩ずつを必ず1周期に含める。\n3. 歩幅と足の持ち上げは小さく、上体は起こしたまま。\n4. 支持脚は伸び、反対の脚が軽く膝を曲げて通過する。\n5. 頭・胴の揺れは小さく。\n6. 全身と両足先を画面内に保つ。",
+          "aspect_ratio": "1:1",
+          "duration": 4,
+          "reference_images": [
+            "f4b7eab3-ff77-4e81-ac11-21bed262dc19"
+          ],
+          "mode": "omni_reference",
+          "resolution": "720p",
+          "generate_audio": false
+        }
+      }
+    ]
+  },
+  "userScope": "User explicitly requests W only redo; six Japanese conditions with alternating LEFT then RIGHT; 0.8s full cycle derived as5cycles/10steps over4s. One job only; own W standing image; preserve E/N/S; no game application."
+}

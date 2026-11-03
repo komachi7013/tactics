@@ -1,0 +1,65 @@
+{
+  "status": "再生成E：確認待ちの比較候補",
+  "inputImageCount": 1,
+  "inputDirection": "E",
+  "referenceVideoCount": 0,
+  "motionRequirementCount": 6,
+  "equipmentInstructionsIncluded": false,
+  "frames": 19,
+  "cycleMs": 800,
+  "nativeFullCycleSeconds": 2.0,
+  "retimeSpeedMultiplier": 2.5,
+  "all19FramesViewedOnLight": true,
+  "all19FramesViewedOnDark": true,
+  "facingRetainedInAllSelectedFrames": true,
+  "fullBodyAndBothSolesInsideSelectedFrames": true,
+  "nativeCanvasEdgePixels": 0,
+  "contactReview": {
+    "videoSha256": "ff002e7ac5008ae5997e2b85c49b462dc43873bf8b9b7f7cd58ec05d0c46421c",
+    "visualReviewed": true,
+    "contacts": [
+      {
+        "frame": 24,
+        "foot": "L"
+      },
+      {
+        "frame": 48,
+        "foot": "R"
+      },
+      {
+        "frame": 72,
+        "foot": "L"
+      }
+    ],
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "reviewNote": "New E take; native feet every2frames reviewed; detailed passing phases inspected. Far anatomical L supports24/72 with near R passing; R supports48 while L advances. Estimated phases +/-2frames, not anatomical certification. Native48frame/2second cycle; retime to800ms. Prior take retained separately."
+  },
+  "selectedOutputSeamReviewed": true,
+  "automaticGaitLoopStatus": "no reliable period in configured12..38 source-frame range; manually inspected48-frame cycle",
+  "issues": [
+    "左足の重なり前後を原動画で毎コマ確認した再生成候補。自動周期判定は未通過。原動画2秒を0.8秒に調整。"
+  ],
+  "gameApplied": false,
+  "userApproved": false,
+  "referenceMotionReady": true,
+  "art_source": "Higgsfield / Seedance 2.5 image-to-video",
+  "generationCountThisRequest": 1,
+  "quotedCreditsThisRequest": 28,
+  "headCentroidRangePx": [
+    0.09277501525376408,
+    1.9848170353525063
+  ],
+  "footRegionSeamOverMedianStep": 0.5214344151687752,
+  "headTopRangePx": [
+    97,
+    100
+  ],
+  "groundRangePx": [
+    281,
+    285
+  ],
+  "clarifiedMotionRequirements": true,
+  "previousTakePreserved": true,
+  "footContinuityReview": "native frames20..79 individually inspected, plus all19 output on light/dark backgrounds; not automatic gait certification"
+}

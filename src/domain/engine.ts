@@ -106,11 +106,14 @@ export function reachable(s:BattleState,id:string):Reachable[] {
  const result:Reachable[]=[{...u.pos,cost:0,path:[]}], queue:Reachable[]=[result[0]];
  while(queue.length){queue.sort((a,b)=>a.cost-b.cost||a.y-b.y||a.x-b.x);const p=queue.shift()!;if(result.find(c=>equal(c,p))?.cost!==p.cost)continue;
  for(const d of [{x:0,y:-1},{x:1,y:0},{x:0,y:1},{x:-1,y:0}]){const to={x:p.x+d.x,y:p.y+d.y},cell=getCell(s,to),from=getCell(s,p)!;
- if(!cell||cell.blocked||Math.abs(cell.height-from.height)>1||s.units.some(v=>v.hp>0&&v.id!==id&&equal(v.pos,to)))continue;
+ if(!cell||cell.blocked||Math.abs(cell.height-from.height)>1||s.units.some(v=>v.hp>0&&v.id!==id&&v.team!==u.team&&equal(v.pos,to)))continue;
  const cost=p.cost+(cell.shallow?shallowCost:1);if(cost>u.move)continue;
  const prev=result.find(v=>equal(v,to));if(prev&&prev.cost<=cost)continue;
  const next={...to,cost,path:[...p.path,to]};if(prev)result.splice(result.indexOf(prev),1);result.push(next);queue.push(next);
- }} return result.sort((a,b)=>a.cost-b.cost||a.y-b.y||a.x-b.x);
+ }}
+ // Friendly occupied cells participate in search, but are never legal stops.
+ // Keep them until traversal finishes so routes can continue through allies.
+ return result.filter(p=>!s.units.some(v=>v.hp>0&&v.id!==id&&equal(v.pos,p))).sort((a,b)=>a.cost-b.cost||a.y-b.y||a.x-b.x);
 }
 // Closed cell boxes implement supercover, including edge/corner contact.
 export function lineOfSight(s:BattleState,a:Pos,b:Pos):boolean {
@@ -125,6 +128,23 @@ export function lineOfSight(s:BattleState,a:Pos,b:Pos):boolean {
 function hasProtection(s:BattleState,u:Unit):boolean {
  const source=u.protection&&getUnit(s,u.protection.sourceId);
  return !!source&&source.hp>0&&source.team===u.team&&source.kind!=='escort';
+}
+export interface DefendAvailability {
+ legal:boolean; reason:string; availableRound:number|null;
+ /** Independent of active actor/turn, for hypothetical enemy intent previews. */
+ cooldownReady:boolean;
+}
+export function defendAvailability(s:BattleState,actorId:string):DefendAvailability {
+ const u=getUnit(s,actorId),availableRound=u?(u.defendAvailableRound??s.round):null;
+ const cooldownReady=!!u&&u.hp>0&&u.kind!=='escort'&&availableRound!==null&&s.round>=availableRound;
+ const no=(reason:string):DefendAvailability=>({legal:false,reason,availableRound,cooldownReady});
+ if(s.phase!=='playing')return no('戦闘は終了しています');
+ if(!u||u.hp<=0)return no('生存する戦闘員を選んでください');
+ if(u.kind==='escort')return no('護送対象は防御できません');
+ if(s.activeId!==u.id||s.turn!==u.team||u.acted)return no('未行動の戦闘員の行動を開始してください');
+ if(s.activation.acted)return no('行動済みです');
+ if(!cooldownReady)return no(`防御は再使用待ちです（第${availableRound}ラウンドの本人行動から再使用可）`);
+ return {legal:true,reason:'防御可能',availableRound,cooldownReady};
 }
 export function attackPreview(s:BattleState,attackerId:string,targetId:string):AttackPreview {
  const a=getUnit(s,attackerId),b=getUnit(s,targetId);const no=(reason:string):AttackPreview=>({legal:false,damage:0,rear:false,hitChance:0,reason});
@@ -141,7 +161,7 @@ export function attackPreview(s:BattleState,attackerId:string,targetId:string):A
 export function jobCommandPreview(s:BattleState,actorId:string,targetId:string,kind:'survey'|'protect'|'plank'|'readOrder'):{legal:boolean;reason:string} {
  const a=getUnit(s,actorId),b=getUnit(s,targetId),no=(reason:string)=>({legal:false,reason});
  if(s.phase!=='playing'||s.turn!=='player'||s.activeId!==actorId||!a||a.team!=='player'||a.hp<=0||a.acted||a.kind==='escort'||s.activation.acted)return no('未行動の味方戦闘員の行動を開始してください');
- if((kind!=='survey'&&kind!=='protect'&&kind!=='plank'&&kind!=='readOrder')||a.jobCommand!==kind)return no('現在の主職では使えません');
+ if((kind!=='survey'&&kind!=='protect'&&kind!=='plank'&&kind!=='readOrder')||a.jobCommand!==kind)return no('この人物は使えません');
  if(kind==='readOrder'){
  if(!Number.isInteger(a.readCharges)||(a.readCharges??0)<=0)return no('読令は戦闘2回までです');
  if(!b||b.hp<=0||b.team!=='enemy')return no('生存敵を選んでください');
@@ -214,7 +234,7 @@ export function gatePreview(s:BattleState,gateId?:string):{nextDrained:boolean;r
  const config=getBattleConfig(s.battleId);
  if(config.objective==='sluice'){const gate=config.sluiceGates?.find(g=>g.id===gateId),water=gate&&s.sluices?.[gate.id];return {gateId:gate?.id,name:gate?.name,nextDrained:water?.pendingRound!=null?(water.pendingDrained??!water.drained):!water?.drained,round:water?.pendingRound??s.round+1,region:gate?.region??[],reason:!gate||!water?'操作盤IDを選択してください':water.pendingRound!==null?'切替予約済み（上書き不可）':canGate(s,gateId)?'操作可能':'未行動の味方を操作盤に隣接させてください'};}
  const nextDrained=s.gate.pendingRound!==null?(s.gate.pendingDrained??true):config.reversibleGate?!s.gate.drained:true;
- return {nextDrained,round:s.gate.pendingRound??s.round+1,region:config.gateRegion,reason:config.gateEffect==='chain'&&s.gate.drained?(s.battleId==='B10'?'外港鎖門は開通済み':'鎖門は開通済み'):!config.gate?'操作盤なし':s.gate.pendingRound!==null?'切替予約済み（上書き不可）':canGate(s)?'操作可能':'未行動の味方を操作盤に隣接させてください'};
+ return {nextDrained,round:s.gate.pendingRound??(s.battleId==='B01'?s.round:s.round+1),region:config.gateRegion,reason:config.gateEffect==='chain'&&s.gate.drained?(s.battleId==='B10'?'外港鎖門は開通済み':'鎖門は開通済み'):!config.gate?'操作盤なし':s.gate.pendingRound!==null?'切替予約済み（上書き不可）':canGate(s)?'操作可能':'未行動の味方を操作盤に隣接させてください'};
 }
 export function capturePreview(s:BattleState):{heldRounds:number;requiredRounds:number;eligible:boolean;reason:string}{
  const config=getBattleConfig(s.battleId),base={heldRounds:s.capture?.heldRounds??0,requiredRounds:config.requiredHoldRounds??0};
@@ -260,7 +280,21 @@ export function escortAdvancePreview(s:BattleState):{canAdvance:boolean;next:Pos
  const from=getCell(s,cart.pos),to=getCell(s,next);
  if(!from||!to||to.blocked||Math.abs(from.height-to.height)>1)return no('次の進行先は通行不能です',next);
  if(s.units.some(u=>u.hp>0&&equal(u.pos,next)))return no('次の進行先が占有されています',next);
- return {canAdvance:true,next:{...next},reason:'次ラウンド開始に1セル前進'};
+ return {canAdvance:true,next:{...next},reason:s.battleId==='B03'?'「荷車を押す」で1セル前進':'次ラウンド開始に1セル前進'};
+}
+/** B03 only: one adjacent combatant action, at most once per cart per round. */
+export function pushCartPreview(s:BattleState):{legal:boolean;next:Pos|null;reason:string} {
+ const no=(reason:string,next:Pos|null=null)=>({legal:false,next,reason});
+ if(s.battleId!=='B03'||escortUnit(s)?.id!=='escort-cart')return no('押せる荷車がありません');
+ if(s.phase!=='playing')return no('戦闘は終了しています');
+ const actor=s.activeId?getUnit(s,s.activeId):undefined,cart=escortUnit(s)!;
+ if(s.turn!=='player'||!actor||actor.team!=='player'||actor.hp<=0||actor.kind==='escort'||actor.acted)return no('未行動の味方戦闘員を選んでください');
+ if(s.activation.acted)return no('この手番の行動は使用済みです');
+ if(dist(actor.pos,cart.pos)!==1)return no('荷車に上下左右で隣接してください');
+ if((s.escort?.lastPushedRound??0)>=s.round)return no('荷車を押せるのは1ラウンドに1回です');
+ const preview=escortAdvancePreview(s);
+ if(!preview.canAdvance)return no(preview.reason,preview.next);
+ return {legal:true,next:preview.next,reason:'1行動で荷車を1セル押す（荷車全体で1ラウンドに1回）'};
 }
 function evaluate(s:BattleState):void {
  const lise=getUnit(s,'ally-lise'),config=getBattleConfig(s.battleId),cart=escortUnit(s);
@@ -298,8 +332,9 @@ export function reduce(s:BattleState,cmd:Command):Result {
  case 'loot':{const p=equipmentPickupPreview(s,cmd.eventId);if(!p.eligible)return fail(p.reason);break;}
  case 'collect':if(!canCollect(s,cmd.recordId))return fail(['evacuate','repair'].includes(getBattleConfig(s.battleId).objective??'')?evacuationPreview(s,cmd.recordId).reason:'記録を採取できません');break;
  case 'repair':{const p=repairPreview(s,cmd.siteId);if(!p.eligible)return fail(p.reason);break;}
+ case 'pushCart':{const p=pushCartPreview(s);if(!p.legal)return fail(p.reason);break;}
  case 'gate':if(!canGate(s,cmd.gateId))return fail(getBattleConfig(s.battleId).gateEffect==='chain'?'鎖門を操作できません':'水門を操作できません');break;
- case 'defend':if(s.activation.acted)return fail('行動済みです');break;
+ case 'defend':{const p=defendAvailability(s,u.id);if(!p.legal)return fail(p.reason);break;}
  case 'end':if(!(['N','E','S','W'] as Facing[]).includes(cmd.facing))return fail('向きが不正です');break;
  default:return fail('不正なコマンドです');
  }
@@ -332,8 +367,9 @@ export function reduce(s:BattleState,cmd:Command):Result {
  case 'loot':n.pendingEquipment=[...(n.pendingEquipment??[]),cmd.eventId];n.activation.acted=true;n.log.push(`${v.name}が装備箱を仮回収（勝利と保存で確定・次出撃から使用）`);break;
  case 'collect':{n.records.push(cmd.recordId);n.activation.acted=true;const config=getBattleConfig(n.battleId),r=config.records.find(r=>r.id===cmd.recordId)!;if(['evacuate','repair'].includes(config.objective??'')){getCell(n,r)!.blocked=false;n.log.push(config.objective==='repair'?`${v.name}が${r.name}を救出し、場外の安全な保守作業場所へ案内した（${cmd.recordId}）`:`${v.name}が${r.name}を避難案内。場外の案内係が退避路へ送った（${cmd.recordId}）`);}else n.log.push(`${v.name}が記録${cmd.recordId}を確保（部隊共有）`);break;}
  case 'repair':{const p=repairPreview(n,cmd.siteId);n.repairs![cmd.siteId].pendingRound=p.round;n.activation.acted=true;n.log.push(`補助弁${p.siteId}（${p.name}）復旧予約: 第${p.round}ラウンド開始に完了（水位・地形は変わらない）`);break;}
- case 'gate':{const p=gatePreview(n,cmd.gateId);if(getBattleConfig(n.battleId).objective==='sluice'){const water=n.sluices![cmd.gateId!];water.pendingRound=p.round;water.pendingDrained=p.nextDrained;n.activation.acted=true;n.log.push(`水路${p.gateId}（${p.name}）予約: 第${p.round}ラウンド開始に${p.nextDrained?'排水':'再入水'}`);break;}n.gate.pendingRound=p.round;if(getBattleConfig(n.battleId).reversibleGate)n.gate.pendingDrained=p.nextDrained;n.activation.acted=true;n.log.push(getBattleConfig(n.battleId).gateEffect==='chain'?(n.battleId==='B10'?`外港鎖門の開通信号予約: 第${p.round}ラウンド開始に開通（水位・地形は変わらない）`:`鎖門予約: 第${p.round}ラウンド開始に開通（水位は変わらない）`):`水門予約: 第${p.round}ラウンド開始に${p.nextDrained?'排水':'再入水'}`);break;}
- case 'defend':v.guard=true;n.activation.acted=true;n.log.push(`${v.name}が防御`);break;
+ case 'pushCart':{const p=pushCartPreview(n);escortUnit(n)!.pos={...p.next!};n.escort!.index++;n.escort!.lastPushedRound=n.round;n.activation.acted=true;n.log.push(`${v.name}が荷車を1セル押した（このラウンドの荷車押しは使用済み）`);break;}
+ case 'gate':{const p=gatePreview(n,cmd.gateId);if(n.battleId==='B01'){n.gate.drained=true;n.gate.pendingRound=null;for(const cell of n.cells)if(getBattleConfig(n.battleId).gateRegion.some(pos=>equal(pos,cell)))cell.shallow=false;n.activation.acted=true;n.log.push('水門を操作し、その場で排水完了。対象水路の移動費が1になった。');break;}if(getBattleConfig(n.battleId).objective==='sluice'){const water=n.sluices![cmd.gateId!];water.pendingRound=p.round;water.pendingDrained=p.nextDrained;n.activation.acted=true;n.log.push(`水路${p.gateId}（${p.name}）予約: 第${p.round}ラウンド開始に${p.nextDrained?'排水':'再入水'}`);break;}n.gate.pendingRound=p.round;if(getBattleConfig(n.battleId).reversibleGate)n.gate.pendingDrained=p.nextDrained;n.activation.acted=true;n.log.push(getBattleConfig(n.battleId).gateEffect==='chain'?(n.battleId==='B10'?`外港鎖門の開通信号予約: 第${p.round}ラウンド開始に開通（水位・地形は変わらない）`:`鎖門予約: 第${p.round}ラウンド開始に開通（水位は変わらない）`):`水門予約: 第${p.round}ラウンド開始に${p.nextDrained?'排水':'再入水'}`);break;}
+ case 'defend':v.guard=true;v.defendAvailableRound=n.round+2;n.activation.acted=true;n.log.push(`${v.name}が防御`);break;
  case 'end':if(n.readOrders&&v.team==='enemy')n.readOrders=n.readOrders.filter(id=>id!==v.id);v.facing=cmd.facing;v.acted=true;n.activeId=null;n.activation={moved:false,acted:false,moveOrigin:null};break;
  }
  evaluate(n);if(n.phase!=='playing')return battleResult(n);
@@ -360,7 +396,7 @@ function advanceTurn(n:BattleState):Result {
  if(n.gate.pendingRound===n.round){const config=getBattleConfig(n.battleId);n.gate.drained=n.gate.pendingDrained??true;n.gate.pendingRound=null;delete n.gate.pendingDrained;n.cells.forEach(c=>{if(config.gateRegion.some(p=>equal(p,c)))c.shallow=!n.gate.drained;});n.log.push(config.gateEffect==='chain'?(n.battleId==='B10'?'外港鎖門が開通。水位・地形は変わらない。':'鎖門が開通。水位・橋・地形は変わらない。'):n.gate.drained?'排水完了。浅瀬の移動費が1になった。':'再入水完了。水路8セルは浅瀬になった。');}
  if(n.sluices)for(const g of getBattleConfig(n.battleId).sluiceGates??[]){const water=n.sluices[g.id];if(water.pendingRound!==n.round)continue;water.drained=water.pendingDrained??!water.drained;water.pendingRound=null;delete water.pendingDrained;for(const c of n.cells)if(g.region.some(p=>equal(p,c)))c.shallow=!water.drained;n.log.push(`水路${g.id}（${g.name}）${water.drained?'排水':'再入水'}完了。対象4セルの移動費を切替。`);}
  if(n.repairs){for(const site of getBattleConfig(n.battleId).repairSites??[]){const status=n.repairs[site.id];if(status.pendingRound===n.round){status.completed=true;status.pendingRound=null;n.log.push(`補助弁${site.id}（${site.name}）復旧完了。地形・水位は変わらない。`);}}evaluate(n);if(n.phase!=='playing')return battleResult(n);}
- if(n.escort){const preview=escortAdvancePreview(n);if(preview.canAdvance){escortUnit(n)!.pos={...preview.next!};n.escort.index++;n.log.push(n.battleId==='B09'?'代表・証人一行が1セル前進。':n.battleId==='B06'?'トマが1セル前進。':'荷車が1セル前進。');}else n.log.push((n.battleId==='B09'?'代表・証人一行停止: ':n.battleId==='B06'?'トマ停止: ':'荷車停止: ')+preview.reason);evaluate(n);if(n.phase!=='playing')return battleResult(n);}
+ if(n.escort&&n.battleId!=='B03'){const preview=escortAdvancePreview(n);if(preview.canAdvance){escortUnit(n)!.pos={...preview.next!};n.escort.index++;n.log.push(n.battleId==='B09'?'代表・証人一行が1セル前進。':n.battleId==='B06'?'トマが1セル前進。':'荷車が1セル前進。');}else n.log.push((n.battleId==='B09'?'代表・証人一行停止: ':n.battleId==='B06'?'トマ停止: ':'荷車停止: ')+preview.reason);evaluate(n);if(n.phase!=='playing')return battleResult(n);}
  n.log.push('味方ターン開始');
  n.log=n.log.slice(-40);return battleResult(n);
 }

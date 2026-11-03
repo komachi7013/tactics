@@ -1,0 +1,8 @@
+Animate the character in the supplied SOUTH-facing standing image, keeping the same front-facing three-quarter orientation toward the lower-left and viewpoint.
+
+1. One complete left-and-right TWO-step gait cycle takes approximately 0.8 seconds. The final export will use 19 frames per cycle.
+2. Walk in place with restrained, clearly alternating left and right steps.
+3. Use small strides and low foot lift. Keep the upper body upright.
+4. The supporting leg straightens naturally while the opposite leg passes with a slight knee bend.
+5. Keep head and torso movement small.
+6. Keep the entire character and both feet, including the boot tips and soles, fully inside the frame throughout the clip.

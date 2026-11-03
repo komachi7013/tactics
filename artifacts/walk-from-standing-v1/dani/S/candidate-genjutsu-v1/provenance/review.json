@@ -1,0 +1,66 @@
+{
+  "status": "比較候補：Genjutsu・S立ち絵＋ガランS動画・6条件",
+  "inputImageCount": 1,
+  "inputDirection": "S",
+  "referenceVideoCount": 1,
+  "motionRequirementCount": 6,
+  "equipmentInstructionsIncluded": false,
+  "frames": 19,
+  "cycleMs": 800,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "all19FramesViewedOnLight": true,
+  "all19FramesViewedOnDark": true,
+  "facingRetainedInAllSelectedFrames": true,
+  "fullBodyAndBothSolesInsideSelectedFrames": true,
+  "nativeCanvasEdgePixels": 0,
+  "contactReview": {
+    "videoSha256": "0019dc722c6f40a8167df501cb1c278a3f449b2a6da12abcd00032bc0f61c11b",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 32,
+        "foot": "R"
+      },
+      {
+        "frame": 42,
+        "foot": "L"
+      },
+      {
+        "frame": 52,
+        "foot": "R"
+      }
+    ],
+    "reviewNote": "Screen-left boot reaches forward at32 and52; screen-right boot passes and reaches forward at42. Alternating forward/support phases visually estimated, not motion capture."
+  },
+  "selectedOutputSeamReviewed": true,
+  "automaticGaitLoopStatus": "Automatic proposal low confidence; manually reviewed chronological32:52 two-step interval used",
+  "issues": [
+    "Genjutsuで再試行。左右の踏み出し・支持交代を原動画と全19コマの明暗背景で確認。足元高さ282〜290pxの変動が残るため比較候補、利用者確認待ち。原周期0.833秒を0.8秒に調整。"
+  ],
+  "gameApplied": false,
+  "userApproved": false,
+  "referenceMotionReady": true,
+  "art_source": "Higgsfield / Genjutsu image + video reference",
+  "generationCountThisRequest": 1,
+  "quotedCreditsThisRequest": 35,
+  "headCentroidRangePx": [
+    1.2455495498181648,
+    1.0879676371808813
+  ],
+  "footRegionSeamOverMedianStep": 0.26648203772931733,
+  "headTopRangePx": [
+    96,
+    97
+  ],
+  "groundRangePx": [
+    282,
+    290
+  ],
+  "drivingCast": "garan",
+  "drivingDirection": "S",
+  "appearanceSource": "own standing image",
+  "motionSource": "same-direction reference video"
+}

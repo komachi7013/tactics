@@ -1,0 +1,2165 @@
+{
+  "revision": "independent-r2",
+  "cueCount": 16,
+  "pairCount": 120,
+  "method": "Pitch intervals remove transposition; beat/duration tokens remove tempo changes. Compare 8-event shingles separately for lead, rhythm, accompaniment. This does not establish perceived difference or musical quality.",
+  "intentionalQuotation": "Title/ending opening two bars; single 3-note river-record cameo in C of other battle/preparation cues.",
+  "sourceFingerprints": {
+    "bgm-prologue": {
+      "melody": "0cf827893a6066335dbf5e7f1b2950e0061e73587fb3f368fb7bdabebe394600",
+      "accompaniment": "ac21c5940f843c6ce2edfa8cb22ce1430bf6fc461f90b451080f38e684451a88",
+      "meter": [
+        3,
+        4
+      ],
+      "bpm": 72,
+      "harmony": [
+        "Dm",
+        "Bb",
+        "Gm",
+        "A",
+        "Dm",
+        "F",
+        "C",
+        "A",
+        "Bb",
+        "Gm",
+        "E7",
+        "A"
+      ],
+      "form": [
+        {
+          "bar": 0,
+          "bars": 6,
+          "name": "A"
+        },
+        {
+          "bar": 6,
+          "bars": 6,
+          "name": "B"
+        },
+        {
+          "bar": 12,
+          "bars": 6,
+          "name": "C"
+        },
+        {
+          "bar": 18,
+          "bars": 6,
+          "name": "A2"
+        }
+      ]
+    },
+    "bgm-b01": {
+      "melody": "4c534a657a559b83688e40f80e53fb229006613709c7ba1732b077ea66ce35ed",
+      "accompaniment": "0bd66483199cbbdc6d2806a4f549236398d03a9d3ebc7ced0f4a32a56802cecd",
+      "meter": [
+        6,
+        8
+      ],
+      "bpm": 116,
+      "harmony": [
+        "G",
+        "D",
+        "Em",
+        "C",
+        "Am",
+        "D",
+        "G",
+        "D",
+        "C",
+        "G",
+        "Am",
+        "D"
+      ],
+      "form": [
+        {
+          "bar": 0,
+          "bars": 12,
+          "name": "A"
+        },
+        {
+          "bar": 12,
+          "bars": 16,
+          "name": "B"
+        },
+        {
+          "bar": 28,
+          "bars": 8,
+          "name": "C"
+        },
+        {
+          "bar": 36,
+          "bars": 12,
+          "name": "A2"
+        },
+        {
+          "bar": 48,
+          "bars": 16,
+          "name": "B2"
+        }
+      ]
+    },
+    "bgm-title": {
+      "melody": "9c8a6d257a28f4b433e89d9182d5f4521ce73a953de79e38ae4d69b0e365cadf",
+      "accompaniment": "350b56ee93f7a1b7ea211424725c8d48ca6ff5be7c98b99a4c18b6361ae8f2ec",
+      "meter": [
+        6,
+        8
+      ],
+      "bpm": 120,
+      "harmony": [
+        "D",
+        "A",
+        "Bm",
+        "G",
+        "D",
+        "F#m",
+        "Em",
+        "A",
+        "G",
+        "D",
+        "Em",
+        "A"
+      ],
+      "form": [
+        {
+          "bar": 0,
+          "bars": 8,
+          "name": "A"
+        },
+        {
+          "bar": 8,
+          "bars": 12,
+          "name": "B"
+        },
+        {
+          "bar": 20,
+          "bars": 4,
+          "name": "C"
+        },
+        {
+          "bar": 24,
+          "bars": 8,
+          "name": "A2"
+        },
+        {
+          "bar": 32,
+          "bars": 8,
+          "name": "B2"
+        }
+      ]
+    },
+    "bgm-b11": {
+      "melody": "d744b85b3b843fd672242f14f66285843d99c9d7168e6d46e000afb02ed55bba",
+      "accompaniment": "3c0f8c4cf151a28a0dbe3de720eb0fe0ecf9b60ad9f680e806a60044419e6a58",
+      "meter": [
+        9,
+        8
+      ],
+      "bpm": 132,
+      "harmony": [
+        "Am",
+        "F",
+        "Dm",
+        "E",
+        "Am",
+        "C",
+        "G",
+        "E",
+        "Dm",
+        "F",
+        "B7",
+        "E"
+      ],
+      "form": [
+        {
+          "bar": 0,
+          "bars": 9,
+          "name": "A"
+        },
+        {
+          "bar": 9,
+          "bars": 9,
+          "name": "B"
+        },
+        {
+          "bar": 18,
+          "bars": 6,
+          "name": "C"
+        },
+        {
+          "bar": 24,
+          "bars": 9,
+          "name": "A2"
+        },
+        {
+          "bar": 33,
+          "bars": 9,
+          "name": "B2"
+        },
+        {
+          "bar": 42,
+          "bars": 6,
+          "name": "D"
+        }
+      ]
+    },
+    "bgm-b07": {
+      "melody": "11fda786f1d72a74550486a6e9432f07f15f3aef82223f3ad32cd8d1c72d6e18",
+      "accompaniment": "3d3899533915691bb0a1433845604c52756169a0c7487f054c7cacce4ddcacf6",
+      "meter": [
+        3,
+        4
+      ],
+      "bpm": 156,
+      "harmony": [
+        "Am",
+        "D",
+        "G",
+        "Em",
+        "Am",
+        "C",
+        "D",
+        "E",
+        "Am",
+        "G",
+        "D",
+        "E"
+      ],
+      "form": [
+        {
+          "bar": 0,
+          "bars": 12,
+          "name": "A"
+        },
+        {
+          "bar": 12,
+          "bars": 12,
+          "name": "B"
+        },
+        {
+          "bar": 24,
+          "bars": 12,
+          "name": "C"
+        },
+        {
+          "bar": 36,
+          "bars": 12,
+          "name": "A2"
+        },
+        {
+          "bar": 48,
+          "bars": 12,
+          "name": "B2"
+        },
+        {
+          "bar": 60,
+          "bars": 12,
+          "name": "D"
+        },
+        {
+          "bar": 72,
+          "bars": 12,
+          "name": "A3"
+        }
+      ]
+    },
+    "bgm-b06": {
+      "melody": "da166c19bcb51292e6c2bab46dc26dbb827ad846988013cb898991fa63bb8831",
+      "accompaniment": "de56e78eb0bde9600e378f5966264dacae95769f6b17096da85c7e83158453fe",
+      "meter": [
+        6,
+        8
+      ],
+      "bpm": 128,
+      "harmony": [
+        "D",
+        "C",
+        "G",
+        "D",
+        "Am",
+        "C",
+        "G",
+        "A",
+        "D",
+        "Bm",
+        "C",
+        "A"
+      ],
+      "form": [
+        {
+          "bar": 0,
+          "bars": 12,
+          "name": "A"
+        },
+        {
+          "bar": 12,
+          "bars": 12,
+          "name": "B"
+        },
+        {
+          "bar": 24,
+          "bars": 12,
+          "name": "C"
+        },
+        {
+          "bar": 36,
+          "bars": 12,
+          "name": "A2"
+        },
+        {
+          "bar": 48,
+          "bars": 12,
+          "name": "B2"
+        },
+        {
+          "bar": 60,
+          "bars": 12,
+          "name": "D"
+        }
+      ]
+    },
+    "bgm-b10": {
+      "melody": "2a30aff5d2face542a2f9b14089847207b4dd1a5e89606d7860da99b3f69a0df",
+      "accompaniment": "7f44514cc6772c7e03468e937c52db9f3afd85e23765239d5bfb6e293e22e580",
+      "meter": [
+        2,
+        4
+      ],
+      "bpm": 136,
+      "harmony": [
+        "Bb",
+        "F",
+        "Gm",
+        "Eb",
+        "Cm",
+        "F",
+        "Bb",
+        "Dm",
+        "Eb",
+        "Bb",
+        "C7",
+        "F"
+      ],
+      "form": [
+        {
+          "bar": 0,
+          "bars": 16,
+          "name": "A"
+        },
+        {
+          "bar": 16,
+          "bars": 24,
+          "name": "B"
+        },
+        {
+          "bar": 40,
+          "bars": 16,
+          "name": "C"
+        },
+        {
+          "bar": 56,
+          "bars": 24,
+          "name": "A2"
+        },
+        {
+          "bar": 80,
+          "bars": 16,
+          "name": "B2"
+        },
+        {
+          "bar": 96,
+          "bars": 16,
+          "name": "D"
+        }
+      ]
+    },
+    "bgm-b05": {
+      "melody": "6c46e47c245ca937307c3f31406af11ba354e69e474315cb71b4be968926b248",
+      "accompaniment": "e20367e12c0026066c0f67de2269a3960c48b3e64042c819fc7c8163a77f70e2",
+      "meter": [
+        5,
+        4
+      ],
+      "bpm": 138,
+      "harmony": [
+        "Bm",
+        "G",
+        "Em",
+        "F#",
+        "Bm",
+        "D",
+        "A",
+        "F#",
+        "G",
+        "C",
+        "Em",
+        "F#"
+      ],
+      "form": [
+        {
+          "bar": 0,
+          "bars": 8,
+          "name": "A"
+        },
+        {
+          "bar": 8,
+          "bars": 8,
+          "name": "B"
+        },
+        {
+          "bar": 16,
+          "bars": 12,
+          "name": "C"
+        },
+        {
+          "bar": 28,
+          "bars": 8,
+          "name": "A2"
+        },
+        {
+          "bar": 36,
+          "bars": 8,
+          "name": "B2"
+        }
+      ]
+    },
+    "bgm-b09": {
+      "melody": "4f18d24b7ed500f75e036b6ebd4a465df630f969cc3847dd53d3df257e39a4a7",
+      "accompaniment": "244742a838569c99d070f53fba521e46455e5aa0174615e43fb3703977699310",
+      "meter": [
+        4,
+        4
+      ],
+      "bpm": 124,
+      "harmony": [
+        "G",
+        "Bm",
+        "C",
+        "D",
+        "Em",
+        "C",
+        "Am",
+        "D",
+        "G",
+        "Em",
+        "A",
+        "D"
+      ],
+      "form": [
+        {
+          "bar": 0,
+          "bars": 12,
+          "name": "A"
+        },
+        {
+          "bar": 12,
+          "bars": 12,
+          "name": "B"
+        },
+        {
+          "bar": 24,
+          "bars": 8,
+          "name": "C"
+        },
+        {
+          "bar": 32,
+          "bars": 12,
+          "name": "A2"
+        },
+        {
+          "bar": 44,
+          "bars": 8,
+          "name": "D"
+        }
+      ]
+    },
+    "bgm-b08": {
+      "melody": "c1d0c6264a8889b5a5e48a79ad9eaae77e8f7ca4c42d22f2536c9b8587b5dab1",
+      "accompaniment": "3a0c5303186d41e7d51a0baf9ee35621a5c0644d1580af6183953bbdcc440e6d",
+      "meter": [
+        7,
+        8
+      ],
+      "bpm": 126,
+      "harmony": [
+        "Cm",
+        "F",
+        "Dm",
+        "G",
+        "Cm",
+        "Bb",
+        "F",
+        "G",
+        "Ab",
+        "Fm",
+        "D7",
+        "G"
+      ],
+      "form": [
+        {
+          "bar": 0,
+          "bars": 8,
+          "name": "A"
+        },
+        {
+          "bar": 8,
+          "bars": 14,
+          "name": "B"
+        },
+        {
+          "bar": 22,
+          "bars": 8,
+          "name": "C"
+        },
+        {
+          "bar": 30,
+          "bars": 8,
+          "name": "A2"
+        },
+        {
+          "bar": 38,
+          "bars": 14,
+          "name": "B2"
+        },
+        {
+          "bar": 52,
+          "bars": 8,
+          "name": "D"
+        }
+      ]
+    },
+    "bgm-b12": {
+      "melody": "39fee565380aae618137da3348a29bca918dcf7b184dab6935a9a60acf28b44a",
+      "accompaniment": "fabb3779b4bf0e93018cfe374b7d3c71e78f9e8bdce5457e34b9db90916d4f0b",
+      "meter": [
+        4,
+        4
+      ],
+      "bpm": 148,
+      "harmony": [
+        "Dm",
+        "Bb",
+        "Gm",
+        "A",
+        "Dm",
+        "C",
+        "F",
+        "A",
+        "Bb",
+        "Gm",
+        "E7",
+        "A",
+        "Dm",
+        "F",
+        "C",
+        "A"
+      ],
+      "form": [
+        {
+          "bar": 0,
+          "bars": 16,
+          "name": "A"
+        },
+        {
+          "bar": 16,
+          "bars": 12,
+          "name": "B"
+        },
+        {
+          "bar": 28,
+          "bars": 8,
+          "name": "C"
+        },
+        {
+          "bar": 36,
+          "bars": 12,
+          "name": "D"
+        },
+        {
+          "bar": 48,
+          "bars": 16,
+          "name": "A2"
+        }
+      ]
+    },
+    "bgm-b04": {
+      "melody": "b7863cf5ccccc1ce883863c6f4645499d6304cca7d4759beba5223183d5306df",
+      "accompaniment": "62ce062c53f0a4a286bda7fef4f0d08788f31253a6e593e62e884570db5e3b23",
+      "meter": [
+        12,
+        8
+      ],
+      "bpm": 144,
+      "harmony": [
+        "Cm",
+        "F",
+        "Bb",
+        "Gm",
+        "Cm",
+        "Dm",
+        "F",
+        "G",
+        "Cm",
+        "Eb",
+        "Bb",
+        "G"
+      ],
+      "form": [
+        {
+          "bar": 0,
+          "bars": 8,
+          "name": "A"
+        },
+        {
+          "bar": 8,
+          "bars": 8,
+          "name": "B"
+        },
+        {
+          "bar": 16,
+          "bars": 4,
+          "name": "C"
+        },
+        {
+          "bar": 20,
+          "bars": 12,
+          "name": "A2"
+        },
+        {
+          "bar": 32,
+          "bars": 8,
+          "name": "B2"
+        }
+      ]
+    },
+    "bgm-ending": {
+      "melody": "187e0039bb1c0ef6433722f24e12380cc8a5de00dd4c93789020c26a0d2737a2",
+      "accompaniment": "d99b88b7b0c9f62a4f4920cad36149ca39f4344437950865a8fa43ed23117080",
+      "meter": [
+        3,
+        4
+      ],
+      "bpm": 80,
+      "harmony": [
+        "D",
+        "Bm",
+        "G",
+        "A",
+        "F#m",
+        "Bm",
+        "Em",
+        "A",
+        "G",
+        "D",
+        "Em",
+        "A",
+        "D",
+        "G",
+        "A",
+        "A"
+      ],
+      "form": [
+        {
+          "bar": 0,
+          "bars": 8,
+          "name": "A"
+        },
+        {
+          "bar": 8,
+          "bars": 8,
+          "name": "B"
+        },
+        {
+          "bar": 16,
+          "bars": 8,
+          "name": "C"
+        },
+        {
+          "bar": 24,
+          "bars": 8,
+          "name": "D"
+        }
+      ]
+    },
+    "bgm-b03": {
+      "melody": "72632c9c3986338ce61065ccb2f6cff3c9cc9c77aba38bba7e32856b37ef67fd",
+      "accompaniment": "c12b3474a37ff56d59e772b74fe55377cf762dce7752ad9044f8138d4aeb6d52",
+      "meter": [
+        4,
+        4
+      ],
+      "bpm": 112,
+      "harmony": [
+        "F",
+        "C",
+        "Dm",
+        "Bb",
+        "Gm",
+        "C",
+        "F",
+        "A",
+        "Dm",
+        "Gm",
+        "Bb",
+        "C"
+      ],
+      "form": [
+        {
+          "bar": 0,
+          "bars": 8,
+          "name": "A"
+        },
+        {
+          "bar": 8,
+          "bars": 12,
+          "name": "B"
+        },
+        {
+          "bar": 20,
+          "bars": 8,
+          "name": "C"
+        },
+        {
+          "bar": 28,
+          "bars": 8,
+          "name": "A2"
+        },
+        {
+          "bar": 36,
+          "bars": 8,
+          "name": "B2"
+        }
+      ]
+    },
+    "bgm-briefing": {
+      "melody": "4ed51f65f9b91eaebd7ad7c41e912fd38953bf9edc9b27bfd611646af4df32b6",
+      "accompaniment": "d67d61c394b797b21b5961cbde8df0e8a0dd281dd8e9d87175dc962a60c25063",
+      "meter": [
+        5,
+        4
+      ],
+      "bpm": 100,
+      "harmony": [
+        "D",
+        "E",
+        "G",
+        "D",
+        "Bm",
+        "F#m",
+        "Em",
+        "A",
+        "D",
+        "G",
+        "E",
+        "A"
+      ],
+      "form": [
+        {
+          "bar": 0,
+          "bars": 6,
+          "name": "A"
+        },
+        {
+          "bar": 6,
+          "bars": 8,
+          "name": "B"
+        },
+        {
+          "bar": 14,
+          "bars": 4,
+          "name": "C"
+        },
+        {
+          "bar": 18,
+          "bars": 6,
+          "name": "A2"
+        },
+        {
+          "bar": 24,
+          "bars": 6,
+          "name": "B2"
+        }
+      ]
+    },
+    "bgm-b02": {
+      "melody": "b69356c1ed60e028f6b843cf1f5a0d522cb8e611565c6e52fb257c952c955fc9",
+      "accompaniment": "4781bb1efa6c0877399c02f76507fcbb3172ed84a0255eb57d90e5c8e70ed1c9",
+      "meter": [
+        7,
+        8
+      ],
+      "bpm": 132,
+      "harmony": [
+        "Em",
+        "C",
+        "D",
+        "B",
+        "Em",
+        "Am",
+        "C",
+        "B",
+        "Em",
+        "G",
+        "Am",
+        "B"
+      ],
+      "form": [
+        {
+          "bar": 0,
+          "bars": 10,
+          "name": "A"
+        },
+        {
+          "bar": 10,
+          "bars": 10,
+          "name": "B"
+        },
+        {
+          "bar": 20,
+          "bars": 10,
+          "name": "C"
+        },
+        {
+          "bar": 30,
+          "bars": 10,
+          "name": "A2"
+        },
+        {
+          "bar": 40,
+          "bars": 10,
+          "name": "B2"
+        },
+        {
+          "bar": 50,
+          "bars": 10,
+          "name": "A3"
+        }
+      ]
+    }
+  },
+  "reviewFlags": [],
+  "pairs": [
+    {
+      "a": "bgm-prologue",
+      "b": "bgm-b01",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-prologue",
+      "b": "bgm-title",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-prologue",
+      "b": "bgm-b11",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-prologue",
+      "b": "bgm-b07",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": true,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-prologue",
+      "b": "bgm-b06",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-prologue",
+      "b": "bgm-b10",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-prologue",
+      "b": "bgm-b05",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-prologue",
+      "b": "bgm-b09",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-prologue",
+      "b": "bgm-b08",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-prologue",
+      "b": "bgm-b12",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-prologue",
+      "b": "bgm-b04",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.028037383177570093,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-prologue",
+      "b": "bgm-ending",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": true,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-prologue",
+      "b": "bgm-b03",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-prologue",
+      "b": "bgm-briefing",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.02631578947368421,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-prologue",
+      "b": "bgm-b02",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b01",
+      "b": "bgm-title",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.17777777777777778,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": true,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b01",
+      "b": "bgm-b11",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.044444444444444446,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b01",
+      "b": "bgm-b07",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.04081632653061224,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b01",
+      "b": "bgm-b06",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.006944444444444444,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": true,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b01",
+      "b": "bgm-b10",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.033112582781456956,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b01",
+      "b": "bgm-b05",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.01875,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b01",
+      "b": "bgm-b09",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b01",
+      "b": "bgm-b08",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.18115942028985507,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b01",
+      "b": "bgm-b12",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.05027932960893855,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b01",
+      "b": "bgm-b04",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.013245033112582781,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b01",
+      "b": "bgm-ending",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.007633587786259542,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b01",
+      "b": "bgm-b03",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.012738853503184714,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b01",
+      "b": "bgm-briefing",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.01910828025477707,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b01",
+      "b": "bgm-b02",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.06711409395973154,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-title",
+      "b": "bgm-b11",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.022099447513812154,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-title",
+      "b": "bgm-b07",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0273972602739726,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-title",
+      "b": "bgm-b06",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0070921985815602835,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": true,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-title",
+      "b": "bgm-b10",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.033783783783783786,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-title",
+      "b": "bgm-b05",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.01910828025477707,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-title",
+      "b": "bgm-b09",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-title",
+      "b": "bgm-b08",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.11888111888111888,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-title",
+      "b": "bgm-b12",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0335195530726257,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-title",
+      "b": "bgm-b04",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.013513513513513514,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-title",
+      "b": "bgm-ending",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-title",
+      "b": "bgm-b03",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0064516129032258064,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-title",
+      "b": "bgm-briefing",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.01948051948051948,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-title",
+      "b": "bgm-b02",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.061224489795918366,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b11",
+      "b": "bgm-b07",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.040697674418604654,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b11",
+      "b": "bgm-b06",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.03636363636363636,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b11",
+      "b": "bgm-b10",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.02824858757062147,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b11",
+      "b": "bgm-b05",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.02717391304347826,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b11",
+      "b": "bgm-b09",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b11",
+      "b": "bgm-b08",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.09883720930232558,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b11",
+      "b": "bgm-b12",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.014218009478672985,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b11",
+      "b": "bgm-b04",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b11",
+      "b": "bgm-ending",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.006369426751592357,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b11",
+      "b": "bgm-b03",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.005434782608695652,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b11",
+      "b": "bgm-briefing",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b11",
+      "b": "bgm-b02",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.05113636363636364,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b07",
+      "b": "bgm-b06",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.030303030303030304,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b07",
+      "b": "bgm-b10",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.072992700729927,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b07",
+      "b": "bgm-b05",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.02666666666666667,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b07",
+      "b": "bgm-b09",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b07",
+      "b": "bgm-b08",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.06206896551724138,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b07",
+      "b": "bgm-b12",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.011299435028248588,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b07",
+      "b": "bgm-b04",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b07",
+      "b": "bgm-ending",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": true,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b07",
+      "b": "bgm-b03",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b07",
+      "b": "bgm-briefing",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b07",
+      "b": "bgm-b02",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.07913669064748201,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b06",
+      "b": "bgm-b10",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.03731343283582089,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b06",
+      "b": "bgm-b05",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b06",
+      "b": "bgm-b09",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b06",
+      "b": "bgm-b08",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.06569343065693431,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b06",
+      "b": "bgm-b12",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b06",
+      "b": "bgm-b04",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b06",
+      "b": "bgm-ending",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b06",
+      "b": "bgm-b03",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.02158273381294964,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b06",
+      "b": "bgm-briefing",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b06",
+      "b": "bgm-b02",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.02158273381294964,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b10",
+      "b": "bgm-b05",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b10",
+      "b": "bgm-b09",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b10",
+      "b": "bgm-b08",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.04666666666666667,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b10",
+      "b": "bgm-b12",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0055248618784530384,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b10",
+      "b": "bgm-b04",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b10",
+      "b": "bgm-ending",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b10",
+      "b": "bgm-b03",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b10",
+      "b": "bgm-briefing",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b10",
+      "b": "bgm-b02",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.04794520547945205,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b05",
+      "b": "bgm-b09",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b05",
+      "b": "bgm-b08",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.006134969325153374,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b05",
+      "b": "bgm-b12",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0106951871657754,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b05",
+      "b": "bgm-b04",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b05",
+      "b": "bgm-ending",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b05",
+      "b": "bgm-b03",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b05",
+      "b": "bgm-briefing",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": true,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b05",
+      "b": "bgm-b02",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.01910828025477707,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b09",
+      "b": "bgm-b08",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b09",
+      "b": "bgm-b12",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.023255813953488372,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": true,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b09",
+      "b": "bgm-b04",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.044444444444444446,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b09",
+      "b": "bgm-ending",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.061946902654867256,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b09",
+      "b": "bgm-b03",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.027972027972027972,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": true,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b09",
+      "b": "bgm-briefing",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.027777777777777776,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b09",
+      "b": "bgm-b02",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b08",
+      "b": "bgm-b12",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.04419889502762431,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b08",
+      "b": "bgm-b04",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.006535947712418301,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b08",
+      "b": "bgm-ending",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b08",
+      "b": "bgm-b03",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b08",
+      "b": "bgm-briefing",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0189873417721519,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b08",
+      "b": "bgm-b02",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.10344827586206896,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": true,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b12",
+      "b": "bgm-b04",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.022857142857142857,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b12",
+      "b": "bgm-ending",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.025974025974025976,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b12",
+      "b": "bgm-b03",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.016483516483516484,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": true,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b12",
+      "b": "bgm-briefing",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0449438202247191,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b12",
+      "b": "bgm-b02",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.027777777777777776,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b04",
+      "b": "bgm-ending",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.05128205128205128,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b04",
+      "b": "bgm-b03",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.04895104895104895,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b04",
+      "b": "bgm-briefing",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.07092198581560284,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b04",
+      "b": "bgm-b02",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.006711409395973154,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-ending",
+      "b": "bgm-b03",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.05737704918032787,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-ending",
+      "b": "bgm-briefing",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.04838709677419355,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-ending",
+      "b": "bgm-b02",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b03",
+      "b": "bgm-briefing",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.012903225806451613,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-b03",
+      "b": "bgm-b02",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    },
+    {
+      "a": "bgm-briefing",
+      "b": "bgm-b02",
+      "melody8gramJaccard": 0.0,
+      "rhythm8gramJaccard": 0.0,
+      "accompaniment8gramJaccard": 0.0,
+      "identicalMelodyEvents": false,
+      "identicalAccompanimentEvents": false,
+      "identicalMeter": false,
+      "identicalHarmony": false
+    }
+  ]
+}

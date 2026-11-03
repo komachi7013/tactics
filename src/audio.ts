@@ -1,4 +1,4 @@
-import { AUDIO_CATALOG, type AudioCueId, type MusicId, type SoundId } from './audio-cues';
+import { AUDIO_CATALOG, MUSIC_IDS, type AudioCueId, type MusicId, type SoundId, type SoundEvent } from './audio-cues';
 export type { MusicId, SoundId } from './audio-cues';
 
 export interface AudioStatus {
@@ -26,7 +26,7 @@ type Voice = { source: AudioBufferSourceNode; gain: GainNode };
 // With v1 peak bounds (BGM <= .32, SE <= .5), 2 BGM + 3 SE <= .749.
 // Keep user category values in 0..1; this fixed margin also protects crossfades.
 export const AUDIO_HEADROOM = 0.35;
-export const AUDIO_RUNTIME_VERSION = 'audio-v1-r2';
+export const AUDIO_RUNTIME_VERSION = 'audio-v2-r2';
 const volume = (value: number, fallback: number) => Number.isFinite(value) ? Math.max(0, Math.min(1, value)) : fallback;
 
 /** Memory-only, gesture-unlocked playback. No save or browser storage access. */
@@ -141,7 +141,7 @@ export class GameAudio {
     if (cached) return cached;
     const context = this.context!;
     const controller = new AbortController();
-    const request = Promise.resolve().then(() => (this.dependencies.fetch ?? fetch)(AUDIO_CATALOG[id], { credentials: 'same-origin', mode: 'same-origin', signal: controller.signal }))
+    const request = Promise.resolve().then(() => (this.dependencies.fetch ?? fetch)(AUDIO_CATALOG[id], { credentials: 'same-origin', mode: 'same-origin', signal: controller.signal, cache: 'no-store' }))
       .then(response => {
         if (!response.ok) throw new Error(`${id} HTTP ${response.status}`);
         return response.arrayBuffer();
@@ -184,8 +184,8 @@ export class GameAudio {
       if (!this.disposed) this.notify();
     }
   }
-  private start(voice: Voice) {
-    try { voice.source.start(); }
+  private start(voice: Voice, when?: number) {
+    try { if (when === undefined) voice.source.start(); else voice.source.start(when); }
     catch (error) { this.release(voice); throw error; }
   }
   private startMusic() {
@@ -204,24 +204,35 @@ export class GameAudio {
       this.ramp(voice.gain, this.state.bgm, 0.3);
       this.start(voice);
       this.state.activeCue = cue;
+      // Sixteen long tracks: retain only the selected decoded BGM in the cache.
+      // Active/retiring source nodes retain their own buffers through the fade.
+      for (const id of this.buffers.keys()) if (id !== cue && MUSIC_IDS.includes(id as MusicId)) this.buffers.delete(id);
       this.notify();
     }).catch(error => { if (epoch === this.epoch && revision === this.cueRevision) { this.state.loadingCue = null; this.fail(error); } });
   }
-  playSE(id: SoundId) {
-    if (!this.canPlay() || this.pendingSounds.has(id) || this.sounds.size >= 3) return;
+  playSE(id: SoundId) { this.playSESequence([{ id, delayMs: 0 }]); }
+  /** Decode together so release/hit never overtakes its attack; epoch cancels scheduled voices. */
+  playSESequence(events: readonly SoundEvent[]) {
+    if (!this.canPlay() || this.sounds.size >= 3) return;
     const now = (this.dependencies.now ?? (() => performance.now()))();
-    if (now - (this.lastSound.get(id) ?? -Infinity) < 80) return;
-    this.lastSound.set(id, now);
     const epoch = this.epoch;
-    this.pendingSounds.set(id, epoch);
-    void this.load(id).then(buffer => {
-      if (!this.canPlay() || epoch !== this.epoch || this.sounds.size >= 3) return;
-      const voice = this.createVoice(buffer, false);
-      voice.gain.gain.setValueAtTime(this.state.se * AUDIO_HEADROOM, this.context!.currentTime);
-      this.sounds.add(voice);
-      this.start(voice);
+    const selected = events.filter((event, index) => Number.isFinite(event.delayMs) && event.delayMs >= 0 && event.delayMs <= 2000
+      && events.findIndex(e => e.id === event.id) === index
+      && !this.pendingSounds.has(event.id) && now - (this.lastSound.get(event.id) ?? -Infinity) >= 80).slice(0, 3 - this.sounds.size);
+    if (!selected.length) return;
+    for (const { id } of selected) { this.pendingSounds.set(id, epoch); this.lastSound.set(id, now); }
+    void Promise.all(selected.map(async event => ({ ...event, buffer: await this.load(event.id) }))).then(loaded => {
+      if (!this.canPlay() || epoch !== this.epoch) return;
+      const time = this.context!.currentTime;
+      for (const event of loaded) {
+        if (this.sounds.size >= 3) break;
+        const voice = this.createVoice(event.buffer, false);
+        voice.gain.gain.setValueAtTime(this.state.se * AUDIO_HEADROOM, time);
+        this.sounds.add(voice);
+        this.start(voice, time + event.delayMs / 1000);
+      }
     }).catch(error => { if (epoch === this.epoch) this.fail(error); })
-      .finally(() => { if (this.pendingSounds.get(id) === epoch) this.pendingSounds.delete(id); });
+      .finally(() => { for (const { id } of selected) if (this.pendingSounds.get(id) === epoch) this.pendingSounds.delete(id); });
   }
   private stopMusic(fade: boolean) {
     const voice = this.current;

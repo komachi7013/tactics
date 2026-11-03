@@ -1,0 +1,22 @@
+{
+  "videoSha256": "cfb8c11df60c4f5a5013db0195132df4c4cef2e4fbc54b47937198d2d9a81ec0",
+  "visualReviewed": true,
+  "contacts": [
+    {
+      "frame": 32,
+      "foot": "R"
+    },
+    {
+      "frame": 46,
+      "foot": "L"
+    },
+    {
+      "frame": 64,
+      "foot": "R"
+    }
+  ],
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "automaticLoopCheck": "no acceptable window; manual selection and output seam review required",
+  "reviewNote": "Native frames28–67 inspected. Anatomical R is the image-right leg on the satchel side; L is image-left. R support around32, L support around46, R support around64. Support/contact phases are visually estimated +/-2 source frames. This full two-step interval is retimed to800ms and19 output frames. No E media or equipment instructions were supplied. This annotation does not certify full gait quality."
+}

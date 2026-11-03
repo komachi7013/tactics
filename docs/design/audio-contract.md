@@ -1,5 +1,7 @@
 # 音声追加v1 制作契約
 
+> v1の履歴です。2026-10-26の現行BGM/SEは [v2制作・検証記録](../../audio-production/v2-20261026/README.md) と [全35音源の試聴一覧](../../audio-production/v2-20261026/LISTENING-LINKS.md) を参照してください。旧素材は参照・再生処理検証後、通常のTrashへ移動します。
+
 2026-10-18。ユーザー配置 `.codex/skills/rpg-music/SKILL.md` を優先し、BGM/SEの設計・制作・ゲーム接続を行う。供給待ちは配置連絡で解消。技能本文/production/templatesを確認済み。Pythonは`.venv/bin/python`のみ。
 
 ## 範囲と依存

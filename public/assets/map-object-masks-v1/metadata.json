@@ -1,0 +1,214 @@
+{
+  "masks": [
+    {
+      "battleId": "B06",
+      "objectId": "gate",
+      "key": "painted-object-mask-b06-gate",
+      "path": "/assets/map-object-masks-v1/b06-gate.png",
+      "bounds": [
+        335,
+        126,
+        381,
+        189
+      ],
+      "source": [
+        1536,
+        1024
+      ],
+      "generatedSource": "exec-e627fad6-3cbd-4063-9e84-b7a1b9cc860a.png",
+      "method": "alpha",
+      "threshold": 96,
+      "sourceBackground": "b06-adopted/canal.png",
+      "maskSha256": "7e7950babeede5f58ba32ac333e65282861499369cb2bc78627405f049069c10",
+      "reviewed": true,
+      "review": "Independent static comparison accepted; source RGB unchanged",
+      "refinement": "Generated alpha/binary segmentation; enclosed holes filled",
+      "generationMode": "built-in imagegen",
+      "prompt": "Use case: background-extraction. Edit target: supplied 1536x1024 game background. Keep ONLY the small brass circular capstan and its complete pedestal around x332..381,y124..187. Preserve its exact existing source position, silhouette, dimensions and perspective. Make everything else transparent, including floor and shadow. Do not center, enlarge or redesign it; return a source-registered full canvas for deriving an alpha highlight mask."
+    },
+    {
+      "battleId": "B08",
+      "objectId": "sluice:N",
+      "key": "painted-object-mask-b08-n",
+      "path": "/assets/map-object-masks-v1/b08-n.png",
+      "bounds": [
+        488,
+        191,
+        575,
+        243
+      ],
+      "source": [
+        1536,
+        1024
+      ],
+      "generatedSource": "exec-a5805dfd-3857-4f59-9103-0099f7353c6f.png",
+      "method": "alpha",
+      "threshold": 96,
+      "sourceBackground": "b08-adopted/weir.png",
+      "maskSha256": "6ae5115da0718cb6cb40bf2250e70b4d7dd980ac36f40c763a959ea69ab0c85a",
+      "reviewed": true,
+      "review": "Independent static comparison accepted; source RGB unchanged",
+      "refinement": "Generated alpha/binary segmentation; enclosed holes filled",
+      "generationMode": "built-in imagegen",
+      "prompt": "Use case: background-extraction. Keep only the two existing small brass operating wheels and attached posts/axles at north center(515,210) and south center(450,386). Preserve exact original full1536x1024 framing, pixel positions, size and silhouettes. Remove stone sluice posts, gate boards, wall, paving, plants and other objects to transparency. No glow, shadow, text or new art."
+    },
+    {
+      "battleId": "B08",
+      "objectId": "sluice:S",
+      "key": "painted-object-mask-b08-s",
+      "path": "/assets/map-object-masks-v1/b08-s.png",
+      "bounds": [
+        426,
+        373,
+        514,
+        425
+      ],
+      "source": [
+        1536,
+        1024
+      ],
+      "generatedSource": "exec-a5805dfd-3857-4f59-9103-0099f7353c6f.png",
+      "method": "alpha",
+      "threshold": 96,
+      "sourceBackground": "b08-adopted/weir.png",
+      "maskSha256": "1211d41a8733f5074bc019e337200f80c2069fd40bfdb05abd4ee2ed1bdbfb52",
+      "reviewed": true,
+      "review": "Independent static comparison accepted; source RGB unchanged",
+      "refinement": "Generated alpha/binary segmentation; enclosed holes filled",
+      "generationMode": "built-in imagegen",
+      "prompt": "Use case: background-extraction. Keep only the two existing small brass operating wheels and attached posts/axles at north center(515,210) and south center(450,386). Preserve exact original full1536x1024 framing, pixel positions, size and silhouettes. Remove stone sluice posts, gate boards, wall, paving, plants and other objects to transparency. No glow, shadow, text or new art."
+    },
+    {
+      "battleId": "B10",
+      "objectId": "gate",
+      "key": "painted-object-mask-b10-gate",
+      "path": "/assets/map-object-masks-v1/b10-gate.png",
+      "bounds": [
+        273,
+        523,
+        406,
+        611
+      ],
+      "source": [
+        1536,
+        1024
+      ],
+      "generatedSource": "exec-3bd3c484-03d9-4965-b07a-9d3fd82039e3.png",
+      "method": "binary",
+      "threshold": 96,
+      "sourceBackground": "b10-adopted/harbor.png",
+      "maskSha256": "e26f3f2459cd7134e261beb591411bfc45daa209d85c5c7d83607389f18481d2",
+      "reviewed": true,
+      "review": "Independent static comparison accepted; source RGB unchanged",
+      "refinement": "Generated alpha/binary segmentation; enclosed holes filled",
+      "generationMode": "built-in imagegen",
+      "prompt": "Precise visible-instance segmentation, not a cutout render. Return exactly1536x1024. Recolor only visible source pixels belonging to the capstan with two handles at x274..407,y522..597 as pure white; all other pixels pure black. Preserve exact source framing and source silhouette. Leave occluded portions black. Do not reconstruct, move, scale or redraw equipment."
+    },
+    {
+      "battleId": "B11",
+      "objectId": "repair:A",
+      "key": "painted-object-mask-b11-a",
+      "path": "/assets/map-object-masks-v1/b11-a.png",
+      "bounds": [
+        860,
+        50,
+        935,
+        196
+      ],
+      "source": [
+        1536,
+        1024
+      ],
+      "generatedSource": "exec-493b19ad-976a-40da-8253-ea3a994043c8.png",
+      "method": "alpha",
+      "threshold": 96,
+      "sourceBackground": "b11-adopted/maintenance.png",
+      "maskSha256": "c5a7b68260572028f527a9aa35e6a80296c3f558405181379a5b98a6b112d8e3",
+      "reviewed": true,
+      "review": "Independent static comparison accepted; source RGB unchanged",
+      "refinement": "Generated alpha/binary segmentation; enclosed holes filled",
+      "generationMode": "built-in imagegen",
+      "prompt": "Precise visible-instance segmentation of the two brass hand wheels on original1536x1024 image. South wheel center(1403,476), outer rim about x1371..1437,y438..514. Include only visible rims/spokes, excluding green vertical pipes, pedestal, stems and wall. Do not move, scale or reconstruct objects. Pure white equipment mask, pure black elsewhere. North assembly uses earlier transparent cutout of wheel, short stem and pedestal around x855..940,y50..195."
+    },
+    {
+      "battleId": "B11",
+      "objectId": "repair:B",
+      "key": "painted-object-mask-b11-b",
+      "path": "/assets/map-object-masks-v1/b11-b.png",
+      "bounds": [
+        1371,
+        438,
+        1438,
+        514
+      ],
+      "source": [
+        1536,
+        1024
+      ],
+      "generatedSource": "exec-10634188-3627-4fb8-b8b3-41b8255cd046.png",
+      "method": "binary",
+      "threshold": 96,
+      "sourceBackground": "b11-adopted/maintenance.png",
+      "maskSha256": "31b6fdcbe10c457be600360c1eed5354dd1466497017e7f5b505a18b8014cc51",
+      "reviewed": true,
+      "review": "Independent static comparison accepted; source RGB unchanged",
+      "refinement": "Generated alpha/binary segmentation; enclosed holes filled; operating wheel only, registered to observed rim bounds",
+      "generationMode": "built-in imagegen",
+      "prompt": "Precise visible-instance segmentation of the two brass hand wheels on original1536x1024 image. South wheel center(1403,476), outer rim about x1371..1437,y438..514. Include only visible rims/spokes, excluding green vertical pipes, pedestal, stems and wall. Do not move, scale or reconstruct objects. Pure white equipment mask, pure black elsewhere. North assembly uses earlier transparent cutout of wheel, short stem and pedestal around x855..940,y50..195."
+    },
+    {
+      "battleId": "B12",
+      "objectId": "control:A",
+      "key": "painted-object-mask-b12-a",
+      "path": "/assets/map-object-masks-v1/b12-a.png",
+      "bounds": [
+        560,
+        157,
+        726,
+        300
+      ],
+      "source": [
+        1536,
+        1024
+      ],
+      "generatedSource": "exec-7919e8fd-15a6-4b36-a149-626fb9f2fe69.png",
+      "method": "binary",
+      "threshold": 96,
+      "sourceBackground": "b12-adopted/terrace.png",
+      "maskSha256": "f9a4ce6b5d7a487722c065c69a2819e75f59553069ae8897e3e4664e286c3777",
+      "reviewed": true,
+      "review": "Independent static comparison accepted; source RGB unchanged",
+      "refinement": "Generated alpha/binary segmentation; enclosed holes filled; front control-box contour annotated from magnified original pixel coordinates",
+      "generationMode": "built-in imagegen",
+      "prompt": "Precise visible-instance segmentation of original1536x1024 background, not illustration. Pure white only on the two existing complete visible brass winch mechanisms: north x550..720,y155..300 and south x1170..1400,y340..540, wheels centered(620,210)/(1270,425). Pure black elsewhere. Preserve exact source framing, position, size and silhouette. Do not reconstruct occluded portions, or include stone parapets, floor, water or plants.",
+      "annotationNote": "Front control-case visible metal contour traced against magnified original; only the mask annotation is edited, never source RGB."
+    },
+    {
+      "battleId": "B12",
+      "objectId": "control:B",
+      "key": "painted-object-mask-b12-b",
+      "path": "/assets/map-object-masks-v1/b12-b.png",
+      "bounds": [
+        1167,
+        346,
+        1401,
+        540
+      ],
+      "source": [
+        1536,
+        1024
+      ],
+      "generatedSource": "exec-7919e8fd-15a6-4b36-a149-626fb9f2fe69.png",
+      "method": "binary",
+      "threshold": 96,
+      "sourceBackground": "b12-adopted/terrace.png",
+      "maskSha256": "c9b665f968999511f6c6b5ef158a915dd7546ab132ac4ad081921dc9e72a942c",
+      "reviewed": true,
+      "review": "Independent static comparison accepted; source RGB unchanged",
+      "refinement": "Generated alpha/binary segmentation; enclosed holes filled; front control-box contour annotated from magnified original pixel coordinates",
+      "generationMode": "built-in imagegen",
+      "prompt": "Precise visible-instance segmentation of original1536x1024 background, not illustration. Pure white only on the two existing complete visible brass winch mechanisms: north x550..720,y155..300 and south x1170..1400,y340..540, wheels centered(620,210)/(1270,425). Pure black elsewhere. Preserve exact source framing, position, size and silhouette. Do not reconstruct occluded portions, or include stone parapets, floor, water or plants.",
+      "annotationNote": "Front control-case visible metal contour traced against magnified original; only the mask annotation is edited, never source RGB."
+    }
+  ]
+}

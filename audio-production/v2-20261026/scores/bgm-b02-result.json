@@ -1,0 +1,99 @@
+{
+  "id": "bgm-b02",
+  "master": {
+    "file": "masters/bgm-b02.wav",
+    "sha256": "85b42da0a6b07cbe54a7c934a16551ae231d544091ccd4d0218c0ad5fd2b3a9a",
+    "bytes": 16838212,
+    "sampleRate": 44100,
+    "channels": 2,
+    "frames": 4209542,
+    "seconds": 95.4544671201814,
+    "samplePeak": 0.319976806640625,
+    "rmsDbFS": -26.919722965373985,
+    "dc": [
+      -6.0244338747243764e-09,
+      -2.182135494936266e-09
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      4209542
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        0.0,
+        0.0008544921875
+      ],
+      "rmsDifferenceDb": [
+        0.8040673653814778,
+        0.569801377072488
+      ],
+      "slopeError": [
+        0.00146484375,
+        0.000457763671875
+      ],
+      "numericalFlags": []
+    }
+  },
+  "delivery": {
+    "file": "delivery/bgm-b02.wav",
+    "sha256": "8b4fa62225610f9ee86e87d0e95d762489d8a1622fa3a3333c5d4ab170381a31",
+    "bytes": 8419128,
+    "sampleRate": 22050,
+    "channels": 2,
+    "frames": 2104771,
+    "seconds": 95.4544671201814,
+    "samplePeak": 0.315460205078125,
+    "rmsDbFS": -26.92011947815171,
+    "dc": [
+      8.699543501407042e-10,
+      -8.235567847998665e-09
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      2104771
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        0.001129150390625,
+        0.0013427734375
+      ],
+      "rmsDifferenceDb": [
+        0.8066045239986728,
+        0.5722406071963246
+      ],
+      "slopeError": [
+        0.00347900390625,
+        0.00506591796875
+      ],
+      "numericalFlags": []
+    }
+  },
+  "listeningVerified": false,
+  "compositionRevision": "independent-r2",
+  "title": "閉ざされる石橋",
+  "usage": "B02 旧セラ堤: 高低差と石橋閉鎖までの時間圧。下降低音と短い応答。",
+  "bpm": 132,
+  "bars": 60,
+  "meter": [
+    7,
+    8
+  ],
+  "mode": "minor",
+  "rationale": "B02 旧セラ堤: 高低差と石橋閉鎖までの時間圧。下降低音と短い応答。",
+  "direction": "石橋閉鎖の7/8（2+2+3）。短い反復音から跳ぶトランペット、低弦の押し出し、刻むスネア。",
+  "source": "scores/bgm-b02.json",
+  "midi": "scores/bgm-b02.mid",
+  "renderCycles": 3,
+  "extractStartFrame": 4216685,
+  "rotationSeconds": 0.16197278911564625,
+  "motif": {
+    "id": "river-record",
+    "version": 3,
+    "quotation": "single three-note cameo in C only; title/ending link restricted to opening two bars"
+  },
+  "scoreFingerprint": "4dd320a29325eb7f20dbd1d33157d3c115e1cb7879ad832a6b13168d9b7ab0e2"
+}

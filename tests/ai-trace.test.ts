@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { runEnemyActivation, runEnemyActivationWithTrace } from '../src/domain/ai';
+import { getEnemyDecisionSnapshot, runEnemyActivation, runEnemyActivationWithTrace } from '../src/domain/ai';
 import { createInitialState, reduce } from '../src/domain/engine';
 import type { BattleId, BattleState } from '../src/domain/types';
 const battles: BattleId[] = ['B01','B02','B03','B04','B05','B06','B07','B08','B09','B10','B11','B12'];
@@ -24,7 +24,8 @@ describe('enemy activation trace preserves committed commands', () => {
    while (state.turn === 'enemy' && state.phase === 'playing' && ++guard < 20) {
     const snapshot = structuredClone(state), result = runEnemyActivationWithTrace(state);
     expect(result.commands[0]?.type).toBe('start');
-    expect(result.commands.filter(c => c.type === 'attack' || c.type === 'defend')).toHaveLength(1);
+    const expectedActions = getEnemyDecisionSnapshot(state).next?.action === 'wait' ? 0 : 1;
+    expect(result.commands.filter(c => c.type === 'attack' || c.type === 'defend')).toHaveLength(expectedActions);
     let replay = state;
     for (const command of result.commands) { const next = reduce(replay, command); expect(next.error).toBeUndefined(); replay = next.state; }
     expect(replay).toEqual(result.state); expect(runEnemyActivation(state)).toEqual(result.state); expect(state).toEqual(snapshot);

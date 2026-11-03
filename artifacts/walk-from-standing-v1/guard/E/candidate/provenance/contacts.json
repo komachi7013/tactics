@@ -1,0 +1,21 @@
+{
+  "videoSha256": "563727e668485ec9486d2edeff8b5480414aa16f50c832ae1611b1465ef4a350",
+  "visualReviewed": true,
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "contacts": [
+    {
+      "frame": 38,
+      "foot": "R"
+    },
+    {
+      "frame": 48,
+      "foot": "L"
+    },
+    {
+      "frame": 58,
+      "foot": "R"
+    }
+  ],
+  "reviewNote": "Guard E brown/gold/red/teal palette reviewed; use magenta ratio gate to protect red cloth. Source and feet sheets show near image-left R38/58 then far L48 support with alternating swing. Sword and shield retained, fixed facing and full soles. Garan E driver. Estimated support phases, not motion capture."
+}

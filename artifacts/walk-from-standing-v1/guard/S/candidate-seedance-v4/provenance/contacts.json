@@ -1,0 +1,21 @@
+{
+  "videoSha256": "bd1d9955ac680d27cd64cb2376355870f581f9f69421a87b52df4a11b837f918",
+  "visualReviewed": true,
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "contacts": [
+    {
+      "frame": 36,
+      "foot": "R"
+    },
+    {
+      "frame": 46,
+      "foot": "L"
+    },
+    {
+      "frame": 56,
+      "foot": "R"
+    }
+  ],
+  "reviewNote": "Screen-left boot forward at36/56, screen-right boot supporting forward during44:46 while screen-left passes. Estimated alternating phases, not motion capture or twitch-free certification."
+}

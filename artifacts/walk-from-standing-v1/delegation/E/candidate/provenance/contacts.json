@@ -1,0 +1,21 @@
+{
+  "videoSha256": "884e1c18e8da1a2eaff8c5ffdb5a10bb053a05ab58726fb87718d68b01290f2e",
+  "visualReviewed": true,
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "contacts": [
+    {
+      "frame": 38,
+      "foot": "R"
+    },
+    {
+      "frame": 48,
+      "foot": "L"
+    },
+    {
+      "frame": 58,
+      "foot": "R"
+    }
+  ],
+  "reviewNote": "Delegation E source/full feet sheets reviewed. Near image-left R38/58 and far L48 support alternate, small strides/lift and upright torso. Brown/cream/grey palette validated, coat/scarf/pouch retained. Magenta visible in arm gap is background. Fullbody/soles inside. Garan E driver. Estimated support phases, not motion capture."
+}

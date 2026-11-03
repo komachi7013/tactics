@@ -1,0 +1,99 @@
+{
+  "id": "bgm-b09",
+  "master": {
+    "file": "masters/bgm-b09.wav",
+    "sha256": "01153e5b24e3333fdb573d41abcd6422fda847bd63b05cb6a7aa366472c1dcbb",
+    "bytes": 17753852,
+    "sampleRate": 44100,
+    "channels": 2,
+    "frames": 4438452,
+    "seconds": 100.64517006802721,
+    "samplePeak": 0.319976806640625,
+    "rmsDbFS": -25.071119418650134,
+    "dc": [
+      -2.4408825947368587e-08,
+      1.0533611648272866e-08
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      4438452
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        -0.000640869140625,
+        0.0
+      ],
+      "rmsDifferenceDb": [
+        -0.5139353019826055,
+        0.45003784086981224
+      ],
+      "slopeError": [
+        0.003173828125,
+        0.003662109375
+      ],
+      "numericalFlags": []
+    }
+  },
+  "delivery": {
+    "file": "delivery/bgm-b09.wav",
+    "sha256": "faece9dfa906eaa57c07952b2b86f1fb063f8c76e6b2c9c4b8b5c0298cfde248",
+    "bytes": 8876948,
+    "sampleRate": 22050,
+    "channels": 2,
+    "frames": 2219226,
+    "seconds": 100.64517006802721,
+    "samplePeak": 0.31976318359375,
+    "rmsDbFS": -25.071182129607084,
+    "dc": [
+      -2.614150880335081e-08,
+      2.8052960525426434e-09
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      2219226
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        -0.00177001953125,
+        -0.001129150390625
+      ],
+      "rmsDifferenceDb": [
+        -0.5182639734871753,
+        0.4477364660546215
+      ],
+      "slopeError": [
+        0.002838134765625,
+        0.002960205078125
+      ],
+      "numericalFlags": []
+    }
+  },
+  "listeningVerified": false,
+  "compositionRevision": "independent-r2",
+  "title": "公開の場への道",
+  "usage": "B09 水段回廊: 代表・証人の一行護送。歩みを守る低弦、毅然としたホルン。",
+  "bpm": 124,
+  "bars": 52,
+  "meter": [
+    4,
+    4
+  ],
+  "mode": "major",
+  "rationale": "B09 水段回廊: 代表・証人の一行護送。歩みを守る低弦、毅然としたホルン。",
+  "direction": "公開の場へ進む4/4。長いホルンの旋律とヴィオラの応答。明るい行進だが力任せにしない。",
+  "source": "scores/bgm-b09.json",
+  "midi": "scores/bgm-b09.mid",
+  "renderCycles": 3,
+  "extractStartFrame": 4451571,
+  "rotationSeconds": 0.2974829931972789,
+  "motif": {
+    "id": "river-record",
+    "version": 3,
+    "quotation": "single three-note cameo in C only; title/ending link restricted to opening two bars"
+  },
+  "scoreFingerprint": "25b6aacbfa1a62c1fad765e42012e5ed3b04999120b68dbcb52fd17d62eab326"
+}

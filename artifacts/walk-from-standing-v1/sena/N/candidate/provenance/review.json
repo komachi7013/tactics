@@ -1,0 +1,66 @@
+{
+  "status": "比較候補：Seedance2.5・N立ち絵＋リセN動画・6条件",
+  "inputImageCount": 1,
+  "inputDirection": "N",
+  "referenceVideoCount": 1,
+  "motionRequirementCount": 6,
+  "equipmentInstructionsIncluded": false,
+  "frames": 19,
+  "cycleMs": 800,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "all19FramesViewedOnLight": true,
+  "all19FramesViewedOnDark": true,
+  "facingRetainedInAllSelectedFrames": true,
+  "fullBodyAndBothSolesInsideSelectedFrames": true,
+  "nativeCanvasEdgePixels": 0,
+  "contactReview": {
+    "videoSha256": "8eaf9975bdfd4ee863081a4ae1a16dd5454ccc60b37ece0a45bb29752501fa6a",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "R"
+      },
+      {
+        "frame": 48,
+        "foot": "L"
+      },
+      {
+        "frame": 58,
+        "foot": "R"
+      }
+    ],
+    "reviewNote": "Native full clip and feet every2frames inspected. N near anatomical R image-right supports38/58; far L supports48. Full soles visible and no turn or added equipment. Same-direction Lise N video reference;20source-frame cycle. Estimated support phases, not motion capture."
+  },
+  "selectedOutputSeamReviewed": true,
+  "automaticGaitLoopStatus": "automatic selection requires visual review",
+  "issues": [
+    "リセN動画参照。全19コマの向き・全身・足運びを明暗背景で確認。頭部帯の横幅は立ち絵64pxに対して候補63〜64px。原周期約0.83秒を0.8秒に調整。自動探索は低信頼で利用者確認待ち。"
+  ],
+  "gameApplied": false,
+  "userApproved": false,
+  "referenceMotionReady": true,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "generationCountThisRequest": 1,
+  "quotedCreditsThisRequest": 28,
+  "headCentroidRangePx": [
+    3.688471431867555,
+    1.6103381799917145
+  ],
+  "footRegionSeamOverMedianStep": 0.44608483274157,
+  "headTopRangePx": [
+    97,
+    99
+  ],
+  "groundRangePx": [
+    279,
+    288
+  ],
+  "drivingCast": "lise",
+  "drivingDirection": "N",
+  "appearanceSource": "own standing image",
+  "motionSource": "same-direction reference video"
+}

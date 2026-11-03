@@ -1,0 +1,184 @@
+{
+  "frames": 19,
+  "cycleMs": 800,
+  "fpsRational": [
+    95,
+    4
+  ],
+  "durationsMs": [
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42
+  ],
+  "sourceIndices": [
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57
+  ],
+  "sourceVideoSha256": "4db0c5b91a15457557e2110f2b685a5d58414ad9fdd321612b5c7573039625e3",
+  "sheetSha256": "b112a3cd50183e5f58acd3b9fc4d813df70234efee479a9f677a2929d66fdf22",
+  "fixedScale": 0.2564102564102564,
+  "fixedOffset": [
+    4,
+    63
+  ],
+  "frameGeometry": [
+    {
+      "headTop": 100,
+      "ground": 281,
+      "width": 76
+    },
+    {
+      "headTop": 101,
+      "ground": 282,
+      "width": 76
+    },
+    {
+      "headTop": 101,
+      "ground": 284,
+      "width": 76
+    },
+    {
+      "headTop": 100,
+      "ground": 284,
+      "width": 75
+    },
+    {
+      "headTop": 100,
+      "ground": 283,
+      "width": 74
+    },
+    {
+      "headTop": 100,
+      "ground": 282,
+      "width": 73
+    },
+    {
+      "headTop": 99,
+      "ground": 281,
+      "width": 74
+    },
+    {
+      "headTop": 99,
+      "ground": 281,
+      "width": 71
+    },
+    {
+      "headTop": 100,
+      "ground": 280,
+      "width": 71
+    },
+    {
+      "headTop": 100,
+      "ground": 279,
+      "width": 75
+    },
+    {
+      "headTop": 101,
+      "ground": 278,
+      "width": 75
+    },
+    {
+      "headTop": 100,
+      "ground": 277,
+      "width": 73
+    },
+    {
+      "headTop": 100,
+      "ground": 277,
+      "width": 71
+    },
+    {
+      "headTop": 100,
+      "ground": 278,
+      "width": 72
+    },
+    {
+      "headTop": 99,
+      "ground": 279,
+      "width": 73
+    },
+    {
+      "headTop": 99,
+      "ground": 280,
+      "width": 73
+    },
+    {
+      "headTop": 99,
+      "ground": 281,
+      "width": 74
+    },
+    {
+      "headTop": 100,
+      "ground": 281,
+      "width": 75
+    },
+    {
+      "headTop": 100,
+      "ground": 281,
+      "width": 76
+    }
+  ],
+  "contactReview": {
+    "videoSha256": "4db0c5b91a15457557e2110f2b685a5d58414ad9fdd321612b5c7573039625e3",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "R"
+      },
+      {
+        "frame": 48,
+        "foot": "L"
+      },
+      {
+        "frame": 58,
+        "foot": "R"
+      }
+    ],
+    "reviewNote": "E source sheets show near image-left anatomical right support38/58 and far left support48, small alternating steps. Full feet and appearance retained. Dark violet hair protected from chroma matte. Driver Lise E. Estimated support phases, not motion capture."
+  },
+  "status": "visually-reviewed-comparison-candidate; user review pending",
+  "matteReportStatus": "pass",
+  "matteOverrideReason": null,
+  "gameApplied": false,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "userApproved": false,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "automaticGaitLoopStatus": "automatic selection requires visual review"
+}

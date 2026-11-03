@@ -1,0 +1,233 @@
+{
+  "revision": "independent-r2",
+  "updatedBGM": [
+    "bgm-title",
+    "bgm-prologue",
+    "bgm-briefing",
+    "bgm-b01",
+    "bgm-b02",
+    "bgm-b03",
+    "bgm-b04",
+    "bgm-b05",
+    "bgm-b06",
+    "bgm-b07",
+    "bgm-b08",
+    "bgm-b09",
+    "bgm-b10",
+    "bgm-b11",
+    "bgm-b12",
+    "bgm-ending"
+  ],
+  "cues": [
+    {
+      "id": "bgm-title",
+      "title": "岸を越える地図",
+      "sha256": "f5e9eb0a1132284149badede0b960e92c2dfefd703d3a37abb9607fca35ff212",
+      "revision": "independent-r2"
+    },
+    {
+      "id": "bgm-prologue",
+      "title": "二年前の薄明",
+      "sha256": "105dd4fe2de4a792eb2aff82fea6f01d1550b92f0bc7a78436acf46cc1957d26",
+      "revision": "independent-r2"
+    },
+    {
+      "id": "bgm-briefing",
+      "title": "盤上の水路",
+      "sha256": "a1839e719f64b55dc1b25c49ca92b325ff56a005006d72aec4dd4730030b4cdd",
+      "revision": "independent-r2"
+    },
+    {
+      "id": "bgm-b01",
+      "title": "渡し場の水位痕",
+      "sha256": "65fb601d50f53da9a459dac7156be68cb31914d82f8d6fe968349af5e5e722f6",
+      "revision": "independent-r2"
+    },
+    {
+      "id": "bgm-b02",
+      "title": "閉ざされる石橋",
+      "sha256": "8b4fa62225610f9ee86e87d0e95d762489d8a1622fa3a3333c5d4ab170381a31",
+      "revision": "independent-r2"
+    },
+    {
+      "id": "bgm-b03",
+      "title": "名簿と車輪",
+      "sha256": "6963626c5b5a8add7a3ada872c45c7e83063725b95e42f0307636b02146c1b97",
+      "revision": "independent-r2"
+    },
+    {
+      "id": "bgm-b04",
+      "title": "乾いた支渠へ",
+      "sha256": "14c8ceb96a25b43b0d46ef1d3aae2da26a60a369da59ddef07238e8f381c99e3",
+      "revision": "independent-r2"
+    },
+    {
+      "id": "bgm-b05",
+      "title": "署名の影",
+      "sha256": "8938b5d5cc1dc24630665d7f04a076d961a020e66e45b6d96fc7f681b37ad188",
+      "revision": "independent-r2"
+    },
+    {
+      "id": "bgm-b06",
+      "title": "鎖門を越える証言",
+      "sha256": "02907925e4cffcd28161d7ad5e84bd8f43dddc725d9dd99d1a9d1d487ed79dcb",
+      "revision": "independent-r2"
+    },
+    {
+      "id": "bgm-b07",
+      "title": "二つの退避路",
+      "sha256": "7cf01c3dfe58af8715c13b481c84ce473c961ff471474149b7617542fa9001c6",
+      "revision": "independent-r2"
+    },
+    {
+      "id": "bgm-b08",
+      "title": "南北の補助堰",
+      "sha256": "78056786bf264745f52645773ea23eea4cbef2a7ea5697f77802ee34b7b73040",
+      "revision": "independent-r2"
+    },
+    {
+      "id": "bgm-b09",
+      "title": "公開の場への道",
+      "sha256": "faece9dfa906eaa57c07952b2b86f1fb063f8c76e6b2c9c4b8b5c0298cfde248",
+      "revision": "independent-r2"
+    },
+    {
+      "id": "bgm-b10",
+      "title": "救援を迎える港",
+      "sha256": "99544381b27accdd63fc21a6ea76dfd3f5fad8689fb3864a78981f4c0d7edd3c",
+      "revision": "independent-r2"
+    },
+    {
+      "id": "bgm-b11",
+      "title": "保守路の手",
+      "sha256": "4c7a6f3abd89b62d9d3c220c4dd8bea63122622835c26bfddf18151a78808a96",
+      "revision": "independent-r2"
+    },
+    {
+      "id": "bgm-b12",
+      "title": "誰の堤か",
+      "sha256": "5dee1356399c5b669d513ab8c4de10f328501a1e47df8cc800b3bea1eaba313c",
+      "revision": "independent-r2"
+    },
+    {
+      "id": "bgm-ending",
+      "title": "同じ杭に記す明日",
+      "sha256": "fc7a0c7eed3622d324c72a8c10931f9d3a411bfc4ffcf7e70b441e9cce04f2b8",
+      "revision": "independent-r2"
+    },
+    {
+      "id": "se-ui",
+      "title": "指令の確認",
+      "sha256": "68803234f8ca53323eb30c8276681930d493266fafa8f112658004ed634cad30",
+      "revision": "unchanged"
+    },
+    {
+      "id": "se-cancel",
+      "title": "指令の取消",
+      "sha256": "12d4e42ba93bc3c36175d1798aee99ee0b1daec2e3cb7e4110e7dad6bb39e229",
+      "revision": "unchanged"
+    },
+    {
+      "id": "se-invalid",
+      "title": "実行できない指令",
+      "sha256": "7e162025f66930046ecb72d75fd21f06ee01a49d9ea612447093e2ce5d1af6e5",
+      "revision": "unchanged"
+    },
+    {
+      "id": "se-sword",
+      "title": "剣を振る",
+      "sha256": "266f5736ec8790b11a753356f17dfc9b61452f0ac34b4069401d538f06434579",
+      "revision": "unchanged"
+    },
+    {
+      "id": "se-arrow",
+      "title": "矢を放つ",
+      "sha256": "cbb7950539a397e522b29bcf9b31c56557ff07e6d4b7c5868fc75df8e50888d8",
+      "revision": "unchanged"
+    },
+    {
+      "id": "se-impact",
+      "title": "打撃の衝撃",
+      "sha256": "1b3bcc03c2a8484d3f19e8161922965f3ed95afd5aed7fd9af9b941e2f6d517b",
+      "revision": "unchanged"
+    },
+    {
+      "id": "se-miss",
+      "title": "空を切る",
+      "sha256": "2ef1ec36a9c188d9da1b4aea46fd6c2a6cbd350e13d91fdae0812ce2866ca510",
+      "revision": "unchanged"
+    },
+    {
+      "id": "se-guard",
+      "title": "盾で受ける",
+      "sha256": "94c3f0448f0c6764fc09c6139b3f018d3b61a13cf2e82dc0430f94013719673d",
+      "revision": "unchanged"
+    },
+    {
+      "id": "se-skill",
+      "title": "固有技の発動",
+      "sha256": "b24ec3bf2df81015583d5f398c412784c34687eface40a033610511897a9bc42",
+      "revision": "unchanged"
+    },
+    {
+      "id": "se-heal",
+      "title": "手当の灯",
+      "sha256": "b11028d811c0cc031da77ff143005fe797e7c6096cc5cff51f9aaf5042117d40",
+      "revision": "unchanged"
+    },
+    {
+      "id": "se-chest",
+      "title": "宝箱を開く",
+      "sha256": "379e919f3ccbf5d89b8a79cc312c775e27463b413849170156bb71309bcdf357",
+      "revision": "unchanged"
+    },
+    {
+      "id": "se-record",
+      "title": "記録を確保",
+      "sha256": "5ea10a21b26b22272a7e097eaf8e0d6d081a988b2ad2b7652eb177fc62dcb92a",
+      "revision": "unchanged"
+    },
+    {
+      "id": "se-mechanism",
+      "title": "水門の機構",
+      "sha256": "7b8bf91f91a4ca25bc06cbc965f2e30c8af692c7e36ac4b6e6f835c5c1188a64",
+      "revision": "unchanged"
+    },
+    {
+      "id": "se-exit",
+      "title": "退路の確保",
+      "sha256": "84196278a4b04a1c4bb873b6d770cc3202c0ac139ef2ff04f715e964408f6939",
+      "revision": "unchanged"
+    },
+    {
+      "id": "se-cart",
+      "title": "荷車の車輪",
+      "sha256": "58e72f27030cf1a94c9479420b900272c5ff97c480e206b69b3ecae1efabeeac",
+      "revision": "unchanged"
+    },
+    {
+      "id": "se-turn",
+      "title": "次の指令へ",
+      "sha256": "0b2ed036c98a2db4e392d2f0d5cb1577e7fb5ff33a482a1b4465fc9ba7c99c29",
+      "revision": "unchanged"
+    },
+    {
+      "id": "se-down",
+      "title": "退避の合図",
+      "sha256": "81a5d9f740fe01489463ae39c677c134cc81f297ddf92152f61f3c81a5ff4f15",
+      "revision": "unchanged"
+    },
+    {
+      "id": "se-victory",
+      "title": "記録は消させない",
+      "sha256": "b78dfd0b22d42b30b901a8b383bf610d8688b5e8547ed8c6d60e3ce6c89cca06",
+      "revision": "unchanged"
+    },
+    {
+      "id": "se-defeat",
+      "title": "調査隊の撤退",
+      "sha256": "78b4ca3cbb1c6958e0eb777bb81f0a022a7a5f4c51d02f29e90e966b3a0c4f70",
+      "revision": "unchanged"
+    }
+  ]
+}

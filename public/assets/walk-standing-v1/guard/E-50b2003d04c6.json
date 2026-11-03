@@ -1,0 +1,187 @@
+{
+  "frames": 19,
+  "cycleMs": 800,
+  "fpsRational": [
+    95,
+    4
+  ],
+  "durationsMs": [
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42
+  ],
+  "sourceIndices": [
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57
+  ],
+  "sourceVideoSha256": "563727e668485ec9486d2edeff8b5480414aa16f50c832ae1611b1465ef4a350",
+  "sheetSha256": "6cde56587fdb564e618ad6d81c8d4ddae91563373f491c48ecfb1935f731d9f7",
+  "fixedScale": 0.26785714285714285,
+  "fixedOffset": [
+    -1,
+    64
+  ],
+  "frameGeometry": [
+    {
+      "headTop": 101,
+      "ground": 283,
+      "width": 93
+    },
+    {
+      "headTop": 101,
+      "ground": 284,
+      "width": 93
+    },
+    {
+      "headTop": 101,
+      "ground": 285,
+      "width": 92
+    },
+    {
+      "headTop": 101,
+      "ground": 286,
+      "width": 91
+    },
+    {
+      "headTop": 100,
+      "ground": 286,
+      "width": 90
+    },
+    {
+      "headTop": 100,
+      "ground": 285,
+      "width": 89
+    },
+    {
+      "headTop": 100,
+      "ground": 284,
+      "width": 88
+    },
+    {
+      "headTop": 100,
+      "ground": 282,
+      "width": 87
+    },
+    {
+      "headTop": 100,
+      "ground": 282,
+      "width": 86
+    },
+    {
+      "headTop": 101,
+      "ground": 281,
+      "width": 85
+    },
+    {
+      "headTop": 101,
+      "ground": 280,
+      "width": 84
+    },
+    {
+      "headTop": 101,
+      "ground": 280,
+      "width": 84
+    },
+    {
+      "headTop": 100,
+      "ground": 280,
+      "width": 84
+    },
+    {
+      "headTop": 100,
+      "ground": 281,
+      "width": 86
+    },
+    {
+      "headTop": 100,
+      "ground": 282,
+      "width": 88
+    },
+    {
+      "headTop": 100,
+      "ground": 283,
+      "width": 89
+    },
+    {
+      "headTop": 100,
+      "ground": 283,
+      "width": 90
+    },
+    {
+      "headTop": 100,
+      "ground": 283,
+      "width": 92
+    },
+    {
+      "headTop": 101,
+      "ground": 283,
+      "width": 93
+    }
+  ],
+  "contactReview": {
+    "videoSha256": "563727e668485ec9486d2edeff8b5480414aa16f50c832ae1611b1465ef4a350",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "R"
+      },
+      {
+        "frame": 48,
+        "foot": "L"
+      },
+      {
+        "frame": 58,
+        "foot": "R"
+      }
+    ],
+    "reviewNote": "Guard E brown/gold/red/teal palette reviewed; use magenta ratio gate to protect red cloth. Source and feet sheets show near image-left R38/58 then far L48 support with alternating swing. Sword and shield retained, fixed facing and full soles. Garan E driver. Estimated support phases, not motion capture."
+  },
+  "status": "visually-reviewed-comparison-candidate; user review pending",
+  "matteReportStatus": "pass",
+  "matteOverrideReason": null,
+  "gameApplied": true,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "userApproved": false,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "automaticGaitLoopStatus": "automatic selection requires visual review",
+  "sheetColumns": 5,
+  "candidateDirectory": "artifacts/walk-from-standing-v1/guard/E/candidate",
+  "sourceSheetSha256": "d15fd788e0c42c71e0d774f254ffdabbcee196d52c749c7c41979fd5d367e626"
+}

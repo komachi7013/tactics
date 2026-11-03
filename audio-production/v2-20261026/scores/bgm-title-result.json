@@ -1,0 +1,99 @@
+{
+  "id": "bgm-title",
+  "master": {
+    "file": "masters/bgm-title.wav",
+    "sha256": "6492b1554f26a8457b417299cec7609b25bebaaf0db262715ec4f4c1e63cd425",
+    "bytes": 10584044,
+    "sampleRate": 44100,
+    "channels": 2,
+    "frames": 2646000,
+    "seconds": 60.0,
+    "samplePeak": 0.319976806640625,
+    "rmsDbFS": -22.57694691558634,
+    "dc": [
+      -7.519826506991686e-09,
+      2.652699534674981e-09
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      2646000
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        -0.000152587890625,
+        -0.001708984375
+      ],
+      "rmsDifferenceDb": [
+        -0.2379236336604687,
+        0.5445340391106626
+      ],
+      "slopeError": [
+        0.00250244140625,
+        0.001708984375
+      ],
+      "numericalFlags": []
+    }
+  },
+  "delivery": {
+    "file": "delivery/bgm-title.wav",
+    "sha256": "f5e9eb0a1132284149badede0b960e92c2dfefd703d3a37abb9607fca35ff212",
+    "bytes": 5292044,
+    "sampleRate": 22050,
+    "channels": 2,
+    "frames": 1323000,
+    "seconds": 60.0,
+    "samplePeak": 0.319915771484375,
+    "rmsDbFS": -22.57697987926507,
+    "dc": [
+      -1.3655635865457295e-08,
+      1.2940560338718821e-08
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      1323000
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        -0.003021240234375,
+        -0.004913330078125
+      ],
+      "rmsDifferenceDb": [
+        -0.24221202302607536,
+        0.5418029550465334
+      ],
+      "slopeError": [
+        0.001983642578125,
+        0.00341796875
+      ],
+      "numericalFlags": []
+    }
+  },
+  "listeningVerified": false,
+  "compositionRevision": "independent-r2",
+  "title": "岸を越える地図",
+  "usage": "スタート画面: 冒険への期待。主題をホルンから木管へ渡す。",
+  "bpm": 120,
+  "bars": 40,
+  "meter": [
+    6,
+    8
+  ],
+  "mode": "major",
+  "rationale": "スタート画面: 冒険への期待。主題をホルンから木管へ渡す。",
+  "direction": "明るい6/8の冒険序曲。上行する跳躍と躍動的な8分弦、ホルンの主題、木管の遠景。",
+  "source": "scores/bgm-title.json",
+  "midi": "scores/bgm-title.mid",
+  "renderCycles": 3,
+  "extractStartFrame": 2657429,
+  "rotationSeconds": 0.2591609977324263,
+  "motif": {
+    "id": "river-record",
+    "version": 3,
+    "quotation": "single three-note cameo in C only; title/ending link restricted to opening two bars"
+  },
+  "scoreFingerprint": "9ac6ada36b7f1f74709d30aaf3ea469a12d36349802e34396ca6d0c23d70a026"
+}

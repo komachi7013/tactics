@@ -1,0 +1,20 @@
+{
+  "modelPriorityPolicy": {
+    "first": "seedance_2_5",
+    "fallback": "hf_mult_motion_control",
+    "fallbackTrigger": "explicit user rejection after Seedance result; never agent judgment alone",
+    "automaticFallback": false
+  },
+  "genjutsuGenerationsSubmitted": 0,
+  "NComparedCandidate": "neia/N/candidate-garan-reference-v1",
+  "WComparedCandidate": "neia/W/candidate-garan-reference-v2",
+  "latestWQuotedCredits": 28,
+  "sequenceQuotedCredits": 84,
+  "sequenceJobs": [
+    "a3265fd5-1d46-411b-ad66-b760fc578407",
+    "6228e671-0f17-4adf-9525-4051fcb5e875",
+    "398dfc92-d3dc-406b-881f-2090f00cac5c"
+  ],
+  "E_N_SFilesUnchangedDuringLatestW": true,
+  "gameWalkingUnchanged": true
+}

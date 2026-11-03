@@ -1,0 +1,187 @@
+{
+  "frames": 19,
+  "cycleMs": 800,
+  "fpsRational": [
+    95,
+    4
+  ],
+  "durationsMs": [
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42
+  ],
+  "sourceIndices": [
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51
+  ],
+  "sourceVideoSha256": "0019dc722c6f40a8167df501cb1c278a3f449b2a6da12abcd00032bc0f61c11b",
+  "sheetSha256": "0107bb401346aa9e77a318f66be3f6d2508c675632054df4d295e59cfcbc1612",
+  "fixedScale": 0.24,
+  "fixedOffset": [
+    25,
+    53
+  ],
+  "frameGeometry": [
+    {
+      "headTop": 98,
+      "ground": 282,
+      "width": 80
+    },
+    {
+      "headTop": 98,
+      "ground": 281,
+      "width": 84
+    },
+    {
+      "headTop": 99,
+      "ground": 280,
+      "width": 84
+    },
+    {
+      "headTop": 99,
+      "ground": 280,
+      "width": 82
+    },
+    {
+      "headTop": 100,
+      "ground": 279,
+      "width": 80
+    },
+    {
+      "headTop": 100,
+      "ground": 279,
+      "width": 75
+    },
+    {
+      "headTop": 100,
+      "ground": 279,
+      "width": 74
+    },
+    {
+      "headTop": 99,
+      "ground": 280,
+      "width": 74
+    },
+    {
+      "headTop": 99,
+      "ground": 281,
+      "width": 73
+    },
+    {
+      "headTop": 98,
+      "ground": 282,
+      "width": 73
+    },
+    {
+      "headTop": 98,
+      "ground": 282,
+      "width": 73
+    },
+    {
+      "headTop": 98,
+      "ground": 282,
+      "width": 74
+    },
+    {
+      "headTop": 99,
+      "ground": 287,
+      "width": 75
+    },
+    {
+      "headTop": 100,
+      "ground": 287,
+      "width": 76
+    },
+    {
+      "headTop": 100,
+      "ground": 286,
+      "width": 75
+    },
+    {
+      "headTop": 100,
+      "ground": 285,
+      "width": 75
+    },
+    {
+      "headTop": 99,
+      "ground": 284,
+      "width": 75
+    },
+    {
+      "headTop": 98,
+      "ground": 283,
+      "width": 75
+    },
+    {
+      "headTop": 98,
+      "ground": 282,
+      "width": 80
+    }
+  ],
+  "contactReview": {
+    "videoSha256": "0019dc722c6f40a8167df501cb1c278a3f449b2a6da12abcd00032bc0f61c11b",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 32,
+        "foot": "R"
+      },
+      {
+        "frame": 42,
+        "foot": "L"
+      },
+      {
+        "frame": 52,
+        "foot": "R"
+      }
+    ],
+    "reviewNote": "Screen-left boot reaches forward at32 and52; screen-right boot passes and reaches forward at42. Alternating forward/support phases visually estimated, not motion capture."
+  },
+  "status": "visually-reviewed-comparison-candidate; user review pending",
+  "matteReportStatus": "pass",
+  "matteOverrideReason": null,
+  "gameApplied": true,
+  "art_source": "Higgsfield / Genjutsu image + video reference",
+  "userApproved": false,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "automaticGaitLoopStatus": "Automatic proposal low confidence; manually reviewed chronological32:52 two-step interval used",
+  "sheetColumns": 5,
+  "candidateDirectory": "artifacts/walk-from-standing-v1/dani/S/candidate-genjutsu-v1",
+  "sourceSheetSha256": "acd405ad6dd2d9cbf2a5ca74bc3115904a4c3585ec12737712d73303980da0af"
+}

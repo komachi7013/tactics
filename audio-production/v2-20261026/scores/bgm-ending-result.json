@@ -1,0 +1,99 @@
+{
+  "id": "bgm-ending",
+  "master": {
+    "file": "masters/bgm-ending.wav",
+    "sha256": "dde71a335476246678b065bcc05cbdca2be8b831d0485a6fc037abb3ffa327fd",
+    "bytes": 12700844,
+    "sampleRate": 44100,
+    "channels": 2,
+    "frames": 3175200,
+    "seconds": 72.0,
+    "samplePeak": 0.319976806640625,
+    "rmsDbFS": -23.29401229121542,
+    "dc": [
+      -4.084772834191547e-09,
+      5.910906571830121e-09
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      3175200
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        -0.001495361328125,
+        0.00048828125
+      ],
+      "rmsDifferenceDb": [
+        0.06121629601838306,
+        -0.15316051242972423
+      ],
+      "slopeError": [
+        0.0009765625,
+        0.002716064453125
+      ],
+      "numericalFlags": []
+    }
+  },
+  "delivery": {
+    "file": "delivery/bgm-ending.wav",
+    "sha256": "fc7a0c7eed3622d324c72a8c10931f9d3a411bfc4ffcf7e70b441e9cce04f2b8",
+    "bytes": 6350444,
+    "sampleRate": 22050,
+    "channels": 2,
+    "frames": 1587600,
+    "seconds": 72.0,
+    "samplePeak": 0.31915283203125,
+    "rmsDbFS": -23.294086279880133,
+    "dc": [
+      -1.0956802425831444e-08,
+      4.651835415879315e-09
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      1587600
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        -0.0040283203125,
+        -0.002105712890625
+      ],
+      "rmsDifferenceDb": [
+        0.06106704426339354,
+        -0.15124379682934722
+      ],
+      "slopeError": [
+        0.001007080078125,
+        0.000732421875
+      ],
+      "numericalFlags": []
+    }
+  },
+  "listeningVerified": false,
+  "compositionRevision": "independent-r2",
+  "title": "同じ杭に記す明日",
+  "usage": "終幕: タイトル主題の穏やかな再編曲。フルート・ハープ・柔らかな弦。",
+  "bpm": 80,
+  "bars": 32,
+  "meter": [
+    3,
+    4
+  ],
+  "mode": "major",
+  "rationale": "終幕: タイトル主題の穏やかな再編曲。フルート・ハープ・柔らかな弦。",
+  "direction": "穏やかな3/4の終幕。タイトルの冒頭2小節のみ引用し、独立した長いフルートの歌へ。ハープとチェロ。",
+  "source": "scores/bgm-ending.json",
+  "midi": "scores/bgm-ending.mid",
+  "renderCycles": 3,
+  "extractStartFrame": 3185839,
+  "rotationSeconds": 0.2412471655328798,
+  "motif": {
+    "id": "river-record",
+    "version": 3,
+    "quotation": "single three-note cameo in C only; title/ending link restricted to opening two bars"
+  },
+  "scoreFingerprint": "2ce364e6d318cca5796d99591ed6cf7dec8835c5de31d90ec5678f5bb2df0ae1"
+}

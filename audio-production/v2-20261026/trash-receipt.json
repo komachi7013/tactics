@@ -1,0 +1,323 @@
+{
+  "createdUTC": "20261026T131229Z",
+  "method": "shutil.move into ordinary ~/.Trash; no permanent deletion or emptying",
+  "target": "/Users/komachi/.Trash/tactics-audio-v1-20261026T131229Z",
+  "moves": [
+    {
+      "source": "/Users/komachi/work/tactics/assets/audio/v1",
+      "target": "/Users/komachi/.Trash/tactics-audio-v1-20261026T131229Z/assets__audio__v1",
+      "files": [
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/bgm-ending-render4.mid",
+          "relative": "bgm-ending-render4.mid",
+          "bytes": 2547,
+          "sha256": "19eb922f8973f2725aa4e22f60548574b3188e4455de298730a2238ac5919ad2"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/se-move-master.wav",
+          "relative": "se-move-master.wav",
+          "bytes": 26504,
+          "sha256": "eb4652f937c92c9ff8e4c0d425c12937c28a080b57d2936f70cd7ff7d4586f19"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/bgm-tactics.mid",
+          "relative": "bgm-tactics.mid",
+          "bytes": 1388,
+          "sha256": "10dc3b19bee2f9de55f738912c2caca89608e46d8e89b67660090caf5575642e"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/bgm-tactics-render4.json",
+          "relative": "bgm-tactics-render4.json",
+          "bytes": 56811,
+          "sha256": "df3fe47a3ff5ccc5127f1b5ac46c8ee99ecf9ad61a4024430b3bd8fb30812738"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/production.md",
+          "relative": "production.md",
+          "bytes": 8008,
+          "sha256": "7c9f4e74000b79b46be297c75ccbc66528b0079e119f0f4fd56a93418a4e6e6f"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/bgm-tactics.json",
+          "relative": "bgm-tactics.json",
+          "bytes": 15274,
+          "sha256": "dd19097b8d0951b671ae29b50f18fa068fedc839cc0c7f525172fa2d2239d56b"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/se-ui-master.wav",
+          "relative": "se-ui-master.wav",
+          "bytes": 15920,
+          "sha256": "082f6dabbac4914c89bd8693e64399e34cbe4241f1c0a10d950746d2d955b3fc"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/bgm-ending.mid",
+          "relative": "bgm-ending.mid",
+          "bytes": 833,
+          "sha256": "7bcc5e72b4fc667614b453ecb2352bef397d03f4f8bdecfda745b2733ecc69c6"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/bgm-tactics-master.wav",
+          "relative": "bgm-tactics-master.wav",
+          "bytes": 5292044,
+          "sha256": "31656c3d566da940dcd3f6db9ba6e6d8b47f0a2ee322b6ed8130d7fa2a328b63"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/metadata.json",
+          "relative": "metadata.json",
+          "bytes": 24663,
+          "sha256": "5ef26535e35319ce88b7615e3a8a9a64f53a1c7babadfe3255a24bbcffa5642a"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/se-defeat-master.wav",
+          "relative": "se-defeat-master.wav",
+          "bytes": 202904,
+          "sha256": "3ac2cc2da8f2724e8710bd4718b19eb5a1ea9a3b750e7ded42bf8643727d4c20"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/bgm-briefing-render4.mid",
+          "relative": "bgm-briefing-render4.mid",
+          "bytes": 2575,
+          "sha256": "23dfc6f2ca94d18e7da74a20020938b4f1f85d747c4226966920023b5eb4aeeb"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/bgm-briefing.mid",
+          "relative": "bgm-briefing.mid",
+          "bytes": 840,
+          "sha256": "88481846aa1b0b682a63384252c1ab3bacc78f3d9d89064b4c391ec1efd621e9"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/se-record-master.wav",
+          "relative": "se-record-master.wav",
+          "bytes": 63548,
+          "sha256": "ff5503bece60c358e1715790f370a38281e8b65cf995de09ee9b8807cbddc34f"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/bgm-ending-master.wav",
+          "relative": "bgm-ending-master.wav",
+          "bytes": 5644844,
+          "sha256": "88d3bd19dd72e81fd67f2a9e0f35428e72a7c033f4266f5d815db4d8e9098df0"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/se-mechanism-master.wav",
+          "relative": "se-mechanism-master.wav",
+          "bytes": 97064,
+          "sha256": "7cf07feaaab5db26b54e12e38ccfabb23dda4daf5bfa1fa1862d2463b553cd61"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/soundfont-license.txt",
+          "relative": "soundfont-license.txt",
+          "bytes": 2237,
+          "sha256": "e5143d76d6c69e535dd11d30d33ef9fdbc2668f955fdb09aa62d381f437ee165"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/se-heal-master.wav",
+          "relative": "se-heal-master.wav",
+          "bytes": 114704,
+          "sha256": "c3e607b11ce02742559001d59183682551be771207280d96296e0d671ba80796"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/se-impact-master.wav",
+          "relative": "se-impact-master.wav",
+          "bytes": 42380,
+          "sha256": "85c6b9ce102c406214e2e49dd981953c9b7eeb36b9c34b669022b15b6e69c732"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/bgm-briefing-render4.json",
+          "relative": "bgm-briefing-render4.json",
+          "bytes": 31146,
+          "sha256": "da026512ede2a95d2a9ce24c3973e390f5b93bec1ae9e2c2339d3a5bb485dc5d"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/soundfont-info.json",
+          "relative": "soundfont-info.json",
+          "bytes": 2523,
+          "sha256": "ee1df5b2f8bba50d84a82c1cdaff5132372e6acf98fd1fb33b3204f6fcf5d38c"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/bgm-ending-render4.json",
+          "relative": "bgm-ending-render4.json",
+          "bytes": 30675,
+          "sha256": "d1e47c60727f2692e4c87d45df87811e911276c414138e297dd51788c6beac03"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/bgm-ending.json",
+          "relative": "bgm-ending.json",
+          "bytes": 8618,
+          "sha256": "a740c68693cd531eda09ee9931a4d0a9824eee85878089ad0e39e8e9ee5174d2"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/bgm-briefing-master.wav",
+          "relative": "bgm-briefing-master.wav",
+          "bytes": 5644844,
+          "sha256": "7797be37a66e0b8cc6f39c184020ef0ba613339cdee0a486d5fddd7c041e82da"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/bgm-briefing.json",
+          "relative": "bgm-briefing.json",
+          "bytes": 8716,
+          "sha256": "c89bc5e5effb14d38f0cb31a1f0d906dcc9ab7c1fb340e347c96c90375b93775"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/bgm-tactics-render4.mid",
+          "relative": "bgm-tactics-render4.mid",
+          "bytes": 4617,
+          "sha256": "10fd9047338edf0fa55641f00ffae41eb38b2cc3d3ed4ba19a5e857494d976bd"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/assets/audio/v1/se-victory-master.wav",
+          "relative": "se-victory-master.wav",
+          "bytes": 194084,
+          "sha256": "54ac90ad9af3cbb6b1099d87f1def49369589fc0d4ac4062932b3ba6bff893ed"
+        }
+      ],
+      "moved": true
+    },
+    {
+      "source": "/Users/komachi/work/tactics/public/audio/v1",
+      "target": "/Users/komachi/.Trash/tactics-audio-v1-20261026T131229Z/public__audio__v1",
+      "files": [
+        {
+          "source": "/Users/komachi/work/tactics/public/audio/v1/se-heal.wav",
+          "relative": "se-heal.wav",
+          "bytes": 61428,
+          "sha256": "232874679ddb057b69902ca08ceac4236ea4253bcc4bcf2e7a79780d7c998207"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/public/audio/v1/bgm-ending.wav",
+          "relative": "bgm-ending.wav",
+          "bytes": 2826496,
+          "sha256": "886efd4d2c4f95d21889bda20c6dc2a20cb18abdf8b6966c93b5e837c0ca0347"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/public/audio/v1/se-move.wav",
+          "relative": "se-move.wav",
+          "bytes": 17328,
+          "sha256": "2cb6d39842a785c9eca1a8594b419e072a3ce428aa0723bb058a03528859eb36"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/public/audio/v1/se-ui.wav",
+          "relative": "se-ui.wav",
+          "bytes": 12036,
+          "sha256": "ae19eb4073808d3ba83a9cf95fb26d7273be6b40bb53113e9a3486be4e2866b7"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/public/audio/v1/bgm-briefing.wav",
+          "relative": "bgm-briefing.wav",
+          "bytes": 2826496,
+          "sha256": "1b1cd724c0ffeb5b5eb550cfdfa69c71c933454429777bc44fceae1c04ebeff4"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/public/audio/v1/se-impact.wav",
+          "relative": "se-impact.wav",
+          "bytes": 25264,
+          "sha256": "1a7e78396d154c53eb3802baee7228554b05ad9004e8ec615e1255c52ed4ef05"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/public/audio/v1/se-mechanism.wav",
+          "relative": "se-mechanism.wav",
+          "bytes": 52608,
+          "sha256": "cd4e40a31088fc971aa6ea0b31206540fe0f26810ecbbc6fe436dd2610b641e2"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/public/audio/v1/se-record.wav",
+          "relative": "se-record.wav",
+          "bytes": 35848,
+          "sha256": "1fb18463a7ffb26f3730e3bc9416cce6808c0a2af2a79f6a047be43053f75866"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/public/audio/v1/bgm-tactics.wav",
+          "relative": "bgm-tactics.wav",
+          "bytes": 2650096,
+          "sha256": "f82db363a11b3c0e92ffda62874abd3d07fb4d2e5afd8767ca91183c7e5934f4"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/public/audio/v1/se-victory.wav",
+          "relative": "se-victory.wav",
+          "bytes": 101116,
+          "sha256": "60697c294bad02e59043185f1dcfbf1c899f1295b65a35bc5012fcddeec4eef5"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/public/audio/v1/se-defeat.wav",
+          "relative": "se-defeat.wav",
+          "bytes": 105528,
+          "sha256": "d3283172c9da7b74d0d8280a122e71b7c649adce42a708ba2ac534cb08ae7fab"
+        }
+      ],
+      "moved": true
+    },
+    {
+      "source": "/Users/komachi/work/tactics/dist/audio/v1",
+      "target": "/Users/komachi/.Trash/tactics-audio-v1-20261026T131229Z/dist__audio__v1",
+      "files": [
+        {
+          "source": "/Users/komachi/work/tactics/dist/audio/v1/se-heal.wav",
+          "relative": "se-heal.wav",
+          "bytes": 61428,
+          "sha256": "232874679ddb057b69902ca08ceac4236ea4253bcc4bcf2e7a79780d7c998207"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/dist/audio/v1/bgm-ending.wav",
+          "relative": "bgm-ending.wav",
+          "bytes": 2826496,
+          "sha256": "886efd4d2c4f95d21889bda20c6dc2a20cb18abdf8b6966c93b5e837c0ca0347"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/dist/audio/v1/se-move.wav",
+          "relative": "se-move.wav",
+          "bytes": 17328,
+          "sha256": "2cb6d39842a785c9eca1a8594b419e072a3ce428aa0723bb058a03528859eb36"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/dist/audio/v1/se-ui.wav",
+          "relative": "se-ui.wav",
+          "bytes": 12036,
+          "sha256": "ae19eb4073808d3ba83a9cf95fb26d7273be6b40bb53113e9a3486be4e2866b7"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/dist/audio/v1/bgm-briefing.wav",
+          "relative": "bgm-briefing.wav",
+          "bytes": 2826496,
+          "sha256": "1b1cd724c0ffeb5b5eb550cfdfa69c71c933454429777bc44fceae1c04ebeff4"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/dist/audio/v1/se-impact.wav",
+          "relative": "se-impact.wav",
+          "bytes": 25264,
+          "sha256": "1a7e78396d154c53eb3802baee7228554b05ad9004e8ec615e1255c52ed4ef05"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/dist/audio/v1/se-mechanism.wav",
+          "relative": "se-mechanism.wav",
+          "bytes": 52608,
+          "sha256": "cd4e40a31088fc971aa6ea0b31206540fe0f26810ecbbc6fe436dd2610b641e2"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/dist/audio/v1/se-record.wav",
+          "relative": "se-record.wav",
+          "bytes": 35848,
+          "sha256": "1fb18463a7ffb26f3730e3bc9416cce6808c0a2af2a79f6a047be43053f75866"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/dist/audio/v1/bgm-tactics.wav",
+          "relative": "bgm-tactics.wav",
+          "bytes": 2650096,
+          "sha256": "f82db363a11b3c0e92ffda62874abd3d07fb4d2e5afd8767ca91183c7e5934f4"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/dist/audio/v1/se-victory.wav",
+          "relative": "se-victory.wav",
+          "bytes": 101116,
+          "sha256": "60697c294bad02e59043185f1dcfbf1c899f1295b65a35bc5012fcddeec4eef5"
+        },
+        {
+          "source": "/Users/komachi/work/tactics/dist/audio/v1/se-defeat.wav",
+          "relative": "se-defeat.wav",
+          "bytes": 105528,
+          "sha256": "d3283172c9da7b74d0d8280a122e71b7c649adce42a708ba2ac534cb08ae7fab"
+        }
+      ],
+      "moved": true
+    }
+  ],
+  "complete": true
+}

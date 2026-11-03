@@ -1,0 +1,184 @@
+{
+  "frames": 19,
+  "cycleMs": 800,
+  "fpsRational": [
+    95,
+    4
+  ],
+  "durationsMs": [
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42
+  ],
+  "sourceIndices": [
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57
+  ],
+  "sourceVideoSha256": "1358b93ff8c15a8d3ca350ae6c4f7e9e65459cf7ab92c022ce20c1a661295437",
+  "sheetSha256": "0442ca04ad4774ed9b4864dfae2637163099955660063a5f2df8116591fc5f66",
+  "fixedScale": 0.2465753424657534,
+  "fixedOffset": [
+    12,
+    68
+  ],
+  "frameGeometry": [
+    {
+      "headTop": 99,
+      "ground": 280,
+      "width": 76
+    },
+    {
+      "headTop": 99,
+      "ground": 279,
+      "width": 76
+    },
+    {
+      "headTop": 100,
+      "ground": 280,
+      "width": 76
+    },
+    {
+      "headTop": 99,
+      "ground": 279,
+      "width": 73
+    },
+    {
+      "headTop": 99,
+      "ground": 278,
+      "width": 72
+    },
+    {
+      "headTop": 99,
+      "ground": 275,
+      "width": 72
+    },
+    {
+      "headTop": 99,
+      "ground": 269,
+      "width": 69
+    },
+    {
+      "headTop": 98,
+      "ground": 270,
+      "width": 67
+    },
+    {
+      "headTop": 99,
+      "ground": 270,
+      "width": 67
+    },
+    {
+      "headTop": 99,
+      "ground": 271,
+      "width": 69
+    },
+    {
+      "headTop": 100,
+      "ground": 272,
+      "width": 71
+    },
+    {
+      "headTop": 100,
+      "ground": 271,
+      "width": 70
+    },
+    {
+      "headTop": 100,
+      "ground": 271,
+      "width": 69
+    },
+    {
+      "headTop": 99,
+      "ground": 273,
+      "width": 67
+    },
+    {
+      "headTop": 99,
+      "ground": 275,
+      "width": 69
+    },
+    {
+      "headTop": 99,
+      "ground": 276,
+      "width": 70
+    },
+    {
+      "headTop": 99,
+      "ground": 277,
+      "width": 72
+    },
+    {
+      "headTop": 99,
+      "ground": 279,
+      "width": 74
+    },
+    {
+      "headTop": 99,
+      "ground": 279,
+      "width": 75
+    }
+  ],
+  "contactReview": {
+    "videoSha256": "1358b93ff8c15a8d3ca350ae6c4f7e9e65459cf7ab92c022ce20c1a661295437",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "R"
+      },
+      {
+        "frame": 48,
+        "foot": "L"
+      },
+      {
+        "frame": 58,
+        "foot": "R"
+      }
+    ],
+    "reviewNote": "Toma N source/full feet sheets reviewed. Near image-right R38/58 and far L48 support with alternate foot lift and passage. Bag at same hip, strap and back-facing design retained. Ground shadow keyed with magenta; inspect boots and coat after key. Fullbody/soles within source. Garan N driver. Estimated support phases, not motion capture."
+  },
+  "status": "visually-reviewed-comparison-candidate; user review pending",
+  "matteReportStatus": "pass",
+  "matteOverrideReason": null,
+  "gameApplied": false,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "userApproved": false,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "automaticGaitLoopStatus": "automatic selection requires visual review"
+}

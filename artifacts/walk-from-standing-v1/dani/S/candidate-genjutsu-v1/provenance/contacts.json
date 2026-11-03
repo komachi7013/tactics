@@ -1,0 +1,21 @@
+{
+  "videoSha256": "0019dc722c6f40a8167df501cb1c278a3f449b2a6da12abcd00032bc0f61c11b",
+  "visualReviewed": true,
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "contacts": [
+    {
+      "frame": 32,
+      "foot": "R"
+    },
+    {
+      "frame": 42,
+      "foot": "L"
+    },
+    {
+      "frame": 52,
+      "foot": "R"
+    }
+  ],
+  "reviewNote": "Screen-left boot reaches forward at32 and52; screen-right boot passes and reaches forward at42. Alternating forward/support phases visually estimated, not motion capture."
+}

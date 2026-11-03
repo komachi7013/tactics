@@ -1,0 +1,21 @@
+{
+  "videoSha256": "c1d424716068c67e518e69f4978164ccac1f39046e5bf29b1563f6f8a220b562",
+  "visualReviewed": true,
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "contacts": [
+    {
+      "frame": 38,
+      "foot": "R"
+    },
+    {
+      "frame": 48,
+      "foot": "L"
+    },
+    {
+      "frame": 58,
+      "foot": "R"
+    }
+  ],
+  "reviewNote": "Vesk N source/full feet sheets reviewed: near image-right R38/58 and far L48 support alternate, opposite foot passes and heel lifts. Back-facing coat/hair/colors retained. Wholebody and full soles inside canvas. Garan N driver. Estimated support phases, not motion capture."
+}

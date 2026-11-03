@@ -1,0 +1,46 @@
+{
+  "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "duration": 4,
+    "resolution": "720p",
+    "generate_audio": false,
+    "count": 1,
+    "aspect_ratio": "1:1",
+    "prompt": "Animate the character in the supplied WEST-facing standing image, keeping the same back-facing three-quarter orientation toward the upper-left and viewpoint.\n\n1. One complete left-and-right TWO-step gait cycle takes approximately 0.8 seconds. The final export will use 19 frames per cycle.\n2. Walk in place with restrained, clearly alternating LEFT and RIGHT forward steps, one smooth forward swing per foot per cycle and equal step timing. Both feet advance along the facing direction, including the character's LEFT foot; no extra tap, stutter, or backward-only curl.\n3. Use small strides and low foot lift. Keep the upper body upright.\n4. The supporting leg straightens naturally while the opposite thigh swings forward, the knee passes the supporting knee with a slight bend, and that foot plants ahead of the hip along the facing direction. Each boot keeps its identity, shape, and toe heading continuously as the legs pass or overlap; a hidden boot reappears in its continuous trajectory, without snapping, twisting, fusing, or swapping feet.\n5. Keep head and torso movement small.\n6. Keep the entire character and both feet, including the boot tips and soles, fully inside the frame throughout the clip.",
+    "medias": [
+      {
+        "role": "start_image",
+        "value": "f4b7eab3-ff77-4e81-ac11-21bed262dc19"
+      }
+    ]
+  },
+  "quote": {
+    "cost": {
+      "credits": 28,
+      "credits_exact": 28
+    }
+  },
+  "submission": {
+    "results": [
+      {
+        "id": "7b4064a0-9ded-4861-874b-5e36bc316be9",
+        "type": "video",
+        "status": "pending",
+        "model": "seedance_2_5",
+        "params": {
+          "prompt": "Animate the character in the supplied WEST-facing standing image, keeping the same back-facing three-quarter orientation toward the upper-left and viewpoint.\n\n1. One complete left-and-right TWO-step gait cycle takes approximately 0.8 seconds. The final export will use 19 frames per cycle.\n2. Walk in place with restrained, clearly alternating LEFT and RIGHT forward steps, one smooth forward swing per foot per cycle and equal step timing. Both feet advance along the facing direction, including the character's LEFT foot; no extra tap, stutter, or backward-only curl.\n3. Use small strides and low foot lift. Keep the upper body upright.\n4. The supporting leg straightens naturally while the opposite thigh swings forward, the knee passes the supporting knee with a slight bend, and that foot plants ahead of the hip along the facing direction. Each boot keeps its identity, shape, and toe heading continuously as the legs pass or overlap; a hidden boot reappears in its continuous trajectory, without snapping, twisting, fusing, or swapping feet.\n5. Keep head and torso movement small.\n6. Keep the entire character and both feet, including the boot tips and soles, fully inside the frame throughout the clip.",
+          "aspect_ratio": "1:1",
+          "duration": 4,
+          "reference_images": [
+            "f4b7eab3-ff77-4e81-ac11-21bed262dc19"
+          ],
+          "mode": "omni_reference",
+          "resolution": "720p",
+          "generate_audio": false
+        }
+      }
+    ]
+  },
+  "userScope": "Approved E then W, one paid retake each, max56 quoted credits; E individually reviewed before W submission; six conditions clarified; own direction standing only; no reference video; no game application"
+}

@@ -1,0 +1,21 @@
+{
+  "videoSha256": "534adf55e367fe1f45e76eb7652cae7cda968be1ff4626dbd9efb8719b2cbdaa",
+  "visualReviewed": true,
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "contacts": [
+    {
+      "frame": 38,
+      "foot": "L"
+    },
+    {
+      "frame": 48,
+      "foot": "R"
+    },
+    {
+      "frame": 58,
+      "foot": "L"
+    }
+  ],
+  "reviewNote": "Delegation W source/full feet sheets reviewed. Near image-left L38/58 and far R48 support, both feet alternate forward swing with heel/toe transitions. Brown coat/scarf/pouch and hair retained; no abrupt color switch across source. Fullbody/soles inside. Garan W driver. Estimated support phases, not motion capture."
+}

@@ -43,7 +43,7 @@ describe('equipment preparation and acquisition views', () => {
   it('shows an owned incompatible weapon as unavailable while preserving its identity', () => {
     const equipment = createEquipment(); equipment.acquired = ['chest:B08']; const jobs = createJobs();
     const lise = equipmentSlotOptions(equipment, completed, jobs, 'ally-lise', 'weapon');
-    expect(lise[0].event.id).toBe('chest:B08'); expect(lise[0].reason).toBe('主職不適合'); expect(lise[0].disabled).toBe(true);
+    expect(lise[0].event.id).toBe('chest:B08'); expect(lise[0].reason).toBe('この人物は装備不可'); expect(lise[0].disabled).toBe(true);
     expect(equipmentSlotOptions(equipment, completed, jobs, 'ally-neia', 'weapon')[0].disabled).toBe(false);
   });
   it('provides cap-loss text consistent with the shared next-deployment factory, without mutating equipment', () => {
@@ -56,12 +56,12 @@ describe('equipment preparation and acquisition views', () => {
     equipmentSlotOptions(equipment, completed, jobs, 'ally-lise', 'body'); equipmentCollectionRows(completed, equipment, []);
     expect(JSON.stringify(equipment)).toBe(before);
   });
-  it('prepares a weapon-return candidate atomically and leaves the original available for cancellation', () => {
+  it('keeps Neia’s fixed-role bow despite an archived changed main, without mutating the original', () => {
     const jobs = createJobs(); let equipment = createEquipment(); equipment.acquired = ['chest:B08'];
     equipment = equipItem(equipment, completed, jobs, 'ally-neia', 'weapon', 'chest:B08');
     const before = JSON.stringify({ equipment, jobs }), changed = structuredClone(jobs); changed['ally-neia'].main = 'warden';
     const candidate = reconcileEquipmentJobs(equipment, changed);
-    expect(candidate.loadouts['ally-neia'].weapon).toBeNull(); expect(equipment.loadouts['ally-neia'].weapon).toBe('chest:B08');
+    expect(candidate.loadouts['ally-neia'].weapon).toBe('chest:B08'); expect(equipment.loadouts['ally-neia'].weapon).toBe('chest:B08');
     expect(JSON.stringify({ equipment, jobs })).toBe(before);
   });
   it('keeps later-joined loadouts visible and legal while preparing an old battle', () => {

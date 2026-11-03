@@ -1,0 +1,99 @@
+{
+  "id": "bgm-b11",
+  "master": {
+    "file": "masters/bgm-b11.wav",
+    "sha256": "460ef5681338f1da60e185ea46f2c5895044c68da868172a6c79a5228ff41e7a",
+    "bytes": 17319300,
+    "sampleRate": 44100,
+    "channels": 2,
+    "frames": 4329814,
+    "seconds": 98.18172335600907,
+    "samplePeak": 0.319976806640625,
+    "rmsDbFS": -23.82937795278743,
+    "dc": [
+      -1.442775195929317e-08,
+      1.5055045522740698e-08
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      4329814
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        0.00146484375,
+        0.0
+      ],
+      "rmsDifferenceDb": [
+        2.6982277258476794,
+        1.702153499128123
+      ],
+      "slopeError": [
+        0.0029296875,
+        0.001007080078125
+      ],
+      "numericalFlags": []
+    }
+  },
+  "delivery": {
+    "file": "delivery/bgm-b11.wav",
+    "sha256": "4c7a6f3abd89b62d9d3c220c4dd8bea63122622835c26bfddf18151a78808a96",
+    "bytes": 8659672,
+    "sampleRate": 22050,
+    "channels": 2,
+    "frames": 2164907,
+    "seconds": 98.18172335600907,
+    "samplePeak": 0.31884765625,
+    "rmsDbFS": -23.829425318643004,
+    "dc": [
+      -4.214848886984521e-09,
+      9.501030601429992e-09
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      2164907
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        0.002227783203125,
+        0.000579833984375
+      ],
+      "rmsDifferenceDb": [
+        2.6860433149601617,
+        1.69008556226637
+      ],
+      "slopeError": [
+        0.004608154296875,
+        0.004364013671875
+      ],
+      "numericalFlags": []
+    }
+  },
+  "listeningVerified": false,
+  "compositionRevision": "independent-r2",
+  "title": "保守路の手",
+  "usage": "B11 下層保守路: 保守員救出と補助弁復旧。ファゴットとヴィオラの低い応答。",
+  "bpm": 132,
+  "bars": 48,
+  "meter": [
+    9,
+    8
+  ],
+  "mode": "minor",
+  "rationale": "B11 下層保守路: 保守員救出と補助弁復旧。ファゴットとヴィオラの低い応答。",
+  "direction": "保守路の9/8（3+2+4）。歯車のようなピチカートとクラリネット、ヴィオラの温かな返答。機敏な救出と復旧。",
+  "source": "scores/bgm-b11.json",
+  "midi": "scores/bgm-b11.mid",
+  "renderCycles": 3,
+  "extractStartFrame": 4340385,
+  "rotationSeconds": 0.23970521541950113,
+  "motif": {
+    "id": "river-record",
+    "version": 3,
+    "quotation": "single three-note cameo in C only; title/ending link restricted to opening two bars"
+  },
+  "scoreFingerprint": "73867d1e3e32afe56a664c984daaf707e7634f7e546605e23dd960198265077e"
+}

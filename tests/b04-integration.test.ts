@@ -4,9 +4,9 @@ import { createInitialState, reduce } from '../src/domain/engine';
 import { runEnemyActivation } from '../src/domain/ai';
 import type { BattleId, BattleState, Command } from '../src/domain/types';
 import b01 from './fixtures/routes.json';
-import b02 from './fixtures/b02-route.json';
-import b03 from './fixtures/b03-route.json';
-import b04 from './fixtures/b04-route.json';
+import b02 from './fixtures/defend-cooldown-v1/b02-route.json';
+import b03 from './fixtures/manual-cart-v1/b03-route.json';
+import b04 from './fixtures/defend-cooldown-v1/b04-route.json';
 
 function memory(raw?: string) {
   const data = new Map<string, string>([['unrelated-user-state', 'keep']]);
@@ -55,19 +55,15 @@ function expectFresh(state: BattleState) {
 }
 
 describe('Independent B04 campaign and normal-AI integration', () => {
-  it('loses at the deadline under stationary defense and retries without spending campaign milestones', () => {
+  it('loses at the deadline with legal cooldown defense and stationary waiting, then retries without spending campaign milestones', () => {
     let state = createInitialState('B04');
     let activations = 0;
-    while (state.phase === 'playing') {
-      const unit = state.units.find(u => u.team === 'player' && u.hp > 0 && !u.acted);
-      expect(unit).toBeDefined();
-      for (const command of [{ type: 'start', unitId: unit!.id }, { type: 'defend' }, { type: 'end', facing: 'E' }] as Command[]) {
-        const result = reduce(state, command);
-        expect(result.error).toBeUndefined();
-        state = result.state;
-        while (state.phase === 'playing' && state.turn === 'enemy') state = runEnemyActivation(state);
-      }
-      expect(++activations).toBeLessThanOrEqual(40);
+    for (const command of b04.defeat.commands as Command[]) {
+      const result = reduce(state, command);
+      expect(result.error).toBeUndefined();
+      state = result.state;
+      while (state.phase === 'playing' && state.turn === 'enemy') state = runEnemyActivation(state);
+      if (command.type === 'start') expect(++activations).toBeLessThanOrEqual(40);
     }
     expect(state).toMatchObject({ phase: 'lost', round: 10, capture: { heldRounds: 0 }, records: [] });
     expect(state.units.find(u => u.id === 'ally-lise')!.hp).toBeGreaterThan(0);

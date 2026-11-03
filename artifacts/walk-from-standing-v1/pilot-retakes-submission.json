@@ -1,0 +1,91 @@
+{
+  "requests": [
+    {
+      "index": 0,
+      "params": {
+        "model": "kling3_0",
+        "duration": 4,
+        "mode": "std",
+        "sound": "off",
+        "aspect_ratio": "1:1",
+        "count": 1,
+        "prompt": "Animate this exact brown-haired female scholar in her cream tunic, short dark teal shoulder cape and brown boots. She carries a CLOSED RECTANGULAR BOOK firmly in her left hand and a leather satchel on her right hip. Keep these two items unchanged and held still relative to her torso. She has NO WEAPONS: no bow, no arrows, no sword, no staff. Only animate her legs and a little cloth movement. She faces the upper-right diagonal away from the viewer exactly as pictured for the whole clip; hold this same three-quarter angle without any turn. A treadmill WALK IN PLACE, left foot then right foot, small equal steps, supporting knee straightens, repeating complete left-right cycles. Neutral upright torso, relaxed modest motion, fixed ground level, no body travel. Walk immediately. Fixed orthographic camera, no zoom. Same face, same head proportions, same costume and colour palette, hand-painted game sprite. Uniform flat solid magenta background with absolutely no floor shadow. Nothing else appears. Do not change the length or cut of the short shoulder cape. No long cape or trailing fabric. The final frame has exactly the same facing and costume as the first frame.",
+        "medias": [
+          {
+            "role": "start_image",
+            "value": "637749fd-61a4-41fa-a94d-12343b55b59f"
+          },
+          {
+            "role": "end_image",
+            "value": "637749fd-61a4-41fa-a94d-12343b55b59f"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "params": {
+        "model": "kling3_0",
+        "duration": 4,
+        "mode": "std",
+        "sound": "off",
+        "aspect_ratio": "1:1",
+        "count": 1,
+        "prompt": "Animate this exact brown-haired female scholar in her cream tunic, short dark teal shoulder cape and brown boots. She carries a CLOSED RECTANGULAR BOOK firmly in her left hand and a leather satchel on her right hip. Keep these two items unchanged and held still relative to her torso. She has NO WEAPONS: no bow, no arrows, no sword, no staff. Only animate her legs and a little cloth movement. She faces the lower-left diagonal toward the viewer exactly as pictured for the whole clip; hold this same three-quarter angle without any turn. A treadmill WALK IN PLACE, left foot then right foot, small equal steps, supporting knee straightens, repeating complete left-right cycles. Neutral upright torso, relaxed modest motion, fixed ground level, no body travel. Walk immediately. Fixed orthographic camera, no zoom. Same face, same head proportions, same costume and colour palette, hand-painted game sprite. Uniform flat solid magenta background with absolutely no floor shadow. Nothing else appears. Do not change the length or cut of the short shoulder cape. No long cape or trailing fabric. The final frame has exactly the same facing and costume as the first frame.",
+        "medias": [
+          {
+            "role": "start_image",
+            "value": "931fce26-9563-41f0-be4e-89843e7a831d"
+          },
+          {
+            "role": "end_image",
+            "value": "931fce26-9563-41f0-be4e-89843e7a831d"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "params": {
+        "model": "kling3_0",
+        "duration": 4,
+        "mode": "std",
+        "sound": "off",
+        "aspect_ratio": "1:1",
+        "count": 1,
+        "prompt": "Animate this exact brown-haired female scholar in her cream tunic, short dark teal shoulder cape and brown boots. She carries a CLOSED RECTANGULAR BOOK firmly in her left hand and a leather satchel on her right hip. Keep these two items unchanged and held still relative to her torso. She has NO WEAPONS: no bow, no arrows, no sword, no staff. Only animate her legs and a little cloth movement. She faces the upper-left diagonal away from the viewer exactly as pictured for the whole clip; hold this same three-quarter angle without any turn. A treadmill WALK IN PLACE, left foot then right foot, small equal steps, supporting knee straightens, repeating complete left-right cycles. Neutral upright torso, relaxed modest motion, fixed ground level, no body travel. Walk immediately. Fixed orthographic camera, no zoom. Same face, same head proportions, same costume and colour palette, hand-painted game sprite. Uniform flat solid magenta background with absolutely no floor shadow. Nothing else appears. Do not change the length or cut of the short shoulder cape. No long cape or trailing fabric. The final frame has exactly the same facing and costume as the first frame.",
+        "medias": [
+          {
+            "role": "start_image",
+            "value": "ff1c35ae-c1c3-458f-8564-394d026b2b70"
+          },
+          {
+            "role": "end_image",
+            "value": "ff1c35ae-c1c3-458f-8564-394d026b2b70"
+          }
+        ]
+      }
+    }
+  ],
+  "submission": {
+    "jobs": [
+      {
+        "index": 0,
+        "job_id": "b11e7a68-a438-4bb1-835a-b142d5e38ee6",
+        "status": "pending"
+      },
+      {
+        "index": 2,
+        "job_id": "9ef598ad-d663-4ce7-84df-cb7fd97907ab",
+        "status": "pending"
+      },
+      {
+        "index": 3,
+        "job_id": "f5e83269-3c33-4945-a43b-824feff28701",
+        "status": "pending"
+      }
+    ],
+    "submitted_count": 3,
+    "failed_count": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "videoSha256": "86b0ef6f29537bc1b0e9817e1b6266247ce90d44a3c8e52403921fc2682f9610",
+  "visualReviewed": true,
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "contacts": [
+    {
+      "frame": 38,
+      "foot": "R"
+    },
+    {
+      "frame": 48,
+      "foot": "L"
+    },
+    {
+      "frame": 58,
+      "foot": "R"
+    }
+  ],
+  "reviewNote": "Worker N source/full feet sheets inspected. Near image-right R38/58 and far L48 support alternate with distinct opposite-leg passage. Cap back, apron tie, glove/pouch retained. Small upperbody sway and complete soles within source. Garan N driver. Estimated support phases, not motion capture."
+}

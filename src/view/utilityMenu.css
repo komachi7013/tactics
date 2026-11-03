@@ -1,0 +1,78 @@
+.utility-menu-shield {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+  place-items: center;
+  padding: max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #061b19b8;
+  overscroll-behavior: contain;
+}
+.utility-menu-shield[hidden] { display: none; }
+.utility-menu {
+  display: flex;
+  flex-direction: column;
+  width: min(680px, 100%);
+  max-width: 100%;
+  max-height: calc(100vh - 32px);
+  max-height: calc(100dvh - 32px);
+  max-height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 1px solid #b7c39b;
+  border-radius: 8px;
+  background: #1d3831;
+  color: #eee9d4;
+  box-shadow: 0 18px 60px #03110cd9;
+}
+.utility-menu-heading {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #65745e;
+  background: #142e27;
+}
+.utility-menu-heading h2 {
+  margin: 0;
+  min-width: 0;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: .08em;
+}
+.utility-menu-close { flex: 0 0 auto; min-height: 44px; }
+.utility-menu-scroll { min-height: 0; overflow: auto; overscroll-behavior: contain; padding: 16px; }
+.utility-menu-scroll > * { min-width: 0; max-width: 100%; box-sizing: border-box; }
+.utility-menu :is(p, label, button, summary, pre) { overflow-wrap: anywhere; }
+.utility-menu pre { white-space: pre-wrap; }
+body[data-ui-notebook="true"] .utility-menu .notebook-tools-body {
+  position: static;
+  inset: auto;
+  display: grid;
+  gap: 10px;
+  width: auto;
+  min-width: 0;
+  max-width: none;
+  max-height: none;
+  overflow: visible;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+body[data-ui-notebook="true"] .utility-menu .notebook-tools-body > button { margin: 0; min-height: 44px; }
+body[data-ui-notebook="true"] .utility-menu .audio-controls { min-width: 0; flex-wrap: wrap; }
+body[data-ui-notebook="true"] .utility-menu .roster { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 480px) {
+  .utility-menu-heading { padding: 8px 12px; gap: 8px; }
+  .utility-menu-scroll { padding: 12px; }
+  .utility-menu-heading h2 { font-size: 16px; letter-spacing: .02em; }
+  body[data-ui-notebook="true"] .utility-menu .roster { grid-template-columns: minmax(0, 1fr); }
+}

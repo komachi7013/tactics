@@ -1,0 +1,21 @@
+{
+  "videoSha256": "35a40293bc5a25e028d8427bf4038268ce432dec16d0facfe84c44b461b4c0d7",
+  "visualReviewed": true,
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "contacts": [
+    {
+      "frame": 38,
+      "foot": "L"
+    },
+    {
+      "frame": 48,
+      "foot": "R"
+    },
+    {
+      "frame": 58,
+      "foot": "L"
+    }
+  ],
+  "reviewNote": "Worker S source/full feet sheets reviewed: near image-right L38/58 and far R48 support, both feet alternately pass with small stride/lift. Upperbody upright, cap/apron/gloves/tool retained. Fullbody and soles inside source. Existing Lise S driver and own S standing. Estimated support phases, not motion capture."
+}

@@ -1,0 +1,21 @@
+{
+  "videoSha256": "342c4f494f3d6c133f1aa2978b6ab056f99d9db21827a938b791dee3e0fcbeba",
+  "visualReviewed": true,
+  "contacts": [
+    {
+      "frame": 60,
+      "foot": "L"
+    },
+    {
+      "frame": 72,
+      "foot": "R"
+    },
+    {
+      "frame": 84,
+      "foot": "L"
+    }
+  ],
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "reviewNote": "Front three-quarter S: near anatomical L swings toward lower-left at60/84 while far R passes behind; far R supports around72 as near L recovers. Feet0..96 every2frames and enlarged twelve poses inspected. Early clip holds/walk rhythm uneven; later60..84 interval selected. Native24frames=1second; retime800ms. Estimated support phases +/-2frames, not motion capture."
+}

@@ -1,0 +1,84 @@
+/* Contextual target slips in the existing green field notebook. */
+.attack-targets {
+  --target-paper: var(--paper, #eee5c9);
+  --target-ink: var(--ink, #21382d);
+  --target-edge: #82927a;
+  min-width: 0;
+  width: 100%;
+}
+.attack-target-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 132px), 1fr));
+  gap: 6px;
+  min-width: 0;
+}
+.attack-target-card { min-width: 0; }
+body .attack-targets .attack-target-button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+  min-width: 0;
+  min-height: 68px;
+  height: 100%;
+  margin: 0;
+  padding: 7px;
+  border: 1px solid var(--target-edge);
+  border-left: 3px solid #789779;
+  border-radius: 3px;
+  background: var(--target-paper);
+  color: var(--target-ink);
+  text-align: left;
+  line-height: 1.35;
+}
+body .attack-targets .attack-target-button:hover:enabled { background: #f6edcf; }
+body .attack-targets .attack-target-button:focus-visible {
+  outline: 3px solid #f4d58d;
+  outline-offset: -3px;
+}
+body .attack-targets .attack-target-button:disabled {
+  opacity: 1;
+  background: #d7d5c1;
+  color: #525d50;
+  border-color: #83907b;
+  border-left-style: dashed;
+  cursor: not-allowed;
+}
+.attack-targets .attack-target-card .inspection-face {
+  display: block;
+  flex: none;
+  width: 34px;
+  height: 40px;
+}
+.attack-target-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+.attack-target-name { font: 600 13px/1.4 'Yu Mincho', serif; }
+.attack-target-damage { font-weight: 700; }
+.attack-target-chance { font-size: 10px; }
+.attack-target-unavailable { font-size: 10px; line-height: 1.45; }
+.attack-targets-reason {
+  margin: 0 0 6px;
+  color: #e4d194;
+  font-size: 11px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+body .attack-targets .attack-target-inspect {
+  min-height: 32px;
+  width: 100%;
+  margin-top: 3px;
+  padding: 3px 7px;
+  font-size: 11px;
+  background: transparent;
+  color: #eee5c9;
+}
+@media (max-width: 360px) {
+  .attack-target-list { gap: 5px; }
+  body .attack-targets .attack-target-button { gap: 5px; padding: 6px; }
+}

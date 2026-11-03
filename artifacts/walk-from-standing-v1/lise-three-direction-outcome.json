@@ -1,0 +1,16 @@
+{
+  "requested": "Lise N S W based on approved E rhythm",
+  "generatedJobs": 3,
+  "result": "All 3 new transfers rejected: direction/equipment not preserved",
+  "newReferenceDirectionsReady": 0,
+  "approvedReferenceDirections": [
+    "lise/E"
+  ],
+  "walkingGameApplied": false,
+  "standingGameApplied": true,
+  "quotedCreditsThisRequest": 84,
+  "quotedPaidCreditsThisWalkingPhase": 152,
+  "furtherPaidRegenerationSubmitted": false,
+  "limitation": "Genjutsu transfer copied E orientation/attachment positions; exposed parameters have no character orientation preservation control",
+  "nextMethodNeeded": "Direction-specific motion sources, then phase/cadence alignment to E; direct cross-direction transfer not validated"
+}

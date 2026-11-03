@@ -1,0 +1,681 @@
+{
+  "status": "applied-to-game",
+  "standingDirections": 48,
+  "walkManifestSha256": "ca7e8ccb59515ba9c0364cb0e7b659e95c53954c0c84fe1c0241ea94a446ea8d",
+  "walkManifestUnchanged": true,
+  "method": "remove 44 transparent top rows; no rescaling or art modification",
+  "records": [
+    {
+      "cast": "lise",
+      "direction": "N",
+      "source": "artifacts/standing-cast-review-v1/original/lise/N/standing.png",
+      "sourceSha256": "59f194a5b2b8714db5019771a0cf5264b4e5b6170c40948777001fa7dba5ec64",
+      "path": "assets/standing-v1/lise/idle-N-d0cf9de56d.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "lise",
+      "direction": "E",
+      "source": "artifacts/standing-cast-review-v1/original/lise/E/standing.png",
+      "sourceSha256": "01eb678460810b7616435a437826308dfec52a81ca7f0a4105960b4e3e9911fd",
+      "path": "assets/standing-v1/lise/idle-E-6a68829a78.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "lise",
+      "direction": "S",
+      "source": "artifacts/standing-cast-repairs-local-v1/lise/S/equipment-corrected.png",
+      "sourceSha256": "d7ec1eea03bed70626ca219aa0b563dbfb2532e55e9ce0d8ff25361066588a08",
+      "path": "assets/standing-v1/lise/idle-S-52a0972ae8.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "lise",
+      "direction": "W",
+      "source": "artifacts/standing-cast-repairs-local-v1/lise/W/pair-aligned-display.png",
+      "sourceSha256": "b97e7c7f3c9e670be1d58f5dfc55d48038b98a2135ae9bfc5f3c4434a19b7568",
+      "path": "assets/standing-v1/lise/idle-W-e0bc531ab9.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "garan",
+      "direction": "N",
+      "source": "artifacts/standing-cast-repairs-local-v1/garan/N/five-point-aligned.png",
+      "sourceSha256": "ad3272022e03a3a2d29ebdf9588323cdc6ef917a3a261738654364350de9e71a",
+      "path": "assets/standing-v1/garan/idle-N-aae14e0a44.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "garan",
+      "direction": "E",
+      "source": "artifacts/standing-cast-review-v1/original/garan/E/standing.png",
+      "sourceSha256": "d051f2ed1ce552f09d975f93831c8c84c3eaf8f3a2ffa681c3c6d4bb309ef82c",
+      "path": "assets/standing-v1/garan/idle-E-9098fdfece.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "garan",
+      "direction": "S",
+      "source": "artifacts/standing-cast-repairs-local-v1/garan/S/equipment-corrected.png",
+      "sourceSha256": "41d981a97615f7188f4dae5b604652e08332c37c16cb22b9646acb0b071376a9",
+      "path": "assets/standing-v1/garan/idle-S-8c7cde84c0.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "garan",
+      "direction": "W",
+      "source": "artifacts/standing-cast-review-v1/original/garan/W/standing.png",
+      "sourceSha256": "5d405a5b2d91d109380e05dff748d3639d500c334281e0fa5f4388d684bc37bb",
+      "path": "assets/standing-v1/garan/idle-W-0b31140df1.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "neia",
+      "direction": "N",
+      "source": "artifacts/standing-cast-review-v1/original/neia/N/standing.png",
+      "sourceSha256": "f3eda6164d40ff32b8b825a49bdaa6efe131dfbda662a2223b309c1f3455e8d7",
+      "path": "assets/standing-v1/neia/idle-N-48fabb5dfd.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "neia",
+      "direction": "E",
+      "source": "artifacts/standing-cast-review-v1/original/neia/E/standing.png",
+      "sourceSha256": "cf70be0c2d022214c8f3f05abddddc321a3844572851f5e81314ebbc2cfbfbd2",
+      "path": "assets/standing-v1/neia/idle-E-901153d627.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "neia",
+      "direction": "S",
+      "source": "artifacts/standing-cast-repairs-local-v1/neia/S/five-point-aligned.png",
+      "sourceSha256": "bb0b708befd826bea08afe3e56791c0e89fb7b0d2ffca5e505abb99d1a30dc2a",
+      "path": "assets/standing-v1/neia/idle-S-36b097a39c.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "neia",
+      "direction": "W",
+      "source": "artifacts/standing-cast-repairs-local-v1/neia/W/five-point-aligned.png",
+      "sourceSha256": "04e9cb7d8907133c6380ca5bc94ca1b6eef215070b73954590c0abef327727db",
+      "path": "assets/standing-v1/neia/idle-W-db97a3dadc.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "sena",
+      "direction": "N",
+      "source": "artifacts/standing-cast-repairs-local-v1/sena/N/display-v2.png",
+      "sourceSha256": "c0eb91f952ba594cd4347dc0f1e37fabb957edae0bc9aa0dbef2fad366e8dcc4",
+      "path": "assets/standing-v1/sena/idle-N-cf9b2f017e.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "sena",
+      "direction": "E",
+      "source": "artifacts/standing-cast-repairs-local-v1/sena/E/head-width-matched.png",
+      "sourceSha256": "1b86632995063d0ac83e3a9654e482771a7c8963da17a30068ae31281c968593",
+      "path": "assets/standing-v1/sena/idle-E-b76a07f80f.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "sena",
+      "direction": "S",
+      "source": "artifacts/standing-cast-repairs-local-v1/sena/S/head-width-matched.png",
+      "sourceSha256": "f0bdb5df9fbd070e919da3fe0b8ab682922328649cf507ce588c0ba83b0fb76b",
+      "path": "assets/standing-v1/sena/idle-S-4686a3ffa7.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "sena",
+      "direction": "W",
+      "source": "artifacts/standing-cast-repairs-local-v1/sena/W/equipment-corrected.png",
+      "sourceSha256": "b4c56ea7e1dbcfb4916a265df07d0c362924b88d83d74429b7c2463369e89dd9",
+      "path": "assets/standing-v1/sena/idle-W-a34a837b41.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "iva",
+      "direction": "N",
+      "source": "artifacts/standing-cast-repairs-local-v1/iva/N/five-point-aligned.png",
+      "sourceSha256": "8e35537403cb648fa0b1bac4129ee20a20b593d2bff7c1057eb9dc60f2dddd24",
+      "path": "assets/standing-v1/iva/idle-N-67e75329d3.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "iva",
+      "direction": "E",
+      "source": "artifacts/standing-cast-review-v1/original/iva/E/standing.png",
+      "sourceSha256": "744f799194cfe688633a70183f79ffd8b56b00c84e2b30d2bed10607abcd106f",
+      "path": "assets/standing-v1/iva/idle-E-1c7bc80aa1.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "iva",
+      "direction": "S",
+      "source": "artifacts/standing-cast-repairs-local-v1/iva/S/head-width-matched.png",
+      "sourceSha256": "0ff0b257310ebd0c855e0adffe60cf37b2ddc46db19c80d20aa713b19c8737d2",
+      "path": "assets/standing-v1/iva/idle-S-b47bd32ee9.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "iva",
+      "direction": "W",
+      "source": "artifacts/standing-cast-repairs-local-v1/iva/W/equipment-corrected.png",
+      "sourceSha256": "882bffcdc6fdb747a6e393041085794192c7db9cd5069d6baf51a907733578ef",
+      "path": "assets/standing-v1/iva/idle-W-fc3e4b316e.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "dani",
+      "direction": "N",
+      "source": "artifacts/standing-cast-repairs-local-v1/dani/N/head-size-smaller.png",
+      "sourceSha256": "1e3945368b6cb53b9a5fc1dc121d33e1f6c99dcdab16f8dc41cefa6e3c5e1b1b",
+      "path": "assets/standing-v1/dani/idle-N-34ac1bdc1c.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "dani",
+      "direction": "E",
+      "source": "artifacts/standing-cast-repairs-local-v1/dani/E/arm-straight-corrected.png",
+      "sourceSha256": "9db91dbd76b98480847b83e5a35d351bef6992011ed5ddd89063165113cd323f",
+      "path": "assets/standing-v1/dani/idle-E-27e9d9fca6.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "dani",
+      "direction": "S",
+      "source": "artifacts/standing-cast-repairs-local-v1/dani/S/head-width-matched.png",
+      "sourceSha256": "7c79d9dc3f0a458397af6ceac345831b9377f877a92d549932de88a252549bd2",
+      "path": "assets/standing-v1/dani/idle-S-e53adb0021.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "dani",
+      "direction": "W",
+      "source": "artifacts/standing-cast-repairs-local-v1/dani/W/head-size-smaller.png",
+      "sourceSha256": "2a2b99164a0fbb040b006f54e5c45736d6457898d1d5a32078d87580fb946885",
+      "path": "assets/standing-v1/dani/idle-W-19b15a4027.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "guard",
+      "direction": "N",
+      "source": "artifacts/standing-cast-review-v1/original/guard/N/standing.png",
+      "sourceSha256": "c3ee40732cddc7ac15ec0a3ebcc85eedc88ac153803e64942050759cdab0bb9d",
+      "path": "assets/standing-v1/guard/idle-N-e2f2d1b9e3.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "guard",
+      "direction": "E",
+      "source": "artifacts/standing-cast-review-v1/original/guard/E/standing.png",
+      "sourceSha256": "d6a499e3d2577daf53c6018f9139eb1ebf48e611a2d5a7a03d6091d814d7df7a",
+      "path": "assets/standing-v1/guard/idle-E-bd88c6ec68.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "guard",
+      "direction": "S",
+      "source": "artifacts/standing-cast-repairs-local-v1/guard/S/five-point-aligned.png",
+      "sourceSha256": "933bf4840031344013aa9f81c643f0e9f0252f69bf9658dbb717cadba060d34b",
+      "path": "assets/standing-v1/guard/idle-S-a4724458a7.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "guard",
+      "direction": "W",
+      "source": "artifacts/standing-cast-repairs-local-v1/guard/W/five-point-aligned.png",
+      "sourceSha256": "4add5d6c994e1bab964ee29d709725d6a3a8792f85feba74c78ba491d2e646db",
+      "path": "assets/standing-v1/guard/idle-W-b873d00b06.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "archer",
+      "direction": "N",
+      "source": "artifacts/standing-cast-review-v1/original/archer/N/standing.png",
+      "sourceSha256": "6ab374b1c38ba158845337e6a9de021d0d060c896707d15bb3ff86f21c6f6308",
+      "path": "assets/standing-v1/archer/idle-N-0fa06f1a2c.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "archer",
+      "direction": "E",
+      "source": "artifacts/standing-cast-review-v1/original/archer/E/standing.png",
+      "sourceSha256": "03fcc352252b8a66f9b38215ac27dd517c04b6c2ce575a7f56fa2eea6546b530",
+      "path": "assets/standing-v1/archer/idle-E-7067918c50.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "archer",
+      "direction": "S",
+      "source": "artifacts/standing-cast-repairs-local-v1/archer/S/equipment-corrected.png",
+      "sourceSha256": "6064b5976bee1c13ba4f4522d6f800bb487490a991b40d0aba3bf4ef484f931a",
+      "path": "assets/standing-v1/archer/idle-S-28a0a4ea57.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "archer",
+      "direction": "W",
+      "source": "artifacts/standing-cast-repairs-local-v1/archer/W/five-point-aligned.png",
+      "sourceSha256": "deb909c446c2290975614ab469da4f906ca3db24a01c81de8609e89a4ac7041d",
+      "path": "assets/standing-v1/archer/idle-W-d71f69cac8.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "vesk",
+      "direction": "N",
+      "source": "artifacts/standing-cast-review-v1/original/vesk/N/standing.png",
+      "sourceSha256": "01e21a75cd191a46f9147231490b2fc92ad994b7097e4d5cdceb8e88bb867ad6",
+      "path": "assets/standing-v1/vesk/idle-N-861dc8dafa.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "vesk",
+      "direction": "E",
+      "source": "artifacts/standing-cast-review-v1/original/vesk/E/standing.png",
+      "sourceSha256": "554d8a8db1bbff007ca0d2e8db3463276f73c1a3d39517a55f81856df6689691",
+      "path": "assets/standing-v1/vesk/idle-E-fe4a23a7f4.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "vesk",
+      "direction": "S",
+      "source": "artifacts/standing-cast-repairs-local-v1/vesk/S/five-point-aligned.png",
+      "sourceSha256": "e493492b62df0a0aa0f995a203d0bd87a61fa21c7c4c488caa0e9107b3729434",
+      "path": "assets/standing-v1/vesk/idle-S-bd938ef023.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "vesk",
+      "direction": "W",
+      "source": "artifacts/standing-cast-repairs-local-v1/vesk/W/arm-straight-corrected.png",
+      "sourceSha256": "8532c56a2e062aaf47e5302b0e75bfe08ec1bc9677187ae279365146215a437b",
+      "path": "assets/standing-v1/vesk/idle-W-fcdfaa7b46.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "toma",
+      "direction": "N",
+      "source": "artifacts/standing-cast-review-v1/original/toma/N/standing.png",
+      "sourceSha256": "87b07150179df75e028ca4e8b48600bc3dc03c2b70d481d340c4cb7c341fc0f6",
+      "path": "assets/standing-v1/toma/idle-N-f4dd4e0904.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "toma",
+      "direction": "E",
+      "source": "artifacts/standing-cast-repairs-local-v1/toma/E/equipment-corrected.png",
+      "sourceSha256": "6c6fce7b54751598b0fd1e8386b44f2505badf1b4fce19fca3d19a25eaea711f",
+      "path": "assets/standing-v1/toma/idle-E-33d856d635.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "toma",
+      "direction": "S",
+      "source": "artifacts/standing-cast-repairs-local-v1/toma/S/equipment-corrected.png",
+      "sourceSha256": "eba3bd7f87c80ffd7962fd49fdd9bed87e5b912d82587ef4604ac971a221644d",
+      "path": "assets/standing-v1/toma/idle-S-30bd3b4132.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "toma",
+      "direction": "W",
+      "source": "artifacts/standing-cast-repairs-local-v1/toma/W/material-colour-matched.png",
+      "sourceSha256": "d1fec1b6bde763951f93433b79a7652dad1ccd9766490927db132270504d7acd",
+      "path": "assets/standing-v1/toma/idle-W-1aa4f6b715.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "worker",
+      "direction": "N",
+      "source": "artifacts/standing-cast-review-v1/original/worker/N/standing.png",
+      "sourceSha256": "d04ed85add74bae882556f53312b77e62226e7dd62b62b9a6c92ea04efb051b3",
+      "path": "assets/standing-v1/worker/idle-N-a21b5a14ff.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "worker",
+      "direction": "E",
+      "source": "artifacts/standing-cast-repairs-local-v1/worker/E/five-point-aligned.png",
+      "sourceSha256": "1225b908aebf65b7b0fdb293d7ff0de586dd71c7708d93b81fd7896690190806",
+      "path": "assets/standing-v1/worker/idle-E-bb25ed64e2.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "worker",
+      "direction": "S",
+      "source": "artifacts/standing-cast-review-v1/original/worker/S/standing.png",
+      "sourceSha256": "aed230bed99485dfa1adc77803483b7abcabab9ee8dbfe452e011bf6389d6367",
+      "path": "assets/standing-v1/worker/idle-S-b7cad5d16d.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "worker",
+      "direction": "W",
+      "source": "artifacts/standing-cast-repairs-local-v1/worker/W/five-point-aligned.png",
+      "sourceSha256": "a073d4ff5c5be2bec7d48fc27b54b602710adc2feb41811c94ef28474bb5df05",
+      "path": "assets/standing-v1/worker/idle-W-95e85de9f9.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "delegation",
+      "direction": "N",
+      "source": "artifacts/standing-cast-review-v1/original/delegation/N/standing.png",
+      "sourceSha256": "b12ed72814f73cfb9f218df9b00c444de8daac775b59a809118a4babe6c09d7a",
+      "path": "assets/standing-v1/delegation/idle-N-e95619bedc.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "delegation",
+      "direction": "E",
+      "source": "artifacts/standing-cast-review-v1/original/delegation/E/standing.png",
+      "sourceSha256": "74c5590aa31a8065cc8c530330041e5417d06f2d35e23674b4546a62acbecd1a",
+      "path": "assets/standing-v1/delegation/idle-E-87ac237d66.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "delegation",
+      "direction": "S",
+      "source": "artifacts/standing-cast-repairs-local-v1/delegation/S/five-point-aligned.png",
+      "sourceSha256": "0e90fa9d7b10b4434f82bc7438ed06e1aa61b24e1063d6e65b3cc4b1bb466bf4",
+      "path": "assets/standing-v1/delegation/idle-S-a8fd1051be.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    },
+    {
+      "cast": "delegation",
+      "direction": "W",
+      "source": "artifacts/standing-cast-repairs-local-v1/delegation/W/material-colour-matched.png",
+      "sourceSha256": "9b84406986867336c370de7f532b31ed7055a706cd0b14a3a3ad4d0c5b2a0630",
+      "path": "assets/standing-v1/delegation/idle-W-87e98f5ca1.png",
+      "crop": [
+        0,
+        44,
+        256,
+        300
+      ],
+      "visiblePixelsUnchanged": true
+    }
+  ]
+}

@@ -7,6 +7,8 @@ const speakers: Record<string, SpeakerFace> = {
   'ネイア': { id: 'ally-neia', weapon: 'bow' }, 'セナ': { id: 'ally-sena', weapon: 'melee' },
   'イヴァ': { id: 'ally-iva', weapon: 'melee' }, 'ダニ': { id: 'ally-dani', weapon: 'bow' },
   'トマ': { id: 'escort-toma', weapon: 'melee' },
+  '代表': { id: 'escort-delegation', weapon: 'melee' },
+  'ヴェスク': { id: 'enemy-vesk', weapon: 'melee' },
 };
 /** Story portraits do not depend on deployment, HP, current job or inspection target. */
 export function storySpeakerFace(id: string): SpeakerFace | undefined {

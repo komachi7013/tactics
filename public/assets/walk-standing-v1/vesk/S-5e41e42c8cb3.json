@@ -1,0 +1,187 @@
+{
+  "frames": 19,
+  "cycleMs": 800,
+  "fpsRational": [
+    95,
+    4
+  ],
+  "durationsMs": [
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42
+  ],
+  "sourceIndices": [
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57
+  ],
+  "sourceVideoSha256": "37c8ee08fb24c420e58a86a28e78901894dcbccea0c754dbecf05e15d6cafe1b",
+  "sheetSha256": "acac9a4892ded0654c96399a17f78865c37b77f53a5697039dc61b5d421aecff",
+  "fixedScale": 0.26548672566371684,
+  "fixedOffset": [
+    0,
+    63
+  ],
+  "frameGeometry": [
+    {
+      "headTop": 100,
+      "ground": 280,
+      "width": 71
+    },
+    {
+      "headTop": 100,
+      "ground": 279,
+      "width": 71
+    },
+    {
+      "headTop": 99,
+      "ground": 279,
+      "width": 71
+    },
+    {
+      "headTop": 99,
+      "ground": 279,
+      "width": 73
+    },
+    {
+      "headTop": 99,
+      "ground": 279,
+      "width": 73
+    },
+    {
+      "headTop": 99,
+      "ground": 278,
+      "width": 75
+    },
+    {
+      "headTop": 99,
+      "ground": 279,
+      "width": 76
+    },
+    {
+      "headTop": 99,
+      "ground": 279,
+      "width": 77
+    },
+    {
+      "headTop": 99,
+      "ground": 279,
+      "width": 79
+    },
+    {
+      "headTop": 100,
+      "ground": 278,
+      "width": 79
+    },
+    {
+      "headTop": 99,
+      "ground": 281,
+      "width": 79
+    },
+    {
+      "headTop": 99,
+      "ground": 281,
+      "width": 79
+    },
+    {
+      "headTop": 99,
+      "ground": 281,
+      "width": 77
+    },
+    {
+      "headTop": 99,
+      "ground": 281,
+      "width": 76
+    },
+    {
+      "headTop": 99,
+      "ground": 280,
+      "width": 74
+    },
+    {
+      "headTop": 99,
+      "ground": 280,
+      "width": 73
+    },
+    {
+      "headTop": 99,
+      "ground": 280,
+      "width": 72
+    },
+    {
+      "headTop": 99,
+      "ground": 280,
+      "width": 72
+    },
+    {
+      "headTop": 100,
+      "ground": 280,
+      "width": 71
+    }
+  ],
+  "contactReview": {
+    "videoSha256": "37c8ee08fb24c420e58a86a28e78901894dcbccea0c754dbecf05e15d6cafe1b",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "L"
+      },
+      {
+        "frame": 48,
+        "foot": "R"
+      },
+      {
+        "frame": 58,
+        "foot": "L"
+      }
+    ],
+    "reviewNote": "Vesk S source/full feet sheets reviewed: near image-right L38/58 and far R48 support, both legs pass alternately with low lifting. Navy coat, silver hair, stance and full soles retained. Existing Lise S driver, own S standing and same original six conditions. Estimated support phases, not motion capture."
+  },
+  "status": "visually-reviewed-comparison-candidate; user review pending",
+  "matteReportStatus": "pass",
+  "matteOverrideReason": null,
+  "gameApplied": true,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "userApproved": false,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "automaticGaitLoopStatus": "automatic selection requires visual review",
+  "sheetColumns": 5,
+  "candidateDirectory": "artifacts/walk-from-standing-v1/vesk/S/candidate",
+  "sourceSheetSha256": "906d559198de22c5de70dbf597f3df67c973850242de5291d1db51add74461ad"
+}

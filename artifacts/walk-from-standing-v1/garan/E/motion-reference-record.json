@@ -1,0 +1,90 @@
+{
+  "params": {
+    "model": "hf_mult_motion_control",
+    "resolution": "720p",
+    "count": 1,
+    "medias": [
+      {
+        "role": "image",
+        "value": "b1cc46ed-dc56-48da-9cf5-64faf89d8f3b"
+      },
+      {
+        "role": "video",
+        "value": "90c9e480-c976-4cce-8839-131e7afb4b6b"
+      }
+    ],
+    "prompt": "Transfer ONLY the modest alternating left-right leg motion, stride rhythm and low foot lift of the driving video to the EXACT warrior in the IMAGE. The video is motion reference only: never copy its girl, face, hair, book, bag, body proportions, clothes or colours. The image defines a stout gray-brown-haired bearded male warrior in brown leather armor, cream sleeves and short cream tunic panels, short dark blue shoulder cape, brown boots, round shield held by the LEFT arm, and a SHEATHED sword at his RIGHT hip. Preserve all these items, their shapes and attachment sides exactly; do not add or remove equipment. Keep the shield grip stable and the sword sheathed. Preserve the exact head size and torso/leg proportions of the image. Facing is the IMAGE's lower-right three-quarter view throughout: no head or torso turns, no profile view. Upright relaxed treadmill walk in place, equal restrained alternating left and right steps, supporting knee straightens and the passing knee bends, no hopping, no permanent crouch. Both feet's toes retain their yaw in the facing direction. Complete two-step cycle every 0.8 seconds, repeat continuously from the start. The upper body remains centered and nearly level, with small natural weight transfer; never stretch or shorten the legs. Fixed orthographic camera and constant character size. Keep the complete head and both soles inside frame with empty margins in every pose. Same hand-painted illustrated game style and colour palette as the IMAGE. Flat solid magenta #ff00ff background, no floor, no ground shadow, no lighting change, text or effects."
+  },
+  "submission": {
+    "results": [
+      {
+        "id": "54c0990d-b674-488e-a136-71176f74b5c3",
+        "type": "video",
+        "status": "pending",
+        "model": "hf_mult_motion_control",
+        "params": {
+          "prompt": "Transfer ONLY the modest alternating left-right leg motion, stride rhythm and low foot lift of the driving video to the EXACT warrior in the IMAGE. The video is motion reference only: never copy its girl, face, hair, book, bag, body proportions, clothes or colours. The image defines a stout gray-brown-haired bearded male warrior in brown leather armor, cream sleeves and short cream tunic panels, short dark blue shoulder cape, brown boots, round shield held by the LEFT arm, and a SHEATHED sword at his RIGHT hip. Preserve all these items, their shapes and attachment sides exactly; do not add or remove equipment. Keep the shield grip stable and the sword sheathed. Preserve the exact head size and torso/leg proportions of the image. Facing is the IMAGE's lower-right three-quarter view throughout: no head or torso turns, no profile view. Upright relaxed treadmill walk in place, equal restrained alternating left and right steps, supporting knee straightens and the passing knee bends, no hopping, no permanent crouch. Both feet's toes retain their yaw in the facing direction. Complete two-step cycle every 0.8 seconds, repeat continuously from the start. The upper body remains centered and nearly level, with small natural weight transfer; never stretch or shorten the legs. Fixed orthographic camera and constant character size. Keep the complete head and both soles inside frame with empty margins in every pose. Same hand-painted illustrated game style and colour palette as the IMAGE. Flat solid magenta #ff00ff background, no floor, no ground shadow, no lighting change, text or effects.",
+          "reference_images": [
+            "b1cc46ed-dc56-48da-9cf5-64faf89d8f3b",
+            "90c9e480-c976-4cce-8839-131e7afb4b6b"
+          ],
+          "resolution": "720p"
+        }
+      }
+    ],
+    "adjustments": {
+      "medias[0].role": {
+        "requested": "image",
+        "used": "image_references",
+        "reason": "Genjutsu backend expects schema-key media roles"
+      },
+      "medias[1].role": {
+        "requested": "video",
+        "used": "video_references",
+        "reason": "Genjutsu backend expects schema-key media roles"
+      }
+    }
+  },
+  "quote": {
+    "cost": {
+      "credits": 28,
+      "credits_exact": 28
+    },
+    "adjustments": {
+      "medias[0].role": {
+        "requested": "image",
+        "used": "image_references",
+        "reason": "Genjutsu backend expects schema-key media roles"
+      },
+      "medias[1].role": {
+        "requested": "video",
+        "used": "video_references",
+        "reason": "Genjutsu backend expects schema-key media roles"
+      }
+    },
+    "input_check": {
+      "required_media_present": true,
+      "image_count": 1,
+      "video_count": 1,
+      "missing_roles": [],
+      "generation_validated": false
+    },
+    "prepared_params": {
+      "model": "hf_mult_motion_control",
+      "prompt": "Transfer only the leg motion and timing from the driving video to the warrior in the image; preserve the image's exact design.",
+      "count": 1,
+      "medias": [
+        {
+          "role": "image_references",
+          "value": "b1cc46ed-dc56-48da-9cf5-64faf89d8f3b"
+        },
+        {
+          "role": "video_references",
+          "value": "90c9e480-c976-4cce-8839-131e7afb4b6b"
+        }
+      ],
+      "resolution": "720p"
+    }
+  },
+  "scope": "Review only; not authorized to replace game walking assets."
+}

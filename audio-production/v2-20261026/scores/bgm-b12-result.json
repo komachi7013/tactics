@@ -1,0 +1,99 @@
+{
+  "id": "bgm-b12",
+  "master": {
+    "file": "masters/bgm-b12.wav",
+    "sha256": "2047dc4ecb6c064de5dc89a230391c2bdbebff78692a8cc581c3008f62288a43",
+    "bytes": 18307484,
+    "sampleRate": 44100,
+    "channels": 2,
+    "frames": 4576860,
+    "seconds": 103.78367346938775,
+    "samplePeak": 0.319976806640625,
+    "rmsDbFS": -25.799251190483602,
+    "dc": [
+      1.251412335640592e-07,
+      1.46691556820615e-10
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      4576860
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        -0.000946044921875,
+        -0.000244140625
+      ],
+      "rmsDifferenceDb": [
+        1.6002508693470268,
+        1.9085177200704038
+      ],
+      "slopeError": [
+        0.002838134765625,
+        0.003082275390625
+      ],
+      "numericalFlags": []
+    }
+  },
+  "delivery": {
+    "file": "delivery/bgm-b12.wav",
+    "sha256": "5dee1356399c5b669d513ab8c4de10f328501a1e47df8cc800b3bea1eaba313c",
+    "bytes": 9153764,
+    "sampleRate": 22050,
+    "channels": 2,
+    "frames": 2288430,
+    "seconds": 103.78367346938775,
+    "samplePeak": 0.32012939453125,
+    "rmsDbFS": -25.79981408723413,
+    "dc": [
+      1.261680744618035e-07,
+      1.4775840450658312e-08
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      2288430
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        0.00128173828125,
+        0.003173828125
+      ],
+      "rmsDifferenceDb": [
+        1.5872385571962582,
+        1.901791475471371
+      ],
+      "slopeError": [
+        0.005279541015625,
+        0.0068359375
+      ],
+      "numericalFlags": []
+    }
+  },
+  "listeningVerified": false,
+  "compositionRevision": "independent-r2",
+  "title": "誰の堤か",
+  "usage": "B12 上層操作台: 二操作点保持と非致死制圧。主題の集約、密度を落とす中間部。",
+  "bpm": 148,
+  "bars": 64,
+  "meter": [
+    4,
+    4
+  ],
+  "mode": "minor",
+  "rationale": "B12 上層操作台: 二操作点保持と非致死制圧。主題の集約、密度を落とす中間部。",
+  "direction": "速い4/4の決戦。独立した16分弦の主題、金管の長い答え、シンコペーション。中盤で木管へ薄くして再集結。",
+  "source": "scores/bgm-b12.json",
+  "midi": "scores/bgm-b12.mid",
+  "renderCycles": 3,
+  "extractStartFrame": 4590007,
+  "rotationSeconds": 0.29811791383219954,
+  "motif": {
+    "id": "river-record",
+    "version": 3,
+    "quotation": "single three-note cameo in C only; title/ending link restricted to opening two bars"
+  },
+  "scoreFingerprint": "8787c725f9efc9cdd0ef2fab5b3234d7b9a9e99c4aba53fa309946f38b7b721e"
+}

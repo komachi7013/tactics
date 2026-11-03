@@ -1,0 +1,21 @@
+{
+  "videoSha256": "ad81ff8e08e8efa532b3680472ff492a71276212601e6447297b0be9eb02ad57",
+  "visualReviewed": true,
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "contacts": [
+    {
+      "frame": 38,
+      "foot": "L"
+    },
+    {
+      "frame": 48,
+      "foot": "R"
+    },
+    {
+      "frame": 58,
+      "foot": "L"
+    }
+  ],
+  "reviewNote": "S full and feet sheets inspected: near image-right anatomical L38/58 and far R48 alternate support. Both soles remain within canvas and pose faces input S. Small head/body movement. Lise S driver. Estimated support phases, not motion capture."
+}

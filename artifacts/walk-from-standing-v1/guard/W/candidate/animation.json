@@ -1,0 +1,184 @@
+{
+  "frames": 19,
+  "cycleMs": 800,
+  "fpsRational": [
+    95,
+    4
+  ],
+  "durationsMs": [
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42
+  ],
+  "sourceIndices": [
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57
+  ],
+  "sourceVideoSha256": "f747a3ba0dccd23eaef4dee9e46a4a6b7a276417a1ec391e4fc8163646d8ba7c",
+  "sheetSha256": "0fd708a98a30a951ac9cedf30c0cb5d8746c99f571658936d69cd8f26e57aaa8",
+  "fixedScale": 0.24930747922437674,
+  "fixedOffset": [
+    -3,
+    66
+  ],
+  "frameGeometry": [
+    {
+      "headTop": 100,
+      "ground": 280,
+      "width": 110
+    },
+    {
+      "headTop": 101,
+      "ground": 280,
+      "width": 110
+    },
+    {
+      "headTop": 100,
+      "ground": 280,
+      "width": 111
+    },
+    {
+      "headTop": 99,
+      "ground": 280,
+      "width": 109
+    },
+    {
+      "headTop": 99,
+      "ground": 280,
+      "width": 107
+    },
+    {
+      "headTop": 98,
+      "ground": 279,
+      "width": 106
+    },
+    {
+      "headTop": 98,
+      "ground": 270,
+      "width": 102
+    },
+    {
+      "headTop": 98,
+      "ground": 268,
+      "width": 100
+    },
+    {
+      "headTop": 98,
+      "ground": 269,
+      "width": 97
+    },
+    {
+      "headTop": 98,
+      "ground": 270,
+      "width": 96
+    },
+    {
+      "headTop": 100,
+      "ground": 269,
+      "width": 98
+    },
+    {
+      "headTop": 100,
+      "ground": 270,
+      "width": 96
+    },
+    {
+      "headTop": 99,
+      "ground": 272,
+      "width": 94
+    },
+    {
+      "headTop": 99,
+      "ground": 273,
+      "width": 95
+    },
+    {
+      "headTop": 98,
+      "ground": 274,
+      "width": 97
+    },
+    {
+      "headTop": 98,
+      "ground": 276,
+      "width": 101
+    },
+    {
+      "headTop": 98,
+      "ground": 277,
+      "width": 103
+    },
+    {
+      "headTop": 98,
+      "ground": 278,
+      "width": 106
+    },
+    {
+      "headTop": 100,
+      "ground": 280,
+      "width": 110
+    }
+  ],
+  "contactReview": {
+    "videoSha256": "f747a3ba0dccd23eaef4dee9e46a4a6b7a276417a1ec391e4fc8163646d8ba7c",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "L"
+      },
+      {
+        "frame": 48,
+        "foot": "R"
+      },
+      {
+        "frame": 58,
+        "foot": "L"
+      }
+    ],
+    "reviewNote": "W source and full feet sheets reviewed: near image-left L support38/58, far R48, alternate forward swings with toe/heel passage. Both soles fully within source. Background pink-red; pink matte on W only, verify red costume on light/dark. Garan W driver. Estimated support phases, not motion capture."
+  },
+  "status": "visually-reviewed-comparison-candidate; user review pending",
+  "matteReportStatus": "pass",
+  "matteOverrideReason": null,
+  "gameApplied": false,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "userApproved": false,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "automaticGaitLoopStatus": "automatic selection requires visual review"
+}

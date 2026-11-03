@@ -1,0 +1,21 @@
+{
+  "videoSha256": "38c82c3299379802e9df68264399ced419f0030294db3d5981a6de65b583b218",
+  "visualReviewed": true,
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "contacts": [
+    {
+      "frame": 38,
+      "foot": "R"
+    },
+    {
+      "frame": 48,
+      "foot": "L"
+    },
+    {
+      "frame": 58,
+      "foot": "R"
+    }
+  ],
+  "reviewNote": "Archer E source and feet sheets reviewed: near image-left R38/58 and far L48 support, both legs swing alternately. Crossbow shape/grip maintained. Red/brown/cream palette reviewed for pink matte; verify cloak after extraction. Wholebody and soles remain within source. Garan E driver. Estimated support phases, not motion capture."
+}

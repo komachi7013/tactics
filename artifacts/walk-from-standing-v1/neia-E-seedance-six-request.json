@@ -1,0 +1,46 @@
+{
+  "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "duration": 4,
+    "resolution": "720p",
+    "generate_audio": false,
+    "count": 1,
+    "aspect_ratio": "1:1",
+    "prompt": "Animate the character in the supplied EAST-facing standing image, keeping the same front-facing three-quarter orientation toward the lower-right and viewpoint.\n\n1. One complete left-and-right TWO-step gait cycle takes approximately 0.8 seconds. The final export will use 19 frames per cycle.\n2. Walk in place with restrained, clearly alternating left and right steps.\n3. Use small strides and low foot lift. Keep the upper body upright.\n4. The supporting leg straightens naturally while the opposite leg passes with a slight knee bend.\n5. Keep head and torso movement small.\n6. Keep the entire character and both feet, including the boot tips and soles, fully inside the frame throughout the clip.",
+    "medias": [
+      {
+        "role": "start_image",
+        "value": "f2e8f730-ff5e-4e06-9724-27f30a12a178"
+      }
+    ]
+  },
+  "quote": {
+    "cost": {
+      "credits": 28,
+      "credits_exact": 28
+    }
+  },
+  "submission": {
+    "results": [
+      {
+        "id": "1ba7c673-6b34-4076-86a1-290f2155a420",
+        "type": "video",
+        "status": "pending",
+        "model": "seedance_2_5",
+        "params": {
+          "prompt": "Animate the character in the supplied EAST-facing standing image, keeping the same front-facing three-quarter orientation toward the lower-right and viewpoint.\n\n1. One complete left-and-right TWO-step gait cycle takes approximately 0.8 seconds. The final export will use 19 frames per cycle.\n2. Walk in place with restrained, clearly alternating left and right steps.\n3. Use small strides and low foot lift. Keep the upper body upright.\n4. The supporting leg straightens naturally while the opposite leg passes with a slight knee bend.\n5. Keep head and torso movement small.\n6. Keep the entire character and both feet, including the boot tips and soles, fully inside the frame throughout the clip.",
+          "aspect_ratio": "1:1",
+          "duration": 4,
+          "reference_images": [
+            "f2e8f730-ff5e-4e06-9724-27f30a12a178"
+          ],
+          "mode": "omni_reference",
+          "resolution": "720p",
+          "generate_audio": false
+        }
+      }
+    ]
+  },
+  "userScope": "Neia E then N then S then W, sequential generation and review; each own standing image + six conditions; no reference video; comparison only; no automatic retakes"
+}

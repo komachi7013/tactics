@@ -6,17 +6,18 @@ import { getUnit, reduce } from '../src/domain/engine';
 import { runEnemyActivation } from '../src/domain/ai';
 import type { Command } from '../src/domain/types';
 import { battleFlowHarness } from './helpers/battleFlowHarness';
+import manualCartRoute from './fixtures/manual-cart-v1/progression-v2/b03-route.json';
 
 let beforeFinal: Campaign;
-const routes = import.meta.glob<{ commands: Command[] }>('./fixtures/progression-v2/*-route.json', { eager: true, import: 'default' });
+const routes = import.meta.glob<{ commands: Command[] }>('./fixtures/defend-cooldown-v1/progression-v2/*-route.json', { eager: true, import: 'default' });
 beforeAll(() => {
   // Earn the save precondition with public commands and the unchanged AI.
   let campaign = createCampaign();
   for (const id of BATTLE_IDS.slice(0, 11)) {
     campaign = selectBattle(campaign, id);
     let state = createPartyBattle(id, defaultParty(id), campaign.jobs, commonLevel(campaign.completed));
-    const route = routes[`./fixtures/progression-v2/${id.toLowerCase()}-route.json`];
-    for (const command of route.commands) {
+    const route = id === 'B03' ? manualCartRoute : routes[`./fixtures/defend-cooldown-v1/progression-v2/${id.toLowerCase()}-route.json`];
+    for (const command of route.commands as Command[]) {
       const result = reduce(state, command); expect(result.error).toBeUndefined(); state = result.state;
       let guard = 0;
       while (state.phase === 'playing' && state.turn === 'enemy') {

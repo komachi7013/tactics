@@ -1,0 +1,184 @@
+{
+  "frames": 19,
+  "cycleMs": 800,
+  "fpsRational": [
+    95,
+    4
+  ],
+  "durationsMs": [
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42
+  ],
+  "sourceIndices": [
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57
+  ],
+  "sourceVideoSha256": "da2364473be0b19001a5b01163167761943fe1fc4e9553c84fa86f74c4786911",
+  "sheetSha256": "4ece5b37c50e03fab8aa6d94501ec94e485945d505c9d850ee780cf1a069f559",
+  "fixedScale": 0.24556616643929058,
+  "fixedOffset": [
+    25,
+    71
+  ],
+  "frameGeometry": [
+    {
+      "headTop": 100,
+      "ground": 280,
+      "width": 103
+    },
+    {
+      "headTop": 100,
+      "ground": 280,
+      "width": 103
+    },
+    {
+      "headTop": 100,
+      "ground": 280,
+      "width": 103
+    },
+    {
+      "headTop": 99,
+      "ground": 280,
+      "width": 102
+    },
+    {
+      "headTop": 98,
+      "ground": 279,
+      "width": 102
+    },
+    {
+      "headTop": 98,
+      "ground": 277,
+      "width": 102
+    },
+    {
+      "headTop": 98,
+      "ground": 269,
+      "width": 103
+    },
+    {
+      "headTop": 98,
+      "ground": 268,
+      "width": 103
+    },
+    {
+      "headTop": 98,
+      "ground": 269,
+      "width": 103
+    },
+    {
+      "headTop": 99,
+      "ground": 270,
+      "width": 103
+    },
+    {
+      "headTop": 100,
+      "ground": 270,
+      "width": 104
+    },
+    {
+      "headTop": 100,
+      "ground": 270,
+      "width": 104
+    },
+    {
+      "headTop": 99,
+      "ground": 272,
+      "width": 105
+    },
+    {
+      "headTop": 98,
+      "ground": 273,
+      "width": 105
+    },
+    {
+      "headTop": 98,
+      "ground": 273,
+      "width": 103
+    },
+    {
+      "headTop": 98,
+      "ground": 276,
+      "width": 102
+    },
+    {
+      "headTop": 98,
+      "ground": 277,
+      "width": 103
+    },
+    {
+      "headTop": 99,
+      "ground": 277,
+      "width": 103
+    },
+    {
+      "headTop": 100,
+      "ground": 279,
+      "width": 103
+    }
+  ],
+  "contactReview": {
+    "videoSha256": "da2364473be0b19001a5b01163167761943fe1fc4e9553c84fa86f74c4786911",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "L"
+      },
+      {
+        "frame": 48,
+        "foot": "R"
+      },
+      {
+        "frame": 58,
+        "foot": "L"
+      }
+    ],
+    "reviewNote": "Archer W source/full feet sheets inspected. Near image-left L38/58 and far R48 support alternate; both legs pass and toe/heel motion visible. Back-facing direction, crossbow/grip, full soles maintained. Garan W video driver, original six conditions. Estimated support phases, not motion capture."
+  },
+  "status": "visually-reviewed-comparison-candidate; user review pending",
+  "matteReportStatus": "pass",
+  "matteOverrideReason": null,
+  "gameApplied": false,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "userApproved": false,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "automaticGaitLoopStatus": "automatic selection requires visual review"
+}

@@ -9,6 +9,8 @@ export interface Unit {
   hp: number; maxHp: number; atk: number; def: number; move: number;
   jobCommand?: 'survey' | 'protect' | 'plank' | 'readOrder'; readCharges?: number; plankCharges?: number; plankReady?: boolean; surveyCharges?: number; surveyBonus?: boolean; protection?: { sourceId: string };
   kind?: 'escort'; healCharges?: number; weapon: 'melee' | 'bow'; guardGoal?: Pos; shallowCost: number; facing: Facing; acted: boolean; guard: boolean;
+  /** First round of this unit's faction in which it may defend again; absent in legacy states. */
+  defendAvailableRound?: number;
 }
 export interface BattleState {
   battleId: BattleId; round: number; turn: Team; activeId: string | null; units: Unit[]; cells: Cell[];
@@ -21,7 +23,7 @@ export interface BattleState {
   finalControl?: {heldRounds:number;commanderSubdued:boolean};
   repairs?: Record<string,{completed:boolean;pendingRound:number|null}>;
   sluices?: Record<string,{drained:boolean;pendingRound:number|null;pendingDrained?:boolean}>;
-  capture?: {heldRounds: number}; escort?: {route: Pos[]; index: number; unitId?: string}; records: string[]; gate: { drained: boolean; pendingRound: number | null; pendingDrained?: boolean };
+  capture?: {heldRounds: number}; escort?: {route: Pos[]; index: number; unitId?: string; /** B03 manual cart push; absent in legacy/start checkpoints. */ lastPushedRound?: number}; records: string[]; gate: { drained: boolean; pendingRound: number | null; pendingDrained?: boolean };
   activation: { moved: boolean; acted: boolean; moveOrigin: Pos | null; moveOriginFacing?: Facing; plankConsumed?: boolean };
   phase: 'playing' | 'won' | 'lost'; log: string[];
 }
@@ -40,6 +42,7 @@ export type Command =
   | { type: 'collect'; recordId: string }
   | { type: 'gate'; gateId?: string }
   | { type: 'repair'; siteId: string }
+  | { type: 'pushCart' }
   | { type: 'defend' }
   | { type: 'end'; facing: Facing };
 export interface Result { state: BattleState; error?: string }

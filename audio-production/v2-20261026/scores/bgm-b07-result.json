@@ -1,0 +1,99 @@
+{
+  "id": "bgm-b07",
+  "master": {
+    "file": "masters/bgm-b07.wav",
+    "sha256": "98fde681bd7fe4a762540d0e97e3ae35de2ff402e50ca48ee250f14096a5e83d",
+    "bytes": 17097260,
+    "sampleRate": 44100,
+    "channels": 2,
+    "frames": 4274304,
+    "seconds": 96.92299319727891,
+    "samplePeak": 0.319976806640625,
+    "rmsDbFS": -21.914342127846275,
+    "dc": [
+      -4.086094475483611e-08,
+      1.2501749828012934e-08
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      4274304
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        -0.000274658203125,
+        0.0
+      ],
+      "rmsDifferenceDb": [
+        -1.5612448041267257,
+        -1.8625672609670785
+      ],
+      "slopeError": [
+        0.0,
+        0.000274658203125
+      ],
+      "numericalFlags": []
+    }
+  },
+  "delivery": {
+    "file": "delivery/bgm-b07.wav",
+    "sha256": "7cf01c3dfe58af8715c13b481c84ce473c961ff471474149b7617542fa9001c6",
+    "bytes": 8548652,
+    "sampleRate": 22050,
+    "channels": 2,
+    "frames": 2137152,
+    "seconds": 96.92299319727891,
+    "samplePeak": 0.32012939453125,
+    "rmsDbFS": -21.91459784135539,
+    "dc": [
+      -4.5280466824247876e-08,
+      2.23760616567633e-08
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      2137152
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        -0.000579833984375,
+        0.000213623046875
+      ],
+      "rmsDifferenceDb": [
+        -1.565965015616254,
+        -1.867240431673058
+      ],
+      "slopeError": [
+        0.004150390625,
+        0.00390625
+      ],
+      "numericalFlags": []
+    }
+  },
+  "listeningVerified": false,
+  "compositionRevision": "independent-r2",
+  "title": "二つの退避路",
+  "usage": "B07 ヴァセル段丘村: 北段と南道の避難。二声の応答と切迫した弦。",
+  "bpm": 156,
+  "bars": 84,
+  "meter": [
+    3,
+    4
+  ],
+  "mode": "dorian",
+  "rationale": "B07 ヴァセル段丘村: 北段と南道の避難。二声の応答と切迫した弦。",
+  "direction": "退避路を駆ける3/4のギャロップ。短いピッコロの合図と高弦、二つの避難路を応答する旋律。",
+  "source": "scores/bgm-b07.json",
+  "midi": "scores/bgm-b07.mid",
+  "renderCycles": 3,
+  "extractStartFrame": 4283257,
+  "rotationSeconds": 0.203015873015873,
+  "motif": {
+    "id": "river-record",
+    "version": 3,
+    "quotation": "single three-note cameo in C only; title/ending link restricted to opening two bars"
+  },
+  "scoreFingerprint": "740fabf66a04bd1a1d50200502bb89ec126471441afd568fba0900eb7f3d564c"
+}

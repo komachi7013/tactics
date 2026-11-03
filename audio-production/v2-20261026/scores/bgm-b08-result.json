@@ -1,0 +1,99 @@
+{
+  "id": "bgm-b08",
+  "master": {
+    "file": "masters/bgm-b08.wav",
+    "sha256": "3ddba4692a006d7d3d3d6a64dc62bb063d2b4f85155120e580ef9b63d2d9c06d",
+    "bytes": 17640028,
+    "sampleRate": 44100,
+    "channels": 2,
+    "frames": 4409996,
+    "seconds": 99.99990929705216,
+    "samplePeak": 0.319976806640625,
+    "rmsDbFS": -23.88557532804151,
+    "dc": [
+      8.601674380061796e-09,
+      3.236527037453662e-08
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      4409996
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        -0.00067138671875,
+        -0.000885009765625
+      ],
+      "rmsDifferenceDb": [
+        0.3749264148896405,
+        -0.04435639634299532
+      ],
+      "slopeError": [
+        0.004058837890625,
+        0.003814697265625
+      ],
+      "numericalFlags": []
+    }
+  },
+  "delivery": {
+    "file": "delivery/bgm-b08.wav",
+    "sha256": "78056786bf264745f52645773ea23eea4cbef2a7ea5697f77802ee34b7b73040",
+    "bytes": 8820036,
+    "sampleRate": 22050,
+    "channels": 2,
+    "frames": 2204998,
+    "seconds": 99.99990929705216,
+    "samplePeak": 0.319580078125,
+    "rmsDbFS": -23.885650000581723,
+    "dc": [
+      8.13802821476482e-09,
+      3.1527939240194324e-08
+    ],
+    "railSamples": 0,
+    "loop": [
+      0,
+      2204998
+    ],
+    "loopEndExclusive": true,
+    "boundary": {
+      "jump": [
+        -0.0025634765625,
+        -0.00250244140625
+      ],
+      "rmsDifferenceDb": [
+        0.3688400363334557,
+        -0.0511778532068924
+      ],
+      "slopeError": [
+        0.008453369140625,
+        0.007659912109375
+      ],
+      "numericalFlags": []
+    }
+  },
+  "listeningVerified": false,
+  "compositionRevision": "independent-r2",
+  "title": "南北の補助堰",
+  "usage": "B08 ベルカ補助堰: 独立二水路と操作所保持。低音と高音が交差する対位。",
+  "bpm": 126,
+  "bars": 60,
+  "meter": [
+    7,
+    8
+  ],
+  "mode": "dorian",
+  "rationale": "B08 ベルカ補助堰: 独立二水路と操作所保持。低音と高音が交差する対位。",
+  "direction": "二水路を切り替える7/8（2+3+2）。ファゴットとオーボエが交差し、B02の直線的な緊迫と別の知的な推進。",
+  "source": "scores/bgm-b08.json",
+  "midi": "scores/bgm-b08.mid",
+  "renderCycles": 3,
+  "extractStartFrame": 4416659,
+  "rotationSeconds": 0.15108843537414965,
+  "motif": {
+    "id": "river-record",
+    "version": 3,
+    "quotation": "single three-note cameo in C only; title/ending link restricted to opening two bars"
+  },
+  "scoreFingerprint": "0b210c4196726f75f87772caa1c80268e2d3acbf0d403c1ba8dd51542d465310"
+}

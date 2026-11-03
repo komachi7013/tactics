@@ -1,0 +1,187 @@
+{
+  "frames": 19,
+  "cycleMs": 800,
+  "fpsRational": [
+    95,
+    4
+  ],
+  "durationsMs": [
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42
+  ],
+  "sourceIndices": [
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57
+  ],
+  "sourceVideoSha256": "f758265d70e69dbc7fb9d047f6cd154dd9ad3f73dd3b82d6eb438be9ab5fe6d3",
+  "sheetSha256": "a8d35b25ed7323fb7f0037657d254a8a642ff6cf694a19a72ad68384c7be09bc",
+  "fixedScale": 0.2564102564102564,
+  "fixedOffset": [
+    2,
+    68
+  ],
+  "frameGeometry": [
+    {
+      "headTop": 100,
+      "ground": 280,
+      "width": 78
+    },
+    {
+      "headTop": 100,
+      "ground": 280,
+      "width": 78
+    },
+    {
+      "headTop": 100,
+      "ground": 278,
+      "width": 78
+    },
+    {
+      "headTop": 99,
+      "ground": 278,
+      "width": 78
+    },
+    {
+      "headTop": 99,
+      "ground": 278,
+      "width": 78
+    },
+    {
+      "headTop": 99,
+      "ground": 278,
+      "width": 78
+    },
+    {
+      "headTop": 99,
+      "ground": 279,
+      "width": 79
+    },
+    {
+      "headTop": 99,
+      "ground": 280,
+      "width": 79
+    },
+    {
+      "headTop": 99,
+      "ground": 280,
+      "width": 79
+    },
+    {
+      "headTop": 100,
+      "ground": 280,
+      "width": 78
+    },
+    {
+      "headTop": 100,
+      "ground": 284,
+      "width": 79
+    },
+    {
+      "headTop": 99,
+      "ground": 284,
+      "width": 79
+    },
+    {
+      "headTop": 99,
+      "ground": 284,
+      "width": 79
+    },
+    {
+      "headTop": 99,
+      "ground": 283,
+      "width": 79
+    },
+    {
+      "headTop": 99,
+      "ground": 282,
+      "width": 78
+    },
+    {
+      "headTop": 99,
+      "ground": 282,
+      "width": 78
+    },
+    {
+      "headTop": 99,
+      "ground": 281,
+      "width": 78
+    },
+    {
+      "headTop": 100,
+      "ground": 281,
+      "width": 78
+    },
+    {
+      "headTop": 100,
+      "ground": 280,
+      "width": 78
+    }
+  ],
+  "contactReview": {
+    "videoSha256": "f758265d70e69dbc7fb9d047f6cd154dd9ad3f73dd3b82d6eb438be9ab5fe6d3",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "L"
+      },
+      {
+        "frame": 48,
+        "foot": "R"
+      },
+      {
+        "frame": 58,
+        "foot": "L"
+      }
+    ],
+    "reviewNote": "Archer S source and full feet sheets reviewed. Unlike failed Garan S transfers, both legs pass alternately: near image-right L38/58 and far R48 support; low lift, upright torso. Crossbow grip and full soles retained. Driver existing Lise S video, same six conditions and own S standing. Estimated support phases, not motion capture."
+  },
+  "status": "visually-reviewed-comparison-candidate; user review pending",
+  "matteReportStatus": "pass",
+  "matteOverrideReason": null,
+  "gameApplied": true,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "userApproved": false,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "automaticGaitLoopStatus": "automatic selection requires visual review",
+  "sheetColumns": 5,
+  "candidateDirectory": "artifacts/walk-from-standing-v1/archer/S/candidate",
+  "sourceSheetSha256": "878b893e0914ec50f872a8f90a02269fadd17c146a612eddd197fb9531c684b1"
+}

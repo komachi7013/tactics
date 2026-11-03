@@ -1,0 +1,21 @@
+{
+  "videoSha256": "d5a46dc0f8010b3d3ebcce47d693f4cf946d2395f38fafad5339d3e0ec75d00f",
+  "visualReviewed": true,
+  "contacts": [
+    {
+      "frame": 8,
+      "foot": "L"
+    },
+    {
+      "frame": 24,
+      "foot": "R"
+    },
+    {
+      "frame": 40,
+      "foot": "L"
+    }
+  ],
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "reviewNote": "Frames8\u201370 inspected at enlarged feet scale every2 frames. Back three-quarter W: anatomical L is near image-left, R farther image-right. Near L supports around8/40 while R passes; far R supports around24 while L advances/lifts. Estimated support phases +/-2 source frames, not motion capture. Native two-step period32 frames=1.333seconds; retime to800ms. Facing/full body retained; no reference video."
+}

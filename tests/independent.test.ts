@@ -8,7 +8,7 @@ import routes from './fixtures/routes.json';
 function replay(commands:Command[]){
  let s=createInitialState();let reservations=0,drains=0;
  const check=(before:BattleState,after:BattleState)=>{
-  if(!before.gate.drained&&after.gate.drained){drains++;expect(after.round).toBe(before.round+1);expect(before.gate.pendingRound).toBe(after.round);expect(after.cells.some(c=>c.shallow)).toBe(false);expect(after.units.map(u=>[u.id,u.pos])).toEqual(before.units.map(u=>[u.id,u.pos]));} 
+  if(!before.gate.drained&&after.gate.drained){drains++;expect(after.round).toBe(before.round);expect(after.gate.pendingRound).toBeNull();expect(after.cells.some(c=>c.shallow)).toBe(false);expect(after.units.map(u=>[u.id,u.pos])).toEqual(before.units.map(u=>[u.id,u.pos]));}
  };
  const ai=()=>{let guard=0;while(s.turn==='enemy'&&s.phase==='playing'){
   if(++guard>3)throw Error('Enemy loop exceeded living enemy count');
@@ -20,7 +20,7 @@ function replay(commands:Command[]){
   expect(s.turn).toBe('player');expect(s.phase).toBe('playing');
   const snapshot=structuredClone(s),result=reduce(s,command);
   expect(result.error,JSON.stringify(command)).toBeUndefined();expect(s).toEqual(snapshot);
-  if(command.type==='gate'){reservations++;expect(result.state.round).toBe(s.round);expect(result.state.cells.filter(c=>c.shallow)).toHaveLength(8);}
+  if(command.type==='gate'){reservations++;expect(result.state.round).toBe(s.round);expect(result.state.cells.filter(c=>c.shallow)).toHaveLength(0);}
   check(s,result.state);s=result.state;
   if(s.phase==='playing'){
    const bad=reduce(s,{type:'move',to:{x:-50,y:999}});

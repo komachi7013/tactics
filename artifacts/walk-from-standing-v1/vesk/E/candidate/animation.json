@@ -1,0 +1,184 @@
+{
+  "frames": 19,
+  "cycleMs": 800,
+  "fpsRational": [
+    95,
+    4
+  ],
+  "durationsMs": [
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42
+  ],
+  "sourceIndices": [
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57
+  ],
+  "sourceVideoSha256": "70e30e58f2eab43a26a8e5867e5542d03673f21c6eddc6deb4e6a49c9d0d43a1",
+  "sheetSha256": "eb8b6676cec01ac9fe1900525f8c348bb13ce1ebc0dabbc316dbe7add91e265c",
+  "fixedScale": 0.26865671641791045,
+  "fixedOffset": [
+    -2,
+    63
+  ],
+  "frameGeometry": [
+    {
+      "headTop": 100,
+      "ground": 280,
+      "width": 89
+    },
+    {
+      "headTop": 101,
+      "ground": 281,
+      "width": 89
+    },
+    {
+      "headTop": 101,
+      "ground": 281,
+      "width": 88
+    },
+    {
+      "headTop": 100,
+      "ground": 281,
+      "width": 88
+    },
+    {
+      "headTop": 100,
+      "ground": 281,
+      "width": 85
+    },
+    {
+      "headTop": 100,
+      "ground": 281,
+      "width": 84
+    },
+    {
+      "headTop": 100,
+      "ground": 281,
+      "width": 83
+    },
+    {
+      "headTop": 100,
+      "ground": 280,
+      "width": 81
+    },
+    {
+      "headTop": 100,
+      "ground": 280,
+      "width": 80
+    },
+    {
+      "headTop": 100,
+      "ground": 280,
+      "width": 79
+    },
+    {
+      "headTop": 101,
+      "ground": 279,
+      "width": 82
+    },
+    {
+      "headTop": 101,
+      "ground": 279,
+      "width": 79
+    },
+    {
+      "headTop": 100,
+      "ground": 280,
+      "width": 79
+    },
+    {
+      "headTop": 100,
+      "ground": 280,
+      "width": 80
+    },
+    {
+      "headTop": 99,
+      "ground": 280,
+      "width": 81
+    },
+    {
+      "headTop": 99,
+      "ground": 280,
+      "width": 83
+    },
+    {
+      "headTop": 100,
+      "ground": 279,
+      "width": 85
+    },
+    {
+      "headTop": 100,
+      "ground": 279,
+      "width": 87
+    },
+    {
+      "headTop": 100,
+      "ground": 279,
+      "width": 89
+    }
+  ],
+  "contactReview": {
+    "videoSha256": "70e30e58f2eab43a26a8e5867e5542d03673f21c6eddc6deb4e6a49c9d0d43a1",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "R"
+      },
+      {
+        "frame": 48,
+        "foot": "L"
+      },
+      {
+        "frame": 58,
+        "foot": "R"
+      }
+    ],
+    "reviewNote": "Vesk E source and feet sheets reviewed: initial hold discarded; steady gait near image-left R38/58, far L48 support with both legs alternating. Navy/gold/grey palette, coat and hair maintained; complete soles inside canvas. Garan E driver. Estimated support phases, not motion capture."
+  },
+  "status": "visually-reviewed-comparison-candidate; user review pending",
+  "matteReportStatus": "pass",
+  "matteOverrideReason": null,
+  "gameApplied": false,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "userApproved": false,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "automaticGaitLoopStatus": "automatic selection requires visual review"
+}

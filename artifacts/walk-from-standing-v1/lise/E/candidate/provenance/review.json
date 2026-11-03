@@ -1,0 +1,17 @@
+{
+  "status": "19コマ候補作成・利用者確認待ち",
+  "frames": 19,
+  "cycleMs": 800,
+  "all19FramesViewedOnLightAndDark": true,
+  "contactPhasesManuallyEstimated": true,
+  "contactUncertaintySourceFrames": 2,
+  "automaticGaitTest": "ambiguous",
+  "gameApplied": false,
+  "notes": [
+    "頭部幅中央値66px／静止画70px、頭部帯面積比97.8%",
+    "姿勢と装備を19コマで目視比較。完全なデザイン一致や全キャラでの均一性は未承認",
+    "生成時の紫色の影は専用マットで除去",
+    "0.8秒は19コマの再生周期。左右の接地判断は原動画の目視記録"
+  ],
+  "source": "Higgsfield Genjutsu free generation"
+}

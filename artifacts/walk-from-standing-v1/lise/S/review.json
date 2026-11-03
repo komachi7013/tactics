@@ -1,0 +1,9 @@
+{
+  "status": "不採用：デザイン・向きが変化",
+  "issues": [
+    "元絵にない長い武器が出現",
+    "本とカバンの保持が変化",
+    "後半で横向きに回転"
+  ],
+  "reviewMethod": "native temporal contact sheet inspected at 6 fps; sufficient to reject, not a full-frame gait approval"
+}

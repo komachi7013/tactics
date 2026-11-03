@@ -5,8 +5,8 @@ import { buildFourBattleCheckpoint } from '../src/qa/checkpoint';
 import { createInitialState, reduce } from '../src/domain/engine';
 import { runEnemyActivation } from '../src/domain/ai';
 import type { BattleId, Command } from '../src/domain/types';
-import b05 from './fixtures/b05-route.json';
-import b06 from './fixtures/b06-route.json';
+import b05 from './fixtures/defend-cooldown-v1/b05-route.json';
+import b06 from './fixtures/defend-cooldown-v1/b06-route.json';
 
 function memory() {
   const values = new Map([[CAMPAIGN_KEY, '{user-save-must-not-be-parsed-or-rewritten'], ['other-user-key', 'keep']]);

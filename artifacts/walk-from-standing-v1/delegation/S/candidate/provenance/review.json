@@ -1,0 +1,66 @@
+{
+  "status": "比較候補：Seedance2.5・S立ち絵＋リセS動画・6条件",
+  "inputImageCount": 1,
+  "inputDirection": "S",
+  "referenceVideoCount": 1,
+  "motionRequirementCount": 6,
+  "equipmentInstructionsIncluded": false,
+  "frames": 19,
+  "cycleMs": 800,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "all19FramesViewedOnLight": true,
+  "all19FramesViewedOnDark": true,
+  "facingRetainedInAllSelectedFrames": true,
+  "fullBodyAndBothSolesInsideSelectedFrames": true,
+  "nativeCanvasEdgePixels": 0,
+  "contactReview": {
+    "videoSha256": "18eb73bae495b53a6a7f11f32ce482af21d8be0ae57d3c8e8ced48b50cd80cb8",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "L"
+      },
+      {
+        "frame": 48,
+        "foot": "R"
+      },
+      {
+        "frame": 58,
+        "foot": "L"
+      }
+    ],
+    "reviewNote": "Delegation S source/full feet sheets inspected. Near image-right L38/58 and far R48 support alternate with low opposing leg passage. Upright torso, coat/scarf/pouch match own S still; fullbody/soles inside. Lise S driver. Estimated support phases, not motion capture."
+  },
+  "selectedOutputSeamReviewed": true,
+  "automaticGaitLoopStatus": "automatic selection requires visual review",
+  "issues": [
+    "リセS動画参照。全19コマを明暗背景と立ち絵比較で確認。両脚の交互の通過、衣装・持ち物と足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+  ],
+  "gameApplied": false,
+  "userApproved": false,
+  "referenceMotionReady": true,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "generationCountThisRequest": 1,
+  "quotedCreditsThisRequest": 28,
+  "headCentroidRangePx": [
+    0.2776718728628964,
+    0.8325533104430747
+  ],
+  "footRegionSeamOverMedianStep": 0.45028245895476954,
+  "headTopRangePx": [
+    96,
+    97
+  ],
+  "groundRangePx": [
+    280,
+    284
+  ],
+  "drivingCast": "lise",
+  "drivingDirection": "S",
+  "appearanceSource": "own standing image",
+  "motionSource": "same-direction reference video"
+}

@@ -1,8 +1,9 @@
+import { setMainJob } from './fixtures/legacy-preparation';
 import {describe,it,expect} from 'vitest';
 import {createPartyBattle,validateParty} from '../src/party';
 import {createInitialState} from '../src/domain/engine';
-import {BATTLE_IDS,defaultParty} from '../src/progression';
-import {createJobs,setMainJob,INITIAL_JOBS} from '../src/jobs';
+import {BATTLE_IDS, defaultParty} from '../src/progression';
+import {createJobs, INITIAL_JOBS} from '../src/jobs';
 import type {Unit} from '../src/domain/types';
 function withoutJobCommands(unit:Unit):Unit {const next=structuredClone(unit);delete next.jobCommand;delete next.surveyCharges;delete next.surveyBonus;delete next.protection;delete next.plankCharges;delete next.plankReady;return next;}
 describe('mandatory protagonist and selected deployment',()=>{
@@ -11,5 +12,5 @@ describe('mandatory protagonist and selected deployment',()=>{
  it('rejects missing protagonist, duplicates, short parties, NPCs, and story absence',()=>{for(const p of [['ally-garan','ally-neia','ally-sena','ally-iva'],['ally-lise','ally-garan','ally-garan','ally-iva'],['ally-lise','ally-garan','ally-iva'],['ally-lise','ally-garan','escort-toma','ally-iva'],['ally-lise','ally-neia','ally-sena','ally-iva']])expect(validateParty('B06',p)).toBe(false);const sparse=['ally-lise','ally-garan',,'ally-iva'];expect(validateParty('B06',sparse)).toBe(false);expect(()=>createPartyBattle('B06',['ally-lise','ally-garan','ally-neia','ally-iva'])).toThrow();});
  it('substitutes combatants in safe unique deployment cells without changing escorts or enemies',()=>{const ids=['ally-lise','ally-sena','ally-iva','ally-dani'] as const;const s=createPartyBattle('B09',ids,createJobs());expect(s.units.filter(u=>u.team==='player'&&!u.kind).map(u=>u.id)).toEqual(ids);expect(s.units.find(u=>u.id==='ally-dani')).toMatchObject({name:'ダニ',role:'記録官',maxHp:18});const live=s.units.filter(u=>u.hp>0);expect(new Set(live.map(u=>`${u.pos.x},${u.pos.y}`)).size).toBe(live.length);expect(live.every(u=>s.cells.some(c=>c.x===u.pos.x&&c.y===u.pos.y&&!c.blocked))).toBe(true);expect(s.units.filter(u=>u.kind==='escort')).toEqual(createInitialState('B09').units.filter(u=>u.kind==='escort'));});
  it('applies common chapter level only to selected combatants, preserving defense and mobility',()=>{const old=createPartyBattle('B03',defaultParty('B03'),createJobs());const s=createPartyBattle('B03',defaultParty('B03'),createJobs(),3);for(const u of s.units){const base=old.units.find(b=>b.id===u.id)!;if(u.team==='player'&&!u.kind)expect(u).toMatchObject({hp:base.hp+4,maxHp:base.maxHp+4,atk:base.atk+2,def:base.def,move:base.move});else expect(u).toEqual(base);}for(const n of [0,6,1.5,NaN])expect(()=>createPartyBattle('B03',defaultParty('B03'),createJobs(),n)).toThrow();});
- it('uses switched role consistently for a substituted character',()=>{const j=setMainJob(createJobs(),'ally-sena','warden','B05');const s=createPartyBattle('B05',['ally-lise','ally-sena','ally-neia','ally-iva'],j);expect(s.units.find(u=>u.id==='ally-sena')).toMatchObject({role:'堤防衛士',maxHp:24,def:3,weapon:'melee'});});
+ it('keeps a substituted character’s fixed role despite an archived switched-main field',()=>{const j=setMainJob(createJobs(),'ally-sena','warden','B05');const s=createPartyBattle('B05',['ally-lise','ally-sena','ally-neia','ally-iva'],j);expect(s.units.find(u=>u.id==='ally-sena')).toMatchObject({role:'救護師',maxHp:16,def:1,weapon:'melee',healCharges:2});});
 });

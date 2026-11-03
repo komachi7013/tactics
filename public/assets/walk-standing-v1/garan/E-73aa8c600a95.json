@@ -1,0 +1,209 @@
+{
+  "frames": 19,
+  "cycleMs": 800,
+  "fpsRational": [
+    95,
+    4
+  ],
+  "durationsMs": [
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    43,
+    42,
+    42,
+    42,
+    42
+  ],
+  "sourceIndices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "sourceVideoSha256": "5a022fb812c3301b845ce8ba9a393acd5ff809310c1f309d46fd2acb61af8a02",
+  "sheetSha256": "d84c27040d98d11dec818ad30a2a19fbcc20e0316a10682ada56be0ef2c9ee23",
+  "fixedScale": 0.20408163265306123,
+  "fixedOffset": [
+    27,
+    89
+  ],
+  "frameGeometry": [
+    {
+      "headTop": 100,
+      "ground": 280,
+      "width": 87
+    },
+    {
+      "headTop": 100,
+      "ground": 280,
+      "width": 87
+    },
+    {
+      "headTop": 100,
+      "ground": 282,
+      "width": 86
+    },
+    {
+      "headTop": 99,
+      "ground": 281,
+      "width": 86
+    },
+    {
+      "headTop": 99,
+      "ground": 281,
+      "width": 85
+    },
+    {
+      "headTop": 99,
+      "ground": 280,
+      "width": 85
+    },
+    {
+      "headTop": 99,
+      "ground": 279,
+      "width": 84
+    },
+    {
+      "headTop": 99,
+      "ground": 278,
+      "width": 84
+    },
+    {
+      "headTop": 99,
+      "ground": 277,
+      "width": 83
+    },
+    {
+      "headTop": 99,
+      "ground": 276,
+      "width": 82
+    },
+    {
+      "headTop": 100,
+      "ground": 274,
+      "width": 82
+    },
+    {
+      "headTop": 100,
+      "ground": 274,
+      "width": 82
+    },
+    {
+      "headTop": 100,
+      "ground": 273,
+      "width": 82
+    },
+    {
+      "headTop": 99,
+      "ground": 274,
+      "width": 83
+    },
+    {
+      "headTop": 99,
+      "ground": 275,
+      "width": 83
+    },
+    {
+      "headTop": 99,
+      "ground": 276,
+      "width": 84
+    },
+    {
+      "headTop": 99,
+      "ground": 276,
+      "width": 85
+    },
+    {
+      "headTop": 99,
+      "ground": 278,
+      "width": 85
+    },
+    {
+      "headTop": 99,
+      "ground": 278,
+      "width": 86
+    }
+  ],
+  "contactReview": {
+    "videoSha256": "5a022fb812c3301b845ce8ba9a393acd5ff809310c1f309d46fd2acb61af8a02",
+    "visualReviewed": true,
+    "contacts": [
+      {
+        "frame": 0,
+        "foot": "R"
+      },
+      {
+        "frame": 10,
+        "foot": "L"
+      },
+      {
+        "frame": 19,
+        "foot": "R"
+      }
+    ],
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "reviewNote": "Native frames0–31 examined. Near anatomical R leg is at image left below the sheath; far anatomical L leg is at image right below the shield. Front/support phase alternates R0 → L10 → R19. Modest low-lift gait copied from the approved Lise E reference. Contact phase is manually estimated, not motion capture. Keep design and seam checks separate."
+  },
+  "status": "visually-reviewed-comparison-candidate",
+  "matteReportStatus": "pass",
+  "matteOverrideReason": null,
+  "gameApplied": true,
+  "art_source": "Higgsfield image-to-video",
+  "visualReview": {
+    "referenceHead": {
+      "width": 57,
+      "area": 2404
+    },
+    "candidateHeadWidthMedian": 56.0,
+    "headAreaRatio": 0.9854409317803661,
+    "headTopRange": [
+      99,
+      100
+    ],
+    "groundRange": [
+      273,
+      282
+    ],
+    "frames": 19,
+    "cycleMs": 800,
+    "all19FramesViewedOnLight": true,
+    "gameApplied": false,
+    "status": "比較用候補：19コマ目視確認済み・ゲーム未適用",
+    "all19FramesViewedOnDark": true,
+    "shieldAndSheathRetainedInSelectedFrames": true,
+    "facingRetainedInSelectedFrames": true,
+    "manualContactPhase": "R0-L10-R19; estimated +/-2 source frames",
+    "source": "Higgsfield Genjutsu; approved Lise E cycle as driving video"
+  },
+  "sheetColumns": 5,
+  "candidateDirectory": "artifacts/walk-from-standing-v1/garan/E/candidate",
+  "sourceSheetSha256": "97a843c3e64e8e751c161bd01d69d0d34a976658fc4895c15a8372f4d7c7af57"
+}

@@ -1,0 +1,66 @@
+{
+  "status": "W：ガランW動画参照・利用者確認待ち",
+  "inputImageCount": 1,
+  "inputDirection": "W",
+  "referenceVideoCount": 1,
+  "motionRequirementCount": 6,
+  "equipmentInstructionsIncluded": false,
+  "frames": 19,
+  "cycleMs": 800,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "all19FramesViewedOnLight": true,
+  "all19FramesViewedOnDark": true,
+  "facingRetainedInAllSelectedFrames": true,
+  "fullBodyAndBothSolesInsideSelectedFrames": true,
+  "nativeCanvasEdgePixels": 0,
+  "contactReview": {
+    "videoSha256": "16ef8c66d2e698f3453369c413b0e1d025d06d679c24127957a47dd1d9fdbaca",
+    "visualReviewed": true,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "L"
+      },
+      {
+        "frame": 48,
+        "foot": "R"
+      },
+      {
+        "frame": 58,
+        "foot": "L"
+      }
+    ],
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "reviewNote": "W: near anatomical L image-left supports38/58 while R passes; far R supports48 while L advances upper-left. Native every2frames through96 and detailed36..59 frames checked. Same-direction Garan W video+own W standing+original6conditions, framing clarification only;20source frames~0.833sec retimed800ms. Approximate support phases, not motion capture."
+  },
+  "selectedOutputSeamReviewed": true,
+  "automaticGaitLoopStatus": "automatic selected5:43 at low confidence; manual L38-R48-L58 interval used",
+  "issues": [
+    "ガランW動画参照のSeedance2.5案。全身・両足先を確認し、原動画約0.83秒の左右2歩を19フレーム・0.8秒に調整。自動探索は低信頼。利用者確認待ち。"
+  ],
+  "gameApplied": false,
+  "userApproved": false,
+  "referenceMotionReady": true,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "generationCountThisRequest": 1,
+  "quotedCreditsThisRequest": 28,
+  "headCentroidRangePx": [
+    2.662337699434488,
+    1.9764280885303265
+  ],
+  "footRegionSeamOverMedianStep": 0.20660997748414725,
+  "headTopRangePx": [
+    94,
+    97
+  ],
+  "groundRangePx": [
+    270,
+    284
+  ],
+  "drivingCast": "garan",
+  "drivingDirection": "W",
+  "appearanceSource": "own standing image",
+  "motionSource": "same-direction reference video"
+}

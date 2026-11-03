@@ -3,7 +3,7 @@ import {createInitialState,reduce,getCell,getUnit,canCollect,evacuationPreview,r
 import {getBattleConfig} from '../src/domain/battles';
 import {runEnemyActivation} from '../src/domain/ai';
 import type {BattleState,Command} from '../src/domain/types';
-import route from './fixtures/b11-route.json';
+import route from './fixtures/defend-cooldown-v1/b11-route.json';
 import landscape from '../src/landscapes/b11.json';
 function safe(){const s=createInitialState('B11');s.units.filter(u=>u.team==='enemy').forEach(u=>u.hp=0);return s;}
 function begin(s:BattleState,id='ally-iva',pos={x:5,y:6}){s.activeId=null;s.turn='player';getUnit(s,id)!.acted=false;getUnit(s,id)!.pos={...pos};return reduce(s,{type:'start',unitId:id}).state;}

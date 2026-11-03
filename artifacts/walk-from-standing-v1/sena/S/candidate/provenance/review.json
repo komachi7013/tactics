@@ -1,0 +1,66 @@
+{
+  "status": "比較候補：Seedance2.5・S立ち絵＋リセS動画・6条件",
+  "inputImageCount": 1,
+  "inputDirection": "S",
+  "referenceVideoCount": 1,
+  "motionRequirementCount": 6,
+  "equipmentInstructionsIncluded": false,
+  "frames": 19,
+  "cycleMs": 800,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "all19FramesViewedOnLight": true,
+  "all19FramesViewedOnDark": true,
+  "facingRetainedInAllSelectedFrames": true,
+  "fullBodyAndBothSolesInsideSelectedFrames": true,
+  "nativeCanvasEdgePixels": 0,
+  "contactReview": {
+    "videoSha256": "658f939f1fc26bb528a4c6e21a9dc625193d313b5bfc8b0279a6618f2aad81b0",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "L"
+      },
+      {
+        "frame": 48,
+        "foot": "R"
+      },
+      {
+        "frame": 58,
+        "foot": "L"
+      }
+    ],
+    "reviewNote": "Native clip and feet every2frames inspected. S near anatomical L image-right supports38/58; far R supports48 as near L passes forward along lower-left. Full body/facing/design retained, no added props. Pink background keyed with scoped palette profile.20source-frame cycle. Estimated support phases, not motion capture."
+  },
+  "selectedOutputSeamReviewed": true,
+  "automaticGaitLoopStatus": "automatic selection requires visual review",
+  "issues": [
+    "リセS動画参照。全19コマを明暗背景で確認。原周期約0.83秒を0.8秒に調整。背景のピンクを除去し、頭・胴・装備と足先の保持を確認。自動探索は補助判定、利用者確認待ち。"
+  ],
+  "gameApplied": false,
+  "userApproved": false,
+  "referenceMotionReady": true,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "generationCountThisRequest": 1,
+  "quotedCreditsThisRequest": 28,
+  "headCentroidRangePx": [
+    0.507680121438824,
+    0.9373911378741298
+  ],
+  "footRegionSeamOverMedianStep": 0.3440200939132715,
+  "headTopRangePx": [
+    96,
+    97
+  ],
+  "groundRangePx": [
+    278,
+    284
+  ],
+  "drivingCast": "lise",
+  "drivingDirection": "S",
+  "appearanceSource": "own standing image",
+  "motionSource": "same-direction reference video"
+}

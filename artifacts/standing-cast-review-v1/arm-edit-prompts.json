@@ -1,0 +1,18 @@
+{
+  "route": "built-in image_gen",
+  "higgsfieldAdditionalCredits": 0,
+  "specs": [
+    {
+      "cast": "dani",
+      "direction": "E",
+      "ref": "/Users/komachi/work/tactics/artifacts/standing-cast-repairs-local-v1/dani/E/arm-edit-reference.png",
+      "prompt": "Dani EAST front-right three-quarter view, facing IMAGE RIGHT. Straighten HIS OWN RIGHT ARM, the NEAR ARM ON IMAGE LEFT. The image-left elbow is currently bent and his right hand is raised across his chest gripping a shoulder strap. Replace that raised/bent arm with a relaxed straight arm hanging downward beside his image-left hip, elbow extended naturally, fingers relaxed alongside the satchel. Remove the old raised hand/forearm from the chest and restore the underlying vest/strap and shirt naturally. Keep the yellow shoulder cape, original shoulder location, white rolled sleeve, teal tunic, brown vest, satchel, parchment, belt and original opposite hand on image right unchanged. He must no longer grip anything at chest height; right hand should hang by his thigh. Precise arm-pose-only edit. Keep the exact supplied head, hair, face direction, head proportions, torso rotation, clothing colors, waist and knee heights, feet, stance, total character height and original transparent canvas framing. Do not mirror or rotate the body. Preserve all other equipment and the opposite arm. True transparency, no text or ground shadow."
+    },
+    {
+      "cast": "vesk",
+      "direction": "W",
+      "ref": "/Users/komachi/work/tactics/artifacts/standing-cast-repairs-local-v1/vesk/W/arm-edit-reference.png",
+      "prompt": "Vesk WEST rear-left three-quarter view, face points IMAGE LEFT. Straighten HIS ANATOMICAL LEFT ARM, the arm on IMAGE LEFT currently bent forward with a hand sticking outward. Lower that arm naturally so the left upper arm and forearm hang straight downward along his image-left coat side; elbow relaxed and extended, left hand beside his left hip/thigh. Remove the old forward-projecting bent hand at image left. Keep the original navy sleeve and ornate teal-and-gold cuff, shoulder height and arm length. Preserve the other arm on image right, book/case, all gold coat embroidery, birdcage emblems, waist buttons, silver swept hair, face and exact rear-left torso orientation unchanged. Precise arm-pose-only edit. Keep the exact supplied head, hair, face direction, head proportions, torso rotation, clothing colors, waist and knee heights, feet, stance, total character height and original transparent canvas framing. Do not mirror or rotate the body. Preserve all other equipment and the opposite arm. True transparency, no text or ground shadow."
+    }
+  ]
+}

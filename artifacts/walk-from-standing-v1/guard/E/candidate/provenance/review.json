@@ -1,0 +1,66 @@
+{
+  "status": "比較候補：Seedance2.5・E立ち絵＋ガランE動画・6条件",
+  "inputImageCount": 1,
+  "inputDirection": "E",
+  "referenceVideoCount": 1,
+  "motionRequirementCount": 6,
+  "equipmentInstructionsIncluded": false,
+  "frames": 19,
+  "cycleMs": 800,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "all19FramesViewedOnLight": true,
+  "all19FramesViewedOnDark": true,
+  "facingRetainedInAllSelectedFrames": true,
+  "fullBodyAndBothSolesInsideSelectedFrames": true,
+  "nativeCanvasEdgePixels": 0,
+  "contactReview": {
+    "videoSha256": "563727e668485ec9486d2edeff8b5480414aa16f50c832ae1611b1465ef4a350",
+    "visualReviewed": true,
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "R"
+      },
+      {
+        "frame": 48,
+        "foot": "L"
+      },
+      {
+        "frame": 58,
+        "foot": "R"
+      }
+    ],
+    "reviewNote": "Guard E brown/gold/red/teal palette reviewed; use magenta ratio gate to protect red cloth. Source and feet sheets show near image-left R38/58 then far L48 support with alternating swing. Sword and shield retained, fixed facing and full soles. Garan E driver. Estimated support phases, not motion capture."
+  },
+  "selectedOutputSeamReviewed": true,
+  "automaticGaitLoopStatus": "automatic selection requires visual review",
+  "issues": [
+    "ガランE動画参照。全19コマを明暗背景と立ち絵比較で確認。左右の支持脚交代、剣・盾、全身と両足先を確認。原周期約0.83秒を0.8秒に調整。自動探索は低信頼、利用者確認待ち。"
+  ],
+  "gameApplied": false,
+  "userApproved": false,
+  "referenceMotionReady": true,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "generationCountThisRequest": 1,
+  "quotedCreditsThisRequest": 28,
+  "headCentroidRangePx": [
+    1.4219529271233569,
+    0.9183196427202063
+  ],
+  "footRegionSeamOverMedianStep": 0.39707641842652114,
+  "headTopRangePx": [
+    97,
+    99
+  ],
+  "groundRangePx": [
+    282,
+    289
+  ],
+  "drivingCast": "garan",
+  "drivingDirection": "E",
+  "appearanceSource": "own standing image",
+  "motionSource": "same-direction reference video"
+}

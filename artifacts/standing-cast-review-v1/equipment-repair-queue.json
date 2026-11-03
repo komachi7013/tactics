@@ -1,0 +1,49 @@
+{
+  "priority": "Publish and verify head-width corrections first, then continue equipment repairs",
+  "status": "seven equipment corrections applied to comparison; visual review candidates",
+  "items": [
+    {
+      "cast": "toma",
+      "direction": "E",
+      "correction": "strap from anatomical left shoulder to right hip; satchel on right hip; preserve pose",
+      "status": "applied"
+    },
+    {
+      "cast": "toma",
+      "direction": "S",
+      "correction": "strap from anatomical left shoulder to right hip; satchel on right hip; preserve pose",
+      "status": "applied"
+    },
+    {
+      "cast": "garan",
+      "direction": "S",
+      "correction": "move sword scabbard from anatomical left hip to right hip, opposite shield",
+      "status": "applied"
+    },
+    {
+      "cast": "sena",
+      "direction": "W",
+      "correction": "main satchel on anatomical right hip; back view means image right",
+      "status": "applied"
+    },
+    {
+      "cast": "iva",
+      "direction": "W",
+      "correction": "main satchel on anatomical right hip; back view means image right",
+      "status": "applied"
+    },
+    {
+      "cast": "archer",
+      "direction": "S",
+      "correction": "main satchel on anatomical right hip; front view means image left",
+      "status": "applied"
+    },
+    {
+      "cast": "lise",
+      "direction": "S",
+      "correction": "retry right-hip satchel, left-shoulder to right-hip strap; preserve left-hand book, approved hair and untwisted body",
+      "status": "applied"
+    }
+  ],
+  "headCorrectionsPublishedFirst": true
+}

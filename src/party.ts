@@ -2,8 +2,8 @@ import { createInitialState } from './domain/engine';
 import { faceNearestOpponents } from './domain/initialFacing';
 import type { BattleId, BattleState, Unit } from './domain/types';
 import { availableCharacters, type CharacterId } from './progression';
-import { applyJobs, type JobsState } from './jobs';
-import {applyEquipment,EQUIPMENT_EVENTS,type EquipmentState} from './equipment';
+import { applyCharacterRole, type JobsState } from './jobs';
+import {applyEquipment,reconcileEquipmentRoles,EQUIPMENT_EVENTS,type EquipmentState} from './equipment';
 import { createBattleRandom, type CombatRandomConfig } from './domain/combatRandom';
 export function validateParty(battleId:BattleId,party:unknown):party is CharacterId[] {
  const available=availableCharacters(battleId);
@@ -15,9 +15,9 @@ export function createPreparedUnit(character:CharacterId,jobs:JobsState|undefine
  for(const id of ['B01','B03','B04'] as const)for(const unit of createInitialState(id).units)if(unit.team==='player'&&unit.kind!=='escort'&&!templates.has(unit.id))templates.set(unit.id,unit);
  templates.set('ally-dani',{...structuredClone(templates.get('ally-sena')!),id:'ally-dani',name:'ダニ',role:'記録官',hp:18,maxHp:18,atk:5,def:1,weapon:'melee',healCharges:undefined});
  const template=templates.get(character);if(!template)throw Error('人物データがありません');
- const adjusted=jobs?applyJobs(structuredClone(template),jobs):structuredClone(template);
+ const adjusted=applyCharacterRole(structuredClone(template));
  adjusted.maxHp+=2*(level-1);adjusted.hp+=2*(level-1);adjusted.atk+=level-1;
- return equipment?applyEquipment(adjusted,equipment):adjusted;
+ return equipment?applyEquipment(adjusted,reconcileEquipmentRoles(equipment)):adjusted;
 }
 /** Pass campaign combat in the runtime. Omission preserves explicit legacy test/oracle battles. */
 export function createPartyBattle(battleId:BattleId,party:readonly CharacterId[],jobs?:JobsState,level=1,options?:{equipment?:EquipmentState;confirmedEquipmentEvents?:readonly string[];combat?:CombatRandomConfig}):BattleState {

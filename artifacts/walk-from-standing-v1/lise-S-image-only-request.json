@@ -1,0 +1,46 @@
+{
+  "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "duration": 4,
+    "resolution": "720p",
+    "generate_audio": false,
+    "count": 1,
+    "aspect_ratio": "1:1",
+    "prompt": "Animate the character in the supplied SOUTH-facing standing image, keeping the same front-facing three-quarter orientation toward the lower-left and viewpoint.\n\n1. One complete left-and-right TWO-step gait cycle takes approximately 0.8 seconds.\n2. Walk in place with restrained, clearly alternating left and right steps.\n3. Use small strides and low foot lift. Keep the upper body upright.\n4. The supporting leg straightens naturally while the opposite leg passes with a slight knee bend.\n5. Keep head and torso movement small.",
+    "medias": [
+      {
+        "role": "start_image",
+        "value": "931fce26-9563-41f0-be4e-89843e7a831d"
+      }
+    ]
+  },
+  "quote": {
+    "cost": {
+      "credits": 28,
+      "credits_exact": 28
+    }
+  },
+  "submission": {
+    "results": [
+      {
+        "id": "e6dcc7b2-0226-4ee0-95e0-4b383efb2a8d",
+        "type": "video",
+        "status": "pending",
+        "model": "seedance_2_5",
+        "params": {
+          "prompt": "Animate the character in the supplied SOUTH-facing standing image, keeping the same front-facing three-quarter orientation toward the lower-left and viewpoint.\n\n1. One complete left-and-right TWO-step gait cycle takes approximately 0.8 seconds.\n2. Walk in place with restrained, clearly alternating left and right steps.\n3. Use small strides and low foot lift. Keep the upper body upright.\n4. The supporting leg straightens naturally while the opposite leg passes with a slight knee bend.\n5. Keep head and torso movement small.",
+          "aspect_ratio": "1:1",
+          "duration": 4,
+          "reference_images": [
+            "931fce26-9563-41f0-be4e-89843e7a831d"
+          ],
+          "mode": "omni_reference",
+          "resolution": "720p",
+          "generate_audio": false
+        }
+      }
+    ]
+  },
+  "userScope": "S only; same five requirements as N; S standing image only, no video references or equipment instructions"
+}

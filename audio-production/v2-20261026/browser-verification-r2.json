@@ -1,0 +1,11 @@
+{
+  "revision": "independent-r2",
+  "runtime": "audio-v2-r2",
+  "browser": "IAB",
+  "result": "35/35 HTTP SHA WebAudio decode Source start; 16 BGM loop=true",
+  "previewSecondsPerCue": 0.35,
+  "error": null,
+  "listeningVerified": false,
+  "threeLoopListeningVerified": false,
+  "normalSaveAccess": false
+}

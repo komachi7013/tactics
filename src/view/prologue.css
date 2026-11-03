@@ -1,0 +1,17 @@
+.prologue-screen{position:fixed;inset:0;z-index:1100;display:grid;place-items:center;padding:clamp(12px,3vw,36px);overflow:auto;background:radial-gradient(ellipse at 50% 15%,#244d4e,#0b2025 75%);color:#f1e7ca}
+.prologue-panel{width:min(100%,760px);max-height:calc(100dvh - 24px);display:flex;flex-direction:column;gap:12px;min-height:0;padding:clamp(16px,3vw,32px);border:1px solid #738979;border-radius:8px;box-shadow:0 16px 60px #0008;background:#102e32}
+.prologue-kicker{margin:0;color:#d9bd7c;text-align:center;letter-spacing:.3em;font-size:.85rem}
+.prologue-panel h1{margin:0;text-align:center;font-size:clamp(1.4rem,4vw,2.1rem);letter-spacing:.12em}
+.prologue-reader{min-height:100px;max-height:min(52dvh,440px);overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding:8px clamp(4px,2vw,20px);font-size:clamp(.98rem,2.4vw,1.15rem);line-height:2;letter-spacing:.03em;outline-offset:2px;flex:1 1 auto}
+.prologue-reader p{margin:0 0 1.4em}.prologue-reader p:last-child{margin-bottom:.25em}
+.prologue-first-mission{padding:12px;border-top:1px solid #647c72;color:#e6d599;font-size:.92em}
+.prologue-note,.prologue-status{margin:0;font-size:.8rem;line-height:1.5;color:#b6c9bf}.prologue-status{color:#e1d29f;min-height:1.5em}
+.prologue-reading-controls,.prologue-actions{display:flex;gap:8px;flex-wrap:wrap;flex:none}
+.prologue-reading-controls button{flex:1 1 130px;font-size:.88rem;padding:9px 10px}
+.prologue-actions{padding-top:12px;border-top:1px solid #5c7469}
+.prologue-actions button{flex:1 1 180px;min-height:44px;padding:11px 14px}
+.prologue-actions .prologue-continue{background:#dfcc96;color:#193638;font-weight:700;border-color:#f2deb2}
+.prologue-screen button:focus-visible,.prologue-reader:focus-visible{outline:3px solid #ffe0a0;outline-offset:3px}
+@media(max-height:600px){.prologue-screen{padding:8px}.prologue-panel{padding:12px;gap:7px;max-height:calc(100dvh - 16px)}.prologue-reader{max-height:40dvh;min-height:70px}.prologue-note{display:none}.prologue-reading-controls button,.prologue-actions button{padding:7px 10px;min-height:36px}.prologue-actions{padding-top:8px}}
+@media(max-width:430px){.prologue-panel{gap:8px;padding:14px}.prologue-reading-controls{gap:6px}.prologue-reading-controls button{flex-basis:80px;padding:8px 6px}.prologue-actions button{flex-basis:100%;}.prologue-reader{line-height:1.85;max-height:44dvh}}
+@media(prefers-reduced-motion:reduce){.prologue-screen *{scroll-behavior:auto;transition:none;animation:none}}

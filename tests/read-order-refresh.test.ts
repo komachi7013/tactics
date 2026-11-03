@@ -4,8 +4,8 @@ import {createJobs} from '../src/jobs';
 import {createInitialState,reduce,getUnit} from '../src/domain/engine';
 import {getEnemyDecisionSnapshot,createEnemyDecisionSnapshotReader,runEnemyActivationWithTrace} from '../src/domain/ai';
 import type {BattleState,Command,BattleId} from '../src/domain/types';
-import b08 from './fixtures/progression-v2/b08-route.json';
-import b09 from './fixtures/progression-v2/b09-route.json';
+import b08 from './fixtures/defend-cooldown-v1/progression-v2/b08-route.json';
+import b09 from './fixtures/defend-cooldown-v1/progression-v2/b09-route.json';
 import {defaultParty} from '../src/progression';
 function step(s:BattleState,c:Command){const r=reduce(s,c);expect(r.error,JSON.stringify(c)).toBeUndefined();expect(r.state).not.toBe(s);return r.state;}
 function checked(s:BattleState){const before=structuredClone(s),cached=getEnemyDecisionSnapshot(s),fresh=createEnemyDecisionSnapshotReader()(s);expect(cached).toEqual(fresh);expect(getEnemyDecisionSnapshot(s)).toBe(cached);expect(s).toEqual(before);return cached;}

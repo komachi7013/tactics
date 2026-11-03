@@ -16,10 +16,12 @@ export interface StartScreenOptions {
   battleLabel: string;
   warning?: string;
   qaNotice?: string;
-  start: () => void;
+  onNewGame: () => void;
+  onContinue: () => void;
+  initialFocus?: 'new' | 'continue';
 }
 
-/** Initial boot only. One explicit action transfers ownership to the existing intro. */
+/** Two explicit entry paths. Confirmation/reset and story routing remain owned by main. */
 export function mountStartScreen(host: HTMLElement, options: StartScreenOptions): () => void {
   const doc = host.ownerDocument;
   const root = doc.createElement('section'); root.className = 'start-screen';
@@ -32,31 +34,35 @@ export function mountStartScreen(host: HTMLElement, options: StartScreenOptions)
   const title = doc.createElement('h1'); title.id = 'start-title'; title.textContent = '澪を継ぐ者';
   const subtitle = doc.createElement('p'); subtitle.className = 'start-subtitle'; subtitle.textContent = '流域盟約戦記';
   const rule = doc.createElement('div'); rule.className = 'start-rule'; rule.setAttribute('aria-hidden', 'true');
-  const action = doc.createElement('button'); action.type = 'button'; action.className = 'start-action';
-  action.textContent = options.hasCheckpoint ? '続きから' : 'はじめる';
+  const newGame = doc.createElement('button'); newGame.type = 'button'; newGame.className = 'start-action start-new-game'; newGame.textContent = '最初から始める';
+  const continueGame = doc.createElement('button'); continueGame.type = 'button'; continueGame.className = 'start-action start-continue'; continueGame.textContent = '続きから始める';
+  continueGame.disabled = !options.hasCheckpoint;
   const note = doc.createElement('p'); note.id = 'start-progress-note'; note.className = 'start-note';
   note.textContent = options.hasCheckpoint
     ? `${options.battleLabel}の導入から再開します。戦闘途中のHP・手番は保存されません。`
-    : '物語と作戦説明から始めます。';
-  action.setAttribute('aria-describedby', note.id);
+    : '続きの保存データがないため「続きから始める」は利用できません。「最初から始める」で序章から始められます。';
+  continueGame.setAttribute('aria-describedby', note.id);
   const warning = doc.createElement('p'); warning.className = 'start-warning'; warning.setAttribute('role', 'status');
   warning.textContent = options.warning ?? ''; warning.hidden = !options.warning;
   const fallback = doc.createElement('p'); fallback.className = 'start-image-note'; fallback.setAttribute('role', 'status'); fallback.hidden = true;
   const qa = doc.createElement('p'); qa.className = 'start-qa'; qa.textContent = options.qaNotice ?? ''; qa.hidden = !options.qaNotice;
-  copy.append(seal, title, subtitle, rule, action, note, warning, fallback, qa);
+  copy.append(seal, title, subtitle, rule, newGame, continueGame, note, warning, fallback, qa);
   root.append(art, copy); host.replaceChildren(root);
   let disposed = false, started = false;
   const opened = performance.now();
-  const activate = () => {
-    if (disposed || started || !root.isConnected || performance.now() - opened < 220) return;
-    started = true; action.disabled = true; options.start();
+  const activate = (kind: 'new' | 'continue') => {
+    if (disposed || started || !root.isConnected || performance.now() - opened < 220 || (kind === 'continue' && !options.hasCheckpoint)) return;
+    started = true; newGame.disabled = true; continueGame.disabled = true;
+    if (kind === 'new') options.onNewGame(); else options.onContinue();
   };
-  action.onclick = event => { event.preventDefault(); event.stopPropagation(); if (event.detail < 2) activate(); };
+  newGame.onclick = event => { event.preventDefault(); event.stopPropagation(); if (event.detail < 2) activate('new'); };
+  continueGame.onclick = event => { event.preventDefault(); event.stopPropagation(); if (event.detail < 2) activate('continue'); };
   const keys = (event: KeyboardEvent) => {
     if (event.ctrlKey || event.metaKey || event.altKey || event.key === 'Tab') return;
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault(); event.stopPropagation();
-      if (!event.repeat && event.target === action) activate();
+      if (!event.repeat && event.target === newGame) activate('new');
+      else if (!event.repeat && event.target === continueGame) activate('continue');
     } else if (event.key === 'Escape' || event.key.startsWith('Arrow')) {
       event.stopPropagation(); // Reading/scrolling never selects a battlefield cell.
     }
@@ -67,6 +73,7 @@ export function mountStartScreen(host: HTMLElement, options: StartScreenOptions)
     image.hidden = true; root.classList.add('start-image-unavailable');
     fallback.textContent = '背景画像を読み込めませんでした。開始できます。'; fallback.hidden = false;
   };
-  action.focus();
-  return () => { disposed = true; root.removeEventListener('keydown', keys); action.onclick = null; image.onerror = null; };
+  const focusContinue = options.hasCheckpoint && options.initialFocus !== 'new';
+  (focusContinue ? continueGame : newGame).focus();
+  return () => { disposed = true; root.removeEventListener('keydown', keys); newGame.onclick = null; continueGame.onclick = null; image.onerror = null; };
 }

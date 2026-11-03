@@ -1,0 +1,21 @@
+{
+  "videoSha256": "9a9fb1cff075854b378d753c5d025a0e20c8f738a52750e3d8fb1417f47f9a00",
+  "visualReviewed": true,
+  "contacts": [
+    {
+      "frame": 8,
+      "foot": "R"
+    },
+    {
+      "frame": 20,
+      "foot": "L"
+    },
+    {
+      "frame": 32,
+      "foot": "R"
+    }
+  ],
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "reviewNote": "Frames8\u201347 inspected at enlarged feet scale. Back three-quarter N: anatomical R is the near image-right boot, L the farther image-left boot. R supports at8 and32 with L passing behind; L supports at20 with R lifted/advancing. Approximate support phases +/-2 source frames, not motion capture. Facing and full body retained; no reference video."
+}

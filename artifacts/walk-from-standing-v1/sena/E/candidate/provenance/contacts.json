@@ -1,0 +1,21 @@
+{
+  "videoSha256": "eff7b67d9f0d45b621fb54eaa86b65e3a90fcd74878526b300878d6b8426206d",
+  "visualReviewed": true,
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "contacts": [
+    {
+      "frame": 38,
+      "foot": "R"
+    },
+    {
+      "frame": 48,
+      "foot": "L"
+    },
+    {
+      "frame": 58,
+      "foot": "R"
+    }
+  ],
+  "reviewNote": "Native full clip and feet every2frames inspected. E near anatomical R is image-left, supporting around38/58; far L supports around48. Full body/facing retained; no bow or other extra equipment visible. Same-direction Lise E driver.20source frames at24fps. Estimated support phases, not motion capture."
+}

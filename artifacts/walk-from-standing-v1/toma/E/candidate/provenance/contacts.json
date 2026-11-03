@@ -1,0 +1,21 @@
+{
+  "videoSha256": "9dc658d9e80143810926e576d97082790273c1d229c95b40900aac644cd46aa8",
+  "visualReviewed": true,
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "contacts": [
+    {
+      "frame": 38,
+      "foot": "R"
+    },
+    {
+      "frame": 48,
+      "foot": "L"
+    },
+    {
+      "frame": 58,
+      "foot": "R"
+    }
+  ],
+  "reviewNote": "Toma E source/full feet sheets reviewed. Near image-left R38/58 and far L48 support, both feet alternately advance without facing reversal. Bag strap remains input left shoulder toward right hip. Brown/slate palette reviewed, no purple garment. Fullbody and soles inside. Garan E driver. Estimated support phases, not motion capture."
+}

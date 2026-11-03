@@ -22,8 +22,17 @@ describe('read order domain command',()=>{
  it('removes only defeated target and clears all targets on terminal branches',()=>{let s=grant();s.activeId='ally-lise';s.turn='player';s.activation.acted=false;s.cells.forEach(c=>{c.height=0;c.blocked=false;c.shallow=false;});getUnit(s,'ally-lise')!.pos={x:1,y:1};getUnit(s,enemy)!.pos={x:2,y:1};getUnit(s,enemy)!.hp=1;const second=s.units.find(u=>u.team==='enemy'&&u.id!==enemy)!.id;s.readOrders!.push(second);s=step(s,{type:'attack',targetId:enemy});expect(s.readOrders).toEqual([second]);s=grant();s.round=100;s.units.forEach(u=>u.acted=u.id!==actor);s=step(s,{type:'end',facing:'N'});expect(s.phase).toBe('lost');expect(s.readOrders).toBeUndefined();});
  it('clears read order on B12 nonlethal commander subdual',()=>{let s=createInitialState('B12');const target=s.units.find(u=>u.id==='enemy-vesk')!;expect(target).toBeDefined();s.readOrders=[target.id];s.cells.forEach(c=>{c.height=0;c.blocked=false;c.shallow=false;});getUnit(s,'ally-lise')!.pos={x:1,y:1};target.pos={x:2,y:1};target.hp=1;s=step(s,{type:'start',unitId:'ally-lise'});s=step(s,{type:'attack',targetId:target.id});expect(s.finalControl!.commanderSubdued).toBe(true);expect(s.readOrders).toBeUndefined();});
 });
-describe('read order deployment and unchanged campaign persistence',()=>{
- it('recorder main gets fresh two uses, other main/support has no command inheritance',()=>{const base=createPartyBattle('B05',['ally-lise','ally-garan','ally-neia',actor],createJobs()).units.find(u=>u.id===actor)!;const jobs=createJobs();base.readCharges=0;expect(applyJobs(base,jobs)).toMatchObject({jobCommand:'readOrder',readCharges:2});jobs[actor].main='warden';jobs[actor].learned=['recorder-foundation'];jobs[actor].support='recorder-foundation';const switched=applyJobs(base,jobs);expect(switched.jobCommand).toBe('protect');expect(switched.readCharges).toBeUndefined();jobs[actor].main='recorder';jobs[actor].support=null;expect(applyJobs(base,jobs).readCharges).toBe(2);});
+describe('fixed read-order identity and unchanged campaign persistence',()=>{
+ it('fixed Dani receives fresh read order while archived role/support stays ineffective and unmodified',()=>{
+  const base=createPartyBattle('B05',['ally-lise','ally-garan','ally-neia',actor],createJobs()).units.find(u=>u.id===actor)!;
+  const jobs=createJobs();base.readCharges=0;
+  const fresh=applyJobs(base,jobs);expect(fresh).toMatchObject({jobCommand:'readOrder',readCharges:2});
+  const archived=structuredClone(jobs);archived[actor]={main:'warden',learned:['recorder-foundation'],support:'recorder-foundation'};
+  const history=structuredClone(archived);
+  // Historical save choices cannot replace Dani's fixed innate read-order command.
+  expect(applyJobs(base,archived)).toEqual(fresh);expect(archived).toEqual(history);
+  expect(fresh.jobCommand).not.toBe('protect');expect(fresh.readCharges).toBe(2);
+ });
  it.each([1,2])('keeps v%s saves free of derived data and retry allowance fresh',version=>{const c=createCampaign();let raw=JSON.stringify(version===1?{version:1,unlocked:c.unlocked,completed:c.completed,currentBattle:c.currentBattle,evidence:c.evidence}:c),writes=0;const storage:StorageLike={getItem:()=>raw,setItem:(_k,v)=>{raw=v;writes++;},removeItem:()=>{}};const loaded=readCampaign(storage);expect(writes).toBe(0);expect(writeCampaign(storage,loaded.campaign).ok).toBe(true);expect(raw).not.toMatch(/readOrders|readCharges|byActor|destination/);for(let i=0;i<2;i++){const s=createPartyBattle('B05',['ally-lise','ally-garan','ally-neia',actor],loaded.campaign.jobs!);expect(getUnit(s,actor)!.readCharges).toBe(2);expect(s.readOrders).toBeUndefined();}});
 });
 describe('shared pure decision snapshot',()=>{

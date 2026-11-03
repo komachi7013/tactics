@@ -1,0 +1,46 @@
+{
+  "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "duration": 4,
+    "resolution": "720p",
+    "generate_audio": false,
+    "count": 1,
+    "aspect_ratio": "1:1",
+    "prompt": "Animate the character in the supplied NORTH-facing standing image, keeping the same back-facing three-quarter orientation and viewpoint.\n\n1. One complete left-and-right TWO-step gait cycle takes approximately 0.8 seconds.\n2. Walk in place with restrained, clearly alternating left and right steps.\n3. Use small strides and low foot lift. Keep the upper body upright.\n4. The supporting leg straightens naturally while the opposite leg passes with a slight knee bend.\n5. Keep head and torso movement small.",
+    "medias": [
+      {
+        "role": "start_image",
+        "value": "637749fd-61a4-41fa-a94d-12343b55b59f"
+      }
+    ]
+  },
+  "quote": {
+    "cost": {
+      "credits": 28,
+      "credits_exact": 28
+    }
+  },
+  "submission": {
+    "results": [
+      {
+        "id": "7f003523-d1ff-4f53-afc6-ea390862fe0b",
+        "type": "video",
+        "status": "pending",
+        "model": "seedance_2_5",
+        "params": {
+          "prompt": "Animate the character in the supplied NORTH-facing standing image, keeping the same back-facing three-quarter orientation and viewpoint.\n\n1. One complete left-and-right TWO-step gait cycle takes approximately 0.8 seconds.\n2. Walk in place with restrained, clearly alternating left and right steps.\n3. Use small strides and low foot lift. Keep the upper body upright.\n4. The supporting leg straightens naturally while the opposite leg passes with a slight knee bend.\n5. Keep head and torso movement small.",
+          "aspect_ratio": "1:1",
+          "duration": 4,
+          "reference_images": [
+            "637749fd-61a4-41fa-a94d-12343b55b59f"
+          ],
+          "mode": "omni_reference",
+          "resolution": "720p",
+          "generate_audio": false
+        }
+      }
+    ]
+  },
+  "userScope": "N only; five motion requirements; ignore book-hand and bag requirements; N still only, no E image or video"
+}

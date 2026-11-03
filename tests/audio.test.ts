@@ -34,22 +34,23 @@ function backend() {
 }
 
 describe('memory-only gesture unlocked audio', () => {
-  it('catalog fixes precisely three BGM and eight SE delivery URLs', () => {
-    expect(MUSIC_IDS).toHaveLength(3); expect(SOUND_IDS).toHaveLength(8);
-    for (const [id, path] of Object.entries(AUDIO_CATALOG)) expect(path).toBe(`/audio/v1/${id}.wav`);
+  it('catalog fixes sixteen BGM and nineteen SE delivery URLs', () => {
+    expect(MUSIC_IDS).toHaveLength(16); expect(SOUND_IDS).toHaveLength(19);
+    for (const [id, path] of Object.entries(AUDIO_CATALOG)) { const url = new URL(path, 'http://localhost'); expect(url.pathname).toBe(`/audio/v2/${id}.wav`); if (id.startsWith('bgm-')) expect(url.searchParams.get('v')).toMatch(/^[0-9a-f]{12}$/); };
   });
   it('does not construct context or fetch before enable, and resumes before requesting media', async () => {
-    const b = backend(); b.audio.setCue('bgm-tactics'); b.audio.playSE('se-ui');
+    const b = backend(); b.audio.setCue('bgm-b01'); b.audio.playSE('se-ui');
     expect(b.createContext).not.toHaveBeenCalled(); expect(b.fetcher).not.toHaveBeenCalled();
     const enabling = b.audio.enable();
     expect(b.context.resume).toHaveBeenCalledOnce(); expect(b.fetcher).not.toHaveBeenCalled();
     await enabling; await tick();
     expect(b.audio.status.enabled).toBe(true); expect(b.sources[0].loop).toBe(true);
-    expect(b.audio.status.activeCue).toBe('bgm-tactics');
+    expect(b.audio.status.activeCue).toBe('bgm-b01');
+    expect(b.fetcher.mock.calls[0][1]).toMatchObject({ cache: 'no-store' });
   });
   it('enable resolves without waiting for decode and concurrent enables share resume', async () => {
     const b = backend(); const pending = deferred<AudioBuffer>(); b.context.decodeAudioData.mockReturnValue(pending.promise);
-    b.audio.setCue('bgm-tactics'); const first = b.audio.enable(); const second = b.audio.enable();
+    b.audio.setCue('bgm-b01'); const first = b.audio.enable(); const second = b.audio.enable();
     expect(first).toBe(second); await first; await tick(); expect(b.sources).toHaveLength(0);
     pending.resolve({} as AudioBuffer); await tick(); expect(b.sources).toHaveLength(1);
   });
@@ -57,7 +58,7 @@ describe('memory-only gesture unlocked audio', () => {
     const b = backend(); await b.audio.enable(); b.audio.setCue('bgm-briefing'); await tick();
     b.audio.setCue('bgm-briefing'); await tick(); expect(b.sources).toHaveLength(1);
     const pending = deferred<Response>(); b.fetcher.mockReturnValueOnce(pending.promise);
-    b.audio.setCue('bgm-tactics'); b.audio.setCue('bgm-ending'); await tick();
+    b.audio.setCue('bgm-b01'); b.audio.setCue('bgm-ending'); await tick();
     expect(b.sources[0].stop).toHaveBeenCalledWith(1.3);
     pending.resolve({ ok: true, arrayBuffer: async () => waveHeader() } as Response); await tick();
     expect(b.sources).toHaveLength(2); expect(b.audio.status.activeCue).toBe('bgm-ending');
@@ -65,21 +66,21 @@ describe('memory-only gesture unlocked audio', () => {
   it.each(['mute', 'hide', 'dispose'] as const)('rejects late BGM/SE after %s', async mode => {
     const b = backend(); await b.audio.enable();
     const pending = deferred<AudioBuffer>(); b.context.decodeAudioData.mockReturnValue(pending.promise);
-    b.audio.setCue('bgm-tactics'); b.audio.playSE('se-ui'); await tick();
+    b.audio.setCue('bgm-b01'); b.audio.playSE('se-ui'); await tick();
     if (mode === 'mute') b.audio.setMuted(true);
     else if (mode === 'hide') b.audio.setHidden(true);
     else b.audio.dispose();
     pending.resolve({} as AudioBuffer); await tick(); expect(b.sources).toHaveLength(0);
   });
   it('hidden stops music and SE immediately and returns to the requested cue only', async () => {
-    const b = backend(); await b.audio.enable(); b.audio.setCue('bgm-tactics'); b.audio.playSE('se-ui'); await tick();
+    const b = backend(); await b.audio.enable(); b.audio.setCue('bgm-b01'); b.audio.playSE('se-ui'); await tick();
     expect(b.sources).toHaveLength(2); b.audio.setHidden(true);
     for (const source of b.sources) expect(source.stop).toHaveBeenCalled();
     b.audio.playSE('se-impact'); b.audio.setCue('bgm-ending'); await tick(); expect(b.sources).toHaveLength(2);
     b.audio.setHidden(false); await tick(); expect(b.sources).toHaveLength(3); expect(b.audio.status.activeCue).toBe('bgm-ending');
   });
   it('mute blocks new sound and unmute restarts music using cached audio', async () => {
-    const b = backend(); await b.audio.enable(); b.audio.setCue('bgm-tactics'); await tick();
+    const b = backend(); await b.audio.enable(); b.audio.setCue('bgm-b01'); await tick();
     b.audio.setMuted(true); b.audio.playSE('se-ui'); await tick(); expect(b.sources).toHaveLength(1);
     b.audio.setMuted(false); await tick(); expect(b.sources).toHaveLength(2); expect(b.fetcher).toHaveBeenCalledTimes(1);
   });
@@ -87,14 +88,14 @@ describe('memory-only gesture unlocked audio', () => {
     const b = backend(); await b.audio.enable(); b.audio.playSE('se-ui'); b.audio.playSE('se-ui'); await tick();
     expect(b.sources).toHaveLength(1); expect(b.fetcher).toHaveBeenCalledTimes(1);
     b.audio.playSE('se-ui'); await tick(); expect(b.sources).toHaveLength(1);
-    b.advance(80); b.audio.playSE('se-ui'); b.audio.playSE('se-move'); b.audio.playSE('se-impact'); await tick();
+    b.advance(80); b.audio.playSE('se-ui'); b.audio.playSE('se-cart'); b.audio.playSE('se-impact'); await tick();
     expect(b.sources).toHaveLength(3);
     b.sources[0].onended!(); expect(b.sources[0].disconnect).toHaveBeenCalledOnce(); expect(b.gains[0].disconnect).toHaveBeenCalledOnce();
     b.advance(80); b.audio.playSE('se-impact'); await tick(); expect(b.sources).toHaveLength(4);
   });
   it('reports failed fetch, evicts cache, and permits an explicit enable retry', async () => {
     const b = backend(); b.fetcher.mockResolvedValueOnce({ ok: false, status: 404 });
-    b.audio.setCue('bgm-tactics'); await b.audio.enable(); await tick();
+    b.audio.setCue('bgm-b01'); await b.audio.enable(); await tick();
     expect(b.audio.status.error).toContain('404'); expect(b.sources).toHaveLength(0);
     await b.audio.enable(); await tick(); expect(b.fetcher).toHaveBeenCalledTimes(2); expect(b.sources).toHaveLength(1);
     expect(b.audio.status.error).toBeNull();
@@ -115,13 +116,13 @@ describe('memory-only gesture unlocked audio', () => {
   it('does not resurrect pre-hide requests after returning before decode completes', async () => {
     const b = backend(); await b.audio.enable();
     const pending = deferred<AudioBuffer>(); b.context.decodeAudioData.mockReturnValue(pending.promise);
-    b.audio.setCue('bgm-tactics'); b.audio.playSE('se-ui'); await tick();
+    b.audio.setCue('bgm-b01'); b.audio.playSE('se-ui'); await tick();
     b.audio.setHidden(true); b.audio.setHidden(false);
     pending.resolve({} as AudioBuffer); await tick();
     expect(b.sources).toHaveLength(1); expect(b.sources[0].loop).toBe(true);
   });
-  it.each(['bgm-tactics', 'bgm-ending'] as const)('discards old delayed SE across beginScene(%s), allows new scene SE', async nextCue => {
-    const b = backend(); await b.audio.enable(); b.audio.setCue('bgm-tactics'); await tick();
+  it.each(['bgm-b01', 'bgm-ending'] as const)('discards old delayed SE across beginScene(%s), allows new scene SE', async nextCue => {
+    const b = backend(); await b.audio.enable(); b.audio.setCue('bgm-b01'); await tick();
     const pending = deferred<AudioBuffer>(); b.context.decodeAudioData.mockReturnValueOnce(pending.promise);
     b.audio.playSE('se-impact'); await tick();
     b.audio.beginScene(nextCue); await tick();
@@ -129,7 +130,7 @@ describe('memory-only gesture unlocked audio', () => {
     expect(b.sources.filter(source => !source.loop)).toHaveLength(0);
     b.audio.playSE('se-impact'); await tick();
     expect(b.sources.filter(source => !source.loop)).toHaveLength(1);
-    if (nextCue === 'bgm-tactics') {
+    if (nextCue === 'bgm-b01') {
       expect(b.sources.filter(source => source.loop)).toHaveLength(1);
       expect(b.sources[0].stop).not.toHaveBeenCalled();
     }
@@ -144,25 +145,25 @@ describe('memory-only gesture unlocked audio', () => {
     b.audio.playSE('se-victory'); await tick(); expect(b.sources).toHaveLength(1);
   });
   it('beginScene stops live SE, resets its cooldown and preserves a playing same-cue BGM', async () => {
-    const b = backend(); await b.audio.enable(); b.audio.setCue('bgm-tactics'); b.audio.playSE('se-impact'); await tick();
+    const b = backend(); await b.audio.enable(); b.audio.setCue('bgm-b01'); b.audio.playSE('se-impact'); await tick();
     const oldSE = b.sources.find(source => !source.loop)!;
-    b.audio.beginScene('bgm-tactics'); b.audio.playSE('se-victory'); await tick();
+    b.audio.beginScene('bgm-b01'); b.audio.playSE('se-victory'); await tick();
     expect(oldSE.stop).toHaveBeenCalled(); expect(oldSE.disconnect).toHaveBeenCalledOnce();
     expect(b.sources[0].stop).not.toHaveBeenCalled();
     expect(b.sources.filter(source => !source.loop && source.disconnect.mock.calls.length === 0)).toHaveLength(1);
-    b.audio.beginScene('bgm-tactics'); b.audio.playSE('se-victory'); await tick();
+    b.audio.beginScene('bgm-b01'); b.audio.playSE('se-victory'); await tick();
     expect(b.sources.filter(source => !source.loop && source.disconnect.mock.calls.length === 0)).toHaveLength(1);
   });
   it('reattaches same-cue pending music to the new scene without duplicating sources', async () => {
     const b = backend(); await b.audio.enable();
     const pending = deferred<AudioBuffer>(); b.context.decodeAudioData.mockReturnValueOnce(pending.promise);
-    b.audio.beginScene('bgm-tactics'); await tick(); b.audio.beginScene('bgm-tactics');
+    b.audio.beginScene('bgm-b01'); await tick(); b.audio.beginScene('bgm-b01');
     pending.resolve({} as AudioBuffer); await tick();
-    expect(b.sources).toHaveLength(1); expect(b.audio.status.activeCue).toBe('bgm-tactics');
+    expect(b.sources).toHaveLength(1); expect(b.audio.status.activeCue).toBe('bgm-b01');
   });
   it('rapid BGM changes keep at most two connected music voices with fixed mix headroom', async () => {
     const b = backend(); await b.audio.enable(); b.audio.setVolumes({ bgm: 1, se: 1 });
-    for (const cue of ['bgm-tactics', 'bgm-briefing', 'bgm-ending', 'bgm-tactics', 'bgm-ending'] as const) {
+    for (const cue of ['bgm-b01', 'bgm-briefing', 'bgm-ending', 'bgm-b01', 'bgm-ending'] as const) {
       b.audio.beginScene(cue); await tick();
       expect(b.sources.filter(source => source.loop && source.disconnect.mock.calls.length === 0).length).toBeLessThanOrEqual(2);
     }
@@ -178,7 +179,7 @@ describe('memory-only gesture unlocked audio', () => {
     const b = backend(); b.audio.setVolumes({ bgm: 2, se: -1 }); expect(b.audio.status.bgm).toBe(1); expect(b.audio.status.se).toBe(0);
     b.audio.setVolumes({ bgm: NaN }); expect(b.audio.status.bgm).toBe(1);
     const copy = b.audio.status; copy.enabled = true; expect(b.audio.status.enabled).toBe(false);
-    await b.audio.enable(); b.audio.setCue('bgm-tactics'); b.audio.playSE('se-ui'); await tick();
+    await b.audio.enable(); b.audio.setCue('bgm-b01'); b.audio.playSE('se-ui'); await tick();
     b.audio.setVolumes({ bgm: 0.25, se: 0.75 }); expect(b.gains[0].gain.linearRampToValueAtTime).toHaveBeenLastCalledWith(0.25 * AUDIO_HEADROOM, 1.03);
     b.audio.dispose(); b.audio.dispose(); expect(b.context.close).toHaveBeenCalledOnce();
     for (const source of b.sources) { expect(source.stop).toHaveBeenCalled(); expect(source.onended).toBeNull(); expect(source.disconnect).toHaveBeenCalledOnce(); }
@@ -194,12 +195,12 @@ describe('memory-only gesture unlocked audio', () => {
     expect(b.audio.status.enabled).toBe(true); expect(b.audio.status.activeCue).toBe('bgm-briefing');
   });
   it('observes interruption, stops old voices, blocks SE and resumes the selected BGM on a new user action', async () => {
-    const b = backend(); b.audio.setCue('bgm-tactics'); await b.audio.enable(); await tick();
+    const b = backend(); b.audio.setCue('bgm-b01'); await b.audio.enable(); await tick();
     b.context.state = 'interrupted'; b.context.onstatechange!();
     expect(b.audio.status.contextState).toBe('interrupted'); expect(b.audio.status.activeCue).toBeNull();
     expect(b.sources[0].stop).toHaveBeenCalled(); b.audio.playSE('se-impact'); await tick(); expect(b.sources).toHaveLength(1);
     b.context.resume.mockImplementationOnce(() => { b.context.state = 'running'; b.context.onstatechange!(); return Promise.resolve(); });
-    await b.audio.enable(); await tick(); expect(b.sources).toHaveLength(2); expect(b.audio.status.activeCue).toBe('bgm-tactics');
+    await b.audio.enable(); await tick(); expect(b.sources).toHaveLength(2); expect(b.audio.status.activeCue).toBe('bgm-b01');
     b.audio.dispose(); expect(b.context.onstatechange).toBeNull();
   });
   it('times out a never-resolving resume, permits retry and ignores the old late resolution', async () => {
@@ -218,8 +219,8 @@ describe('memory-only gesture unlocked audio', () => {
     vi.useFakeTimers();
     try {
       const b = backend(); const pending = deferred<Response>(); b.fetcher.mockReturnValueOnce(pending.promise);
-      b.audio.setCue('bgm-tactics'); await b.audio.enable(); await tick();
-      expect(b.audio.status.loadingCue).toBe('bgm-tactics');
+      b.audio.setCue('bgm-b01'); await b.audio.enable(); await tick();
+      expect(b.audio.status.loadingCue).toBe('bgm-b01');
       await vi.advanceTimersByTimeAsync(12001);
       expect(b.audio.status.loadingCue).toBeNull(); expect(b.audio.status.error).toContain('読み込みが完了しません');
       expect(b.fetcher.mock.calls[0][1].signal.aborted).toBe(true);
@@ -237,10 +238,29 @@ describe('memory-only gesture unlocked audio', () => {
   it('recreates a closed context on an explicit action and exposes current runtime/time for a stale-page check', async () => {
     const b = backend(); await b.audio.enable(); b.context.state = 'closed'; b.context.onstatechange!();
     const fresh = backend(); b.createContext.mockReturnValueOnce(fresh.context as unknown as AudioContext);
-    b.audio.setCue('bgm-tactics'); await b.audio.enable(); await tick();
+    b.audio.setCue('bgm-b01'); await b.audio.enable(); await tick();
     expect(b.createContext).toHaveBeenCalledTimes(2); expect(b.audio.status.contextState).toBe('running');
-    expect(b.audio.status.version).toBe('audio-v1-r2'); fresh.context.currentTime = 8.5;
+    expect(b.audio.status.version).toBe('audio-v2-r2'); fresh.context.currentTime = 8.5;
     expect(b.audio.status.contextTime).toBe(8.5); expect(fresh.sources).toHaveLength(1); b.audio.dispose();
   });
 
+});
+
+
+describe('scheduled combat sequence', () => {
+  it('schedules attacks then impact on the audio clock, respecting the three voice cap', async () => {
+    const b = backend(); await b.audio.enable();
+    b.audio.playSESequence([{id:'se-arrow',delayMs:0},{id:'se-impact',delayMs:180},{id:'se-down',delayMs:340},{id:'se-ui',delayMs:400}]);
+    await tick(); expect(b.sources).toHaveLength(3);
+    expect(b.sources[0].start).toHaveBeenCalledWith(1);
+    expect(b.sources[1].start).toHaveBeenCalledWith(1.18);
+    expect(b.sources[2].start).toHaveBeenCalledWith(1.34);
+    b.audio.beginScene('bgm-b02'); for (const source of b.sources.slice(0,3)) expect(source.stop).toHaveBeenCalled();
+  });
+  it('rejects a delayed group after a scene boundary and rejects invalid delay', async () => {
+    const b=backend(); await b.audio.enable(); const pending=deferred<AudioBuffer>(); b.context.decodeAudioData.mockReturnValue(pending.promise);
+    b.audio.playSESequence([{id:'se-arrow',delayMs:0},{id:'se-impact',delayMs:180}]); await tick();
+    b.audio.beginScene(null); pending.resolve({} as AudioBuffer); await tick(); expect(b.sources).toHaveLength(0);
+    b.audio.playSESequence([{id:'se-ui',delayMs:NaN}]); await tick(); expect(b.sources).toHaveLength(0);
+  });
 });

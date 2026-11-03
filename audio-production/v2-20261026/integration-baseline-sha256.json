@@ -1,0 +1,9 @@
+{
+  "src/audio-cues.ts": "5cb6c8180e7bbe7a9ae244eda6779e8b2f4d55c1b0ee478f0d291dc14281824a",
+  "src/audio-events.ts": "e25f48a6fd063b2e46adadd30d764f6becee22cc0058339a8479e485fb7bdc5f",
+  "src/audio.ts": "da0b5587f5e2176baf77abf779342b5c02fdc1fce58c34c3629884cbe7d3a551",
+  "src/main.ts": "0b97e511d2e1d6ae9b1b11b4cff7c2eafde53a583f5906bc746f9be961161f56",
+  "tests/audio.test.ts": "e659aa9f9eb8ab5f0d1964c5e1dc20cfc9782a57c12f9d8503a9d32deb97af44",
+  "tests/audio-events.test.ts": "a483f2a4007342ed9bb1d551a2bea4d979dd9aa0234c4ddad4e633939c268c5e",
+  "tests/combat-presentation.test.ts": "cd5ee8ac96de4f3bfef5f0e2905b8996801ebf565091d5efc1d1ef80a2ae4e96"
+}

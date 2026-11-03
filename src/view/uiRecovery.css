@@ -1,0 +1,51 @@
+/* Commands retain a visible commit/cancel row, even when a long explanation scrolls. */
+.veil{z-index:1200;padding:16px}
+.dialog{display:flex;flex-direction:column;max-height:calc(100dvh - 32px);overflow:hidden;padding:24px;min-height:0}
+.dialog>h2,.dialog>.eyebrow,.dialog>.dialog-actions{flex:none}
+.dialog h2{font-size:clamp(20px,3vw,28px);margin:0 0 12px;overflow-wrap:anywhere}
+.dialog-body{min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.dialog-actions{margin-top:16px;gap:12px;padding-top:12px;border-top:1px solid #9c9d7b}
+body .dialog .dialog-actions button{min-height:46px;min-width:0;flex:1;white-space:normal}
+body[data-ui-notebook="true"] .dialog .dialog-actions button.primary:hover:enabled{background:#f0dfa9;color:#21382d}
+.dialog.preparation-dialog{width:min(780px,100%)}
+.command-confirmation{width:min(620px,100%)}
+.command-confirmation .dialog-body{font-size:14px;line-height:1.6}
+.command-confirmation .dialog-body p{margin:8px 0}
+.command-confirmation .eyebrow{display:none}
+.command-confirmation .forecast-key{font-size:11px}
+body[data-ui-notebook="true"] .notebook-context{min-height:42px;height:auto;flex-wrap:wrap;gap:4px 14px;padding:6px 18px}
+body[data-ui-notebook="true"] .notebook-brief{flex:1 1 350px;white-space:normal;text-overflow:clip;font-size:12px;line-height:1.5}
+body[data-ui-notebook="true"] .notebook-context .turn-banner{margin-left:auto}
+body[data-ui-notebook="true"] .masthead .game-title p{margin:1px 0 0;font-size:10px;letter-spacing:.12em}
+body[data-ui-notebook="true"] .notebook-primary-actions .attack-availability,
+body[data-ui-notebook="true"] .notebook-primary-actions .acting-command-label{grid-column:1/-1;font-size:12px;line-height:1.5;margin:0;color:#ecdfbf}
+body[data-ui-notebook="true"] .notebook-primary-actions .attack-availability{padding:6px 8px;border-left:2px solid #bfa66e;background:#213b32}
+body[data-ui-notebook="true"] .notebook-target-options button{min-height:44px;white-space:normal;text-align:left}
+body[data-ui-notebook="true"] .notebook-target-options button:disabled{opacity:.65}
+body[data-ui-notebook="true"] .map-note{max-width:calc(100% - 16px);padding:5px 8px;line-height:1.5;overflow-wrap:anywhere}
+#equipment-collection-panel[hidden]{display:none!important}
+body[data-ui-notebook="true"] .notebook-primary-actions{--command-paper:#e4d194;--command-ink:#21382d;--command-edge:#c8af6f}
+body[data-ui-notebook="true"] .notebook-primary-actions button{min-height:48px;border:1px solid var(--command-edge);border-radius:3px;background:var(--command-paper);color:var(--command-ink);padding:10px 8px;font-size:12px;line-height:1.4;font-weight:700;letter-spacing:.02em;white-space:normal}
+body[data-ui-notebook="true"] .notebook-primary-actions button:hover:enabled{background:#f4e5b5;color:#152c23;border-color:#ffebad}
+body[data-ui-notebook="true"] .notebook-primary-actions button.selected{background:#fff0bc;color:#152c23;outline:2px solid #fff0bc;outline-offset:1px}
+body[data-ui-notebook="true"] .notebook-primary-actions button:disabled{opacity:1;background:#5b6658;color:#d5ddc9;border-color:#87917c;cursor:not-allowed;font-weight:700}
+.context-control{min-width:0;display:flex;flex-direction:column;gap:5px}
+.context-control button{width:100%}
+.context-reason{font-size:11px;line-height:1.5;margin:0;color:#f3e2b3}
+body[data-ui-notebook="true"] .notebook-primary-actions>.context-control{grid-column:1/-1}
+body[data-ui-notebook="true"] .notebook-target-options{max-height:210px;flex:none}
+body[data-ui-notebook="true"] .notebook-target-options .attack-target-button:disabled{opacity:1}
+.facing-selection{padding:10px 12px;margin:8px 0 14px;background:#183d32;color:#fff0b8;font-size:16px;font-weight:700;border-left:5px solid #b58b34}
+.dialog .facing-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+body[data-ui-notebook="true"] .dialog .facing-grid button{min-height:60px;font-size:16px;font-weight:700;letter-spacing:.02em}
+body[data-ui-notebook="true"] .dialog .facing-grid button[aria-pressed=true]{background:#173b30;color:#fff0ad;border-color:#c7a64c;outline:3px solid #c7a64c;outline-offset:-3px;box-shadow:inset 0 0 0 5px #173b30}
+body[data-ui-notebook="true"] .dialog .facing-grid button[aria-pressed=false]{background:#e4dcc0;color:#244338;border-color:#7d876f}
+@media(max-width:700px){
+ .veil{padding:8px}
+ .dialog{max-height:calc(100dvh - 16px);padding:16px}
+ .dialog-actions{margin-top:10px;padding-top:10px}
+ body[data-ui-notebook="true"] .notebook-context{padding:6px 12px}
+ body[data-ui-notebook="true"] .notebook-context .turn-banner{margin:0;white-space:normal;flex-wrap:wrap}
+ body[data-ui-notebook="true"] .masthead{padding:0 12px;gap:8px}
+ body[data-ui-notebook="true"] .masthead h1{font-size:21px}
+}

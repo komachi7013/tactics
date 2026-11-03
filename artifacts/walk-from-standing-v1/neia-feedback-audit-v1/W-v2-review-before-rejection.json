@@ -1,0 +1,65 @@
+{
+  "status": "再生成W：確認待ちの比較候補",
+  "inputImageCount": 1,
+  "inputDirection": "W",
+  "referenceVideoCount": 0,
+  "motionRequirementCount": 6,
+  "equipmentInstructionsIncluded": false,
+  "frames": 19,
+  "cycleMs": 800,
+  "nativeFullCycleSeconds": 4.0,
+  "retimeSpeedMultiplier": 5.0,
+  "all19FramesViewedOnLight": true,
+  "all19FramesViewedOnDark": true,
+  "facingRetainedInAllSelectedFrames": true,
+  "fullBodyAndBothSolesInsideSelectedFrames": true,
+  "nativeCanvasEdgePixels": 0,
+  "contactReview": {
+    "videoSha256": "5fb71b7117251fe5cce32d28710d27650ec23804eb0f749ef0d7d626a0285195",
+    "visualReviewed": true,
+    "contacts": [
+      {
+        "frame": 0,
+        "foot": "L"
+      },
+      {
+        "frame": 48,
+        "foot": "R"
+      },
+      {
+        "frame": 96,
+        "foot": "L"
+      }
+    ],
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 4,
+    "reviewNote": "New W take is slow: near anatomical L supports at0, far R swings ahead upper-left through20..40; R supports around48, near L advances visibly upper-left64..80 and returns to support96. Full two-step interval0..96 spans4seconds; do not take half-cycle as complete gait. Approximate support phases +/-4frames, not motion capture. Pink background removed with scoped profile. Needs19-frame visual review before adoption."
+  },
+  "selectedOutputSeamReviewed": true,
+  "automaticGaitLoopStatus": "no period in configured12..38 source-frame range; manual full96-frame two-step interval reviewed",
+  "issues": [
+    "左足の前方振り出しを原動画64〜80コマで確認した再生成候補。左右2歩の約4秒を0.8秒に短縮。自動周期判定は未通過。"
+  ],
+  "gameApplied": false,
+  "userApproved": false,
+  "referenceMotionReady": true,
+  "art_source": "Higgsfield / Seedance 2.5 image-to-video",
+  "generationCountThisRequest": 1,
+  "quotedCreditsThisRequest": 28,
+  "headCentroidRangePx": [
+    0.06302983998770628,
+    0.551247698860351
+  ],
+  "footRegionSeamOverMedianStep": 1.5013322464473426,
+  "headTopRangePx": [
+    98,
+    99
+  ],
+  "groundRangePx": [
+    271,
+    284
+  ],
+  "clarifiedMotionRequirements": true,
+  "previousTakePreserved": true,
+  "footForwardSwingReview": "near L advances along upper-left facing direction in native64..80, individually inspected44..96; not automatic gait certification"
+}

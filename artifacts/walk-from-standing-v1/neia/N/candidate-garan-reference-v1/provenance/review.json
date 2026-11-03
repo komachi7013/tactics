@@ -1,0 +1,67 @@
+{
+  "status": "N：ガランN動画参照・比較ページ反映済み",
+  "inputImageCount": 1,
+  "inputDirection": "N",
+  "referenceVideoCount": 1,
+  "motionRequirementCount": 6,
+  "equipmentInstructionsIncluded": false,
+  "frames": 19,
+  "cycleMs": 800,
+  "nativeFullCycleSeconds": 0.8333333333333334,
+  "retimeSpeedMultiplier": 1.0416666666666667,
+  "all19FramesViewedOnLight": true,
+  "all19FramesViewedOnDark": true,
+  "facingRetainedInAllSelectedFrames": true,
+  "fullBodyAndBothSolesInsideSelectedFrames": true,
+  "nativeCanvasEdgePixels": 0,
+  "contactReview": {
+    "videoSha256": "275e946c7390d435bf4a7b2c1818feacd8a5f2df28b0d6e17b6bd9fb907dee4a",
+    "visualReviewed": true,
+    "contacts": [
+      {
+        "frame": 38,
+        "foot": "R"
+      },
+      {
+        "frame": 48,
+        "foot": "L"
+      },
+      {
+        "frame": 58,
+        "foot": "R"
+      }
+    ],
+    "framesDirectory": "keyed-reviewed/frames-clean",
+    "estimatedContactUncertaintyFrames": 2,
+    "reviewNote": "Seedance2.5 image+same-direction Garan N video. Near anatomical R(image-right) supports38/58 while far L passes; far L supports48 with near R advanced. Native feet every2frames through96 inspected including full soles to960. Approximate support phases +/-2frames;20frames at24fps ->19frames800ms. User specifically requests this N proposal be shown on comparison page, not certified as final."
+  },
+  "selectedOutputSeamReviewed": true,
+  "automaticGaitLoopStatus": "automatic selection27:65 at low confidence; user requested this proposal applied; manual R38-L48-R58 used",
+  "issues": [
+    "ガランN動画を動作参照にした今回案。原動画約0.83秒の左右2歩を19フレーム・0.8秒に調整。自動探索は低信頼。"
+  ],
+  "gameApplied": false,
+  "userApproved": false,
+  "referenceMotionReady": true,
+  "art_source": "Higgsfield / Seedance 2.5 image + video reference",
+  "generationCountThisRequest": 1,
+  "quotedCreditsThisRequest": 28,
+  "headCentroidRangePx": [
+    2.473554064553099,
+    1.3600972311280088
+  ],
+  "footRegionSeamOverMedianStep": 0.5473408946444838,
+  "headTopRangePx": [
+    96,
+    98
+  ],
+  "groundRangePx": [
+    270,
+    284
+  ],
+  "drivingCast": "garan",
+  "drivingDirection": "N",
+  "appearanceSource": "own standing image",
+  "motionSource": "same-direction reference video",
+  "comparisonApplicationRequestedByUser": true
+}

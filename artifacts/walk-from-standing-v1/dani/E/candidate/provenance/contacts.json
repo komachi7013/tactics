@@ -1,0 +1,21 @@
+{
+  "videoSha256": "787610aaf30d60a7743a8fb6fba4f98c5937c035cce5bfeaceb5b2c1ea3cf75a",
+  "visualReviewed": true,
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "contacts": [
+    {
+      "frame": 38,
+      "foot": "R"
+    },
+    {
+      "frame": 48,
+      "foot": "L"
+    },
+    {
+      "frame": 58,
+      "foot": "R"
+    }
+  ],
+  "reviewNote": "Dani E palette brown/ochre/teal with no purple garment reviewed. Source and feet sheets show near image-left R38/58 then far L48 support, small alternating strides. Both arms remain lowered without large elbow bend; full soles and direction retained. Garan E driver. Estimated support phases, not motion capture."
+}

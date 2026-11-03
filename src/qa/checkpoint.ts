@@ -3,15 +3,15 @@ import { createInitialState, reduce } from '../domain/engine';
 import { runEnemyActivation } from '../domain/ai';
 import type { BattleId, Command } from '../domain/types';
 import b01 from '../../tests/fixtures/routes.json';
-import b02 from '../../tests/fixtures/b02-route.json';
-import b03 from '../../tests/fixtures/b03-route.json';
-import b04 from '../../tests/fixtures/b04-route.json';
-import b05 from '../../tests/fixtures/b05-route.json';
-import b06 from '../../tests/fixtures/b06-route.json';
-import b07 from '../../tests/fixtures/b07-route.json';
-import b08 from '../../tests/fixtures/b08-route.json';
-import b09 from '../../tests/fixtures/b09-route.json';
-import b10 from '../../tests/fixtures/b10-route.json';
+import b02 from '../../tests/fixtures/defend-cooldown-v1/b02-route.json';
+import b03 from '../../tests/fixtures/manual-cart-v1/b03-route.json';
+import b04 from '../../tests/fixtures/defend-cooldown-v1/b04-route.json';
+import b05 from '../../tests/fixtures/defend-cooldown-v1/b05-route.json';
+import b06 from '../../tests/fixtures/defend-cooldown-v1/b06-route.json';
+import b07 from '../../tests/fixtures/defend-cooldown-v1/b07-route.json';
+import b08 from '../../tests/fixtures/defend-cooldown-v1/b08-route.json';
+import b09 from '../../tests/fixtures/defend-cooldown-v1/b09-route.json';
+import b10 from '../../tests/fixtures/defend-cooldown-v1/b10-route.json';
 
 // Test preparation only: replay the checked-in player commands and real AI in
 // memory. These are not browser-play results. B05 and B06 remain uncompleted.

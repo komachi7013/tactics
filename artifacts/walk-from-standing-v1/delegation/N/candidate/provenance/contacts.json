@@ -1,0 +1,21 @@
+{
+  "videoSha256": "7855e0bb83a7489f9e395677a419fc435904f8e6c88632fd94eec12a7f4f37d2",
+  "visualReviewed": true,
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "contacts": [
+    {
+      "frame": 38,
+      "foot": "R"
+    },
+    {
+      "frame": 48,
+      "foot": "L"
+    },
+    {
+      "frame": 58,
+      "foot": "R"
+    }
+  ],
+  "reviewNote": "Delegation N source/full feet sheets reviewed. Near image-right R38/58 and far L48 support alternate, both feet take turns passing. Hair back, brown coat/scarf/pouch and facing held; low torso motion. Fullbody and soles inside. Garan N driver. Estimated support phases, not motion capture."
+}

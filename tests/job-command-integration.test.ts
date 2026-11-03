@@ -1,8 +1,9 @@
+import { setMainJob, learnSkill, equipSupport } from './fixtures/legacy-preparation';
 import surveyRoute from './fixtures/progression-v2/b01-survey-route.json';
 import {describe,it,expect} from 'vitest';
-import {applyJobs,createJobs,setMainJob,learnSkill,equipSupport} from '../src/jobs';
+import {applyJobs, createJobs} from '../src/jobs';
 import {createPartyBattle} from '../src/party';
-import {createGrowth,awardFirstClear,defaultParty} from '../src/progression';
+import {createGrowth, awardFirstClear, defaultParty} from '../src/progression';
 import {CAMPAIGN_KEY,createCampaign,readCampaign,writeCampaign,completeBattle,type StorageLike} from '../src/campaign';
 import {attackPreview,reduce,reachable} from '../src/domain/engine';
 import {runEnemyActivation} from '../src/domain/ai';
@@ -22,19 +23,19 @@ describe('main-job deployment, battle effects and save compatibility',()=>{
   const restored=readCampaign(store).campaign;
   for(let attempt=0;attempt<2;attempt++){const fresh=createPartyBattle('B01',defaultParty('B01'),restored.jobs!);expect(fresh.units.find(u=>u.id==='ally-lise')).toMatchObject({jobCommand:'survey',surveyCharges:2});expect(fresh.units.every(u=>u.surveyBonus===undefined&&u.protection===undefined)).toBe(true);}
  });
- it('clears stale active powers and buffs when changing main while retaining learned cross-job support',()=>{
+ it('clears temporary powers but ignores archived main/support fields and retains the fixed surveyor',()=>{
   let growth=createGrowth();for(const id of ['B01','B02','B03'] as const)growth=awardFirstClear(growth,id,defaultParty(id));
   let jobs=learnSkill(createJobs(),growth,'ally-lise','surveyor-practice','B04');jobs=setMainJob(jobs,'ally-lise','warden','B04');jobs=equipSupport(jobs,'ally-lise','surveyor-practice');
   const stale=opening().units.find(u=>u.id==='ally-lise')!;stale.surveyBonus=true;stale.protection={sourceId:'ally-garan'};stale.healCharges=99;const before=structuredClone(stale),ward=applyJobs(stale,jobs);
-  expect(stale).toEqual(before);expect(ward).toMatchObject({jobCommand:'protect',move:5});expect(ward.surveyCharges).toBeUndefined();expect(ward.surveyBonus).toBeUndefined();expect(ward.protection).toBeUndefined();expect(ward.healCharges).toBeUndefined();
+  expect(stale).toEqual(before);expect(ward).toMatchObject({jobCommand:'survey',surveyCharges:2,move:4});expect(ward.surveyBonus).toBeUndefined();expect(ward.protection).toBeUndefined();expect(ward.healCharges).toBeUndefined();
   jobs=setMainJob(jobs,'ally-lise','surveyor','B04');expect(applyJobs(ward,jobs)).toMatchObject({jobCommand:'survey',surveyCharges:2});
  });
- it('restores healer allowance only for healer main; learned healer support grants no active heal',()=>{
+ it('restores Sena’s fixed healer allowance even when archived history says warden/support',()=>{
   const base=createPartyBattle('B03',defaultParty('B03'),createJobs()).units.find(u=>u.id==='ally-sena')!;
   const depleted={...base,healCharges:0,surveyBonus:true,jobCommand:'survey' as const,surveyCharges:1,protection:{sourceId:'ally-garan'}};
   let growth=createGrowth();for(const id of ['B01','B02','B03'] as const)growth=awardFirstClear(growth,id,defaultParty(id));
   let jobs=learnSkill(createJobs(),growth,'ally-sena','healer-foundation','B04');jobs=setMainJob(jobs,'ally-sena','warden','B04');jobs=equipSupport(jobs,'ally-sena','healer-foundation');
-  expect(applyJobs(depleted,createJobs())).toMatchObject({healCharges:2});const ward=applyJobs(depleted,jobs);expect(ward).toMatchObject({jobCommand:'protect',maxHp:26});expect(ward.healCharges).toBeUndefined();
+  expect(applyJobs(depleted,createJobs())).toMatchObject({healCharges:2});const ward=applyJobs(depleted,jobs);expect(ward).toMatchObject({maxHp:16,healCharges:2});expect(ward.jobCommand).toBeUndefined();
   expect(applyJobs(ward,createJobs()).healCharges).toBe(2);
  });
  it('lets an out-of-range surveyor support the next ranged attack without moving enemies or weakening AI',()=>{

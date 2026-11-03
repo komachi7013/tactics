@@ -1,0 +1,36 @@
+{
+  "jobs": [
+    {
+      "index": 0,
+      "job_id": "b11e7a68-a438-4bb1-835a-b142d5e38ee6",
+      "status": "completed",
+      "type": "video",
+      "model": "kling3_0",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_35yB2lTunBji45t5dLJHkeWOEze/hf_20261102_014028_b11e7a68-a438-4bb1-835a-b142d5e38ee6.mp4"
+    },
+    {
+      "index": 2,
+      "job_id": "9ef598ad-d663-4ce7-84df-cb7fd97907ab",
+      "status": "completed",
+      "type": "video",
+      "model": "kling3_0",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_35yB2lTunBji45t5dLJHkeWOEze/hf_20261102_014028_9ef598ad-d663-4ce7-84df-cb7fd97907ab.mp4"
+    },
+    {
+      "index": 3,
+      "job_id": "f5e83269-3c33-4945-a43b-824feff28701",
+      "status": "completed",
+      "type": "video",
+      "model": "kling3_0",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_35yB2lTunBji45t5dLJHkeWOEze/hf_20261102_014028_f5e83269-3c33-4945-a43b-824feff28701.mp4"
+    }
+  ],
+  "summary": {
+    "total": 3,
+    "completed": 3,
+    "failed": 0,
+    "active": 0,
+    "errors": 0
+  },
+  "all_terminal": true
+}

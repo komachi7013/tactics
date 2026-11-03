@@ -1,16 +1,66 @@
-import {describe,it,expect} from 'vitest';
-import {createJobs,validJobs,learnSkill,setMainJob,equipSupport,respec,availableTraining,SKILLS,applyJobs} from '../src/jobs';
-import {createGrowth,awardFirstClear,defaultParty,tutor,type Growth} from '../src/progression';
-import {createInitialState} from '../src/domain/engine';
-function earned():Growth {let g=createGrowth();for(const id of ['B01','B02','B03'] as const)g=awardFirstClear(g,id,defaultParty(id));return tutor(g,'ally-sena',['B01','B02','B03']);}
-describe('jobs and one learned cross-job support',()=>{
- it('keeps all six initial identities and zero allocations',()=>{const j=createJobs();expect(validJobs(j,createGrowth())).toBe(true);expect(Object.values(j).map(e=>e.main)).toEqual(['surveyor','warden','scout','healer','engineer','recorder']);expect(SKILLS).toHaveLength(12);});
- it('learns only main-job skills, spends points and rejects duplicate or unaffordable learning',()=>{const g=earned(),j=createJobs(),next=learnSkill(j,g,'ally-lise','surveyor-foundation','B04');expect(availableTraining(next,g,'ally-lise')).toBe(4);expect(j['ally-lise'].learned).toEqual([]);expect(()=>learnSkill(next,g,'ally-lise','surveyor-foundation','B04')).toThrow();expect(()=>learnSkill(j,g,'ally-lise','warden-foundation','B04')).toThrow();expect(()=>learnSkill(j,createGrowth(),'ally-lise','surveyor-foundation','B01')).toThrow();});
- it('requires switching job before equipping a learned support and clears incompatible support on return',()=>{const g=earned();let j=learnSkill(createJobs(),g,'ally-lise','surveyor-foundation','B04');expect(()=>equipSupport(j,'ally-lise','surveyor-foundation')).toThrow();j=setMainJob(j,'ally-lise','warden','B04');j=equipSupport(j,'ally-lise','surveyor-foundation');expect(validJobs(j,g)).toBe(true);expect(()=>equipSupport(j,'ally-lise','scout-foundation')).toThrow();j=setMainJob(j,'ally-lise','surveyor','B04');expect(j['ally-lise'].support).toBeNull();});
- it('supports exactly one skill without losing earlier learning',()=>{const g=earned();let j=learnSkill(createJobs(),g,'ally-lise','surveyor-foundation','B04');j=learnSkill(j,g,'ally-lise','surveyor-practice','B04');j=setMainJob(j,'ally-lise','warden','B04');j=equipSupport(j,'ally-lise','surveyor-foundation');j=equipSupport(j,'ally-lise','surveyor-practice');expect(j['ally-lise'].support).toBe('surveyor-practice');expect(j['ally-lise'].learned).toHaveLength(2);expect(availableTraining(j,g,'ally-lise')).toBe(0);});
- it('respec refunds all allocation at no cost, retains main and clears support idempotently',()=>{const g=earned();let j=learnSkill(createJobs(),g,'ally-lise','surveyor-foundation','B04');j=equipSupport(setMainJob(j,'ally-lise','warden','B04'),'ally-lise','surveyor-foundation');const before=structuredClone(j),r=respec(j,'ally-lise');expect(r['ally-lise']).toEqual({main:'warden',learned:[],support:null});expect(availableTraining(r,g,'ally-lise')).toBe(6);expect(respec(r,'ally-lise')).toEqual(r);expect(j).toEqual(before);});
- it('permits initial-job restoration but limits new switches to first two implemented jobs',()=>{let j=setMainJob(createJobs(),'ally-neia','warden','B04');j=setMainJob(j,'ally-neia','scout','B04');expect(j['ally-neia'].main).toBe('scout');expect(()=>setMainJob(j,'ally-lise','healer','B04')).toThrow();expect(()=>setMainJob(j,'ally-neia','warden','B06')).toThrow();expect(()=>setMainJob(j,'ally-sena','healer','B02')).toThrow();});
- it('rejects learning before introduction and while forcibly absent, irrespective of accumulated funds',()=>{const g=earned();expect(()=>learnSkill(createJobs(),g,'ally-sena','healer-foundation','B02')).toThrow();expect(()=>learnSkill(createJobs(),g,'ally-neia','scout-foundation','B06')).toThrow();expect(()=>learnSkill(createJobs(),g,'ally-lise','surveyor-foundation','B1' as 'B01')).toThrow();expect(()=>setMainJob(createJobs(),'ally-lise','warden','B1' as 'B01')).toThrow();});
- it('validates persistence against overspending, duplicate skills, forged skills and same-job support',()=>{const g=earned();for(const mutate of [(j:ReturnType<typeof createJobs>)=>{j['ally-lise'].learned=['surveyor-foundation','surveyor-foundation'];},(j:ReturnType<typeof createJobs>)=>{j['ally-lise'].support='surveyor-foundation';},(j:ReturnType<typeof createJobs>)=>{j['ally-lise'].main='engineer';},(j:ReturnType<typeof createJobs>)=>{j['ally-lise'].learned=['fake' as never];},(j:ReturnType<typeof createJobs>)=>{j['ally-lise'].learned=new Array(2);},(j:ReturnType<typeof createJobs>)=>{j['ally-lise'].learned=['surveyor-foundation','surveyor-practice','warden-foundation'];}]){const j=createJobs();mutate(j);expect(validJobs(j,g)).toBe(false);}expect(validJobs([],g)).toBe(false);expect(validJobs({},g)).toBe(false);});
- it('applies restrained support bonuses without mutation and removes healer charges when switching',()=>{const g=earned();let j=learnSkill(createJobs(),g,'ally-sena','healer-foundation','B04');j=setMainJob(j,'ally-sena','warden','B04');j=equipSupport(j,'ally-sena','healer-foundation');const u=createInitialState('B03').units.find(u=>u.id==='ally-sena')!,before=structuredClone(u);expect(applyJobs(u,j)).toMatchObject({maxHp:26,hp:26,atk:7,def:3,weapon:'melee',shallowCost:2,role:'堤防衛士'});expect(applyJobs(u,j).healCharges).toBeUndefined();expect(u).toEqual(before);});
+import { describe, it, expect } from 'vitest';
+import { createJobs, validJobs, learnSkill, setMainJob, equipSupport, respec, availableTraining, SKILLS, applyJobs } from '../src/jobs';
+import { createGrowth, awardFirstClear, defaultParty, CHARACTER_IDS, type Growth } from '../src/progression';
+import { createPreparedUnit } from '../src/party';
+import { createInitialState } from '../src/domain/engine';
+import { learnSkill as historicalLearn, setMainJob as historicalJob, equipSupport as historicalSupport, tutor as historicalTutor } from './fixtures/legacy-preparation';
+function earned(): Growth { let growth = createGrowth(); for (const id of ['B01','B02','B03'] as const) growth = awardFirstClear(growth,id,defaultParty(id)); return historicalTutor(growth,'ally-sena',['B01','B02','B03']); }
+
+describe('fixed character roles and archived v2-v4 job allocations', () => {
+  it('retains six initial identities and an empty historical allocation for fresh saves', () => {
+    const jobs=createJobs(); expect(validJobs(jobs,createGrowth())).toBe(true);
+    expect(Object.values(jobs).map(entry=>entry.main)).toEqual(['surveyor','warden','scout','healer','engineer','recorder']);
+    expect(SKILLS).toHaveLength(12); // Retained only to validate old learned IDs/costs.
+  });
+  it('rejects the removed public learning/job/support/respec APIs without changing either ledger', () => {
+    const growth=earned(),jobs=createJobs(),before=structuredClone({growth,jobs});
+    for(const edit of [()=>learnSkill(jobs,growth,'ally-lise','surveyor-foundation','B04'),()=>setMainJob(jobs,'ally-lise','warden','B04'),()=>equipSupport(jobs,'ally-lise',null),()=>respec(jobs,'ally-lise')])expect(edit).toThrow();
+    expect({growth,jobs}).toEqual(before);
+  });
+  it('still validates historically earned/spent points without converting them into live bonuses', () => {
+    const growth=earned(),jobs=historicalLearn(createJobs(),growth,'ally-lise','surveyor-foundation','B04');
+    expect(validJobs(jobs,growth)).toBe(true); expect(availableTraining(jobs,growth,'ally-lise')).toBe(4);
+    expect(createPreparedUnit('ally-lise',jobs,1)).toEqual(createPreparedUnit('ally-lise',createJobs(),1));
+    expect(jobs['ally-lise'].learned).toEqual(['surveyor-foundation']);
+  });
+  it('reads a valid old cross-job support shape but keeps Lise’s fixed role and command', () => {
+    const growth=earned(); let jobs=historicalLearn(createJobs(),growth,'ally-lise','surveyor-foundation','B04');
+    jobs=historicalSupport(historicalJob(jobs,'ally-lise','warden','B04'),'ally-lise','surveyor-foundation');
+    const before=structuredClone(jobs); expect(validJobs(jobs,growth)).toBe(true);
+    expect(createPreparedUnit('ally-lise',jobs,1)).toMatchObject({role:'測量官',maxHp:18,atk:7,def:1,jobCommand:'survey',surveyCharges:2});
+    expect(jobs).toEqual(before);
+  });
+  it('keeps multiple old learned skills and one support as history, with no live move bonus', () => {
+    const growth=earned(); let jobs=historicalLearn(createJobs(),growth,'ally-lise','surveyor-foundation','B04');
+    jobs=historicalLearn(jobs,growth,'ally-lise','surveyor-practice','B04');
+    jobs=historicalSupport(historicalJob(jobs,'ally-lise','warden','B04'),'ally-lise','surveyor-practice');
+    expect(validJobs(jobs,growth)).toBe(true); expect(availableTraining(jobs,growth,'ally-lise')).toBe(0);
+    expect(createPreparedUnit('ally-lise',jobs,1).move).toBe(4);
+    expect(jobs['ally-lise'].learned).toHaveLength(2);
+  });
+  it('does not refund or erase archived allocations when the removed respec API is called', () => {
+    const growth=earned(); let jobs=historicalLearn(createJobs(),growth,'ally-lise','surveyor-foundation','B04');
+    jobs=historicalSupport(historicalJob(jobs,'ally-lise','warden','B04'),'ally-lise','surveyor-foundation');
+    const before=structuredClone(jobs); expect(()=>respec(jobs,'ally-lise')).toThrow();
+    expect(jobs).toEqual(before); expect(availableTraining(jobs,growth,'ally-lise')).toBe(4);
+  });
+  it('uses each character’s initial role even when old saved main fields differ', () => {
+    for(const id of CHARACTER_IDS){const jobs=createJobs();jobs[id].main='warden';
+      expect(createPreparedUnit(id,jobs,3)).toEqual(createPreparedUnit(id,createJobs(),3));}
+    const neia=createPreparedUnit('ally-neia',createJobs(),1); expect(neia).toMatchObject({weapon:'bow',shallowCost:1});
+  });
+  it('continues rejecting malformed, inflated, sparse and duplicate historical job records', () => {
+    const growth=earned();
+    for(const mutate of [(jobs:ReturnType<typeof createJobs>)=>{jobs['ally-lise'].learned=['surveyor-foundation','surveyor-foundation'];},(jobs:ReturnType<typeof createJobs>)=>{jobs['ally-lise'].support='surveyor-foundation';},(jobs:ReturnType<typeof createJobs>)=>{jobs['ally-lise'].main='engineer';},(jobs:ReturnType<typeof createJobs>)=>{jobs['ally-lise'].learned=['fake' as never];},(jobs:ReturnType<typeof createJobs>)=>{jobs['ally-lise'].learned=new Array(2);},(jobs:ReturnType<typeof createJobs>)=>{jobs['ally-lise'].learned=['surveyor-foundation','surveyor-practice','warden-foundation'];}]){const jobs=createJobs();mutate(jobs);expect(validJobs(jobs,growth)).toBe(false);}
+    expect(validJobs([],growth)).toBe(false);expect(validJobs({},growth)).toBe(false);
+  });
+  it('restores Sena’s own healer command and removes stale temporary effects independently of old role history', () => {
+    const growth=earned(); let jobs=historicalLearn(createJobs(),growth,'ally-sena','healer-foundation','B04');
+    jobs=historicalSupport(historicalJob(jobs,'ally-sena','warden','B04'),'ally-sena','healer-foundation');
+    const unit=createInitialState('B03').units.find(value=>value.id==='ally-sena')!;
+    unit.healCharges=0;unit.protection={sourceId:'ally-garan'};unit.surveyBonus=true;const before=structuredClone(unit);
+    const fixed=applyJobs(unit,jobs),initial=applyJobs(unit,createJobs());
+    expect(fixed).toEqual(initial);expect(fixed).toMatchObject({maxHp:16,atk:4,def:1,weapon:'melee',healCharges:2});
+    expect(fixed.jobCommand).toBeUndefined();expect(fixed.protection).toBeUndefined();expect(fixed.surveyBonus).toBeUndefined();expect(unit).toEqual(before);
+  });
 });

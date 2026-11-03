@@ -1,0 +1,50 @@
+{
+  "params": {
+    "model": "hf_mult_motion_control",
+    "resolution": "720p",
+    "count": 1,
+    "use_free_gens": true,
+    "prompt": "Use the driving video ONLY for the alternating leg joint motion, modest stride, foot contacts and walking rhythm. Apply that exact full left-right gait to the reference IMAGE character, preserving her exact illustrated design and lower-right three-quarter facing. The reference image is a brown-haired female scholar in a cream tunic, SHORT dark teal shoulder cape and brown boots, holding a CLOSED RECTANGULAR BOOK firmly in her LEFT HAND, with a leather satchel on her RIGHT HIP. Keep the short cape length and cut unchanged. Do not copy the driver's person, face, armor, weapons, shield, body size or clothing. No added objects or weapons. The head, torso, book and satchel keep the reference image proportions and attachment sides; equipment does not change hands. The leg on each side must take turns reaching forward and bearing weight: no one-legged repeated hop. Neutral upright torso, same size in every frame, small vertical weight transfer, no sideways drift. Walk in place continuously with no turn, no idle lead-in. One foot supports the body at the ground at all times. Camera locked, no zoom or cuts. Full body and soles remain inside image with empty margins. Solid flat magenta #ff00ff background, no ground shadow or floor.",
+    "medias": [
+      {
+        "role": "image",
+        "value": "338f2ba5-526b-428b-8735-8862a2d4e7f3"
+      },
+      {
+        "role": "video",
+        "value": "0b466b8c-cbf4-4c28-b2e5-0518ac75417f"
+      }
+    ]
+  },
+  "submission": {
+    "results": [
+      {
+        "id": "ecfcc11e-e696-488a-98d4-e30dbd2ded55",
+        "type": "video",
+        "status": "pending",
+        "model": "hf_mult_motion_control",
+        "params": {
+          "prompt": "Use the driving video ONLY for the alternating leg joint motion, modest stride, foot contacts and walking rhythm. Apply that exact full left-right gait to the reference IMAGE character, preserving her exact illustrated design and lower-right three-quarter facing. The reference image is a brown-haired female scholar in a cream tunic, SHORT dark teal shoulder cape and brown boots, holding a CLOSED RECTANGULAR BOOK firmly in her LEFT HAND, with a leather satchel on her RIGHT HIP. Keep the short cape length and cut unchanged. Do not copy the driver's person, face, armor, weapons, shield, body size or clothing. No added objects or weapons. The head, torso, book and satchel keep the reference image proportions and attachment sides; equipment does not change hands. The leg on each side must take turns reaching forward and bearing weight: no one-legged repeated hop. Neutral upright torso, same size in every frame, small vertical weight transfer, no sideways drift. Walk in place continuously with no turn, no idle lead-in. One foot supports the body at the ground at all times. Camera locked, no zoom or cuts. Full body and soles remain inside image with empty margins. Solid flat magenta #ff00ff background, no ground shadow or floor.",
+          "reference_images": [
+            "338f2ba5-526b-428b-8735-8862a2d4e7f3",
+            "0b466b8c-cbf4-4c28-b2e5-0518ac75417f"
+          ],
+          "resolution": "720p"
+        }
+      }
+    ],
+    "adjustments": {
+      "medias[0].role": {
+        "requested": "image",
+        "used": "image_references",
+        "reason": "Genjutsu backend expects schema-key media roles"
+      },
+      "medias[1].role": {
+        "requested": "video",
+        "used": "video_references",
+        "reason": "Genjutsu backend expects schema-key media roles"
+      }
+    }
+  },
+  "authorization": "User explicitly chose one free generation; no paid fallback authorized."
+}

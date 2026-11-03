@@ -10,7 +10,7 @@ import b10 from './landscapes/b10.json';
 import b11 from './landscapes/b11.json';
 import type {BattleId,Pos,Unit} from './domain/types';
 import {BATTLE_IDS,CHARACTER_IDS,type CharacterId} from './progression';
-import type {JobsState} from './jobs';
+import {INITIAL_JOBS,type JobsState} from './jobs';
 export type EquipmentSlot='weapon'|'head'|'body'|'legs';
 export interface EquipmentLoadout {weapon:string|null;head:string|null;body:string|null;legs:string|null}
 export interface EquipmentState {acquired:string[];loadouts:Record<CharacterId,EquipmentLoadout>}
@@ -37,24 +37,31 @@ export function joinedEquipmentCharacters(completed:readonly BattleId[]):Charact
 const plain=(v:unknown):v is Record<string,unknown>=>!!v&&typeof v==='object'&&!Array.isArray(v)&&[Object.prototype,null].includes(Object.getPrototypeOf(v));
 const keys=(v:object,allowed:readonly string[])=>Object.keys(v).length===allowed.length&&allowed.every(k=>Object.hasOwn(v,k));
 const dense=(v:unknown):v is unknown[]=>Array.isArray(v)&&Object.keys(v).length===v.length&&Array.from({length:v.length},(_,i)=>Object.hasOwn(v,i)).every(Boolean);
-function weaponFits(item:EquipmentItem,id:CharacterId,jobs:JobsState){return !item.weapon||item.weapon===(jobs[id].main==='scout'?'bow':'melee');}
-export function validEquipment(value:unknown,completed:readonly BattleId[],jobs:JobsState):value is EquipmentState {
+function weaponFits(item:EquipmentItem,id:CharacterId){return !item.weapon||item.weapon===(INITIAL_JOBS[id]==='scout'?'bow':'melee');}
+function legacyWeaponFits(item:EquipmentItem,id:CharacterId,jobs:JobsState){return weaponFits(item,id)||!item.weapon||item.weapon===(jobs[id].main==='scout'?'bow':'melee');}
+function validateEquipment(value:unknown,completed:readonly BattleId[],jobs:JobsState,legacy=false):value is EquipmentState {
  if(!Array.isArray(completed)||completed.some((id,i)=>id!==BATTLE_IDS[i])||!jobs||CHARACTER_IDS.some(id=>!jobs[id]||!['surveyor','warden','scout','healer','engineer','recorder'].includes(jobs[id].main)))return false;
  if(!plain(value)||!keys(value,['acquired','loadouts'])||!dense(value.acquired)||!plain(value.loadouts)||!keys(value.loadouts,CHARACTER_IDS))return false;
  if(value.acquired.some(id=>typeof id!=='string'||entry(id)?.source!=='chest'||!completed.includes(entry(id)!.battleId))||new Set(value.acquired).size!==value.acquired.length)return false;
  const owned=new Set(ownedEquipment(completed,value.acquired as string[]).map(e=>e.id)),joined=joinedEquipmentCharacters(completed),used=new Set<string>();
  for(const id of CHARACTER_IDS){const loadout=value.loadouts[id];if(!plain(loadout)||!keys(loadout,slots))return false;
- for(const slot of slots){const instance=loadout[slot];if(instance===null)continue;if(typeof instance!=='string'||!owned.has(instance)||used.has(instance)||!joined.includes(id))return false;const item=definition(instance);if(!item||item.slot!==slot||!weaponFits(item,id,jobs))return false;used.add(instance);}}
+ for(const slot of slots){const instance=loadout[slot];if(instance===null)continue;if(typeof instance!=='string'||!owned.has(instance)||used.has(instance)||!joined.includes(id))return false;const item=definition(instance);if(!item||item.slot!==slot||!(legacy?legacyWeaponFits(item,id,jobs):weaponFits(item,id)))return false;used.add(instance);}}
  return true;
 }
+/** Current equipment obeys each character's fixed initial weapon type. */
+export function validEquipment(value:unknown,completed:readonly BattleId[],jobs:JobsState):value is EquipmentState { return validateEquipment(value,completed,jobs); }
+/** Read-only old-save acceptance; normalization then returns incompatible gear to storage. */
+export function validLegacyEquipment(value:unknown,completed:readonly BattleId[],jobs:JobsState):value is EquipmentState { return validateEquipment(value,completed,jobs,true); }
 export function equipItem(equipment:EquipmentState,completed:readonly BattleId[],jobs:JobsState,character:CharacterId,slot:EquipmentSlot,instanceId:string|null,battleId?:BattleId):EquipmentState {
  if(!validEquipment(equipment,completed,jobs)||!CHARACTER_IDS.includes(character)||!slots.includes(slot)||!joinedEquipmentCharacters(completed).includes(character))throw Error('装備データまたは加入状態が不正です');
  if(battleId==='B06'&&character==='ally-neia')throw Error('離脱中の装備は変更できません');
  const next=structuredClone(equipment);next.loadouts[character][slot]=instanceId;if(!validEquipment(next,completed,jobs))throw Error('未所持・部位不適合・職不適合・重複装備です');return next;
 }
-export function reconcileEquipmentJobs(equipment:EquipmentState,jobs:JobsState):EquipmentState {
- const next=structuredClone(equipment);for(const id of CHARACTER_IDS){const instance=next.loadouts[id].weapon;if(instance){const item=definition(instance);if(item&&!weaponFits(item,id,jobs))next.loadouts[id].weapon=null;}}return next;
+export function reconcileEquipmentRoles(equipment:EquipmentState):EquipmentState {
+ const next=structuredClone(equipment);for(const id of CHARACTER_IDS){const instance=next.loadouts[id].weapon;if(instance){const item=definition(instance);if(item&&!weaponFits(item,id))next.loadouts[id].weapon=null;}}return next;
 }
+/** Legacy function name never reapplies archived job weapon suitability. */
+export function reconcileEquipmentJobs(equipment:EquipmentState,_jobs:JobsState):EquipmentState { return reconcileEquipmentRoles(equipment); }
 export function equipmentBonus(loadout:EquipmentLoadout){
  const positive=zero(),negative=zero(),weapon=zero(),cap={hp:3,def:2,atk:2};
  for(const slot of slots){const instance=loadout[slot];if(!instance)continue;const item=definition(instance);if(!item||item.slot!==slot)throw Error('装備個体が不正です');for(const key of ['hp','atk','def'] as const){const n=item.bonus[key];if(slot==='weapon')weapon[key]+=n;else if(n>0)positive[key]+=n;else negative[key]+=n;}}
@@ -63,5 +70,5 @@ export function equipmentBonus(loadout:EquipmentLoadout){
 }
 export function applyEquipment(unit:Unit,equipment:EquipmentState):Unit {
  const next=structuredClone(unit);delete next.equipmentWeaponId;if(!CHARACTER_IDS.includes(unit.id as CharacterId)||unit.team!=='player'||unit.kind==='escort')return next;
- const loadout=equipment.loadouts[unit.id as CharacterId],bonus=equipmentBonus(loadout);next.maxHp=Math.max(1,next.maxHp+bonus.hp);next.hp=unit.hp>0?Math.max(1,Math.min(next.maxHp,unit.hp+bonus.hp)):0;next.atk=Math.max(0,next.atk+bonus.atk);next.def=Math.max(0,next.def+bonus.def);if(loadout.weapon)next.equipmentWeaponId=definition(loadout.weapon)!.id;return next;
+ const loadout={...equipment.loadouts[unit.id as CharacterId]};if(loadout.weapon){const item=definition(loadout.weapon);if(item&&!weaponFits(item,unit.id as CharacterId))loadout.weapon=null;}const bonus=equipmentBonus(loadout);next.maxHp=Math.max(1,next.maxHp+bonus.hp);next.hp=unit.hp>0?Math.max(1,Math.min(next.maxHp,unit.hp+bonus.hp)):0;next.atk=Math.max(0,next.atk+bonus.atk);next.def=Math.max(0,next.def+bonus.def);if(loadout.weapon)next.equipmentWeaponId=definition(loadout.weapon)!.id;return next;
 }

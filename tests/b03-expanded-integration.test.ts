@@ -6,8 +6,8 @@ import {reduce} from '../src/domain/engine';
 import {runEnemyActivationWithTrace} from '../src/domain/ai';
 import type {BattleState,Command,BattleId} from '../src/domain/types';
 import b01 from './fixtures/progression-v2/b01-route.json';
-import b02 from './fixtures/progression-v2/b02-route.json';
-import roots from './fixtures/expanded-b03-roots.json';
+import b02 from './fixtures/defend-cooldown-v1/progression-v2/b02-route.json';
+import roots from './fixtures/manual-cart-v1/expanded-b03-roots.json';
 function replay(s:BattleState,commands:Command[]){for(const c of commands){const r=reduce(s,c);expect(r.error,JSON.stringify(c)).toBeUndefined();s=r.state;while(s.phase==='playing'&&s.turn==='enemy')s=runEnemyActivationWithTrace(s).state;}return s;}
 function earned(){let c=createCampaign();for(const[id,commands]of [['B01',b01.commands],['B02',b02.commands]]as[BattleId,Command[]][]){const s=replay(createPartyBattle(id,defaultParty(id),c.jobs,1,{equipment:c.equipment}),commands);expect(s.phase).toBe('won');c=completeBattle(c,s)}return selectBattle(c,'B03')}
 describe('expanded adopted B03 runtime contracts',()=>{

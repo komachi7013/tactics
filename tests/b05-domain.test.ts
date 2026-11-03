@@ -3,7 +3,7 @@ import {createInitialState,reduce,getCell,getUnit,canCollect,canGate,reachable} 
 import {getBattleConfig,requiredRecords} from '../src/domain/battles';
 import {runEnemyActivation} from '../src/domain/ai';
 import type {BattleState,Command} from '../src/domain/types';
-import route from './fixtures/b05-route.json';
+import route from './fixtures/defend-cooldown-v1/b05-route.json';
 function ai(s:BattleState){let guard=0;while(s.phase==='playing'&&s.turn==='enemy'){expect(++guard).toBeLessThanOrEqual(3);s=runEnemyActivation(s);}return s;}
 const exit=getBattleConfig('B05').exit;
 const approaches:Record<string,{x:number;y:number}>={D:{x:5,y:14},T:{x:7,y:5},S:{x:16,y:10},K:{x:13,y:16}};

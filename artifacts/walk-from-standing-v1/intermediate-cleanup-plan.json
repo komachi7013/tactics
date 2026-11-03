@@ -1,0 +1,2554 @@
+{
+  "status": "planned",
+  "finalDirections": 48,
+  "protectedFiles": 1834,
+  "items": [
+    {
+      "path": "artifacts/walk-from-standing-v1/archer-four-direction-browser-proof.png",
+      "files": 1,
+      "bytes": 104928
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/vesk-four-direction-browser-proof.png",
+      "files": 1,
+      "bytes": 104298
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise-E-walk-review-proof.png",
+      "files": 1,
+      "bytes": 86290
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/guard-four-direction-browser-proof.png",
+      "files": 1,
+      "bytes": 111618
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/toma-four-direction-browser-proof.png",
+      "files": 1,
+      "bytes": 102400
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/remaining36-progress-browser-proof.png",
+      "files": 1,
+      "bytes": 76699
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/synchronized-frames",
+      "files": 48,
+      "bytes": 17342136
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/dani-four-direction-browser-proof.png",
+      "files": 1,
+      "bytes": 109330
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia-ew-retake-v2-proof.png",
+      "files": 1,
+      "bytes": 101715
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/synchronized-frames",
+      "files": 16,
+      "bytes": 5667785
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise-S-seedance-six-proof.png",
+      "files": 1,
+      "bytes": 61073
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/garan-E-walk-review-proof.png",
+      "files": 1,
+      "bytes": 59891
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/garan-N-seedance-six-proof.png",
+      "files": 1,
+      "bytes": 66113
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/guard-S-seedance-retry-v2-browser-proof.png",
+      "files": 1,
+      "bytes": 209143
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise-W-seedance-six-proof.png",
+      "files": 1,
+      "bytes": 61051
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise-four-direction-proof.png",
+      "files": 1,
+      "bytes": 96894
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/garan-S-seedance-six-proof.png",
+      "files": 1,
+      "bytes": 64855
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia-N-garan-reference-applied-proof.png",
+      "files": 1,
+      "bytes": 105456
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise-three-direction-rejections.png",
+      "files": 1,
+      "bytes": 193519
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v3/synchronized-frames",
+      "files": 48,
+      "bytes": 17411609
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/worker-four-direction-browser-proof.png",
+      "files": 1,
+      "bytes": 104524
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise-other-directions-inputs.png",
+      "files": 1,
+      "bytes": 74715
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/sena-four-direction-browser-proof.png",
+      "files": 1,
+      "bytes": 102376
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/remaining-cast-standing-inputs.jpg",
+      "files": 1,
+      "bytes": 269416
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia-four-direction-proof.png",
+      "files": 1,
+      "bytes": 102621
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/iva-four-direction-browser-proof.png",
+      "files": 1,
+      "bytes": 103599
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia-NW-garan-reference-seedance-proof.png",
+      "files": 1,
+      "bytes": 101659
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/remaining36-final-browser-proof.png",
+      "files": 1,
+      "bytes": 94959
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/delegation-four-direction-browser-proof.png",
+      "files": 1,
+      "bytes": 103300
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/guard-S-seedance-retry-v4-browser-proof.png",
+      "files": 1,
+      "bytes": 216896
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise-N-image-only-proof.png",
+      "files": 1,
+      "bytes": 61611
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/dani-S-genjutsu-retry-browser-proof.png",
+      "files": 1,
+      "bytes": 106585
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/garan-four-direction-proof.png",
+      "files": 1,
+      "bytes": 107420
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/guard-S-genjutsu-retry-v2-browser-proof.png",
+      "files": 1,
+      "bytes": 208521
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/input-lineup.jpg",
+      "files": 1,
+      "bytes": 246528
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/worker/S/input.jpg",
+      "files": 1,
+      "bytes": 53199
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/toma/E/input.jpg",
+      "files": 1,
+      "bytes": 51634
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/garan/W/seedance-six-v1",
+      "files": 204,
+      "bytes": 52293995
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/dani/W/input.jpg",
+      "files": 1,
+      "bytes": 50388
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/archer/E/reference-v1",
+      "files": 208,
+      "bytes": 53804142
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/guard/S/genjutsu-retry-v2",
+      "files": 256,
+      "bytes": 112506795
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/delegation/S/input.jpg",
+      "files": 1,
+      "bytes": 50775
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/N/raw-review",
+      "files": 24,
+      "bytes": 115791
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/vesk/E/input.jpg",
+      "files": 1,
+      "bytes": 57519
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/N/input.jpg",
+      "files": 1,
+      "bytes": 44189
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/sena/S/input.jpg",
+      "files": 1,
+      "bytes": 55531
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia/W/seedance-six-v2",
+      "files": 205,
+      "bytes": 54407086
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia/W/garan-reference-v2",
+      "files": 208,
+      "bytes": 54222942
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/S/image-only-v1",
+      "files": 226,
+      "bytes": 82091835
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/W/raw-contact.jpg",
+      "files": 1,
+      "bytes": 93528
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/dani/S/genjutsu-retry-v1",
+      "files": 256,
+      "bytes": 118170426
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia/W/seedance-six-v1",
+      "files": 204,
+      "bytes": 53200672
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/E/source.mp4",
+      "files": 1,
+      "bytes": 3882487
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/delegation/W/input.jpg",
+      "files": 1,
+      "bytes": 41418
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/vesk/S/reference-v1",
+      "files": 208,
+      "bytes": 52160298
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/worker/N/input.jpg",
+      "files": 1,
+      "bytes": 52138
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/toma/W/input.jpg",
+      "files": 1,
+      "bytes": 44128
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/S/seedance-six-v3",
+      "files": 325,
+      "bytes": 44483825
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/garan/S/seedance-six-v1",
+      "files": 204,
+      "bytes": 52224191
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia/W/candidate",
+      "files": 45,
+      "bytes": 2288039
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia/W/seedance-six-v3",
+      "files": 203,
+      "bytes": 54412780
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/W/input.jpg",
+      "files": 1,
+      "bytes": 45170
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia/W/candidate-v2",
+      "files": 45,
+      "bytes": 2283250
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/E/raw-contact.jpg",
+      "files": 1,
+      "bytes": 97448
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/delegation/S/reference-v1",
+      "files": 208,
+      "bytes": 48533072
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/W/seedance-six-v1",
+      "files": 326,
+      "bytes": 47771612
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/worker/S/reference-v1",
+      "files": 208,
+      "bytes": 50824039
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia/N/seedance-six-v1",
+      "files": 204,
+      "bytes": 56221496
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia/W/seedance-six-v4",
+      "files": 204,
+      "bytes": 58260098
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/sena/S/reference-v1",
+      "files": 208,
+      "bytes": 56020229
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/garan/S/input.jpg",
+      "files": 1,
+      "bytes": 52306
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/delegation/N/reference-v1",
+      "files": 208,
+      "bytes": 43087225
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia/S/input.jpg",
+      "files": 1,
+      "bytes": 57959
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/archer/W/input.jpg",
+      "files": 1,
+      "bytes": 51471
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/S/input.jpg",
+      "files": 1,
+      "bytes": 46133
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/guard/E/reference-v1",
+      "files": 208,
+      "bytes": 56253001
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia/N/garan-reference-v1",
+      "files": 207,
+      "bytes": 88256998
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/S/source.mp4",
+      "files": 1,
+      "bytes": 3675177
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia/W/input.jpg",
+      "files": 1,
+      "bytes": 56639
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/toma/E/reference-v1",
+      "files": 208,
+      "bytes": 47494138
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/W/motion-reference",
+      "files": 225,
+      "bytes": 90370119
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/N/source.mp4",
+      "files": 1,
+      "bytes": 3954106
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/iva/N/reference-v1",
+      "files": 208,
+      "bytes": 62002165
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/dani/S/reference-v1",
+      "files": 107,
+      "bytes": 29538563
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/S/raw-review",
+      "files": 24,
+      "bytes": 130740
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/W/source.mp4",
+      "files": 1,
+      "bytes": 3728752
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/S/raw-contact.jpg",
+      "files": 1,
+      "bytes": 101000
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/archer/S/reference-v1",
+      "files": 208,
+      "bytes": 52898161
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/guard/W/reference-v1",
+      "files": 208,
+      "bytes": 54266245
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/W/retake-2",
+      "files": 538,
+      "bytes": 59501008
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/iva/E/input.jpg",
+      "files": 1,
+      "bytes": 50931
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/guard/S/candidate-genjutsu-v2",
+      "files": 45,
+      "bytes": 2115016
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/dani/W/reference-v1",
+      "files": 208,
+      "bytes": 49473591
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/E/retake-2",
+      "files": 345,
+      "bytes": 63598029
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia/E/seedance-six-v1",
+      "files": 206,
+      "bytes": 56170039
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/E/loop",
+      "files": 2,
+      "bytes": 40694
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/guard/S/candidate-seedance-v2",
+      "files": 45,
+      "bytes": 2354037
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/worker/E/input.jpg",
+      "files": 1,
+      "bytes": 52218
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/garan/N/input.jpg",
+      "files": 1,
+      "bytes": 50505
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/iva/N/input.jpg",
+      "files": 1,
+      "bytes": 46047
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/guard/N/reference-v1",
+      "files": 208,
+      "bytes": 56122548
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/vesk/W/reference-v1",
+      "files": 208,
+      "bytes": 49794848
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/E/raw-review",
+      "files": 24,
+      "bytes": 124846
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/toma/N/reference-v1",
+      "files": 208,
+      "bytes": 55734747
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/E/input.jpg",
+      "files": 1,
+      "bytes": 46927
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia/E/seedance-six-v2",
+      "files": 205,
+      "bytes": 56113840
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/sena/E/reference-v1",
+      "files": 207,
+      "bytes": 48803571
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/archer/W/reference-v1",
+      "files": 208,
+      "bytes": 55680785
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/sena/N/reference-v1",
+      "files": 208,
+      "bytes": 47116117
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/dani/N/reference-v1",
+      "files": 208,
+      "bytes": 62954594
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/vesk/N/reference-v1",
+      "files": 208,
+      "bytes": 60328306
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/worker/W/reference-v1",
+      "files": 208,
+      "bytes": 53396226
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia/E/input.jpg",
+      "files": 1,
+      "bytes": 60471
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/delegation/E/input.jpg",
+      "files": 1,
+      "bytes": 47337
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/sena/N/input.jpg",
+      "files": 1,
+      "bytes": 52351
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/toma/S/input.jpg",
+      "files": 1,
+      "bytes": 49843
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/sena/E/input.jpg",
+      "files": 1,
+      "bytes": 52526
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/guard/S/seedance-retry-v4",
+      "files": 208,
+      "bytes": 58539794
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/toma/N/input.jpg",
+      "files": 1,
+      "bytes": 47859
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/guard/E/input.jpg",
+      "files": 1,
+      "bytes": 60040
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/archer/E/input.jpg",
+      "files": 1,
+      "bytes": 58390
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/guard/S/seedance-retry-v3",
+      "files": 207,
+      "bytes": 65253606
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/iva/E/reference-v1",
+      "files": 208,
+      "bytes": 56925388
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/vesk/S/input.jpg",
+      "files": 1,
+      "bytes": 54512
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/guard/S/reference-v1",
+      "files": 108,
+      "bytes": 45691113
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/S/image-only-framing-v2",
+      "files": 2,
+      "bytes": 3186
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/garan/W/input.jpg",
+      "files": 1,
+      "bytes": 49913
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/iva/W/reference-v1",
+      "files": 208,
+      "bytes": 68872632
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia/E/candidate",
+      "files": 45,
+      "bytes": 2361093
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/guard/S/input.jpg",
+      "files": 1,
+      "bytes": 54811
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/N/motion-reference",
+      "files": 30,
+      "bytes": 5363609
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/iva/S/input.jpg",
+      "files": 1,
+      "bytes": 46554
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/dani/N/input.jpg",
+      "files": 1,
+      "bytes": 43766
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/delegation/E/reference-v1",
+      "files": 208,
+      "bytes": 48288384
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/toma/S/reference-v1",
+      "files": 208,
+      "bytes": 55722659
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/sena/W/reference-v1",
+      "files": 208,
+      "bytes": 46370281
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/worker/N/reference-v1",
+      "files": 208,
+      "bytes": 53248210
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/vesk/W/input.jpg",
+      "files": 1,
+      "bytes": 50449
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia/N/input.jpg",
+      "files": 1,
+      "bytes": 59156
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/guard/S/genjutsu-retry-v1",
+      "files": 5,
+      "bytes": 11719
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/dani/S/input.jpg",
+      "files": 1,
+      "bytes": 49558
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia/N/candidate",
+      "files": 45,
+      "bytes": 2397972
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/guard/S/seedance-retry-v2",
+      "files": 208,
+      "bytes": 73452564
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/garan/E/motion-reference",
+      "files": 322,
+      "bytes": 101378398
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/sena/W/input.jpg",
+      "files": 1,
+      "bytes": 49104
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/archer/N/reference-v1",
+      "files": 208,
+      "bytes": 52375039
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/W/raw-review",
+      "files": 24,
+      "bytes": 119324
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/N/image-only-v1",
+      "files": 326,
+      "bytes": 45242147
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/garan/N/seedance-six-v1",
+      "files": 204,
+      "bytes": 51297556
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia/W/garan-reference-v1",
+      "files": 205,
+      "bytes": 103546000
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/archer/N/input.jpg",
+      "files": 1,
+      "bytes": 52668
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/toma/W/reference-v1",
+      "files": 208,
+      "bytes": 45849323
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/N/raw-contact.jpg",
+      "files": 1,
+      "bytes": 91389
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/vesk/E/reference-v1",
+      "files": 208,
+      "bytes": 55655755
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/N/retake-2",
+      "files": 538,
+      "bytes": 55568364
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/dani/E/reference-v1",
+      "files": 208,
+      "bytes": 55651533
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/guard/W/input.jpg",
+      "files": 1,
+      "bytes": 51786
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/S/retake-2",
+      "files": 538,
+      "bytes": 55666081
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/dani/E/input.jpg",
+      "files": 1,
+      "bytes": 52412
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/worker/E/reference-v1",
+      "files": 208,
+      "bytes": 49197348
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/guard/N/input.jpg",
+      "files": 1,
+      "bytes": 54194
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia/S/seedance-six-v1",
+      "files": 205,
+      "bytes": 54454440
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/delegation/N/input.jpg",
+      "files": 1,
+      "bytes": 44559
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/worker/W/input.jpg",
+      "files": 1,
+      "bytes": 51186
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/E/motion-reference",
+      "files": 787,
+      "bytes": 171560671
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/iva/W/input.jpg",
+      "files": 1,
+      "bytes": 50910
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/vesk/N/input.jpg",
+      "files": 1,
+      "bytes": 52791
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/E/keyed",
+      "files": 314,
+      "bytes": 57672685
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/garan/E/input.jpg",
+      "files": 1,
+      "bytes": 52115
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/delegation/W/reference-v1",
+      "files": 208,
+      "bytes": 41929611
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/S/motion-reference",
+      "files": 225,
+      "bytes": 92799627
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/iva/S/reference-v1",
+      "files": 208,
+      "bytes": 46067152
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/archer/S/input.jpg",
+      "files": 1,
+      "bytes": 49355
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/delegation/N/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 17199524
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/archer/W/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 12048919
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/guard/N/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 11907353
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/worker/E/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 12491061
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/garan/S/candidate/movie",
+      "files": 19,
+      "bytes": 522878
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/dani/E/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 15926521
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/delegation/E/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 10876572
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/toma/W/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 10730769
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/vesk/W/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 15647094
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/worker/N/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 17652914
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/garan/N/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 18434825
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/lise/N/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 10382683
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/archer/W/candidate/movie",
+      "files": 19,
+      "bytes": 491672
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/delegation/S/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 11615565
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/guard/S/candidate-seedance-v4/movie",
+      "files": 19,
+      "bytes": 550090
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/toma/E/candidate/movie",
+      "files": 19,
+      "bytes": 463119
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/guard/E/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 14266429
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/sena/N/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 14806921
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/sena/W/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 15458717
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/iva/E/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 16369971
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/archer/N/candidate/movie",
+      "files": 19,
+      "bytes": 497689
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/neia/W/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 12997650
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/neia/S/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 13427692
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/archer/S/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 13015021
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/guard/N/candidate/movie",
+      "files": 19,
+      "bytes": 507725
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/neia/S/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 16589111
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/iva/W/candidate/movie",
+      "files": 19,
+      "bytes": 494688
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/sena/E/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 16672315
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/sena/E/candidate/movie",
+      "files": 19,
+      "bytes": 461927
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/dani/E/candidate/movie",
+      "files": 19,
+      "bytes": 502998
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/delegation/N/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 10288077
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/archer/E/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 17677179
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia/E/candidate-v2/movie",
+      "files": 19,
+      "bytes": 542358
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/archer/E/candidate/movie",
+      "files": 19,
+      "bytes": 532503
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/worker/W/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 12506387
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/lise/E/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 14472302
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/sena/E/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 12033028
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/guard/S/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 13574183
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia/N/candidate-garan-reference-v1/movie",
+      "files": 19,
+      "bytes": 531681
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/archer/N/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 18259263
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/lise/S/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 11168787
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/worker/W/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 18237096
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/sena/N/candidate/movie",
+      "files": 19,
+      "bytes": 459661
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/lise/N/processed/frames-raw",
+      "files": 56,
+      "bytes": 15600275
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/dani/W/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 18393504
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/sena/S/candidate/movie",
+      "files": 19,
+      "bytes": 452895
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/worker/S/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 12776815
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/dani/S/candidate-genjutsu-v1/movie",
+      "files": 19,
+      "bytes": 489366
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/vesk/S/candidate/movie",
+      "files": 19,
+      "bytes": 492868
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/worker/S/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 17449178
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/sena/W/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 11085015
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/iva/W/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 16403789
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/iva/N/candidate/movie",
+      "files": 19,
+      "bytes": 467583
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/vesk/E/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 17460890
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/dani/N/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 15808589
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/neia/E/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 14425935
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/lise/N/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 15600275
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/toma/W/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 14812197
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/lise/W/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 14718618
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/toma/N/candidate/movie",
+      "files": 19,
+      "bytes": 451510
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/archer/N/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 12391159
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/garan/S/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 13683509
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/dani/E/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 13132612
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/vesk/N/candidate/movie",
+      "files": 19,
+      "bytes": 476771
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/sena/W/candidate/movie",
+      "files": 19,
+      "bytes": 440907
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/archer/W/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 16816435
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/garan/E/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 14288663
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/neia/E/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 18548637
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/delegation/W/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 16796611
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/sena/S/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 11935169
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/worker/N/candidate/movie",
+      "files": 19,
+      "bytes": 465721
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/vesk/E/candidate/movie",
+      "files": 19,
+      "bytes": 505625
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia/W/candidate-garan-reference-v2/movie",
+      "files": 19,
+      "bytes": 527744
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/toma/S/candidate/movie",
+      "files": 19,
+      "bytes": 461139
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/guard/W/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 13081827
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/garan/N/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 12926877
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/vesk/W/candidate/movie",
+      "files": 19,
+      "bytes": 476990
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/toma/E/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 11679295
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/toma/S/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 11850412
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/vesk/S/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 12218545
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/iva/S/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 11430425
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/guard/S/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 18204261
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/vesk/S/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 15465670
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/iva/N/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 11185968
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/guard/W/candidate/movie",
+      "files": 19,
+      "bytes": 469871
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/lise/N/processed/frames-clean",
+      "files": 57,
+      "bytes": 10553566
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/worker/W/candidate/movie",
+      "files": 19,
+      "bytes": 448321
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/worker/E/candidate/movie",
+      "files": 19,
+      "bytes": 466919
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/guard/N/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 17168420
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/toma/N/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 16090080
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/neia/N/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 16759195
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/worker/N/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 11288089
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/garan/W/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 16683403
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/archer/E/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 13459928
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/garan/S/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 19863696
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/worker/E/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 16896389
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/neia/N/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 14001711
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/dani/W/candidate/movie",
+      "files": 19,
+      "bytes": 475399
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/archer/S/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 19197146
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/lise/W/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 11426117
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/iva/S/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 17851754
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/vesk/E/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 13661454
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/vesk/W/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 12363346
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/archer/S/candidate/movie",
+      "files": 19,
+      "bytes": 488204
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/guard/E/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 19073009
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/iva/N/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 15348832
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/lise/E/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 11534514
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/toma/N/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 11326225
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/toma/E/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 17296601
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/dani/N/candidate/movie",
+      "files": 19,
+      "bytes": 438833
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/lise/S/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 15415362
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/garan/E/candidate/movie",
+      "files": 19,
+      "bytes": 511067
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/iva/W/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 11587442
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/iva/E/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 12609690
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/dani/S/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 17594004
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/sena/N/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 11317757
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/N/candidate/movie",
+      "files": 19,
+      "bytes": 448139
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/vesk/N/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 11546334
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/worker/S/candidate/movie",
+      "files": 19,
+      "bytes": 486811
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/dani/W/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 12639539
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/delegation/N/candidate/movie",
+      "files": 19,
+      "bytes": 433473
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/W/candidate/movie",
+      "files": 19,
+      "bytes": 475192
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/garan/W/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 12027200
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/neia/W/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 18223502
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/vesk/N/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 14624315
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/S/candidate/movie",
+      "files": 19,
+      "bytes": 426830
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/delegation/W/candidate/movie",
+      "files": 19,
+      "bytes": 412313
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/dani/N/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 11045294
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/garan/W/candidate/movie",
+      "files": 19,
+      "bytes": 504775
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/guard/W/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 18009398
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/delegation/W/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 10836909
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/guard/E/candidate/movie",
+      "files": 19,
+      "bytes": 538567
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/garan/N/candidate/movie",
+      "files": 19,
+      "bytes": 519140
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/toma/S/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 16557847
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/neia/S/candidate/movie",
+      "files": 19,
+      "bytes": 522073
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/lise/E/candidate/movie",
+      "files": 19,
+      "bytes": 462765
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/iva/S/candidate/movie",
+      "files": 19,
+      "bytes": 459299
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/garan/E/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 18659087
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/delegation/S/candidate/movie",
+      "files": 19,
+      "bytes": 488229
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/delegation/E/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 16042184
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/toma/W/candidate/movie",
+      "files": 19,
+      "bytes": 439889
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/iva/E/candidate/movie",
+      "files": 19,
+      "bytes": 491484
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/sena/S/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 16313202
+    },
+    {
+      "path": "artifacts/walk-from-standing-v1/delegation/E/candidate/movie",
+      "files": 19,
+      "bytes": 435505
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/dani/S/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 12835298
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/delegation/S/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 14850261
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/dani/E/take2/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 33194808
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/dani/S/take2/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 26121729
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/worker/S/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 29569296
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/dani/S/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 26467516
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/garan/S/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 16943889
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/worker/W-take2/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 11911211
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/vesk/W/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 25402752
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/worker/W/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 35076987
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/garan/N/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 25967332
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/sena/N/take3/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 11784787
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/delegation/S/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 13265732
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/worker/S/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 18220192
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/vesk/W/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 17960327
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/delegation/S/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 27139295
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/dani/S/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 12993938
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/garan/W/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 24084934
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/guard/W/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 13003437
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/garan/E/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 14670025
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/vesk/S/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 29045492
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/garan/E/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 25946478
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/dani/E/take2/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 27088069
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/sena/N/take3/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 23369353
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/worker/W-take2/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 23257404
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/sena/E/take2/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 33053970
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/sena/E/take2/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 26329239
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/sena/N/take2/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 30008584
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/dani/S/take2/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 30550934
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/toma/W/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 23333608
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/garan/N/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 13202180
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/worker/W/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 26825810
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/vesk/S/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 17678673
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/lise/W/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 24204901
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/garan/S/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 27788404
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v2/sena/N/take2/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 23773954
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/garan/W/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 13359633
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/toma/W/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 12395571
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/guard/W/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 27014390
+    },
+    {
+      "path": "artifacts/walk-higgsfield-v4/source/lise/W/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 11237017
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/archer/S-appearance/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 40676409
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/iva/E/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 47593224
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/vesk/W/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 26593688
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/lise/W/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 48081105
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/neia/S-appearance/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 28136017
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/sena/W/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 16770611
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/archer/S/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 29102923
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/sena/S-appearance/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 25360076
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/dani/W/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 39165692
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/garan/W/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 26117951
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/lise/S/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 32822946
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/garan/N/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 9938521
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/vesk/W/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 10549693
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/toma/W/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 45235507
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/vesk/E/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 30213298
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/delegation/W/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 9040525
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/toma/S/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 37268773
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/iva/N/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 17698546
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/toma/W/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 28066361
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/delegation/W/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 30433889
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/guard/S/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 19235029
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/neia/N/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 40067943
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/neia/S/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 22045347
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/delegation/N/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 7959888
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/delegation/W/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 28712809
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/archer/S/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 46749949
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/toma/E/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 30145135
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/vesk/S/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 32886622
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/dani/W/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 19878475
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v1/source/delegation/E-framing2/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 9259772
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/guard/W/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 18085189
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/neia/E/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 43667296
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/worker/W/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 31159130
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v1/source/neia/S-proportions2/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 55995135
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/neia/S/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 47131488
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/toma/W/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 47785151
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v1/source/dani/N-proportions2/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 16634044
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/archer/W/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 27656549
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/vesk/E-toe-edit/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 9359989
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/worker/E/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 27110485
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/toma/E/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 10838164
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/delegation/N/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 25648718
+    },
+    {
+      "path": "artifacts/walk-standard-v1/pilot/source/garan/E/keyed-v2/frames-clean",
+      "files": 57,
+      "bytes": 15092663
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/guard/N/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 18786437
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/worker/S/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 33018351
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/toma/E/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 32776759
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/lise/S-framing2/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 30211986
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/sena/N/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 36856432
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/sena/S/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 38156536
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/garan/N/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 53282910
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/vesk/S/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 9398420
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/vesk/N/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 23456386
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/worker/N/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 8928819
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/toma/N/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 8481180
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/neia/E/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 57449369
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/neia/S-appearance/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 46209098
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/worker/E/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 44056544
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/worker/S/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 10539792
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/toma/E/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 9367736
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/vesk/E/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 9968513
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/vesk/E-toe-edit/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 15118286
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/toma/N/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 29504764
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/sena/W/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 41877159
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/garan/N/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 37026697
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/neia/E-take2/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 42687271
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/sena/W/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 37890863
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/delegation/E/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 28402760
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/garan/N-take2/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 9241842
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/sena/W-appearance/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 18456804
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/iva/E/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 17109355
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/guard/E/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 40800777
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/iva/N/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 38277566
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/dani/E/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 28646792
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/delegation/E/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 46020460
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/garan/N/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 30272625
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/vesk/E/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 31260763
+    },
+    {
+      "path": "artifacts/walk-standard-v1/pilot/source/garan/E/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 22635856
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/vesk/N/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 8866882
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/archer/W/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 30335397
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/toma/W/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 30220806
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/worker/E/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 10434244
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/sena/E/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 37076315
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/worker/W/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 9016065
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/dani/S/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 34673672
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/dani/E/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 47734047
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/iva/S/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 16380253
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/iva/S-appearance/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 25498336
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/neia/E-take2/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 27302264
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/guard/E/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 21978584
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v1/source/iva/S-proportions2/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 27857563
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/worker/E/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 15694811
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v1/source/archer/S-proportions2/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 26652710
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/garan/N-take2/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 30735315
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/delegation/W/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 7094772
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/dani/E/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 22292626
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/neia/W/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 21315541
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/dani/E/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 46193325
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/neia/W/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 41157654
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/dani/S/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 16014377
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/archer/N/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 48663756
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/worker/N/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 24667089
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/lise/E/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 17435419
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/sena/E/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 17306316
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/lise/W-take2/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 8799583
+    },
+    {
+      "path": "artifacts/walk-standard-v1/pilot/source/garan/E/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 47915756
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/vesk/E/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 46030476
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/guard/S/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 37928265
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/archer/S-appearance/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 20518752
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/sena/S/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 16228786
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/neia/N/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 21084345
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/lise/E/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 41234403
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/toma/S/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 13973659
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/iva/W/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 17080621
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/dani/N/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 14314222
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v1/source/delegation/E-framing2/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 27367588
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/lise/S/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 17507540
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/sena/W/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 52177964
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/iva/S/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 33792047
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/garan/W-take2/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 26788112
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/archer/W/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 8572085
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/garan/W/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 44569286
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/lise/S/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 40112016
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/lise/N/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 40024145
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/sena/S-appearance/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 41015876
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/delegation/S/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 30154247
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/garan/S/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 41921205
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/dani/N/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 36840143
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/delegation/S/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 9912643
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/iva/W/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 44203023
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v1/source/archer/S-proportions2/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 9182225
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/sena/W-appearance/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 36478026
+    },
+    {
+      "path": "artifacts/walk-standard-v1/garan-review/source/garan/S-body-take2/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 20690150
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/lise/N/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 17024702
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/archer/E/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 19701111
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/archer/W/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 9705413
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/sena/N/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 16955463
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/garan/S/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 20197495
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v1/source/neia/S-proportions2/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 36199890
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/lise/W-take2/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 33154397
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/lise/W/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 33812353
+    },
+    {
+      "path": "artifacts/walk-standard-v1/pilot/source/garan/E/keyed-v2/frames-raw",
+      "files": 56,
+      "bytes": 31943575
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/archer/N/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 34071941
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/lise/S/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 53227008
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/guard/N/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 36334817
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/garan/W-take2/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 9851215
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/guard/W/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 40795080
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/iva/S-appearance/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 41656709
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v1/source/dani/N-proportions2/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 38693612
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v2/source/lise/S-framing2/keyed-native24/frames-clean",
+      "files": 85,
+      "bytes": 8299148
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast-review-v1/source/iva/S-proportions2/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 46894929
+    },
+    {
+      "path": "artifacts/walk-standard-v1/cast/source/archer/E/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 33243583
+    },
+    {
+      "path": "artifacts/walk-standard-v1/garan-review/source/garan/S-body-take2/keyed-native24/frames-raw",
+      "files": 84,
+      "bytes": 37859291
+    }
+  ],
+  "fileCount": 38313,
+  "bytes": 10795391269
+}

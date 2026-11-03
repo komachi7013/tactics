@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { attackPreview, canCollect, canGate, createInitialState, getCell, getUnit, reachable, reduce } from '../src/domain/engine';
 import { runEnemyActivation } from '../src/domain/ai';
 import { getBattleConfig } from '../src/domain/battles';
-import route from './fixtures/b02-route.json';
+import route from './fixtures/defend-cooldown-v1/b02-route.json';
 import type { BattleState, Command } from '../src/domain/types';
 
 function ai(s:BattleState){let count=0;while(s.phase==='playing'&&s.turn==='enemy'){if(++count>3)throw Error('AI stalled');s=runEnemyActivation(s);}return s;}

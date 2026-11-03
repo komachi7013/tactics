@@ -3,7 +3,7 @@ import {attackPreview,canCollect,canGate,createInitialState,evacuationPreview,ge
 import {getBattleConfig} from '../src/domain/battles';
 import {runEnemyActivation} from '../src/domain/ai';
 import type {BattleState,Command} from '../src/domain/types';
-import route from './fixtures/b07-route.json';
+import route from './fixtures/defend-cooldown-v1/b07-route.json';
 function safe(){const s=createInitialState('B07');s.units.filter(u=>u.team==='enemy').forEach(u=>u.hp=0);return s;}
 function begun(){let s=safe();getUnit(s,'ally-lise')!.pos={x:5,y:4};s=reduce(s,{type:'start',unitId:'ally-lise'}).state;return s;}
 function finishRound(s:BattleState){s.units.forEach(u=>u.acted=u.id!=='ally-lise');s.turn='player';s.activeId=null;s=reduce(s,{type:'start',unitId:'ally-lise'}).state;return reduce(s,{type:'end',facing:'E'}).state;}

@@ -1,0 +1,446 @@
+{
+  "phase": "five-point pair geometry only; outfit/equipment differences remain",
+  "landmarkAccuracy": "manual visual estimates; not certified anatomy detection",
+  "pairs": [
+    {
+      "cast": "lise",
+      "pair": "NW",
+      "reference": "N",
+      "landmarks": {
+        "head": 100,
+        "jaw": 160,
+        "waist": 195,
+        "knee": 241,
+        "ground": 280
+      },
+      "imageSha256": "b97e7c7f3c9e670be1d58f5dfc55d48038b98a2135ae9bfc5f3c4434a19b7568",
+      "alphaBounds": {
+        "top": 100,
+        "bottomExclusive": 280
+      },
+      "pixelRemapRecorded": true
+    },
+    {
+      "cast": "lise",
+      "pair": "ES",
+      "reference": "E",
+      "landmarks": {
+        "head": 100,
+        "jaw": 156,
+        "waist": 192,
+        "knee": 235,
+        "ground": 280
+      },
+      "imageSha256": "f036511589660a320da42793f53bfb44f7a951778072501864b1df2fcdd33c19",
+      "alphaBounds": {
+        "top": 100,
+        "bottomExclusive": 280
+      },
+      "pixelRemapRecorded": true
+    },
+    {
+      "cast": "garan",
+      "pair": "NW",
+      "reference": "W",
+      "landmarks": {
+        "head": 100,
+        "jaw": 149,
+        "waist": 189,
+        "knee": 239,
+        "ground": 280
+      },
+      "imageSha256": "ad3272022e03a3a2d29ebdf9588323cdc6ef917a3a261738654364350de9e71a",
+      "alphaBounds": {
+        "top": 100,
+        "bottomExclusive": 280
+      },
+      "pixelRemapRecorded": true
+    },
+    {
+      "cast": "garan",
+      "pair": "ES",
+      "reference": "E",
+      "landmarks": {
+        "head": 100,
+        "jaw": 155,
+        "waist": 190,
+        "knee": 239,
+        "ground": 280
+      },
+      "imageSha256": "57f13af15dd3863fa5a9085fe01f4d3af795d914f482617861981691d757d688",
+      "alphaBounds": {
+        "top": 100,
+        "bottomExclusive": 280
+      },
+      "pixelRemapRecorded": true
+    },
+    {
+      "cast": "neia",
+      "pair": "NW",
+      "reference": "N",
+      "landmarks": {
+        "head": 100,
+        "jaw": 164,
+        "waist": 195,
+        "knee": 240,
+        "ground": 280
+      },
+      "imageSha256": "04e9cb7d8907133c6380ca5bc94ca1b6eef215070b73954590c0abef327727db",
+      "alphaBounds": {
+        "top": 100,
+        "bottomExclusive": 280
+      },
+      "pixelRemapRecorded": true
+    },
+    {
+      "cast": "neia",
+      "pair": "ES",
+      "reference": "E",
+      "landmarks": {
+        "head": 100,
+        "jaw": 167,
+        "waist": 199,
+        "knee": 235,
+        "ground": 280
+      },
+      "imageSha256": "bb0b708befd826bea08afe3e56791c0e89fb7b0d2ffca5e505abb99d1a30dc2a",
+      "alphaBounds": {
+        "top": 100,
+        "bottomExclusive": 280
+      },
+      "pixelRemapRecorded": true
+    },
+    {
+      "cast": "sena",
+      "pair": "NW",
+      "reference": "N",
+      "landmarks": {
+        "head": 100,
+        "jaw": 152,
+        "waist": 188,
+        "knee": 237,
+        "ground": 280
+      },
+      "imageSha256": "b2e337aea4cb30fa5fd54565a5503dd9d4ccc82c1fb994731d858deed33ac905",
+      "alphaBounds": {
+        "top": 100,
+        "bottomExclusive": 280
+      },
+      "pixelRemapRecorded": true
+    },
+    {
+      "cast": "sena",
+      "pair": "ES",
+      "reference": "S",
+      "landmarks": {
+        "head": 100,
+        "jaw": 155,
+        "waist": 192,
+        "knee": 239,
+        "ground": 280
+      },
+      "imageSha256": "fd6e0de78157a19d7672964fbcdaa20d089bc6dbd24a74800d7a0a3ce5ea2e12",
+      "alphaBounds": {
+        "top": 100,
+        "bottomExclusive": 280
+      },
+      "pixelRemapRecorded": true
+    },
+    {
+      "cast": "iva",
+      "pair": "NW",
+      "reference": "W",
+      "landmarks": {
+        "head": 100,
+        "jaw": 157,
+        "waist": 189,
+        "knee": 239,
+        "ground": 280
+      },
+      "imageSha256": "8e35537403cb648fa0b1bac4129ee20a20b593d2bff7c1057eb9dc60f2dddd24",
+      "alphaBounds": {
+        "top": 100,
+        "bottomExclusive": 280
+      },
+      "pixelRemapRecorded": true
+    },
+    {
+      "cast": "iva",
+      "pair": "ES",
+      "reference": "E",
+      "landmarks": {
+        "head": 100,
+        "jaw": 155,
+        "waist": 194,
+        "knee": 239,
+        "ground": 280
+      },
+      "imageSha256": "0ff0b257310ebd0c855e0adffe60cf37b2ddc46db19c80d20aa713b19c8737d2",
+      "alphaBounds": {
+        "top": 100,
+        "bottomExclusive": 280
+      },
+      "pixelRemapRecorded": true
+    },
+    {
+      "cast": "dani",
+      "pair": "NW",
+      "reference": "W",
+      "landmarks": {
+        "head": 100,
+        "jaw": 159,
+        "waist": 198,
+        "knee": 239,
+        "ground": 280
+      },
+      "imageSha256": "50cae9f79f4315e8374514108a17d542c23d77018aa6bec4babb16c77c03f723",
+      "alphaBounds": {
+        "top": 100,
+        "bottomExclusive": 280
+      },
+      "pixelRemapRecorded": true
+    },
+    {
+      "cast": "dani",
+      "pair": "ES",
+      "reference": "E",
+      "landmarks": {
+        "head": 100,
+        "jaw": 155,
+        "waist": 192,
+        "knee": 238,
+        "ground": 280
+      },
+      "imageSha256": "7c79d9dc3f0a458397af6ceac345831b9377f877a92d549932de88a252549bd2",
+      "alphaBounds": {
+        "top": 100,
+        "bottomExclusive": 280
+      },
+      "pixelRemapRecorded": true
+    },
+    {
+      "cast": "guard",
+      "pair": "NW",
+      "reference": "N",
+      "landmarks": {
+        "head": 100,
+        "jaw": 155,
+        "waist": 189,
+        "knee": 231,
+        "ground": 280
+      },
+      "imageSha256": "4add5d6c994e1bab964ee29d709725d6a3a8792f85feba74c78ba491d2e646db",
+      "alphaBounds": {
+        "top": 100,
+        "bottomExclusive": 280
+      },
+      "pixelRemapRecorded": true
+    },
+    {
+      "cast": "guard",
+      "pair": "ES",
+      "reference": "E",
+      "landmarks": {
+        "head": 100,
+        "jaw": 158,
+        "waist": 192,
+        "knee": 239,
+        "ground": 280
+      },
+      "imageSha256": "933bf4840031344013aa9f81c643f0e9f0252f69bf9658dbb717cadba060d34b",
+      "alphaBounds": {
+        "top": 100,
+        "bottomExclusive": 280
+      },
+      "pixelRemapRecorded": true
+    },
+    {
+      "cast": "archer",
+      "pair": "NW",
+      "reference": "N",
+      "landmarks": {
+        "head": 100,
+        "jaw": 160,
+        "waist": 190,
+        "knee": 239,
+        "ground": 280
+      },
+      "imageSha256": "deb909c446c2290975614ab469da4f906ca3db24a01c81de8609e89a4ac7041d",
+      "alphaBounds": {
+        "top": 100,
+        "bottomExclusive": 280
+      },
+      "pixelRemapRecorded": true
+    },
+    {
+      "cast": "archer",
+      "pair": "ES",
+      "reference": "E",
+      "landmarks": {
+        "head": 100,
+        "jaw": 158,
+        "waist": 196,
+        "knee": 239,
+        "ground": 280
+      },
+      "imageSha256": "c588b0c43d390055cd186c84e4c9ee7365b193e81a3cee96efae8988841c9765",
+      "alphaBounds": {
+        "top": 100,
+        "bottomExclusive": 280
+      },
+      "pixelRemapRecorded": true
+    },
+    {
+      "cast": "vesk",
+      "pair": "NW",
+      "reference": "N",
+      "landmarks": {
+        "head": 100,
+        "jaw": 145,
+        "waist": 182,
+        "knee": 244,
+        "ground": 280
+      },
+      "imageSha256": "3e45c70dc87eacb1ac3ade3438868d98e8a5e33568f67c9d0231b905472fa656",
+      "alphaBounds": {
+        "top": 100,
+        "bottomExclusive": 280
+      },
+      "pixelRemapRecorded": true
+    },
+    {
+      "cast": "vesk",
+      "pair": "ES",
+      "reference": "E",
+      "landmarks": {
+        "head": 100,
+        "jaw": 146,
+        "waist": 182,
+        "knee": 245,
+        "ground": 280
+      },
+      "imageSha256": "e493492b62df0a0aa0f995a203d0bd87a61fa21c7c4c488caa0e9107b3729434",
+      "alphaBounds": {
+        "top": 100,
+        "bottomExclusive": 280
+      },
+      "pixelRemapRecorded": true
+    },
+    {
+      "cast": "toma",
+      "pair": "NW",
+      "reference": "N",
+      "landmarks": {
+        "head": 100,
+        "jaw": 156,
+        "waist": 193,
+        "knee": 242,
+        "ground": 280
+      },
+      "imageSha256": "d1fec1b6bde763951f93433b79a7652dad1ccd9766490927db132270504d7acd",
+      "alphaBounds": {
+        "top": 100,
+        "bottomExclusive": 280
+      },
+      "pixelRemapRecorded": true
+    },
+    {
+      "cast": "toma",
+      "pair": "ES",
+      "reference": "E",
+      "landmarks": {
+        "head": 100,
+        "jaw": 155,
+        "waist": 194,
+        "knee": 239,
+        "ground": 280
+      },
+      "imageSha256": "c3322be48756003cdc896711b16193bde6ca5ab240fbe2e2d0797f8aaf75d917",
+      "alphaBounds": {
+        "top": 100,
+        "bottomExclusive": 280
+      },
+      "pixelRemapRecorded": true
+    },
+    {
+      "cast": "worker",
+      "pair": "NW",
+      "reference": "N",
+      "landmarks": {
+        "head": 100,
+        "jaw": 150,
+        "waist": 188,
+        "knee": 239,
+        "ground": 280
+      },
+      "imageSha256": "a073d4ff5c5be2bec7d48fc27b54b602710adc2feb41811c94ef28474bb5df05",
+      "alphaBounds": {
+        "top": 100,
+        "bottomExclusive": 280
+      },
+      "pixelRemapRecorded": true
+    },
+    {
+      "cast": "worker",
+      "pair": "ES",
+      "reference": "S",
+      "landmarks": {
+        "head": 100,
+        "jaw": 152,
+        "waist": 190,
+        "knee": 240,
+        "ground": 280
+      },
+      "imageSha256": "42b5a53fbb57b0531fc7a410c1ce5ce76d86fc58cfce9b8211123a87111ca35b",
+      "alphaBounds": {
+        "top": 100,
+        "bottomExclusive": 280
+      },
+      "pixelRemapRecorded": true
+    },
+    {
+      "cast": "delegation",
+      "pair": "NW",
+      "reference": "N",
+      "landmarks": {
+        "head": 100,
+        "jaw": 145,
+        "waist": 181,
+        "knee": 248,
+        "ground": 280
+      },
+      "imageSha256": "9b84406986867336c370de7f532b31ed7055a706cd0b14a3a3ad4d0c5b2a0630",
+      "alphaBounds": {
+        "top": 100,
+        "bottomExclusive": 280
+      },
+      "pixelRemapRecorded": true
+    },
+    {
+      "cast": "delegation",
+      "pair": "ES",
+      "reference": "E",
+      "landmarks": {
+        "head": 100,
+        "jaw": 147,
+        "waist": 181,
+        "knee": 248,
+        "ground": 280
+      },
+      "imageSha256": "0e90fa9d7b10b4434f82bc7438ed06e1aa61b24e1063d6e65b3cc4b1bb466bf4",
+      "alphaBounds": {
+        "top": 100,
+        "bottomExclusive": 280
+      },
+      "pixelRemapRecorded": true
+    }
+  ],
+  "referencesUnchanged": true,
+  "originalMasterHashesUnchanged": 48,
+  "matchedPairs": 24,
+  "colourCandidatesWithUnchangedAlpha": [
+    "toma/W",
+    "delegation/W"
+  ],
+  "remainingScope": "Outfit and equipment design differences are not resolved by five-point geometry correction."
+}

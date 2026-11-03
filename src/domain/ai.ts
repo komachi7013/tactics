@@ -1,4 +1,4 @@
-import { attackPreview, getCell, getUnit, reachable, reduce } from './engine';
+import { attackPreview, defendAvailability, getCell, getUnit, reachable, reduce } from './engine';
 import type { BattleState, Command, Facing, Pos, Reachable, Unit } from './types';
 const distance=(a:Pos,b:Pos)=>Math.abs(a.x-b.x)+Math.abs(a.y-b.y);
 interface Candidate {id:string; pos:Reachable; cost:number; target:string; damage:number; remaining:number}
@@ -30,11 +30,12 @@ function selectCandidate(options:Candidate[]):Candidate|undefined {
 }
 export interface EnemyIntent {
  actorId:string; destination:Pos; path:Pos[]; targetId?:string; damage?:number;
- action:'attack'|'defend'; moveCost:number;
+ action:'attack'|'defend'|'wait'; moveCost:number;
 }
 export interface EnemyDecisionSnapshot {byActor:Record<string,EnemyIntent>;next:EnemyIntent|undefined}
-function intent(candidate:Candidate):EnemyIntent {
- const result:EnemyIntent={actorId:candidate.id,destination:{x:candidate.pos.x,y:candidate.pos.y},path:candidate.pos.path.map(p=>({x:p.x,y:p.y})),action:candidate.target?'attack':'defend',moveCost:candidate.cost};
+function intent(state:BattleState,candidate:Candidate):EnemyIntent {
+ const action=candidate.target?'attack':defendAvailability(state,candidate.id).cooldownReady?'defend':'wait';
+ const result:EnemyIntent={actorId:candidate.id,destination:{x:candidate.pos.x,y:candidate.pos.y},path:candidate.pos.path.map(p=>({x:p.x,y:p.y})),action,moveCost:candidate.cost};
  if(candidate.target){result.targetId=candidate.target;result.damage=candidate.damage;}
  // Cached snapshots are derived values; callers must not mutate a shared result.
  Object.freeze(result.destination);result.path.forEach(Object.freeze);Object.freeze(result.path);
@@ -47,11 +48,11 @@ export function createEnemyDecisionSnapshotReader(onCompute?:()=>void):(state:Ba
  onCompute?.();
  const enemies=state.phase==='playing'?state.units.filter(u=>u.team==='enemy'&&u.hp>0):[];
  const options=buildCandidates(state,enemies),byActor:Record<string,EnemyIntent>={};
- for(const enemy of enemies){const choice=selectCandidate(options.filter(o=>o.id===enemy.id));if(choice)byActor[enemy.id]=intent(choice);}
+ for(const enemy of enemies){const choice=selectCandidate(options.filter(o=>o.id===enemy.id));if(choice)byActor[enemy.id]=intent(state,choice);}
  // Keep the global candidate collection intact: per-actor fallback cannot replace it.
  const eligible=new Set(enemies.filter(u=>!u.acted).map(u=>u.id));
  const choice=selectCandidate(options.filter(o=>eligible.has(o.id)));
- const result=Object.freeze({byActor:Object.freeze(byActor),next:choice?intent(choice):undefined});cache.set(state,result);return result;
+ const result=Object.freeze({byActor:Object.freeze(byActor),next:choice?intent(state,choice):undefined});cache.set(state,result);return result;
  };
 }
 /** Immutable BattleState references are the cache key, never hover or animation time. */
@@ -67,7 +68,8 @@ export function runEnemyActivationWithTrace(state:BattleState):{state:BattleStat
  if(!choice)return {state,commands};
  let s=apply(state,{type:'start',unitId:choice.id});
  if(choice.cost>0)s=apply(s,{type:'move',to:choice.pos});
- s=choice.target?apply(s,{type:'attack',targetId:choice.target}):apply(s,{type:'defend'});
+ if(choice.target)s=apply(s,{type:'attack',targetId:choice.target});
+ else if(defendAvailability(s,choice.id).legal)s=apply(s,{type:'defend'});
  if(s.phase!=='playing')return {state:s,commands};
  const actor=getUnit(s,choice.id)!;
  const target=s.units.filter(u=>u.team==='player'&&u.hp>0).sort((a,b)=>distance(a.pos,actor.pos)-distance(b.pos,actor.pos)||a.id.localeCompare(b.id))[0];

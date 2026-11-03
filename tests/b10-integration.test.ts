@@ -7,15 +7,15 @@ import { createQaStorage, qaStorageKey } from '../src/qa/storage';
 import { buildEightBattleCheckpoint } from '../src/qa/checkpoint';
 import type { BattleId, BattleState, Command } from '../src/domain/types';
 import b01 from './fixtures/routes.json';
-import b02 from './fixtures/b02-route.json';
-import b03 from './fixtures/b03-route.json';
-import b04 from './fixtures/b04-route.json';
-import b05 from './fixtures/b05-route.json';
-import b06 from './fixtures/b06-route.json';
-import b07 from './fixtures/b07-route.json';
-import b08 from './fixtures/b08-route.json';
-import b09 from './fixtures/b09-route.json';
-import b10 from './fixtures/b10-route.json';
+import b02 from './fixtures/defend-cooldown-v1/b02-route.json';
+import b03 from './fixtures/manual-cart-v1/b03-route.json';
+import b04 from './fixtures/defend-cooldown-v1/b04-route.json';
+import b05 from './fixtures/defend-cooldown-v1/b05-route.json';
+import b06 from './fixtures/defend-cooldown-v1/b06-route.json';
+import b07 from './fixtures/defend-cooldown-v1/b07-route.json';
+import b08 from './fixtures/defend-cooldown-v1/b08-route.json';
+import b09 from './fixtures/defend-cooldown-v1/b09-route.json';
+import b10 from './fixtures/defend-cooldown-v1/b10-route.json';
 
 // Read actual map/unit data instead of reusing the engine's eligibility verdict.
 function holdingEligible(state: BattleState, gate = state.gate): boolean {

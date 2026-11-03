@@ -1,0 +1,21 @@
+{
+  "videoSha256": "3664f42b103d93f4cce036b582dff55b1b29207a25c58aa7657d6a3bb18f158e",
+  "visualReviewed": true,
+  "framesDirectory": "keyed-reviewed/frames-clean",
+  "estimatedContactUncertaintyFrames": 2,
+  "contacts": [
+    {
+      "frame": 38,
+      "foot": "R"
+    },
+    {
+      "frame": 48,
+      "foot": "L"
+    },
+    {
+      "frame": 58,
+      "foot": "R"
+    }
+  ],
+  "reviewNote": "Guard N source and feet sheets reviewed: near image-right R support38/58, far L48 with alternate swings and heel-toe passage. Back-facing helmet/armor, sword and shield maintained. Fullbody/soles inside source. Palette uses protected red magenta matte. Garan N driver. Estimated support phases, not motion capture."
+}

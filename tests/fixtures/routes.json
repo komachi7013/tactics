@@ -264,13 +264,13 @@
     "commands": [
       {
         "type": "start",
-        "unitId": "ally-lise"
+        "unitId": "ally-neia"
       },
       {
         "type": "move",
         "to": {
-          "x": 2,
-          "y": 5
+          "x": 1,
+          "y": 4
         }
       },
       {
@@ -282,13 +282,13 @@
       },
       {
         "type": "start",
-        "unitId": "ally-garan"
+        "unitId": "ally-lise"
       },
       {
         "type": "move",
         "to": {
-          "x": 1,
-          "y": 2
+          "x": 2,
+          "y": 3
         }
       },
       {
@@ -301,12 +301,12 @@
       },
       {
         "type": "start",
-        "unitId": "ally-neia"
+        "unitId": "ally-garan"
       },
       {
         "type": "move",
         "to": {
-          "x": 4,
+          "x": 5,
           "y": 6
         }
       },
@@ -320,13 +320,13 @@
       },
       {
         "type": "start",
-        "unitId": "ally-lise"
+        "unitId": "ally-garan"
       },
       {
         "type": "move",
         "to": {
-          "x": 6,
-          "y": 5
+          "x": 7,
+          "y": 6
         }
       },
       {
@@ -339,18 +339,74 @@
       },
       {
         "type": "start",
+        "unitId": "ally-lise"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 3,
+          "y": 6
+        }
+      },
+      {
+        "type": "attack",
+        "targetId": "enemy-melee-01"
+      },
+      {
+        "type": "end",
+        "facing": "E"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-neia"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "type": "attack",
+        "targetId": "enemy-melee-02"
+      },
+      {
+        "type": "end",
+        "facing": "E"
+      },
+      {
+        "type": "start",
         "unitId": "ally-garan"
       },
       {
         "type": "move",
         "to": {
-          "x": 4,
-          "y": 2
+          "x": 5,
+          "y": 5
         }
       },
       {
         "type": "attack",
-        "targetId": "enemy-bow-01"
+        "targetId": "enemy-melee-02"
+      },
+      {
+        "type": "end",
+        "facing": "E"
+      },
+      {
+        "type": "start",
+        "unitId": "ally-lise"
+      },
+      {
+        "type": "move",
+        "to": {
+          "x": 7,
+          "y": 6
+        }
+      },
+      {
+        "type": "defend"
       },
       {
         "type": "end",
@@ -364,12 +420,12 @@
         "type": "move",
         "to": {
           "x": 4,
-          "y": 5
+          "y": 4
         }
       },
       {
         "type": "attack",
-        "targetId": "enemy-melee-01"
+        "targetId": "enemy-bow-01"
       },
       {
         "type": "end",
@@ -387,26 +443,25 @@
         }
       }
     ],
-    "phase": "won",
-    "round": 3,
+    "round": 4,
+    "playerHp": [
+      [
+        "ally-lise",
+        13
+      ],
+      [
+        "ally-garan",
+        13
+      ],
+      [
+        "ally-neia",
+        0
+      ]
+    ],
     "records": [
       "A",
       "B"
     ],
-    "playerHp": [
-      [
-        "ally-lise",
-        6
-      ],
-      [
-        "ally-garan",
-        24
-      ],
-      [
-        "ally-neia",
-        1
-      ]
-    ],
-    "provenance": "Faction turns v1: regenerated legal public player commands and unchanged AI, actual initial factory, unchanged terrain/stats/deadlines. Pre-change fixtures preserved under faction-turn-v1/before/tests."
+    "provenance": "Immediate B01 drainage: regenerated legal public commands against unchanged enemy AI, initial factory, abilities and deadline. Water changes on the gate action, with no skipped enemy turns."
   }
 }
