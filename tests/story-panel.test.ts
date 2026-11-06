@@ -27,11 +27,11 @@ class DocumentPort {
   getSelection():Selection|null{return null;}
 }
 let now=1000;
-function setup(pages:readonly StoryPage[]=B01_INTRO,skipLabel?:string){
+function setup(pages:readonly StoryPage[]=B01_INTRO,skipLabel?:string,scenery?:{background:string;chapterTitle?:string}){
   now=1000;vi.spyOn(performance,'now').mockImplementation(()=>now);
   const doc=new DocumentPort();vi.stubGlobal('document',doc);
   const units=createInitialState().units,before=structuredClone(units),complete=vi.fn();
-  const dispose=mountStoryPanel(doc.host as unknown as HTMLElement,{title:'B01',pages,completeLabel:'作戦説明へ',findSpeaker:id=>units.find(u=>u.id===id),complete,skipLabel});
+  const dispose=mountStoryPanel(doc.host as unknown as HTMLElement,{title:'B01',pages,completeLabel:'作戦説明へ',findSpeaker:id=>units.find(u=>u.id===id),complete,skipLabel,scenery});
   const all=()=>doc.host.all(),text=()=>all().find(n=>n.className==='story-text')!;
   const buttons=()=>all().filter(n=>n.tagName==='BUTTON');
   const click=(n:ElementPort,detail=1)=>n.onclick?.({detail,stopPropagation:vi.fn()} as unknown as MouseEvent);
@@ -40,10 +40,10 @@ function setup(pages:readonly StoryPage[]=B01_INTRO,skipLabel?:string){
 }
 afterEach(()=>{vi.restoreAllMocks();vi.unstubAllGlobals();});
 describe('authored B01 story',()=>{
-  it('retains complete original blocks and does not invent an unnamed speaker',()=>{
+  it('retains complete blocks and explicitly identifies Lise',()=>{
     expect(B01_INTRO.map(p=>p.text)).toEqual(['「杭は流されていない。\n……地図のほうが、書き換えられている。」','測量官リセは、警備隊が接収する前に水位痕と住民名簿を確保しようと決めた。渡し守ネイアが水路を指し、ガランは退路に立つ。']);
-    expect(B01_INTRO.every(p=>!p.speaker)).toBe(true);
-    expect(B01_GUIDE).toBe('記録は上下左右の隣接から1行動で取得。リセが倒れると敗北。水門を操作すると、操作直後から対象水路の移動費2→1（浅瀬適性のある人物は1のまま）。');
+    expect(B01_INTRO[0].speaker).toEqual({name:'リセ',unitId:'ally-lise'}); expect(B01_INTRO[1].speaker).toBeUndefined();
+    expect(B01_GUIDE).toBe('2つの水位記録を取得し、リセを脱出地点まで移動させる。記録のあるマスへ移動し、確認画面で「確定」を選ぶと取得できます。');
   });
   it('ignores rapid/repeated inputs and settles once, including after back/replay',()=>{
     const c=new StoryCursor(2);expect(c.input('next',0)).toBe('page');expect(c.input('next',100)).toBe('ignored');
@@ -94,7 +94,7 @@ describe('story input and lifecycle',()=>{
   });
   it('uses the shared Neia-standard face widget for explicitly authored speakers',()=>{
     const s=setup([{text:'長い本文。'.repeat(300),speaker:{name:'ネイア',unitId:'ally-neia'}}]);
-    const face=s.all().find(n=>n.className.split(' ').includes('inspection-face'))!;expect(face.dataset.faceAsset).toBe('neia');expect(face.children[0].src).toBe('/assets/motion-v1/portraits/neia.png');
+    const face=s.all().find(n=>n.className.split(' ').includes('inspection-face'))!;expect(face.dataset.faceAsset).toBe('neia');expect(face.children[0].src).toBe('/assets/characters/portraits/neia.png');
     expect(s.text().textContent.length).toBeGreaterThan(1000);expect(s.all().find(n=>n.className==='story-speaker')!.textContent).toBe('ネイア');
     face.children[0].onerror!();expect(face.children[0].hidden).toBe(true);expect(s.all().find(n=>n.className==='story-speaker')!.textContent).toBe('ネイア');
   });
@@ -116,5 +116,27 @@ describe('explicit conversation skip',()=>{
   it('keyboard Enter on skip does not advance merely one page or repeat the continuation',()=>{
     const s=setup(B01_INTRO,'会話をスキップ'),skip=s.buttons().find(b=>b.className==='story-skip')!;
     s.key('Enter',skip);s.key(' ',skip);expect(s.complete).toHaveBeenCalledOnce();expect(s.units).toEqual(s.before);
+  });
+});
+
+
+describe('scenic title, narration and dialogue', () => {
+  it('keeps the title separate, preserves all pages and changes layout by authored speaker', () => {
+    const pages: StoryPage[] = [{text:'地の文'},{text:'会話',speaker:{name:'ネイア',unitId:'ally-neia'}}];
+    const s = setup(pages, undefined, {background:'/assets/story/b07.jpg',chapterTitle:'7章：公開された署名'});
+    const root = s.doc.host.children[0];
+    expect(root.dataset.scenic).toBe('true'); expect(root.dataset.page).toBe('title');
+    expect(s.text().textContent).toBe('7章：公開された署名');
+    const backdrop = s.all().find(n => n.className === 'story-backdrop')!;
+    expect(backdrop.src).toBe('/assets/story/b07.jpg'); backdrop.onerror!(); expect(backdrop.hidden).toBe(true);
+    s.click(s.buttons()[1]); expect(root.dataset.page).toBe('narration'); expect(s.text().textContent).toBe('地の文');
+    now+=300; s.click(s.buttons()[1]); expect(root.dataset.page).toBe('dialogue'); expect(s.text().textContent).toBe('会話');
+    expect(s.all().find(n => n.className === 'story-portrait')!.hidden).toBe(false);
+    now+=300; s.click(s.buttons()[0]); expect(root.dataset.page).toBe('narration');
+    now+=300; s.click(s.buttons()[0]); expect(root.dataset.page).toBe('title'); expect(s.complete).not.toHaveBeenCalled();
+  });
+  it('leaves field conversations on the battle screen without an added title or backdrop', () => {
+    const s = setup([{text:'戦闘中の会話'}]); expect(s.all().some(n => n.className==='story-backdrop')).toBe(false);
+    expect(s.text().textContent).toBe('戦闘中の会話');
   });
 });

@@ -1,0 +1,66 @@
+{
+  "actor": "iva",
+  "direction": "S",
+  "frameMs": 100,
+  "frames": 4,
+  "cell": 288,
+  "art_source": "host_image",
+  "route": "Codex ImageGen",
+  "sourceSha256": "dfa1b864174a139be71e535df8f6db297dc537d2a6825be105b0bfe1ffc86dc9",
+  "sheetSha256": "dccd029d425421bb1c71220c72068b504e008c9a92724baff58bcf8d22862ecd",
+  "paddedOriginPx": [
+    144,
+    252
+  ],
+  "anchor": [
+    144,
+    252
+  ],
+  "pixelsUnchangedByPadding": true,
+  "normalization": {
+    "referenceFirstFrameHeight": 179,
+    "scale": 0.4430693069306931,
+    "oneTransformForAllFrames": true,
+    "lowAlphaRemovalThreshold": 76
+  },
+  "facing": "screen lower-left, approved S idle reference",
+  "stats": [
+    {
+      "bbox": [
+        107,
+        73,
+        181,
+        252
+      ]
+    },
+    {
+      "bbox": [
+        85,
+        79,
+        182,
+        251
+      ]
+    },
+    {
+      "bbox": [
+        85,
+        74,
+        196,
+        241
+      ]
+    },
+    {
+      "bbox": [
+        89,
+        70,
+        179,
+        246
+      ]
+    }
+  ],
+  "issues": [],
+  "weapon": "melee",
+  "referenceHeightPx": 179,
+  "status": "final",
+  "review": "South attack facing accepted by user, 2026-11-05"
+}

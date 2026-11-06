@@ -112,7 +112,7 @@ describe('live battle continuation and event wiring', () => {
     expect(h.runEnemy).toHaveBeenCalledTimes(1); expect(h.state().turn).toBe('player');
     // This enemy committed an attack. A hidden/reduced-motion preference no
     // longer skips it, but natural completion must not schedule the AI twice.
-    expect(h.pending().map(t=>t.ms)).toEqual([220]);
+    expect(h.pending().map(t=>t.ms)).toEqual([400]);
     const attackTimer=h.pending()[0].id,committed=structuredClone(h.state());
     h.signals.visibility(true);h.signals.preference(true);h.flow.finishNow();
     expect(h.flow.presentationBusy).toBe(true);expect(h.flow.canShortenPresentation).toBe(false);

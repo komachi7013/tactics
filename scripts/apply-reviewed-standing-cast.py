@@ -32,7 +32,7 @@ def main():
         output = original.crop((0, 44, 256, 300))
         digest = hashlib.sha256(output.tobytes()).hexdigest()[:10]
         character, direction = job['cast'], job['direction']
-        relative = f'assets/standing-v1/{character}/idle-{direction}-{digest}.png'
+        relative = f'assets/characters/standing-v1/{character}/idle-{direction}-{digest}.png'
         target = ROOT / 'public' / relative
         target.parent.mkdir(parents=True, exist_ok=True)
         output.save(target)

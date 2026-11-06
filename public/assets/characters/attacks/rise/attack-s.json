@@ -1,0 +1,62 @@
+{
+  "actor": "rise",
+  "direction": "S",
+  "frameMs": 100,
+  "frames": 4,
+  "cell": 288,
+  "art_source": "host_image",
+  "route": "Codex ImageGen",
+  "sourceSha256": "30fc92b54afd4997d3a43280ed63bc7498331f8228f917892748f154844bffe1",
+  "sheetSha256": "54b370fb0947b1db97986db68d06a3afdb40afd833ce34326b2d0d5b3c7e7639",
+  "paddedOriginPx": [
+    144,
+    254.0
+  ],
+  "anchor": [
+    144,
+    254.0
+  ],
+  "pixelsUnchangedByPadding": true,
+  "normalization": {
+    "referenceFirstFrameHeight": 199,
+    "scale": 0.45958429561200925,
+    "oneTransformForAllFrames": true,
+    "lowAlphaRemovalThreshold": 76
+  },
+  "facing": "screen lower-left, approved S idle reference",
+  "stats": [
+    {
+      "bbox": [
+        89,
+        54,
+        199,
+        254
+      ]
+    },
+    {
+      "bbox": [
+        61,
+        59,
+        187,
+        254
+      ]
+    },
+    {
+      "bbox": [
+        65,
+        54,
+        211,
+        251
+      ]
+    },
+    {
+      "bbox": [
+        77,
+        50,
+        188,
+        251
+      ]
+    }
+  ],
+  "issues": []
+}

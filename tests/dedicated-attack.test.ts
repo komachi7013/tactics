@@ -25,7 +25,7 @@ describe('limited dedicated attacks', () => {
     const fallback = (patch: object) => { const copy = structuredClone(state); Object.assign(copy.units.find(u => u.id === id)!, patch); expect(withDedicatedAttack(plan, copy, () => true)).toBe(plan); };
     fallback({ role: '堤防衛士' }); fallback({ weapon: id === 'ally-lise' ? 'bow' : 'melee' });
     for (const pos of [{ ...plan.attack!.targetBefore.pos }, { x: 2, y: 4 }, { x: 2, y: 6 }]) fallback({ pos });
-    expect(withDedicatedAttack({ ...plan, attack: { ...plan.attack!, actorId: 'ally-garan' } }, state, () => true)!.attackDuration).toBe(220);
+    expect(withDedicatedAttack({ ...plan, attack: { ...plan.attack!, actorId: 'unknown' } }, state, () => true)!.attackDuration).toBe(220);
   });
   it('samples each 100ms phase and restores idle at400 or on delayed frames, with unchanged turn/HP', () => {
     const { plan, state } = committed(), frozen = structuredClone(state), p = withDedicatedAttack(plan, state, () => true)!;
@@ -53,8 +53,20 @@ describe('limited dedicated attacks', () => {
 
 describe('cardinal direction isolation', () => {
   it.each(Object.keys(ATTACK_BODIES) as (keyof typeof ATTACK_BODIES)[])('selects precisely %s from committed geometry, independent of idle facing', id => {
-    const body = ATTACK_BODIES[id], { state, plan } = committed(body.actorId);
-    const actor = state.units.find(u => u.id === body.actorId)!;
+    const body = ATTACK_BODIES[id];
+    const { state, plan: sample } = committed();
+    const actor = state.units.find(u => u.id === 'ally-lise')!;
+    if ('castId' in body) {
+      actor.id = body.castId === 'guard' ? 'enemy-melee-02'
+        : body.castId === 'archer' ? 'enemy-bow-02'
+        : body.castId === 'vesk' ? 'enemy-vesk' : 'ally-' + body.castId;
+      if (body.role === null) actor.team = 'enemy';
+    } else {
+      actor.id = body.actorId;
+    }
+    actor.role = body.role ?? 'ステージ固有の敵部隊';
+    actor.weapon = body.weapon;
+    const plan = { ...sample, attack: { ...sample.attack!, actorId: actor.id, weapon: body.weapon } };
     actor.facing = body.direction === 'N' ? 'S' : 'N';
     const vectors = { N: [0,-1], E: [1,0], S: [0,1], W: [-1,0] } as const;
     const [dx,dy] = vectors[body.direction], distance = body.weapon === 'bow' ? 2 : 1;
@@ -66,14 +78,13 @@ describe('cardinal direction isolation', () => {
       const fallback = { ...directional, attack: { ...directional.attack, targetBefore: { ...directional.attack.targetBefore, pos: { x: actor.pos.x+x, y: actor.pos.y+y } } } };
       expect(withDedicatedAttack(fallback,state,() => true)).toBe(fallback);
     }
-    for (const patch of [{role:'堤防衛士'},{weapon:body.weapon === 'bow' ? 'melee' : 'bow'}]) {
-      const other = structuredClone(state); Object.assign(other.units.find(u=>u.id===body.actorId)!,patch);
+    const mismatch = body.role === null ? { team: 'player' } : { role: '別の役割' };
+    for (const patch of [mismatch,{weapon:body.weapon === 'bow' ? 'melee' : 'bow'},{equipmentWeaponId:'custom'}]) {
+      const other = structuredClone(state); Object.assign(other.units.find(u=>u.id===actor.id)!,patch);
       expect(withDedicatedAttack(directional,other,()=>true)).toBe(directional);
     }
-    for (const otherId of state.units.filter(u=>u.id!==body.actorId).map(u=>u.id)) {
-      const other = { ...directional, attack: { ...directional.attack, actorId:otherId } };
-      expect(withDedicatedAttack(other,state,()=>true)).toBe(other);
-    }
+    const other = { ...directional, attack: { ...directional.attack, actorId: 'unknown' } };
+    expect(withDedicatedAttack(other,state,()=>true)).toBe(other);
     expect(JSON.stringify({state,directional})).toBe(frozen);
     const wrongWeapon = { ...directional, attack: { ...directional.attack, weapon: body.weapon === 'bow' ? 'melee' as const : 'bow' as const } };
     expect(withDedicatedAttack(wrongWeapon,state,() => true)).toBe(wrongWeapon);

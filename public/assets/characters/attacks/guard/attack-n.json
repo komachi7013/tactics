@@ -1,0 +1,19 @@
+{
+  "art_source": "host_image",
+  "route": "Codex ImageGen",
+  "sourceSha256": "db031c1e076744e3ad9d0d060c8f5149deebf17d597445d44a64df3b3efab925",
+  "status": "candidate",
+  "frameMs": 100,
+  "cell": 288,
+  "anchor": [
+    144,
+    252
+  ],
+  "issues": [],
+  "actor": "guard",
+  "direction": "N",
+  "weapon": "melee",
+  "frames": 4,
+  "referenceHeightPx": 179,
+  "sheetSha256": "1ab80efb2046ccb8adfe29696a701922e691fe8213da0d1b6591e7dcfcd567d9"
+}

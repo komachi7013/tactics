@@ -36,5 +36,5 @@ export function attackAvailability(state: BattleState): AttackAvailability {
   if (targets.length) return { enabled: true, reason: '', targets };
   return unavailable(enemies.length === 0 ? '攻撃できる生存敵がいません。'
     : actor.weapon === 'bow' ? '弩の射程と射線を満たす敵がいません。'
-      : '隣接・高さ差1以内に攻撃できる敵がいません。');
+      : '近くに攻撃できる敵がいません。');
 }

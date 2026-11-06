@@ -48,10 +48,10 @@ describe('authored map object display mapping', () => {
     for (const id of BATTLE_IDS) {
       const rows = mapObjectPlacements(battle(id)).filter(row => row.kind === 'equipment');
       expect(rows.length, id).toBe(id === 'B12' ? 0 : 1);
-      if (rows[0]) { expect(rows[0].label).toBe('装備箱'); expect(rows[0].instruction).toContain('勝利時に確定'); }
+      if (rows[0]) { expect(rows[0].label).toBe('宝箱'); expect(rows[0].instruction).toContain('持ち帰った装備'); }
     }
     const state = battle('B01'); state.pendingEquipment = [state.equipmentChests![0].eventId];
-    expect(mapObjectPlacements(state).find(r => r.kind === 'equipment')).toMatchObject({ completed: true, label: '装備箱・仮回収済み' });
+    expect(mapObjectPlacements(state).find(r => r.kind === 'equipment')).toBeUndefined();
   });
   it('distinguishes records, optional archives and existing rescue people without replacing them', () => {
     const state = battle('B01'); state.records = ['A'];
@@ -95,11 +95,11 @@ describe('authored map object display mapping', () => {
   });
   it('keeps reversible water direction distinct from chain opening through real gate commands', () => {
     let water = oneActorBeside('B04', getBattleConfig('B04').gate!);
-    expect(marker(water, 'gate').label).toBe('水門操作弁\n乾地');
+    expect(marker(water, 'gate').label).toBe('水門弁\n乾地');
     water = commit(water, { type: 'start', unitId: 'ally-lise' }); water = commit(water, { type: 'gate' });
-    expect(marker(water, 'gate').label).toBe('水門操作弁\nR2再入水予約');
+    expect(marker(water, 'gate').label).toBe('水門弁\nR2再入水予約');
     expect(marker(water, 'gate').instruction).not.toContain('任意');
-    water = nextRound(water); expect(marker(water, 'gate').label).toBe('水門操作弁\n入水');
+    water = nextRound(water); expect(marker(water, 'gate').label).toBe('水門弁\n入水');
     let signal = oneActorBeside('B10', getBattleConfig('B10').gate!);
     signal = commit(signal, { type: 'start', unitId: 'ally-lise' }); signal = commit(signal, { type: 'gate' });
     expect(marker(signal, 'gate').label).toBe('外港鎖門の信号盤\nR2開通予約');

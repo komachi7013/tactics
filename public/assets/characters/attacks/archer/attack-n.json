@@ -1,0 +1,19 @@
+{
+  "art_source": "host_image",
+  "route": "Codex ImageGen",
+  "sourceSha256": "1c95d4ad6382e75ffc2bd8f54f7925b0d997ff5eff2412f708de683f107a10d9",
+  "status": "candidate",
+  "frameMs": 100,
+  "cell": 288,
+  "anchor": [
+    144,
+    252
+  ],
+  "issues": [],
+  "actor": "archer",
+  "direction": "N",
+  "weapon": "bow",
+  "frames": 4,
+  "referenceHeightPx": 179,
+  "sheetSha256": "ada821058f199e39edbc3cad3b42c274624dca27c7537cb697f89e031cd0efc2"
+}

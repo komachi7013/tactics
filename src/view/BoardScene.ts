@@ -9,19 +9,21 @@ import Phaser from 'phaser';
 import { B01_TEXTURES, B01_SCENE, b01Projection, b01FloorsAtPoint, b01ActorAnchor } from './b01Landscape';
 import type { BattleId, BattleState, Pos } from '../domain/types';
 import { b01EnvironmentKey } from './b01Environment';
+import { isMovementBlocked } from '../domain/engine';
 import { getBattleConfig } from '../domain/battles';
 import { ATTACK_BODIES, dedicatedAttackFrame, withDedicatedAttack, type AttackBodyId } from './dedicatedAttack';
-import { samplePresentation, type PresentationPlan } from './presentation';
+import { separateMoveAndAttack, samplePresentation, type PresentationPlan } from './presentation';
 import { AttackResultFx, attackWeaponLines, attackWoundLines, type FxLine } from './attackResultFx';
 import {CART_WHEEL,cartWheelAngle,cartWheelFrame} from './cartWheel';
 import {movementFacing} from './directionalMovement';
 import {escortVisualFacing} from './escortVisualFacing';
 import {distancePose,travelledTiles} from './movementTempo';
 import {CAST_IDLE,CAST_WALK,castIdle,castWalk} from './castMotion';
+import { canPickBoard } from './boardPointer';
 import {withFourPoseTempo,STANDING_WALK_TEMPO} from './movementTempo';
 import { HD2D_WALK, hd2dWalkFrame, type WalkQaCandidate } from '../qa/hd2dWalk';
 
-export interface BoardView { state: BattleState; selected: string | null; cursor: Pos; reachable: Pos[]; mode: string; enabled: boolean; commandActorId?: string | null }
+export interface BoardView { state: BattleState; selected: string | null; cursor: Pos; reachable: Pos[]; mode: string; enabled: boolean; editPassability?: boolean; commandActorId?: string | null }
 export interface BoardRenderReport { stage: string; error: string | null; warnings: string[]; drawn: boolean }
 export class BoardScene extends Phaser.Scene {
   private view?: BoardView;
@@ -98,6 +100,16 @@ export class BoardScene extends Phaser.Scene {
   private readonly attackResult = new AttackResultFx();
   private actors = new Map<string, { group: Phaser.GameObjects.Container; x: number; y: number; alpha: number; ghost: boolean; health: { ink: Phaser.GameObjects.Graphics; y: number; width: number; max: number; team: 'player' | 'enemy' }; logicalDepth?: number; overlay?: Phaser.GameObjects.Container; body?: { image: Phaser.GameObjects.Image; key: string; frame?: number; originX?: number; originY: number; size: number; dedicated: boolean; walking?: boolean } }>();
   private projection?: (p: Pos) => { x: number; y: number };
+  private pendingViewportFocus?: string;
+  focusUnitInViewport(unitId: string) { this.pendingViewportFocus = unitId; }
+  private focusPendingUnit() {
+    const unit = this.view?.state.units.find(unit => unit.id === this.pendingViewportFocus);
+    const canvas = this.game?.canvas, viewport = canvas?.closest<HTMLElement>('.map-scroll');
+    if (!unit || !this.projection || !viewport || !viewport.clientHeight || canvas.parentElement?.clientWidth !== this.scale.width) return;
+    const point = this.projection(unit.pos);
+    viewport.scrollTo({left: Math.max(0, point.x - viewport.clientWidth / 2), top: Math.max(0, point.y - viewport.clientHeight * .6)});
+    this.pendingViewportFocus = undefined;
+  }
   private unitScale = 1;
   private adoptedBodyScale = 1;
   private registeredDepth = false;
@@ -120,6 +132,8 @@ export class BoardScene extends Phaser.Scene {
   /** Presentation owns no simulation and never schedules a rule command. */
   playPresentation(plan: PresentationPlan) {
     this.stopCommandFootstep();
+    const actorId = plan.attack?.actorId ?? plan.moves[0]?.unitId;
+    if (actorId) this.focusUnitInViewport(actorId);
     if(this.walkCandidate?.mode!=='continuous')this.qaWalkSamples=[]; this.qaWalkDuration=plan.durationMs;
     const startedAt = performance.now();
     this.attackResult.begin(plan, startedAt);
@@ -133,7 +147,7 @@ export class BoardScene extends Phaser.Scene {
   }
   preparePresentation(plan: PresentationPlan | null, state: BattleState): PresentationPlan | null {
     const prepared=withDedicatedAttack(plan,state,id=>this.bodyReady(id));
-    return this.walkCandidate?prepared:withFourPoseTempo(prepared,STANDING_WALK_TEMPO.tileMs);
+    return separateMoveAndAttack(this.walkCandidate?prepared:withFourPoseTempo(prepared,STANDING_WALK_TEMPO.tileMs));
   }
   clearPresentation(completed = false) {
     // Normal completion releases the input gate without truncating result FX.
@@ -145,7 +159,7 @@ export class BoardScene extends Phaser.Scene {
     if (this.sys.isActive()) this.draw();
     else { this.attackFeedback = undefined; this.attackGraphics = undefined; this.actors.clear(); this.projection = undefined; }
   }
-  update() { this.applyPresentation(); }
+  update() { this.applyPresentation(); if(this.pendingViewportFocus) this.focusPendingUnit(); }
   private updateHealth(now: number) {
     for (const [id, ref] of this.actors) {
       const unit = this.view?.state.units.find(unit => unit.id === id);
@@ -214,7 +228,8 @@ export class BoardScene extends Phaser.Scene {
           ref.body.image.setTexture(walking.key,distancePose(plan,id,elapsed,this.completedTravelTiles.get(id)??0,walking.frames,walking.tilesPerCycle)).setOrigin(walking.originX,walking.originY).setDisplaySize(size,size);
           ref.body.walking=true;ref.body.dedicated=false;
         } else if (body && bodyId && frame !== null && !sample.complete && this.bodyReady(bodyId)) {
-          ref.body.image.setTexture(body.key, frame).setOrigin(.5, body.originY).setDisplaySize(body.displaySize * this.unitScale * this.adoptedBodyScale, body.displaySize * this.unitScale * this.adoptedBodyScale);
+          const size = ('referenceHeight' in body ? body.cell * 90 / body.referenceHeight : body.displaySize * this.adoptedBodyScale) * this.unitScale;
+          ref.body.image.setTexture(body.key, frame).setOrigin(.5, body.originY).setDisplaySize(size, size);
           ref.body.dedicated = true;
           ref.body.walking = false;
         } else if (this.walkCandidate && ((this.walkCandidate.mode==='continuous'&&id==='ally-lise')||hd2dWalkFrame(plan, id, elapsed) !== null)
@@ -293,20 +308,20 @@ export class BoardScene extends Phaser.Scene {
     queueLandscapeMaterials(this,this.preloadBattle);
     this.load.off?.('loaderror',this.onLoadError);this.load.on('loaderror',this.onLoadError);
     // These optional shipped textures are registered centrally here, never in domain state.
-    this.load.image('evacuees', '/assets/b07/evacuees.png');
+    this.load.image('evacuees', '/assets/stages/b07/evacuees/evacuees.png');
     for (const asset of Object.values(MAP_OBJECT_ASSETS)) this.load.image(asset.key, asset.path);
     // Optional display-only masks stay outside critical landscapeMaterials/readiness.
     for (const mask of PAINTED_OBJECT_MASKS) if (!this.textures.exists(mask.key)) this.load.image(mask.key, mask.path);
     for (const issue of PAINTED_MASK_ISSUES) if (!this.warnings.includes(issue)) this.warnings.push(issue);
-    this.load.image('escort-cart', '/assets/escort/cart.png');
-    for (const kind of ['dry', 'shallow', 'stone']) for (const variant of [0, 1]) this.load.image(`tile-${kind}-${variant}`, `/assets/terrain/${kind}-${variant}.png`);
-    this.load.image('portrait-dani', '/assets/portraits/dani.png');
+    this.load.image('escort-cart', '/assets/stages/b03/escort/cart.png');
+    for (const kind of ['dry', 'shallow', 'stone']) for (const variant of [0, 1]) this.load.image(`tile-${kind}-${variant}`, `/assets/common/terrain/${kind}-${variant}.png`);
+    this.load.image('portrait-dani', '/assets/characters/portraits/dani.png');
     for(const directions of Object.values(CAST_IDLE))for(const asset of Object.values(directions))this.load.image(asset.key,asset.path);
     for(const directions of Object.values(CAST_WALK))for(const asset of Object.values(directions))this.load.spritesheet(asset.key,asset.path,{frameWidth:asset.cell,frameHeight:asset.cell,endFrame:asset.frames-1});
     this.load.spritesheet(CART_WHEEL.key,CART_WHEEL.path,{frameWidth:256,frameHeight:256,endFrame:3});
     for (const body of Object.values(ATTACK_BODIES)) this.load.spritesheet(body.key, body.path, { frameWidth: body.cell, frameHeight: body.cell });
     if (this.walkCandidate) this.load.spritesheet(HD2D_WALK.key, HD2D_WALK.path, { frameWidth: HD2D_WALK.cell, frameHeight: HD2D_WALK.cell, endFrame: HD2D_WALK.frames - 1 });
-    for (const asset of ['rise', 'garan', 'neia', 'sena', 'iva', 'toma', 'guard', 'archer']) this.load.spritesheet('cast-' + asset, '/assets/units/' + asset + '/sheet-transparent.png', { frameWidth: 256, frameHeight: 256 });
+    for (const asset of ['rise', 'garan', 'neia', 'sena', 'iva', 'toma', 'guard', 'archer']) this.load.spritesheet('cast-' + asset, '/assets/characters/units/' + asset + '/sheet-transparent.png', { frameWidth: 256, frameHeight: 256 });
   }
   create() {
     this.ensureLandscapeController();
@@ -363,7 +378,7 @@ export class BoardScene extends Phaser.Scene {
     this.attackGraphics = undefined;
     this.actors.clear();
     const layer = this.add.container(0, 0); this.layer = layer;
-    const { state, selected, reachable, cursor, mode, enabled } = this.view;
+    const { state, selected, reachable, cursor, mode, enabled, editPassability } = this.view;
     const config = getBattleConfig(state.battleId);
     const objectPlacements = mapObjectPlacements(state);
     const portBattle = state.battleId === 'B10';
@@ -427,23 +442,16 @@ export class BoardScene extends Phaser.Scene {
       };
       raster(B01_TEXTURES.ground, [0, 0, 1536, 1024], -100);
       raster(B01_TEXTURES.underfloor, [0, 0, 1536, 1024], -99);
-      // Cut away only registered raised occluders of occupied/cursor lower floors.
-      const lowerTargets = B01_SCENE.hiddenFloorCandidates.filter(c =>
-        (cursor.x === c.x && cursor.y === c.y) || state.units.some(u => u.hp > 0 && u.pos.x === c.x && u.pos.y === c.y)
-        || this.presentation?.plan.moves.some(m => m.path.some(p => p.x === c.x && p.y === c.y)));
-      for (const part of B01_SCENE.parts) {
-        const occludes = part.cell && lowerTargets.some(c => c.occluders.some(o => o.x === part.cell?.x && o.y === part.cell?.y));
-        raster(part.key, part.bounds, part.depth, occludes ? .24 : 1);
-      }
+      // Keep authored floors opaque; the floor contour stays visible above people.
+      for (const part of B01_SCENE.parts) raster(part.key, part.bounds, part.depth);
     }
     if (!adoptedB01 && this.textures.exists('landscape')) {
       const backdrop = this.add.image(width / 2, height / 2, 'landscape').setDisplaySize(width, height).setAlpha(.13); layer.add(backdrop);
     }
-    if (!adoptedB01) text(width / 2, 29 * unitScale, `${config.id}  /  ${config.title} ${state.battleId === 'B05' ? '蔵内図' : '測量図'}`, 14, '#a2b8b0');
     const physicalFloorKeys=registered?new Set(registeredFloors(registered,state.cells).map(c=>c.x+','+c.y)):undefined;
     const cells = [...state.cells].sort((a, b) => a.x + a.y - b.x - b.y || a.x - b.x);
     for (const cell of cells) {
-      if (registered && !physicalFloorKeys!.has(cell.x+','+cell.y)) continue;
+      if (!editPassability && registered && !physicalFloorKeys!.has(cell.x+','+cell.y)) continue;
       const p = project(cell, cell.height);
       if (originalB01 && cell.height === 0 && this.textures.exists(b01EnvironmentKey(cell))) layer.add(this.add.image(p.x, p.y, b01EnvironmentKey(cell)).setDisplaySize(tw, th).setDepth(cell.x + cell.y + .12));
       const sluicePanel = config.sluiceGates?.find(gate => gate.panel.x === cell.x && gate.panel.y === cell.y);
@@ -453,6 +461,7 @@ export class BoardScene extends Phaser.Scene {
       if (adoptedB01) g.setDepth(registered ? p.y + .1 : cell.x + cell.y + .1);
       const diamond = [new Phaser.Geom.Point(p.x, p.y - th / 2), new Phaser.Geom.Point(p.x + tw / 2, p.y), new Phaser.Geom.Point(p.x, p.y + th / 2), new Phaser.Geom.Point(p.x - tw / 2, p.y)];
       const canMove = mode === 'move' && reachable.some(r => r.x === cell.x && r.y === cell.y);
+
       const isCursor = cursor.x === cell.x && cursor.y === cell.y;
       if (!adoptedB01) {
       const depth = elevation * (cell.height + .45);
@@ -496,48 +505,49 @@ export class BoardScene extends Phaser.Scene {
       }
       if (portBattle && config.gate && (mode === 'gate' || state.gate.pendingRound) && config.gate.x === cell.x && config.gate.y === cell.y) {
         g.lineStyle(2.5, 0xffd786).strokePoints(diamond, true);
-        text(p.x, p.y + th / 3, state.gate.drained ? '港門 開通済み' : `R${state.gate.pendingRound ?? state.round + 1} 港門開通`, 10, '#ffe8a3');
       }
       if (config.gate && (mode === 'gate' || state.gate.pendingRound) && config.gateRegion.some(r => r.x === cell.x && r.y === cell.y)) {
         g.lineStyle(2.5, 0xffd786).strokePoints(diamond, true);
-        text(p.x, p.y - th / 5, state.battleId === 'B01' ? '操作直後に排水' : `R${state.gate.pendingRound ?? state.round + 1} ${config.reversibleGate && (state.gate.pendingDrained ?? !state.gate.drained) === false ? '入水' : '乾'}`, 10, '#ffe8a3');
       }
       for (const gate of config.sluiceGates ?? []) {
         const water = state.sluices?.[gate.id];
         if ((mode === `gate:${gate.id}` || water?.pendingRound) && gate.region.some(r => r.x === cell.x && r.y === cell.y)) {
           g.lineStyle(2.5, gate.id === 'N' ? 0xffd786 : 0x9ee6ff).strokePoints(diamond, true);
-          text(p.x, p.y - th / 5, `${gate.id} R${water?.pendingRound ?? state.round + 1} ${(water?.pendingDrained ?? !water?.drained) ? '排水' : '入水'}`, 10, gate.id === 'N' ? '#ffe8a3' : '#c2f1ff');
         }
       }
       if (repairSite) {
         const repair = state.repairs?.[repairSite.id];
         if (mode === `repair:${repairSite.id}` || repair?.pendingRound) {
           g.lineStyle(2.5, 0xffd786).strokePoints(diamond, true);
-          text(p.x, p.y + th / 3, repair?.completed ? `${repairSite.id} 復旧済み` : `${repairSite.id} R${repair?.pendingRound ?? state.round + 1}復旧`, 10, '#ffe8a3');
         }
       }
       const nextEscort = state.escort?.route[(state.escort?.index ?? 0) + 1];
       if (state.escort?.route.some(r => r.x === cell.x && r.y === cell.y)) {
         g.lineStyle(1.5, 0xd6bd7a, .8).strokePoints(diamond, true);
-        if (nextEscort && nextEscort.x === cell.x && nextEscort.y === cell.y) text(p.x, p.y - th / 5, '次の護送先', 10, '#ffe5a0');
       }
       if (isCursor) {
         g.fillStyle(0xffcd52, .18).fillPoints(diamond, true);
         g.lineStyle(5, 0x493315, .98).strokePoints(diamond, true);
         g.lineStyle(2.5, 0xffdf78, 1).strokePoints(diamond, true);
       }
-      if (cell.water && !cell.bridge) { text(p.x, p.y, '深水 ×', 10, '#b6e6ff'); }
-      else if (cell.blocked && !gathering && !sluicePanel && !repairSite) {
+      if (editPassability) {
+        const color = isMovementBlocked(cell) ? 0xff7066 : 0x65ffd3;
+        const overlay = this.add.graphics().setDepth(999);
+        layer.add(overlay);
+        overlay.fillStyle(color, .32).fillPoints(diamond, true);
+        overlay.lineStyle(isCursor ? 3 : 1.5, color, .95).strokePoints(diamond, true);
+        text(p.x, p.y, `${cell.x},${cell.y}${cell.debugBlocked === undefined ? '' : ' *'}`, 11).setDepth(1000);
+      }
+      else if (isMovementBlocked(cell) && !gathering && !sluicePanel && !repairSite) {
         if (!adoptedB01) g.fillStyle(0x4a5651).fillRect(p.x - tw / 6, p.y - th * .8, tw / 3, th * .8);
         if (state.battleId === 'B05' && !adoptedB01) {
           g.lineStyle(1, 0xc1af83);
           for (const offset of [-.65, -.4, -.15]) g.lineBetween(p.x - tw / 7, p.y + th * offset, p.x + tw / 7, p.y + th * offset);
         }
-        if (!adoptedB01) text(p.x, p.y - th * .5, evacuating || repairing ? '低い瓦礫・通行不可\n弩の射線は遮らない' : state.battleId === 'B05' ? '低い書架・通行不可\n弩の射線は遮らない' : portBattle ? '信号盤' : state.battleId === 'B06' && config.gate?.x === cell.x && config.gate?.y === cell.y ? '操作盤' : '壁', state.battleId === 'B05' || evacuating || repairing ? 8.5 : 10);
-      } else if (!adoptedB01 || isCursor) text(p.x, p.y + th / 4, `H${cell.height}${cell.bridge ? ' 橋' : ''}${cell.shallow ? ' ≋' : ''}`, 9, '#dee6cf');
+      }
       const hit = this.add.zone(p.x, p.y, tw, th).setInteractive(new Phaser.Geom.Polygon(diamond.map(q => ({ x: q.x - p.x + tw / 2, y: q.y - p.y + th / 2 }))), Phaser.Geom.Polygon.Contains);
       if (adoptedB01) hit.setDepth(registered ? p.y + .25 : cell.x + cell.y + .25);
-      hit.on(adoptedB01 ? 'pointerup' : 'pointerdown', (pointer: Phaser.Input.Pointer) => { if (enabled && (!adoptedB01 || pointer.getDistance() < 10)) this.pick({ x: cell.x, y: cell.y }, adoptedB01 ? pointerFloors(pointer) : undefined); }); layer.add(hit);
+      hit.on('pointerup', (pointer: Phaser.Input.Pointer) => { if (enabled && canPickBoard(pointer,this.game.canvas)) this.pick({ x: cell.x, y: cell.y }, adoptedB01 ? pointerFloors(pointer) : undefined); }); layer.add(hit);
       for (const object of objectPlacements.filter(item => item.pos.x === cell.x && item.pos.y === cell.y)) {
         const asset = MAP_OBJECT_ASSETS[object.asset];
         const occupied = state.units.some(unit => unit.hp > 0 && unit.pos.x === cell.x && unit.pos.y === cell.y);
@@ -549,6 +559,7 @@ export class BoardScene extends Phaser.Scene {
             if (outline) {
               const edge = this.add.image(p.x, p.y, outline.key).setOrigin(outline.originX, outline.originY)
                 .setDisplaySize(outline.width, outline.height).setAlpha(mapObjectAlpha(object, occupied));
+              if (object.kind === 'exit' && object.ready) edge.setTint(0xff3b36);
               if (adoptedB01) edge.setDepth(registered ? p.y + .27 : cell.x + cell.y + .27);
               layer.add(edge);
             }
@@ -570,7 +581,7 @@ export class BoardScene extends Phaser.Scene {
         if(!state.records.includes(gathering.id)&&workerIdle&&this.textures.exists(workerIdle.key))layer.add(this.add.image(p.x,p.y,workerIdle.key).setOrigin(workerIdle.originX,workerIdle.originY).setDisplaySize(256*90/workerIdle.visibleHeight*unitScale,256*90/workerIdle.visibleHeight*unitScale).setDepth(p.y+.3));
         else if (!state.records.includes(gathering.id) && worker && this.textures.exists(registered!.key+'-worker')) layer.add(this.add.image(p.x,p.y,registered!.key+'-worker').setOrigin(worker.foot[0]/worker.width,worker.foot[1]/worker.height).setDisplaySize(worker.width*90/worker.visibleHeight*unitScale,worker.height*90/worker.visibleHeight*unitScale).setDepth(p.y+.3));
         else if (!state.records.includes(gathering.id) && this.textures.exists('evacuees')) layer.add(this.add.image(p.x, p.y, 'evacuees').setOrigin(.5, registered ? 237/256 : .93).setDisplaySize((registered ? 256*90/190 : 84) * unitScale, (registered ? 256*90/190 : 84) * unitScale).setDepth(registered ? p.y+.3 : 0));
-        text(p.x, p.y - (state.records.includes(gathering.id) ? 10 : registered ? 97 : 77) * unitScale, `${gathering.id} ${repairing ? (state.records.includes(gathering.id) ? '救出済み' : gathering.name) : state.records.includes(gathering.id) ? '案内済み' : '住民集合点'}`, 11, '#ffe8ac');
+        if (!state.records.includes(gathering.id)) text(p.x, p.y - (registered ? 97 : 77) * unitScale, gathering.name, 11, '#ffe8ac');
       }
     }
     const attack = this.presentation?.plan.attack;
@@ -588,7 +599,7 @@ export class BoardScene extends Phaser.Scene {
       ring.fillStyle(unit.team === 'player' ? 0x8be2d6 : 0xd88a70, adoptedB01 ? .05 : .7).fillEllipse(0, 1, tw * .45, th * .37);
       const commandActor = state.phase === 'playing' && state.turn === 'player' && unit.id === this.view.commandActorId
         && unit.team === 'player' && unit.hp > 0 && !unit.acted && unit.kind !== 'escort'
-        && (!state.activeId || state.activeId === unit.id);
+        && (!state.activeId || state.activeId === unit.id || state.activation.moveCancelled && !state.activation.moved && !state.activation.acted);
       if (commandActor) {
         ring.lineStyle(5, 0x0d1d1f, 1).strokeEllipse(0, 1, tw * .62, th * .54);
         ring.lineStyle(2.5, 0xffffff, 1).strokeEllipse(0, 1, tw * .62, th * .54);
@@ -610,11 +621,12 @@ export class BoardScene extends Phaser.Scene {
         const sprite = this.add.image(0, 0, spriteKey, idleFrame)
           .setOrigin(anchor?.x ?? .5, anchor?.y ?? (isCart ? .92 : 237 / 256)).setDisplaySize(bodySize * unitScale, bodySize * unitScale);
         // A short-lived downed visual must never intercept the now-free cell.
-        if (unit !== ghost) sprite.setInteractive({ pixelPerfect: true, alphaTolerance: 10, useHandCursor: true });
-        sprite.on(adoptedB01 ? 'pointerup' : 'pointerdown', (_pointer: Phaser.Input.Pointer, _x: number, _y: number, event: Phaser.Types.Input.EventData) => {
+        if (unit !== ghost && !editPassability) sprite.setInteractive({ pixelPerfect: true, alphaTolerance: 10, useHandCursor: true });
+        sprite.on('pointerup', (_pointer: Phaser.Input.Pointer, _x: number, _y: number, event: Phaser.Types.Input.EventData) => {
+          if(!canPickBoard(_pointer,this.game.canvas))return;
           if (unit === ghost) return;
           event.stopPropagation();
-          if (enabled && (!adoptedB01 || _pointer.getDistance() < 10)) {
+          if (enabled) {
             this.pick({ ...unit.pos }, [{ ...unit.pos }]);
           }
         });
@@ -629,7 +641,7 @@ export class BoardScene extends Phaser.Scene {
       if (adoptedB01) layer.add(hud);
       const showHud = !adoptedB01 || unit.id === selected || unit.id === state.activeId;
       const hudInk = this.add.graphics(); hud.add(hudInk);
-      const label = this.add.text(0, (adoptedB01 ? 19 : -83) * unitScale, `${unit.name}${finalBattle && unit.id === config.commanderId ? ' [指揮官・非致死制圧対象]' : unit.id === 'escort-delegation' ? ' [一行・共有HP]' : unit.kind === 'escort' ? ' [護送]' : unit.acted ? ' ✓' : ''}`, { fontFamily: 'sans-serif', fontSize: (adoptedB01 ? 10 : 11) * unitScale, color: '#fff7dd', backgroundColor: adoptedB01 ? '#304538bb' : '#153438dd', padding: { x: 4, y: 2 } }).setOrigin(.5); hud.add(label);
+      const label = this.add.text(0, (adoptedB01 ? 19 : -83) * unitScale, unit.name, { fontFamily: 'sans-serif', fontSize: (adoptedB01 ? 10 : 11) * unitScale, color: '#fff7dd', backgroundColor: adoptedB01 ? '#304538bb' : '#153438dd', padding: { x: 4, y: 2 } }).setOrigin(.5); hud.add(label);
       const facing = { N: '↗', E: '↘', S: '↙', W: '↖' }[unit.facing];
       const arrow = this.add.text(20 * unitScale, -17 * unitScale, facing, { fontSize: 18 * unitScale, color: '#fff3b8', stroke: '#153438', strokeThickness: 3 }); hud.add(arrow);
       if (adoptedB01 && !showHud) { label.setVisible(false); arrow.setVisible(false); }
@@ -642,7 +654,6 @@ export class BoardScene extends Phaser.Scene {
     if (commander && commander.hp <= 0 && state.finalControl?.commanderSubdued && !ghost) {
       const cell = state.cells.find(cell => cell.x === commander.pos.x && cell.y === commander.pos.y)!;
       const marker = project(commander.pos, cell.height);
-      text(marker.x, marker.y + th / 3, 'ヴェスク 制圧済み・保全対象\n非致死 / セル占有なし / 戦後首府警備隊が拘束', 10, '#c2f1ff');
     }
     this.attackGraphics = this.add.graphics().setDepth(1002); layer.add(this.attackGraphics);
     const cue = this.attackResult.at(performance.now());
@@ -652,6 +663,5 @@ export class BoardScene extends Phaser.Scene {
     }
     if (adoptedB01) layer.sort('depth');
     this.applyPresentation();
-    if (!adoptedB01) text(width / 2, height - 24 * unitScale, finalBattle ? 'A/B 生存味方の同時占有を連続2R＋ヴェスク制圧 / R終了判定 / 敵隣接で保持は妨げられない' : evacuating ? '北 N ↗  東 E ↘  南 S ↙  西 W ↖  ·  V 住民集合点（案内後通行可） / 低い瓦礫は通行不可' : state.battleId === 'B05' ? '北 N ↗  東 E ↘  南 S ↙  西 W ↖   ·   H 高さ / ▤ 資料 / 低い書架・通行不可／弩の射線は遮らない' : '北 N ↗  東 E ↘  南 S ↙  西 W ↖    ·    H 高さ  /  ≋ 浅瀬', 11, '#a5bcb3');
   }
 }

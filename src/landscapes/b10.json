@@ -18,8 +18,8 @@
       "y": 15
     },
     "chest": {
-      "x": 8,
-      "y": 12
+      "x": 9,
+      "y": 11
     },
     "capture": {
       "x": 11,
@@ -283,7 +283,7 @@
   "overlays": [
     {
       "id": "open-chain",
-      "path": "/assets/b10-adopted/harbor-open.png",
+      "path": "/assets/stages/b10/adopted/harbor-open.png",
       "bounds": [
         1170,
         120,

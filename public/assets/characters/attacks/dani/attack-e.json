@@ -1,0 +1,19 @@
+{
+  "art_source": "host_image",
+  "route": "Codex ImageGen",
+  "sourceSha256": "eb5cf6a280b08ab3cb1e62b9a10dc43a100228214e5845bde7d5b578505ca766",
+  "status": "candidate",
+  "frameMs": 100,
+  "cell": 288,
+  "anchor": [
+    144,
+    252
+  ],
+  "issues": [],
+  "actor": "dani",
+  "direction": "E",
+  "weapon": "melee",
+  "frames": 4,
+  "referenceHeightPx": 179,
+  "sheetSha256": "877e941745d8e128bb7d934e3c775f19b83aae36d1ac74d14ccfa5f46e0d062a"
+}

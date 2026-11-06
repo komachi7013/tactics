@@ -43,7 +43,7 @@ export class GameAudio {
   private pendingSounds = new Map<SoundId, number>();
   private lastSound = new Map<SoundId, number>();
   private enabling: Promise<void> | null = null;
-  private state: AudioStatus = { enabled: false, version: AUDIO_RUNTIME_VERSION, contextState: 'not-created', contextTime: 0, loadingCue: null, muted: false, hidden: false, bgm: 0.5, se: 0.65, cue: null, activeCue: null, error: null };
+  private state: AudioStatus = { enabled: true, version: AUDIO_RUNTIME_VERSION, contextState: 'not-created', contextTime: 0, loadingCue: null, muted: false, hidden: false, bgm: 0.5, se: 0.65, cue: null, activeCue: null, error: null };
   constructor(private readonly onChange: (status: AudioStatus) => void = () => {}, private readonly dependencies: AudioDependencies = {}) {}
   get status(): AudioStatus { return { ...this.state, contextState: this.context?.state ?? 'not-created', contextTime: this.context?.currentTime ?? 0 }; }
   private notify() { this.onChange(this.status); }

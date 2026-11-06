@@ -65,8 +65,8 @@
     {
       "type": "move",
       "to": {
-        "x": 6,
-        "y": 5
+        "x": 7,
+        "y": 6
       }
     },
     {
@@ -84,8 +84,8 @@
     {
       "type": "move",
       "to": {
-        "x": 2,
-        "y": 6
+        "x": 3,
+        "y": 7
       }
     },
     {
@@ -121,8 +121,8 @@
     {
       "type": "move",
       "to": {
-        "x": 4,
-        "y": 5
+        "x": 5,
+        "y": 6
       }
     },
     {
@@ -141,7 +141,7 @@
       "type": "move",
       "to": {
         "x": 4,
-        "y": 7
+        "y": 5
       }
     },
     {
@@ -178,8 +178,8 @@
     {
       "type": "move",
       "to": {
-        "x": 6,
-        "y": 2
+        "x": 5,
+        "y": 3
       }
     },
     {
@@ -215,8 +215,8 @@
     {
       "type": "move",
       "to": {
-        "x": 4,
-        "y": 3
+        "x": 7,
+        "y": 4
       }
     },
     {
@@ -247,7 +247,7 @@
   "playerHp": [
     [
       "ally-lise",
-      8
+      1
     ],
     [
       "ally-garan",
@@ -255,7 +255,7 @@
     ],
     [
       "ally-neia",
-      4
+      0
     ]
   ],
   "provenance": "Faction turns v1; real legal public commands and unchanged AI/stats/deadlines."

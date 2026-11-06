@@ -89,9 +89,9 @@ body[data-ui-notebook="true"] .command-palette .context-control button{height:48
 body[data-ui-notebook="true"] footer{grid-template-columns:minmax(0,1fr) minmax(150px,240px);min-height:44px;gap:12px;padding:8px 20px}
 body[data-ui-notebook="true"] footer #message{margin:0;min-height:0}
 body[data-ui-notebook="true"] footer #save-status{min-width:0;overflow-wrap:anywhere;font-size:10px}
-.skill-menu,.floor-controls{font-size:12px;line-height:1.6;padding-top:8px}
-.skill-menu p,.floor-controls p{margin:6px 0;color:#eee9d4}
-.skill-menu button,.floor-controls button{min-height:44px;margin:4px 8px 4px 0}
+.skill-menu{font-size:12px;line-height:1.6;padding-top:8px}
+.skill-menu p{margin:6px 0;color:#eee9d4}
+.skill-menu button{min-height:44px;margin:4px 8px 4px 0}
 body[data-ui-notebook="true"] .command-palette .palette-options:has(>.notebook-target-options:not([hidden])){min-height:90px}
 @media(max-width:1050px){body[data-ui-notebook="true"] .command-palette .notebook-primary-actions{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:700px){
@@ -104,6 +104,18 @@ body[data-ui-notebook="true"] .command-palette .palette-options:has(>.notebook-t
 }
 /* Let the option area fill its grid track so every portrait remains scrollable. */
 .command-palette .palette-options{align-self:stretch}
-.floor-controls{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
-.floor-controls p{flex-basis:100%}
-body[data-ui-notebook="true"] .floor-controls button{width:auto;min-width:130px;margin:0}
+
+body[data-ui-notebook="true"] #selection .cell-inspection-details{display:grid;gap:10px;line-height:1.7}
+
+.inspection-object-image img{width:100%;height:100%;object-fit:contain!important;object-position:center!important;padding:4px;box-sizing:border-box}
+.inspection-description{margin:12px 0 0;line-height:1.8;font-size:13px}
+.notebook-inspection-meta{display:grid;gap:6px}
+/* Object art uses the whole image, rather than the character sheet's head crop. */
+body[data-ui-notebook="true"] #selection h2 .inspection-object-image img{position:static;width:100%!important;height:100%!important;max-width:100%;left:auto;top:auto;object-fit:contain!important;object-position:center!important;padding:4px;box-sizing:border-box}
+body[data-ui-notebook="true"] #selection .cell-inspection-details{display:block;width:100%}
+body[data-ui-notebook="true"] #selection .cell-inspection-details .notebook-stat-values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%}
+/* The valve's source PNG has a wider transparent margin than the other props. */
+body[data-ui-notebook="true"] #selection h2 .inspection-object-image:has(img[src$="/gate/gate.png"]) img{position:absolute;width:174.15%!important;height:174.15%!important;max-width:none;left:-38.78%;top:-53.74%;padding:0}
+.command-palette .end-player-turn{grid-column:2;justify-self:end;align-self:end;min-height:40px;padding:8px 18px;font-size:12px;max-width:100%}
+.command-palette .end-player-turn:disabled{opacity:.4}
+@media(max-width:700px){.command-palette .end-player-turn{grid-column:1/-1}}

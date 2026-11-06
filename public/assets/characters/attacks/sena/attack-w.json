@@ -1,0 +1,19 @@
+{
+  "art_source": "host_image",
+  "route": "Codex ImageGen",
+  "sourceSha256": "aa62e55449344480cb560fc5effb0510fc9fb51308a1220c6fc396d3891945fc",
+  "status": "candidate",
+  "frameMs": 100,
+  "cell": 288,
+  "anchor": [
+    144,
+    252
+  ],
+  "issues": [],
+  "actor": "sena",
+  "direction": "W",
+  "weapon": "melee",
+  "frames": 4,
+  "referenceHeightPx": 179,
+  "sheetSha256": "ae5638186b0a47985cd70623424e6ba0eb63c7db25c392b3e33c97d892b0a002"
+}

@@ -10,26 +10,26 @@ describe('battle objective presentation contract', () => {
   it('connects B01 record markers, names, actions and positions without inventing a roster collectible', () => {
     const copy = battleObjectiveCopy('B01');
     expect(copy.records).toEqual([
-      { id: 'A', name: '水位記録A', marker: '水位記録A', position: { x: 2, y: 2 }, actionLabel: '水位記録Aを採取', optional: false },
-      { id: 'B', name: '水位記録B', marker: '水位記録B', position: { x: 7, y: 5 }, actionLabel: '水位記録Bを採取', optional: false },
+      { id: 'A', name: '水位記録', marker: '水位記録', position: { x: 2, y: 2 }, actionLabel: '水位記録を採取', optional: false },
+      { id: 'B', name: '水位記録', marker: '水位記録', position: { x: 7, y: 5 }, actionLabel: '水位記録を採取', optional: false },
     ]);
-    expect(copy.legend.join(' ')).toContain('水位記録A(2,2)');
-    expect(copy.legend.join(' ')).toContain('水位記録B(7,5)');
-    expect(copy.storyBridge).toContain('味方の誰が採取しても');
+    expect(copy.legend.join(' ')).not.toContain('(2,2)');
+    expect(copy.legend.join(' ')).not.toContain('(7,5)');
+    expect(copy.storyBridge).toContain('どの仲間が手に入れても');
     expect(copy.records.some(record => record.name.includes('名簿'))).toBe(false);
   });
 
   it('states an explicit collect action, Lise-only exit and optional immediate gate effect', () => {
     const copy = battleObjectiveCopy('B01');
-    expect(copy.steps.join(' ')).toContain('立つだけでは取得できません');
-    expect(copy.steps.join(' ')).toContain('高さ差1以内');
-    expect(copy.steps.join(' ')).toContain('各1行動');
-    expect(copy.steps.join(' ')).toContain('生存するリセ');
-    expect(copy.steps.join(' ')).toContain('順不同');
+    expect(copy.summary).toBe('2つの水位記録を取得し、リセを脱出地点まで移動させる。');
+    expect(copy.steps.join(' ')).not.toMatch(/隣接|高さ差|1行動|生存/);
+    expect(copy.legend.join(' ')).toContain('いるマスへ移動');
+    expect(copy.legend.join(' ')).toContain('確認画面');
+    expect(copy.legend.join(' ')).not.toContain('行動を1回');
     expect(copy.exitMarker).toBe('脱出（リセ）');
     expect(copy.gateMarker).toBe('水門（任意）');
-    expect(copy.legend.join(' ')).toContain('その場で排水');
-    expect(copy.legend.join(' ')).toContain('浅瀬適性は1のまま');
+    expect(copy.legend.join(' ')).toContain('その場で水路の水を抜けます');
+    expect(copy.legend.join(' ')).toContain('もう一度動かすと水が戻ります');
   });
 
   it('matches the stated B01 collection conditions against the actual rules', () => {
@@ -39,9 +39,9 @@ describe('battle objective presentation contract', () => {
     garan.pos = { x: 1, y: 2 };
     state.cells.find(cell => cell.x === 1 && cell.y === 2)!.height = 0;
     state.cells.find(cell => cell.x === 2 && cell.y === 2)!.height = 0;
-    expect(canCollect(state, 'A')).toBe(true); // Not restricted to Lise.
+    expect(canCollect(state, 'A')).toBe(false); // Adjacent squares cannot collect.
     garan.pos = { x: 2, y: 2 };
-    expect(canCollect(state, 'A')).toBe(false); // Standing on the marker is insufficient.
+    expect(canCollect(state, 'A')).toBe(true); // Any ally on the marker can collect.
     garan.pos = { x: 1, y: 1 };
     expect(canCollect(state, 'A')).toBe(false); // Diagonal is not adjacency.
     garan.pos = { x: 1, y: 2 };
@@ -52,19 +52,17 @@ describe('battle objective presentation contract', () => {
     expect(canCollect(state, 'A')).toBe(false);
   });
 
-  it('keeps all twelve stage definitions and non-B01 procedures unchanged', () => {
+  it('keeps all twelve rule definitions while rewriting only presentation', () => {
     for (const id of battles) {
       const before = getBattleConfig(id), copy = battleObjectiveCopy(id);
       expect(getBattleConfig(id)).toEqual(before);
       expect(copy.records.map(record => [record.id, record.name, record.position, record.optional])).toEqual(
         before.records.map(record => [record.id, record.name, { x: record.x, y: record.y }, record.optional === true]),
       );
-      if (id !== 'B01') {
-        expect(copy.summary).toBe(before.intro);
-        expect(copy.steps).toEqual([]);
-        expect(copy.legend).toEqual([]);
-        expect(copy.storyBridge).toBeNull();
-      }
+      expect(copy.summary.length).toBeGreaterThan(0);
+      expect(copy.steps.length).toBeGreaterThan(0);
+      expect(copy.legend.length).toBeGreaterThan(0);
+      expect(copy.summary).not.toMatch(/抽象化|HP0|セル|発効|未実装/);
     }
   });
 

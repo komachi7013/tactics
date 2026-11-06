@@ -1,0 +1,148 @@
+{
+  "scene_mode": "baked_scene_mode",
+  "camera": "eye-level, static landscape, no navigation or hotspots",
+  "viewport": "responsive full screen; cover; reference 16:9",
+  "art_source": "host_image",
+  "route": "image_gen",
+  "created": "2026-11-06",
+  "assets": [
+    {
+      "id": "b01",
+      "prompt": "Use case: illustration-story. Create a single cinematic widescreen 16:9 Japanese anime background painting for a fantasy strategy game's visual novel scene. Setting: Torne river ferry landing, early rainy season morning, old cream limestone watergate town, worn steps to a broad jade river, wooden ferry moored at a humble jetty, water-level measuring stakes with faded markings, modest red tile roofs, reeds and distant sluice arches. Eye-level landscape perspective, not isometric, not a game board. No characters, no text, no UI, no lettering, no watermarks, no modern machines. Beautiful hand-painted anime film environment, delicate ink lines, soft cel-shaded light and atmospheric depth, restrained earthy greens and warm stone, calm but foreboding. Clear central area for overlaid narration. Full bleed.",
+      "art_source": "host_image",
+      "runtime": "/assets/story/b01.jpg",
+      "original": "output/story-scenes/originals/b01.png",
+      "route": "image_gen",
+      "model": "host default",
+      "estimateUsd": null
+    },
+    {
+      "id": "b02",
+      "prompt": "Use case: illustration-story. Single widescreen 16:9 anime film background for a fantasy visual novel, eye-level landscape, delicate ink lines and painterly cel-shaded light, cohesive cream limestone watergate civilization, muted jade greens and earthy ochres. No people, no text, no UI, no watermark, no isometric grid. Full bleed, detailed environment, readable open central space for narrative overlay. Scene: Old Sera levee: ancient limestone levee and a narrow arched stone bridge crossing a jade river, elevated surveying terrace, cloudy late morning, a chain waiting to close the bridge.",
+      "art_source": "host_image",
+      "runtime": "/assets/story/b02.jpg",
+      "original": "output/story-scenes/originals/b02.png",
+      "route": "image_gen",
+      "model": "host default",
+      "estimateUsd": null
+    },
+    {
+      "id": "b03",
+      "prompt": "Use case: illustration-story. Single widescreen 16:9 anime film background for a fantasy visual novel, eye-level landscape, delicate ink lines and painterly cel-shaded light, cohesive cream limestone watergate civilization, muted jade greens and earthy ochres. No people, no text, no UI, no watermark, no isometric grid. Full bleed, detailed environment, readable open central space for narrative overlay. Scene: Raum relief warehouse: old limestone riverside town courtyard, open timber warehouse doors with neatly arranged bedding, a modest covered handcart, baskets and water jars, warm afternoon sun, humanitarian sanctuary.",
+      "art_source": "host_image",
+      "runtime": "/assets/story/b03.jpg",
+      "original": "output/story-scenes/originals/b03.png",
+      "route": "image_gen",
+      "model": "host default",
+      "estimateUsd": null
+    },
+    {
+      "id": "b04",
+      "prompt": "Use case: illustration-story. Single widescreen 16:9 anime film background for a fantasy visual novel, eye-level landscape, delicate ink lines and painterly cel-shaded light, cohesive cream limestone watergate civilization, muted jade greens and earthy ochres. No people, no text, no UI, no watermark, no isometric grid. Full bleed, detailed environment, readable open central space for narrative overlay. Scene: A dried irrigation branch canal in a lowland village: cracked ochre channel bed, a small closed timber sluice, stone banks and distant modest farmhouses, thirsty fields and thin clouds, late afternoon.",
+      "art_source": "host_image",
+      "runtime": "/assets/story/b04.jpg",
+      "original": "output/story-scenes/originals/b04.png",
+      "route": "image_gen",
+      "model": "host default",
+      "estimateUsd": null
+    },
+    {
+      "id": "b05",
+      "prompt": "Use case: illustration-story. Single widescreen 16:9 anime film background for a fantasy visual novel, eye-level landscape, delicate ink lines and painterly cel-shaded light, cohesive cream limestone watergate civilization, muted jade greens and earthy ochres. No people, no text, no UI, no watermark, no isometric grid. Full bleed, detailed environment, readable open central space for narrative overlay. Scene: Yern document archive interior, tall oak shelves of rolled parchment and bound ledgers, a large stone arched window, sun shafts catching dust, a worktable with sealed orders and surveying maps, no readable writing, somber quiet discovery.",
+      "art_source": "host_image",
+      "runtime": "/assets/story/b05.jpg",
+      "original": "output/story-scenes/originals/b05.png",
+      "route": "image_gen",
+      "model": "host default",
+      "estimateUsd": null
+    },
+    {
+      "id": "b06",
+      "prompt": "Use case: illustration-story. Single widescreen 16:9 anime film background for a fantasy visual novel, eye-level landscape, delicate ink lines and painterly cel-shaded light, cohesive cream limestone watergate civilization, muted jade greens and earthy ochres. No people, no text, no UI, no watermark, no isometric grid. Full bleed, detailed environment, readable open central space for narrative overlay. Scene: Kest canal chain gate, narrow jade canal between old limestone warehouses, enormous iron chain crossing the water between two gate towers, a wooden transport boat at stone stairs, late afternoon light, a route awaiting passage.",
+      "art_source": "host_image",
+      "runtime": "/assets/story/b06.jpg",
+      "original": "output/story-scenes/originals/b06.png",
+      "route": "image_gen",
+      "model": "host default",
+      "estimateUsd": null
+    },
+    {
+      "id": "b07",
+      "prompt": "Use case: illustration-story. Single widescreen 16:9 anime film background for a fantasy visual novel, eye-level landscape, delicate ink lines and painterly cel-shaded light, cohesive cream limestone watergate civilization, muted jade greens and earthy ochres. No people, no text, no UI, no watermark, no isometric grid. Full bleed, detailed environment, readable open central space for narrative overlay. Scene: Vassel terraced riverside village on a steep hill, modest pale stone houses and red tile roofs, long exterior stairways and retaining walls, river below with a safe landing and small empty rescue boats, overcast rainy-season tension.",
+      "art_source": "host_image",
+      "runtime": "/assets/story/b07.jpg",
+      "original": "output/story-scenes/originals/b07.png",
+      "route": "image_gen",
+      "model": "host default",
+      "estimateUsd": null
+    },
+    {
+      "id": "b08",
+      "prompt": "Use case: illustration-story. Single widescreen 16:9 anime film background for a fantasy visual novel, eye-level landscape, delicate ink lines and painterly cel-shaded light, cohesive cream limestone watergate civilization, muted jade greens and earthy ochres. No people, no text, no UI, no watermark, no isometric grid. Full bleed, detailed environment, readable open central space for narrative overlay. Scene: Belka auxiliary weir, two parallel channels and low limestone sluice gates with iron hand wheels, weathered dam faces and a maintenance hut, exposed water-line stains and structural cracks, jade reservoir and grey hills, cool cloudy morning.",
+      "art_source": "host_image",
+      "runtime": "/assets/story/b08.jpg",
+      "original": "output/story-scenes/originals/b08.png",
+      "route": "image_gen",
+      "model": "host default",
+      "estimateUsd": null
+    },
+    {
+      "id": "b09",
+      "prompt": "Use case: illustration-story. Single widescreen 16:9 anime film background for a fantasy visual novel, eye-level landscape, delicate ink lines and painterly cel-shaded light, cohesive cream limestone watergate civilization, muted jade greens and earthy ochres. No people, no text, no UI, no watermark, no isometric grid. Full bleed, detailed environment, readable open central space for narrative overlay. Scene: Water stair corridor to the public tribunal: monumental cream stone terraces above a canal, long stepped avenue rising to a civic hall with arches, water cascading beside the stairs, simple blue and ochre banners with no symbols or writing, afternoon light and solemn anticipation.",
+      "art_source": "host_image",
+      "runtime": "/assets/story/b09.jpg",
+      "original": "output/story-scenes/originals/b09.png",
+      "route": "image_gen",
+      "model": "host default",
+      "estimateUsd": null
+    },
+    {
+      "id": "b10",
+      "prompt": "Use case: illustration-story. Single widescreen 16:9 anime film background for a fantasy visual novel, eye-level landscape, delicate ink lines and painterly cel-shaded light, cohesive cream limestone watergate civilization, muted jade greens and earthy ochres. No people, no text, no UI, no watermark, no isometric grid. Full bleed, detailed environment, readable open central space for narrative overlay. Scene: Capital outer harbor, broad jade water basin, medieval stone quay, a massive iron harbor chain suspended between gate towers, wooden relief cargo sailing ships with furled linen sails waiting outside, crates and ropes on the quay, golden late afternoon sky.",
+      "art_source": "host_image",
+      "runtime": "/assets/story/b10.jpg",
+      "original": "output/story-scenes/originals/b10.png",
+      "route": "image_gen",
+      "model": "host default",
+      "estimateUsd": null
+    },
+    {
+      "id": "b11",
+      "prompt": "Use case: illustration-story. Single widescreen 16:9 anime film background for a fantasy visual novel, eye-level landscape, delicate ink lines and painterly cel-shaded light, cohesive cream limestone watergate civilization, muted jade greens and earthy ochres. No people, no text, no UI, no watermark, no isometric grid. Full bleed, detailed environment, readable open central space for narrative overlay. Scene: Central great sluice lower maintenance passage: cavernous limestone arches, narrow stone service walkways alongside green water, copper valve wheels and old iron pipes, two lower service alcoves connected by stairs, lamplight reflecting on water, dramatic but navigable industrial medieval infrastructure.",
+      "art_source": "host_image",
+      "runtime": "/assets/story/b11.jpg",
+      "original": "output/story-scenes/originals/b11.png",
+      "route": "image_gen",
+      "model": "host default",
+      "estimateUsd": null
+    },
+    {
+      "id": "b12",
+      "prompt": "Use case: illustration-story. Single widescreen 16:9 anime film background for a fantasy visual novel, eye-level landscape, delicate ink lines and painterly cel-shaded light, cohesive cream limestone watergate civilization, muted jade greens and earthy ochres. No people, no text, no UI, no watermark, no isometric grid. Full bleed, detailed environment, readable open central space for narrative overlay. Scene: Central great sluice upper control terrace: monumental weathered limestone dam overlooking a vast river valley and the capital, two separate iron handwheel control platforms connected by a high stone walkway, heavy rain clouds opening to a shaft of sunlight, towering gate mechanisms, climactic restrained grandeur.",
+      "art_source": "host_image",
+      "runtime": "/assets/story/b12.jpg",
+      "original": "output/story-scenes/originals/b12.png",
+      "route": "image_gen",
+      "model": "host default",
+      "estimateUsd": null
+    },
+    {
+      "id": "epilogue",
+      "prompt": "Use case: illustration-story. Single widescreen 16:9 anime film background for a fantasy visual novel, eye-level landscape, delicate ink lines and painterly cel-shaded light, cohesive cream limestone watergate civilization, muted jade greens and earthy ochres. No people, no text, no UI, no watermark, no isometric grid. Full bleed, detailed environment, readable open central space for narrative overlay. Scene: A peaceful fantasy riverbank after the rainy season, fresh wooden water-level measuring stake with simple unlettered gauge notches in foreground, three open surveying notebooks on a stone parapet, small moored ferry, distant watergate town restored and sunlit, new grass along repaired banks, warm morning light and hopeful quiet. No writing in notebooks.",
+      "art_source": "host_image",
+      "runtime": "/assets/story/epilogue.jpg",
+      "original": "output/story-scenes/originals/epilogue.png",
+      "route": "image_gen",
+      "model": "host default",
+      "estimateUsd": null
+    },
+    {
+      "id": "prologue",
+      "art_source": "host_image",
+      "route": "image_gen",
+      "runtime": "/assets/story/prologue.jpg",
+      "original": "output/story-scenes/originals/prologue.png",
+      "prompt": "Use case: illustration-story. Single 16:9 widescreen hand-painted Japanese anime film background for the prologue of a fantasy story about seven river watergate cities. A panoramic view from a grassy hill over an immense connected river basin, winding jade rivers, several small cream limestone towns with tiled roofs far apart along the valleys, ancient low sluice bridges connecting irrigation channels, rain clouds gathering beyond distant mountains, calm early morning haze. Broad grand landscape establishing the whole region, no close ferry, no prominent foreground town, distinctly different from an eye-level riverside scene. Delicate ink lines, soft cel shaded lighting, earthy greens and warm ochre limestone, coherent medieval water civilization. No people, text, labels, writing, map grid, UI or watermark. Full bleed, quiet central sky and valley for narrative overlay."
+    }
+  ]
+}

@@ -21,7 +21,7 @@ def main():
    sheet.alpha_composite(frame,(i%5*300+22,i//5*300))
    ys=np.where(np.asarray(frame)[:,:,3]>128)[0]; grounds.append(int(ys.max()+1));heads.append(int(ys.min()))
   digest=hashlib.sha256(sheet.tobytes()).hexdigest()[:12]
-  relative=f'assets/walk-standing-v1/{cast}/{direction}-{digest}.png'
+  relative=f'assets/characters/walk-standing-v1/{cast}/{direction}-{digest}.png'
   destination=ROOT/'public'/relative;destination.parent.mkdir(parents=True,exist_ok=True);sheet.save(destination)
   metadata={**animation,'gameApplied':True,'sheetColumns':5,'sheetSha256':hashlib.sha256(destination.read_bytes()).hexdigest(),'candidateDirectory':str(candidate.relative_to(ROOT)),'sourceSheetSha256':animation.get('sheetSha256')}
   destination.with_suffix('.json').write_text(json.dumps(metadata,ensure_ascii=False,indent=2)+'\n')

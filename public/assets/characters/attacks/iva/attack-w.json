@@ -1,0 +1,19 @@
+{
+  "art_source": "host_image",
+  "route": "Codex ImageGen",
+  "sourceSha256": "9ed267b723ed135bdf5c39c78737d1d1234913c2d87c4480cd140af94d0186e3",
+  "status": "candidate",
+  "frameMs": 100,
+  "cell": 288,
+  "anchor": [
+    144,
+    252
+  ],
+  "issues": [],
+  "actor": "iva",
+  "direction": "W",
+  "weapon": "melee",
+  "frames": 4,
+  "referenceHeightPx": 179,
+  "sheetSha256": "0a38518ba1f30e49be9986de627d242524894ddecf3f40c9eb9cb9afed799523"
+}

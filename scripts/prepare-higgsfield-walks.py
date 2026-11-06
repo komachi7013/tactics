@@ -25,7 +25,7 @@ def main():
     jobs = []
     for cast in CAST:
         for direction, facing in FACING.items():
-            source = ROOT / f"public/assets/motion-v1/{cast}/idle-{direction}.png"
+            source = ROOT / f"public/assets/unclassified/production/characters/motion-v1/{cast}/idle-{direction}.png"
             job = OUT / cast / direction
             job.mkdir(parents=True, exist_ok=True)
             master = Image.open(source).convert("RGBA")

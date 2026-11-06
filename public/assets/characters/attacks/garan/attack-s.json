@@ -1,0 +1,67 @@
+{
+  "actor": "garan",
+  "direction": "S",
+  "frameMs": 100,
+  "frames": 4,
+  "cell": 288,
+  "art_source": "host_image",
+  "route": "Codex ImageGen",
+  "sourceSha256": "b0c4a4ff3c140c36946eb4bca07667ce33f92491512abf30a89784dee7323f1e",
+  "sheetSha256": "bd436fb448d055cf922b38d4a4d3871e832a00074519cf9648f1785861a36a00",
+  "paddedOriginPx": [
+    144,
+    252
+  ],
+  "anchor": [
+    144,
+    252
+  ],
+  "pixelsUnchangedByPadding": true,
+  "normalization": {
+    "referenceFirstFrameHeight": 180,
+    "scale": 0.4534005037783375,
+    "oneTransformForAllFrames": true,
+    "lowAlphaRemovalThreshold": 76
+  },
+  "facing": "screen lower-left, approved S idle reference",
+  "stats": [
+    {
+      "bbox": [
+        94,
+        72,
+        194,
+        252
+      ]
+    },
+    {
+      "bbox": [
+        87,
+        84,
+        192,
+        249
+      ]
+    },
+    {
+      "bbox": [
+        61,
+        91,
+        196,
+        250
+      ]
+    },
+    {
+      "bbox": [
+        92,
+        73,
+        187,
+        248
+      ]
+    }
+  ],
+  "issues": [],
+  "weapon": "melee",
+  "referenceHeightPx": 179,
+  "status": "final",
+  "edit": "Impact shield pushed forward toward lower-left, retaining oblique shield face.",
+  "review": "Forward shield pose accepted by user, 2026-11-05"
+}

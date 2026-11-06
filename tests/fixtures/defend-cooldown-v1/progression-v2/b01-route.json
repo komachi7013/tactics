@@ -28,7 +28,7 @@
       "type": "move",
       "to": {
         "x": 3,
-        "y": 5
+        "y": 6
       }
     },
     {
@@ -46,7 +46,7 @@
       "type": "move",
       "to": {
         "x": 2,
-        "y": 6
+        "y": 5
       }
     },
     {
@@ -64,8 +64,8 @@
     {
       "type": "move",
       "to": {
-        "x": 6,
-        "y": 5
+        "x": 7,
+        "y": 6
       }
     },
     {
@@ -83,7 +83,7 @@
     {
       "type": "move",
       "to": {
-        "x": 2,
+        "x": 1,
         "y": 5
       }
     },
@@ -131,11 +131,11 @@
     ],
     [
       "ally-garan",
-      21
+      24
     ],
     [
       "ally-neia",
-      4
+      1
     ]
   ],
   "provenance": "Faction turns v1: regenerated legal public player commands and unchanged AI, actual initial factory, unchanged terrain/stats/deadlines. Pre-change fixtures preserved under faction-turn-v1/before/tests."

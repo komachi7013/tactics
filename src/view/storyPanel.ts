@@ -4,10 +4,10 @@ import type { Unit } from '../domain/types';
 /** Authored blocks, never inferred by splitting punctuation or guessing a speaker. */
 export interface StoryPage { text: string; speaker?: { name: string; unitId?: string }; sourceText?: string }
 export const B01_INTRO: readonly StoryPage[] = [
-  { text: '「杭は流されていない。\n……地図のほうが、書き換えられている。」' },
+  { text: '「杭は流されていない。\n……地図のほうが、書き換えられている。」', speaker: { name: 'リセ', unitId: 'ally-lise' } },
   { text: '測量官リセは、警備隊が接収する前に水位痕と住民名簿を確保しようと決めた。渡し守ネイアが水路を指し、ガランは退路に立つ。' },
 ];
-export const B01_GUIDE = '記録は上下左右の隣接から1行動で取得。リセが倒れると敗北。水門を操作すると、操作直後から対象水路の移動費2→1（浅瀬適性のある人物は1のまま）。';
+export const B01_GUIDE = '2つの水位記録を取得し、リセを脱出地点まで移動させる。記録のあるマスへ移動し、確認画面で「確定」を選ぶと取得できます。';
 
 /** One deliberate input per block, including the final transition. */
 export class StoryCursor {
@@ -26,10 +26,19 @@ export class StoryCursor {
 
 export function mountStoryPanel(host: HTMLElement, options: {
   title: string; pages: readonly StoryPage[]; completeLabel: string;
-  findSpeaker: (id: string) => Pick<Unit, 'id' | 'weapon'> | undefined; complete: () => void; skipLabel?: string;
+  findSpeaker: (id: string) => Pick<Unit, 'id' | 'weapon'> | undefined; complete: () => void; skipLabel?: string; skip?: () => void;
+  scenery?: { background: string; chapterTitle?: string };
 }): () => void {
-  const doc = host.ownerDocument, cursor = new StoryCursor(options.pages.length);
+  const pages = options.scenery?.chapterTitle ? [{ text: options.scenery.chapterTitle }, ...options.pages] : options.pages;
+  const doc = host.ownerDocument, cursor = new StoryCursor(pages.length);
   const shield = doc.createElement('div'); shield.className = 'story-shield';
+  if (options.scenery) {
+    shield.dataset.scenic = 'true';
+    const backdrop = doc.createElement('img'); backdrop.className = 'story-backdrop';
+    backdrop.src = options.scenery.background; backdrop.alt = ''; backdrop.draggable = false;
+    backdrop.onerror = () => { backdrop.hidden = true; };
+    shield.append(backdrop);
+  }
   const panel = doc.createElement('section'); panel.className = 'story-panel';
   panel.setAttribute('role', 'dialog'); panel.setAttribute('aria-modal', 'true'); panel.setAttribute('aria-labelledby', 'story-heading');
   const heading = doc.createElement('h2'); heading.id = 'story-heading'; heading.textContent = options.title;
@@ -46,20 +55,23 @@ export function mountStoryPanel(host: HTMLElement, options: {
   const next = doc.createElement('button'); next.type = 'button';
   actions.append(back, next); panel.append(heading, content, actions); shield.append(panel); host.replaceChildren(shield);
   let disposed = false, settled = false;
-  const complete = () => { if (disposed || settled || !shield.isConnected) return; settled = true; options.complete(); };
+  const complete = (skipped = false) => { if (disposed || settled || !shield.isConnected) return; settled = true; (skipped && options.skip ? options.skip : options.complete)(); };
   const skip = options.skipLabel ? doc.createElement('button') : null;
-  if (skip) { skip.type = 'button'; skip.className = 'story-skip'; skip.textContent = options.skipLabel!; skip.onclick = event => { event.stopPropagation(); if (event.detail < 2) complete(); }; actions.append(skip); }
+  if (skip) { skip.type = 'button'; skip.className = 'story-skip'; skip.textContent = options.skipLabel!; skip.onclick = event => { event.stopPropagation(); if (event.detail < 2) complete(true); }; actions.append(skip); }
   const paint = () => {
-    const page = options.pages[cursor.index];
+    const page = pages[cursor.index];
+    const titleCard = !!options.scenery?.chapterTitle && cursor.index === 0;
+    shield.dataset.page = titleCard ? 'title' : page.speaker ? 'dialogue' : 'narration';
     name.textContent = page.speaker?.name ?? '語り'; text.textContent = page.text;
+    name.hidden = titleCard || (!!options.scenery && !page.speaker);
     portrait.replaceChildren();
     const unit = page.speaker?.unitId ? options.findSpeaker(page.speaker.unitId) : undefined;
     if (unit) portrait.append(createInspectionFace(unit));
     portrait.hidden = !unit;
     back.disabled = cursor.index === 0;
     if (back.disabled && doc.activeElement === back) next.focus();
-    next.textContent = cursor.index === options.pages.length - 1 ? options.completeLabel : '次へ';
-    count.textContent = `${cursor.index + 1} / ${options.pages.length}　クリック・タップ / Enter・Spaceで次へ`;
+    next.textContent = cursor.index === pages.length - 1 ? options.completeLabel : titleCard ? '物語を読む' : '次へ';
+    count.textContent = titleCard ? 'クリック・タップ / Enter・Spaceで物語へ' : `${cursor.index + 1 - (options.scenery?.chapterTitle ? 1 : 0)} / ${options.pages.length}　クリック・タップ / Enter・Spaceで次へ`;
     text.scrollTop = 0;
   };
   const act = (direction: 'next' | 'back', repeat = false) => {
@@ -72,18 +84,19 @@ export function mountStoryPanel(host: HTMLElement, options: {
   next.onclick = clickNext;
   back.onclick = event => { event.stopPropagation(); if (event.detail < 2) act('back'); };
   // Reading the last block never silently enters battle; use the labelled final button.
-  text.onclick = event => { if (cursor.index < options.pages.length - 1 && event.detail < 2 && !doc.getSelection()?.toString()) act('next'); };
+  text.onclick = event => { event.stopPropagation(); if (cursor.index < pages.length - 1 && event.detail < 2 && !doc.getSelection()?.toString()) act('next'); };
+  shield.onclick = event => { if (options.scenery && (event.target === shield || (event.target as HTMLElement).className === 'story-backdrop') && cursor.index < pages.length - 1 && event.detail < 2) act('next'); };
   const keys = (event: KeyboardEvent) => {
     if (event.ctrlKey || event.metaKey || event.altKey || event.key === 'Tab') return;
     if (['Enter', ' ', 'ArrowRight', 'ArrowLeft', 'Escape'].includes(event.key)) {
       event.preventDefault(); event.stopPropagation();
-      if (event.target === skip && ['Enter',' '].includes(event.key)) { if (!event.repeat) complete(); return; }
+      if (event.target === skip && ['Enter',' '].includes(event.key)) { if (!event.repeat) complete(true); return; }
       if (event.key === 'Escape' || event.key === 'ArrowLeft' || (['Enter', ' '].includes(event.key) && event.target === back)) act('back', event.repeat);
-      else if (cursor.index < options.pages.length - 1
+      else if (cursor.index < pages.length - 1
         || (event.target === next && ['Enter', ' '].includes(event.key))) act('next', event.repeat);
     }
   };
   shield.addEventListener('keydown', keys);
   paint(); next.focus();
-  return () => { disposed = true; shield.removeEventListener('keydown', keys); next.onclick = null; back.onclick = null; text.onclick = null; if (skip) skip.onclick = null; };
+  return () => { disposed = true; shield.removeEventListener('keydown', keys); shield.onclick = null; next.onclick = null; back.onclick = null; text.onclick = null; if (skip) skip.onclick = null; };
 }

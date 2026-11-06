@@ -7,7 +7,7 @@ import {createCampaign,readCampaign,writeCampaign,type StorageLike} from '../src
 import type {BattleState,Command} from '../src/domain/types';
 const actor='ally-lise',target='ally-garan';
 function step(s:BattleState,c:Command):BattleState {const r=reduce(s,c);expect(r.error,JSON.stringify(c)).toBeUndefined();return r.state;}
-function fixture():BattleState {const s=createInitialState();s.cells.forEach(c=>{c.height=0;c.shallow=false;c.blocked=false;});getUnit(s,actor)!.pos={x:1,y:1};getUnit(s,actor)!.jobCommand='plank';getUnit(s,actor)!.plankCharges=2;getUnit(s,target)!.pos={x:2,y:1};return step(s,{type:'start',unitId:actor});}
+function fixture():BattleState {const s=createInitialState();s.records=['A'];s.cells.forEach(c=>{c.height=0;c.shallow=false;c.blocked=false;});getUnit(s,actor)!.pos={x:1,y:1};getUnit(s,actor)!.jobCommand='plank';getUnit(s,actor)!.plankCharges=2;getUnit(s,target)!.pos={x:2,y:1};return step(s,{type:'start',unitId:actor});}
 function reject(s:BattleState,id=target){const snapshot=structuredClone(s);expect(jobCommandPreview(s,actor,id,'plank').legal).toBe(false);const result=reduce(s,{type:'plank',targetId:id});expect(result.error).toBeTruthy();expect(result.state).toBe(s);expect(s).toEqual(snapshot);}
 function grant(){return step(fixture(),{type:'plank',targetId:target});}
 function activateTarget(s:BattleState):BattleState {s=structuredClone(s);s.turn='player';s.activeId=null;getUnit(s,target)!.acted=false;return step(s,{type:'start',unitId:target});}

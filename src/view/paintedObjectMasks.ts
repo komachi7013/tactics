@@ -25,7 +25,7 @@ export function readPaintedObjectMasks(value: unknown): { masks: PaintedObjectMa
     const id = row && `${row.battleId}/${row.objectId}`, expected = id && EXPECTED_FILES[id];
     const b = row?.bounds;
     if (!row || !expected || typeof row.key !== 'string' || !row.key || usedObjects.has(id!) || usedKeys.has(row.key)
-      || row.path !== '/assets/map-object-masks-v1/' + expected || !Array.isArray(b) || b.length !== 4
+      || row.path !== `/assets/stages/${expected.slice(0, 3)}/masks/${expected}` || !Array.isArray(b) || b.length !== 4
       || !b.every(Number.isInteger) || b[0] < 0 || b[1] < 0 || b[2] > 1536 || b[3] > 1024 || b[2] <= b[0] || b[3] <= b[1]) {
       issues.push(`背景設備の輪郭マスク登録不正: ${id ?? 'unknown'}`); continue;
     }
@@ -37,7 +37,7 @@ export function readPaintedObjectMasks(value: unknown): { masks: PaintedObjectMa
 
 // An optional eager JSON import permits a missing mask package to fall back to the
 // unchanged painted background. Delivery tests separately require all eight files.
-const metadata = import.meta.glob<unknown>('../../public/assets/map-object-masks-v1/metadata.json', { eager: true, import: 'default' });
+const metadata = import.meta.glob<unknown>('../assets/stages/map-object-masks.json', { eager: true, import: 'default' });
 const parsed = readPaintedObjectMasks(Object.values(metadata)[0]);
 export const PAINTED_OBJECT_MASKS: readonly PaintedObjectMask[] = parsed.masks;
 export const PAINTED_MASK_ISSUES: readonly string[] = parsed.issues;

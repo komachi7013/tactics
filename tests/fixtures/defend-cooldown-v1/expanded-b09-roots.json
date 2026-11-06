@@ -16,8 +16,7 @@
           }
         },
         {
-          "type": "loot",
-          "eventId": "chest:B09"
+          "type": "defend"
         },
         {
           "type": "end",
@@ -248,7 +247,8 @@
           }
         },
         {
-          "type": "defend"
+          "type": "loot",
+          "eventId": "chest:B09"
         },
         {
           "type": "end",
@@ -1224,7 +1224,7 @@
         ],
         [
           "ally-garan",
-          13
+          15
         ],
         [
           "ally-neia",
@@ -1353,8 +1353,7 @@
           }
         },
         {
-          "type": "loot",
-          "eventId": "chest:B09"
+          "type": "defend"
         },
         {
           "type": "end",
@@ -1585,7 +1584,8 @@
           }
         },
         {
-          "type": "defend"
+          "type": "loot",
+          "eventId": "chest:B09"
         },
         {
           "type": "end",
@@ -2516,7 +2516,7 @@
         ],
         [
           "ally-garan",
-          10
+          12
         ],
         [
           "ally-neia",
@@ -2637,8 +2637,7 @@
           }
         },
         {
-          "type": "loot",
-          "eventId": "chest:B09"
+          "type": "defend"
         },
         {
           "type": "end",
@@ -2869,7 +2868,8 @@
           }
         },
         {
-          "type": "defend"
+          "type": "loot",
+          "eventId": "chest:B09"
         },
         {
           "type": "end",
@@ -3800,7 +3800,7 @@
         ],
         [
           "ally-garan",
-          10
+          12
         ],
         [
           "ally-neia",
@@ -3921,8 +3921,7 @@
           }
         },
         {
-          "type": "loot",
-          "eventId": "chest:B09"
+          "type": "defend"
         },
         {
           "type": "end",
@@ -4153,7 +4152,8 @@
           }
         },
         {
-          "type": "defend"
+          "type": "loot",
+          "eventId": "chest:B09"
         },
         {
           "type": "end",
@@ -5129,7 +5129,7 @@
         ],
         [
           "ally-garan",
-          10
+          12
         ],
         [
           "ally-neia",

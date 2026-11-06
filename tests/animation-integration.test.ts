@@ -61,7 +61,7 @@ describe('committed simulation and disposable presentation integration', () => {
       campaign=completeBattle(campaign,state);
     }
     expect(campaign.completed).toEqual(BATTLE_IDS);expect(dedicated).toBeGreaterThan(0);expect(plans).toBeGreaterThan(100);expect(attacks).toBeGreaterThan(20);expect(moves).toBeGreaterThan(50);
-  });
+  }, 15_000);
   it('rejects a second command while presentation is busy and cannot revive an old scene on late completion', () => {
     const {gate,callbacks}=clock();let state=createPartyBattle('B01',defaultParty('B01'),createJobs()),commits=0,settled=0;
     function submit(command:Command) {

@@ -5,7 +5,8 @@ type SelectedUnitId = string | null | undefined;
 
 /** A derived command preview; selecting or cancelling never commits activation-start effects. */
 export function selectionCommandState(state: BattleState, selected: SelectedUnitId): BattleState {
- if (state.activeId || state.phase !== 'playing' || state.turn !== 'player' || !selected) return state;
+ if (state.phase !== 'playing' || state.turn !== 'player' || !selected) return state;
+ if (state.activeId && (state.activeId === selected || !state.activation.moveCancelled || state.activation.moved || state.activation.acted || state.activation.collected)) return state;
  const unit = getUnit(state, selected);
  if (!unit || unit.team !== 'player' || unit.hp <= 0 || unit.acted || unit.kind === 'escort') return state;
  return reduce(state, { type: 'start', unitId: unit.id }).state;

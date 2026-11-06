@@ -1,0 +1,66 @@
+{
+  "actor": "dani",
+  "direction": "S",
+  "frameMs": 100,
+  "frames": 4,
+  "cell": 288,
+  "art_source": "host_image",
+  "route": "Codex ImageGen",
+  "sourceSha256": "5a1acba260f1c722c29f8193eafef64426f2f6ef73ebf1f14a8677d29cabe9d3",
+  "sheetSha256": "a5a178e6dc828bddd360468c36354fc8e93d0846e822d76133ebc655ab2616aa",
+  "paddedOriginPx": [
+    144,
+    252
+  ],
+  "anchor": [
+    144,
+    252
+  ],
+  "pixelsUnchangedByPadding": true,
+  "normalization": {
+    "referenceFirstFrameHeight": 179,
+    "scale": 0.455470737913486,
+    "oneTransformForAllFrames": true,
+    "lowAlphaRemovalThreshold": 76
+  },
+  "facing": "screen lower-left, approved S idle reference",
+  "stats": [
+    {
+      "bbox": [
+        107,
+        73,
+        181,
+        252
+      ]
+    },
+    {
+      "bbox": [
+        100,
+        75,
+        180,
+        252
+      ]
+    },
+    {
+      "bbox": [
+        81,
+        75,
+        196,
+        252
+      ]
+    },
+    {
+      "bbox": [
+        100,
+        73,
+        180,
+        252
+      ]
+    }
+  ],
+  "issues": [],
+  "weapon": "melee",
+  "referenceHeightPx": 179,
+  "status": "final",
+  "review": "South attack facing accepted by user, 2026-11-05"
+}

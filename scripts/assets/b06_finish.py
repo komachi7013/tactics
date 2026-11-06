@@ -6,8 +6,8 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[2]
 ASSETS = ROOT / 'public/assets'
-TOMA = ASSETS / 'units/toma'
-OUT = ASSETS / 'b06'
+TOMA = ASSETS / 'characters/units/toma'
+OUT = ASSETS / 'stages/b06/production'
 OUT.mkdir(parents=True, exist_ok=True)
 
 def sha(path):
@@ -32,12 +32,13 @@ for i in range(4):
 # A neutral inspection canvas composites accepted pixels; it does not draw art.
 contact = Image.new('RGBA', (1536, 512), '#b7b2a5')
 for x, name in enumerate(['sena', 'iva', 'toma']):
-    contact.alpha_composite(Image.open(ASSETS / f'units/{name}/sheet-transparent.png').convert('RGBA'), (512*x, 0))
+    contact.alpha_composite(Image.open(ASSETS / f'characters/units/{name}/sheet-transparent.png').convert('RGBA'), (512*x, 0))
 contact.save(OUT / 'b06-contact-sheet.png')
 source = json.loads((OUT / 'generation-source.json').read_text())
 original_path = Path(source['rawOriginal'])
 original = Image.open(original_path)
-raw = Image.open(TOMA / 'raw-sheet.png')
+toma_source = ASSETS / 'unclassified/production/characters/units/toma/raw-sheet.png'
+raw = Image.open(toma_source)
 assert original.mode == 'RGB' and raw.mode == 'RGBA'
 assert original.size == raw.size
 assert original.convert('RGBA').tobytes() == raw.tobytes(), 'RGBA conversion must preserve every pixel'
@@ -45,21 +46,21 @@ manifest = {
     'source': 'built-in image_gen', 'generationCalls': 1,
     'character': 'Toma, unarmed male clerk, story age 31',
     'style': 'project-native clean HD hand-painted chibi',
-    'reference': 'units/iva/sheet-transparent.png; style/camera only; inspected Sena and Iva',
-    'rawOriginal': source['rawOriginal'], 'rawCopy': 'units/toma/raw-sheet.png',
+    'reference': 'characters/units/iva/sheet-transparent.png; style/camera only; inspected Sena and Iva',
+    'rawOriginal': source['rawOriginal'], 'rawCopy': 'unclassified/production/characters/units/toma/raw-sheet.png',
     'originalSHA256': sha(original_path), 'originalMode': original.mode,
     'rawMode': raw.mode,
     'rawConversion': 'RGB original to RGBA PNG; identical RGBA pixels, not a byte-for-byte copy',
     'rgbaPixelsIdentical': True,
-    'rawSHA256': sha(TOMA / 'raw-sheet.png'),
-    'path': 'units/toma/sheet-transparent.png',
+    'rawSHA256': sha(toma_source),
+    'path': 'characters/units/toma/sheet-transparent.png',
     'sha256': sha(TOMA / 'sheet-transparent.png'),
     'sheetSize': [512, 512], 'frameSize': [256, 256], 'rows': 2, 'columns': 2,
     'directions': ['N', 'E', 'S', 'W'], 'origin': [.5, 237/256],
-    'prompt': 'units/toma/prompt-used.txt',
+    'prompt': 'characters/units/toma/prompt-used.txt',
     'pipelinePromptField': 'processor field only; actual generation text is prompt-used.txt',
     'frameAlphaBBoxes': boxes, 'qc': qc,
-    'qa': 'b06/b06-contact-sheet.png',
+    'qa': 'stages/b06/production/b06-contact-sheet.png',
     'scope': 'Four static facing frames. GIF cycles directions for inspection, not walking animation.',
     'limitations': ['Native browser scale/overlap is a separate acceptance gate.',
                     'Exact age is story metadata rather than visually proven.']

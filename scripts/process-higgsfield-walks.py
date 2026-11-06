@@ -259,7 +259,7 @@ def process(entry, refresh_exports=False):
         "source_sha256": entry["source_sha256"], "clip_sha256": hashlib.sha256((job / "clip.mp4").read_bytes()).hexdigest(),
         "sheet_sha256": hashlib.sha256((job / "walk.png").read_bytes()).hexdigest(),
         "asset": {"key": f"motion-v2-walk-{entry['cast']}-{entry['direction']}",
-                  "path": f"/assets/motion-v2/{entry['cast']}/walk-{entry['direction']}.png",
+                  "path": f"/assets/characters/motion-v2/{entry['cast']}/walk-{entry['direction']}.png",
                   "originX": foot[0]/256, "originY": foot[1]/256,
                   "visibleHeight": body_height, "cell": 256, "frames": count,
                   "tilesPerCycle": 4, "cycleMs": 720},

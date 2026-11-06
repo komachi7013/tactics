@@ -314,7 +314,7 @@
     {
       "id": "N",
       "sourceId": "shared",
-      "path": "/assets/b08-adopted/weir-wet.png",
+      "path": "/assets/stages/b08/adopted/weir-wet.png",
       "sceneSource": true,
       "alpha": 1,
       "bounds": [
@@ -365,7 +365,7 @@
     {
       "id": "S",
       "sourceId": "shared",
-      "path": "/assets/b08-adopted/weir-wet.png",
+      "path": "/assets/stages/b08/adopted/weir-wet.png",
       "sceneSource": true,
       "alpha": 1,
       "bounds": [

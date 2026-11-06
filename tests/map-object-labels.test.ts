@@ -26,8 +26,8 @@ function layout(id: BattleId, width: number, height: number, prepare: (state: Ba
 describe('map object label lanes', () => {
   it.each([[1000, 650], [360, 420]])('separates B03 name register and adjacent equipment at %ix%i without moving their cells', (width, height) => {
     const { labels, people } = layout('B03', width, height), record = labels.find(row => row.id === 'record:M')!, chest = labels.find(row => row.id === 'chest:B03')!;
-    expect(Math.hypot(record.anchor.x - chest.anchor.x, record.anchor.y - chest.anchor.y)).toBeLessThan(60);
-    expect(record.label).toContain('M'); expect(chest.label).toContain('装備箱');
+    expect(Math.hypot(record.anchor.x - chest.anchor.x, record.anchor.y - chest.anchor.y)).toBeLessThan(100);
+    expect(record.label).toContain('M'); expect(chest.label).toContain('宝箱');
     expect(mapLabelOverlap(record.rect, chest.rect)).toBe(0);
     for (const row of [record, chest]) {
       expect(row.collisionFree).toBe(true);

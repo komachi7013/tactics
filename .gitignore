@@ -9,22 +9,24 @@ __pycache__/
 /playwright-report/
 /coverage/
 /qa/
+/output/
+# Separate, unadopted music production deliveries remain local.
+/audio-production/v3-20261106/
+/audio-production/v4-20261106/
 .env
 .env.*
 !.env.example
 # Generated visual checks are not game materials.
-/public/assets/qa-contact-sheet.png
-/public/assets/*/*-contact-sheet.png
-/public/assets/*/contact-sheet.png
+/public/assets/**/*contact-sheet.png
 
 # Local generation history and reproducible media intermediates.
 /artifacts/*
 !/artifacts/walk-from-standing-v1/
 !/artifacts/standing-cast-review-v1/
 /generated_images/
-/public/assets/motion-v2/
-/public/assets/motion-v3/
-/public/assets/motion-v4/
+/public/assets/characters/motion-v2/
+/public/assets/characters/motion-v3/
+/public/assets/characters/motion-v4/
 /.codex/skills/rpg-music/outputs/
 /audio-production/v2-20261026/masters/
 /audio-production/v2-20261026/listen/

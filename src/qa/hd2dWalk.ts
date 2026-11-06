@@ -2,7 +2,7 @@ import type { PresentationPlan } from '../view/presentation';
 
 /** User-saved local six-frame GIF trial; file QC verified, gait NOT accepted. */
 export const HD2D_WALK = {
-  key: 'qa-lise-user-gif-east', path: '/assets/qa/lise-user-gif-local-20261023/lise-user-gif-east.png',
+  key: 'qa-lise-user-gif-east', path: '/assets/verification/lise-user-gif-local-20261023/lise-user-gif-east.png',
   sha256: 'da121cb105d965bbc0b260f9fffd0370ea60720f66f3c74b3ecc627c1bdbae2d',
   cell: 128, frames: 6, frameMs: 140, originX: 64 / 128, originY: 120 / 128,
 } as const;

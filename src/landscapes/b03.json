@@ -341,10 +341,8 @@
       "x": 6,
       "y": 2,
       "height": 0,
-      "blocked": true,
-      "shallow": false,
-      "water": false,
-      "bridge": false
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 7,
@@ -476,10 +474,8 @@
       "x": 6,
       "y": 3,
       "height": 0,
-      "blocked": true,
-      "shallow": false,
-      "water": false,
-      "bridge": false
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 7,
@@ -611,10 +607,8 @@
       "x": 6,
       "y": 4,
       "height": 0,
-      "blocked": true,
-      "shallow": false,
-      "water": false,
-      "bridge": false
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 7,
@@ -746,10 +740,8 @@
       "x": 6,
       "y": 5,
       "height": 0,
-      "blocked": true,
-      "shallow": false,
-      "water": false,
-      "bridge": false
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 7,
@@ -1179,9 +1171,7 @@
       "y": 8,
       "height": 0,
       "blocked": true,
-      "shallow": false,
-      "water": false,
-      "bridge": false
+      "shallow": false
     },
     {
       "x": 10,
@@ -1314,9 +1304,7 @@
       "y": 9,
       "height": 0,
       "blocked": true,
-      "shallow": false,
-      "water": false,
-      "bridge": false
+      "shallow": false
     },
     {
       "x": 10,
@@ -1449,9 +1437,7 @@
       "y": 10,
       "height": 0,
       "blocked": true,
-      "shallow": false,
-      "water": false,
-      "bridge": false
+      "shallow": false
     },
     {
       "x": 10,
@@ -1593,9 +1579,7 @@
       "y": 11,
       "height": 0,
       "blocked": true,
-      "shallow": false,
-      "water": false,
-      "bridge": false
+      "shallow": false
     },
     {
       "x": 11,
@@ -1911,11 +1895,11 @@
     },
     "exit": {
       "x": 8,
-      "y": 4
+      "y": 3
     },
     "chest": {
       "x": 14,
-      "y": 10
+      "y": 11
     }
   },
   "placements": [
@@ -1992,6 +1976,10 @@
     {
       "x": 8,
       "y": 4
+    },
+    {
+      "x": 8,
+      "y": 3
     }
   ],
   "cutaway": {
@@ -2080,7 +2068,7 @@
         777
       ]
     ],
-    "insert": "/assets/b03-adopted/warehouse-insert-r3.png",
+    "insert": "/assets/stages/b03/adopted/warehouse-insert-r3.png",
     "floorTransform": "matrix(.980392157 .019607843 .039215686 .960784314 38.431372549 41.568627451)",
     "portalTransform": "matrix(.6 -.15 0 .9 573.4 212.75)"
   }

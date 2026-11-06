@@ -1,0 +1,19 @@
+{
+  "art_source": "host_image",
+  "route": "Codex ImageGen",
+  "sourceSha256": "510dcafa58232cc2900578b1b91f0f2f6185f218efb81855cd3560a754325af8",
+  "status": "candidate",
+  "frameMs": 100,
+  "cell": 288,
+  "anchor": [
+    144,
+    252
+  ],
+  "issues": [],
+  "actor": "garan",
+  "direction": "E",
+  "weapon": "melee",
+  "frames": 4,
+  "referenceHeightPx": 179,
+  "sheetSha256": "25afe5791bb21e65a3341ead20276b3e1f4aaaa23ab97098bd27dfe90f00f215"
+}

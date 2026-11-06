@@ -9,7 +9,7 @@ const rows = [
   ['B10', 'gate', 'b10-gate'], ['B11', 'repair:A', 'b11-a'], ['B11', 'repair:B', 'b11-b'],
   ['B12', 'control:A', 'b12-a'], ['B12', 'control:B', 'b12-b'],
 ].map(([battleId, objectId, name], index) => ({ battleId, objectId, key: 'painted-mask-' + name,
-  path: '/assets/map-object-masks-v1/' + name + '.png', bounds: [100 + index * 10, 150, 180 + index * 10, 220] }));
+  path: `/assets/stages/${battleId.toLowerCase()}/masks/${name}.png`, bounds: [100 + index * 10, 150, 180 + index * 10, 220] }));
 
 describe('painted equipment source-coordinate registration', () => {
   it('registers exactly the eight existing painted targets without changing state or interpreting bounds as anchors', () => {
@@ -28,7 +28,7 @@ describe('painted equipment source-coordinate registration', () => {
   it('rejects wrong equipment identity, wrong path, bad crop extents and duplicate keys nonfatally', () => {
     for (const bad of [
       { ...rows[0], battleId: 'B01' }, { ...rows[0], objectId: 'exit' },
-      { ...rows[0], path: '/assets/gate/gate.png' }, { ...rows[0], bounds: [0, 0, 1537, 100] },
+      { ...rows[0], path: '/assets/common/gate/gate.png' }, { ...rows[0], bounds: [0, 0, 1537, 100] },
       { ...rows[0], bounds: [50, 20, 49, 40] }, { ...rows[0], bounds: [-1, 0, 40, 40] },
     ]) {
       const result = readPaintedObjectMasks([bad]); expect(result.masks).toEqual([]); expect(result.issues).toHaveLength(1);

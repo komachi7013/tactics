@@ -1,0 +1,10 @@
+.turn-start-overlay{position:fixed;inset:0;z-index:3000;display:grid;place-items:center;background:rgba(6,21,23,.2);pointer-events:auto}
+.turn-start-overlay[hidden]{display:none!important}
+.turn-start-card{box-sizing:border-box;width:min(100%,700px);padding:24px 36px;text-align:center;color:#fff4d8;background:linear-gradient(90deg,transparent,rgba(15,47,43,.96) 18%,rgba(15,47,43,.96) 82%,transparent);border-block:1px solid rgba(237,218,166,.7);animation:turn-start-appear .22s ease-out}
+.turn-start-card strong{display:block;font:500 clamp(30px,5vw,54px)/1.25 Georgia,serif;letter-spacing:.08em}
+.turn-start-card span{display:block;margin-top:8px;font-size:15px;letter-spacing:.15em}
+.turn-start-overlay[data-turn="enemy"] .turn-start-card{background:linear-gradient(90deg,transparent,rgba(84,32,29,.96) 18%,rgba(84,32,29,.96) 82%,transparent)}
+.turn-start-overlay[data-turn="clear"] .turn-start-card{padding-block:36px;color:#fff0b9;background:linear-gradient(90deg,transparent,rgba(24,61,48,.97) 18%,rgba(24,61,48,.97) 82%,transparent);border-color:#d8bd7d}
+.turn-start-overlay[data-turn="clear"] .turn-start-card strong{font-size:clamp(38px,7vw,72px);text-shadow:0 2px 12px #c7a95455}
+@keyframes turn-start-appear{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.turn-start-card{animation:none}}

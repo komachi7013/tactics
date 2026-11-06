@@ -8,9 +8,8 @@ export function createInspectionFace(unit:Pick<Unit,'id'|'weapon'>):HTMLSpanElem
  const portrait=castPortraitPath(unit);
  if(portrait){image.src=portrait;face.classList.add('inspection-portrait','inspection-derived-portrait');image.onerror=()=>{image.hidden=true;};face.append(image);face.dataset.faceAsset=castIdentity(unit)!;return face;}
  const asset=unit.id==='ally-lise'?'rise':unit.id==='ally-garan'?'garan':unit.id==='ally-neia'?'neia':unit.id==='ally-sena'?'sena':unit.id==='ally-iva'?'iva':unit.id==='escort-toma'||unit.id==='escort-delegation'?'toma':unit.weapon==='bow'?'archer':'guard';
- if(unit.id==='ally-dani'){image.src='/assets/portraits/dani.png';face.classList.add('inspection-portrait');}
- else if(unit.id==='escort-cart'){image.src='/assets/escort/cart.png';face.classList.add('inspection-portrait');}
- else image.src=`/assets/units/${asset}/sheet-transparent.png`;
+ if(unit.id==='escort-cart'){image.src='/assets/stages/b03/escort/cart.png';face.classList.add('inspection-portrait');}
+ else image.src=`/assets/characters/units/${asset}/sheet-transparent.png`;
  // A failed decorative face must not remove the person's name or inspection button.
  image.onerror=()=>{image.hidden=true;};face.append(image);
  face.dataset.faceAsset=asset;return face;

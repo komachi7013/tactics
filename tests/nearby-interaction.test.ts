@@ -8,7 +8,7 @@ import { nearbyInteraction } from '../src/view/nearbyInteraction';
 
 function recordState() {
   const state = createInitialState('B01');
-  getUnit(state, 'ally-lise')!.pos = { x: 2, y: 3 };
+  getUnit(state, 'ally-lise')!.pos = { x: 2, y: 2 };
   return selectionCommandState(state, 'ally-lise');
 }
 describe('nearby map interactions in the main command area', () => {
@@ -28,7 +28,7 @@ describe('nearby map interactions in the main command area', () => {
     expect(nearbyInteraction(state, { x: 2, y: 2 }, command)).toEqual({ visible: true, enabled: false, reason: reduce(state, command).error });
   });
   it('rechecks height and an already acquired record', () => {
-    const high = recordState(); getCell(high, { x: 2, y: 2 })!.height = getCell(high, getUnit(high, 'ally-lise')!.pos)!.height + 2;
+    const high = recordState(); getUnit(high,'ally-lise')!.pos={x:2,y:3};
     expect(nearbyInteraction(high, { x: 2, y: 2 }, { type: 'collect', recordId: 'A' }).enabled).toBe(false);
     const collected = recordState(); collected.records.push('A');
     expect(nearbyInteraction(collected, { x: 2, y: 2 }, { type: 'collect', recordId: 'A' }).enabled).toBe(false);
@@ -43,7 +43,7 @@ describe('nearby map interactions in the main command area', () => {
     expect(nearbyInteraction(state, chest.pos, { type: 'loot', eventId: chest.eventId }).enabled).toBe(false);
   });
   it('offers a nearby gate, then shows its pending restriction without changing the reservation', () => {
-    const state = recordState(), command = { type: 'gate' as const };
+    const state = recordState(), command = { type: 'gate' as const }; getUnit(state,'ally-lise')!.pos={x:2,y:4};
     expect(nearbyInteraction(state, { x: 2, y: 4 }, command).enabled).toBe(true);
     const next = reduce(state, command).state, before = JSON.stringify(next);
     expect(nearbyInteraction(next, { x: 2, y: 4 }, command).enabled).toBe(false);
@@ -52,7 +52,7 @@ describe('nearby map interactions in the main command area', () => {
   it('gates transient input without hiding the nearby site or changing gameplay', () => {
     const state = recordState(), before = JSON.stringify(state);
     const result = nearbyInteraction(state, { x: 2, y: 2 }, { type: 'collect', recordId: 'A' }, false);
-    expect(result.visible).toBe(true); expect(result.enabled).toBe(false); expect(result.reason).not.toBe('');
+    expect(result.visible).toBe(true); expect(result.enabled).toBe(false); expect(result.reason).toBe('');
     expect(JSON.stringify(state)).toBe(before);
   });
   it('does not expose enemy or escort activations as manual interaction commands', () => {

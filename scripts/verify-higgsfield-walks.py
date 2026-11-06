@@ -17,7 +17,7 @@ from finish_frames import measure_body
 def main():
     plan = json.loads((WORK / "plan.json").read_text())
     manifest = json.loads((ROOT / "src/view/walk-v2.json").read_text())
-    if all(a['path'].startswith(('/assets/motion-v3/','/assets/motion-v4/')) for v in manifest.values() for a in v.values()):
+    if all(a['path'].startswith(('/assets/characters/motion-v3/','/assets/characters/motion-v4/')) for v in manifest.values() for a in v.values()):
         subprocess.run([sys.executable,str(ROOT/'scripts/verify-revised-walks.py')],check=True)
         return
     assert len(plan["jobs"]) == 48

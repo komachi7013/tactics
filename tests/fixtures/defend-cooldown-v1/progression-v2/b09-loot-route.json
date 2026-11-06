@@ -13,8 +13,7 @@
       }
     },
     {
-      "type": "loot",
-      "eventId": "chest:B09"
+      "type": "defend"
     },
     {
       "type": "end",
@@ -245,7 +244,8 @@
       }
     },
     {
-      "type": "defend"
+      "type": "loot",
+      "eventId": "chest:B09"
     },
     {
       "type": "end",
@@ -1221,7 +1221,7 @@
     ],
     [
       "ally-garan",
-      7
+      9
     ],
     [
       "ally-neia",
@@ -1239,7 +1239,7 @@
   "provenance": "Faction turns v1: regenerated legal public player commands and unchanged AI, actual initial factory, unchanged terrain/stats/deadlines. Pre-change fixtures preserved under faction-turn-v1/before/tests.",
   "cooldownAdaptation": {
     "version": 1,
-    "originalFile": "progression-v2/b09-loot-route.json",
+    "originalFile": "progression-v2/b09-route.json",
     "originalCommandIndicesOmitted": [
       18,
       21,

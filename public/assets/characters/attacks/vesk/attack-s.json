@@ -1,0 +1,66 @@
+{
+  "actor": "vesk",
+  "direction": "S",
+  "frameMs": 100,
+  "frames": 4,
+  "cell": 288,
+  "art_source": "host_image",
+  "route": "Codex ImageGen",
+  "sourceSha256": "b3b549c474b217b36b3a84a2d26e10c47a6a121aaf08885fc649b3077b9b46b3",
+  "sheetSha256": "3aedcb585f7287508a3ea9d6470a89eba909e59e6e58669678e6080d1e404595",
+  "paddedOriginPx": [
+    144,
+    252
+  ],
+  "anchor": [
+    144,
+    252
+  ],
+  "pixelsUnchangedByPadding": true,
+  "normalization": {
+    "referenceFirstFrameHeight": 180,
+    "scale": 0.45918367346938777,
+    "oneTransformForAllFrames": true,
+    "lowAlphaRemovalThreshold": 76
+  },
+  "facing": "screen lower-left, approved S idle reference",
+  "stats": [
+    {
+      "bbox": [
+        104,
+        72,
+        185,
+        253
+      ]
+    },
+    {
+      "bbox": [
+        74,
+        83,
+        176,
+        253
+      ]
+    },
+    {
+      "bbox": [
+        68,
+        83,
+        193,
+        251
+      ]
+    },
+    {
+      "bbox": [
+        88,
+        71,
+        176,
+        252
+      ]
+    }
+  ],
+  "issues": [],
+  "weapon": "melee",
+  "referenceHeightPx": 179,
+  "status": "final",
+  "selection": "First book-restoration image selected by user, 2026-11-05"
+}

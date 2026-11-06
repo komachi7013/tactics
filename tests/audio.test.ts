@@ -178,7 +178,7 @@ describe('memory-only gesture unlocked audio', () => {
   it('clamps categories, ignores nonfinite volumes, copies snapshot and disconnects/closes on disposal', async () => {
     const b = backend(); b.audio.setVolumes({ bgm: 2, se: -1 }); expect(b.audio.status.bgm).toBe(1); expect(b.audio.status.se).toBe(0);
     b.audio.setVolumes({ bgm: NaN }); expect(b.audio.status.bgm).toBe(1);
-    const copy = b.audio.status; copy.enabled = true; expect(b.audio.status.enabled).toBe(false);
+    const copy = b.audio.status; copy.enabled = false; expect(b.audio.status.enabled).toBe(true);
     await b.audio.enable(); b.audio.setCue('bgm-b01'); b.audio.playSE('se-ui'); await tick();
     b.audio.setVolumes({ bgm: 0.25, se: 0.75 }); expect(b.gains[0].gain.linearRampToValueAtTime).toHaveBeenLastCalledWith(0.25 * AUDIO_HEADROOM, 1.03);
     b.audio.dispose(); b.audio.dispose(); expect(b.context.close).toHaveBeenCalledOnce();

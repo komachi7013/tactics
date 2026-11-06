@@ -14,7 +14,7 @@
   },
   "points": {
     "chest": {
-      "x": 19,
+      "x": 20,
       "y": 17
     },
     "exit": {
@@ -290,6 +290,90 @@
     {
       "x": 20,
       "y": 21
+    },
+    {
+      "x": 18,
+      "y": 3
+    },
+    {
+      "x": 18,
+      "y": 4
+    },
+    {
+      "x": 18,
+      "y": 5
+    },
+    {
+      "x": 18,
+      "y": 6
+    },
+    {
+      "x": 18,
+      "y": 7
+    },
+    {
+      "x": 18,
+      "y": 8
+    },
+    {
+      "x": 18,
+      "y": 9
+    },
+    {
+      "x": 18,
+      "y": 10
+    },
+    {
+      "x": 18,
+      "y": 11
+    },
+    {
+      "x": 18,
+      "y": 12
+    },
+    {
+      "x": 18,
+      "y": 13
+    },
+    {
+      "x": 18,
+      "y": 14
+    },
+    {
+      "x": 18,
+      "y": 15
+    },
+    {
+      "x": 18,
+      "y": 16
+    },
+    {
+      "x": 18,
+      "y": 17
+    },
+    {
+      "x": 18,
+      "y": 18
+    },
+    {
+      "x": 18,
+      "y": 19
+    },
+    {
+      "x": 18,
+      "y": 20
+    },
+    {
+      "x": 18,
+      "y": 21
+    },
+    {
+      "x": 20,
+      "y": 16
+    },
+    {
+      "x": 20,
+      "y": 18
     }
   ],
   "cells": [
@@ -1268,11 +1352,9 @@
     {
       "x": 18,
       "y": 3,
-      "height": 3,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 2,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 19,
@@ -1538,11 +1620,9 @@
     {
       "x": 18,
       "y": 4,
-      "height": 3,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 2,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 19,
@@ -1808,11 +1888,9 @@
     {
       "x": 18,
       "y": 5,
-      "height": 3,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 2,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 19,
@@ -2078,11 +2156,9 @@
     {
       "x": 18,
       "y": 6,
-      "height": 3,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 1,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 19,
@@ -2348,11 +2424,9 @@
     {
       "x": 18,
       "y": 7,
-      "height": 3,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 1,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 19,
@@ -2618,11 +2692,9 @@
     {
       "x": 18,
       "y": 8,
-      "height": 3,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 1,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 19,
@@ -2888,11 +2960,9 @@
     {
       "x": 18,
       "y": 9,
-      "height": 3,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 1,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 19,
@@ -3158,11 +3228,9 @@
     {
       "x": 18,
       "y": 10,
-      "height": 3,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 19,
@@ -3428,11 +3496,9 @@
     {
       "x": 18,
       "y": 11,
-      "height": 3,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 19,
@@ -3698,11 +3764,9 @@
     {
       "x": 18,
       "y": 12,
-      "height": 3,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 19,
@@ -3968,11 +4032,9 @@
     {
       "x": 18,
       "y": 13,
-      "height": 3,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 19,
@@ -4238,11 +4300,9 @@
     {
       "x": 18,
       "y": 14,
-      "height": 3,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 19,
@@ -4508,11 +4568,9 @@
     {
       "x": 18,
       "y": 15,
-      "height": 3,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 19,
@@ -4778,11 +4836,9 @@
     {
       "x": 18,
       "y": 16,
-      "height": 3,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 19,
@@ -4796,11 +4852,9 @@
     {
       "x": 20,
       "y": 16,
-      "height": 3,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 21,
@@ -5048,11 +5102,9 @@
     {
       "x": 18,
       "y": 17,
-      "height": 3,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 19,
@@ -5318,11 +5370,9 @@
     {
       "x": 18,
       "y": 18,
-      "height": 3,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 19,
@@ -5336,11 +5386,9 @@
     {
       "x": 20,
       "y": 18,
-      "height": 3,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 21,
@@ -5588,11 +5636,9 @@
     {
       "x": 18,
       "y": 19,
-      "height": 3,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 19,
@@ -5858,11 +5904,9 @@
     {
       "x": 18,
       "y": 20,
-      "height": 3,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 19,
@@ -6128,11 +6172,9 @@
     {
       "x": 18,
       "y": 21,
-      "height": 3,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 19,

@@ -4,7 +4,7 @@ import {B01_MATERIALS,prepareB01Landscape} from './b01Landscape';
 import {prepareB01Environment} from './b01Environment';
 import {registeredLandscape,prepareRegisteredParts} from './registeredLandscape';
 export function landscapeMaterials(id:BattleId):{key:string;path:string}[]{
- if(id==='B01')return B01_MATERIALS.map(m=>({key:m.key,path:'/assets/b01-scene-recovery-v1/'+m.file}));
+ if(id==='B01')return B01_MATERIALS.map(m=>({key:m.key,path:'/assets/stages/b01/scene-recovery-v1/'+m.file}));
  const spec=registeredLandscape(id);const materials=spec?[{key:spec.key,path:spec.path},...(spec.worker?[{key:spec.key+'-worker',path:spec.worker.path}]:[]),...(spec.cutaway?[{key:spec.key+'-insert',path:spec.cutaway.insert}]:[]),...(spec.water??[]).map(w=>({key:spec.key+'-water-source-'+(w.sourceId??w.id),path:w.path})),...(spec.overlays??[]).map(o=>({key:spec.key+'-overlay-source-'+o.id,path:o.path}))]:[];return [...new Map(materials.map(m=>[m.key,m])).values()];
 }
 export function landscapeTextureKeys(scene:Phaser.Scene,id:BattleId):string[]{const prefix=id==='B01'?['b01-scene-','b01-environment-']:[id.toLowerCase()+'-adopted-landscape'];return scene.textures.getTextureKeys().filter(key=>prefix.some(p=>key.startsWith(p)))}

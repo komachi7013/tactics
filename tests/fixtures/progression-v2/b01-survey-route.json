@@ -38,7 +38,7 @@
     {
       "type": "move",
       "to": {
-        "x": 2,
+        "x": 3,
         "y": 6
       }
     },
@@ -77,7 +77,7 @@
       "type": "move",
       "to": {
         "x": 3,
-        "y": 5
+        "y": 6
       }
     },
     {
@@ -113,8 +113,8 @@
     {
       "type": "move",
       "to": {
-        "x": 6,
-        "y": 5
+        "x": 7,
+        "y": 6
       }
     },
     {
@@ -132,7 +132,7 @@
     {
       "type": "move",
       "to": {
-        "x": 7,
+        "x": 5,
         "y": 2
       }
     },
@@ -183,12 +183,16 @@
     ],
     [
       "ally-garan",
-      21
+      19
     ],
     [
       "ally-neia",
-      1
+      0
     ]
   ],
-  "provenance": "Faction-turn actual public survey plus boosted shot then beam-search legal victory against unmodified AI"
+  "provenance": "Faction-turn actual public survey plus boosted shot then beam-search legal victory against unmodified AI",
+  "records": [
+    "A",
+    "B"
+  ]
 }

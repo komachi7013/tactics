@@ -56,7 +56,7 @@ describe('read-only attack target face cards', () => {
     expect(card.text()).toContain(`命中時 −${forecast.damage}`);
     expect(card.text()).toContain(`命中率 ${forecast.hitChance}%`);
     expect(card.children[0].dataset.faceAsset).toBe('guard');
-    expect(card.children[0].children[0].src).toBe('/assets/motion-v1/portraits/guard.png');
+    expect(card.children[0].children[0].src).toBe('/assets/characters/portraits/guard.png');
   });
 
   it('emits only the selected id and never dispatches, rolls or updates HP/state', () => {
@@ -81,7 +81,8 @@ describe('read-only attack target face cards', () => {
     const { root, select, onSelect } = render(state, { onInspect });
     const card = select();
     expect(card.disabled).toBe(true);
-    expect(card.text()).toContain('隣接・高さ差1以内が必要です');
+    expect(card.text()).not.toContain('隣接・高さ差1以内が必要です');
+    expect(card.attrs['aria-label']).toContain('隣接・高さ差1以内が必要です');
     expect(card.children[0].dataset.faceAsset).toBe('guard');
     card.onclick!(); expect(onSelect).not.toHaveBeenCalled();
     const inspect = root.all().find(node => node.dataset.focusKey === 'target-inspect:enemy-melee-01')!;
@@ -128,8 +129,7 @@ describe('read-only attack target face cards', () => {
     if (condition === 'no-active') state.activeId = null;
     const { root, select, onSelect } = render(state);
     expect(select().disabled).toBe(true);
-    expect(root.children[0].attrs.role).toBe('status');
-    expect(root.children[0].textContent.length).toBeGreaterThan(0);
+    expect(root.all().some(node=>node.attrs.role==='status')).toBe(false);
     select().onclick!(); expect(onSelect).not.toHaveBeenCalled();
   });
 
@@ -147,8 +147,8 @@ describe('read-only attack target face cards', () => {
   it('returns only a reason when no living enemies remain, with no fake target', () => {
     const state = adjacent(); state.units.filter(unit => unit.team === 'enemy').forEach(unit => { unit.hp = 0; });
     const { root } = render(state);
-    expect(root.children).toHaveLength(1);
-    expect(root.text()).toContain('攻撃できる生存敵がいません。');
+    expect(root.children).toHaveLength(0);
+    expect(root.text()).toBe('');
     expect(root.all().some(node => node.tagName === 'BUTTON')).toBe(false);
   });
 

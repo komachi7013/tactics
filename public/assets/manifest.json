@@ -4,7 +4,7 @@
   "style": "clean_hd hand-painted chibi",
   "units": {
     "rise": {
-      "path": "units/rise/sheet-transparent.png",
+      "path": "characters/units/rise/sheet-transparent.png",
       "frameWidth": 256,
       "frameHeight": 256,
       "columns": 2,
@@ -34,7 +34,7 @@
       }
     },
     "garan": {
-      "path": "units/garan/sheet-transparent.png",
+      "path": "characters/units/garan/sheet-transparent.png",
       "frameWidth": 256,
       "frameHeight": 256,
       "columns": 2,
@@ -64,7 +64,7 @@
       }
     },
     "neia": {
-      "path": "units/neia/sheet-transparent.png",
+      "path": "characters/units/neia/sheet-transparent.png",
       "frameWidth": 256,
       "frameHeight": 256,
       "columns": 2,
@@ -94,7 +94,7 @@
       }
     },
     "guard": {
-      "path": "units/guard/sheet-transparent.png",
+      "path": "characters/units/guard/sheet-transparent.png",
       "frameWidth": 256,
       "frameHeight": 256,
       "columns": 2,
@@ -124,7 +124,7 @@
       }
     },
     "archer": {
-      "path": "units/archer/sheet-transparent.png",
+      "path": "characters/units/archer/sheet-transparent.png",
       "frameWidth": 256,
       "frameHeight": 256,
       "columns": 2,
@@ -155,7 +155,7 @@
     }
   },
   "terrain": {
-    "pathTemplate": "terrain/{dry,shallow,stone}-{0,1}.png",
+    "pathTemplate": "common/terrain/{dry,shallow,stone}-{0,1}.png",
     "tileSize": [
       256,
       256
@@ -174,7 +174,7 @@
     "projection": "opaque top-down source; runtime projects/masks onto diamond"
   },
   "gate": {
-    "path": "gate/gate.png",
+    "path": "common/gate/gate.png",
     "size": [
       256,
       256

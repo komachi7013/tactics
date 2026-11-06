@@ -217,8 +217,10 @@ describe('plan-driven board presentation', () => {
 });
 
 
+const originalBodyIds = Object.keys(ATTACK_BODIES).filter(id => /^(lise|neia)-/.test(id)) as
+  (Extract<keyof typeof ATTACK_BODIES, `${'lise' | 'neia'}-${string}`>)[];
 describe('generated cardinal bodies on the actual BoardScene adapter', () => {
- it.each(Object.keys(ATTACK_BODIES) as (keyof typeof ATTACK_BODIES)[])('draws %s without positional pulse and restores original texture/origin', id => {
+ it.each(originalBodyIds)('draws %s without positional pulse and restores original texture/origin', id => {
   const body=ATTACK_BODIES[id],h=harness(),state=createInitialState('B01');
   const actor=state.units.find(u=>u.id===body.actorId)!,target=state.units.find(u=>u.team==='enemy')!;
   actor.pos={x:2,y:5};actor.facing='N';const [dx,dy]=({N:[0,-1],E:[1,0],S:[0,1],W:[-1,0]} as const)[body.direction];target.pos={x:2+dx*2,y:5+dy*2};const frozen=JSON.stringify(state);
@@ -269,7 +271,7 @@ it('ends dedicated lethal ghost at400ms before subsequent escort movement, resto
 });
 
 
-it.each(Object.keys(ATTACK_BODIES) as (keyof typeof ATTACK_BODIES)[])('falls back when a single frame of %s is absent, and restores idle if lost in playback', id => {
+it.each(originalBodyIds)('falls back when a single frame of %s is absent, and restores idle if lost in playback', id => {
  const body=ATTACK_BODIES[id], h=harness(),state=createInitialState('B01'),actor=state.units.find(u=>u.id===body.actorId)!,target=state.units.find(u=>u.team==='enemy')!;
  actor.pos={x:2,y:5};actor.facing='W';const [dx,dy]=({N:[0,-1],E:[1,0],S:[0,1],W:[-1,0]} as const)[body.direction];target.pos={x:2+dx,y:5+dy};
  h.loaded.add(body.key);h.loaded.add(body.idleKey);h.display(state);
@@ -557,4 +559,35 @@ describe('command actor slow stepping in place', () => {
     expect(image.textureWrites).toBe(writes); expect(r.h.actors().size).toBe(0);
     expect((r.h.scene as any).commandStep).toBeUndefined();
   });
+});
+
+it.each([
+  ['ally-garan', 'garan-melee-e'],
+  ['enemy-melee-02', 'guard-melee-e'],
+  ['enemy-bow-01', 'archer-bow-e'],
+] as const)('plays the new dedicated attack for %s and returns to the directional idle', (actorId, id) => {
+  const h = harness(), state = createInitialState('B01'), body = ATTACK_BODIES[id];
+  const actor = state.units.find(unit => unit.id === actorId)!;
+  const target = state.units.find(unit => unit.team !== actor.team)!;
+  actor.pos = { x: 2, y: 5 };
+  actor.facing = 'E';
+  target.pos = { x: actor.weapon === 'bow' ? 4 : 3, y: 5 };
+  h.loaded.add(body.key);
+  h.loaded.add(body.idleKey);
+  h.display(state);
+  const plan: PresentationPlan = {
+    moves: [], attack: { actorId, targetId: target.id, weapon: actor.weapon, targetBefore: structuredClone(target) },
+    moveDuration: 0, attackDuration: 220, durationMs: 220,
+  };
+  const prepared = h.scene.preparePresentation(plan, state)!;
+  expect(prepared.attack?.bodyId).toBe(id);
+  h.scene.playPresentation(prepared);
+  const image = () => (h.actors().get(actorId)! as any).body.image;
+  for (const [time, frame] of [[0, 0], [100, 1], [200, 2], [300, 3]]) {
+    h.time(time);
+    expect(image().textureKey).toBe(body.key);
+    expect(image().frame).toBe(frame);
+  }
+  h.time(400);
+  expect(image().textureKey).toBe(body.idleKey);
 });

@@ -1,0 +1,19 @@
+{
+  "art_source": "host_image",
+  "route": "Codex ImageGen",
+  "sourceSha256": "31d464c4a68e36b02a895a21f085f8d60b359fa3493cd1296a146a599fbbdc70",
+  "status": "candidate",
+  "frameMs": 100,
+  "cell": 288,
+  "anchor": [
+    144,
+    252
+  ],
+  "issues": [],
+  "actor": "vesk",
+  "direction": "E",
+  "weapon": "melee",
+  "frames": 4,
+  "referenceHeightPx": 179,
+  "sheetSha256": "05c90750be5904a10b9e3f9d43355ea366f88921f02b9d4e78fdaa0c3856a43c"
+}

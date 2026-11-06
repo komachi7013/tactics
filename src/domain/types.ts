@@ -2,7 +2,7 @@ export type BattleId = 'B01' | 'B02' | 'B03' | 'B04' | 'B05' | 'B06' | 'B07' | '
 export type Team = 'player' | 'enemy';
 export type Facing = 'N' | 'E' | 'S' | 'W';
 export interface Pos { x: number; y: number }
-export interface Cell extends Pos { height: number; shallow: boolean; blocked: boolean; water?: boolean; bridge?: boolean }
+export interface Cell extends Pos { height: number; shallow: boolean; blocked: boolean; water?: boolean; bridge?: boolean; debugBlocked?: boolean }
 export interface Unit {
   equipmentWeaponId?: string;
   id: string; name: string; role: string; team: Team; pos: Pos;
@@ -24,7 +24,7 @@ export interface BattleState {
   repairs?: Record<string,{completed:boolean;pendingRound:number|null}>;
   sluices?: Record<string,{drained:boolean;pendingRound:number|null;pendingDrained?:boolean}>;
   capture?: {heldRounds: number}; escort?: {route: Pos[]; index: number; unitId?: string; /** B03 manual cart push; absent in legacy/start checkpoints. */ lastPushedRound?: number}; records: string[]; gate: { drained: boolean; pendingRound: number | null; pendingDrained?: boolean };
-  activation: { moved: boolean; acted: boolean; moveOrigin: Pos | null; moveOriginFacing?: Facing; plankConsumed?: boolean };
+  activation: { moved: boolean; acted: boolean; collected?: boolean; moveOriginCollected?: boolean; moveOrigin: Pos | null; moveOriginActed?: boolean; moveOriginFacing?: Facing; plankConsumed?: boolean; moveCancelled?: boolean; moveSnapshot?: BattleState; moveUndoBlocked?: boolean };
   phase: 'playing' | 'won' | 'lost'; log: string[];
 }
 export type Command =

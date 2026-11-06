@@ -32,7 +32,7 @@ function rgbaPixels(png) {
 describe('shipped painted-equipment candidate masks, separate from visual acceptance', () => {
   it('ships exactly eight registered, tight, binary white alpha masks with matching hashes and source dimensions', () => {
     expect(PAINTED_MASK_ISSUES).toEqual([]); expect(PAINTED_OBJECT_MASKS).toHaveLength(8);
-    const metadata = JSON.parse(readFileSync('public/assets/map-object-masks-v1/metadata.json', 'utf8'));
+    const metadata = JSON.parse(readFileSync('src/assets/stages/map-object-masks.json', 'utf8'));
     for (const mask of PAINTED_OBJECT_MASKS) {
       const file = readFileSync(resolve('public', mask.path.slice(1))), decoded = rgbaPixels(file);
       expect(decoded.width).toBe(mask.bounds[2] - mask.bounds[0]); expect(decoded.height).toBe(mask.bounds[3] - mask.bounds[1]);

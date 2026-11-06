@@ -14,6 +14,6 @@ describe('map object bitmap delivery', () => {
       expect(entry.width).toBeLessThanOrEqual(76);
       expect(entry.height).toBeLessThanOrEqual(76);
     }
-    expect(MAP_OBJECT_ASSETS.valve.path).toBe('/assets/gate/gate.png');
+    expect(MAP_OBJECT_ASSETS.valve.path).toBe('/assets/common/gate/gate.png');
   });
 });

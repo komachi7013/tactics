@@ -101,7 +101,7 @@ describe('terminal rule decisions through live presentation continuation', () =>
     expect(getUnit(h.state(), 'ally-lise')!.hp).toBe(0);
     expect(h.state().log.filter(l => l.includes('作戦失敗'))).toHaveLength(1);
     const attackTimer = h.pending()[0].id, committed = structuredClone(h.state());
-    expect(h.pending()[0].ms).toBe(220); expect(h.finish).not.toHaveBeenCalled(); expect(h.writes()).toBe(0);
+    expect(h.pending()[0].ms).toBe(400); expect(h.finish).not.toHaveBeenCalled(); expect(h.writes()).toBe(0);
     if (event === 'timer') h.deliver(attackTimer);
     else if (event === 'visibility') h.signals.visibility(true);
     else h.signals.preference(true);

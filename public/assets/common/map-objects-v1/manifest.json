@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "generator": "built-in image_gen",
+  "scope": "display-only props; no domain changes",
+  "sources": [
+    {
+      "name": "equipment-chest",
+      "source_size": [
+        1402,
+        1122
+      ],
+      "source_alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_bbox_alpha32": [
+        222,
+        171,
+        1185,
+        988
+      ],
+      "normalization": "uniform aspect-preserving crop/resize only; source alpha preserved",
+      "scaled_size": [
+        208,
+        176
+      ],
+      "output_size": [
+        256,
+        256
+      ],
+      "anchor": [
+        128,
+        232
+      ],
+      "transparent_pixels": 37741,
+      "rgba": true,
+      "output_sha256": "d567d2571a271a3a0968ceabec8fc2fcf101f245f00128a9ae151878448ec73e",
+      "prompt": "Use case: stylized-concept. Asset type: transparent 2D isometric tactical-RPG map prop, not an inventory UI icon. Generate ONE compact wooden equipment supply chest, closed lid, reinforced with aged bronze bands and a small plain latch, a folded linen cloth visible under one lid edge. Hand-painted clean HD game sprite matching a sunlit Mediterranean stone-waterway fantasy town and chibi RPG characters. 3/4 overhead view, left and right faces visible, top visible, centered full object. Warm brown wood, muted bronze, cream highlights, crisp readable outline at 40-60 pixels tall. Ground contact at bottom-center; no large cast shadow, no ground platform or floor. Genuine transparent background, generous clear margin on all sides. No coins, jewels, characters, labels, letters, numbers, symbols, UI frame, watermark, scenery, glow or circular badge. One object only."
+    },
+    {
+      "name": "water-record",
+      "source_size": [
+        1312,
+        1199
+      ],
+      "source_alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_bbox_alpha32": [
+        382,
+        116,
+        1022,
+        1079
+      ],
+      "normalization": "uniform aspect-preserving crop/resize only; source alpha preserved",
+      "scaled_size": [
+        138,
+        208
+      ],
+      "output_size": [
+        256,
+        256
+      ],
+      "anchor": [
+        128,
+        232
+      ],
+      "transparent_pixels": 48528,
+      "rgba": true,
+      "output_sha256": "fbed0a2359d3ccfdbbb393e18bdb93f30b1063ace5919a9df4aeb97139cff8c1",
+      "prompt": "Use case: stylized-concept. Asset type: transparent 2D isometric tactical-RPG map prop. Generate ONE small water-level survey station: a short weathered stone measuring post with simple carved horizontal notches (no numbers), a small wooden clipboard and rolled parchment resting at its base, a discreet blue water stain marking the post. This is a field-measurement evidence point, not a magic crystal. Hand-painted clean HD game sprite matching Mediterranean stone-waterway fantasy town and chibi RPG characters. 3/4 overhead view, top and two sides visible. Warm limestone, brown wood, parchment cream, muted teal accent, clear outline at 40-60 pixels tall. Complete object centered, ground contact bottom-center, generous transparent margins. Genuine transparent background. No floor, scenery, people, readable text, letters, numbers, UI circle, glow, watermark. One compact coherent station only."
+    },
+    {
+      "name": "archive-record",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "source_alpha_extrema": [
+        0,
+        254
+      ],
+      "visible_bbox_alpha32": [
+        149,
+        46,
+        1393,
+        938
+      ],
+      "normalization": "uniform aspect-preserving crop/resize only; source alpha preserved",
+      "scaled_size": [
+        208,
+        149
+      ],
+      "output_size": [
+        256,
+        256
+      ],
+      "anchor": [
+        128,
+        232
+      ],
+      "transparent_pixels": 42318,
+      "rgba": true,
+      "output_sha256": "124cee177bbd24ef8ca3224d5fd609ee91fe25ae87d91cf7de1eaffa04d8d435",
+      "prompt": "Use case: stylized-concept. Asset type: transparent 2D isometric tactical-RPG map prop. Generate ONE compact stack of official paper records: a thick brown leather-bound ledger resting on two rolled parchment documents tied with a muted red cord, one small plain bronze seal weight. It will mark a name register, archive documents or maintenance record on a tactical map. Hand-painted clean HD game sprite matching sunlit Mediterranean stone-waterway fantasy town and chibi RPG characters. 3/4 overhead view, top and two sides visible. Brown leather, cream parchment, subdued copper-red accents. Broad low silhouette, clear at 30-45 pixels tall, complete object centered, ground contact bottom-center, generous transparent margins. Genuine transparent background. No readable writing, letters, numbers, characters, scenery, table, floor, magical glow, UI frame or watermark. One coherent stack only.",
+      "editPrompt": "Use case: precise-object-edit. Edit the provided archive record sprite only to remove the diffuse brown ambient glow, haze, shadow and background outside the physical ledger, parchment rolls, red cord and bronze seal weight. Preserve the exact physical objects, their arrangement, proportions, painted colors, highlights and clean outline. Output the same complete coherent object on genuine transparent background with clean naturally anti-aliased object edges. No new objects, no scenery, no floor, no cast shadow, no glow or halo. Do not add text or change the design."
+    },
+    {
+      "name": "exit-marker",
+      "source_size": [
+        1295,
+        1214
+      ],
+      "source_alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_bbox_alpha32": [
+        295,
+        117,
+        1079,
+        1047
+      ],
+      "normalization": "uniform aspect-preserving crop/resize only; source alpha preserved",
+      "scaled_size": [
+        175,
+        208
+      ],
+      "output_size": [
+        256,
+        256
+      ],
+      "anchor": [
+        128,
+        232
+      ],
+      "transparent_pixels": 49838,
+      "rgba": true,
+      "output_sha256": "322d33b664b3c66aac4dc08f1686f2e5fe19605d80e564de649847aa0556d145",
+      "prompt": "Use case: stylized-concept. Asset type: transparent 2D isometric tactical-RPG map prop. Generate ONE compact exit waypost: a short warm limestone post with a simple unmarked wooden directional arm pointing right and a small emerald-green cloth pennant. It marks a safe departure/protection destination, not a treasure or a capture goal. Hand-painted clean HD game sprite matching Mediterranean stone-waterway fantasy town and chibi RPG characters, warm daylight colors. 3/4 overhead view, top and two sides visible, modest width and low height so a character remains visible behind it. Complete object centered, ground contact bottom-center, generous transparent clear margin. Genuine transparent background, no ground plate or floor, no cast shadow or ambient glow. No letters, numbers, readable text, people, scenery, UI frame, watermark. One coherent waypost only."
+    },
+    {
+      "name": "capture-marker",
+      "source_size": [
+        1319,
+        1192
+      ],
+      "source_alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_bbox_alpha32": [
+        408,
+        101,
+        1027,
+        1062
+      ],
+      "normalization": "uniform aspect-preserving crop/resize only; source alpha preserved",
+      "scaled_size": [
+        134,
+        208
+      ],
+      "output_size": [
+        256,
+        256
+      ],
+      "anchor": [
+        128,
+        232
+      ],
+      "transparent_pixels": 55765,
+      "rgba": true,
+      "output_sha256": "df007eac496b3924da2a95895d752da485b3e2d77d1b0f16a87dbb22c9568995",
+      "prompt": "Use case: stylized-concept. Asset type: transparent 2D isometric tactical-RPG map prop. Generate ONE compact objective control marker: a short wooden pole fixed in a small limestone socket, a small muted golden-ochre cloth pennant with no emblem, and a simple bronze survey ring fastened below it. It marks a position to hold on a tactical map, distinct from an emerald-green exit waypost and from a treasure chest. Hand-painted clean HD game sprite matching Mediterranean stone-waterway fantasy town and chibi RPG characters. 3/4 overhead view, top and two sides visible, warm brown wood, muted gold cloth, cream stone. Complete small prop centered, low enough not to hide a chibi character, ground contact bottom-center, generous transparent clear margin. Genuine transparent background. No scenery, floor, ground shadow, glow, labels, letters, numbers, text, people, UI frame or watermark. One coherent marker only."
+    }
+  ],
+  "existing_reuse": "/assets/common/gate/gate.png",
+  "normalization": "Aspect-preserving crop/resize onto a transparent 256x256 cell; bottom anchor (128,232); no design redraw in code."
+}

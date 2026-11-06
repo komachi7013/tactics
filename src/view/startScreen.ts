@@ -27,7 +27,7 @@ export function mountStartScreen(host: HTMLElement, options: StartScreenOptions)
   const root = doc.createElement('section'); root.className = 'start-screen';
   root.setAttribute('role', 'dialog'); root.setAttribute('aria-modal', 'true'); root.setAttribute('aria-labelledby', 'start-title');
   const art = doc.createElement('div'); art.className = 'start-art';
-  const image = doc.createElement('img'); image.src = '/assets/title/title-battle-v1.png'; image.alt = ''; image.decoding = 'async';
+  const image = doc.createElement('img'); image.src = '/assets/common/title/title-battle-v1.png'; image.alt = ''; image.decoding = 'async';
   art.append(image);
   const copy = doc.createElement('div'); copy.className = 'start-copy';
   const seal = doc.createElement('span'); seal.className = 'start-seal'; seal.textContent = '澪'; seal.setAttribute('aria-hidden', 'true');

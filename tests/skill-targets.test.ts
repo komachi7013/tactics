@@ -27,7 +27,7 @@ describe('portrait based skill selection', () => {
     vi.stubGlobal('document',{createElement:()=>new NodePort()}); const select = vi.fn();
     const root = createSkillTargets(state,actor,'survey',false,select) as unknown as NodePort;
     expect(root.attrs['aria-label']).toBe('測線の対象');
-    expect(root.children[0].textContent).toContain('残り2回');
+    expect(root.children[0].textContent).toBe('測線の対象');
     const cards = root.children[1].children;
     expect(cards[0].children[0].disabled).toBe(true);
     cards[0].children[0].onclick!(); expect(select).not.toHaveBeenCalled();
@@ -39,6 +39,7 @@ describe('portrait based skill selection', () => {
     const state=setup(), actor=getUnit(state,'ally-lise')!; actor.healCharges=2;
     getUnit(state,'ally-garan')!.hp-=6;
     expect(skillTargetRows(state,actor,'heal').find(r=>r.unit.id==='ally-garan')?.legal).toBe(true);
+    expect(skillTargetRows(state,actor,'heal').some(r=>r.unit.id===actor.id)).toBe(false);
     state.activation.acted=true;
     expect(skillTargetRows(state,actor,'heal').every(r=>!r.legal)).toBe(true);
   });

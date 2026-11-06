@@ -59,7 +59,7 @@ def main():
         changes=np.abs(np.diff(a,axis=0)).mean(axis=(1,2,3));seam=float(np.abs(a[0]-a[-1]).mean())/max(1e-8,float(np.percentile(changes,95)))
         assert seam<1.6,(j['index'],'loop seam',seam)
         asset={'key':f"motion-v4-walk-{j['cast']}-{j['direction']}",
-               'path':f"/assets/motion-v4/{j['cast']}/walk-{j['direction']}.png",'cell':256,'frames':count,
+               'path':f"/assets/characters/motion-v4/{j['cast']}/walk-{j['direction']}.png",'cell':256,'frames':count,
                'originX':g['anchor'][0]/256,'originY':g['anchor'][1]/256,'visibleHeight':height,'cycleMs':720,'tilesPerCycle':4}
         ready={'index':j['index'],'cast':j['cast'],'direction':j['direction'],'job_id':j['job_id'],
                'art_source':j['art_source'],'driving_job_id':j['driving_job_id'],'asset':asset,

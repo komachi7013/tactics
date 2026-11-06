@@ -4,7 +4,7 @@ import { runEnemyActivation } from '../src/domain/ai';
 import type { BattleState, Command } from '../src/domain/types';
 const actor='ally-lise',target='ally-garan',enemy='enemy-melee-01';
 function fixture(kind:'survey'|'protect'='survey'):BattleState {
- const s=createInitialState();s.cells.forEach(c=>{c.height=0;c.blocked=false;c.shallow=false;});
+ const s=createInitialState();s.records=['A'];s.cells.forEach(c=>{c.height=0;c.blocked=false;c.shallow=false;});
  getUnit(s,actor)!.pos={x:1,y:1};getUnit(s,actor)!.jobCommand=kind;getUnit(s,actor)!.surveyCharges=2;
  getUnit(s,target)!.pos={x:2,y:1};getUnit(s,enemy)!.pos={x:3,y:1};getUnit(s,enemy)!.facing='W';
  return reduce(s,{type:'start',unitId:actor}).state;

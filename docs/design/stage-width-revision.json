@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-06",
+  "scene_mode": "baked_scene_mode",
+  "projection": "Existing scene registration, 1536x1024 source; minimum rendered canvas 1280x854; pan in both axes",
+  "artwork": [
+    {
+      "id": "b02",
+      "art_source": "host_image",
+      "route": "image_gen",
+      "original": "/assets/stages/b02/adopted/river-scene.png",
+      "runtime": "/assets/stages/b02/adopted/river-scene-wide-v1.png",
+      "prompt": "Edit this exact isometric fantasy tactics environment, keeping the entire same 1536x1024 canvas and composition. Preserve the medieval cream limestone town, terracotta roofs, blue flowing river, the upper-left starting terrace, upper-left stairs, lower-right destination plaza, and all their locations. The ONE needed design change is making the long central diagonal stone bridge walkway much BROADER: expand the paved walking surface to roughly twice its current width, moving BOTH parapets outward perpendicular to its existing long axis. Keep the bridge center line, endpoints, length, angle and arch style in the same places. It must clearly have room for THREE characters side by side rather than a single file, with broad paving across the full span. Preserve the river and natural seamless stone construction, adjust arches and support masonry to support the widened deck. Match this existing hand-painted HD-2D pixel RPG visual style and lighting exactly. No characters, no units, no UI, no text, no grid, no circles, no new objects. Do not move, redesign or remove the houses, terraces or landmark stairs. Full original 3:2 landscape composition, no cropping."
+    },
+    {
+      "id": "b06",
+      "art_source": "host_image",
+      "route": "image_gen",
+      "original": "/assets/stages/b06/adopted/canal.png",
+      "runtime": "/assets/stages/b06/adopted/canal-wide-v1.png",
+      "prompt": "Edit this exact 1536x1024 3:2 isometric HD-2D fantasy tactics canal environment. Preserve the stone town, blue canal, both banks, upper-left valve wheel, ALL existing iron chain positions across the canal, wooden boat, houses, crates, endpoint plazas, lighting and hand-painted pixel style. Widen ONLY the long central diagonal bridge's paved walking surface by about 60 percent, moving its parapets outward perpendicular to its long axis. Keep the existing bridge center line, exact endpoints, angle, length and elevation. Add broad clean bare paving along both sides so three characters can walk side by side. Adjust its supporting stone arch/masonry naturally. Do not move the chain, boat or valve. No characters, text, UI, grid or markers. No crop, no camera change."
+    },
+    {
+      "id": "b09",
+      "art_source": "host_image",
+      "route": "image_gen",
+      "original": "/assets/stages/b09/adopted/corridor.png",
+      "runtime": "/assets/stages/b09/adopted/corridor-wide-v1.png",
+      "prompt": "Edit this exact 1536x1024 3:2 isometric fantasy tactical RPG background. Preserve the medieval limestone architecture, all existing houses, roofs, water, plants and structural landmarks, and the painterly pixel HD-2D style. Widen the main diagonal processional stone corridor and both stairways by about 60 percent, enough for three people side by side. Keep its center line, angle, exact endpoints, all terrace elevations and the public building entrance in place. Move the path's stone parapets and flower pots outward so that an additional parallel walking lane on either side is bare walkable paving. The water remains clearly separated from the broad corridor. Make the minimal necessary geometry change, preserving the rest of the composition and lighting. No characters, text, UI, grids, glowing markers or labels. No crop or camera change."
+    },
+    {
+      "id": "b11",
+      "art_source": "host_image",
+      "route": "image_gen",
+      "original": "/assets/stages/b11/adopted/maintenance.png",
+      "runtime": "/assets/stages/b11/adopted/maintenance-wide-v1.png",
+      "prompt": "Edit this exact 1536x1024 3:2 isometric fantasy tactical RPG background. Preserve the medieval limestone architecture, all existing houses, roofs, water, plants and structural landmarks, and the painterly pixel HD-2D style. Widen the descending stone staircase from the upper-left valve terrace to the lower-left courtyard, and widen the diagonal right-side stone bridge from the lower courtyard to the right valve, by approximately 60 percent. Each should clearly allow three characters side by side. Keep the center lines, directions, endpoints and floor elevations in their current places. Move railings outward to add bare paved floor alongside each route. Keep both huge valve wheels, canal water, watergate towers and the terrace layout at the same locations. Make the minimal necessary geometry change, preserving the rest of the composition and lighting. No characters, text, UI, grids, glowing markers or labels. No crop or camera change."
+    }
+  ]
+}

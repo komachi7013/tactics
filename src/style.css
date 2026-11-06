@@ -281,3 +281,102 @@ body .start-copy .start-action:hover:enabled{background:#365d49}.start-action:fo
 .start-warning{border-top:1px solid #9f805b;padding-top:12px;color:#753f2b}.start-qa{border-top:1px dashed #a18359;padding-top:12px;color:#70543f;font-size:11px}
 @media(max-width:800px),(max-height:560px){.start-screen{display:block;padding:0;background:#19382e}.start-art{position:relative;inset:auto;z-index:0;aspect-ratio:16/10;width:100%}.start-art img{position:absolute;inset:0}.start-copy{width:auto;max-width:none;min-width:0;margin:0;padding:28px max(24px,env(safe-area-inset-left)) max(30px,env(safe-area-inset-bottom));border-width:1px 0 0;box-shadow:none;background:var(--title-paper)}body .start-copy #start-title{font-size:clamp(30px,7vw,48px)}.start-seal{margin-bottom:14px}.start-rule{margin:22px 0}.start-action{max-width:400px}.start-image-unavailable .start-art{display:none}}
 @media(prefers-reduced-motion:reduce){.start-screen,.start-screen *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+.passability-debug {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  flex: none;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem;
+  padding: .4rem .6rem;
+  background: #18372f;
+  color: #f0e7d1;
+  font-size: .8rem;
+}
+
+/* Full-screen authored story plates; field conversations keep the battle view. */
+.story-shield[data-scenic="true"]{background:#10221f;overflow:hidden}
+.story-backdrop{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;animation:story-landscape 22s ease-out both;pointer-events:auto}
+.story-shield[data-scenic="true"]::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(#0005,transparent 30%,#0002 65%,#0007)}
+.story-shield[data-scenic="true"] .story-panel{animation:story-arrive .35s ease-out both}
+.story-shield[data-scenic="true"][data-page="narration"],.story-shield[data-scenic="true"][data-page="title"]{align-items:center}
+.story-shield[data-scenic="true"][data-page="narration"] .story-panel{width:min(880px,100%);max-height:85dvh;background:rgba(0,0,0,.64);border:0;box-shadow:none;padding:28px 36px}
+.story-shield[data-scenic="true"][data-page="narration"] .story-text{max-height:48dvh;line-height:2.05;text-align:left}
+.story-shield[data-scenic="true"][data-page="title"] .story-panel{width:min(1100px,100%);max-height:90dvh;background:#0008;border:0;box-shadow:none;padding:40px 28px;text-align:center}
+.story-shield[data-scenic="true"][data-page="title"] .story-panel h2{display:none}
+.story-shield[data-scenic="true"][data-page="title"] .story-text{font-size:clamp(25px,3.7vw,48px);line-height:1.7;max-height:48dvh;text-align:center;letter-spacing:.08em;margin:22px 0 30px;text-wrap:balance}
+.story-shield[data-scenic="true"][data-page="title"] .story-actions{justify-content:center}
+@keyframes story-landscape{from{transform:scale(1.025)}to{transform:scale(1)}}
+@keyframes story-arrive{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:650px){.story-shield[data-scenic="true"][data-page="narration"] .story-panel{padding:22px 18px}.story-shield[data-scenic="true"][data-page="narration"] .story-text{font-size:18px;line-height:1.9;max-height:49dvh}.story-shield[data-scenic="true"][data-page="title"] .story-panel{padding:24px 16px}}
+@media(prefers-reduced-motion:reduce){.story-backdrop,.story-shield[data-scenic="true"] .story-panel{animation:none}}
+.story-speaker[hidden]{display:none}
+
+/* Status belongs to the map; the bottom strip duplicated the inspector. */
+body[data-ui-notebook="true"] footer{display:none}
+body[data-ui-notebook="true"] .map-note::before{content:none}
+.map-note #message{margin:0;line-height:1.65;font-size:12px;color:#fff3ce}
+
+/* One frame and one action row for every narrated or spoken page. */
+.story-shield[data-scenic="true"],.story-shield[data-scenic="true"][data-page="narration"],.story-shield[data-scenic="true"][data-page="title"]{align-items:center}
+.story-shield[data-scenic="true"] .story-panel,
+.story-shield[data-scenic="true"][data-page="narration"] .story-panel,
+.story-shield[data-scenic="true"][data-page="title"] .story-panel{
+ box-sizing:border-box;width:min(1100px,100%);height:min(530px,calc(100dvh - 36px));max-height:none;
+ display:grid;grid-template-rows:28px minmax(0,1fr) 76px;gap:12px;padding:22px 28px;
+ background:rgba(0,0,0,.65);border:1px solid #b6a67c;border-radius:6px;overflow:hidden;animation:none;text-align:left
+}
+.story-shield[data-scenic="true"] .story-panel h2{display:block;margin:0;align-self:center}
+.story-shield[data-scenic="true"][data-page="title"] .story-panel h2{visibility:hidden}
+.story-shield[data-scenic="true"] .story-content{min-height:0;height:100%;align-items:center}
+.story-shield[data-scenic="true"] .story-words{height:100%;min-height:0;display:grid;grid-template-rows:minmax(0,1fr) 34px}
+.story-shield[data-scenic="true"] .story-words>[aria-live]{min-height:0;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.story-shield[data-scenic="true"] .story-text,
+.story-shield[data-scenic="true"][data-page="narration"] .story-text,
+.story-shield[data-scenic="true"][data-page="title"] .story-text{max-height:100%;min-height:0;margin:8px 0;line-height:1.9;overflow-y:auto}
+.story-shield[data-scenic="true"] .story-count{margin:0;align-self:end}
+.story-shield[data-scenic="true"] .story-actions,
+.story-shield[data-scenic="true"][data-page="title"] .story-actions{display:grid;grid-template-columns:100px minmax(0,1fr) 180px;align-items:end;gap:12px;margin:0}
+.story-shield[data-scenic="true"] .story-actions button{height:52px;min-width:0;margin:0;line-height:1.4}
+@media(max-width:650px){
+ .story-shield[data-scenic="true"] .story-panel,
+ .story-shield[data-scenic="true"][data-page="narration"] .story-panel,
+ .story-shield[data-scenic="true"][data-page="title"] .story-panel{height:min(620px,calc(100dvh - 32px));padding:16px;gap:10px;grid-template-rows:28px minmax(0,1fr) 76px}
+ .story-shield[data-scenic="true"] .story-actions,
+ .story-shield[data-scenic="true"][data-page="title"] .story-actions{grid-template-columns:70px minmax(0,1fr) 110px;gap:8px}
+ .story-shield[data-scenic="true"] .story-text{font-size:18px}
+ .story-shield[data-scenic="true"] .story-count{font-size:10px}
+}
+@media(max-height:500px){
+ .story-shield[data-scenic="true"] .story-panel,
+ .story-shield[data-scenic="true"][data-page="narration"] .story-panel,
+ .story-shield[data-scenic="true"][data-page="title"] .story-panel{height:calc(100dvh - 16px);padding:10px 16px;gap:6px;grid-template-rows:22px minmax(0,1fr) 52px}
+}
+.story-shield[data-scenic="true"][data-page="title"] .story-panel h2{display:block;visibility:hidden}
+.story-shield[data-scenic="true"] .story-actions button:nth-child(2){width:min(100%,240px);justify-self:center}
+#coordinate-panel{display:none!important}
+/* Field dialogue also reserves its action row while leaving the map visible. */
+.story-shield:not([data-scenic]) .story-panel{box-sizing:border-box;height:min(360px,calc(100dvh - 32px));max-height:none;display:grid;grid-template-rows:28px minmax(0,1fr) 64px;gap:10px;overflow:hidden}
+.story-shield:not([data-scenic]) .story-content{min-height:0;height:100%}
+.story-shield:not([data-scenic]) .story-words{height:100%;min-height:0;display:grid;grid-template-rows:minmax(0,1fr) 32px}
+.story-shield:not([data-scenic]) .story-words>[aria-live]{min-height:0;overflow:auto}
+.story-shield:not([data-scenic]) .story-text{max-height:none}
+.story-shield:not([data-scenic]) .story-actions{margin:0;align-items:end}
+/* Registered stages keep readable actors and use scrolling instead of side letterboxing. */
+body[data-ui-notebook="true"] .battlefield{overflow:hidden}
+body[data-ui-notebook="true"] .map-scroll{display:flex;flex:1;min-height:0;min-width:0;overflow:auto;overscroll-behavior:contain;container-type:inline-size}
+body[data-ui-notebook="true"] .map-scroll canvas{cursor:grab!important;user-select:none}
+body[data-ui-notebook="true"] .map-scroll.is-dragging canvas{cursor:grabbing!important}
+body[data-ui-notebook="true"] .map-note{position:absolute;z-index:2;left:15px;bottom:8px}
+body[data-ui-notebook="true"]:not([data-ui-battle="B01"]) #board{width:100%;min-width:1280px;height:100%;min-height:max(854px,66.6667cqw);flex:none}
+body[data-ui-notebook="true"]:not([data-ui-battle="B01"]) #board canvas{touch-action:pan-x pan-y}
+.facing-grid button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:6px 10px 10px;min-height:148px}
+.facing-grid .facing-pose{display:block;width:104px;height:104px;object-fit:contain;pointer-events:none}
+.facing-grid .facing-label{font-weight:700;line-height:1.5}
+.facing-grid .facing-screen-direction{font-size:11px;line-height:1.4;opacity:.85}
+.facing-grid button[aria-pressed="true"]{outline:2px solid var(--gold);outline-offset:1px}
+@media(max-height:650px){.facing-grid button{min-height:112px}.facing-grid .facing-pose{width:72px;height:72px}}

@@ -13,5 +13,5 @@ export function castIdentity(unit: Pick<Unit,'id'|'weapon'>): CastId | undefined
 }
 export function castPortraitPath(unit: Pick<Unit,'id'|'weapon'>): string | undefined {
   const id = castIdentity(unit);
-  return id ? `/assets/motion-v1/portraits/${id}.png` : undefined;
+  return id ? `/assets/characters/portraits/${id}.png` : undefined;
 }

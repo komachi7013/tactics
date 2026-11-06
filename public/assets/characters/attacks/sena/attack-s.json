@@ -1,0 +1,66 @@
+{
+  "actor": "sena",
+  "direction": "S",
+  "frameMs": 100,
+  "frames": 4,
+  "cell": 288,
+  "art_source": "host_image",
+  "route": "Codex ImageGen",
+  "sourceSha256": "078c0e3c1e3d6a629fe74fe696a410e2045328140f3d965901bff376f4054574",
+  "sheetSha256": "fa51e33b086ade672630562cca8571eae846a10d5830d44153d8508c7ad8faa1",
+  "paddedOriginPx": [
+    144,
+    252
+  ],
+  "anchor": [
+    144,
+    252
+  ],
+  "pixelsUnchangedByPadding": true,
+  "normalization": {
+    "referenceFirstFrameHeight": 179,
+    "scale": 0.4508816120906801,
+    "oneTransformForAllFrames": true,
+    "lowAlphaRemovalThreshold": 76
+  },
+  "facing": "screen lower-left, approved S idle reference",
+  "stats": [
+    {
+      "bbox": [
+        107,
+        73,
+        182,
+        253
+      ]
+    },
+    {
+      "bbox": [
+        97,
+        79,
+        183,
+        253
+      ]
+    },
+    {
+      "bbox": [
+        91,
+        81,
+        189,
+        253
+      ]
+    },
+    {
+      "bbox": [
+        98,
+        77,
+        183,
+        253
+      ]
+    }
+  ],
+  "issues": [],
+  "weapon": "melee",
+  "referenceHeightPx": 179,
+  "status": "final",
+  "review": "South attack facing accepted by user, 2026-11-05"
+}

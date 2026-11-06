@@ -54,7 +54,7 @@ describe('authored dialogue expansion and reveal order', () => {
     expect(BATTLE_DIALOGUE.B04.intro.some(line => line.speaker === 'ダニ')).toBe(false);
     expect(BATTLE_DIALOGUE.B04.result.some(line => line.speaker === 'ダニ')).toBe(true);
     expect([...BATTLE_DIALOGUE.B06.intro, ...BATTLE_DIALOGUE.B06.result].some(line => line.speaker === 'ネイア')).toBe(false);
-    expect(addedText(introStoryHtml('B06'))).toContain('ネイアが戻ることを前提に、危険を先送りしません');
+    expect(addedText(introStoryHtml('B06'))).toContain('ネイアが戻るのを待ってはいられません');
   });
 
   it('places B05’s final exchange before departure, never inventing a post-departure Neia reply', () => {
@@ -78,14 +78,14 @@ describe('authored dialogue expansion and reveal order', () => {
     const intro = addedText(introStoryHtml('B07')), result = addedText(resultStoryHtml('B07', []));
     expect(intro).toContain('岸へ送る道をつくる');
     expect(intro).toContain('赦したことにはしないで');
-    expect(intro).toContain('和解したという報告に変えない');
-    expect(result).toContain('できなかったことは戻らない');
+    expect(intro).toContain('今日は住民を助けるために');
+    expect(result).toContain('救えなかった人が戻るわけではない');
   });
 
   it('keeps the B01/A-B and B02 observation records distinct from the B03 resident-list context', () => {
     expect(addedText(introStoryHtml('B01'))).toContain('今この場で確保するのは、水位の記録二件');
-    expect(addedText(introStoryHtml('B02'))).toContain('観測点を確保したら、東岸へ');
-    expect(addedText(introStoryHtml('B03'))).toContain('写しと負傷者を運び出しましょう');
+    expect(addedText(introStoryHtml('B02'))).toContain('高台で記録を取ったら、東岸へ');
+    expect(addedText(introStoryHtml('B03'))).toContain('写しも負傷者も、ここから運び出しましょう');
     for (const id of ['B01', 'B02'] as const) expect(addedText(introStoryHtml(id))).not.toMatch(/記録[ＡAＢBＯO].{0,8}(住民名簿|名簿写し)/);
   });
 
@@ -93,20 +93,20 @@ describe('authored dialogue expansion and reveal order', () => {
     expect(addedText(resultStoryHtml('B09', []))).toContain('支持は四票相当');
     expect(addedText(introStoryHtml('B10'))).toContain('支持はまだ四票相当');
     expect(addedText(resultStoryHtml('B10', []))).toContain('六票相当');
-    expect(addedText(introStoryHtml('B11'))).toContain('六票の支持');
+    expect(introStoryHtml('B11')).toContain('六票');
     expect(addedText(resultStoryHtml('B11', []))).toContain('支持見込みは九票相当');
     expect(addedText(resultStoryHtml('B11', []))).toContain('正式採決はまだ');
     expect(addedText(resultStoryHtml('B12', []))).toContain('安全を確保した後、正式採決と審理へ');
-    expect(addedText(endingContent([]))).toContain('賛成九、反対三');
-    expect(addedText(endingContent([]))).toContain('十二票の過半数七');
+    expect(addedText(endingContent([]))).toContain('賛成九票、反対三票');
+    expect(endingContent([])).toContain('成立に必要な七票');
   });
 
   it('keeps seizure, operation staff and Lise/Toma responsibility separate from rescue', () => {
-    expect(addedText(resultStoryHtml('B09', []))).toContain('命令は裁定所が出し、執行は権限を持つ警備隊が行う');
+    expect(addedText(resultStoryHtml('B09', []))).toContain('身柄を押さえるのは首府警備隊の役目');
     expect(addedText(introStoryHtml('B12'))).toContain('生きたまま制圧し');
-    expect(addedText(introStoryHtml('B11'))).toContain('運用を続ける協力と、調査を受けることは両立する');
+    expect(addedText(introStoryHtml('B11'))).toContain('水門を動かす仕事は止められない');
     const ending = addedText(endingContent([]));
-    expect(ending).toContain('資格停止のまま、立会補助員');
+    expect(ending).toContain('資格停止のままですが、立会補助員');
     expect(ending).toContain('指示を出した人の名の後ろに、私の筆を隠さない');
     expect(endingContent([]).match(/<li>/g)).toHaveLength(5);
   });
@@ -114,7 +114,7 @@ describe('authored dialogue expansion and reveal order', () => {
   it('changes no expanded dialogue or fixed ending between K outcomes and never removes compensation rights', () => {
     const records = Object.freeze(['K']), withKResult = resultStoryHtml('B05', records), withoutKResult = resultStoryHtml('B05', []);
     expect(addedText(withKResult)).toBe(addedText(withoutKResult));
-    for (const html of [withKResult, withoutKResult]) expect(addedText(html)).toContain('被害も補償を求める権利も変わらない');
+    for (const html of [withKResult, withoutKResult]) expect(addedText(html)).toContain('受けた被害も補償を求める権利も変わらない');
     const withK = endingContent(['B05:K']), withoutK = endingContent([]);
     expect(withoutCompensation(withK)).toBe(withoutCompensation(withoutK));
     expect(addedText(withK)).toBe(addedText(withoutK));

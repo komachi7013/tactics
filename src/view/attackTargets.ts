@@ -29,13 +29,6 @@ export function createAttackTargets(state: BattleState, options: AttackTargetsOp
   const legalTargets = new Map(availability.targets.map(target => [target.targetId, target.preview]));
   const enemies = state.units.filter(unit => unit.team === 'enemy' && unit.hp > 0);
 
-  if (!availability.enabled) {
-    const reason = document.createElement('p');
-    reason.className = 'attack-targets-reason';
-    reason.setAttribute('role', 'status');
-    reason.textContent = availability.reason;
-    root.append(reason);
-  }
   if (!enemies.length) return root;
 
   const list = document.createElement('div');
@@ -77,7 +70,7 @@ export function createAttackTargets(state: BattleState, options: AttackTargetsOp
     } else {
       const blocked = document.createElement('span');
       blocked.className = 'attack-target-unavailable';
-      blocked.textContent = reason;
+      blocked.textContent = '';
       text.append(blocked);
     }
     button.append(createInspectionFace(enemy), text);

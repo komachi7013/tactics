@@ -78,6 +78,13 @@ export function presentationMoveTiming(plan: PresentationPlan, move: Presentatio
   return {start:move.afterAttack ? plan.moveDuration + plan.attackDuration : 0,
     duration:move.durationMs ?? (move.afterAttack ? plan.afterMoveDuration ?? 0 : plan.moveDuration)};
 }
+/** A brief standing beat separates the completed walk from an attack. */
+export function separateMoveAndAttack(plan: PresentationPlan | null): PresentationPlan | null {
+  if (!plan?.attack || !plan.moves.some(move => !move.afterAttack)) return plan;
+  const moves = plan.moves.map(move => ({ ...move, durationMs: presentationMoveTiming(plan, move).duration }));
+  const pause = 200;
+  return { ...plan, moves, moveDuration: plan.moveDuration + pause, durationMs: plan.durationMs + pause };
+}
 export function samplePresentation(plan: PresentationPlan, elapsed: number): {
   positions: Record<string, { from: Pos; to: Pos; t: number }>;
   attackProgress: number | null;

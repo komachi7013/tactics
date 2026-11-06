@@ -3,11 +3,13 @@ import ts from 'typescript';
 import mainSource from '../src/main.ts?raw';
 import { BattleDialogueJournal } from '../src/view/battleDialogues';
 import { mountStoryPanel } from '../src/view/storyPanel';
+import { storyScenery } from '../src/view/storyScenery';
 import { mountStartScreen, readStartProgress } from '../src/view/startScreen';
 import { mountPrologue, shouldShowPrologue } from '../src/view/prologue';
 import { selectionCommandState } from '../src/view/selectionCommands';
 import { readAuthoredStory, storySpeakerFace } from '../src/view/storyScript';
-import { introStoryHtml, resultStoryHtml } from '../src/view/storyContent';
+import { introStoryHtml, resultStoryHtml, battleResultSummary } from '../src/view/storyContent';
+import { battleObjectiveCopy } from '../src/view/battleObjectiveCopy';
 import { briefingRulesText } from '../src/view/briefingContent';
 import { makeModalBackgroundInert, createDialogSettlement } from '../src/view/modalFocus';
 import { getBattleConfig } from '../src/domain/battles';
@@ -35,7 +37,7 @@ const js=ts.transpileModule(actualFunctions,{compilerOptions:{target:ts.ScriptTa
 
 class NodePort {
   children:NodePort[]=[];parent:NodePort|null=null;attrs:Record<string,string>={};dataset:Record<string,string>={};
-  className='';id='';textContent='';hidden=false;disabled=false;tabIndex=-1;scrollTop=0;scrollHeight=800;clientHeight=240;
+  className='';id='';src='';textContent='';hidden=false;disabled=false;tabIndex=-1;scrollTop=0;scrollHeight=800;clientHeight=240;
   isContentEditable=false;
   rawHTML='';
   onclick:((e:MouseEvent)=>void)|null=null;onerror:(()=>void)|null=null;
@@ -103,6 +105,8 @@ function harness(id:BattleId='B01',phase:'playing'|'won'|'lost'='playing',option
   if(phase==='won')state.records=evidence[id];
   const events:string[]=[];
   const context:Record<string,unknown>={
+    turnAnnouncement:{showClear:(resume:()=>void)=>resume()},motionPreference:{matches:false},
+    board:{focusUnitInViewport:()=>{}},
     dialogueJournal:new BattleDialogueJournal(id),replayBattleDialogue:()=>{},
     state,campaign,screen:phase==='playing'?'intro':'battle',selected:null,inspectionTeam:'player',mode:'inspect',cursor:{x:0,y:5},
     disposeStart:undefined,startHasCheckpoint:readStartProgress(storage).hasCheckpoint,startWarning:undefined,startQaNotice:'',disposeStory:undefined,disposePrologue:undefined,restoreModalBackground:undefined,dialogOpen:false,modalReturnFocus:null,pendingFocus:null,message:'',saveStatus:'',saveWritable:true,storage,
@@ -110,7 +114,7 @@ function harness(id:BattleId='B01',phase:'playing'|'won'|'lost'='playing',option
     currentFocusKey:()=>null,render:()=>events.push('render'),clearBattleTimers:()=>events.push('clear'),
     audio:{beginScene:()=>{},playSE:()=>{},playSESequence:()=>{},status:{}},battleMusic,resultSounds,mountSceneAudioControls:()=>{},audioControls:()=>doc.createElement('details'),updateAudioControls:()=>{},
     button:(label:string,fn:()=>void,disabled=false,cls='')=>{const b=doc.createElement('button');b.textContent=label;b.onclick=fn;b.disabled=disabled;b.className=cls;return b;},
-    getBattleConfig,readAuthoredStory,storySpeakerFace,introStoryHtml,resultStoryHtml,briefingRulesText,mountStoryPanel,mountStartScreen,mountPrologue,shouldShowPrologue,selectionCommandState,makeModalBackgroundInert,createDialogSettlement,
+    storyScenery,getBattleConfig,battleObjectiveCopy,readAuthoredStory,storySpeakerFace,introStoryHtml,resultStoryHtml,battleResultSummary,briefingRulesText,mountStoryPanel,mountStartScreen,mountPrologue,shouldShowPrologue,selectionCommandState,makeModalBackgroundInert,createDialogSettlement,
     completeBattle:(...args:Parameters<typeof completeBattle>)=>{events.push('completeBattle');return completeBattle(...args);},
     writeCampaign:(...args:Parameters<typeof writeCampaign>)=>{events.push('write');return writeCampaign(...args);},
     createCampaign,createPartyBattle,selectBattle,commonLevel,defaultParty,getConfirmedEquipmentEvents:()=>[],getUnconfirmedEquipmentEvents:()=>[],
@@ -155,9 +159,9 @@ describe('actual main story/state paths (DOM port, no browser)',()=>{
     const fresh=structuredClone(h.api.snapshot().state);expect(fresh).toMatchObject({battleId:'B01',round:1,phase:'playing',turn:'player',activeId:null,records:[],activation:{moved:false,acted:false}});
     expect(h.writes()).toBe(0);expect(h.deletions()).toBe(0);expect(h.preferenceWrites()).toBe(0);expect(h.memory.has(CAMPAIGN_KEY)).toBe(false);
     h.tick();stale({detail:1,preventDefault:()=>{},stopPropagation:()=>{}} as MouseEvent);expect(h.overlay.querySelector('.prologue-screen')).not.toBeNull();
-    h.fire(h.find('第1戦の物語へ進む'));expect(h.overlay.querySelector('.prologue-screen')).toBeNull();expect(h.overlay.querySelector('.story-count')!.textContent).toMatch(/^1 /);
-    h.fire(h.buttons().at(-1)!);expect(h.overlay.querySelector('.story-count')!.textContent).toMatch(/^1 /);
-    h.fire(h.buttons().at(-1)!,'Enter',true);expect(h.overlay.querySelector('.story-count')!.textContent).toMatch(/^1 /);
+    h.fire(h.find('序章をスキップ'));expect(h.overlay.querySelector('.prologue-screen')).toBeNull();expect(h.overlay.querySelector('.story-shield')!.dataset.page).toBe('title');
+    h.fire(h.buttons().at(-1)!);expect(h.overlay.querySelector('.story-shield')!.dataset.page).toBe('title');
+    h.fire(h.buttons().at(-1)!,'Enter',true);expect(h.overlay.querySelector('.story-shield')!.dataset.page).toBe('title');
     h.tick();stale({detail:1,preventDefault:()=>{},stopPropagation:()=>{}} as MouseEvent);expect(h.api.snapshot().state).toEqual(fresh);expect(h.writes()).toBe(0);
     h.finishStory();h.tick();h.fire(h.buttons()[0]);expect(h.api.snapshot().screen).toBe('battle');expect(h.overlay.children).toHaveLength(0);expect(h.writes()).toBe(1);
     h.api.restart();expect(h.api.snapshot().screen).toBe('battle');expect(h.overlay.children).toHaveLength(0);
@@ -166,14 +170,14 @@ describe('actual main story/state paths (DOM port, no browser)',()=>{
     const h=harness('B05'),saved=h.memory.get(CAMPAIGN_KEY),before=structuredClone(h.api.snapshot().state);
     h.api.showStartScreen();expect(h.overlay.querySelector('.start-note')!.textContent).toContain('B05');h.tick();h.fire(h.find('続きから始める'));
     expect(h.api.snapshot().state.battleId).toBe('B05');expect(h.overlay.querySelector('.prologue-screen')).toBeNull();
-    expect(h.overlay.querySelector('.story-text')!.textContent).toBe(readAuthoredStory(introStoryHtml('B05'))[0].text);
+    expect(h.overlay.querySelector('.story-text')!.textContent).toBe(storyScenery('B05','intro')!.chapterTitle);
     expect(h.api.snapshot().state).toEqual(before);expect(h.memory.get(CAMPAIGN_KEY)).toBe(saved);expect(h.writes()).toBe(0);expect(h.deletions()).toBe(0);
   });
   it('continues saved B01 directly regardless of an absent or retired read marker',()=>{
     for(const prologueSeen of [false,true]){
       const h=harness('B01','playing',{prologueSeen}),saved=h.memory.get(CAMPAIGN_KEY),before=structuredClone(h.api.snapshot().state);
       h.api.showStartScreen();h.tick();h.fire(h.find('続きから始める'));
-      expect(h.overlay.querySelector('.prologue-screen')).toBeNull();expect(h.overlay.querySelector('.story-text')!.textContent).toBe(readAuthoredStory(introStoryHtml('B01'))[0].text);
+      expect(h.overlay.querySelector('.prologue-screen')).toBeNull();expect(h.overlay.querySelector('.story-text')!.textContent).toBe(storyScenery('B01','intro')!.chapterTitle);
       expect(h.api.snapshot().state).toEqual(before);expect(h.memory.get(CAMPAIGN_KEY)).toBe(saved);expect(h.writes()).toBe(0);expect(h.deletions()).toBe(0);expect(h.preferenceWrites()).toBe(0);
     }
   });
@@ -225,16 +229,16 @@ describe('actual main story/state paths (DOM port, no browser)',()=>{
   it('replays opening context during battle then returns without changing state, campaign save, or an activation',()=>{
     const h=harness(),returned=vi.fn();h.context.screen='battle';h.context.selected='ally-garan';
     const before=structuredClone(h.api.snapshot()),saved=h.memory.get(CAMPAIGN_KEY);h.api.showOpeningContext(returned,true);
-    expect(h.overlay.querySelector('.prologue-screen')).not.toBeNull();expect(h.api.snapshot().screen).toBe('battle');h.fire(h.find('閉じて元の画面へ戻る'));
+    expect(h.overlay.querySelector('.prologue-screen')).not.toBeNull();expect(h.api.snapshot().screen).toBe('battle');h.fire(h.find('閉じる'));
     expect(returned).toHaveBeenCalledOnce();expect(h.api.snapshot()).toEqual(before);expect(h.memory.get(CAMPAIGN_KEY)).toBe(saved);
     expect(h.writes()).toBe(0);expect(h.deletions()).toBe(0);expect(h.preferenceWrites()).toBe(0);expect(h.api.snapshot().state.activeId).toBeNull();expect(h.shell.getAttribute('inert')).toBeNull();
   });
   it('intro → briefing → reread/back → start uses fresh authored pages without an early save or command',()=>{
     const h=harness(),before=structuredClone(h.api.snapshot());h.api.intro();
     expect(h.shell.getAttribute('inert')).toBe('');expect(h.api.snapshot().dialogOpen).toBe(true);
-    h.advance();h.tick();h.fire(h.find('戻る'));expect(h.overlay.querySelector('.story-text')!.textContent).toContain('杭は流されていない');
+    h.advance();h.advance();h.tick();h.fire(h.find('戻る'));expect(h.overlay.querySelector('.story-text')!.textContent).toContain('測量官リセは');
     h.finishStory();expect(h.find('導入を読み返す')).toBeTruthy();expect(h.writes()).toBe(0);
-    h.tick();h.fire(h.find('導入を読み返す'));expect(h.overlay.querySelector('.story-count')!.textContent).toMatch(/^1 /);
+    h.tick();h.fire(h.find('導入を読み返す'));expect(h.overlay.querySelector('.story-shield')!.dataset.page).toBe('title');
     h.finishStory();expect(h.api.snapshot().state).toEqual(before.state);
     const start=h.buttons().find(n=>n.textContent.includes('調査隊を指揮する'))!;
     // The newly opened field dialog does not accept the carried click/held key.
@@ -242,6 +246,13 @@ describe('actual main story/state paths (DOM port, no browser)',()=>{
     h.tick();h.fire(start);expect(h.api.snapshot().screen).toBe('battle');expect(h.writes()).toBe(1);
     expect(h.shell.getAttribute('inert')).toBeNull();expect(h.api.snapshot().dialogOpen).toBe(false);
     expect(h.overlay.children).toHaveLength(0);
+  });
+  it.each(Array.from({length:12},(_,n)=>`B${String(n+1).padStart(2,'0')}` as BattleId))('%s shows Stage Clear before the victory story',id=>{
+    const h=harness(id,'won');let resume=()=>{};
+    const showClear=vi.fn((next:()=>void)=>{resume=next;});h.context.turnAnnouncement={showClear};
+    h.api.finish();expect(showClear).toHaveBeenCalledOnce();expect(h.writes()).toBe(1);
+    expect(h.overlay.querySelector('.story-shield')).toBeNull();
+    resume();expect(h.overlay.querySelector('.story-shield')).not.toBeNull();expect(h.writes()).toBe(1);
   });
   it('victory saves before story; last-block arrows do not expose results; rereads do not award/save twice',()=>{
     const h=harness('B01','won');h.api.finish();
@@ -257,7 +268,7 @@ describe('actual main story/state paths (DOM port, no browser)',()=>{
     const stale=resultButtons[0].onclick!;stale({} as MouseEvent);expect(h.writes()).toBe(1);
     h.tick();h.fire(h.find('B02 旧セラ堤へ'));
     expect(h.api.snapshot().state.battleId).toBe('B02');expect(h.api.snapshot().screen).toBe('intro');
-    expect(h.overlay.querySelector('.story-count')!.textContent).toMatch(/^1 /);
+    expect(h.overlay.querySelector('.story-shield')!.dataset.page).toBe('title');
   });
   it('loss has neither victory-story nor next-stage/ending; retry starts a new battle without awarding evidence',()=>{
     const h=harness('B01','lost');h.api.finish();expect(h.overlay.querySelector('.story-shield')).toBeNull();
@@ -275,12 +286,12 @@ describe('actual main story/state paths (DOM port, no browser)',()=>{
   });
   it('B12 ending and reread use the saved evidence, without a second completion/write; reload starts at intro',()=>{
     const h=harness('B12','won');h.api.finish();h.finishStory();h.tick();h.fire(h.find('終幕を読む'));
-    expect(h.overlay.querySelector('.story-count')!.textContent).toMatch(/^1 /);h.finishStory();
+    expect(h.overlay.querySelector('.story-shield')!.dataset.page).toBe('title');h.finishStory();
     h.tick();h.fire(h.find('終幕を読み返す'));h.finishStory();expect(h.writes()).toBe(1);
     expect(h.events.filter(x=>x==='completeBattle')).toHaveLength(1);
     const loaded=readCampaign(h.storage);expect(loaded.campaign?.completed).toContain('B12');
     const fresh=harness('B12');fresh.context.campaign=loaded.campaign;fresh.api.intro();
-    expect(fresh.overlay.querySelector('.story-count')!.textContent).toMatch(/^1 /);
+    expect(fresh.overlay.querySelector('.story-shield')!.dataset.page).toBe('title');
     expect(fresh.api.snapshot().state.phase).toBe('playing');expect(fresh.writes()).toBe(0);
   });
   it('preserves the previous checkpoint when victory storage fails; story reread never silently retries the write',()=>{
@@ -292,14 +303,32 @@ describe('actual main story/state paths (DOM port, no browser)',()=>{
     expect(readCampaign(h.storage).campaign.completed).toEqual([]);
     expect(h.api.snapshot().campaign.completed).toEqual(['B01']);
   });
+  it('routes every post-battle story to its own plate without advancing the next battle',()=>{
+    for(let n=1;n<=12;n++){
+      const id=`B${String(n).padStart(2,'0')}` as BattleId, h=harness(id,'won');
+      h.api.finish(); const before=structuredClone(h.api.snapshot()), writes=h.writes();
+      expect(h.overlay.querySelector('.story-backdrop')!.src).toBe(storyScenery(id,'result')!.background);
+      expect(h.overlay.querySelector('.story-shield')!.dataset.page).not.toBe('title');
+      h.finishStory(); expect(h.api.snapshot().state).toEqual(before.state);
+      expect(h.api.snapshot().campaign).toEqual(before.campaign); expect(h.writes()).toBe(writes);
+    }
+  });
   it('wires each of the 12 authored intros to its own current briefing/config without changing battle or checkpoint',()=>{
     for(let n=1;n<=12;n++){
       const id=`B${String(n).padStart(2,'0')}` as BattleId,h=harness(id),before=structuredClone(h.api.snapshot());
       const checkpoint=h.memory.get(CAMPAIGN_KEY);h.api.intro();
-      expect(h.overlay.querySelector('.story-text')!.textContent).toBe(readAuthoredStory(introStoryHtml(id))[0].text);
-      h.finishStory();const config=getBattleConfig(id);
-      expect(h.overlay.rawHTML).toContain(config.intro);
-      expect(h.overlay.rawHTML).toContain(`第${config.roundLimit}ラウンド終了`);
+      expect(h.overlay.querySelector('.story-text')!.textContent).toBe(storyScenery(id,'intro')!.chapterTitle);
+      expect(h.overlay.querySelector('.story-backdrop')!.src).toBe(`/assets/story/${id.toLowerCase()}.jpg`);
+      h.advance();expect(h.overlay.querySelector('.story-text')!.textContent).toBe(readAuthoredStory(introStoryHtml(id)).find(page => !page.speaker)!.text);
+      let dialogueStarted=false;
+      while(h.overlay.querySelector('.story-shield')){
+        const kind=h.overlay.querySelector('.story-shield')!.dataset.page;
+        if(kind==='dialogue')dialogueStarted=true;else expect(dialogueStarted).toBe(false);
+        h.advance();
+      }
+      const config=getBattleConfig(id);
+      expect(h.overlay.rawHTML).toContain(battleObjectiveCopy(id).summary);
+      expect(h.overlay.rawHTML).toContain(`第${config.roundLimit}ラウンドが終わるまで`);
       expect(h.api.snapshot().state).toEqual(before.state);expect(h.api.snapshot().campaign).toEqual(before.campaign);
       expect(h.memory.get(CAMPAIGN_KEY)).toBe(checkpoint);expect(h.writes()).toBe(0);
     }

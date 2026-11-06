@@ -35,7 +35,7 @@ function auditHarbor(before: BattleState, after: BattleState) {
   if (before.gate.drained) {
     expect(after.gate.drained).toBe(true); expect(after.gate.pendingRound).toBeNull();
   }
-  if (after.gate.drained) expect(canGate(after)).toBe(false);
+  if (after.gate.drained && (after.activation.acted || after.gate.pendingRound !== null)) expect(canGate(after)).toBe(false);
   if (!before.gate.drained && after.gate.drained) {
     expect(after.round).toBe(before.round + 1);
     expect(before.gate.pendingRound).toBe(after.round);

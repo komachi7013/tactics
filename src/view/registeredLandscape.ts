@@ -16,20 +16,20 @@ import b12 from '../landscapes/b12.json';
 interface RegisteredWater {id:string;path:string;bounds:number[];polygons:number[][][];cells:{x:number;y:number}[];sourceId?:string;sceneSource?:boolean;alpha?:number}
 interface RegisteredLandscape { battleId:BattleId; key:string; path:string; registration:SceneRegistration; worker?:{path:string;width:number;height:number;foot:number[];visibleHeight:number};cutaway?:typeof b03.cutaway;physicalFloors?:{x:number;y:number}[];water?:RegisteredWater[];overlays?:typeof b06.overlays }
 /** Original scene pixels remain intact; registration is reviewed before integration. */
-export const REGISTERED_B02:RegisteredLandscape={battleId:'B02',key:'b02-adopted-landscape',path:'/assets/b02-adopted/river-scene.png',registration:b02.registration};
-export const REGISTERED_B03:RegisteredLandscape={battleId:'B03',key:'b03-adopted-landscape',path:'/assets/b03-adopted/town-scene.png',registration:b03.registration,cutaway:b03.cutaway};
-export const REGISTERED_B04:RegisteredLandscape={battleId:'B04',key:'b04-adopted-landscape',path:'/assets/b04-adopted/dry-channel.png',registration:b04.registration,physicalFloors:b04.physicalFloors,water:b04.water};
-export const REGISTERED_B05:RegisteredLandscape={battleId:'B05',key:'b05-adopted-landscape',path:'/assets/b05-adopted/archive.png',registration:b05.registration,physicalFloors:b05.physicalFloors};
-export const REGISTERED_B06:RegisteredLandscape={battleId:'B06',key:'b06-adopted-landscape',path:'/assets/b06-adopted/canal.png',registration:b06.registration,physicalFloors:b06.physicalFloors,overlays:b06.overlays};
-export const REGISTERED_B07:RegisteredLandscape={battleId:'B07',key:'b07-adopted-landscape',path:'/assets/b07-adopted/grass-scene.png',registration:b07.registration,physicalFloors:b07.physicalFloors};
-export const REGISTERED_B08:RegisteredLandscape={battleId:'B08',key:'b08-adopted-landscape',path:'/assets/b08-adopted/weir.png',registration:b08.registration,physicalFloors:b08.physicalFloors,water:b08.water};
-export const REGISTERED_B09:RegisteredLandscape={battleId:'B09',key:'b09-adopted-landscape',path:'/assets/b09-adopted/corridor.png',registration:b09.registration,physicalFloors:b09.physicalFloors};
-export const REGISTERED_B10:RegisteredLandscape={battleId:'B10',key:'b10-adopted-landscape',path:'/assets/b10-adopted/harbor.png',registration:b10.registration,physicalFloors:b10.physicalFloors,overlays:b10.overlays};
-export const REGISTERED_B11:RegisteredLandscape={battleId:'B11',key:'b11-adopted-landscape',path:'/assets/b11-adopted/maintenance.png',registration:b11.registration,physicalFloors:b11.physicalFloors,worker:b11.worker};
-export const REGISTERED_B12:RegisteredLandscape={battleId:'B12',key:'b12-adopted-landscape',path:'/assets/b12-adopted/terrace.png',registration:b12.registration,physicalFloors:b12.physicalFloors};
+export const REGISTERED_B02:RegisteredLandscape={battleId:'B02',key:'b02-adopted-landscape',path:'/assets/stages/b02/adopted/river-scene-wide-v1.png',registration:b02.registration};
+export const REGISTERED_B03:RegisteredLandscape={battleId:'B03',key:'b03-adopted-landscape',path:'/assets/stages/b03/adopted/town-scene.png',registration:b03.registration,cutaway:b03.cutaway};
+export const REGISTERED_B04:RegisteredLandscape={battleId:'B04',key:'b04-adopted-landscape',path:'/assets/stages/b04/adopted/dry-channel.png',registration:b04.registration,physicalFloors:b04.physicalFloors,water:b04.water};
+export const REGISTERED_B05:RegisteredLandscape={battleId:'B05',key:'b05-adopted-landscape',path:'/assets/stages/b05/adopted/archive.png',registration:b05.registration,physicalFloors:b05.physicalFloors};
+export const REGISTERED_B06:RegisteredLandscape={battleId:'B06',key:'b06-adopted-landscape',path:'/assets/stages/b06/adopted/canal-wide-v1.png',registration:b06.registration,physicalFloors:b06.physicalFloors,overlays:b06.overlays};
+export const REGISTERED_B07:RegisteredLandscape={battleId:'B07',key:'b07-adopted-landscape',path:'/assets/stages/b07/adopted/grass-scene.png',registration:b07.registration,physicalFloors:b07.physicalFloors};
+export const REGISTERED_B08:RegisteredLandscape={battleId:'B08',key:'b08-adopted-landscape',path:'/assets/stages/b08/adopted/weir.png',registration:b08.registration,physicalFloors:b08.physicalFloors,water:b08.water};
+export const REGISTERED_B09:RegisteredLandscape={battleId:'B09',key:'b09-adopted-landscape',path:'/assets/stages/b09/adopted/corridor-wide-v1.png',registration:b09.registration,physicalFloors:b09.physicalFloors};
+export const REGISTERED_B10:RegisteredLandscape={battleId:'B10',key:'b10-adopted-landscape',path:'/assets/stages/b10/adopted/harbor.png',registration:b10.registration,physicalFloors:b10.physicalFloors,overlays:b10.overlays};
+export const REGISTERED_B11:RegisteredLandscape={battleId:'B11',key:'b11-adopted-landscape',path:'/assets/stages/b11/adopted/maintenance-wide-v1.png',registration:b11.registration,physicalFloors:b11.physicalFloors,worker:b11.worker};
+export const REGISTERED_B12:RegisteredLandscape={battleId:'B12',key:'b12-adopted-landscape',path:'/assets/stages/b12/adopted/terrace.png',registration:b12.registration,physicalFloors:b12.physicalFloors};
 export const REGISTERED_LANDSCAPES=[REGISTERED_B02,REGISTERED_B03,REGISTERED_B04,REGISTERED_B05,REGISTERED_B06,REGISTERED_B07,REGISTERED_B08,REGISTERED_B09,REGISTERED_B10,REGISTERED_B11,REGISTERED_B12];
 /** Gathering points have physical support even before they become traversable. */
-export function registeredFloors(spec:RegisteredLandscape,cells:Cell[]):Cell[]{if(!spec.physicalFloors)return cells.filter(c=>!c.blocked);const keys=new Set(spec.physicalFloors.map(c=>c.x+','+c.y));return cells.filter(c=>keys.has(c.x+','+c.y))}
+export function registeredFloors(spec:RegisteredLandscape,cells:Cell[]):Cell[]{if(!spec.physicalFloors)return cells.filter(c=>!c.blocked||c.debugBlocked===false);const keys=new Set(spec.physicalFloors.map(c=>c.x+','+c.y));return cells.filter(c=>keys.has(c.x+','+c.y)||c.debugBlocked===false)}
 export const registeredLandscape=(id:BattleId)=>REGISTERED_LANDSCAPES.find(s=>s.battleId===id);
 export interface RegisteredPart {key:string;bounds:number[];depth:number;whenShallow?:{x:number;y:number}[];whenGateOpen?:boolean}
 /** Tight canvas partitions preserve the prototype's source coordinates without full-scene copies. */

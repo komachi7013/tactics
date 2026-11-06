@@ -49,7 +49,7 @@ def main():
         seam=float(np.abs(a[-1]-a[0]).mean())/max(1e-6,float(np.percentile(step,95)))
         assert seam<1.6,(original['index'],'seam',seam)
         asset={k:candidate[k] for k in ['frames','cell','originX','originY','visibleHeight','cycleMs','tilesPerCycle']}
-        asset.update(key=f"motion-v3-walk-{original['cast']}-{original['direction']}",path=f"/assets/motion-v3/{original['cast']}/walk-{original['direction']}.png")
+        asset.update(key=f"motion-v3-walk-{original['cast']}-{original['direction']}",path=f"/assets/characters/motion-v3/{original['cast']}/walk-{original['direction']}.png")
         ready={'index':original['index'],'cast':original['cast'],'direction':original['direction'],'job_id':original['job_id'],
                'art_source':original['art_source'],'asset':asset,'sourceIndices':indices,
                'sheet_sha256':hashlib.sha256(png).hexdigest(),'sourceDirectory':original['directory'],

@@ -501,7 +501,7 @@
   "water": [
     {
       "id": "channel",
-      "path": "/assets/b04-adopted/water.png",
+      "path": "/assets/stages/b04/adopted/water.png",
       "bounds": [
         770,
         510,

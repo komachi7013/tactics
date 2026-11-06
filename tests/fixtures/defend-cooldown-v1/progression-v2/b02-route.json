@@ -282,7 +282,7 @@
     {
       "type": "move",
       "to": {
-        "x": 16,
+        "x": 15,
         "y": 1
       }
     },
@@ -315,7 +315,7 @@
     {
       "type": "move",
       "to": {
-        "x": 21,
+        "x": 20,
         "y": 1
       }
     },
@@ -333,7 +333,7 @@
     {
       "type": "move",
       "to": {
-        "x": 20,
+        "x": 19,
         "y": 1
       }
     },
@@ -412,7 +412,7 @@
     {
       "type": "move",
       "to": {
-        "x": 25,
+        "x": 22,
         "y": 1
       }
     },
@@ -431,7 +431,7 @@
     {
       "type": "move",
       "to": {
-        "x": 24,
+        "x": 23,
         "y": 1
       }
     },
@@ -467,7 +467,7 @@
     {
       "type": "move",
       "to": {
-        "x": 29,
+        "x": 26,
         "y": 1
       }
     },
@@ -485,7 +485,7 @@
     {
       "type": "move",
       "to": {
-        "x": 28,
+        "x": 27,
         "y": 1
       }
     },
@@ -515,7 +515,7 @@
     {
       "type": "move",
       "to": {
-        "x": 31,
+        "x": 30,
         "y": 1
       }
     },
@@ -530,7 +530,7 @@
     {
       "type": "move",
       "to": {
-        "x": 30,
+        "x": 29,
         "y": 1
       }
     },
@@ -636,11 +636,11 @@
     ],
     [
       "ally-garan",
-      19
+      18
     ],
     [
       "ally-neia",
-      6
+      11
     ]
   ],
   "provenance": "Faction turns v1: regenerated legal public player commands and unchanged AI, actual initial factory, unchanged terrain/stats/deadlines. Pre-change fixtures preserved under faction-turn-v1/before/tests.",

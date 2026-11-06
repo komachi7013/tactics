@@ -1,0 +1,66 @@
+{
+  "actor": "archer",
+  "direction": "S",
+  "frameMs": 100,
+  "frames": 4,
+  "cell": 288,
+  "art_source": "host_image",
+  "route": "Codex ImageGen",
+  "sourceSha256": "9743e9a597907853a7b9a49c650981d28d98327fb75bbc2a635883a6484a1585",
+  "sheetSha256": "7a42dd48ff3d57cdcbbe1b7fbb2804e671142653c3ba017a4421ca296dea87c8",
+  "paddedOriginPx": [
+    144,
+    252
+  ],
+  "anchor": [
+    144,
+    252
+  ],
+  "pixelsUnchangedByPadding": true,
+  "normalization": {
+    "referenceFirstFrameHeight": 179,
+    "scale": 0.4441687344913151,
+    "oneTransformForAllFrames": true,
+    "lowAlphaRemovalThreshold": 76
+  },
+  "facing": "screen lower-left, approved S idle reference",
+  "stats": [
+    {
+      "bbox": [
+        99,
+        73,
+        188,
+        252
+      ]
+    },
+    {
+      "bbox": [
+        76,
+        73,
+        178,
+        251
+      ]
+    },
+    {
+      "bbox": [
+        73,
+        73,
+        183,
+        251
+      ]
+    },
+    {
+      "bbox": [
+        85,
+        73,
+        177,
+        251
+      ]
+    }
+  ],
+  "issues": [],
+  "weapon": "bow",
+  "referenceHeightPx": 179,
+  "status": "final",
+  "review": "South attack facing accepted by user, 2026-11-05"
+}

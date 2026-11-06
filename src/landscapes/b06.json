@@ -318,12 +318,64 @@
     {
       "x": 20,
       "y": 8
+    },
+    {
+      "x": 5,
+      "y": 8
+    },
+    {
+      "x": 6,
+      "y": 8
+    },
+    {
+      "x": 7,
+      "y": 8
+    },
+    {
+      "x": 8,
+      "y": 8
+    },
+    {
+      "x": 9,
+      "y": 8
+    },
+    {
+      "x": 10,
+      "y": 8
+    },
+    {
+      "x": 11,
+      "y": 8
+    },
+    {
+      "x": 12,
+      "y": 8
+    },
+    {
+      "x": 13,
+      "y": 8
+    },
+    {
+      "x": 14,
+      "y": 8
+    },
+    {
+      "x": 15,
+      "y": 8
+    },
+    {
+      "x": 16,
+      "y": 8
+    },
+    {
+      "x": 17,
+      "y": 8
     }
   ],
   "overlays": [
     {
       "id": "open-chain",
-      "path": "/assets/b06-adopted/canal-open.png",
+      "path": "/assets/stages/b06/adopted/canal-open.png",
       "bounds": [
         625,
         180,
@@ -2209,118 +2261,92 @@
       "x": 5,
       "y": 8,
       "height": 0,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 6,
       "y": 8,
       "height": 0,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 7,
       "y": 8,
       "height": 0,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 8,
       "y": 8,
       "height": 0,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 9,
       "y": 8,
       "height": 0,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 10,
       "y": 8,
       "height": 0,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 11,
       "y": 8,
       "height": 0,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 12,
       "y": 8,
       "height": 0,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 13,
       "y": 8,
       "height": 0,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 14,
       "y": 8,
       "height": 0,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 15,
       "y": 8,
       "height": 0,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 16,
       "y": 8,
       "height": 0,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 17,
       "y": 8,
       "height": 0,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 18,

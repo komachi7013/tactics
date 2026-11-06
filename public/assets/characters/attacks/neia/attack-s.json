@@ -1,0 +1,64 @@
+{
+  "actor": "neia",
+  "direction": "S",
+  "frameMs": 100,
+  "frames": 4,
+  "cell": 288,
+  "art_source": "host_image",
+  "route": "Codex ImageGen",
+  "sourceSha256": "f4b62af3f9fb09133b75eb7a2ca7e95b8d6a80391e007260c26dde72bd642919",
+  "sheetSha256": "179c7d17c56b018552ba7d8ccf979c235ad2a547f824094fc602e970c9cc91ba",
+  "paddedOriginPx": [
+    144,
+    275.0
+  ],
+  "anchor": [
+    144,
+    275.0
+  ],
+  "pixelsUnchangedByPadding": true,
+  "normalization": {
+    "referenceFirstFrameHeight": 193,
+    "scale": 0.4457274826789838,
+    "oneTransformForAllFrames": true,
+    "lowAlphaRemovalThreshold": 76
+  },
+  "facing": "screen lower-left, approved S idle reference",
+  "stats": [
+    {
+      "bbox": [
+        86,
+        82,
+        201,
+        275
+      ]
+    },
+    {
+      "bbox": [
+        72,
+        82,
+        195,
+        275
+      ]
+    },
+    {
+      "bbox": [
+        75,
+        79,
+        204,
+        274
+      ]
+    },
+    {
+      "bbox": [
+        85,
+        79,
+        197,
+        274
+      ]
+    }
+  ],
+  "issues": [],
+  "status": "final",
+  "review": "South attack facing accepted by user, 2026-11-05"
+}

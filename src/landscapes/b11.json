@@ -42,8 +42,8 @@
     {
       "id": "ally-lise",
       "asset": "lise",
-      "x": 8,
-      "y": 14
+      "x": 9,
+      "y": 15
     },
     {
       "id": "ally-garan",
@@ -54,7 +54,7 @@
     {
       "id": "ally-neia",
       "asset": "neia",
-      "x": 8,
+      "x": 7,
       "y": 13
     },
     {
@@ -129,7 +129,7 @@
     }
   ],
   "worker": {
-    "path": "/assets/b11-adopted/worker.png",
+    "path": "/assets/stages/b11/adopted/worker.png",
     "width": 1254,
     "height": 1254,
     "foot": [
@@ -357,6 +357,78 @@
     },
     {
       "x": 7,
+      "y": 15
+    },
+    {
+      "x": 4,
+      "y": 8
+    },
+    {
+      "x": 4,
+      "y": 9
+    },
+    {
+      "x": 4,
+      "y": 10
+    },
+    {
+      "x": 4,
+      "y": 11
+    },
+    {
+      "x": 14,
+      "y": 6
+    },
+    {
+      "x": 16,
+      "y": 6
+    },
+    {
+      "x": 14,
+      "y": 7
+    },
+    {
+      "x": 16,
+      "y": 7
+    },
+    {
+      "x": 14,
+      "y": 8
+    },
+    {
+      "x": 16,
+      "y": 8
+    },
+    {
+      "x": 14,
+      "y": 9
+    },
+    {
+      "x": 16,
+      "y": 9
+    },
+    {
+      "x": 14,
+      "y": 10
+    },
+    {
+      "x": 16,
+      "y": 10
+    },
+    {
+      "x": 14,
+      "y": 11
+    },
+    {
+      "x": 16,
+      "y": 11
+    },
+    {
+      "x": 9,
+      "y": 15
+    },
+    {
+      "x": 8,
       "y": 15
     }
   ],
@@ -1894,11 +1966,9 @@
     {
       "x": 14,
       "y": 6,
-      "height": 4,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 15,
@@ -1912,11 +1982,9 @@
     {
       "x": 16,
       "y": 6,
-      "height": 4,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 17,
@@ -2128,11 +2196,9 @@
     {
       "x": 14,
       "y": 7,
-      "height": 4,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 15,
@@ -2146,11 +2212,9 @@
     {
       "x": 16,
       "y": 7,
-      "height": 4,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 17,
@@ -2272,11 +2336,9 @@
     {
       "x": 4,
       "y": 8,
-      "height": 4,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 2,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 5,
@@ -2290,11 +2352,9 @@
     {
       "x": 6,
       "y": 8,
-      "height": 4,
+      "height": 2,
       "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "shallow": false
     },
     {
       "x": 7,
@@ -2362,11 +2422,9 @@
     {
       "x": 14,
       "y": 8,
-      "height": 4,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 15,
@@ -2380,11 +2438,9 @@
     {
       "x": 16,
       "y": 8,
-      "height": 4,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 17,
@@ -2506,11 +2562,9 @@
     {
       "x": 4,
       "y": 9,
-      "height": 4,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 1,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 5,
@@ -2524,11 +2578,9 @@
     {
       "x": 6,
       "y": 9,
-      "height": 4,
+      "height": 1,
       "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "shallow": false
     },
     {
       "x": 7,
@@ -2596,11 +2648,9 @@
     {
       "x": 14,
       "y": 9,
-      "height": 4,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 15,
@@ -2614,11 +2664,9 @@
     {
       "x": 16,
       "y": 9,
-      "height": 4,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 17,
@@ -2740,11 +2788,9 @@
     {
       "x": 4,
       "y": 10,
-      "height": 4,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 1,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 5,
@@ -2758,11 +2804,9 @@
     {
       "x": 6,
       "y": 10,
-      "height": 4,
+      "height": 1,
       "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "shallow": false
     },
     {
       "x": 7,
@@ -2830,11 +2874,9 @@
     {
       "x": 14,
       "y": 10,
-      "height": 4,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 15,
@@ -2848,11 +2890,9 @@
     {
       "x": 16,
       "y": 10,
-      "height": 4,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 17,
@@ -2974,11 +3014,9 @@
     {
       "x": 4,
       "y": 11,
-      "height": 4,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 5,
@@ -2992,11 +3030,9 @@
     {
       "x": 6,
       "y": 11,
-      "height": 4,
+      "height": 0,
       "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "shallow": false
     },
     {
       "x": 7,
@@ -3064,11 +3100,9 @@
     {
       "x": 14,
       "y": 11,
-      "height": 4,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 15,
@@ -3082,11 +3116,9 @@
     {
       "x": 16,
       "y": 11,
-      "height": 4,
-      "blocked": true,
-      "water": false,
-      "shallow": false,
-      "bridge": false
+      "height": 0,
+      "blocked": false,
+      "shallow": false
     },
     {
       "x": 17,
@@ -3479,7 +3511,7 @@
       "x": 8,
       "y": 13,
       "height": 0,
-      "blocked": false,
+      "blocked": true,
       "water": false,
       "shallow": false,
       "bridge": false
@@ -3713,7 +3745,7 @@
       "x": 8,
       "y": 14,
       "height": 0,
-      "blocked": false,
+      "blocked": true,
       "water": false,
       "shallow": false,
       "bridge": false
@@ -3946,8 +3978,8 @@
     {
       "x": 8,
       "y": 15,
-      "height": 4,
-      "blocked": true,
+      "height": 0,
+      "blocked": false,
       "water": false,
       "shallow": false,
       "bridge": false
@@ -3955,8 +3987,8 @@
     {
       "x": 9,
       "y": 15,
-      "height": 4,
-      "blocked": true,
+      "height": 0,
+      "blocked": false,
       "water": false,
       "shallow": false,
       "bridge": false

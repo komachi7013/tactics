@@ -1,0 +1,66 @@
+{
+  "actor": "guard",
+  "direction": "S",
+  "frameMs": 100,
+  "frames": 4,
+  "cell": 288,
+  "art_source": "host_image",
+  "route": "Codex ImageGen",
+  "sourceSha256": "3da85f90091026e10f74f423aeb28b0900c57c6597e97a51f384beed45120934",
+  "sheetSha256": "cfa7f34322718c64922c2c1668e57d1ff78ceca1e4d2c0188d7f49d711ad8f94",
+  "paddedOriginPx": [
+    144,
+    252
+  ],
+  "anchor": [
+    144,
+    252
+  ],
+  "pixelsUnchangedByPadding": true,
+  "normalization": {
+    "referenceFirstFrameHeight": 179,
+    "scale": 0.4508816120906801,
+    "oneTransformForAllFrames": true,
+    "lowAlphaRemovalThreshold": 76
+  },
+  "facing": "screen lower-left, approved S idle reference",
+  "stats": [
+    {
+      "bbox": [
+        89,
+        73,
+        201,
+        253
+      ]
+    },
+    {
+      "bbox": [
+        97,
+        73,
+        200,
+        248
+      ]
+    },
+    {
+      "bbox": [
+        67,
+        74,
+        215,
+        246
+      ]
+    },
+    {
+      "bbox": [
+        76,
+        73,
+        201,
+        249
+      ]
+    }
+  ],
+  "issues": [],
+  "weapon": "melee",
+  "referenceHeightPx": 179,
+  "status": "final",
+  "review": "South attack facing accepted by user, 2026-11-05"
+}
